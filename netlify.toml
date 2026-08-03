@@ -11,13 +11,6 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow, noarchive"
 
-# SPA fallback (not needed for SSG, but kept for safety)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # Mailchimp archive redirect
 [[redirects]]
   from = "/archive"
