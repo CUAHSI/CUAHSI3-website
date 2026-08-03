@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NITRO_PRESET = "static"
 
 [[headers]]
   for = "/*"
