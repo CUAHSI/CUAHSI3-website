@@ -6,7 +6,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | # | Task | Status | Risk |
 |---|---|---|---|
 | 1 | Reconcile repo against the verify-first list | merged | none (read-only) |
-| 2 | `content.config.ts` with Zod schemas, plus a standalone validator | not started | low |
+| 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | in progress | low |
 | 3 | Extract repeated markup into components | not started | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
@@ -27,9 +27,14 @@ results are reported with denominators: "events: 41 of 43 pass." Files that fail
 listed for Jordan. They are not fixed in this task, because content is frozen; and
 the schema is not loosened to make them pass without saying so. Where the schema and
 the content model document disagree, the report says which one the schema follows
-and why. This task needs a dependency decision (rule 8): confirm what `@nuxt/content`
-v2 supports for typed collections in the installed version before proposing an
-approach, and ask.
+and why. The validator is run on demand and is not part of `verify.sh` (see task 5).
+*Correction:* this task originally said `content.config.ts` and asked to confirm what
+`@nuxt/content` v2 supports for typed collections. It supports none: the installed
+2.13.4 has no collections or schema support (`content.config.ts` and `defineCollection`
+belong to Content v3), so a `content.config.ts` would be ignored. The schemas are
+therefore plain Zod in `scripts/`, checked by the validator, and nothing enforces them
+at build time. `zod` and `yaml` were added as pinned devDependencies with Jordan's
+approval (rule 8).
 
 **3. Components.** One component family per PR: cards, then heroes, then filter
 chips, then prose blocks. Each PR compares rendered HTML against `main` and explains
@@ -49,7 +54,9 @@ the count stated.
 
 **5. Linting and CI.** ESLint for Vue, a GitHub Actions workflow running
 `verify.sh --build` and the content validator on every PR. A built-site link check
-(every internal `href` in `.output/public` resolves to a file) belongs here.
+(every internal `href` in `.output/public` resolves to a file) belongs here. The
+content validator (`npm run validate:content`, built in task 2) is deliberately left
+out of `verify.sh` until then; it gets wired into `verify.sh` in this task.
 
 **6. Accessibility.** An audit report first, as its own PR with no fixes. Fixes
 follow in separate PRs by category, because contrast fixes change what visitors see
@@ -65,6 +72,11 @@ and need Jordan's eye on the design tokens.
   lookup; team data is split between `full-team.json` and per-person `.md` files.
 - Redirects are page stubs (`definePageMeta`), not server `routeRules`. Leave until
   asked.
+- Upgrade to Nuxt Content v3. Not proposed. It is the only route to build-time schema
+  enforcement (`content.config.ts` collections). It is a major-version upgrade that
+  would touch every `queryContent()` call (32 calls in 19 files, counted by searching
+  for the text `queryContent(` and leaving out two comment lines), how the JSON files
+  are loaded, and the shape of the data pages receive.
 
 ## Noticed
 
@@ -78,4 +90,6 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261003 | assets / build | the Tailwind CSS inlined in every page contained 8 invalid rules generated from DOI text in content/team/tony-castronova.md (".[doi:10.1016/...]{doi:...}") in both main-based builds, and none in two builds of the task/community-news-filter branch; why is not known. Harmless as far as I can tell (the property "doi" is invalid), but it means inline CSS differs by 631 bytes per page between those builds.
 261003 | assets / build | follow-up to the line above: builds of identical code differ in two CSS details. Across 6 local builds (junk DOI rules / extra stylesheet link to StatsBand.*.css on /, /about/impact, /data-platforms, /learn-train): main before news-grid 8/1, news-grid 8/1, community-news-filter 0/1 (twice), same code with the stray files present 0/1, same code with them deleted 8/0. The junk rules appear in some builds and not others with the 33 stray files present (8 in two builds, 0 in three), so they are not caused by deleting them; cause not found, possibly local cache state (.nuxt, node_modules/.vite). The extra stylesheet link is absent only in the one build made without the stray files; with one build per state it is NOT shown whether the deletion caused it (cuahsi-site/components/StatsBand.vue, a component with the same name, was among the deleted files). The CSS rule sets on the four affected pages are identical apart from the 8 junk rules (231/231 rules, 230/230 on /learn-train).
 261003 | assets / build | update to the line above: a second build with the 33 stray files deleted has the StatsBand stylesheet link (and no junk DOI rules), the same as builds with the files present. So both details vary between builds in the same file state and the deletion did not cause the missing link. Cause of the variation still not found.
+261003 | content/cyberseminars/ | 9 of 15 files have no closing --- line, so the site reads no fields from them: in the built site's data they have no published, slug, date or series, and a title made from the file name. Details and the full validator results are in agent/reports/261003_content-validation.md (task/content-schemas). Content is frozen; reported only.
+261003 | repo / npm | `npm audit` reports 36 vulnerabilities in the installed tree (4 low, 3 moderate, 25 high, 4 critical), including a Nuxt MDC XSS advisory (GHSA-cj6r-rrr9-fg82). Not investigated and not changed; zod and yaml (added in task 2) were not named in what I saw. Upgrading would be a dependency change (rule 8).
 
