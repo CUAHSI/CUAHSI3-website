@@ -7,7 +7,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 |---|---|---|---|
 | 1 | Reconcile repo against the verify-first list | merged | none (read-only) |
 | 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | PR open | low |
-| 3 | Extract repeated markup into components | not started | medium |
+| 3 | Extract repeated markup into components | in progress | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | not started | none (read-only) |
@@ -95,6 +95,9 @@ and need Jordan's eye on the design tokens.
   for the text `queryContent(` and leaving out two comment lines), how the JSON files
   are loaded, and the shape of the data pages receive.
 - Search on phones: the header shows the search button only at the `md` breakpoint and up (`components/AppHeader.vue`, the desktop actions block), so phones have no way to open search. Jordan: acceptable for now. Revisit when the header is next changed; adding it means a change to `AppHeader.vue` and its mobile menu.
+- Cyberseminar transcripts and descriptions: per-seminar pages with the text in the static HTML, versus an on-click panel. Decide in Phase 2 after the 9 files are repaired.
+- Deferred, cyberseminar transcript timestamps: fix `scripts/fetch-transcripts.mjs` so it writes real times. All 733 paragraph timestamps in the 7 transcript files read `NaN:NaN`, and the script builds them from `seg.start`, probably the wrong field (unverified). Depends on: Phase 2 (the regenerated files are content, in `content/` and `public/`), Jordan's approval of two new dependencies, `youtube-transcript` and `gray-matter` (rule 8), and network access.
+- Deferred, cyberseminar follow-in-time sync (the transcript following the video). Depends on: the timestamp fix above, the transcripts-and-descriptions decision above, and a decision about loading the YouTube IFrame Player API, a script served from youtube.com.
 
 ## Noticed
 
