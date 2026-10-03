@@ -21,13 +21,13 @@ function toggle(slug: string) { expanded.value = expanded.value === slug ? null 
 </script>
 <template>
   <div>
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 48px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Learn &amp; Train · Cyberseminars</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;">350+ free recordings on water science.</h1>
-        <p style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">Virtual presentations, panels, and demos from leading water scientists — all free, all archived, many with full transcripts.</p>
-      </div>
-    </section>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 48px;"
+      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;"
+      lead-style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">
+      <template #kicker>Learn &amp; Train · Cyberseminars</template>
+      <template #title>350+ free recordings on water science.</template>
+      <template #lead>Virtual presentations, panels, and demos from leading water scientists — all free, all archived, many with full transcripts.</template>
+    </PageHero>
 
     <!-- Filters -->
     <div class="mx-auto" style="max-width:1240px;padding:28px 40px 0;">

@@ -15,13 +15,13 @@ const extras = [
 <template>
   <div>
     <!-- Hero -->
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Learn &amp; Train</span>
-        <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;">Training for every stage of a water science career.</h1>
-        <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">From first-year graduate students to senior faculty, CUAHSI offers field schools, online courses, summer institutes, fellowships, and free recordings — open to all.</p>
-      </div>
-    </section>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 52px;"
+      title-style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;"
+      lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">
+      <template #kicker>Learn &amp; Train</template>
+      <template #title>Training for every stage of a water science career.</template>
+      <template #lead>From first-year graduate students to senior faculty, CUAHSI offers field schools, online courses, summer institutes, fellowships, and free recordings — open to all.</template>
+    </PageHero>
 
     <StatsBand />
 
