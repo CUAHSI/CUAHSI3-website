@@ -3,13 +3,13 @@ useHead({ title: 'Governance · CUAHSI' })
 </script>
 <template>
   <div>
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">About · Governance</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;">Board, committees, and bylaws.</h1>
-        <p style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">CUAHSI is governed by a Board of Directors elected by its member institutions, with input from advisory committees open to any interested water scientist.</p>
-      </div>
-    </section>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 52px;"
+      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;"
+      lead-style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">
+      <template #kicker>About · Governance</template>
+      <template #title>Board, committees, and bylaws.</template>
+      <template #lead>CUAHSI is governed by a Board of Directors elected by its member institutions, with input from advisory committees open to any interested water scientist.</template>
+    </PageHero>
     <div class="mx-auto" style="max-width:1240px;padding:52px 40px 80px;">
       <section id="advisory-committees" style="margin-bottom:52px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Advisory committees</p>

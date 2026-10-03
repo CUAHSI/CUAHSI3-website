@@ -19,12 +19,11 @@ function initials(name: string) { return name.split(' ').map((n:string)=>n[0]).j
 </script>
 <template>
   <div>
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 48px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">About · Team</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 0;">The people behind CUAHSI.</h1>
-      </div>
-    </section>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 48px;"
+      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 0;">
+      <template #kicker>About · Team</template>
+      <template #title>The people behind CUAHSI.</template>
+    </PageHero>
     <div class="mx-auto" style="max-width:1240px;padding:48px 40px 80px;">
       <div v-for="dept in deptOrder" :key="dept">
         <div v-if="byDept[dept]?.length" class="mb-12">

@@ -48,25 +48,26 @@ function yearChipStyle(active: boolean) {
 <template>
   <div>
     <!-- Hero -->
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" style="color:#5C6E78;">About</NuxtLink> / Impact</p>
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Impact</span>
-        <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:720px;">What the community is building, measuring, and discovering.</h1>
-        <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</p>
-      </div>
-
-      <!-- About sub-nav -->
-      <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
-        <div class="flex gap-0" style="border-top:1px solid rgba(15,33,43,.08);overflow-x:auto;">
-          <a v-for="l in [{t:'Overview',h:'/about'},{t:'Mission & values',h:'/about#mission'},{t:'What we do',h:'/about#what-we-do'},{t:'History',h:'/about#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'/about#contact'}]"
-            :key="l.h" :href="l.h" style="font:500 13px 'Hanken Grotesk';color:#5C6E78;padding:14px 16px 14px 0;text-decoration:none;white-space:nowrap;"
-            class="hover:text-navy transition-colors">
-            {{ l.t }}
-          </a>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 52px;"
+      title-style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:720px;"
+      lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">
+      <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" style="color:#5C6E78;">About</NuxtLink> / Impact</p></template>
+      <template #kicker>Impact</template>
+      <template #title>What the community is building, measuring, and discovering.</template>
+      <template #lead>Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</template>
+      <template #below>
+        <!-- About sub-nav -->
+        <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
+          <div class="flex gap-0" style="border-top:1px solid rgba(15,33,43,.08);overflow-x:auto;">
+            <a v-for="l in [{t:'Overview',h:'/about'},{t:'Mission & values',h:'/about#mission'},{t:'What we do',h:'/about#what-we-do'},{t:'History',h:'/about#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'/about#contact'}]"
+              :key="l.h" :href="l.h" style="font:500 13px 'Hanken Grotesk';color:#5C6E78;padding:14px 16px 14px 0;text-decoration:none;white-space:nowrap;"
+              class="hover:text-navy transition-colors">
+              {{ l.t }}
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </template>
+    </PageHero>
 
     <!-- Stats band -->
     <StatsBand />
