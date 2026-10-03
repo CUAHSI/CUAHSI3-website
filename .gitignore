@@ -22,5 +22,8 @@ dist/
 .Rproj.user
 .Rhistory
 *.Rproj
+
+# nuxt generate recreates dist as a symlink to .output/public; "dist/" above only matches folders
+dist
 .positai
 .agent/
