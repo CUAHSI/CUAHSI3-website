@@ -24,9 +24,8 @@ out=$(find "${CODE_DIRS[@]}" -name '*.vue' -print0 | while IFS= read -r -d '' f;
 done)
 [ -n "$out" ] && { fail "unbalanced backticks:"; echo "$out"; } || ok "backticks balanced"
 
-# 2. Apostrophe inside a static style attribute: hard compile error (footgun 3)
-out=$(grep -rn --include='*.vue' ' style="[^"]*'"'" "${CODE_DIRS[@]}")
-[ -n "$out" ] && { fail "apostrophe inside static style attribute:"; echo "$out" | sed 's/^/      /'; } || ok "no apostrophes in static style attributes"
+# 2. (removed) The apostrophe-in-static-style check flagged every font-family quote,
+#    231 lines in 21 files that all build. See CLAUDE.md, footgun 3.
 
 # 3. grid-template-columns inside a style attribute, static or bound (Layout section)
 out=$(grep -rnE --include='*.vue' 'style="[^"]*grid-template-columns' "${CODE_DIRS[@]}")
