@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate"
+  command = "npm run build:search"
   publish = ".output/public"
 
 [build.environment]
