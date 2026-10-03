@@ -20,7 +20,9 @@ same PR (see "New footgun").
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
 content/           the content. Do not modify in Phase 1 (rule 3).
 scripts/verify.sh  the verification suite. Run before every commit.
-scripts/           also download-team-photos.mjs, fetch-transcripts.mjs
+scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
+                   content-schemas.mjs + validate-content.mjs (Zod schemas and the
+                   content validator; Content v2 cannot enforce schemas itself)
 agent/roadmap.md   Phase 1 tasks in order, with status and acceptance criteria
 agent/reconcile.md the "verify first" checklist for task 1
 agent/content-model.md  collection schemas, cross-link rules, editorial rules.
@@ -42,6 +44,7 @@ npm run build:search               # nuxt generate && pagefind --site .output/pu
 npx serve .output/public -l 4000   # preview the built site. Search only works here.
 ./scripts/verify.sh                # static checks, seconds
 ./scripts/verify.sh --build        # static checks, then the full build
+npm run validate:content           # read-only check of content/ against the schemas; not in verify.sh yet
 rm -rf .nuxt .output node_modules/.vite && npm run dev   # when something seems stale
 ```
 

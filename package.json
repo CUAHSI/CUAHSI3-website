@@ -7,13 +7,16 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "build:search": "nuxt generate && pagefind --site .output/public",
-    "preview:search": "npm run build:search && npx serve .output/public"
+    "preview:search": "npm run build:search && npx serve .output/public",
+    "validate:content": "node scripts/validate-content.mjs"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@tailwindcss/typography": "^0.5.13",
     "nuxt": "^3.12.0",
-    "pagefind": "^1.1.0"
+    "pagefind": "^1.1.0",
+    "yaml": "2.9.0",
+    "zod": "4.6.5"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.0",

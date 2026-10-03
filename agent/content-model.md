@@ -2,7 +2,10 @@
 
 **Provenance.** This is sections 3, 4 and 9 of the handoff written on 2 September 2026
 by the agent that built the prototype, from session memory, without the repository in
-front of it. Nothing enforces these schemas yet. Treat every field list as a claim to
+front of it. Nothing enforces these schemas at build time: the installed Nuxt Content
+(2.13.4) has no schema support. `npm run validate:content` checks the files on demand
+against `scripts/content-schemas.mjs`, which follows the files, not this document.
+Treat every field list as a claim to
 check against the actual files in `content/` (rule 1). The reconcile report, Part B,
 records what the files really contain; where it disagrees with this document, the
 report is right and this document gets corrected.
@@ -46,8 +49,9 @@ implementation is disposable.**
 
 ### 3.2 Schemas
 
-These are conventions enforced by nothing. An agent writing content must honor them
-exactly or cross-links silently fail.
+These are conventions that nothing enforces at build time (Nuxt Content 2.13.4 has no
+schema support). `npm run validate:content` checks them on demand. An agent writing
+content must honor them exactly or cross-links silently fail.
 
 **`content/newsletter/` — monthly e-newsletter issues**
 ```yaml
