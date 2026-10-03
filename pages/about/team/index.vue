@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({ title: 'Our Team · CUAHSI' })
 const { data: teamData } = await useAsyncData('team', () =>
-  queryContent('team').where({ _extension: 'json' }).findOne()
+  queryContent('team').where({ _extension: 'json' }).findOne().catch(() => null)
 )
 const people = computed<any[]>(() =>
   Array.isArray(teamData.value?.body) ? teamData.value.body : []

@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const { data: issue } = await useAsyncData(`newsletter-${route.params.slug}`, () =>
-  queryContent('newsletter').where({ slug: route.params.slug, published: true }).findOne()
+  queryContent('newsletter').where({ slug: route.params.slug, published: true }).findOne().catch(() => null)
 )
 
 if (!issue.value) throw createError({ statusCode: 404, message: 'Issue not found' })
@@ -15,7 +15,7 @@ useHead({
 // Resolve people_mentioned from full-team.json — the single source of truth for all staff.
 // Individual .md files in content/team/ only exist for some staff; full-team.json has everyone.
 const { data: fullTeamData } = await useAsyncData('full-team-nl', () =>
-  queryContent('team').where({ _extension: 'json' }).findOne()
+  queryContent('team').where({ _extension: 'json' }).findOne().catch(() => null)
 )
 const people = computed(() => {
   const slugs: string[] = issue.value?.people_mentioned ?? []

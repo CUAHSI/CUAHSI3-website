@@ -2,7 +2,7 @@
 const route = useRoute()
 const slug = route.params.slug as string
 const { data: teamData } = await useAsyncData('team-profile', () =>
-  queryContent('team').where({ _extension: 'json' }).findOne()
+  queryContent('team').where({ _extension: 'json' }).findOne().catch(() => null)
 )
 const person = computed(() => {
   const all: any[] = Array.isArray(teamData.value?.body) ? teamData.value.body : []
