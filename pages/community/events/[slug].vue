@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const { data: event } = await useAsyncData(`event-${route.params.slug}`, () =>
-  queryContent('events').where({ slug: route.params.slug, published: true }).findOne()
+  queryContent('events').where({ slug: route.params.slug, published: true }).findOne().catch(() => null)
 )
 
 if (!event.value) throw createError({ statusCode: 404, message: 'Event not found' })

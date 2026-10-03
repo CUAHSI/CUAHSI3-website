@@ -11,12 +11,17 @@ const upcomingEvents = computed(() =>
   (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 4)
 )
 
-const { data: latestNews } = await useAsyncData('community-news', () =>
+const { data: allNews } = await useAsyncData('community-news', () =>
   queryContent('news')
     .where({ published: true })
     .sort({ date: -1 })
-    .limit(3)
     .find()
+)
+// queryContent('news') matches by path PREFIX, so it also returns '/newsletter/...'.
+// Filter with the trailing slash, then take 3: a limit() in the query would let
+// newsletter issues use up the slots before this filter runs.
+const latestNews = computed(() =>
+  (allNews.value ?? []).filter(item => item._path?.startsWith('/news/')).slice(0, 3)
 )
 
 const { data: latestNewsletter } = await useAsyncData('community-newsletter', () =>
@@ -25,6 +30,7 @@ const { data: latestNewsletter } = await useAsyncData('community-newsletter', ()
     .sort({ date: -1 })
     .limit(1)
     .findOne()
+    .catch(() => null)
 )
 
 const typeColors: Record<string, {bg: string; text: string}> = {
