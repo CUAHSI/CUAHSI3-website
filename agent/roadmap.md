@@ -6,7 +6,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | # | Task | Status | Risk |
 |---|---|---|---|
 | 1 | Reconcile repo against the verify-first list | merged | none (read-only) |
-| 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | in progress | low |
+| 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | PR open | low |
 | 3 | Extract repeated markup into components | not started | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
