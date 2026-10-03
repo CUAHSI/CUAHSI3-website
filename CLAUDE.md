@@ -101,7 +101,7 @@ version mismatch. Ignore it.
 
 ## Known footguns
 
-Every one of these cost real debugging time. All but the third failed silently.
+Every one of these cost real debugging time. All but the third failed silently; the third is unverified (see below).
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -115,8 +115,16 @@ Every one of these cost real debugging time. All but the third failed silently.
 2. **`<component :is="cond ? 'a' : 'NuxtLink'">` renders but does not navigate.** The
    markup looks right and clicks do nothing. Hit twice. Use explicit `v-if` / `v-else`
    with real `<a>` and `<NuxtLink>` tags.
-3. **An apostrophe inside a static `style="..."` attribute crashes the Vue compiler.**
-   Never write `style="content:'x'"`.
+3. **Unverified: an apostrophe inside a static `style="..."` attribute.** The previous
+   agent reported that it crashes the Vue compiler (`style="content:'x'"` was the
+   example). That was not reproduced. 231 such lines in 21 files build cleanly: the
+   build passed (reconcile report, `agent/reports/261003_reconcile.md`, check 7), and
+   every line the report read was a `font-family` name like `'Hanken Grotesk'`. That
+   shows the build did not fail, not that every line renders correctly. A standalone
+   `@vue/compiler-sfc` compile of `style="content:'x'"` with Vue 3.5.35 (client and
+   SSR, not a Nuxt build) also succeeded; the test is recorded in `agent/eval-log.md`.
+   There is no `verify.sh` check for it. If a build ever fails on a style attribute
+   with an apostrophe, record the exact error here.
 4. **Vue reuses DOM nodes across `v-for`, including `<img src>`.** A `:key` on a
    wrapping `<template v-for>` is not enough; Vue looks past the template to the
    rendered children. Symptom: the right content flashes, then a neighbour's replaces
