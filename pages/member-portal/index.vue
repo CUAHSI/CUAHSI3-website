@@ -52,17 +52,19 @@ const resources = [
 
 <template>
   <div>
-    <section class="hero-section" style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto site-container" style="max-width:1240px;padding-top:64px;padding-bottom:44px;">
+    <PageHero section-class="hero-section" container-class="mx-auto site-container" container-style="max-width:1240px;padding-top:64px;padding-bottom:44px;"
+      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:16px 0 14px;"
+      lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:600px;">
+      <template #before>
         <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Member Portal</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:16px 0 14px;">
-          For CUAHSI member representatives.
-        </h1>
-        <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:600px;">
-          A directory of member representatives and resources for the {{ institutionCount }} institutions that make up CUAHSI.
-        </p>
-      </div>
-    </section>
+      </template>
+      <template #title>
+        For CUAHSI member representatives.
+      </template>
+      <template #lead>
+        A directory of member representatives and resources for the {{ institutionCount }} institutions that make up CUAHSI.
+      </template>
+    </PageHero>
 
     <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;">
 

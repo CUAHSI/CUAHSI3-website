@@ -49,8 +49,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 <template>
   <div>
     <!-- ── Hero ── -->
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto rgrid rgrid-split" style="max-width:1240px;padding:76px 40px 72px;display:grid;gap:60px;align-items:center;--cols:1.04fr .96fr;">
+    <PageHero container-class="mx-auto rgrid rgrid-split" container-style="max-width:1240px;padding:76px 40px 72px;display:grid;gap:60px;align-items:center;--cols:1.04fr .96fr;">
         <div>
           <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Consortium of Universities · Hydrologic Science</span>
           <h1 style="font:700 clamp(40px,5vw,62px)/1.03 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:18px 0 0;text-wrap:balance;">
@@ -104,8 +103,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </PageHero>
 
     <!-- ── Stats band ── -->
     <StatsBand />
