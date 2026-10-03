@@ -5,7 +5,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 
 | # | Task | Status | Risk |
 |---|---|---|---|
-| 1 | Reconcile repo against the verify-first list | not started | none (read-only) |
+| 1 | Reconcile repo against the verify-first list | in progress | none (read-only) |
 | 2 | `content.config.ts` with Zod schemas, plus a standalone validator | not started | low |
 | 3 | Extract repeated markup into components | not started | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |

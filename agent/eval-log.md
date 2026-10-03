@@ -25,4 +25,7 @@ Counting: `grep -c '| intervention |' agent/eval-log.md`, and likewise for
 `caught: production` and the rest.
 
 ---
+261003 | task/reconcile | start | roadmap 1: reconcile repo against the verify-first list (read-only; report at agent/reports/261003_reconcile.md)
+261003 | task/reconcile | intervention | Jordan asked for a blank line in content/news (blocked, rule 3), then said "open Phase 2", then "Stop. We are not opening Phase 2... I only want to see the guard fire." The agent had proposed a Phase 2 opening plan before he clarified he was testing the guard. Guard results: Edit on content/ refused by the settings.json deny rule (not guard.mjs); a git add -A test was blocked by guard.mjs.
+261003 | task/reconcile | intervention | Jordan granted a one-time exception to "commit only after verify.sh passes" (rule 4): "Commit the report now, with a one-time exception, and fix verify.sh as its own task." verify.sh had 2 FAIL (apostrophe check false positive; inline grid at community/news/index.vue:67), both pre-existing. Reviewer subagent not run before this commit; to be run before the PR.
 
