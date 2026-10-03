@@ -35,8 +35,8 @@ function toggle(slug: string) { expanded.value = expanded.value === slug ? null 
         <div>
           <p class="font-mono font-bold tracking-[.08em] uppercase text-muted mb-2" style="font-size:10px;">Series</p>
           <div class="flex gap-[6px] flex-wrap">
-            <button @click="selectedSeries='all'" :style="`font:600 12.5px 'Hanken Grotesk';padding:6px 13px;border-radius:22px;border:1px solid ${selectedSeries==='all'?'#0F2E44':'rgba(15,33,43,.18)'};background:${selectedSeries==='all'?'#0F2E44':'transparent'};color:${selectedSeries==='all'?'#fff':'#3a4d57'};cursor:pointer;`">All</button>
-            <button v-for="s in series" :key="s" @click="selectedSeries=s" :style="`font:600 12.5px 'Hanken Grotesk';padding:6px 13px;border-radius:22px;border:1px solid ${selectedSeries===s?'#0F2E44':'rgba(15,33,43,.18)'};background:${selectedSeries===s?'#0F2E44':'transparent'};color:${selectedSeries===s?'#fff':'#3a4d57'};cursor:pointer;`">{{ s }}</button>
+            <FilterChip variant="navy" :active="selectedSeries==='all'" @click="selectedSeries='all'">All</FilterChip>
+            <FilterChip v-for="s in series" :key="s" variant="navy" :active="selectedSeries===s" @click="selectedSeries=s">{{ s }}</FilterChip>
           </div>
         </div>
       </div>

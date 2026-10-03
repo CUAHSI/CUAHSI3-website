@@ -91,10 +91,9 @@ function daysUntil(d: string) {
       <!-- Filters -->
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:24px;">
         <span style="font-size:12px;color:#9ca3af;margin-right:4px;">Type</span>
-        <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
-          :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
+        <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
-        </button>
+        </FilterChip>
       </div>
 
       <!-- Listings -->
