@@ -1,17 +1,35 @@
 <script setup lang="ts">
-// One cyberseminar card. Extracted unchanged from pages/learn-train/cyberseminars/index.vue
-// (roadmap task 3): markup, classes and inline styles are exactly the page's. The page keeps the
+// One cyberseminar card. Extracted from pages/learn-train/cyberseminars/index.vue (roadmap task 3);
+// the collapsed card's markup, classes and inline styles are exactly the page's. The page keeps the
 // "which card is expanded" state and passes it in; clicking the thumbnail asks the page to toggle.
-defineProps<{ seminar: any; expanded: boolean }>()
+//
+// Open state (task A): the card spans the whole grid row and shows a large player in place of the
+// thumbnail, with a Close button. That new markup uses Tailwind classes only, no inline styles.
+// A card with no video id never opens (its click still asks the page to toggle, so it closes any other
+// open card, as before). While open the card drops the hover lift, so the player does not move under the mouse.
+const props = defineProps<{ seminar: any; expanded: boolean }>()
 defineEmits<{ (e: 'toggle'): void }>()
 
+const isOpen = computed(() => props.expanded && !!props.seminar.youtube_id)
+
 function ytThumb(id: string) { return `https://img.youtube.com/vi/${id}/mqdefault.jpg` }
+
+// When a card opens it can move to a row of its own, so bring it to the top of the screen
+// (below the sticky header, see scroll-mt on the root). Client only; never runs during the build.
+const root = ref<HTMLElement | null>(null)
+watch(isOpen, (open) => {
+  if (!open) return
+  nextTick(() => {
+    const calm = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    root.value?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' })
+  })
+})
 </script>
 
 <template>
-  <div class="card-lift bg-white rounded-card overflow-hidden flex flex-col" style="border:1px solid rgba(15,33,43,.1);">
-    <!-- Thumbnail or placeholder -->
-    <div class="relative cursor-pointer" style="height:160px;" @click="$emit('toggle')">
+  <div ref="root" :class="isOpen ? 'bg-white rounded-card overflow-hidden flex flex-col col-span-full scroll-mt-28' : 'card-lift bg-white rounded-card overflow-hidden flex flex-col'" style="border:1px solid rgba(15,33,43,.1);">
+    <!-- Thumbnail or placeholder (replaced by the large player while open) -->
+    <div v-if="!isOpen" class="relative cursor-pointer" style="height:160px;" @click="$emit('toggle')">
       <img v-if="seminar.youtube_id" :src="ytThumb(seminar.youtube_id)" :alt="seminar.title" style="width:100%;height:100%;object-fit:cover;" />
       <div v-else class="w-full h-full flex items-center justify-center" style="background:linear-gradient(150deg,#10324c,#1F6FB2);">
         <span class="font-mono font-bold tracking-[.1em]" style="font-size:11px;color:rgba(255,255,255,.7);">NO VIDEO YET</span>
@@ -24,9 +42,11 @@ function ytThumb(id: string) { return `https://img.youtube.com/vi/${id}/mqdefaul
       </div>
       <span v-if="seminar.has_transcript" class="absolute font-mono font-bold text-white rounded-[4px]" style="right:10px;top:10px;font-size:9.5px;background:rgba(31,159,85,.9);padding:3px 7px;">TRANSCRIPT ✓</span>
     </div>
-    <!-- Embed when expanded -->
-    <div v-if="expanded && seminar.youtube_id" style="aspect-ratio:16/9;">
-      <iframe :src="`https://www.youtube-nocookie.com/embed/${seminar.youtube_id}?autoplay=1&rel=0`" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>
+    <!-- Large player when open -->
+    <div v-if="isOpen" class="bg-black">
+      <div class="mx-auto aspect-video w-full max-w-[880px]">
+        <iframe :src="`https://www.youtube-nocookie.com/embed/${seminar.youtube_id}?autoplay=1&rel=0`" :title="seminar.title" class="h-full w-full border-0" allowfullscreen></iframe>
+      </div>
     </div>
     <div class="flex flex-col flex-1" style="padding:16px;">
       <div class="flex items-center gap-2 mb-2 flex-wrap">
@@ -35,6 +55,7 @@ function ytThumb(id: string) { return `https://img.youtube.com/vi/${id}/mqdefaul
       </div>
       <h3 style="font:700 15px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 8px;flex:1;">{{ seminar.title }}</h3>
       <p v-if="seminar.speakers?.length" class="font-mono text-[10px] text-muted">{{ seminar.speakers.join(' · ') }}</p>
+      <button v-if="isOpen" type="button" class="inline-flex min-h-[44px] items-center self-start font-mono text-[11px] font-bold uppercase tracking-[.08em] text-water hover:underline" @click="$emit('toggle')">Close video ✕</button>
     </div>
   </div>
 </template>
