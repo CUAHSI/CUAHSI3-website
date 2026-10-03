@@ -21,6 +21,14 @@
 //   4. An empty frontmatter block (--- immediately followed by ---) is reported here as a failure;
 //      the site just carries on with no fields.
 //
+// A people_mentioned value that is not a staff slug in full-team.json is "unresolved": board and
+// community people are mentioned in newsletters but are not staff. Unresolved values are reported
+// under "Unresolved, informational" in two lists, "matches a board or community profile" (on the
+// profile's slug or file name) and "matches no profile file". They are not failures and do not change
+// the exit code, with one exception: an unresolved value that is a near miss of a staff slug (1 or 2
+// characters different, or the same words in another order) fails as a probable typo and names the slug
+// it resembles. That is a heuristic; it can miss a typo that is further away.
+//
 // A run limited to one collection skips the cross-reference checks that need other collections.
 // It says so (SKIP lines and the last line); a full run treats a skipped check as a failure.
 
@@ -69,6 +77,30 @@ function readFrontmatter(text) {
   ]
   const data = doc.toJSON()
   return { problems, data: data && typeof data === 'object' && !Array.isArray(data) ? data : {} }
+}
+
+// ---- near misses (probable typos) ---------------------------------------------------
+
+function editDistance(a, b) {
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)])
+  for (let j = 1; j <= b.length; j++) d[0][j] = j
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1))
+  return d[a.length][b.length]
+}
+
+// The closest staff slug if value is 1 or 2 characters away from it, or has the same words in another order.
+function nearMiss(value, slugs) {
+  const wordsKey = s => s.split('-').filter(Boolean).sort().join('-')
+  let best = null
+  for (const s of slugs) {
+    if (s === value) continue
+    const dist = editDistance(value, s)
+    if (dist <= 2 && (!best || dist < best.dist)) best = { slug: s, dist, why: `${dist} character${dist === 1 ? '' : 's'} different` }
+    else if (!best && wordsKey(value) === wordsKey(s)) best = { slug: s, dist: 99, why: 'same words in a different order' }
+  }
+  return best
 }
 
 // ---- schema issues -> readable lines ------------------------------------------------
@@ -170,7 +202,8 @@ if (!only.length && fs.existsSync('content/cyberseminars/transcripts')) {
 
 // ---- cross-references ---------------------------------------------------------------
 
-const xref = []   // { title, checked, problems: [] }
+const xref = []   // { title, checked, problems: [] }  problems are failures
+const info = []   // { title, checked, items: [] }     informational only: never a failure, never affects the exit code
 const skippedXref = []
 const dupes = []
 for (const [name, list] of refs.slugs) {
@@ -188,11 +221,38 @@ const teamSlugs = new Set((refs.slugs.get('team/full-team.json') ?? []).map(x =>
 if (teamSlugs.size && refs.people.length) {
   const bad = new Map()
   for (const p of refs.people) if (!teamSlugs.has(p.value)) bad.set(p.value, [...(bad.get(p.value) ?? []), p.file + (p.yamlFailed ? ' (file has a YAML parse failure)' : '')])
+  // A people_mentioned value that is not a staff slug is "unresolved", not an error: board and
+  // community people are mentioned in newsletters but are not in full-team.json. Unresolved values
+  // go in two informational lists (matches a board or community profile / matches no profile).
+  // One hard failure: an unresolved value that is a near miss of a staff slug (1 or 2 characters
+  // different, or the same words in another order) is a probable typo and fails, naming the slug.
+  const profileKeys = new Set()   // a profile counts as matching on its slug frontmatter or its file name
+  for (const e of [...(refs.slugs.get('board') ?? []), ...(refs.slugs.get('community') ?? [])]) {
+    profileKeys.add(e.slug)
+    profileKeys.add(path.basename(e.id, '.md'))
+  }
+  const profilesLoaded = selected.some(c => c.name === 'board') && selected.some(c => c.name === 'community')
+  const typos = [], withProfile = [], noProfile = [], unchecked = []
+  for (const [v, files] of bad) {
+    const near = nearMiss(v, teamSlugs)
+    const used = `used in ${files.join(', ')}`
+    if (near) typos.push(`"${v}" looks like a typo of the staff slug "${near.slug}" (${near.why}); ${used}`)
+    else if (!profilesLoaded) unchecked.push(`"${v}"; ${used}`)
+    else if (profileKeys.has(v)) withProfile.push(`"${v}"; ${used}`)
+    else noProfile.push(`"${v}"; ${used}`)
+  }
+  const checkedText = `${refs.people.length} references in ${new Set(refs.people.map(p => p.file)).size} files, ${new Set(refs.people.map(p => p.value)).size} distinct values, against ${teamSlugs.size} staff slugs`
   xref.push({
-    title: 'Every people_mentioned value is a staff slug in team/full-team.json (newsletter and research)',
-    checked: `${refs.people.length} references in ${new Set(refs.people.map(p => p.file)).size} files, ${new Set(refs.people.map(p => p.value)).size} distinct values, against ${teamSlugs.size} staff slugs`,
-    problems: [...bad].map(([v, files]) => `"${v}" is not a staff slug; used in ${files.join(', ')}`),
+    title: 'No people_mentioned value is a probable typo of a staff slug (newsletter and research)',
+    checked: `${bad.size} non-staff values compared with ${teamSlugs.size} staff slugs; ${checkedText}`,
+    problems: typos,
   })
+  if (profilesLoaded) {
+    info.push({ title: 'people_mentioned: not a staff slug, matches a board or community profile file: unresolved, informational', checked: checkedText, items: withProfile })
+    info.push({ title: 'people_mentioned: not a staff slug, matches no profile file: unresolved, informational', checked: checkedText, items: noProfile })
+  } else {
+    info.push({ title: 'people_mentioned: not a staff slug; not compared with profiles because board and community were not both selected: unresolved, informational', checked: checkedText, items: unchecked })
+  }
 } else {
   skippedXref.push('people_mentioned values vs staff slugs: needs team/full-team.json and newsletter or research, and found none of one or the other')
 }
@@ -263,6 +323,14 @@ for (const x of xref) {
 }
 for (const s of skippedXref) console.log(`SKIP  ${s}`)
 
+const unresolved = info.reduce((a, x) => a + x.items.length, 0)
+console.log(`\n== Unresolved, informational (not failures; they do not change the exit code): ${unresolved} ==`)
+if (!info.length) console.log('none checked')
+for (const x of info) {
+  console.log(`${x.items.length ? 'INFO' : 'ok  '}  ${x.title} (${x.checked})`)
+  for (const i of x.items) console.log(`        ${i}`)
+}
+
 if (skipped.length) {
   console.log('\n== Not validated ==')
   for (const s of skipped) console.log(`  ${s}`)
@@ -273,6 +341,6 @@ if (skipped.length) {
 // that skipped a check read no staff or newsletter slugs at all, which is a failure.
 const skippedFail = only.length ? 0 : skippedXref.length
 const failed = tot.s + tot.y + xrefFail + skippedFail
-console.log(`\n${failed ? 'FAILED' : 'OK'}: ${tot.y} YAML parse failure(s), ${tot.s} schema failure(s), ${xrefFail} cross-reference problem(s)` +
+console.log(`\n${failed ? 'FAILED' : 'OK'}: ${tot.y} YAML parse failure(s), ${tot.s} schema failure(s), ${xrefFail} cross-reference problem(s), ${unresolved} unresolved value(s) (informational)` +
   (skippedXref.length ? `, ${skippedXref.length} cross-reference check group(s) SKIPPED${only.length ? ' (this was a partial run; run without a collection name for the full check)' : ''}.` : '.'))
 process.exit(failed ? 1 : 0)

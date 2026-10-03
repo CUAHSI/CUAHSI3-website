@@ -4,7 +4,7 @@ Roadmap task 2. Produced by `npm run validate:content` (`scripts/validate-conten
 
 ## Summary
 
-389 items checked, 377 pass, 1 fails a schema, 11 fail to parse, 8 cross-reference problems. The validator exits 1.
+389 items checked, 377 pass, 1 fails a schema, 11 fail to parse, 0 cross-reference problems, and 8 unresolved `people_mentioned` values that are reported as informational only. The validator exits 1, because of the 12 failing files.
 
 | Collection | Checked | Pass | Schema fail | YAML parse fail |
 |---|---|---|---|---|
@@ -29,7 +29,7 @@ The findings that matter, in order:
 1. **9 of 15 cyberseminar files carry no fields as far as the site is concerned.** They have no closing `---` line, so the site reads no fields from them (details below). This is the largest problem the validator found. The reconcile report did not catch it: its key counts for cyberseminars (every key "15 of 15") came from a parser that did not need the closing line, so they described the YAML text in the file, not what the site reads.
 2. **2 of 31 research files have broken YAML** (an unquoted `: ` in `excerpt`). The site keeps going and stores `excerpt` as an object.
 3. **1 of 229 member reps has a bad email** (`ypokhrel@msu.eduÂ`, with a stray character).
-4. **8 distinct `people_mentioned` values are not staff slugs** (they name board and community people). 72 references in 24 files were checked.
+4. **8 distinct `people_mentioned` values are not staff slugs** (they name board and community people). 72 references in 24 files were checked. By Jordan's decision these are **unresolved, informational**, not errors: they have their own list and do not change the exit code (section 3).
 
 A repair list for the 12 failing files (file, line, exact change) is in section 10. It has not been applied; applying it on a scratch copy took the validator from 377 to 389 of 389 passing.
 
@@ -46,7 +46,8 @@ Each starts with `---`, lists its fields, and ends without a second `---` line. 
 What I checked, and what I did not:
 - **The files.** Counting `---`-only lines in all 15: **9 have exactly 1** (and 12 to 13 lines in total, no body); the other **6 have 2** (24 to 29 lines). Independent of the validator.
 - **What the site stored.** The built site ships its parsed content as `api/_content/cache.*.json`. In it, the 22 cyberseminar documents (15 `.md` and 7 transcript `.json`) split like this: **6 have `published: true`; the 9 broken files have no `published`, `slug`, `date`, `series` or `speakers` at all.** Their title is made from the file name (for example "2024 Intro Hydroshare May"), and the YAML text sits in the body. Every other collection's `published: true` count in that cache matches its file count (events 27 of 27, jobs 29 of 29, news 12 of 12, newsletter 7 of 7, research 31 of 31, team 8 of 8, board 1, community 4, programs 4).
-- **What follows, from reading the code but not seen on a screen:** any page that asks for `published: true` cyberseminars cannot return these nine (the listing, the team profile "seminars" block and the home page's latest seminar all do). I did not look at those pages in a browser, and I did not measure which seminars they show. The Cyberseminars page lists series, not individual seminars, so counting titles on it proves nothing; I tried that and discarded it.
+- **What follows.** Any page that asks for `published: true` cyberseminars cannot return these nine. Three do: the Cyberseminars page, the team profile "seminars" block and the home page's latest seminar. **Confirmed on the live Cyberseminars page by Jordan: it shows 6 cards, the same as the 6 files that parse.** The team profile block and the home page are inferred from their queries; I have not looked at either in a browser.
+- **A correction to my own earlier wording.** A first draft of this report said the Cyberseminars page "lists series, not individual seminars". That was wrong: the page draws one card per seminar (`pages/learn-train/cyberseminars/index.vue` loops over the `published: true` seminars), and the series are only filter buttons above the cards. I had counted the text `card-lift` in the built page (8), which also appears in the page's CSS, and mistook the count for series. Counting the actual card elements gives 6.
 - **Likely fix (Phase 2, not done):** add a closing `---` line to each of the nine files. The six good files have the same layout, with a blank body after the closing line.
 
 ### 1b. Two research files with a colon in `excerpt`
@@ -66,11 +67,21 @@ No other file fails its schema. That includes the checks I added beyond what the
 | Check | Result |
 |---|---|
 | Slugs unique within each collection | ok, 151 slugs in 11 collections |
-| Every `people_mentioned` value is a staff slug in `full-team.json` (newsletter and research) | **FAIL**: 72 references in 24 files, 23 distinct values, against 22 staff slugs; 8 distinct values are not staff slugs |
+| Every `people_mentioned` value is a staff slug in `full-team.json` (newsletter and research) | **not a failure.** 72 references in 24 files, 23 distinct values, against 22 staff slugs; 15 values are staff slugs and **8 are unresolved, informational** (5 match a profile, 3 match none; listed below and in their own section of the validator output) |
+| No unresolved `people_mentioned` value is a probable typo of a staff slug | ok, 0 of the 8 flagged |
 | Every events `newsletter_source` value is a newsletter slug | ok, 40 references in 27 files, 7 distinct values, 7 newsletter slugs |
 | Also checked: every `content/team/*.md` slug is in `full-team.json` | ok, 8 of 8 |
 
-The eight values that are not staff slugs, all in newsletters: `masoumeh-hashemi` (260101-january), `marco-maneta` and `punwath-prum` (260201-february), `tao-wen`, `moses-kiwanuka`, `aashish-gautam`, `hassan-saleh` and `heather-kropp` (260301-march). `content-model.md` says `people_mentioned` takes team slugs. Five of the eight equal the file names of profiles in `content/board/` and `content/community/` (`tao-wen`, `moses-kiwanuka`, `aashish-gautam`, `hassan-saleh`, `heather-kropp`); the other three match no profile file. I compared file names, not `slug` frontmatter. The schema accepts any slug-shaped value, and the cross-reference check reports these, so they are not hidden. Whether the model or the files are right is Jordan's decision.
+Jordan's decision: these eight name board and community people, so they are not errors. The validator lists them as "Unresolved, informational" and does not count them as failures or let them change the exit code. They are split into two lists:
+
+- **Matches a board or community profile file** (5): `tao-wen`, `moses-kiwanuka`, `aashish-gautam`, `hassan-saleh`, `heather-kropp`.
+- **Matches no profile file** (3): `masoumeh-hashemi`, `marco-maneta`, `punwath-prum`.
+
+"Matches" means the value equals the profile's `slug` frontmatter or its file name (without `.md`). For the five matches both agree: the slug and the file name are the same word in each. If board and community were not both read (a partial run), the values are not split and the list says so.
+
+**One hard failure was added:** a non-staff value that is a near miss of an existing staff slug (one or two characters different, or the same words in another order) fails as a probable typo, and the message names the slug it resembles. **On the current content it flags 0 of the 8**, as Jordan expected. I tested it on a scratch copy (`.agent/typo`, built from the repaired scratch tree, gitignored): `julia-mastermann` (one character added to `julia-masterman`), `platt-lindsay` (the words of `lindsay-platt` reordered) and `lindsay-plat-x` (two characters from `lindsay-platt`) were each flagged, naming the right staff slug. Two controls were correctly left alone and listed as informational: `someone-unrelated`, and `tao-wang` (a near miss of the *board* member `tao-wen`, which is not a staff slug). **Limits:** the check compares only with staff slugs, so a typo of a board or community person is not caught; it is a heuristic, so a typo more than two characters away is not caught either.
+
+The eight values that are not staff slugs, all in newsletters: `masoumeh-hashemi` (260101-january), `marco-maneta` and `punwath-prum` (260201-february), `tao-wen`, `moses-kiwanuka`, `aashish-gautam`, `hassan-saleh` and `heather-kropp` (260301-march). `content-model.md` says `people_mentioned` takes team slugs. Five of the eight match profiles in `content/board/` and `content/community/` (see above); the other three match none. The schema accepts any slug-shaped value. Whether `content-model.md` should say `people_mentioned` also takes board and community slugs is still open.
 
 ## 4. How this validator differs from what the site's parser accepts
 
@@ -124,7 +135,7 @@ The research `category` and jobs `type` enums match the values the files use: 5 
 
 ## 7. How the validator was tested
 
-Because `content/` cannot be changed, I built a scratch tree (`.agent/make-fixture.mjs`, gitignored, so not in the PR) and ran `node scripts/validate-content.mjs --root=.agent/fixture` on it. It held one deliberately bad file per kind of check. Result: 2 YAML parse failures (an unclosed frontmatter, and a colon in `excerpt`), 9 schema failures (missing required field, unknown key, impossible date `2026-13-40`, bad URL, bad enum in `events.location.mode`, bad enum in `jobs.type`, a `programs` file matching neither shape, a bad `department` in `full-team.json`, a bad email), and 4 cross-reference problems (duplicate slug, `people_mentioned` not a staff slug, `newsletter_source` not a newsletter slug, a team `.md` slug not in `full-team.json`). Every category fired and the README file was skipped. After the reviewer's findings I also ran: a one-collection run (`events`), which now prints three `SKIP` lines and "partial run"; a three-collection run, which runs the cross-references it has the data for; a `--root` that does not exist and a root with no `content/` folders, both of which exit 2 with "Nothing was validated". Nothing was tested beyond that; for example, a duplicate slug inside `full-team.json` was not exercised.
+Because `content/` cannot be changed, I built a scratch tree (`.agent/make-fixture.mjs`, gitignored, so not in the PR) and ran `node scripts/validate-content.mjs --root=.agent/fixture` on it. It held one deliberately bad file per kind of check. Result: 2 YAML parse failures (an unclosed frontmatter, and a colon in `excerpt`), 9 schema failures (missing required field, unknown key, impossible date `2026-13-40`, bad URL, bad enum in `events.location.mode`, bad enum in `jobs.type`, a `programs` file matching neither shape, a bad `department` in `full-team.json`, a bad email), and 4 cross-reference problems (duplicate slug, `people_mentioned` not a staff slug, `newsletter_source` not a newsletter slug, a team `.md` slug not in `full-team.json`). After the later change that makes non-staff `people_mentioned` values informational, the same fixture gives 3 cross-reference problems plus 1 informational entry (`ghost-person`), and the validator still exits 1. The typo check was tested separately (section 3): 3 of 3 planted typos flagged, 2 of 2 controls not flagged, 0 of the 8 real values flagged. Every category fired and the README file was skipped. After the reviewer's findings I also ran: a one-collection run (`events`), which now prints three `SKIP` lines and "partial run"; a three-collection run, which runs the cross-references it has the data for; a `--root` that does not exist and a root with no `content/` folders, both of which exit 2 with "Nothing was validated". Nothing was tested beyond that; for example, a duplicate slug inside `full-team.json` was not exercised.
 
 ## 8. Sample (rule 12)
 
@@ -143,7 +154,7 @@ Files opened to confirm the bulk results:
 
 For each of the 12 failing content files: the file, the line, and the exact change that would fix it. **None of these edits has been made.** `content/` is frozen in Phase 1; Jordan decides who makes them and when.
 
-All 12 together would take the validator from 377 of 389 passing to **389 of 389**, with no YAML parse failures and no schema failures. I tested that on a scratch copy of `content/` under `.agent/` (gitignored), by applying exactly the edits below and running `node scripts/validate-content.mjs --root=.agent/repaired`. That run also showed that the nine repaired seminar files pass the schema, which could not be tested before because the validator could not read their fields. After the repairs, the only remaining validator output is the 8 `people_mentioned` values (handled separately, below), and the slug count rises from 151 to 160 because the nine seminars' slugs become readable (all unique). The real `content/` was not touched during the test (`git status -- content` showed no changes).
+All 12 together would take the validator from 377 of 389 passing to **389 of 389**, with no YAML parse failures and no schema failures. I tested that on a scratch copy of `content/` under `.agent/` (gitignored), by applying exactly the edits below and running `node scripts/validate-content.mjs --root=.agent/repaired`. That run also showed that the nine repaired seminar files pass the schema, which could not be tested before because the validator could not read their fields. After the repairs, the only remaining validator output is the 8 unresolved `people_mentioned` values (informational, so the validator then exits 0: I ran it that way after changing the check), and the slug count rises from 151 to 160 because the nine seminars' slugs become readable (all unique). The real `content/` was not touched during the test (`git status -- content` showed no changes).
 
 ### 10a. Nine cyberseminar files: add the missing closing `---`
 
@@ -193,11 +204,11 @@ excerpt: "Two HydroCARE Travel Fellows attended the National Diversity in STEM (
 
 ### 10c. One member email
 
-`content/members/reps.json`, **line 288** (entry 47, Yadu Pokhrel). The file stores the stray character as the JSON escape `Â` directly after `msu.edu`.
+`content/members/reps.json`, **line 288** (entry 47, Yadu Pokhrel). The file stores the stray character as the JSON escape `\u00c2` directly after `msu.edu`.
 
-Before:
+Before (the text to search for: after `msu.edu` the file has the six characters backslash, `u`, `0`, `0`, `c`, `2`, not the letter Â itself):
 ```
-    "email": "ypokhrel@msu.eduÂ"
+    "email": "ypokhrel@msu.edu\u00c2"
 ```
 After:
 ```
