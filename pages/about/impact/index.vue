@@ -59,7 +59,7 @@ function yearChipStyle(active: boolean) {
       <!-- About sub-nav -->
       <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
         <div class="flex gap-0" style="border-top:1px solid rgba(15,33,43,.08);overflow-x:auto;">
-          <a v-for="l in [{t:'Overview',h:'/about'},{t:'Mission & values',h:'/about#mission'},{t:'History',h:'/about#history'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Our team',h:'/about/team'}]"
+          <a v-for="l in [{t:'Overview',h:'/about'},{t:'Mission & values',h:'/about#mission'},{t:'What we do',h:'/about#what-we-do'},{t:'History',h:'/about#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'/about#contact'}]"
             :key="l.h" :href="l.h" style="font:500 13px 'Hanken Grotesk';color:#5C6E78;padding:14px 16px 14px 0;text-decoration:none;white-space:nowrap;"
             class="hover:text-navy transition-colors">
             {{ l.t }}
