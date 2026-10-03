@@ -73,4 +73,5 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261003 | pages/community/news/index.vue | uses colors outside the design tokens (#1D9E75, #9ca3af, #6b7280, #f3f4f6) and links to /highlights, a redirect stub
 261003 | pages/about/team/index.vue | cards are clickable via @click and $router.push on a div, not a link; not keyboard-reachable
 261003 | repo root | `dist` symlink is tracked despite `dist/` in .gitignore; `nuxt generate` also moves public/robots.txt to public/_robots.txt (restored by hand after the reconcile build)
+261003 | pages/community/index.vue | CONFIRMED in built HTML: the "latest news" list on /community shows newsletter issues ("July 2026 e-Newsletter", "June 2026 e-Newsletter") because of the unfiltered queryContent('news'). Two separate builds of the same code listed different items there, so the list is also not stable between builds (cause not investigated). Fix planned in task/community-news-filter.
 

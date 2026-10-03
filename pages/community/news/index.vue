@@ -64,7 +64,7 @@ const tagColors: Record<string, { bg: string, text: string }> = {
       </div>
 
       <!-- Cross-links -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
+      <div class="rgrid rgrid-multi" style="display:grid;gap:12px;--cols:1fr 1fr;margin-bottom:48px;">
         <NuxtLink to="/community/newsletter"
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Monthly newsletter</p>
