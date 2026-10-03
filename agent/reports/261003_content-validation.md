@@ -31,6 +31,8 @@ The findings that matter, in order:
 3. **1 of 229 member reps has a bad email** (`ypokhrel@msu.eduÂ`, with a stray character).
 4. **8 distinct `people_mentioned` values are not staff slugs** (they name board and community people). 72 references in 24 files were checked.
 
+A repair list for the 12 failing files (file, line, exact change) is in section 10. It has not been applied; applying it on a scratch copy took the validator from 377 to 389 of 389 passing.
+
 Everything else passes, including slug uniqueness (151 slugs in 11 collections), every `newsletter_source` value (40 references, all real newsletter slugs) and every `content/team/*.md` slug (8 of 8 are in `full-team.json`).
 
 ## 1. YAML parse failures (a separate category from schema failures)
@@ -136,3 +138,70 @@ Files opened to confirm the bulk results:
 
 - `npm audit` reports 36 vulnerabilities in the installed tree (4 low, 3 moderate, 25 high, 4 critical), including an advisory for Nuxt MDC (GHSA-cj6r-rrr9-fg82). I did not look into them or change anything; the two packages added here (`zod`, `yaml`) are not named in what I saw.
 - The three README files (`board`, `community`, `programs`) are ingested by Nuxt Content as documents (they appear in the built site's content cache). I did not check whether they are reachable by URL.
+
+## 10. Repair list (nothing applied)
+
+For each of the 12 failing content files: the file, the line, and the exact change that would fix it. **None of these edits has been made.** `content/` is frozen in Phase 1; Jordan decides who makes them and when.
+
+All 12 together would take the validator from 377 of 389 passing to **389 of 389**, with no YAML parse failures and no schema failures. I tested that on a scratch copy of `content/` under `.agent/` (gitignored), by applying exactly the edits below and running `node scripts/validate-content.mjs --root=.agent/repaired`. That run also showed that the nine repaired seminar files pass the schema, which could not be tested before because the validator could not read their fields. After the repairs, the only remaining validator output is the 8 `people_mentioned` values (handled separately, below), and the slug count rises from 151 to 160 because the nine seminars' slugs become readable (all unique). The real `content/` was not touched during the test (`git status -- content` showed no changes).
+
+### 10a. Nine cyberseminar files: add the missing closing `---`
+
+Each file starts with `---`, lists its fields, and stops at the `description:` line with no closing delimiter. The change is the same for all nine: **add one new line containing exactly `---` after the last line of the file** (every file already ends with a newline, none uses Windows line endings). Nothing else in the file changes.
+
+| File (in `content/cyberseminars/`) | Add `---` after line | That line is |
+|---|---|---|
+| `2024-intro-compute-services-july.md` | 12 | the `description:` line |
+| `2024-intro-hydroshare-may.md` | 12 | the `description:` line |
+| `2025-nav-beyond-academic-ai.md` | 13 | the `description:` line |
+| `2025-nav-beyond-academic-broader-impacts.md` | 13 | the `description:` line |
+| `2025-nav-beyond-academic-careers.md` | 13 | the `description:` line |
+| `2025-nav-beyond-academic-funding.md` | 13 | the `description:` line |
+| `2025-post-field-data-practices.md` | 13 | the `description:` line |
+| `2025-usgs-nwaa-understanding.md` | 12 | the `description:` line |
+| `2025-usgs-water-data-apis.md` | 13 | the `description:` line |
+
+**What visitors would see change:** these nine seminars would stop being invisible to the site. Today they carry no `published`, `slug` or `date`, so queries that filter on `published: true` cannot return them. After the edit they carry their real fields and can appear in the places that list seminars (the cyberseminars pages, the team profile "seminars" block, and the home page's latest seminar). That is the intended result, but it is a visible change and deserves a look on a deploy preview. I have not seen any of those pages with the nine included.
+
+### 10b. Two research files: put quotes around `excerpt`
+
+In both files, **line 12** is an `excerpt:` value that contains a colon followed by a space (`: `), which YAML reads as the start of a nested mapping. The change is to wrap the text after `excerpt: ` in double quotes. Neither line contains a double quote or a backslash, so no escaping is needed (the second contains an apostrophe, which is fine inside double quotes).
+
+`content/research/2025-datacite-migration.md`, line 12.
+
+Before:
+```
+excerpt: HydroShare completed migration of all DOI registration from Crossref to DataCite — a registry better suited for data publication — with a direct benefit for researchers: NSF Public Access Repository submissions can now be auto-populated from a HydroShare DOI, importing author, title, and abstract without manual re-entry.
+```
+After:
+```
+excerpt: "HydroShare completed migration of all DOI registration from Crossref to DataCite — a registry better suited for data publication — with a direct benefit for researchers: NSF Public Access Repository submissions can now be auto-populated from a HydroShare DOI, importing author, title, and abstract without manual re-entry."
+```
+
+`content/research/2025-hydrocare-ndistem.md`, line 12.
+
+Before:
+```
+excerpt: Two HydroCARE Travel Fellows attended the National Diversity in STEM (NDiSTEM) Conference in Columbus and participated in CUAHSI's workshop on data management — providing feedback that surfaced a central theme: trust-building must come before technical solutions, and CARE-aligned engagement requires long-term commitment to Indigenous-led initiatives.
+```
+After:
+```
+excerpt: "Two HydroCARE Travel Fellows attended the National Diversity in STEM (NDiSTEM) Conference in Columbus and participated in CUAHSI's workshop on data management — providing feedback that surfaced a central theme: trust-building must come before technical solutions, and CARE-aligned engagement requires long-term commitment to Indigenous-led initiatives."
+```
+
+**What visitors would see change:** on these two story pages the `excerpt` becomes the sentence it was meant to be, instead of an object. Wherever the excerpt text is shown (the story cards, the page's description), it would now appear. I have not looked at how those two pages render today beyond noticing the DataCite page had no meta description.
+
+### 10c. One member email
+
+`content/members/reps.json`, **line 288** (entry 47, Yadu Pokhrel). The file stores the stray character as the JSON escape `Â` directly after `msu.edu`.
+
+Before:
+```
+    "email": "ypokhrel@msu.eduÂ"
+```
+After:
+```
+    "email": "ypokhrel@msu.edu"
+```
+
+**What visitors would see change:** `pages/member-portal/index.vue` (`/member-portal`, which is deliberately not linked from the nav) prints each rep's email as text and as a `mailto:` link, and also searches on it. Today this rep's link is `mailto:ypokhrel@msu.eduÂ`, which a mail program is unlikely to deliver to the right address. After the edit it would be `mailto:ypokhrel@msu.edu`. I read that in the page's code; I did not open the page.
