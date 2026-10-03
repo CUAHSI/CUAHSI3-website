@@ -21,3 +21,4 @@ dist/
 !.env.example
 .Rproj.user
 .positai
+.agent/
