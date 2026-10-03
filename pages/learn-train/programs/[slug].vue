@@ -13,20 +13,21 @@ useHead({ title: computed(() => program.value ? `${program.value.title} · CUAHS
       <NuxtLink to="/learn-train#programs" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← Back to Learn & Train</NuxtLink>
     </div>
     <div v-else-if="program">
-      <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-        <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;padding-bottom:48px;">
+      <PageHero container-class="mx-auto site-container" container-style="max-width:1240px;padding-top:52px;padding-bottom:48px;"
+        lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:600px;margin-bottom:16px;">
+        <template #before>
           <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/learn-train#programs" style="color:#5C6E78;">← Learn &amp; Train</NuxtLink></p>
           <div class="flex items-baseline gap-3 mb-3 flex-wrap">
             <h1 style="font:700 clamp(28px,3.5vw,44px)/1.1 'Schibsted Grotesk';letter-spacing:-.018em;color:#0F2E44;">{{ program.title }}</h1>
             <span v-if="program.abbreviation" class="font-mono text-[15px] text-muted">{{ program.abbreviation }}</span>
           </div>
-          <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:600px;margin-bottom:16px;">{{ program.excerpt }}</p>
-          <div class="flex gap-2 flex-wrap">
-            <span v-if="program.season" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(15,33,43,.07);color:#5C6E78;padding:5px 10px;">{{ program.season }}</span>
-            <span v-for="a in program.audience" :key="a" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:5px 10px;">{{ a.replace(/-/g,' ') }}</span>
-          </div>
+        </template>
+        <template #lead>{{ program.excerpt }}</template>
+        <div class="flex gap-2 flex-wrap">
+          <span v-if="program.season" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(15,33,43,.07);color:#5C6E78;padding:5px 10px;">{{ program.season }}</span>
+          <span v-for="a in program.audience" :key="a" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:5px 10px;">{{ a.replace(/-/g,' ') }}</span>
         </div>
-      </section>
+      </PageHero>
       <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;padding-bottom:80px;">
         <div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:minmax(0,1fr) 240px;">
           <div>
