@@ -15,17 +15,19 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
       <NuxtLink to="/about/impact" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← Back to Impact</NuxtLink>
     </div>
     <div v-else-if="item">
-      <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-        <div class="mx-auto" style="max-width:1240px;padding:52px 40px 48px;">
+      <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:52px 40px 48px;"
+        title-style="font:700 clamp(28px,3.5vw,44px)/1.1 'Schibsted Grotesk';letter-spacing:-.018em;color:#0F2E44;max-width:760px;margin:0 0 16px;"
+        lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:640px;">
+        <template #before>
           <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about/impact" style="color:#5C6E78;">← Impact</NuxtLink></p>
           <div class="flex items-center gap-3 mb-4">
             <span class="font-mono font-bold text-white rounded-[5px]" :style="`font-size:11px;background:${useCategoryColor(item.category).color};padding:5px 11px;`">{{ useCategoryColor(item.category).label.toUpperCase() }}</span>
             <span class="font-mono text-[11px] text-muted">{{ fmtDate(item.date) }}</span>
           </div>
-          <h1 style="font:700 clamp(28px,3.5vw,44px)/1.1 'Schibsted Grotesk';letter-spacing:-.018em;color:#0F2E44;max-width:760px;margin:0 0 16px;">{{ item.title }}</h1>
-          <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:640px;">{{ item.excerpt }}</p>
-        </div>
-      </section>
+        </template>
+        <template #title>{{ item.title }}</template>
+        <template #lead>{{ item.excerpt }}</template>
+      </PageHero>
       <div class="mx-auto" style="max-width:760px;padding:52px 40px 80px;">
         <ContentRenderer v-if="item.body?.children?.length" :value="item" class="program-prose" />
         <p v-else style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;">{{ item.excerpt }}</p>

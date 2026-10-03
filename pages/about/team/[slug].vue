@@ -38,28 +38,26 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
       <NuxtLink to="/about/team" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← Back to team</NuxtLink>
     </div>
     <div v-else-if="person">
-      <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-        <div class="mx-auto rgrid rgrid-split" style="max-width:1240px;padding:52px 40px 48px;display:grid;gap:40px;align-items:start;--cols:auto 1fr;">
-          <div class="rounded-full overflow-hidden flex-none" style="width:120px;height:120px;background:#F3EEE4;">
-            <img v-if="person.photo" :src="person.photo" :alt="person.name" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
-            <div v-else class="w-full h-full flex items-center justify-center" style="font:700 36px 'Schibsted Grotesk';color:#5C6E78;">{{ person.name.split(' ').map((n:string)=>n[0]).join('').slice(0,2) }}</div>
+      <PageHero container-class="mx-auto rgrid rgrid-split" container-style="max-width:1240px;padding:52px 40px 48px;display:grid;gap:40px;align-items:start;--cols:auto 1fr;">
+        <div class="rounded-full overflow-hidden flex-none" style="width:120px;height:120px;background:#F3EEE4;">
+          <img v-if="person.photo" :src="person.photo" :alt="person.name" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+          <div v-else class="w-full h-full flex items-center justify-center" style="font:700 36px 'Schibsted Grotesk';color:#5C6E78;">{{ person.name.split(' ').map((n:string)=>n[0]).join('').slice(0,2) }}</div>
+        </div>
+        <div>
+          <p class="font-mono text-[11px] text-muted mb-2"><NuxtLink to="/about/team" style="color:#5C6E78;">← Team</NuxtLink></p>
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <h1 style="font:700 clamp(28px,3.5vw,42px)/1.1 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;">{{ person.name }}</h1>
+            <span v-if="person.pronouns" class="font-mono text-[12px] text-muted">{{ person.pronouns }}</span>
           </div>
-          <div>
-            <p class="font-mono text-[11px] text-muted mb-2"><NuxtLink to="/about/team" style="color:#5C6E78;">← Team</NuxtLink></p>
-            <div class="flex items-baseline gap-3 flex-wrap">
-              <h1 style="font:700 clamp(28px,3.5vw,42px)/1.1 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;">{{ person.name }}</h1>
-              <span v-if="person.pronouns" class="font-mono text-[12px] text-muted">{{ person.pronouns }}</span>
-            </div>
-            <p style="font:400 15px 'Hanken Grotesk';color:#5C6E78;margin:4px 0 14px;">{{ person.role }}</p>
-            <div class="flex gap-3 flex-wrap">
-              <a v-if="person.links?.orcid" :href="person.links.orcid" target="_blank" class="font-mono font-bold text-[10px] rounded" style="color:#A6CE39;border:1px solid #A6CE39;padding:3px 8px;">iD</a>
-              <a v-if="person.links?.google_scholar" :href="person.links.google_scholar" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#4285F4;">Scholar</a>
-              <a v-if="person.links?.github" :href="person.links.github" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#5C6E78;">GitHub</a>
-              <a v-if="person.links?.linkedin" :href="person.links.linkedin" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#0A66C2;">LinkedIn</a>
-            </div>
+          <p style="font:400 15px 'Hanken Grotesk';color:#5C6E78;margin:4px 0 14px;">{{ person.role }}</p>
+          <div class="flex gap-3 flex-wrap">
+            <a v-if="person.links?.orcid" :href="person.links.orcid" target="_blank" class="font-mono font-bold text-[10px] rounded" style="color:#A6CE39;border:1px solid #A6CE39;padding:3px 8px;">iD</a>
+            <a v-if="person.links?.google_scholar" :href="person.links.google_scholar" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#4285F4;">Scholar</a>
+            <a v-if="person.links?.github" :href="person.links.github" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#5C6E78;">GitHub</a>
+            <a v-if="person.links?.linkedin" :href="person.links.linkedin" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#0A66C2;">LinkedIn</a>
           </div>
         </div>
-      </section>
+      </PageHero>
       <div class="mx-auto rgrid rgrid-split" style="max-width:1024px;padding:48px 40px 80px;display:grid;gap:48px;--cols:minmax(0,1fr) 220px;">
         <div>
           <p style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;margin-bottom:24px;">{{ person.bio }}</p>

@@ -15,28 +15,29 @@ const timeline = [
 <template>
   <div>
     <!-- Hero -->
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">About CUAHSI</span>
-        <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:700px;">Advancing water science through shared infrastructure and community.</h1>
-        <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:580px;margin-bottom:24px;">The Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) is a 501(c)(3) research organization representing 101 U.S. universities and international water science organizations.</p>
-        <div class="flex gap-3 flex-wrap">
-          <a href="https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn" style="font:600 14px 'Hanken Grotesk';color:#0F2E44;padding:11px 18px;border:1.5px solid rgba(15,46,68,.22);">Download brochure <span class="arr">→</span></a>
-          <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn" style="font:600 14px 'Hanken Grotesk';color:#0F2E44;padding:11px 18px;border:1.5px solid rgba(15,46,68,.22);">2025 Annual Report <span class="arr">→</span></a>
-        </div>
+    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 52px;"
+      title-style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:700px;"
+      lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:580px;margin-bottom:24px;">
+      <template #kicker>About CUAHSI</template>
+      <template #title>Advancing water science through shared infrastructure and community.</template>
+      <template #lead>The Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) is a 501(c)(3) research organization representing 101 U.S. universities and international water science organizations.</template>
+      <div class="flex gap-3 flex-wrap">
+        <a href="https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn" style="font:600 14px 'Hanken Grotesk';color:#0F2E44;padding:11px 18px;border:1.5px solid rgba(15,46,68,.22);">Download brochure <span class="arr">→</span></a>
+        <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn" style="font:600 14px 'Hanken Grotesk';color:#0F2E44;padding:11px 18px;border:1.5px solid rgba(15,46,68,.22);">2025 Annual Report <span class="arr">→</span></a>
       </div>
-
-      <!-- Sub-nav -->
-      <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
-        <div class="flex gap-0" style="border-top:1px solid rgba(15,33,43,.08);overflow-x:auto;">
-          <a v-for="l in [{t:'Mission & values',h:'#mission'},{t:'What we do',h:'#what-we-do'},{t:'History',h:'#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'#contact'}]"
-            :key="l.h" :href="l.h" style="font:500 13px 'Hanken Grotesk';color:#5C6E78;padding:14px 16px 14px 0;text-decoration:none;white-space:nowrap;"
-            class="hover:text-navy transition-colors">
-            {{ l.t }}
-          </a>
+      <template #below>
+        <!-- Sub-nav -->
+        <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
+          <div class="flex gap-0" style="border-top:1px solid rgba(15,33,43,.08);overflow-x:auto;">
+            <a v-for="l in [{t:'Mission & values',h:'#mission'},{t:'What we do',h:'#what-we-do'},{t:'History',h:'#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'#contact'}]"
+              :key="l.h" :href="l.h" style="font:500 13px 'Hanken Grotesk';color:#5C6E78;padding:14px 16px 14px 0;text-decoration:none;white-space:nowrap;"
+              class="hover:text-navy transition-colors">
+              {{ l.t }}
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </template>
+    </PageHero>
 
     <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
 
