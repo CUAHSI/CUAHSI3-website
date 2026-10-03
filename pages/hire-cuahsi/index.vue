@@ -100,17 +100,19 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
 <template>
   <div>
     <!-- Hero -->
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto site-container hero-section" style="max-width:1240px;padding-top:64px;padding-bottom:40px;">
+    <PageHero container-class="mx-auto site-container hero-section" container-style="max-width:1240px;padding-top:64px;padding-bottom:40px;"
+      title-style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:760px;"
+      lead-style="font:400 19px/1.55 'Hanken Grotesk';color:#3a4d57;max-width:620px;">
+      <template #before>
         <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Hire CUAHSI</span>
-        <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:760px;">
-          Put our staff on your project.
-        </h1>
-        <p style="font:400 19px/1.55 'Hanken Grotesk';color:#3a4d57;max-width:620px;">
-          DevOps, data wrangling, workshop logistics, and software integration work from our science and engineering staff — for grantees, agencies, and partners. Revenue sustains the free tools and data CUAHSI provides the whole community.
-        </p>
-      </div>
-    </section>
+      </template>
+      <template #title>
+        Put our staff on your project.
+      </template>
+      <template #lead>
+        DevOps, data wrangling, workshop logistics, and software integration work from our science and engineering staff — for grantees, agencies, and partners. Revenue sustains the free tools and data CUAHSI provides the whole community.
+      </template>
+    </PageHero>
 
     <!-- Intro + institution lookup -->
     <div class="mx-auto site-container" style="max-width:1240px;padding-top:56px;padding-bottom:24px;">
