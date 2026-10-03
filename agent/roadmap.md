@@ -5,7 +5,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 
 | # | Task | Status | Risk |
 |---|---|---|---|
-| 1 | Reconcile repo against the verify-first list | not started | none (read-only) |
+| 1 | Reconcile repo against the verify-first list | PR open | none (read-only) |
 | 2 | `content.config.ts` with Zod schemas, plus a standalone validator | not started | low |
 | 3 | Extract repeated markup into components | not started | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
@@ -69,4 +69,8 @@ and need Jordan's eye on the design tokens.
 ## Noticed
 
 Append-only. Things seen outside the task in hand. One line each: date, file, what.
+
+261003 | pages/community/news/index.vue | uses colors outside the design tokens (#1D9E75, #9ca3af, #6b7280, #f3f4f6) and links to /highlights, a redirect stub
+261003 | pages/about/team/index.vue | cards are clickable via @click and $router.push on a div, not a link; not keyboard-reachable
+261003 | repo root | `dist` symlink is tracked despite `dist/` in .gitignore; `nuxt generate` also moves public/robots.txt to public/_robots.txt (restored by hand after the reconcile build)
 
