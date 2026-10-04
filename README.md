@@ -1,6 +1,6 @@
 # CUAHSI Website — cuahsi.org v3
 
-Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed via Cloudflare Pages.
+Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed on Netlify (see `netlify.toml`).
 
 **Local dev:** `npm install && npm run dev` → http://localhost:3000
 
@@ -311,9 +311,10 @@ npx serve .output/public -l 4000
 ```
 Visit http://localhost:4000 to test search. Keep `npm run dev` running on :3000 for editing; use :4000 only to verify search.
 
-**Cloudflare Pages build settings:**
-- Build command: `nuxt generate && pagefind --site .output/public`
-- Build output directory: `.output/public`
+**Netlify build settings** (defined in `netlify.toml`):
+- Build command: `npm run build:search` (that is `nuxt generate && pagefind --site .output/public`)
+- Publish directory: `.output/public`
+- `NODE_VERSION = "20"`, `NITRO_PRESET = "static"`; every response carries `X-Robots-Tag: noindex, nofollow, noarchive`, and `/archive` redirects to `/community/newsletter`.
 
 ---
 
