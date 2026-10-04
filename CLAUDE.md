@@ -47,7 +47,7 @@ npm run build:search               # nuxt generate && pagefind --site .output/pu
 npx serve .output/public -l 4000   # preview the built site. Search only works here.
 ./scripts/verify.sh                # static checks, seconds
 ./scripts/verify.sh --build        # static checks, then the full build and the built-site link check
-npm run lint                       # ESLint over the Vue files (template and TypeScript script) and .ts files, eslint-plugin-vue essential rules only; verify.sh runs it
+npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .ts and .mjs files are only parsed (syntax errors), no rules; verify.sh runs it
 npm run validate:content           # read-only check of content/ against the schemas; verify.sh runs it too
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 npm run visual:compare             # after a build: 52 screenshots vs visual/baseline; any changed pixel fails
