@@ -66,76 +66,76 @@ const targets = [
 <template>
   <div>
 
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
 
       <!-- Hero -->
-      <section class="rgrid rgrid-split" style="display:grid;gap:40px;padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;align-items:start;--cols:minmax(0,1fr) 260px;">
+      <section class="grid grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_260px] gap-[40px] p-[48px_0_40px] border-b-[0.5px] border-b-[#f3f4f6] [align-items:start]">
         <div>
-          <p style="font-size:11px;color:#5C6E78;margin-bottom:8px;">
-            <NuxtLink to="/community" style="text-decoration:none;color:#5C6E78;">Get involved</NuxtLink> / Bring CUAHSI to your campus
+          <p class="text-[11px] text-muted mb-[8px]">
+            <NuxtLink to="/community" class="no-underline text-muted">Get involved</NuxtLink> / Bring CUAHSI to your campus
           </p>
-          <h1 style="font-size:28px;font-weight:500;line-height:1.25;margin-bottom:14px;">
+          <h1 class="text-[28px] font-medium leading-[1.25] mb-[14px]">
             Bring CUAHSI to your campus
           </h1>
-          <p style="font-size:15px;color:#6b7280;line-height:1.7;margin-bottom:12px;">
+          <p class="text-[15px] text-[#6b7280] leading-[1.7] mb-[12px]">
             CUAHSI staff are available for free seminars, hands-on workshops, and consultations at
             universities, colleges, and research institutions — in person or virtual.
           </p>
-          <p style="font-size:14px;color:#6b7280;line-height:1.7;margin-bottom:24px;">
+          <p class="text-[14px] text-[#6b7280] leading-[1.7] mb-[24px]">
             These visits introduce water scientists and students to CUAHSI programs and tools, support
             data-ready research practices, and help us connect with new communities. We welcome requests
             from member institutions, prospective members, and the broader water science community.
           </p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div class="flex gap-[10px] flex-wrap">
             <a href="mailto:connect@cuahsi.org?subject=Campus visit request"
-              style="font-size:13px;font-weight:500;padding:10px 20px;background:#111827;color:white;border-radius:8px;text-decoration:none;">
+              class="text-[13px] font-medium p-[10px_20px] bg-[#111827] text-white rounded-[8px] no-underline">
               Request a visit
             </a>
             <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" rel="noopener"
-              style="font-size:13px;padding:10px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">
+              class="text-[13px] p-[10px_18px] border-[0.5px] border-[#d1d5db] rounded-[8px] no-underline text-inherit">
               Download one-pager ↗
             </a>
           </div>
         </div>
 
         <!-- Recent visits sidebar -->
-        <div style="background:#f9fafb;border-radius:12px;padding:18px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:14px;">Recent visits</p>
+        <div class="bg-[#f9fafb] rounded-[12px] p-[18px]">
+          <p class="text-[11px] font-medium tracking-[.06em] uppercase text-muted mb-[14px]">Recent visits</p>
           <div v-for="(v, i) in recentVisits" :key="v.inst"
             :style="`padding-bottom:10px;margin-bottom:10px;${i < recentVisits.length-1 ? 'border-bottom:0.5px solid #e5e7eb;' : ''}`">
-            <p style="font-size:13px;font-weight:500;margin-bottom:2px;">{{ v.inst }}</p>
-            <p style="font-size:12px;color:#6b7280;margin-bottom:1px;">{{ v.type }}</p>
-            <p style="font-size:11px;color:#5C6E78;">{{ v.context }}</p>
+            <p class="text-[13px] font-medium mb-[2px]">{{ v.inst }}</p>
+            <p class="text-[12px] text-[#6b7280] mb-[1px]">{{ v.type }}</p>
+            <p class="text-[11px] text-muted">{{ v.context }}</p>
           </div>
         </div>
       </section>
 
       <!-- Menu of options -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:6px;">Menu of options</p>
-        <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;margin-bottom:24px;">
+      <section class="p-[40px_0] border-b-[0.5px] border-b-[#f3f4f6]">
+        <p class="text-[11px] font-medium tracking-[.07em] uppercase text-muted mb-[6px]">Menu of options</p>
+        <p class="text-[14px] text-[#6b7280] leading-[1.65] max-w-[560px] mb-[24px]">
           Most visits combine elements — a seminar followed by a hands-on session, or a lab consultation
           after a department talk. We tailor content to your audience and needs.
         </p>
-        <div class="rgrid rgrid-split" style="display:grid;gap:14px;--cols:repeat(2,minmax(0,1fr));">
+        <div class="grid grid-cols-[1fr] min-[900px]:grid-cols-[repeat(2,minmax(0,1fr))] gap-[14px]">
           <div v-for="o in offerings" :key="o.title"
-            style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:0;">
-            <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;">
-              <span style="font-size:22px;flex-shrink:0;margin-top:2px;">{{ o.icon }}</span>
+            class="border-[0.5px] border-[#e5e7eb] rounded-[12px] p-[20px] flex flex-col gap-[0]">
+            <div class="flex items-start gap-[12px] mb-[10px]">
+              <span class="text-[22px] shrink-0 mt-[2px]">{{ o.icon }}</span>
               <div>
-                <p style="font-size:14px;font-weight:500;line-height:1.3;margin-bottom:4px;">{{ o.title }}</p>
-                <div style="display:flex;gap:5px;flex-wrap:wrap;">
-                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#f3f4f6;color:#5C6E78;">{{ o.duration }}</span>
-                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#E1F5EE;color:#0F6E56;">{{ o.format }}</span>
+                <p class="text-[14px] font-medium leading-[1.3] mb-[4px]">{{ o.title }}</p>
+                <div class="flex gap-[5px] flex-wrap">
+                  <span class="text-[11px] p-[1px_8px] rounded-[99px] bg-[#f3f4f6] text-muted">{{ o.duration }}</span>
+                  <span class="text-[11px] p-[1px_8px] rounded-[99px] bg-[#E1F5EE] text-[#0F6E56]">{{ o.format }}</span>
                 </div>
               </div>
             </div>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:12px;flex:1;">{{ o.desc }}</p>
-            <div style="border-top:0.5px solid #f3f4f6;padding-top:10px;">
-              <p style="font-size:11px;color:#5C6E78;margin-bottom:5px;">Works well for</p>
-              <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <p class="text-[13px] text-[#6b7280] leading-[1.6] mb-[12px] flex-1">{{ o.desc }}</p>
+            <div class="border-t-[0.5px] border-t-[#f3f4f6] pt-[10px]">
+              <p class="text-[11px] text-muted mb-[5px]">Works well for</p>
+              <div class="flex flex-wrap gap-[4px]">
                 <span v-for="g in o.goodFor" :key="g"
-                  style="font-size:11px;padding:2px 8px;border-radius:99px;border:0.5px solid #e5e7eb;color:#6b7280;">
+                  class="text-[11px] p-[2px_8px] rounded-[99px] border-[0.5px] border-[#e5e7eb] text-[#6b7280]">
                   {{ g }}
                 </span>
               </div>
@@ -145,35 +145,35 @@ const targets = [
       </section>
 
       <!-- Included with membership vs. Fee-for-service -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:8px;">What's included, and what isn't</p>
-        <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;margin-bottom:20px;">
+      <section class="p-[40px_0] border-b-[0.5px] border-b-[#f3f4f6]">
+        <p class="text-[11px] font-medium tracking-[.07em] uppercase text-muted mb-[8px]">What's included, and what isn't</p>
+        <p class="text-[14px] text-[#6b7280] leading-[1.65] max-w-[560px] mb-[20px]">
           Campus visits above are free for member institutions. Larger, ongoing, or highly customized engagements
           are fee-for-service work through Hire CUAHSI.
         </p>
-        <div class="rgrid rgrid-split" style="display:grid;gap:14px;--cols:repeat(2,minmax(0,1fr));">
-          <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#0F7A57;margin-bottom:12px;">Included with membership</p>
+        <div class="grid grid-cols-[1fr] min-[900px]:grid-cols-[repeat(2,minmax(0,1fr))] gap-[14px]">
+          <div class="border-[0.5px] border-[#e5e7eb] rounded-[12px] p-[20px]">
+            <p class="text-[11px] font-medium tracking-[.06em] uppercase text-[#0F7A57] mb-[12px]">Included with membership</p>
             <div v-for="item in [
               'One seminar, workshop, or consultation visit per year',
               'Standard curriculum from the menu above',
               'Half-day to full-day formats, in-person or virtual',
               'Follow-up email support after the visit'
-            ]" :key="item" style="display:flex;gap:8px;font-size:13px;color:#374151;padding:6px 0;">
-              <span style="color:#0F7A57;flex-shrink:0;">✓</span> {{ item }}
+            ]" :key="item" class="flex gap-[8px] text-[13px] text-[#374151] p-[6px_0]">
+              <span class="text-[#0F7A57] shrink-0">✓</span> {{ item }}
             </div>
           </div>
-          <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#C0603C;margin-bottom:12px;">Fee-for-service</p>
+          <div class="border-[0.5px] border-[#e5e7eb] rounded-[12px] p-[20px]">
+            <p class="text-[11px] font-medium tracking-[.06em] uppercase text-clay mb-[12px]">Fee-for-service</p>
             <div v-for="item in [
               'Multi-day or recurring engagements',
               'Custom software or platform integrations',
               'Dedicated dataset curation and publishing',
               'Work scoped to a specific grant or contract'
-            ]" :key="item" style="display:flex;gap:8px;font-size:13px;color:#374151;padding:6px 0;">
-              <span style="color:#C0603C;flex-shrink:0;">$</span> {{ item }}
+            ]" :key="item" class="flex gap-[8px] text-[13px] text-[#374151] p-[6px_0]">
+              <span class="text-clay shrink-0">$</span> {{ item }}
             </div>
-            <NuxtLink to="/hire-cuahsi" style="display:inline-block;font-size:13px;font-weight:500;color:#1F6FB2;margin-top:10px;text-decoration:none;">
+            <NuxtLink to="/hire-cuahsi" class="inline-block text-[13px] font-medium text-water mt-[10px] no-underline">
               Need something beyond the standard visit? See Hire CUAHSI →
             </NuxtLink>
           </div>
@@ -181,65 +181,65 @@ const targets = [
       </section>
 
       <!-- Who we want to reach -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:8px;">Who we especially want to reach</p>
-        <p style="font-size:14px;color:#6b7280;line-height:1.7;max-width:600px;margin-bottom:20px;">
+      <section class="p-[40px_0] border-b-[0.5px] border-b-[#f3f4f6]">
+        <p class="text-[11px] font-medium tracking-[.07em] uppercase text-muted mb-[8px]">Who we especially want to reach</p>
+        <p class="text-[14px] text-[#6b7280] leading-[1.7] max-w-[600px] mb-[20px]">
           We are actively working to connect with institutions and communities that have not yet engaged
           deeply with CUAHSI programs. We prioritize building new relationships in year one.
         </p>
-        <div class="rgrid rgrid-split" style="display:grid;gap:10px;--cols:repeat(2,minmax(0,1fr));">
+        <div class="grid grid-cols-[1fr] min-[900px]:grid-cols-[repeat(2,minmax(0,1fr))] gap-[10px]">
           <div v-for="t in targets" :key="t.label"
-            style="display:flex;gap:12px;align-items:flex-start;padding:14px;border:0.5px solid #e5e7eb;border-radius:10px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:5px;"></span>
+            class="flex gap-[12px] items-start p-[14px] border-[0.5px] border-[#e5e7eb] rounded-[10px]">
+            <span class="w-[6px] h-[6px] rounded-[50%] bg-[#1D9E75] shrink-0 mt-[5px]"></span>
             <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:3px;">{{ t.label }}</p>
-              <p style="font-size:12px;color:#6b7280;line-height:1.55;">{{ t.desc }}</p>
+              <p class="text-[13px] font-medium mb-[3px]">{{ t.label }}</p>
+              <p class="text-[12px] text-[#6b7280] leading-[1.55]">{{ t.desc }}</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Request + Download CTA -->
-      <section class="rgrid rgrid-split" style="display:grid;gap:16px;padding:40px 0 48px;--cols:minmax(0,1fr) minmax(0,1fr);">
-        <div style="background:#f9fafb;border-radius:12px;padding:24px;">
-          <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Request a visit</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:14px;">
+      <section class="grid grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-[16px] p-[40px_0_48px]">
+        <div class="bg-[#f9fafb] rounded-[12px] p-[24px]">
+          <p class="text-[14px] font-medium mb-[8px]">Request a visit</p>
+          <p class="text-[13px] text-[#6b7280] leading-[1.65] mb-[14px]">
             Email us with your institution, audience, preferred format, and available dates.
             We respond within one week and can typically schedule within 3–4 weeks.
           </p>
-          <p style="font-size:12px;color:#374151;font-weight:500;margin-bottom:6px;">Include in your request:</p>
-          <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:18px;">
+          <p class="text-[12px] text-[#374151] font-medium mb-[6px]">Include in your request:</p>
+          <div class="flex flex-col gap-[4px] mb-[18px]">
             <div v-for="item in [
               'Your institution and department',
               'Expected audience (students, faculty, mixed)',
               'Preferred format from the menu above',
               'Preferred dates or semester window',
               'In-person or virtual preference'
-            ]" :key="item" style="display:flex;gap:8px;font-size:12px;color:#6b7280;">
-              <span style="color:#0F7A57;flex-shrink:0;">✓</span> {{ item }}
+            ]" :key="item" class="flex gap-[8px] text-[12px] text-[#6b7280]">
+              <span class="text-[#0F7A57] shrink-0">✓</span> {{ item }}
             </div>
           </div>
           <a href="mailto:connect@cuahsi.org?subject=Campus visit request"
-            style="display:inline-block;font-size:13px;font-weight:500;padding:9px 18px;background:#111827;color:white;border-radius:8px;text-decoration:none;">
+            class="inline-block text-[13px] font-medium p-[9px_18px] bg-[#111827] text-white rounded-[8px] no-underline">
             Email connect@cuahsi.org
           </a>
         </div>
 
-        <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:14px;font-weight:500;">Share this with a colleague</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.65;">
+        <div class="border-[0.5px] border-[#e5e7eb] rounded-[12px] p-[24px] flex flex-col gap-[10px]">
+          <p class="text-[14px] font-medium">Share this with a colleague</p>
+          <p class="text-[13px] text-[#6b7280] leading-[1.65]">
             A one-page PDF summarizing what CUAHSI offers — designed for attaching to outreach emails,
             sharing at conferences, and distributing to faculty who host our visits.
           </p>
-          <div style="background:#f9fafb;border-radius:8px;padding:14px;display:flex;align-items:center;gap:12px;flex:1;">
-            <span style="font-size:28px;">📄</span>
+          <div class="bg-[#f9fafb] rounded-[8px] p-[14px] flex items-center gap-[12px] flex-1">
+            <span class="text-[28px]">📄</span>
             <div>
-              <p style="font-size:12px;font-weight:500;margin-bottom:1px;">CUAHSI Campus Engagement</p>
-              <p style="font-size:11px;color:#5C6E78;">One-page overview · PDF</p>
+              <p class="text-[12px] font-medium mb-[1px]">CUAHSI Campus Engagement</p>
+              <p class="text-[11px] text-muted">One-page overview · PDF</p>
             </div>
           </div>
           <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" rel="noopener"
-            style="display:inline-block;font-size:13px;font-weight:500;padding:9px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;width:fit-content;">
+            class="inline-block text-[13px] font-medium p-[9px_18px] border-[0.5px] border-[#d1d5db] rounded-[8px] no-underline text-inherit w-[fit-content]">
             Download PDF ↗
           </a>
         </div>
