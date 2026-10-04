@@ -1,5 +1,7 @@
 # Phase 1 roadmap
 
+(Phase 2, the content agent, was opened by Jordan on 4 October 2026; see CLAUDE.md rule 3. The Phase 1 acceptance text below is kept as it was written.)
+
 Tasks in order. Do not start one unprompted. Update Status on the task's own branch.
 Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reason`.
 
@@ -140,3 +142,4 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | pages (dates) | UPDATE to the 261003 line 'dates in Latest news render one day early': cause found and fixed in task/fix-date-timezone. 14 pages formatted date-only content dates in the running machine's time zone; US visitors saw a day early after the page loaded, and builds on a US machine baked it into the HTML. The 26 visual baseline images that showed day-early dates were re-written in that branch.
 261004 | public/robots.txt | UPDATE to the 261003 robots.txt footgun line: fixed by moving the source to assets/robots.txt in task/robots-txt (true once merged); CLAUDE.md footgun 11 and a verify.sh check added.
 261004 | pages/index.vue, components/CyberseminarCard.vue | UPDATE to the two raw-ISO-date lines: fixed in task/iso-date-cards.
+261004 | .claude/agents/reviewer.md | line 21 says any path under content/ is a finding. In Phase 2 every content task would be flagged. The file is protected (permission rules deny edits under .claude/), so Jordan has to change it: for example 'a path under content/ is a finding unless the branch is a content task (task/content-...)'. Same file as the dead .rgrid checklist line noted earlier.
