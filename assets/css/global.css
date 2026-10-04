@@ -18,15 +18,28 @@ a { color: inherit; text-decoration: none; }
 .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Prose styles for content pages (programs, news, team profiles, impact stories) */
-.program-prose h2, .news-prose h2, .profile-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
-.program-prose h3, .news-prose h3, .profile-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
-.program-prose p, .news-prose p, .profile-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
-.program-prose a, .news-prose a, .profile-prose a { color: #1F6FB2; }
-.program-prose a:hover, .news-prose a:hover, .profile-prose a:hover { text-decoration: underline; }
-.program-prose ul, .news-prose ul, .profile-prose ul { padding-left: 20px; margin-bottom: 14px; }
-.program-prose li, .news-prose li, .profile-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; list-style: disc; }
-.program-prose strong, .news-prose strong, .profile-prose strong { font-weight: 600; color: #15212B; }
+/* Prose styles for content pages (programs, team profiles, impact stories, newsletter issues) */
+.program-prose h2, .newsletter-prose h2, .profile-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
+.program-prose h3, .newsletter-prose h3, .profile-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
+.program-prose p, .newsletter-prose p, .profile-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
+.program-prose a, .newsletter-prose a, .profile-prose a { color: #1F6FB2; }
+.program-prose a:hover, .newsletter-prose a:hover, .profile-prose a:hover { text-decoration: underline; }
+.program-prose ul, .newsletter-prose ul, .profile-prose ul { padding-left: 20px; margin-bottom: 14px; }
+.program-prose li, .newsletter-prose li, .profile-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; list-style: disc; }
+.program-prose strong, .newsletter-prose strong, .profile-prose strong { font-weight: 600; color: #15212B; }
+
+/* News articles: the shared prose style above with the news page's own overrides folded in. Before this was
+   one definition here plus a second, conflicting one in pages/community/news/[slug].vue, and the page's won. */
+.news-prose h2 { font-style: normal; font-family: 'Schibsted Grotesk'; font-size: 16px; font-weight: 600; line-height: 1.3; color: #111827; margin: 28px 0 10px; letter-spacing: -.008em; }
+.news-prose h3 { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 14px; font-weight: 600; line-height: 1.3; color: #374151; margin: 20px 0 8px; }
+.news-prose p { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.75; color: #374151; margin-bottom: 16px; }
+.news-prose a { color: #1D9E75; text-decoration: none; }
+.news-prose a:hover { text-decoration: underline; }
+.news-prose ul { padding-left: 20px; margin-bottom: 16px; }
+.news-prose li { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.7; color: #374151; margin-bottom: 6px; list-style: disc; }
+.news-prose strong { font-weight: 600; color: #111827; }
+.news-prose em { font-style: italic; color: #6b7280; }
+.news-prose hr { border: none; border-top: 0.5px solid #f3f4f6; margin: 24px 0; }
 
 /* ===== Responsive grid utilities ===== */
 /* Use instead of inline grid-template-columns for anything that needs to collapse on mobile */

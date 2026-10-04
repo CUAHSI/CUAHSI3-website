@@ -76,16 +76,3 @@ function fmtDate(d: string) {
     </div>
   </div>
 </template>
-
-<style>
-.news-prose p { font-size: 15px; color: #374151; line-height: 1.75; margin-bottom: 16px; }
-.news-prose h2 { font-size: 16px; font-weight: 600; color: #111827; margin-top: 28px; margin-bottom: 10px; }
-.news-prose h3 { font-size: 14px; font-weight: 600; color: #374151; margin-top: 20px; margin-bottom: 8px; }
-.news-prose ul { padding-left: 20px; margin-bottom: 16px; }
-.news-prose li { font-size: 15px; color: #374151; line-height: 1.7; margin-bottom: 6px; }
-.news-prose a { color: #1D9E75; text-decoration: none; }
-.news-prose a:hover { text-decoration: underline; }
-.news-prose strong { font-weight: 600; color: #111827; }
-.news-prose em { font-style: italic; color: #6b7280; }
-.news-prose hr { border: none; border-top: 0.5px solid #f3f4f6; margin: 24px 0; }
-</style>

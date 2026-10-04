@@ -182,14 +182,3 @@ function fmtDate(d: string) {
     </div>
   </div>
 </template>
-
-<style>
-.newsletter-prose h2 { font-size: 16px; font-weight: 500; margin: 28px 0 10px; }
-.newsletter-prose h3 { font-size: 14px; font-weight: 500; margin: 20px 0 8px; }
-.newsletter-prose p { margin-bottom: 14px; }
-.newsletter-prose ul { padding-left: 20px; margin-bottom: 14px; }
-.newsletter-prose li { margin-bottom: 5px; }
-.newsletter-prose strong { font-weight: 500; }
-.newsletter-prose em { font-style: italic; }
-.newsletter-prose a { color: #166534; }
-</style>
