@@ -10,7 +10,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 3 | Extract repeated markup into components | in progress | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
-| 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | not started | none (read-only) |
+| 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | PR open | none (read-only) |
 | 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | not started | medium |
 
