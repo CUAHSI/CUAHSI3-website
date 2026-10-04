@@ -37,12 +37,6 @@ const filtered = computed(() => {
 function colorOf(key: string) { return (catDefs.find(c => c.key === key) || catDefs[0]).color }
 function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
 
-function chipStyle(active: boolean, color: string) {
-  return `border:1px solid ${active ? color : 'rgba(15,33,43,.18)'};background:${active ? color : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;font:600 13px 'Hanken Grotesk';padding:8px 15px;border-radius:22px;`
-}
-function yearChipStyle(active: boolean) {
-  return `border:1px solid ${active ? '#0F2E44' : 'rgba(15,33,43,.18)'};background:${active ? '#0F2E44' : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;font:600 12px 'Space Mono',monospace;padding:7px 12px;border-radius:6px;`
-}
 </script>
 
 <template>
@@ -76,16 +70,16 @@ function yearChipStyle(active: boolean) {
     <div class="mx-auto" style="max-width:1240px;padding:36px 40px 0;">
       <div class="flex gap-6 flex-wrap items-start justify-between">
         <div class="flex gap-[6px] flex-wrap">
-          <button v-for="c in catDefs" :key="c.key"
-            :style="chipStyle(selectedCat === c.key, c.color)"
+          <FilterChip v-for="c in catDefs" :key="c.key" variant="category" :color="c.color"
+            :active="selectedCat === c.key"
             @click="selectedCat = c.key">
             {{ c.label }}
-          </button>
+          </FilterChip>
         </div>
         <div class="flex items-center gap-2 flex-wrap">
           <span class="font-mono text-[11px] tracking-[.08em] uppercase text-muted">Year</span>
-          <button :style="yearChipStyle(selectedYear === 'all')" @click="selectedYear = 'all'">All</button>
-          <button v-for="y in years" :key="y" :style="yearChipStyle(selectedYear === y)" @click="selectedYear = y">{{ y }}</button>
+          <FilterChip variant="year" :active="selectedYear === 'all'" @click="selectedYear = 'all'">All</FilterChip>
+          <FilterChip v-for="y in years" :key="y" variant="year" :active="selectedYear === y" @click="selectedYear = y">{{ y }}</FilterChip>
         </div>
       </div>
       <div class="font-mono text-[11px] tracking-[.06em] text-muted mt-4 mb-6">

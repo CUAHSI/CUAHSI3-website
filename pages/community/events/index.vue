@@ -78,10 +78,9 @@ function fmtDate(start: string, end?: string) {
           <NuxtLink to="/learn-train" style="color:#1F6FB2;">Learn &amp; Train</NuxtLink> — same session, one canonical page.
         </p>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
-            :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
+          <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
             {{ f === 'all' ? 'All types' : f }}
-          </button>
+          </FilterChip>
         </div>
       </div>
 

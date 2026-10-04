@@ -136,10 +136,6 @@ const filtered = computed(() => {
 function categoryLabel(key: string) {
   return categories.find(c => c.key === key)?.label ?? key
 }
-
-function chipStyle(active: boolean) {
-  return `font:600 12.5px 'Hanken Grotesk';padding:6px 13px;border-radius:22px;border:1px solid ${active ? '#0F2E44' : 'rgba(15,33,43,.18)'};background:${active ? '#0F2E44' : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;`
-}
 </script>
 <template>
   <div>
@@ -188,9 +184,9 @@ function chipStyle(active: boolean) {
       </div>
 
       <div class="flex gap-[6px] flex-wrap mb-5">
-        <button v-for="c in categories" :key="c.key" :style="chipStyle(activeCategory === c.key)" @click="activeCategory = c.key">
+        <FilterChip v-for="c in categories" :key="c.key" variant="navy" :active="activeCategory === c.key" @click="activeCategory = c.key">
           {{ c.label }}
-        </button>
+        </FilterChip>
       </div>
 
       <p class="font-mono text-[11px] text-muted mb-4">{{ filtered.length }} institution{{ filtered.length === 1 ? '' : 's' }}</p>
