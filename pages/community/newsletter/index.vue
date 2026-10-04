@@ -9,7 +9,7 @@ const { data: issues } = await useAsyncData('newsletter-archive', () =>
 )
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 

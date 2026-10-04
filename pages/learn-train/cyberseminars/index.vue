@@ -18,6 +18,10 @@ const filtered = computed(() => {
 })
 
 function toggle(slug: string) { expanded.value = expanded.value === slug ? null : slug }
+
+// Changing a filter closes the open card. Otherwise a card hidden by the filter stays 'expanded', and when the filter is
+// cleared it comes back open and its video starts playing on its own.
+watch([selectedSeries, selectedTag], () => { expanded.value = null })
 </script>
 <template>
   <div>
