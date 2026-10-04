@@ -34,7 +34,7 @@ agent/eval-log.md  append-only record of tasks, interventions and defects
 agent/reports/     dated reports you produce (reconcile, audits). YYMMDD_name.md
 .agent/            scratch space, gitignored. Diffs for the reviewer, build baselines.
 .claude/agents/reviewer.md   read-only reviewer subagent
-.claude/hooks/guard.mjs      blocks edits to content/ and unsafe git commands
+.claude/hooks/guard.mjs      blocks edits to content/ while its PHASE is 1, and unsafe git commands
 .claude/settings.json        permissions and hook wiring
 .github/pull_request_template.md  the PR description format
 ```
@@ -81,7 +81,8 @@ version mismatch. Ignore it.
    every fact comes from Jordan or from a file already in the repo, and existing prose is not
    rewritten beyond the task. Follow the content model as the files actually are (rule 1: check
    `agent/content-model.md` against them). The frontmatter `slug` drives the URL, so changing a slug
-   changes a URL (rule 8). `npm run validate:content` must not get worse. A content PR says which
+   changes a URL, and deleting or unpublishing a content file removes a route (rule 8: ask first). A
+   problem found outside the task goes in Noticed (rule 5). `npm run validate:content` must not get worse. A content PR says which
    pages change on the deploy preview and lists them in the visual review request.
 4. **Git.** Work on a branch named `task/short-name`, cut from an up-to-date `main`.
    Never commit on `main`. Commit on the task branch only after `./scripts/verify.sh`
@@ -311,4 +312,9 @@ report the before and after counts with denominators; remove a fixed file from
 `scripts/validate-content.known-failures.txt` in the same PR. Build the site and open the pages the
 change reaches; the PR lists each changed page (from the built HTML) and what should look different,
 and the visual baseline is re-written only for images whose page changed on purpose. Mixed
-content-and-code branches get a WARN from `verify.sh`.
+content-and-code branches get a WARN from `verify.sh` (a warning, not a failure, so say why in the PR).
+
+**Phase 2 locks, status.** Jordan opened Phase 2 on 4 October 2026. `scripts/verify.sh` is switched. Two
+guardrails are his to change and the tools refuse my edits to them: `PHASE` in `.claude/hooks/guard.mjs`
+and the `Edit(/content/**)` deny rule in `.claude/settings.json`. Until he has changed both, the hook still
+blocks every content edit: stop and tell him, do not look for a way around it.

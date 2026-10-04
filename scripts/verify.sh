@@ -92,9 +92,10 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
     mb=$(git merge-base "$BASE" HEAD)
     if [ "$PHASE" = "2" ]; then
       cchanged=$( { git diff --name-only "$mb" -- content/; git ls-files --others --exclude-standard content/; } | sort -u | grep -c .)
-      kchanged=$(git diff --name-only "$mb" -- pages components composables layouts app.vue assets nuxt.config.ts tailwind.config.ts | grep -c .)
-      if [ "$cchanged" -gt 0 ] && [ "$kchanged" -gt 0 ]; then warn "this branch changes $cchanged content file(s) and $kchanged code file(s); a content task changes content only (CLAUDE.md rule 3)"
-      elif [ "$cchanged" -gt 0 ]; then ok "content task: $cchanged content file(s) changed, no site code"
+      # everything changed (tracked or new) that is not content, a log or report under agent/, a baseline image or the known-failures list
+      kchanged=$( { git diff --name-only "$mb"; git ls-files --others --exclude-standard; } | sort -u | grep -v -e '^content/' -e '^agent/' -e '^visual/baseline/' -e '^scripts/validate-content.known-failures.txt$' | grep -c .)
+      if [ "$cchanged" -gt 0 ] && [ "$kchanged" -gt 0 ]; then warn "this branch changes $cchanged content file(s) and $kchanged other file(s) (site code, config, docs); a content task changes content only (CLAUDE.md rule 3). A WARN, not a FAIL: explain it in the PR."
+      elif [ "$cchanged" -gt 0 ]; then ok "content task: $cchanged content file(s) changed, nothing else but logs, baseline images or the known-failures list"
       else ok "content/ untouched"; fi
     fi
     if [ "$PHASE" = "1" ]; then
@@ -110,8 +111,8 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
   fi
 fi
 
-# 11b. Content validator (roadmap task 5). content/ is frozen in Phase 1, so its known failures cannot be fixed;
-#      they stay visible as a WARN. A failing file that is not in scripts/validate-content.known-failures.txt, any
+# 11b. Content validator (roadmap task 5). Its known failures stay visible as a WARN until the files are fixed
+#      (Phase 2 content tasks). A failing file that is not in scripts/validate-content.known-failures.txt, any
 #      cross-reference problem and any skipped check group is a FAIL. Edit the list only when the failing files
 #      are fixed (Phase 2) or Jordan decides the schema is wrong. In CI (CI is set) a missing prerequisite is a FAIL.
 if [ -f scripts/validate-content.mjs ] && [ -d node_modules/zod ] && [ -d node_modules/yaml ]; then
@@ -126,7 +127,7 @@ if [ -f scripts/validate-content.mjs ] && [ -d node_modules/zod ] && [ -d node_m
     elif [ -n "$newf" ]; then fail "content validator: failing file(s) not in the known list:"; echo "$newf" | sed 's/^/      /'
     elif [ "$x" -gt 0 ]; then fail "content validator: $x cross-reference problem(s). Run npm run validate:content."
     elif echo "$vline" | grep -q SKIPPED; then fail "content validator: a cross-reference check group was skipped. Run npm run validate:content."
-    else warn "content validator: $(echo "$cur" | grep -c .) known failing file/entry(ies), none new (scripts/validate-content.known-failures.txt). Frozen content; run npm run validate:content for the list."; fi
+    else warn "content validator: $(echo "$cur" | grep -c .) known failing file/entry(ies), none new (scripts/validate-content.known-failures.txt). Run npm run validate:content for the list; fix them in a content task and remove them from the list."; fi
   fi
 else need "content validator skipped (scripts/validate-content.mjs, node_modules/zod or node_modules/yaml missing; run npm ci)"; fi
 
