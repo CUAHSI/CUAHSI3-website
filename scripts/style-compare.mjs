@@ -4,7 +4,10 @@
 //   node scripts/style-compare.mjs compare  <a.json.gz> <b.json.gz>        diff two snapshots, element by element
 //
 // A snapshot loads each page of .output/public (build first: npm run build:search) at 390px and 1280px, and records for
-// every element in <body>: its tag, a short text key, about 70 computed properties and its box (x, y, width, height).
+// every element in <body>: its tag, a short text key, about 100 computed properties and its box (x, y, width, height).
+// Not seen: hover, focus and active states, pseudo-elements (::before, ::after, ::placeholder), print, other devices
+// pixel ratios, and any browser except Chromium. Animations are paused at their first frame, never disabled, so
+// transition and animation properties are recorded as the page really has them.
 // Pages are paired element by element in document order, so it only works for changes that keep the markup structure
 // (moving inline styles into classes does). Exit code 1 if any element differs.
 // One declared difference: the style and colour of a border side with zero width are ignored (it draws nothing).
@@ -31,9 +34,13 @@ const PROPS = [
   'font-family', 'font-size', 'font-weight', 'font-style', 'font-variant-caps', 'line-height', 'letter-spacing',
   'text-align', 'text-transform', 'text-decoration-line', 'text-decoration-color', 'text-overflow', 'white-space',
   'word-break', 'overflow-wrap', 'vertical-align', 'list-style-type', 'cursor', 'box-shadow', 'transform',
-  'transition-property', 'transition-duration', 'animation-name', 'object-fit', 'object-position', 'aspect-ratio',
-  'pointer-events', 'outline-style', 'outline-width', 'outline-color', 'fill', 'stroke'
+  'transition-property', 'transition-duration', 'transition-delay', 'transition-timing-function', 'animation-name',
+  'animation-duration', 'object-fit', 'object-position', 'aspect-ratio',
+  'pointer-events', 'outline-style', 'outline-width', 'outline-color', 'fill', 'stroke', 'backdrop-filter',
+  '-webkit-font-smoothing', '-moz-osx-font-smoothing'
 ]
+// Measured values: the same build measures them a hair differently from run to run (0.02px), so they get a tolerance.
+const MEASURED = new Set(['width', 'height', 'grid-template-columns', 'grid-template-rows'])
 
 const root = path.resolve(process.env.STYLE_ROOT || '.output/public')   // STYLE_ROOT: compare a build somewhere else
 const widths = [390, 1280]
@@ -66,6 +73,9 @@ function serve() {
   })
   return new Promise(r => server.listen(0, () => r(server)))
 }
+
+// Runs in the page: pause every running animation at its first frame (the live-pulse dot would otherwise differ by time).
+const freeze = () => { document.getAnimations().forEach(a => { try { a.pause(); a.currentTime = 0 } catch {} }) }
 
 // Runs in the page: one record per element in <body>, in document order.
 function collect(props) {
@@ -121,7 +131,6 @@ async function snapshot(outFile, filter) {
         const page = await ctxs[w].newPage()
         await page.clock.install({ time: new Date('2026-10-01T12:00:00Z') })
         await page.goto(`http://localhost:${port}${r}`, { waitUntil: 'networkidle', timeout: 60000 })
-        await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}' })
         const ok = await page.evaluate(async () => {
           const faces = [...[500, 600, 700, 800].map(x => `${x} 20px "Schibsted Grotesk"`), ...[400, 500, 600, 700].map(x => `${x} 16px "Hanken Grotesk"`), ...[400, 700].map(x => `${x} 12px "Space Mono"`)]
           await Promise.all(faces.map(f => document.fonts.load(f, 'AaBbZz09')))
@@ -133,6 +142,8 @@ async function snapshot(outFile, filter) {
         if (!ok) throw new Error('web fonts did not load')
         await page.waitForLoadState('networkidle')
         await page.waitForFunction(() => [...document.images].every(i => i.complete), undefined, { timeout: 15000 })
+        await page.waitForTimeout(300)
+        await page.evaluate(freeze)
         const recs = await page.evaluate(collect, PROPS)
         pages[`${r}@${w}`] = recs.map(e => {
           let idx = dict.get(e.v)
@@ -154,6 +165,10 @@ async function snapshot(outFile, filter) {
       { key: '/@search', w: 1280, path: '/', act: async page => { await page.getByRole('button', { name: /^Search/ }).click(); await page.waitForSelector('[role=dialog]') } },
       { key: '/@menu', w: 390, path: '/', act: async page => { await page.getByRole('button', { name: 'Open menu' }).click(); await page.waitForSelector('#mobile-menu') } },
       { key: '/learn-train/cyberseminars/@open', w: 1280, path: '/learn-train/cyberseminars/', act: async page => { await page.getByRole('button', { name: /^Play video:/ }).first().click(); await page.waitForSelector('text=Close video') } },
+      { key: '/@search-results', w: 1280, path: '/', act: async page => { await page.getByRole('button', { name: /^Search/ }).click(); await page.waitForSelector('[role=dialog]'); await page.locator('[role=dialog] input').fill('water'); await page.waitForSelector('[role=dialog] button:not([aria-label="Close search"])', { timeout: 15000 }) } },
+      { key: '/@search-none', w: 1280, path: '/', act: async page => { await page.getByRole('button', { name: /^Search/ }).click(); await page.waitForSelector('[role=dialog]'); await page.locator('[role=dialog] input').fill('zzzzqqqq'); await page.waitForSelector('text=No results') } },
+      { key: '/hire-cuahsi/@member', w: 1280, path: '/hire-cuahsi/', act: async page => { await page.getByLabel('Find your institution').fill('university'); await page.waitForTimeout(300); await page.getByRole('button').filter({ hasText: /university/i }).first().click(); await page.waitForSelector('text=member since') } },
+      { key: '/hire-cuahsi/@notmember', w: 1280, path: '/hire-cuahsi/', act: async page => { await page.getByLabel('Find your institution').fill('zzzzqqqq'); await page.waitForSelector('text=Your institution can join') } },
       { key: '/hire-cuahsi/@lookup', w: 1280, path: '/hire-cuahsi/', act: async page => { await page.getByLabel('Find your institution').fill('university'); await page.waitForTimeout(300) } },
       { key: '/community/jobs/@filtered', w: 1280, path: '/community/jobs/', act: async page => { await page.locator('main button[aria-pressed="false"]').first().click(); await page.waitForTimeout(300) } },
     ]
@@ -169,10 +184,10 @@ async function snapshot(outFile, filter) {
         const page = await ctx.newPage()
         await page.clock.install({ time: new Date('2026-10-01T12:00:00Z') })
         await page.goto(`http://localhost:${port}${st.path}`, { waitUntil: 'networkidle', timeout: 60000 })
-        await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}' })
         await page.evaluate(async () => { await document.fonts.ready })
         await st.act(page)
-        await page.waitForTimeout(400)
+        await page.waitForTimeout(600)
+        await page.evaluate(freeze)
         const recs = await page.evaluate(collect, PROPS)
         pages[`${st.key}@${st.w}`] = recs.map(e => {
           let idx = dict.get(e.v)
@@ -194,10 +209,10 @@ async function snapshot(outFile, filter) {
   if (errors.length) process.exitCode = 1
 }
 
-const norm = (prop, v) => v   // no declared value differences (the font-family fallback idea was dropped: it changes how fallback glyphs such as arrows draw)
 
-// Layout values are measured, and the same build measures a text width a hair differently from run to run
-// (0.02px). Numbers inside a value are therefore compared with a tolerance of 0.5px; everything else exactly.
+// Measured values (width, height, grid track sizes, the element box) are compared with a tolerance of 0.5px, because
+// the same build measures a text width a hair differently from run to run (0.02px). Every other property is
+// compared exactly.
 const TOL = 0.5
 const NUM = /-?\d+(?:\.\d+)?/g
 function same(a, b) {
@@ -237,7 +252,7 @@ function compare(fa, fb) {
             const w = props.indexOf(`border-${bm[1]}-width`)
             if (va[w] === '0px' && vb[w] === '0px') return
           }
-          if (!same(norm(p, va[j]), norm(p, vb[j]))) diffs.push(`${p}: ${va[j]} -> ${vb[j]}`)
+          if (MEASURED.has(p) ? !same(va[j], vb[j]) : va[j] !== vb[j]) diffs.push(`${p}: ${va[j]} -> ${vb[j]}`)
         })
       }
       if (diffs.length) {
