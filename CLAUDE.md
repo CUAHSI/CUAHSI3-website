@@ -149,6 +149,13 @@ Every one of these cost real debugging time. All but the third failed silently; 
 9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
    balance check in `verify.sh` exists because of it. See "Bulk edit."
 
+10. **Inline styles beat classes, and a class beats nothing.** When an inline style becomes a Tailwind class,
+    an element that had both a class and an inline value for the same property changes (the inline one used to
+    win), and a dead class such as `hover:text-white` under an inline `color` suddenly works. Check with
+    `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
+    `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
+    fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
+
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
 Inline styles cannot be overridden by media queries. This caused a total mobile failure

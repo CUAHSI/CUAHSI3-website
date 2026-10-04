@@ -77,3 +77,7 @@ The decisions above were answered as follows.
    - **PR 4:** the rest of `community/*` (events, jobs, news, newsletter; 232), plus the deletion of `.rgrid`, `.rg-*` and `--cols` after a search shows zero uses, and the list of remaining dynamic styles.
 3. The `font-family` fallback difference: **accepted.**
 4. Dynamic `:style` bindings stay unless trivial: **yes.**
+
+## Update during PR 1 (4 October): the font-family deviation was dropped
+
+Jordan accepted a `font-family` fallback difference (the `font-display` / `font-body` tokens add `sans-serif`). PR 1 showed it is not invisible: glyphs missing from the web fonts, such as the arrows and ticks in links, draw from a different fallback font, and 5 screenshots changed by 11 to 567 pixels. PR 1 therefore uses the exact family (`font-['Hanken_Grotesk']`, `font-['Schibsted_Grotesk']`) and the style comparison no longer ignores any font-family difference. The only declared difference left is that the style and colour of a border side with zero width are ignored, because it draws nothing.
