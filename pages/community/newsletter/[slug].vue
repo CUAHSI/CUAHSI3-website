@@ -43,7 +43,7 @@ const prevIssue = computed(() => allIssues.value?.[idx.value + 1] ?? null)
 const nextIssue = computed(() => allIssues.value?.[idx.value - 1] ?? null)
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 
@@ -145,7 +145,7 @@ function fmtDate(d: string) {
                 </span>
               </div>
               <p class="text-[11px] text-muted mt-[2px]">
-                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
+                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) }}
                 <span v-if="event.location?.city"> · {{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode === 'virtual'"> · Virtual</span>
                 <span class="text-[#0F7A57] ml-[4px]">→</span>

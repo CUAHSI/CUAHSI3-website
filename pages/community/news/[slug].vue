@@ -16,7 +16,7 @@ useHead({
   meta: [{ name: 'description', content: computed(() => item.value?.excerpt ?? '') }]
 })
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 

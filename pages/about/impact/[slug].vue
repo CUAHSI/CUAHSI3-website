@@ -7,7 +7,7 @@ const { data: item } = await useAsyncData(`highlight-${slug}`, () =>
 )
 const notFound = computed(() => !item.value || !item.value._path?.startsWith('/research/'))
 useHead({ title: computed(() => item.value?.title ?? 'Not found') })
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) }
 </script>
 <template>
   <div>
