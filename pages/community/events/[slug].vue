@@ -44,17 +44,17 @@ function typeStyle(type: string) {
 
 function fmtDate(start: string, end?: string) {
   const s = new Date(start)
-  const opts: Intl.DateTimeFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }
+  const opts: Intl.DateTimeFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }
   if (!end) return s.toLocaleDateString('en-US', opts)
   const e = new Date(end)
-  if (s.toDateString() === e.toDateString()) return s.toLocaleDateString('en-US', opts)
-  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth())
-    return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}–${e.getDate()}, ${e.getFullYear()}`
-  return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} – ${e.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`
+  if (s.toISOString().slice(0, 10) === e.toISOString().slice(0, 10)) return s.toLocaleDateString('en-US', opts)
+  if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth())
+    return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' })}–${e.getUTCDate()}, ${e.getUTCFullYear()}`
+  return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' })} – ${e.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}`
 }
 
 function fmtShort(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 

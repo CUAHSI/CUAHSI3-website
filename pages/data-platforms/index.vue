@@ -11,7 +11,7 @@ const { data: allImpact } = await useAsyncData('data-related-impact', () =>
 function relatedImpact(impactTag: string) {
   return (allImpact.value ?? []).filter(h => h.tags?.includes(impactTag)).slice(0, 2)
 }
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
 
 const tools = [
   {

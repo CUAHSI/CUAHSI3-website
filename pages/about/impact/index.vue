@@ -35,7 +35,7 @@ const filtered = computed(() => {
 })
 
 function colorOf(key: string) { return (catDefs.find(c => c.key === key) || catDefs[0]).color }
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
 
 </script>
 
