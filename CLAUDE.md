@@ -18,7 +18,7 @@ same PR (see "New footgun").
 
 ```
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
-content/           the content. Do not modify in Phase 1 (rule 3).
+content/           the content. Phase 2 is open (rule 3): content tasks only, one per branch.
 visual/            the visual baseline: 52 committed screenshots and README.md. tests/visual/ and
                    playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
@@ -73,10 +73,16 @@ version mismatch. Ignore it.
    change touching layout, markup structure or links, do not write "verified,"
    "tested" or "works." Write what you checked, and list what a human must look at
    (see "Visual review request").
-3. **Do not modify `content/**` in Phase 1.** Content is the stable asset; code is what
-   is being refactored. If content never changes, any content breakage is a code
-   regression. The hook blocks edits and `verify.sh` fails if the branch touches
-   `content/`. If a code change seems to need a content change, stop and tell Jordan.
+3. **`content/**` changes only in a content task (Phase 2, opened by Jordan on 4 October 2026).**
+   Phase 1 froze `content/` so that any breakage was a code regression; that period is over. Now:
+   a content change is its own task, its own branch (`task/content-short-name`) and its own PR, and
+   it changes `content/` (plus the log and, if a validator failure is fixed, the known-failures list)
+   and no site code; a code change that a content change needs is a second PR. Never invent content:
+   every fact comes from Jordan or from a file already in the repo, and existing prose is not
+   rewritten beyond the task. Follow the content model as the files actually are (rule 1: check
+   `agent/content-model.md` against them). The frontmatter `slug` drives the URL, so changing a slug
+   changes a URL (rule 8). `npm run validate:content` must not get worse. A content PR says which
+   pages change on the deploy preview and lists them in the visual review request.
 4. **Git.** Work on a branch named `task/short-name`, cut from an up-to-date `main`.
    Never commit on `main`. Commit on the task branch only after `./scripts/verify.sh`
    passes. Stage files by name and read `git diff --staged` before committing; never
@@ -298,7 +304,11 @@ the PR that fixes it.
 eval log and `git`, not from memory of the session. Give counts from the eval log:
 tasks started, PRs merged, interventions, defects by where they were caught.
 
-**Phase 2.** Not yet. When Jordan opens Phase 2 (the content agent), rule 3 changes,
-`PHASE` in `.claude/hooks/guard.mjs` and `scripts/verify.sh` changes with it, and
-content procedures get added here. Until he says so, Phase 2 work is out of scope even
-when it looks easy.
+**Phase 2 (open).** Content tasks follow Start a task, Verify, Review and Finish a task like any
+other, with these differences. The branch is `task/content-short-name`. Before editing, read the
+files involved and run `npm run validate:content` for a before count. After editing, run it again and
+report the before and after counts with denominators; remove a fixed file from
+`scripts/validate-content.known-failures.txt` in the same PR. Build the site and open the pages the
+change reaches; the PR lists each changed page (from the built HTML) and what should look different,
+and the visual baseline is re-written only for images whose page changed on purpose. Mixed
+content-and-code branches get a WARN from `verify.sh`.

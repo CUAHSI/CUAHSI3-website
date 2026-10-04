@@ -5,7 +5,7 @@
 # FAIL blocks a commit. WARN must be read and either fixed or explained in the PR.
 # A clean run does not mean the pages look right. See CLAUDE.md rule 2.
 
-PHASE=1            # 1 = content/ is frozen. Change only when Jordan opens Phase 2.
+PHASE=2            # 1 = content/ is frozen. 2 = Phase 2, opened by Jordan on 4 October 2026.
 BASE="${VERIFY_BASE:-main}"
 CODE_DIRS=()
 for d in pages components layouts; do [ -d "$d" ] && CODE_DIRS+=("$d"); done
@@ -90,6 +90,13 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
 
   if git rev-parse --verify -q "$BASE" >/dev/null; then
     mb=$(git merge-base "$BASE" HEAD)
+    if [ "$PHASE" = "2" ]; then
+      cchanged=$( { git diff --name-only "$mb" -- content/; git ls-files --others --exclude-standard content/; } | sort -u | grep -c .)
+      kchanged=$(git diff --name-only "$mb" -- pages components composables layouts app.vue assets nuxt.config.ts tailwind.config.ts | grep -c .)
+      if [ "$cchanged" -gt 0 ] && [ "$kchanged" -gt 0 ]; then warn "this branch changes $cchanged content file(s) and $kchanged code file(s); a content task changes content only (CLAUDE.md rule 3)"
+      elif [ "$cchanged" -gt 0 ]; then ok "content task: $cchanged content file(s) changed, no site code"
+      else ok "content/ untouched"; fi
+    fi
     if [ "$PHASE" = "1" ]; then
       changed=$( { git diff --name-only "$mb" -- content/; git ls-files --others --exclude-standard content/; } | sort -u)
       [ -n "$changed" ] && { fail "content/ differs from $BASE (rule 3):"; echo "$changed" | sed 's/^/      /'; } || ok "content/ untouched"
