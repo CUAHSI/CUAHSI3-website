@@ -11,6 +11,12 @@ const props = defineProps<{ seminar: any; expanded: boolean }>()
 const emit = defineEmits<{ (e: 'toggle'): void }>()
 
 const isOpen = computed(() => props.expanded && !!props.seminar.youtube_id)
+// The date arrives as an ISO string ('2025-12-10T00:00:00.000Z'); show it as 'Dec 10, 2025', read in UTC (a UTC-midnight date
+// read in a US time zone would be a day early). A seminar with no date shows nothing, as before.
+const dateLabel = computed(() => {
+  const d = props.seminar.date ? new Date(props.seminar.date) : null
+  return d && !isNaN(d.getTime()) ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : ''
+})
 
 function ytThumb(id: string) { return `https://img.youtube.com/vi/${id}/mqdefault.jpg` }
 
@@ -81,7 +87,7 @@ watch(isOpen, (open) => {
     </div>
     <div class="flex flex-col flex-1 p-[16px]">
       <div class="flex items-center gap-2 mb-2 flex-wrap">
-        <span class="font-mono text-[10px] text-muted">{{ seminar.date }}</span>
+        <span class="font-mono text-[10px] text-muted">{{ dateLabel }}</span>
         <span v-if="seminar.series" class="font-mono text-[10px] rounded-[4px] bg-[rgba(31,111,178,.09)] text-[#1A5F9A] p-[2px_7px]">{{ seminar.series }}</span>
       </div>
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[15px] leading-[1.3] text-navy m-[0_0_8px] flex-1">{{ seminar.title }}</h2>

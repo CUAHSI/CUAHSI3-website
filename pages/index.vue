@@ -28,6 +28,10 @@ const { data: latestSeminar } = await useAsyncData('home-seminar', () =>
 function fmtEventDay(d: string) { return new Date(d).toLocaleDateString('en-US', { day: '2-digit', timeZone: 'UTC' }) }
 function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase() }
 function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
+function fmtFullDate(d?: string) {
+  const t = d ? new Date(d) : null
+  return t && !isNaN(t.getTime()) ? t.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : ''
+}
 
 const pathways = [
   { tag: 'I want to work with data', title: 'Data & Computing', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
@@ -240,7 +244,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
               <span class="absolute font-mono text-[10px] rounded-[5px] left-[14px] bottom-[12px] text-[rgba(255,255,255,.85)] bg-[rgba(0,0,0,.25)] p-[5px_9px]">{{ latestSeminar.series }}</span>
             </div>
             <div class="p-[18px_20px]">
-              <div class="font-mono text-[10px] tracking-[.06em] text-muted mb-2">{{ latestSeminar.date }}</div>
+              <div class="font-mono text-[10px] tracking-[.06em] text-muted mb-2">{{ fmtFullDate(latestSeminar.date) }}</div>
               <h3 class="font-['Schibsted_Grotesk'] font-bold text-[17px] leading-[1.3] text-navy m-[0_0_8px]">{{ latestSeminar.title }}</h3>
               <p class="line-clamp-2 font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.5] text-muted m-[0_0_14px]">{{ latestSeminar.description }}</p>
               <span class="arrow-row inline-flex items-center gap-2 font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-water">Browse archive <span class="arr">→</span></span>
