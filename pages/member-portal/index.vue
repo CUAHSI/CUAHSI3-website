@@ -52,11 +52,11 @@ const resources = [
 
 <template>
   <div>
-    <PageHero section-class="hero-section" container-class="mx-auto site-container" container-style="max-width:1240px;padding-top:64px;padding-bottom:44px;"
-      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:16px 0 14px;"
-      lead-style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:600px;">
+    <PageHero section-class="hero-section" container-class="mx-auto site-container max-w-site pt-[64px] pb-[44px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[16px_0_14px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[17px] leading-[1.6] text-[#3a4d57] max-w-[600px]">
       <template #before>
-        <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Member Portal</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-[12px] text-clay">Member Portal</span>
       </template>
       <template #title>
         For CUAHSI member representatives.
@@ -66,42 +66,42 @@ const resources = [
       </template>
     </PageHero>
 
-    <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;">
+    <div class="mx-auto site-container max-w-site pt-[52px]">
 
       <!-- Resources -->
       <div class="mb-12">
-        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Member resources</p>
-        <div class="rg-4">
-          <div v-for="r in resources" :key="r.title" class="rounded-card" style="border:1px solid rgba(15,33,43,.1);padding:18px;">
-            <p style="font:600 14px 'Hanken Grotesk';color:#0F2E44;margin:0 0 6px;">{{ r.title }}</p>
-            <p style="font:400 12.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:0 0 10px;">{{ r.desc }}</p>
-            <span class="font-mono text-[10px]" style="color:#C2410C;background:#FFF7ED;padding:2px 8px;border-radius:99px;">{{ r.status }}</span>
+        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4 text-[11px]">Member resources</p>
+        <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2 min-[901px]:grid-cols-4">
+          <div v-for="r in resources" :key="r.title" class="rounded-card border border-[rgba(15,33,43,.1)] p-[18px]">
+            <p class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy m-[0_0_6px]">{{ r.title }}</p>
+            <p class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.5] text-muted m-[0_0_10px]">{{ r.desc }}</p>
+            <span class="font-mono text-[10px] text-[#C2410C] bg-[#FFF7ED] p-[2px_8px] rounded-[99px]">{{ r.status }}</span>
           </div>
         </div>
       </div>
 
       <!-- Rep directory -->
-      <div style="padding-bottom:80px;">
+      <div class="pb-[80px]">
         <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
-          <p class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Member representative directory</p>
+          <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member representative directory</p>
           <input v-model="query" type="text" aria-label="Search member representatives" placeholder="Search name, institution, or email…"
-            style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';width:280px;" />
+            class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[280px]" />
         </div>
         <p class="font-mono text-[11px] text-muted mb-5">{{ filtered.length }} representative{{ filtered.length === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
 
         <div class="flex flex-col gap-6">
           <div v-for="group in grouped" :key="group.institution">
-            <p style="font:600 13.5px 'Hanken Grotesk';color:#0F2E44;margin-bottom:8px;">{{ group.institution }}</p>
-            <div class="rg-2" style="gap:1px;background:rgba(15,33,43,.08);border-radius:8px;overflow:hidden;">
-              <div v-for="rep in group.reps" :key="rep.email" class="bg-paper" style="padding:12px 14px;">
-                <p style="font:500 13px 'Hanken Grotesk';color:#15212B;margin:0 0 2px;">{{ rep.first_name }} {{ rep.last_name }}</p>
-                <a :href="`mailto:${rep.email}`" class="font-mono text-[11px]" style="color:#1F6FB2;">{{ rep.email }}</a>
+            <p class="font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-navy mb-[8px]">{{ group.institution }}</p>
+            <div class="grid grid-cols-1 min-[641px]:grid-cols-2 gap-px bg-[rgba(15,33,43,.08)] rounded-[8px] overflow-hidden">
+              <div v-for="rep in group.reps" :key="rep.email" class="bg-paper p-[12px_14px]">
+                <p class="font-['Hanken_Grotesk'] font-medium text-[13px] leading-[normal] text-ink m-[0_0_2px]">{{ rep.first_name }} {{ rep.last_name }}</p>
+                <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water">{{ rep.email }}</a>
               </div>
             </div>
           </div>
         </div>
 
-        <p v-if="!filtered.length" style="font:400 13.5px 'Hanken Grotesk';color:#5C6E78;padding:24px 0;">No representatives match "{{ query }}".</p>
+        <p v-if="!filtered.length" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-muted p-[24px_0]">No representatives match "{{ query }}".</p>
       </div>
     </div>
   </div>

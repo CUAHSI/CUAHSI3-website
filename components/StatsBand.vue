@@ -9,12 +9,12 @@ const stats = [
 
 <template>
   <section class="bg-navy text-white">
-    <div class="mx-auto stats-grid site-container rgrid rgrid-multi" style="max-width:1240px;padding-top:36px;padding-bottom:36px;display:grid;gap:20px;--cols:repeat(4,1fr);">
+    <div class="mx-auto stats-grid site-container max-w-site pt-[36px] pb-[36px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 min-[900px]:grid-cols-[repeat(4,1fr)]">
       <div v-for="(s, i) in stats" :key="s.l"
         class="stats-item"
         :style="`padding:6px 28px;border-left:1px solid rgba(255,255,255,${i === 0 ? '0' : '.14'});`">
-        <div style="font:700 clamp(34px,3.6vw,46px)/1 'Schibsted Grotesk';color:#7fc0ee;">{{ s.n }}</div>
-        <div class="font-mono text-[13px] tracking-[.04em] mt-2" style="color:#bcd4e6;">{{ s.l }}</div>
+        <div class="font-['Schibsted_Grotesk'] font-bold text-[clamp(34px,3.6vw,46px)] leading-[1] text-water-soft">{{ s.n }}</div>
+        <div class="font-mono text-[13px] tracking-[.04em] mt-2 text-[#bcd4e6]">{{ s.l }}</div>
       </div>
     </div>
   </section>

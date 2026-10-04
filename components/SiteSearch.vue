@@ -153,23 +153,23 @@ const quickLinks = [
   <div>
     <!-- Trigger -->
     <button ref="triggerEl" type="button" aria-haspopup="dialog" @click="open"
-      style="display:flex;align-items:center;gap:6px;padding:4px 10px;border:0.5px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;color:#5C6E78;font-size:12px;">
+      class="flex items-center gap-[6px] p-[4px_10px] border-[0.5px] border-[#e5e7eb] rounded-[6px] bg-white cursor-pointer text-muted text-[12px]">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
       </svg>
       <span>Search</span>
-      <span style="font-size:10px;color:#d1d5db;margin-left:2px;">⌘K</span>
+      <span class="text-[10px] text-[#d1d5db] ml-[2px]">⌘K</span>
     </button>
 
     <Teleport to="body">
       <div v-if="isOpen"
         @click.self="close"
-        style="position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding-top:80px;background:rgba(0,0,0,.3);">
-        <div ref="panelEl" role="dialog" aria-modal="true" aria-label="Search the site" style="width:100%;max-width:560px;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);overflow:hidden;margin:0 16px;">
+        class="fixed inset-0 z-[9999] flex items-start justify-center pt-[80px] bg-[rgba(0,0,0,.3)]">
+        <div ref="panelEl" role="dialog" aria-modal="true" aria-label="Search the site" class="w-full max-w-[560px] bg-white rounded-[12px] [box-shadow:0_20px_60px_rgba(0,0,0,.15)] overflow-hidden m-[0_16px]">
 
           <!-- Input -->
-          <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:0.5px solid #f3f4f6;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" style="flex-shrink:0;">
+          <div class="flex items-center gap-[10px] p-[14px_16px] border-b-[0.5px] border-b-[#f3f4f6]">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" class="shrink-0">
               <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
             </svg>
             <input
@@ -178,42 +178,42 @@ const quickLinks = [
               @input="search"
               aria-label="Search the site"
               placeholder="Search highlights, news, team, events…"
-              style="flex:1;border:none;font-size:15px;color:#111827;background:transparent;" />
+              class="flex-1 text-[15px] text-[#111827] bg-transparent" />
             <button type="button" aria-label="Close search" @click="close"
-              style="font-size:11px;color:#5C6E78;border:0.5px solid #e5e7eb;border-radius:4px;padding:2px 6px;background:white;cursor:pointer;">
+              class="text-[11px] text-muted border-[0.5px] border-[#e5e7eb] rounded-[4px] p-[2px_6px] bg-white cursor-pointer">
               Esc
             </button>
           </div>
 
           <!-- Results -->
-          <div v-if="results.length" style="max-height:400px;overflow-y:auto;">
+          <div v-if="results.length" class="max-h-[400px] overflow-y-auto">
             <button v-for="r in results" :key="r.url"
               @click="navigate(r.url)"
-              style="width:100%;text-align:left;padding:12px 16px;border:none;border-bottom:0.5px solid #f9fafb;background:white;cursor:pointer;display:block;">
-              <p style="font-size:13px;font-weight:500;color:#111827;margin-bottom:3px;line-height:1.3;">
+              class="w-full text-left p-[12px_16px] border-b-[0.5px] border-b-[#f9fafb] bg-white cursor-pointer block">
+              <p class="text-[13px] font-medium text-[#111827] mb-[3px] leading-[1.3]">
                 {{ r.meta?.title ?? r.url }}
               </p>
-              <p v-if="r.excerpt" style="font-size:12px;color:#6b7280;line-height:1.5;" v-html="r.excerpt" />
+              <p v-if="r.excerpt" class="text-[12px] text-[#6b7280] leading-[1.5]" v-html="r.excerpt" />
             </button>
           </div>
 
           <!-- No results -->
-          <div v-else-if="query.length > 1" style="padding:24px 16px;text-align:center;">
-            <p style="font-size:13px;color:#5C6E78;">
-              No results for <strong style="color:#374151;">{{ query }}</strong>
+          <div v-else-if="query.length > 1" class="p-[24px_16px] text-center">
+            <p class="text-[13px] text-muted">
+              No results for <strong class="text-[#374151]">{{ query }}</strong>
             </p>
           </div>
 
           <!-- Idle: quick links -->
-          <div v-else style="padding:16px;display:flex;flex-wrap:wrap;gap:6px;">
+          <div v-else class="p-[16px] flex flex-wrap gap-[6px]">
             <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to" @click="reset"
-              style="font-size:12px;padding:4px 10px;border-radius:99px;background:#f3f4f6;color:#5C6E78;text-decoration:none;">
+              class="text-[12px] p-[4px_10px] rounded-[99px] bg-[#f3f4f6] text-muted no-underline">
               {{ link.label }}
             </NuxtLink>
           </div>
 
-          <div style="padding:8px 16px;border-top:0.5px solid #f3f4f6;display:flex;justify-content:flex-end;">
-            <span style="font-size:11px;color:#d1d5db;">Powered by Pagefind</span>
+          <div class="p-[8px_16px] border-t-[0.5px] border-t-[#f3f4f6] flex justify-end">
+            <span class="text-[11px] text-[#d1d5db]">Powered by Pagefind</span>
           </div>
         </div>
       </div>

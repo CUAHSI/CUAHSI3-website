@@ -52,11 +52,11 @@ const routes = [
 <template>
   <div>
     <!-- Hero -->
-    <PageHero section-class="hero-section" container-class="mx-auto site-container" container-style="max-width:1240px;padding-top:64px;padding-bottom:40px;"
-      title-style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:700px;"
-      lead-style="font:400 19px/1.55 'Hanken Grotesk';color:#3a4d57;max-width:600px;">
+    <PageHero section-class="hero-section" container-class="mx-auto site-container max-w-site pt-[64px] pb-[40px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(36px,4.4vw,54px)] leading-[1.04] tracking-[-.022em] text-navy m-[16px_0_16px] max-w-[700px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[19px] leading-[1.55] text-[#3a4d57] max-w-[600px]">
       <template #before>
-        <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Contact</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-[12px] text-clay">Contact</span>
       </template>
       <template #title>
         Get in touch.
@@ -67,18 +67,18 @@ const routes = [
     </PageHero>
 
     <!-- Routing cards -->
-    <div class="mx-auto site-container" style="max-width:1240px;padding-top:56px;padding-bottom:80px;">
-      <div class="rg-2">
+    <div class="mx-auto site-container max-w-site pt-[56px] pb-[80px]">
+      <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2">
         <div v-for="r in routes" :key="r.id" :id="r.id"
           class="bg-white flex flex-col"
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${r.accent};border-radius:14px;padding:26px 24px;`">
           <span class="font-mono font-bold tracking-[.06em] uppercase" :style="`font-size:11px;color:${r.accent};`">{{ r.tag }}</span>
-          <h2 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 10px;">{{ r.title }}</h2>
-          <p style="font:400 14.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:0 0 16px;flex:1;">{{ r.desc }}</p>
+          <h2 class="font-['Schibsted_Grotesk'] font-bold text-[21px] leading-[normal] text-navy m-[12px_0_10px]">{{ r.title }}</h2>
+          <p class="font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[1.5] text-muted m-[0_0_16px] flex-1">{{ r.desc }}</p>
 
-          <div class="flex flex-col gap-1 mb-4" style="padding-top:16px;border-top:1px solid rgba(15,33,43,.1);">
-            <span style="font:400 12.5px 'Hanken Grotesk';color:#5C6E78;">{{ r.who }}</span>
-            <span class="font-mono text-[11px]" style="color:#5C6E78;">{{ r.time }}</span>
+          <div class="flex flex-col gap-1 mb-4 pt-[16px] border-t border-t-[rgba(15,33,43,.1)]">
+            <span class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[normal] text-muted">{{ r.who }}</span>
+            <span class="font-mono text-[11px] text-muted">{{ r.time }}</span>
           </div>
 
           <a v-if="r.email" :href="`mailto:${r.email}`"
@@ -91,7 +91,7 @@ const routes = [
             {{ r.cta.text }}
           </NuxtLink>
           <NuxtLink v-if="r.extraLink" :to="r.extraLink.to"
-            style="font:500 12.5px 'Hanken Grotesk';color:#1F6FB2;text-decoration:none;margin-top:8px;">
+            class="font-['Hanken_Grotesk'] font-medium text-[12.5px] leading-[normal] text-water no-underline mt-[8px]">
             {{ r.extraLink.text }}
           </NuxtLink>
         </div>
