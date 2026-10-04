@@ -33,7 +33,7 @@ a { color: inherit; text-decoration: none; }
 .news-prose h2 { font-style: normal; font-family: 'Schibsted Grotesk'; font-size: 16px; font-weight: 600; line-height: 1.3; color: #111827; margin: 28px 0 10px; letter-spacing: -.008em; }
 .news-prose h3 { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 14px; font-weight: 600; line-height: 1.3; color: #374151; margin: 20px 0 8px; }
 .news-prose p { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.75; color: #374151; margin-bottom: 16px; }
-.news-prose a { color: #1D9E75; text-decoration: none; }
+.news-prose a { color: #0F7A57; text-decoration: none; }
 .news-prose a:hover { text-decoration: underline; }
 .news-prose ul { padding-left: 20px; margin-bottom: 16px; }
 .news-prose li { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.7; color: #374151; margin-bottom: 6px; list-style: disc; }

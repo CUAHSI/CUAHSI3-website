@@ -148,7 +148,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
             <h3 style="font:700 20px 'Schibsted Grotesk';color:#0F2E44;margin:0;">{{ t.name }}</h3>
             <p style="font:400 14.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:9px 0 16px;flex:1;">{{ t.tagline }}</p>
             <div class="flex gap-[6px] flex-wrap mb-[18px]">
-              <span v-for="tag in t.tags" :key="tag" class="font-mono text-[11px]" style="color:#1F6FB2;background:rgba(31,111,178,.09);padding:4px 9px;border-radius:5px;">{{ tag }}</span>
+              <span v-for="tag in t.tags" :key="tag" class="font-mono text-[11px]" style="color:#1A5F9A;background:rgba(31,111,178,.09);padding:4px 9px;border-radius:5px;">{{ tag }}</span>
             </div>
             <a :href="t.href" target="_blank" class="arrow-row inline-flex items-center gap-[7px]" style="font:600 14.5px 'Hanken Grotesk';color:#0F2E44;">{{ t.cta }} <span class="arr">→</span></a>
           </div>
@@ -222,7 +222,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
                 <NuxtLink :to="`/community/events/${e.slug}`" style="font:600 14.5px 'Hanken Grotesk';color:#0F2E44;text-decoration:none;" class="hover:text-water transition-colors">{{ e.title }}</NuxtLink>
                 <div class="flex items-center gap-2 mt-1 flex-wrap">
                   <span class="font-mono text-[11px] text-muted">{{ e.location?.city || (e.location?.mode === 'virtual' ? 'Virtual' : '') }}</span>
-                  <span class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:2px 7px;">{{ e.location?.mode }}</span>
+                  <span class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1A5F9A;padding:2px 7px;">{{ e.location?.mode }}</span>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
               <div class="rounded-full bg-white flex items-center justify-center" style="width:52px;height:52px;opacity:.9;">
                 <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="7,4 17,10 7,16" fill="#0F2E44"/></svg>
               </div>
-              <span v-if="latestSeminar.has_transcript" class="absolute font-mono font-bold text-[10px] tracking-[.06em] rounded-[4px]" style="right:14px;top:14px;background:rgba(31,159,85,.9);color:#fff;padding:4px 8px;">TRANSCRIPT ✓</span>
+              <span v-if="latestSeminar.has_transcript" class="absolute font-mono font-bold text-[10px] tracking-[.06em] rounded-[4px]" style="right:14px;top:14px;background:#1B7F46;color:#fff;padding:4px 8px;">TRANSCRIPT ✓</span>
               <span class="absolute font-mono text-[10px] rounded-[5px]" style="left:14px;bottom:12px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.25);padding:5px 9px;">{{ latestSeminar.series }}</span>
             </div>
             <div style="padding:18px 20px;">

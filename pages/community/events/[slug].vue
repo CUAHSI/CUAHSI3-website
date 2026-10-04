@@ -35,7 +35,7 @@ const typeColors: Record<string, { bg: string; text: string }> = {
   workshop:   { bg: '#EDE9FE', text: '#5B21B6' },
   webinar:    { bg: '#DCFCE7', text: '#15803D' },
   deadline:   { bg: '#FEF9C3', text: '#854D0E' },
-  default:    { bg: '#F3F4F6', text: '#6B7280' },
+  default:    { bg: '#F3F4F6', text: '#5C6E78' },
 }
 function typeStyle(type: string) {
   const c = typeColors[type] ?? typeColors.default
@@ -66,7 +66,7 @@ function fmtShort(d: string) {
 
         <!-- Main -->
         <article>
-          <NuxtLink to="/community/events" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← All events</NuxtLink>
+          <NuxtLink to="/community/events" style="font-size:12px;color:#5C6E78;text-decoration:none;display:block;margin-bottom:16px;">← All events</NuxtLink>
 
           <!-- Past banner -->
           <div v-if="isPast" style="background:#f9fafb;border:0.5px solid #e5e7eb;border-radius:8px;padding:10px 14px;margin-bottom:20px;font-size:12px;color:#6b7280;">
@@ -83,21 +83,21 @@ function fmtShort(d: string) {
           <!-- Key details strip -->
           <div class="rgrid rgrid-split" style="display:grid;gap:12px;margin-bottom:28px;padding:16px;background:#f9fafb;border-radius:12px;--cols:repeat(auto-fit,minmax(140px,1fr));">
             <div>
-              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Date</p>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#5C6E78;margin-bottom:3px;">Date</p>
               <p style="font-size:13px;font-weight:500;">{{ fmtDate(event.start, event.end) }}</p>
             </div>
             <div v-if="event.location?.city || event.location?.mode">
-              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Location</p>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#5C6E78;margin-bottom:3px;">Location</p>
               <p style="font-size:13px;font-weight:500;">
                 {{ event.location.city ?? (event.location.mode === 'virtual' ? 'Virtual' : event.location.mode) }}
               </p>
             </div>
             <div v-if="event.registration">
-              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Cost</p>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#5C6E78;margin-bottom:3px;">Cost</p>
               <p style="font-size:13px;font-weight:500;text-transform:capitalize;">{{ event.registration.cost ?? 'See details' }}</p>
             </div>
             <div v-if="event.timezone">
-              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Timezone</p>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#5C6E78;margin-bottom:3px;">Timezone</p>
               <p style="font-size:13px;font-weight:500;">{{ event.timezone.replace('America/', '').replace('_', ' ') }}</p>
             </div>
           </div>
@@ -123,7 +123,7 @@ function fmtShort(d: string) {
             <p style="font-size:12px;font-weight:500;margin-bottom:8px;">Tags</p>
             <div style="display:flex;gap:6px;flex-wrap:wrap;">
               <span v-for="t in event.tags" :key="t"
-                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#5C6E78;">
                 {{ t }}
               </span>
             </div>
@@ -161,22 +161,22 @@ function fmtShort(d: string) {
 
           <!-- Quick facts -->
           <div style="background:#f9fafb;border-radius:12px;padding:16px;margin-bottom:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:12px;">Quick facts</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:12px;">Quick facts</p>
             <div style="display:flex;flex-direction:column;gap:10px;">
               <div>
-                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Type</p>
+                <p style="font-size:11px;color:#5C6E78;margin-bottom:1px;">Type</p>
                 <p style="font-size:12px;font-weight:500;text-transform:capitalize;">{{ event.type }}</p>
               </div>
               <div>
-                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Date</p>
+                <p style="font-size:11px;color:#5C6E78;margin-bottom:1px;">Date</p>
                 <p style="font-size:12px;font-weight:500;">{{ fmtDate(event.start, event.end) }}</p>
               </div>
               <div v-if="event.location">
-                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Format</p>
+                <p style="font-size:11px;color:#5C6E78;margin-bottom:1px;">Format</p>
                 <p style="font-size:12px;font-weight:500;text-transform:capitalize;">{{ event.location.mode }}</p>
               </div>
               <div v-if="event.location?.city">
-                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">City</p>
+                <p style="font-size:11px;color:#5C6E78;margin-bottom:1px;">City</p>
                 <p style="font-size:12px;font-weight:500;">{{ event.location.city }}</p>
               </div>
             </div>
@@ -184,7 +184,7 @@ function fmtShort(d: string) {
 
           <!-- Mentioned in newsletters -->
           <div v-if="event.newsletter_source?.length" style="margin-bottom:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">In the newsletter</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">In the newsletter</p>
             <div style="display:flex;flex-direction:column;gap:6px;">
               <NuxtLink v-for="slug in event.newsletter_source" :key="slug"
                 :to="`/community/newsletter/${slug}`"
@@ -197,7 +197,7 @@ function fmtShort(d: string) {
 
           <!-- Audience -->
           <div v-if="event.audience?.length" style="margin-bottom:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Audience</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Audience</p>
             <div style="display:flex;flex-direction:column;gap:4px;">
               <span v-for="a in event.audience" :key="a" style="font-size:12px;color:#6b7280;text-transform:capitalize;">{{ a }}</span>
             </div>
@@ -205,17 +205,17 @@ function fmtShort(d: string) {
 
           <!-- Nearby events -->
           <div v-if="prevEvent || nextEvent" style="margin-bottom:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Other events</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Other events</p>
             <div style="display:flex;flex-direction:column;gap:8px;">
               <NuxtLink v-if="prevEvent" :to="`/community/events/${prevEvent.slug}`"
                 style="text-decoration:none;">
                 <p style="font-size:12px;color:#6b7280;line-height:1.35;">← {{ prevEvent.title }}</p>
-                <p style="font-size:11px;color:#9ca3af;">{{ fmtShort(prevEvent.start) }}</p>
+                <p style="font-size:11px;color:#5C6E78;">{{ fmtShort(prevEvent.start) }}</p>
               </NuxtLink>
               <NuxtLink v-if="nextEvent" :to="`/community/events/${nextEvent.slug}`"
                 style="text-decoration:none;">
                 <p style="font-size:12px;color:#6b7280;line-height:1.35;">{{ nextEvent.title }} →</p>
-                <p style="font-size:11px;color:#9ca3af;">{{ fmtShort(nextEvent.start) }}</p>
+                <p style="font-size:11px;color:#5C6E78;">{{ fmtShort(nextEvent.start) }}</p>
               </NuxtLink>
             </div>
           </div>

@@ -88,7 +88,7 @@ const tools = [
             </li>
           </ul>
           <div class="flex gap-[8px] flex-wrap mb-6">
-            <span v-for="tag in t.tags" :key="tag" class="font-mono text-[11px]" style="color:#1F6FB2;background:rgba(31,111,178,.09);padding:5px 10px;border-radius:5px;">{{ tag }}</span>
+            <span v-for="tag in t.tags" :key="tag" class="font-mono text-[11px]" style="color:#1A5F9A;background:rgba(31,111,178,.09);padding:5px 10px;border-radius:5px;">{{ tag }}</span>
           </div>
           <div v-if="t.deprecation" class="rounded-[10px] mb-6" style="background:#FFF7ED;border:1px solid #FDBA74;padding:14px 16px;">
             <p class="font-mono font-bold tracking-[.06em] uppercase" style="font-size:10px;color:#C2410C;margin-bottom:6px;">Service transition planned</p>

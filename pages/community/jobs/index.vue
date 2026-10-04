@@ -47,7 +47,7 @@ const typeColors: Record<string, {bg: string; text: string}> = {
 }
 
 function typeStyle(type: string) {
-  const c = typeColors[type] ?? { bg: '#F3F4F6', text: '#6B7280' }
+  const c = typeColors[type] ?? { bg: '#F3F4F6', text: '#5C6E78' }
   return `font-size:11px;padding:2px 9px;border-radius:99px;font-weight:500;white-space:nowrap;background:${c.bg};color:${c.text};`
 }
 
@@ -73,8 +73,8 @@ function daysUntil(d: string) {
       <!-- Header -->
       <div class="rgrid rgrid-split" style="display:grid;gap:24px;align-items:end;padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;--cols:minmax(0,1fr) auto;">
         <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-            <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Job board
+          <p style="font-size:11px;color:#5C6E78;margin-bottom:8px;">
+            <NuxtLink to="/community" style="text-decoration:none;color:#5C6E78;">Get involved</NuxtLink> / Job board
           </p>
           <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Job board</h1>
           <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
@@ -90,7 +90,7 @@ function daysUntil(d: string) {
 
       <!-- Filters -->
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:24px;">
-        <span style="font-size:12px;color:#9ca3af;margin-right:4px;">Type</span>
+        <span style="font-size:12px;color:#5C6E78;margin-right:4px;">Type</span>
         <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
         </FilterChip>
@@ -113,7 +113,7 @@ function daysUntil(d: string) {
                   </span>
                 </div>
                 <p style="font-size:13px;color:#374151;font-weight:500;margin-bottom:4px;">{{ job.organization }}</p>
-                <div style="display:flex;gap:12px;font-size:12px;color:#9ca3af;margin-bottom:8px;flex-wrap:wrap;">
+                <div style="display:flex;gap:12px;font-size:12px;color:#5C6E78;margin-bottom:8px;flex-wrap:wrap;">
                   <span v-if="job.location">📍 {{ job.location }}</span>
                   <span>Posted {{ fmtDate(job.posted) }}</span>
                   <span v-if="job.deadline">Deadline {{ fmtDate(job.deadline) }}</span>
@@ -121,7 +121,7 @@ function daysUntil(d: string) {
                 <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
                 <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
                   <span v-for="t in job.tags" :key="t"
-                    style="font-size:11px;padding:2px 7px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+                    style="font-size:11px;padding:2px 7px;border-radius:99px;background:#f3f4f6;color:#5C6E78;">
                     {{ t.replace(/-/g,' ') }}
                   </span>
                 </div>
@@ -130,13 +130,13 @@ function daysUntil(d: string) {
             </div>
           </a>
         </div>
-        <p v-else style="font-size:14px;color:#9ca3af;padding:24px 0;">No current listings match this filter.</p>
+        <p v-else style="font-size:14px;color:#5C6E78;padding:24px 0;">No current listings match this filter.</p>
       </div>
 
       <!-- Show/hide expired toggle -->
       <div v-if="expiredCount > 0" style="margin-bottom:48px;">
         <button @click="showPast=!showPast"
-          style="font-size:12px;color:#9ca3af;background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;">
+          style="font-size:12px;color:#5C6E78;background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;">
           {{ showPast ? 'Hide' : 'Show' }} {{ expiredCount }} expired listing{{ expiredCount === 1 ? '' : 's' }}
         </button>
       </div>
