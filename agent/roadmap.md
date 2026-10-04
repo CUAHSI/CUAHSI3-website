@@ -6,11 +6,11 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | # | Task | Status | Risk |
 |---|---|---|---|
 | 1 | Reconcile repo against the verify-first list | merged | none (read-only) |
-| 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | PR open | low |
-| 3 | Extract repeated markup into components | in progress | medium |
-| 3b | Visual baseline: screenshots of every route before task 4 | not started | low |
+| 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | merged | low |
+| 3 | Extract repeated markup into components | merged | medium |
+| 3b | Visual baseline: screenshots of every route before task 4 | PR open | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
-| 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | PR open | none (read-only) |
+| 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
 | 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | not started | medium |
 
@@ -125,3 +125,5 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261003 | pages (heroes) | the 17 gradient-band page heroes differ in small ways: the band's own style is identical in all, but the container has 9 distinct style values, the heading 13 and the lead paragraph 14 (four heading sizes). On phones: 6 pages use site-container (side padding 20px) and 11 use a fixed 40px; 5 use hero-section (tighter top and bottom padding under 640px) and 12 do not. So the same band is padded differently on phones depending on the page. Not changed; whether to normalise it is a design decision (see the heroes plan, task 3) and a visible change, so not part of a behaviour-preserving extraction. components/CommunityHero.vue is unused.
 
 261003 | pages (filter chips) | none of the filter chips on the 5 pages has aria-pressed (or any aria attribute or type), so a screen reader is not told which chip is selected. Not changed: adding it changes the markup, which is a second concern for a later PR. Since the chips now share components/FilterChip.vue, it is a one-place change.
+261003 | pages/index.vue (home) | the 'Latest recording' card prints the raw ISO date '2025-12-10T00:00:00.000Z' (line 246 prints latestSeminar.date directly; the other dates on this page use fmtDate). Found in the first screenshot of the visual-baseline trial, not by any earlier check. Not fixed: outside task 3b, and a visible change.
+261004 | components/CyberseminarCard.vue | each cyberseminar card prints the raw ISO date ('2025-12-10T00:00:00.000Z') instead of a formatted one (line 53 prints seminar.date). All 6 cards on the cyberseminars page show it in the visual baseline. The card was extracted from the page with identical output, so the defect predates the component. Same kind of defect as the home-page 'Latest recording' card (noted above). Not fixed: a visible change outside task 3b; fixing either changes the committed baseline images for those pages, by design.
