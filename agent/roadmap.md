@@ -9,10 +9,10 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | merged | low |
 | 3 | Extract repeated markup into components | merged | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | merged | low |
-| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PRs 1 and 2 of 4 merged, PR 3 ready to open, PR 4 built locally) | **highest** |
+| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | merged (4 PRs: #24, #27, #28, #29) | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
-| 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
-| 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit merged; fixes: all but contrast in PR) | medium |
+| 5 | Linting and CI, with `verify.sh` as a required check | in progress (PR 1 of 2: workflow, link check, validator in verify.sh; ESLint waits for dependency approval; "required" is a GitHub setting for Jordan) | low |
+| 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit, keyboard and semantic fixes, and contrast fixes merged; leftovers in the Noticed list) | medium |
 
 ## Acceptance criteria
 

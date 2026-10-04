@@ -15,6 +15,7 @@ fails=0; warns=0
 fail() { echo "FAIL  $1"; fails=$((fails+1)); }
 warn() { echo "WARN  $1"; warns=$((warns+1)); }
 ok()   { echo "ok    $1"; }
+need() { if [ -n "$CI" ]; then fail "$1"; else warn "$1"; fi; }   # a missing prerequisite: FAIL in CI, WARN locally
 
 if [ ${#CODE_DIRS[@]} -eq 0 ]; then echo "Run from the repo root (no pages/ or components/ here)."; exit 2; fi
 
@@ -93,14 +94,38 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
       [ -n "$del" ] && [ "$del" != "0" ] && fail "agent/eval-log.md lost $del line(s); it is append-only (rule 10)" || ok "eval log append-only"
     fi
   else
-    warn "no local '$BASE' branch; skipped the content/ and eval-log checks"
+    need "no '$BASE' ref; skipped the content/ and eval-log checks (rules 3 and 10)"
   fi
 fi
+
+# 11b. Content validator (roadmap task 5). content/ is frozen in Phase 1, so its known failures cannot be fixed;
+#      they stay visible as a WARN. A failing file that is not in scripts/validate-content.known-failures.txt, any
+#      cross-reference problem and any skipped check group is a FAIL. Edit the list only when the failing files
+#      are fixed (Phase 2) or Jordan decides the schema is wrong. In CI (CI is set) a missing prerequisite is a FAIL.
+if [ -f scripts/validate-content.mjs ] && [ -d node_modules/zod ] && [ -d node_modules/yaml ]; then
+  vout=$(node scripts/validate-content.mjs 2>&1); vcode=$?
+  vline=$(echo "$vout" | grep -E '^(FAILED|OK):' | tail -1)
+  if [ $vcode -eq 0 ]; then ok "content validator passes"
+  else
+    cur=$(echo "$vout" | sed '/^== Cross-references/q' | grep -E '^ {0,2}content/[^ ]+' | awk '{print $1}' | sort -u)
+    newf=$(comm -13 <(sort -u scripts/validate-content.known-failures.txt) <(echo "$cur"))
+    x=$(echo "$vline" | sed -n 's/.* \([0-9]*\) cross-reference problem.*/\1/p')
+    if [ -z "$vline" ] || [ -z "$x" ]; then fail "content validator failed and its summary line could not be read: $vline"
+    elif [ -n "$newf" ]; then fail "content validator: failing file(s) not in the known list:"; echo "$newf" | sed 's/^/      /'
+    elif [ "$x" -gt 0 ]; then fail "content validator: $x cross-reference problem(s). Run npm run validate:content."
+    elif echo "$vline" | grep -q SKIPPED; then fail "content validator: a cross-reference check group was skipped. Run npm run validate:content."
+    else warn "content validator: $(echo "$cur" | grep -c .) known failing file/entry(ies), none new (scripts/validate-content.known-failures.txt). Frozen content; run npm run validate:content for the list."; fi
+  fi
+else need "content validator skipped (scripts/validate-content.mjs, node_modules/zod or node_modules/yaml missing; run npm ci)"; fi
 
 # 12. Build
 if [ "$1" = "--build" ]; then
   echo "----  npm run build:search"
-  if npm run build:search; then ok "build passed"; else fail "build failed"; fi
+  if npm run build:search; then
+    ok "build passed"
+    # 13. Every internal link in the built site resolves to a file (roadmap task 5). Not a click.
+    lout=$(node scripts/check-links.mjs 2>&1) && ok "$(echo "$lout" | head -1)" || { fail "built-site link check:"; echo "$lout" | sed 's/^/      /'; }
+  else fail "build failed"; fi
 else
   echo "      (build not run; use --build before a PR)"
 fi
