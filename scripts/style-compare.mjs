@@ -7,7 +7,8 @@
 // every element in <body>: its tag, a short text key, about 70 computed properties and its box (x, y, width, height).
 // Pages are paired element by element in document order, so it only works for changes that keep the markup structure
 // (moving inline styles into classes does). Exit code 1 if any element differs.
-// Declared difference (accepted by Jordan, 4 Oct 2026): the font-family string may gain a ", sans-serif" fallback.
+// One declared difference: the style and colour of a border side with zero width are ignored (it draws nothing).
+// (A ", sans-serif" font-family fallback was considered and dropped: it changes how glyphs missing from the web font draw.)
 import http from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -34,7 +35,7 @@ const PROPS = [
   'pointer-events', 'outline-style', 'outline-width', 'outline-color', 'fill', 'stroke'
 ]
 
-const root = path.resolve('.output/public')
+const root = path.resolve(process.env.STYLE_ROOT || '.output/public')   // STYLE_ROOT: compare a build somewhere else
 const widths = [390, 1280]
 
 function routes(filter) {
@@ -147,6 +148,43 @@ async function snapshot(outFile, filter) {
     for (const c of Object.values(ctxs)) await c.close()
   }
   await Promise.all([worker(), worker(), worker(), worker()])
+  // Interaction states that are not on the page when it loads (a closed dialog has no elements to compare).
+  if (!filter) {
+    const STATES = [
+      { key: '/@search', w: 1280, path: '/', act: async page => { await page.getByRole('button', { name: /^Search/ }).click(); await page.waitForSelector('[role=dialog]') } },
+      { key: '/@menu', w: 390, path: '/', act: async page => { await page.getByRole('button', { name: 'Open menu' }).click(); await page.waitForSelector('#mobile-menu') } },
+      { key: '/learn-train/cyberseminars/@open', w: 1280, path: '/learn-train/cyberseminars/', act: async page => { await page.getByRole('button', { name: /^Play video:/ }).first().click(); await page.waitForSelector('text=Close video') } },
+      { key: '/hire-cuahsi/@lookup', w: 1280, path: '/hire-cuahsi/', act: async page => { await page.getByLabel('Find your institution').fill('university'); await page.waitForTimeout(300) } },
+      { key: '/community/jobs/@filtered', w: 1280, path: '/community/jobs/', act: async page => { await page.locator('main button[aria-pressed="false"]').first().click(); await page.waitForTimeout(300) } },
+    ]
+    for (const st of STATES) {
+      try {
+        const ctx = await browser.newContext({ viewport: { width: st.w, height: 900 }, deviceScaleFactor: 1, reducedMotion: 'reduce' })
+        await ctx.route(/zeffy\.com|img\.youtube\.com|youtube-nocookie\.com/, route => route.abort())
+        await ctx.route(/fonts\.(googleapis|gstatic)\.com/, async route => {
+          const url = route.request().url(); let hit = fontCache.get(url)
+          if (!hit) { const res = await route.fetch(); const { 'content-encoding': _e, 'content-length': _l, ...headers } = res.headers(); hit = { status: res.status(), headers, body: await res.body() }; if (hit.status === 200) fontCache.set(url, hit) }
+          await route.fulfill(hit)
+        })
+        const page = await ctx.newPage()
+        await page.clock.install({ time: new Date('2026-10-01T12:00:00Z') })
+        await page.goto(`http://localhost:${port}${st.path}`, { waitUntil: 'networkidle', timeout: 60000 })
+        await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}' })
+        await page.evaluate(async () => { await document.fonts.ready })
+        await st.act(page)
+        await page.waitForTimeout(400)
+        const recs = await page.evaluate(collect, PROPS)
+        pages[`${st.key}@${st.w}`] = recs.map(e => {
+          let idx = dict.get(e.v)
+          if (idx === undefined) { idx = vectors.length; dict.set(e.v, idx); vectors.push(e.v) }
+          return [e.t, e.x, idx, e.b]
+        })
+        await ctx.close()
+      } catch (e) {
+        pages[`${st.key}@${st.w}`] = { error: String(e.message).split('\n')[0] }
+      }
+    }
+  }
   await browser.close(); server.close()
   const errors = Object.entries(pages).filter(([, v]) => v.error)
   fs.writeFileSync(outFile, zlib.gzipSync(JSON.stringify({ props: PROPS, vectors, pages })))
@@ -156,7 +194,7 @@ async function snapshot(outFile, filter) {
   if (errors.length) process.exitCode = 1
 }
 
-const norm = (prop, v) => (prop === 'font-family' ? v.replace(/,\s*sans-serif\s*$/i, '').replace(/"/g, "'") : v)
+const norm = (prop, v) => v   // no declared value differences (the font-family fallback idea was dropped: it changes how fallback glyphs such as arrows draw)
 
 // Layout values are measured, and the same build measures a text width a hair differently from run to run
 // (0.02px). Numbers inside a value are therefore compared with a tolerance of 0.5px; everything else exactly.
@@ -191,7 +229,16 @@ function compare(fa, fb) {
       // The two snapshots have separate dictionaries, so compare the vectors themselves, never their indices.
       if (A.vectors[ia] !== B.vectors[ib]) {
         const va = A.vectors[ia].split('\u0001'), vb = B.vectors[ib].split('\u0001')
-        props.forEach((p, j) => { if (!same(norm(p, va[j]), norm(p, vb[j]))) diffs.push(`${p}: ${va[j]} -> ${vb[j]}`) })
+        props.forEach((p, j) => {
+          // A border side with zero width draws nothing, so its style and colour do not count (declared deviation:
+          // `border: none` and `border-width: 0` leave different, invisible leftovers).
+          const bm = p.match(/^border-(top|right|bottom|left)-(style|color)$/)
+          if (bm) {
+            const w = props.indexOf(`border-${bm[1]}-width`)
+            if (va[w] === '0px' && vb[w] === '0px') return
+          }
+          if (!same(norm(p, va[j]), norm(p, vb[j]))) diffs.push(`${p}: ${va[j]} -> ${vb[j]}`)
+        })
       }
       if (diffs.length) {
         pageDiff++; elsDiff++
