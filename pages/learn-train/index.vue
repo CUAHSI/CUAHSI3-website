@@ -41,12 +41,14 @@ const extras = [
             Browse the archive <span class="arr">→</span>
           </NuxtLink>
         </div>
-        <div class="relative rounded-[14px] overflow-hidden flex items-center justify-center" style="height:300px;background:linear-gradient(155deg,#10324c,#1F6FB2);">
+        <!-- The whole picture is a link to the archive, same as the button beside it (it used to be a dead picture with a play button) -->
+        <NuxtLink to="/learn-train/cyberseminars" aria-label="Browse the cyberseminar archive"
+          class="card-lift relative rounded-[14px] overflow-hidden flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white" style="height:300px;background:linear-gradient(155deg,#10324c,#1F6FB2);">
           <div class="rounded-full bg-white flex items-center justify-center" style="width:60px;height:60px;opacity:.9;">
-            <svg width="22" height="22" viewBox="0 0 20 20"><polygon points="7,4 17,10 7,16" fill="#0F2E44"/></svg>
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20"><polygon points="7,4 17,10 7,16" fill="#0F2E44"/></svg>
           </div>
           <span class="absolute font-mono font-bold tracking-[.1em]" style="left:18px;top:16px;font-size:10px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.22);padding:6px 10px;border-radius:5px;">CYBERSEMINAR ARCHIVE</span>
-        </div>
+        </NuxtLink>
       </div>
     </section>
 
