@@ -43,7 +43,7 @@ const PROPS = [
 const MEASURED = new Set(['width', 'height', 'grid-template-columns', 'grid-template-rows'])
 
 const root = path.resolve(process.env.STYLE_ROOT || '.output/public')   // STYLE_ROOT: compare a build somewhere else
-const widths = [390, 1280]
+const widths = (process.env.STYLE_WIDTHS || '390,1280').split(',').map(Number)   // STYLE_WIDTHS=700,1000 samples other widths (states keep their own)
 
 function routes(filter) {
   const acc = []

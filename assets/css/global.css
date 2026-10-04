@@ -41,24 +41,6 @@ a { color: inherit; text-decoration: none; }
 .news-prose em { font-style: italic; color: #6b7280; }
 .news-prose hr { border: none; border-top: 0.5px solid #f3f4f6; margin: 24px 0; }
 
-/* ===== Responsive grid utilities ===== */
-/* Use instead of inline grid-template-columns for anything that needs to collapse on mobile */
-.rg-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.rg-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.rg-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.rg-hero { display: grid; grid-template-columns: 1.04fr .96fr; gap: 60px; align-items: center; }
-.rg-featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 22px; }
-.rg-sidebar { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 48px; }
-.rg-intro { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: center; }
-
-@media (max-width: 900px) {
-  .rg-3, .rg-4 { grid-template-columns: 1fr 1fr; }
-  .rg-hero, .rg-featured, .rg-sidebar, .rg-intro { grid-template-columns: 1fr; }
-}
-@media (max-width: 640px) {
-  .rg-2, .rg-3, .rg-4 { grid-template-columns: 1fr; }
-}
-
 /* Container padding shrinks on small screens */
 .site-container { padding-left: 40px; padding-right: 40px; }
 @media (max-width: 640px) {
@@ -68,17 +50,4 @@ a { color: inherit; text-decoration: none; }
 /* Tighten hero vertical padding on mobile */
 @media (max-width: 640px) {
   .hero-section { padding-top: 44px !important; padding-bottom: 32px !important; }
-}
-
-/* ===== Universal responsive grid (replaces ad-hoc .rg-* classes) =====
-   Any inline grid-template-columns is moved into --cols and read here,
-   so a real CSS media query — not inline style — controls the breakpoint.
-   .rgrid-split: 2-track asymmetric layouts (hero, sidebars, intro bands) — stay stacked until 900px.
-   .rgrid-multi: 3+ track symmetric layouts (card grids, footer, stats) — 2-up at 640px, full at 900px. */
-.rgrid { display: grid; grid-template-columns: 1fr; gap: var(--rgap, 18px); }
-@media (min-width: 640px) {
-  .rgrid.rgrid-multi { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 900px) {
-  .rgrid.rgrid-multi, .rgrid.rgrid-split { grid-template-columns: var(--cols); }
 }

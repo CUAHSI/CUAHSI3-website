@@ -9,7 +9,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | merged | low |
 | 3 | Extract repeated markup into components | merged | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | merged | low |
-| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PR 1 of 4 merged, PR 2 of 4 ready to open) | **highest** |
+| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PRs 1 and 2 of 4 merged, PR 3 ready to open, PR 4 built locally) | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
 | 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit merged; fixes: all but contrast in PR) | medium |
@@ -134,3 +134,4 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | components/CommunityHero.vue | unused (no page renders it) and still has 7 inline styles; the Tailwind migration leaves it alone because the style comparison cannot see it. Delete it or migrate it in the last PR.
 261004 | pages/learn-train/archive/index.vue, pages/about/index.vue, pages/about/impact/index.vue | the hover colour classes on the past-workshop titles and on the About/Impact sub-navigation links never worked (an inline colour overrode them). Tailwind PR 2 removed the dead classes so nothing changed; if a hover colour is wanted it is a visible, one-line change in a separate PR. Same family as the footer links already noted.
 261004 | pages/index.vue | the upcoming-events title links on the home page had a hover:text-water that never worked (an inline colour overrode it). Tailwind PR 3 removed the dead class so nothing changed; a hover colour is a visible, separate, one-line change. Same family as the footer links, the past-workshop titles and the About sub-navigation.
+261004 | .claude/agents/reviewer.md | the reviewer checklist still contains a line about '.rgrid use missing rgrid-multi or rgrid-split'. The .rgrid classes were deleted in Tailwind PR 4, so the check is dead, and nothing in the checklist looks for the new grid pattern (grid-cols-[1fr] plus sm:/min-[900px]: variants). Left alone because it is the reviewer's own instruction file; Jordan to decide.
