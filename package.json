@@ -9,6 +9,7 @@
     "build:search": "nuxt generate && pagefind --site .output/public",
     "preview:search": "npm run build:search && npx serve .output/public",
     "validate:content": "node scripts/validate-content.mjs",
+    "lint": "eslint .",
     "visual:compare": "playwright test",
     "visual:baseline": "playwright test --update-snapshots=all"
   },
@@ -16,8 +17,11 @@
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@playwright/test": "1.63.0",
     "@tailwindcss/typography": "^0.5.13",
+    "eslint": "10.12.0",
+    "eslint-plugin-vue": "10.11.1",
     "nuxt": "^3.12.0",
     "pagefind": "^1.1.0",
+    "vue-eslint-parser": "10.4.1",
     "yaml": "2.9.0",
     "zod": "4.6.5"
   },
