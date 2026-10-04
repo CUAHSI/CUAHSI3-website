@@ -11,26 +11,22 @@
 // exact values in unchanged and the rendered HTML stays the same; making them consistent would change what
 // visitors see and is a separate change.
 //
-// Tailwind migration (roadmap task 4): pages pass Tailwind classes (containerClass, titleClass, leadClass). The
-// *Style props are the old way, kept only until the last page has moved to classes, then removed.
+// Pages pass Tailwind classes (containerClass, titleClass, leadClass); there are no style props.
 defineProps<{
   sectionClass?: string     // e.g. "hero-section"
   containerClass?: string   // e.g. "mx-auto", "mx-auto site-container max-w-site pt-[64px]"
   titleClass?: string
   leadClass?: string
-  containerStyle?: string   // old way, to be removed
-  titleStyle?: string       // old way, to be removed
-  leadStyle?: string        // old way, to be removed
 }>()
 </script>
 
 <template>
   <section class="bg-[linear-gradient(180deg,#FBFAF7,#F3EEE4)] border-b border-b-[rgba(15,33,43,.08)]" :class="sectionClass">
-    <div :class="containerClass" :style="containerStyle">
+    <div :class="containerClass">
       <slot name="before" />
       <span v-if="$slots.kicker" class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]"><slot name="kicker" /></span>
-      <h1 v-if="$slots.title" :class="titleClass" :style="titleStyle"><slot name="title" /></h1>
-      <p v-if="$slots.lead" :class="leadClass" :style="leadStyle"><slot name="lead" /></p>
+      <h1 v-if="$slots.title" :class="titleClass"><slot name="title" /></h1>
+      <p v-if="$slots.lead" :class="leadClass"><slot name="lead" /></p>
       <slot />
     </div>
     <slot name="below" />

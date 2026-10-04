@@ -154,7 +154,10 @@ Every one of these cost real debugging time. All but the third failed silently; 
     dead under an inline value, such as `hover:text-white` under an inline `color`, suddenly works. Also: Tailwind's
     `antialiased` adds a second property, `grid-cols-N` uses `minmax(0,1fr)` where plain CSS `1fr` is
     `minmax(auto,1fr)`, and the build adds `-webkit-backdrop-filter`; use the exact arbitrary form when the
-    inline style was exact. No `verify.sh` check: none of this can be found by a pattern; the style comparison finds it. Check with
+    inline style was exact. Two more from the migration: `items-start` writes `align-items:flex-start` where
+    the inline style said `start`, and an old `font:` shorthand needs `leading-[normal]` but must not be
+    combined with an explicit `leading-*` on the same element (the earlier class wins, and the line height
+    silently changes). No `verify.sh` check: none of this can be found by a pattern; the style comparison finds it. Check with
     `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
     `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
     fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
@@ -162,20 +165,21 @@ Every one of these cost real debugging time. All but the third failed silently; 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
 Inline styles cannot be overridden by media queries. This caused a total mobile failure
-across 44 grids in 20 files. Until the Tailwind migration (roadmap task 4) lands, use:
+across 44 grids in 20 files. The old `.rgrid` / `.rg-*` helper classes and the `--cols`
+variable were retired in the Tailwind migration (roadmap task 4). Write responsive grids
+as mobile-first utilities, with the same breakpoints the old helpers had:
 
 ```html
-<div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
-<div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:minmax(0,1fr) 240px;">
+<!-- card grid: 1 column, 2 from 640px, 3 from 900px -->
+<div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
+<!-- two-track layout (hero, sidebar): stacked until 900px -->
+<div class="grid grid-cols-[1fr] gap-[48px] min-[900px]:grid-cols-[minmax(0,1fr)_240px]">
 ```
 
-- `.rgrid-multi`: symmetric card grids. 1 column, 2 at 640px, `--cols` at 900px.
-- `.rgrid-split`: asymmetric two-track layouts (hero, sidebar). Stacked until 900px.
-- `.site-container`: responsive horizontal padding, 40px down to 20px.
-
-These live in `assets/css/global.css`. The 900px rule must use the same compound
-selector (`.rgrid.rgrid-multi`) as the 640px rule. Both media queries are true at
-900px and wider, and CSS resolves by specificity, not by which query is narrower.
+- Use the exact track list (`1fr`, `minmax(0,1fr)`) the design needs: `grid-cols-2` writes
+  `minmax(0,1fr)`, which differs from `1fr` when an item is wider than its track.
+- `.site-container` (in `assets/css/global.css`): responsive horizontal padding, 40px down to 20px.
+- `verify.sh` still fails on `grid-template-columns` inside a `style` attribute.
 
 ## Deliberate oddities. Do not fix.
 
