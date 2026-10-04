@@ -9,7 +9,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | merged | low |
 | 3 | Extract repeated markup into components | merged | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | merged | low |
-| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PR 1 of 4 open) | **highest** |
+| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PR 1 of 4 merged, PR 2 of 4 ready to open) | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
 | 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit merged; fixes: all but contrast in PR) | medium |
@@ -132,3 +132,4 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | dev server | npm run dev fails with 'spawn EBADF' from esbuild on Jordan's machine and on mine; see the eval log (261004, task/a11y-contrast). Preview a build instead: npm run build:search and npx serve .output/public -l 4000.
 261004 | components/AppFooter.vue | the footer links (BLUESKY, YOUTUBE, LINKEDIN and the Explore, Tools and Connect lists) carried a hover:text-white class that never worked, because an inline colour overrode it. When the Tailwind migration moved the colour into a class I removed the dead hover classes so behaviour stays identical. If white-on-hover is wanted, it is a one-line, visible change. Also: PageHero now renders empty style="" attributes on the container, heading and lead of the migrated pages (harmless); they go when its old *-style props are removed in the last migration PR.
 261004 | components/CommunityHero.vue | unused (no page renders it) and still has 7 inline styles; the Tailwind migration leaves it alone because the style comparison cannot see it. Delete it or migrate it in the last PR.
+261004 | pages/learn-train/archive/index.vue, pages/about/index.vue, pages/about/impact/index.vue | the hover colour classes on the past-workshop titles and on the About/Impact sub-navigation links never worked (an inline colour overrode them). Tailwind PR 2 removed the dead classes so nothing changed; if a hover colour is wanted it is a visible, one-line change in a separate PR. Same family as the footer links already noted.

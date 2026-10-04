@@ -21,19 +21,19 @@ function toggle(slug: string) { expanded.value = expanded.value === slug ? null 
 </script>
 <template>
   <div>
-    <PageHero container-class="mx-auto" container-style="max-width:1240px;padding:64px 40px 48px;"
-      title-style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;"
-      lead-style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">
+    <PageHero container-class="mx-auto max-w-site p-[64px_40px_48px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[14px_0_14px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[560px]">
       <template #kicker>Learn &amp; Train · Cyberseminars</template>
       <template #title>350+ free recordings on water science.</template>
       <template #lead>Virtual presentations, panels, and demos from leading water scientists — all free, all archived, many with full transcripts.</template>
     </PageHero>
 
     <!-- Filters -->
-    <div class="mx-auto" style="max-width:1240px;padding:28px 40px 0;">
+    <div class="mx-auto max-w-site p-[28px_40px_0]">
       <div class="flex gap-6 flex-wrap">
         <div>
-          <p class="font-mono font-bold tracking-[.08em] uppercase text-muted mb-2" style="font-size:10px;">Series</p>
+          <p class="font-mono font-bold tracking-[.08em] uppercase text-muted mb-2 text-[10px]">Series</p>
           <div class="flex gap-[6px] flex-wrap">
             <FilterChip variant="navy" :active="selectedSeries==='all'" @click="selectedSeries='all'">All</FilterChip>
             <FilterChip v-for="s in series" :key="s" variant="navy" :active="selectedSeries===s" @click="selectedSeries=s">{{ s }}</FilterChip>
@@ -43,7 +43,7 @@ function toggle(slug: string) { expanded.value = expanded.value === slug ? null 
     </div>
 
     <!-- Grid -->
-    <div class="mx-auto rgrid rgrid-multi" style="max-width:1240px;padding:24px 40px 80px;display:grid;gap:18px;--cols:repeat(3,1fr);">
+    <div class="mx-auto max-w-site p-[24px_40px_80px] grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
       <CyberseminarCard v-for="s in filtered" :key="s.slug" :seminar="s" :expanded="expanded === s.slug" @toggle="toggle(s.slug)" />
     </div>
   </div>
