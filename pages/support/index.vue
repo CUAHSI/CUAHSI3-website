@@ -67,7 +67,7 @@ useHead({
           <iframe
             title="Donation form powered by Zeffy"
             src="https://www.zeffy.com/en-US/embed/donation-form/1d9a8cef-4275-4db4-8461-5de35d048ebb"
-            class="w-full h-[1200px] block"
+            class="w-full h-[900px] block"
             allowpaymentrequest="true"
             allowtransparency="true">
           </iframe>
