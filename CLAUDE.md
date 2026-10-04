@@ -149,9 +149,12 @@ Every one of these cost real debugging time. All but the third failed silently; 
 9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
    balance check in `verify.sh` exists because of it. See "Bulk edit."
 
-10. **Inline styles beat classes, and a class beats nothing.** When an inline style becomes a Tailwind class,
-    an element that had both a class and an inline value for the same property changes (the inline one used to
-    win), and a dead class such as `hover:text-white` under an inline `color` suddenly works. Check with
+10. **Inline styles beat classes.** When an inline style becomes a Tailwind class, an element that had both a
+    class and an inline value for the same property changes (the inline one used to win), and a class that was
+    dead under an inline value, such as `hover:text-white` under an inline `color`, suddenly works. Also: Tailwind's
+    `antialiased` adds a second property, `grid-cols-N` uses `minmax(0,1fr)` where plain CSS `1fr` is
+    `minmax(auto,1fr)`, and the build adds `-webkit-backdrop-filter`; use the exact arbitrary form when the
+    inline style was exact. No `verify.sh` check: none of this can be found by a pattern; the style comparison finds it. Check with
     `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
     `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
     fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
