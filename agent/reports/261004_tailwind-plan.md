@@ -64,3 +64,16 @@ Each of PRs 1 to 9 carries a visual review list (5 to 8 routes at 390px and 1280
 4. Dynamic `:style` bindings stay as they are unless trivial: OK?
 
 Nothing starts until you answer. PR 0 (the comparison tool) is the first step and changes no page.
+
+## Jordan's answers (4 October 2026) and the revised PR list
+
+The decisions above were answered as follows.
+
+1. Plan, order and gate: **approved.**
+2. **Fewer PRs preferred.** The eleven become **four**, still smallest and lowest risk first:
+   - **PR 1:** the computed-style comparison tool (`scripts/style-compare.mjs`), plus `components/`, `app.vue`, `support`, `contact`, `member-portal`, `data-platforms`, `hire-cuahsi` (about 200 inline styles).
+   - **PR 2:** `learn-train/*` and `about/*` (226).
+   - **PR 3:** home, `community/index` and `community/campus-visits` (244).
+   - **PR 4:** the rest of `community/*` (events, jobs, news, newsletter; 232), plus the deletion of `.rgrid`, `.rg-*` and `--cols` after a search shows zero uses, and the list of remaining dynamic styles.
+3. The `font-family` fallback difference: **accepted.**
+4. Dynamic `:style` bindings stay unless trivial: **yes.**
