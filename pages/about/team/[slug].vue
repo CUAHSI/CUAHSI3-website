@@ -29,7 +29,7 @@ const relatedSeminars = computed(() =>
     s.speakers?.some((sp: string) => sp.includes(firstName.value) && sp.includes(lastName.value))
   )
 )
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
 </script>
 <template>
   <div>

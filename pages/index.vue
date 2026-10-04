@@ -25,9 +25,9 @@ const { data: latestSeminar } = await useAsyncData('home-seminar', () =>
   queryContent('cyberseminars').where({ published: true }).sort({ date: -1 }).findOne().catch(() => null)
 )
 
-function fmtEventDay(d: string) { return new Date(d).toLocaleDateString('en-US', { day: '2-digit' }) }
-function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short' }).toUpperCase() }
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
+function fmtEventDay(d: string) { return new Date(d).toLocaleDateString('en-US', { day: '2-digit', timeZone: 'UTC' }) }
+function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase() }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
 
 const pathways = [
   { tag: 'I want to work with data', title: 'Data & Computing', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
