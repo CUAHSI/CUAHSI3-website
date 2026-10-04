@@ -19,7 +19,7 @@
           <div class="flex gap-4">
             <a href="https://bsky.app/profile/cuahsi.bsky.social" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">BLUESKY</a>
             <a href="https://www.youtube.com/CUAHSI" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">YOUTUBE</a>
-            <a href="https://www.linkedin.com/company/cuahsi" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">LINKEDIN</a>
+            <a href="https://www.linkedin.com/company/consortium-of-universities-for-the-advancement-of-hydrologic-science-inc-cuahsi-" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">LINKEDIN</a>
           </div>
         </div>
 
