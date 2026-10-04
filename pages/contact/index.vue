@@ -68,7 +68,7 @@ const routes = [
 
     <!-- Routing cards -->
     <div class="mx-auto site-container max-w-site pt-[56px] pb-[80px]">
-      <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2">
+      <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr]">
         <div v-for="r in routes" :key="r.id" :id="r.id"
           class="bg-white flex flex-col"
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${r.accent};border-radius:14px;padding:26px 24px;`">

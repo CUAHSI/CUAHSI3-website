@@ -25,7 +25,7 @@ useHead({
     <div class="mx-auto site-container max-w-site pt-[56px]">
 
       <!-- Testimonial -->
-      <div class="grid grid-cols-1 gap-[48px] items-center mb-[56px] min-[900px]:grid-cols-[1fr_1fr]">
+      <div class="grid grid-cols-[1fr] gap-[48px] items-center mb-[56px] min-[900px]:grid-cols-[1fr_1fr]">
         <div>
           <div class="rounded-[16px] bg-navy p-[36px_32px]">
             <p class="font-['Schibsted_Grotesk'] font-normal text-[18px] leading-[1.6] text-white italic m-[0_0_18px]">

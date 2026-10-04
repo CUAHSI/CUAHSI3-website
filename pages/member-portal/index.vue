@@ -71,7 +71,7 @@ const resources = [
       <!-- Resources -->
       <div class="mb-12">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4 text-[11px]">Member resources</p>
-        <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2 min-[901px]:grid-cols-4">
+        <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr] min-[901px]:grid-cols-[repeat(4,1fr)]">
           <div v-for="r in resources" :key="r.title" class="rounded-card border border-[rgba(15,33,43,.1)] p-[18px]">
             <p class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy m-[0_0_6px]">{{ r.title }}</p>
             <p class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.5] text-muted m-[0_0_10px]">{{ r.desc }}</p>
@@ -92,7 +92,7 @@ const resources = [
         <div class="flex flex-col gap-6">
           <div v-for="group in grouped" :key="group.institution">
             <p class="font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-navy mb-[8px]">{{ group.institution }}</p>
-            <div class="grid grid-cols-1 min-[641px]:grid-cols-2 gap-px bg-[rgba(15,33,43,.08)] rounded-[8px] overflow-hidden">
+            <div class="grid grid-cols-[1fr] min-[641px]:grid-cols-[1fr_1fr] gap-px bg-[rgba(15,33,43,.08)] rounded-[8px] overflow-hidden">
               <div v-for="rep in group.reps" :key="rep.email" class="bg-paper p-[12px_14px]">
                 <p class="font-['Hanken_Grotesk'] font-medium text-[13px] leading-[normal] text-ink m-[0_0_2px]">{{ rep.first_name }} {{ rep.last_name }}</p>
                 <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water">{{ rep.email }}</a>

@@ -116,7 +116,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
 
     <!-- Intro + institution lookup -->
     <div class="mx-auto site-container max-w-site pt-[56px] pb-[24px]">
-      <div class="grid grid-cols-1 gap-[32px] items-center min-[901px]:grid-cols-[1.3fr_.7fr] bg-sand rounded-[16px] p-[28px] mb-[24px]">
+      <div class="grid grid-cols-[1fr] gap-[32px] items-center min-[901px]:grid-cols-[1.3fr_.7fr] bg-sand rounded-[16px] p-[28px] mb-[24px]">
         <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] m-0">
           Engagements are scoped individually and typically support grant-funded research, but we're open to work with agencies and partner organizations too.
         </p>
@@ -164,7 +164,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
       </div>
 
       <!-- Service category cards -->
-      <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2" role="group" aria-label="Service type">
+      <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr]" role="group" aria-label="Service type">
         <div v-for="s in serviceDefs" :key="s.label"
           class="card-lift relative bg-white flex flex-col"
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${s.accent};border-radius:14px;padding:26px 24px;`">
@@ -197,7 +197,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
         <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.65] text-[#3a4d57] m-[0_0_14px] max-w-[720px]">
           Two narrower situations call for something different:
         </p>
-        <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2">
+        <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr]">
           <div>
             <p class="font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-navy m-[0_0_4px]">Letters of Collaboration</p>
             <p class="font-['Hanken_Grotesk'] font-normal text-[13px] leading-[1.55] text-muted m-0">If your proposal asks CUAHSI to commit to something we already have dedicated funding to support, we can provide a letter of collaboration at no cost — there's no fee-for-service need here, since the work is already funded on our end.</p>
@@ -221,7 +221,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           Tell us what you need — {{ selectedService }} and other work welcome.
         </h2>
         <form @submit.prevent>
-          <div class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2 mb-[16px]">
+          <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr] mb-[16px]">
             <input type="text" aria-label="Name" placeholder="Name" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />
             <input type="text" aria-label="Organization or institution" :value="matchedInstitution?.name" placeholder="Organization / institution" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />
             <input type="email" aria-label="Email" placeholder="Email" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />

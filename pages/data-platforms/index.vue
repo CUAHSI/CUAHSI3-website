@@ -74,7 +74,7 @@ const tools = [
 
     <!-- Tool rows -->
     <div class="mx-auto max-w-site p-[0_40px]">
-      <div v-for="(t, i) in tools" :key="t.name" class="grid grid-cols-1 min-[900px]:grid-cols-[1fr_1fr] gap-[64px] items-center py-[72px]"
+      <div v-for="(t, i) in tools" :key="t.name" class="grid grid-cols-[1fr] min-[900px]:grid-cols-[1fr_1fr] gap-[64px] items-center py-[72px]"
         :class="i < tools.length - 1 ? 'border-b border-b-[rgba(15,33,43,.08)]' : ''">
         <!-- Left: content -->
         <div :class="i % 2 === 1 ? 'order-2' : ''">
@@ -104,7 +104,7 @@ const tools = [
             <span class="absolute font-mono tracking-[.06em] left-[14px] bottom-[14px] text-[10px] text-[#43657c] bg-[rgba(255,255,255,.9)] p-[6px_10px] rounded-[5px]">SCREENSHOT — {{ t.name.toUpperCase() }}</span>
           </div>
           <!-- Related impact -->
-          <div v-if="relatedImpact(t.impactTag).length" class="grid grid-cols-1 gap-[18px] min-[641px]:grid-cols-2 mt-[16px]">
+          <div v-if="relatedImpact(t.impactTag).length" class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr] mt-[16px]">
             <NuxtLink v-for="h in relatedImpact(t.impactTag)" :key="h.slug" :to="`/about/impact/${h.slug}`"
               class="arrow-row border border-[rgba(15,33,43,.1)] rounded-[10px] p-[14px_16px] no-underline block">
               <p class="font-mono text-[10px] text-muted mb-1">{{ fmtDate(h.date) }}</p>

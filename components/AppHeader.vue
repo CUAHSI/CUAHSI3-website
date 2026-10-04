@@ -16,7 +16,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-[rgba(251,250,247,.92)] backdrop-blur-[12px] border-b border-b-[rgba(15,33,43,.10)]">
+  <header class="sticky top-0 z-50 bg-[rgba(251,250,247,.92)] [backdrop-filter:blur(12px)] border-b border-b-[rgba(15,33,43,.10)]">
     <!-- Utility bar (hidden on mobile) -->
     <div class="bg-navy hidden md:block text-[#aecbe0]">
       <div class="mx-auto flex items-center justify-between site-container max-w-site h-[36px]">

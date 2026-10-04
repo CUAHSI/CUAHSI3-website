@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-navy-deep text-[#bcd4e6]">
     <div class="mx-auto site-container max-w-site pt-[60px]">
-      <div class="footer-grid grid grid-cols-1 gap-[40px] pb-[48px] sm:grid-cols-2 min-[900px]:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div class="footer-grid grid grid-cols-[1fr] gap-[40px] pb-[48px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[1.4fr_1fr_1fr_1fr]">
 
         <!-- Brand -->
         <div>

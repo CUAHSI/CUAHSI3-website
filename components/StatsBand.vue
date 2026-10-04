@@ -9,7 +9,7 @@ const stats = [
 
 <template>
   <section class="bg-navy text-white">
-    <div class="mx-auto stats-grid site-container max-w-site pt-[36px] pb-[36px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 min-[900px]:grid-cols-[repeat(4,1fr)]">
+    <div class="mx-auto stats-grid site-container max-w-site pt-[36px] pb-[36px] grid grid-cols-[1fr] gap-[20px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(4,1fr)]">
       <div v-for="(s, i) in stats" :key="s.l"
         class="stats-item"
         :style="`padding:6px 28px;border-left:1px solid rgba(255,255,255,${i === 0 ? '0' : '.14'});`">
