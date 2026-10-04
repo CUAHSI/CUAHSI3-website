@@ -166,9 +166,10 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
       <!-- Service category cards -->
       <div class="rg-2">
         <div v-for="s in serviceDefs" :key="s.label"
-          class="card-lift bg-white flex flex-col cursor-pointer"
+          class="card-lift bg-white flex flex-col cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-water"
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${s.accent};border-radius:14px;padding:26px 24px;`"
-          @click="selectService(s.label)">
+          role="button" tabindex="0" :aria-pressed="selectedService === s.label ? 'true' : 'false'"
+          @click="selectService(s.label)" @keydown.enter.prevent="selectService(s.label)" @keydown.space.prevent="selectService(s.label)">
           <span class="font-mono font-bold tracking-[.06em] uppercase" :style="`font-size:11px;color:${s.accent};`">{{ s.tag }}</span>
           <h3 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 4px;">{{ s.title }}</h3>
           <p v-if="s.qualifier" style="font:500 12px 'Hanken Grotesk';color:#9ca3af;margin:0 0 10px;">{{ s.qualifier }}</p>

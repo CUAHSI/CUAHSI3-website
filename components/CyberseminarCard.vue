@@ -8,7 +8,7 @@
 // A card with no video id never opens (its click still asks the page to toggle, so it closes any other
 // open card, as before). While open the card drops the hover lift, so the player does not move under the mouse.
 const props = defineProps<{ seminar: any; expanded: boolean }>()
-defineEmits<{ (e: 'toggle'): void }>()
+const emit = defineEmits<{ (e: 'toggle'): void }>()
 
 const isOpen = computed(() => props.expanded && !!props.seminar.youtube_id)
 
@@ -17,11 +17,24 @@ function ytThumb(id: string) { return `https://img.youtube.com/vi/${id}/mqdefaul
 // When a card opens it can move to a row of its own, so bring it to the top of the screen
 // (below the sticky header, see scroll-mt on the root). Client only; never runs during the build.
 const root = ref<HTMLElement | null>(null)
+
+// Keyboard: the thumbnail is a button (Enter or Space opens it). Opening replaces the thumbnail with the player,
+// so focus moves to the Close button; closing with that button puts focus back on the thumbnail. Focus is only
+// put back when this card was closed with its own Close button (not when another card opened).
+const thumbEl = ref<HTMLElement | null>(null)
+const closeEl = ref<HTMLButtonElement | null>(null)
+let restoreFocus = false
+function closeVideo() { restoreFocus = true; emit('toggle') }
+
 watch(isOpen, (open) => {
-  if (!open) return
+  if (!open) {
+    if (restoreFocus) { restoreFocus = false; nextTick(() => thumbEl.value?.focus()) }
+    return
+  }
   nextTick(() => {
     const calm = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
     root.value?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' })
+    closeEl.value?.focus({ preventScroll: true })
   })
 })
 </script>
@@ -29,7 +42,9 @@ watch(isOpen, (open) => {
 <template>
   <div ref="root" :class="isOpen ? 'bg-white rounded-card overflow-hidden flex flex-col col-span-full scroll-mt-28' : 'card-lift bg-white rounded-card overflow-hidden flex flex-col'" style="border:1px solid rgba(15,33,43,.1);">
     <!-- Thumbnail or placeholder (replaced by the large player while open) -->
-    <div v-if="!isOpen" class="relative cursor-pointer" style="height:160px;" @click="$emit('toggle')">
+    <div v-if="!isOpen" ref="thumbEl" class="relative cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-water" style="height:160px;" @click="$emit('toggle')"
+      :role="seminar.youtube_id ? 'button' : undefined" :tabindex="seminar.youtube_id ? 0 : undefined" :aria-label="seminar.youtube_id ? `Play video: ${seminar.title}` : undefined"
+      @keydown.enter.prevent="$emit('toggle')" @keydown.space.prevent="$emit('toggle')">
       <img v-if="seminar.youtube_id" :src="ytThumb(seminar.youtube_id)" :alt="seminar.title" style="width:100%;height:100%;object-fit:cover;" />
       <div v-else class="w-full h-full flex items-center justify-center" style="background:linear-gradient(150deg,#10324c,#1F6FB2);">
         <span class="font-mono font-bold tracking-[.1em]" style="font-size:11px;color:rgba(255,255,255,.7);">NO VIDEO YET</span>
@@ -55,7 +70,7 @@ watch(isOpen, (open) => {
       </div>
       <h3 style="font:700 15px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 8px;flex:1;">{{ seminar.title }}</h3>
       <p v-if="seminar.speakers?.length" class="font-mono text-[10px] text-muted">{{ seminar.speakers.join(' · ') }}</p>
-      <button v-if="isOpen" type="button" class="inline-flex min-h-[44px] items-center self-start font-mono text-[11px] font-bold uppercase tracking-[.08em] text-water hover:underline" @click="$emit('toggle')">Close video ✕</button>
+      <button v-if="isOpen" ref="closeEl" type="button" class="inline-flex min-h-[44px] items-center self-start font-mono text-[11px] font-bold uppercase tracking-[.08em] text-water hover:underline" @click="closeVideo">Close video ✕</button>
     </div>
   </div>
 </template>

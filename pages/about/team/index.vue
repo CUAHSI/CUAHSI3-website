@@ -33,10 +33,11 @@ function initials(name: string) { return name.split(' ').map((n:string)=>n[0]).j
           </div>
           <div class="rgrid rgrid-multi" style="display:grid;gap:16px;--cols:repeat(4,1fr);">
             <div v-for="person in byDept[dept]" :key="person.slug"
-              class="card-lift bg-white rounded-card overflow-hidden"
-              style="border:1px solid rgba(15,33,43,.1);"
-              :style="person.has_profile ? 'cursor:pointer;' : ''"
-              @click="person.has_profile ? $router.push(`/about/team/${person.slug}`) : null">
+              class="card-lift relative bg-white rounded-card overflow-hidden"
+              style="border:1px solid rgba(15,33,43,.1);">
+              <!-- The whole card is the link: an empty link stretched over it, so keyboard and screen-reader users can open the profile -->
+              <NuxtLink v-if="person.has_profile" :to="`/about/team/${person.slug}`" :aria-label="`${person.name}, view profile`"
+                class="absolute inset-0 z-10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-water"></NuxtLink>
               <!-- Photo -->
               <div class="relative" style="height:200px;background:#F3EEE4;overflow:hidden;">
                 <img v-if="person.photo" :src="person.photo" :alt="`${person.name}`"
