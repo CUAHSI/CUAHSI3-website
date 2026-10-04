@@ -64,15 +64,16 @@ watch(() => route.path, () => { mobileOpen.value = false })
       </div>
 
       <!-- Mobile hamburger -->
-      <button class="md:hidden flex-none flex items-center justify-center" @click="mobileOpen = !mobileOpen"
+      <button type="button" class="md:hidden flex-none flex items-center justify-center" @click="mobileOpen = !mobileOpen"
+        :aria-label="mobileOpen ? 'Close menu' : 'Open menu'" :aria-expanded="mobileOpen ? 'true' : 'false'" aria-controls="mobile-menu"
         style="width:38px;height:38px;border-radius:8px;border:1px solid rgba(15,33,43,.15);background:white;">
-        <svg v-if="!mobileOpen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        <svg v-if="!mobileOpen" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg v-else aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
 
     <!-- Mobile menu panel -->
-    <div v-if="mobileOpen" class="md:hidden" style="border-top:1px solid rgba(15,33,43,.08);background:#FBFAF7;">
+    <div v-if="mobileOpen" id="mobile-menu" class="md:hidden" style="border-top:1px solid rgba(15,33,43,.08);background:#FBFAF7;">
       <nav class="flex flex-col site-container" style="padding-top:12px;padding-bottom:16px;">
         <NuxtLink v-for="item in navItems" :key="item.to" :to="item.to"
           :style="`display:block;font:600 15px 'Hanken Grotesk';padding:12px 6px;border-radius:8px;color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};background:${isActive(item.to) ? 'rgba(31,111,178,.10)' : 'transparent'};text-decoration:none;`">

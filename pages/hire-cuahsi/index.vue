@@ -133,8 +133,8 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           <div v-else>
             <input v-model="institutionQuery" @focus="showLookupResults = true" @input="showLookupResults = true"
               @blur="setTimeout(() => showLookupResults = false, 150)"
-              type="text" placeholder="Find your institution…"
-              style="width:100%;border:1px solid rgba(15,33,43,.15);border-radius:6px;padding:8px 10px;font:400 13px 'Hanken Grotesk';outline:none;" />
+              type="text" aria-label="Find your institution" placeholder="Find your institution…"
+              style="width:100%;border:1px solid rgba(15,33,43,.15);border-radius:6px;padding:8px 10px;font:400 13px 'Hanken Grotesk';" />
             <div v-if="showLookupResults && lookupMatches.length" class="bg-white" style="position:absolute;left:16px;right:16px;top:100%;margin-top:4px;border:1px solid rgba(15,33,43,.15);border-radius:8px;box-shadow:0 8px 20px rgba(15,33,43,.12);z-index:10;overflow:hidden;">
               <button v-for="m in lookupMatches" :key="m.name" @click="selectInstitution(m)"
                 class="block w-full text-left" style="padding:9px 12px;font:400 13px 'Hanken Grotesk';color:#15212B;background:white;border:none;border-bottom:1px solid rgba(15,33,43,.06);cursor:pointer;">
@@ -220,16 +220,16 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
         </h2>
         <form @submit.prevent>
           <div class="rg-2" style="margin-bottom:16px;">
-            <input type="text" placeholder="Name" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
-            <input type="text" :value="matchedInstitution?.name" placeholder="Organization / institution" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
-            <input type="email" placeholder="Email" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
-            <select style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;color:#5C6E78;">
+            <input type="text" aria-label="Name" placeholder="Name" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';" />
+            <input type="text" aria-label="Organization or institution" :value="matchedInstitution?.name" placeholder="Organization / institution" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';" />
+            <input type="email" aria-label="Email" placeholder="Email" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';" />
+            <select aria-label="Budget range" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';color:#5C6E78;">
               <option value="" disabled selected>Budget range</option>
               <option v-for="b in budgetOptions" :key="b" :value="b">{{ b }}</option>
             </select>
           </div>
-          <textarea rows="3" placeholder="Briefly describe what you need"
-            style="width:100%;border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;margin-bottom:20px;resize:vertical;"></textarea>
+          <textarea rows="3" aria-label="Briefly describe what you need" placeholder="Briefly describe what you need"
+            style="width:100%;border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';margin-bottom:20px;resize:vertical;"></textarea>
           <button type="submit" style="background:#C0603C;color:white;font:600 15px 'Hanken Grotesk';border:none;border-radius:8px;padding:14px 26px;cursor:pointer;">
             Send request
           </button>

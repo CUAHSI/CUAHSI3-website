@@ -84,8 +84,8 @@ const resources = [
       <div style="padding-bottom:80px;">
         <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
           <p class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Member representative directory</p>
-          <input v-model="query" type="text" placeholder="Search name, institution, or email…"
-            style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';outline:none;width:280px;" />
+          <input v-model="query" type="text" aria-label="Search member representatives" placeholder="Search name, institution, or email…"
+            style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';width:280px;" />
         </div>
         <p class="font-mono text-[11px] text-muted mb-5">{{ filtered.length }} representative{{ filtered.length === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
 

@@ -179,8 +179,8 @@ function categoryLabel(key: string) {
     <div class="mx-auto site-container" style="max-width:1240px;padding-bottom:80px;">
       <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Member institutions · as of July 2026</p>
-        <input v-model="query" type="text" placeholder="Search institutions…"
-          style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';outline:none;width:240px;" />
+        <input v-model="query" type="text" aria-label="Search member institutions" placeholder="Search institutions…"
+          style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';width:240px;" />
       </div>
 
       <div class="flex gap-[6px] flex-wrap mb-5">
