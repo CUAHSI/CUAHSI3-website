@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Membership · CUAHSI' })
+useHead({ title: 'Membership' })
 
 // Canonical member institution list — current as of July 2026, sourced from cuahsi.org/about/about-membership.
 // The Hire CUAHSI institution lookup (pages/hire-cuahsi/index.vue) should read from this same list;

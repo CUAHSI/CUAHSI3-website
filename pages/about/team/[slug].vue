@@ -9,7 +9,7 @@ const person = computed(() => {
   return all.find(p => p.slug === slug) ?? null
 })
 const notFound = computed(() => !person.value)
-useHead({ title: computed(() => person.value ? `${person.value.name} · CUAHSI` : 'Not found') })
+useHead({ title: computed(() => person.value ? person.value.name : 'Not found') })
 const { data: extendedProfile } = await useAsyncData(`team-md-${slug}`, () =>
   queryContent('team').where({ slug, _extension: 'md' }).findOne().catch(() => null)
 )

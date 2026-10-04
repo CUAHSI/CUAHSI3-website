@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Newsletter archive · CUAHSI',
+  title: 'Newsletter archive',
   meta: [{ name: 'description', content: 'Monthly CUAHSI e-newsletters covering water science research, program updates, community spotlights, and events.' }]
 })
 

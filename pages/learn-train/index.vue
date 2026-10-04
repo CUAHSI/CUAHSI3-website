@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Learn & Train · CUAHSI' })
+useHead({ title: 'Learn & Train' })
 
 const { data: programs } = await useAsyncData('lt-programs', () =>
   queryContent('programs').where({ published: true }).sort({ title: 1 }).find()

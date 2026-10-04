@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Hire CUAHSI · CUAHSI',
+  title: 'Hire CUAHSI',
   meta: [{ name: 'description', content: 'Computing environment setup, data wrangling, workshop logistics, and custom software integrations from CUAHSI staff — for grantees, agencies, and partners.' }]
 })
 
@@ -171,7 +171,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           role="button" tabindex="0" :aria-pressed="selectedService === s.label ? 'true' : 'false'"
           @click="selectService(s.label)" @keydown.enter.prevent="selectService(s.label)" @keydown.space.prevent="selectService(s.label)">
           <span class="font-mono font-bold tracking-[.06em] uppercase" :style="`font-size:11px;color:${s.accent};`">{{ s.tag }}</span>
-          <h3 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 4px;">{{ s.title }}</h3>
+          <h2 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 4px;">{{ s.title }}</h2>
           <p v-if="s.qualifier" style="font:500 12px 'Hanken Grotesk';color:#9ca3af;margin:0 0 10px;">{{ s.qualifier }}</p>
           <p style="font:400 14.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:0 0 16px;">{{ s.desc }}</p>
           <ul class="flex flex-col gap-2 mb-5" style="list-style:none;padding:0;margin:0;">

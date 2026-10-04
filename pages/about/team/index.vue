@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Our Team · CUAHSI' })
+useHead({ title: 'Our Team' })
 const { data: teamData } = await useAsyncData('team', () =>
   queryContent('team').where({ _extension: 'json' }).findOne().catch(() => null)
 )

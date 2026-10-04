@@ -8,7 +8,7 @@ const { data: issue } = await useAsyncData(`newsletter-${route.params.slug}`, ()
 if (!issue.value) throw createError({ statusCode: 404, message: 'Issue not found' })
 
 useHead({
-  title: `${issue.value.title} · CUAHSI`,
+  title: issue.value.title,
   meta: [{ name: 'description', content: issue.value.summary }]
 })
 

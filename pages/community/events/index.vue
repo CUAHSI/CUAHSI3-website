@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Events · CUAHSI',
+  title: 'Events',
   meta: [{ name: 'description', content: 'Upcoming and past events from CUAHSI — workshops, conferences, webinars, deadlines, and training programs across the water science community.' }]
 })
 

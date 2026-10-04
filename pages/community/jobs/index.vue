@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Job board · CUAHSI',
+  title: 'Job board',
   meta: [{ name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' }]
 })
 

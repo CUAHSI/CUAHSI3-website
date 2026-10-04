@@ -5,7 +5,7 @@ const { data: program } = await useAsyncData(`program-${slug}`, () =>
   queryContent('programs').where({ slug, published: true }).findOne().catch(() => null)
 )
 const notFound = computed(() => !program.value)
-useHead({ title: computed(() => program.value ? `${program.value.title} · CUAHSI` : 'Not found') })
+useHead({ title: computed(() => program.value ? program.value.title : 'Not found') })
 </script>
 <template>
   <div>

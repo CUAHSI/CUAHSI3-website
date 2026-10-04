@@ -68,7 +68,7 @@ watch(isOpen, (open) => {
         <span class="font-mono text-[10px] text-muted">{{ seminar.date }}</span>
         <span v-if="seminar.series" class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:2px 7px;">{{ seminar.series }}</span>
       </div>
-      <h3 style="font:700 15px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 8px;flex:1;">{{ seminar.title }}</h3>
+      <h2 style="font:700 15px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 8px;flex:1;">{{ seminar.title }}</h2>
       <p v-if="seminar.speakers?.length" class="font-mono text-[10px] text-muted">{{ seminar.speakers.join(' · ') }}</p>
       <button v-if="isOpen" ref="closeEl" type="button" class="inline-flex min-h-[44px] items-center self-start font-mono text-[11px] font-bold uppercase tracking-[.08em] text-water hover:underline" @click="closeVideo">Close video ✕</button>
     </div>

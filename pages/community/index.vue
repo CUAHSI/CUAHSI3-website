@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Get involved · CUAHSI',
+  title: 'Get involved',
   meta: [{ name: 'description', content: 'Connect with the CUAHSI water science community. Find jobs, attend events, share your work, bring CUAHSI to your campus, contribute to advisory committees, or become a member institution.' }]
 })
 

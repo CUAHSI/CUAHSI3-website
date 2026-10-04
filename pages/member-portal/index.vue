@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Member Portal · CUAHSI',
+  title: 'Member Portal',
   meta: [{ name: 'description', content: 'Member representative directory and resources for CUAHSI member institutions.' }]
 })
 

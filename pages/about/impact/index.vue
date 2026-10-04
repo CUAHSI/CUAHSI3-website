@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Impact · About · CUAHSI',
+  title: 'Impact · About',
   meta: [{ name: 'description', content: 'What the CUAHSI community is building, measuring, and discovering.' }]
 })
 
@@ -100,7 +100,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
         </div>
         <div class="flex flex-col flex-1" style="padding:20px;">
           <div class="font-mono text-[11px] tracking-[.05em] text-muted mb-2">{{ fmtDate(h.date) }}</div>
-          <h3 style="font:700 18px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;flex:1;letter-spacing:-.008em;">{{ h.title }}</h3>
+          <h2 style="font:700 18px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;flex:1;letter-spacing:-.008em;">{{ h.title }}</h2>
           <p style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0 0 16px;" class="line-clamp-3">{{ h.excerpt }}</p>
           <span class="arrow-row inline-flex items-center gap-2" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;">Read highlight <span class="arr">→</span></span>
         </div>

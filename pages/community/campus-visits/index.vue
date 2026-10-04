@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Bring CUAHSI to your campus · CUAHSI',
+  title: 'Bring CUAHSI to your campus',
   meta: [{ name: 'description', content: 'CUAHSI staff are available for free seminars, hands-on workshops, and consultations at universities, colleges, and research institutions — in person or virtual.' }]
 })
 
