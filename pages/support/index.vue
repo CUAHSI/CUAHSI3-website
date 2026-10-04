@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Support CUAHSI · CUAHSI',
+  title: 'Support CUAHSI',
   meta: [{ name: 'description', content: 'Your donation helps CUAHSI sustain free data infrastructure, training, and fellowships for the water science community beyond what federal grants can fund.' }]
 })
 </script>

@@ -12,7 +12,7 @@ const notFound = computed(() =>
 )
 
 useHead({
-  title: computed(() => notFound.value ? 'Not found · CUAHSI' : `${item.value?.title} · News · CUAHSI`),
+  title: computed(() => notFound.value ? 'Not found' : `${item.value?.title} · News`),
   meta: [{ name: 'description', content: computed(() => item.value?.excerpt ?? '') }]
 })
 function fmtDate(d: string) {

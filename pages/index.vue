@@ -262,9 +262,9 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           <p style="font:400 15px/1.55 'Hanken Grotesk';color:#7fa4bf;max-width:440px;">Programs, funding opportunities, community spotlights, and research updates — no spam, unsubscribe anytime.</p>
         </div>
         <div class="flex gap-3">
-          <input type="email" placeholder="your@university.edu"
+          <input type="email" aria-label="Email address" placeholder="your@university.edu"
             class="flex-1 rounded-btn text-ink bg-white"
-            style="font:400 14px 'Hanken Grotesk';padding:14px 16px;border:none;outline:none;min-width:0;" />
+            style="font:400 14px 'Hanken Grotesk';padding:14px 16px;border:none;min-width:0;" />
           <button class="flex-none rounded-btn font-semibold text-white" style="font:600 15px 'Hanken Grotesk';background:#C0603C;padding:14px 24px;border:none;cursor:pointer;white-space:nowrap;">Subscribe</button>
         </div>
       </div>

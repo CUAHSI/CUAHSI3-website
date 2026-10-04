@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'News · CUAHSI',
+  title: 'News',
   meta: [{ name: 'description', content: 'Announcements, platform updates, and time-sensitive news from CUAHSI.' }]
 })
 

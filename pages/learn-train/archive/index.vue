@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Training & Workshop Archive · CUAHSI',
+  title: 'Training & Workshop Archive',
   meta: [{ name: 'description', content: 'A comprehensive record of CUAHSI workshops and training sessions — past and upcoming.' }]
 })
 
@@ -82,7 +82,7 @@ function fmtDate(d: string) {
               style="padding:12px 0;border-bottom:1px solid rgba(15,33,43,.08);text-decoration:none;">
               <span class="font-mono text-[11px] text-muted flex-none" style="min-width:90px;">{{ fmtDate(e.start) }}</span>
               <span style="font:600 14.5px 'Hanken Grotesk';color:#0F2E44;flex:1;line-height:1.3;" class="hover:text-water transition-colors">{{ e.title }}</span>
-              <span v-if="e.location?.city" class="font-mono text-[11px] text-muted flex-none">{{ e.location.city }}</span>
+              <span v-if="e.location?.city" class="font-mono text-[11px] text-muted shrink min-w-0">{{ e.location.city }}</span>
               <span class="arr text-muted flex-none" style="font-size:13px;">→</span>
             </NuxtLink>
           </div>

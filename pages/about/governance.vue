@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Governance · CUAHSI' })
+useHead({ title: 'Governance' })
 </script>
 <template>
   <div>

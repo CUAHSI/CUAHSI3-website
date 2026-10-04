@@ -22,6 +22,8 @@ const query = ref('')
 const results = ref<any[]>([])
 const isOpen = ref(false)
 const searchEl = ref<HTMLInputElement | null>(null)
+const triggerEl = ref<HTMLButtonElement | null>(null)
+const panelEl = ref<HTMLElement | null>(null)
 
 let pagefind: any = null
 let loadAttempted = false
@@ -84,19 +86,46 @@ async function search() {
   }
 }
 
+// Whatever had focus when the dialog opened (the Search button, or any element if it was opened with Ctrl/Cmd+K).
+let returnTo: HTMLElement | null = null
+
 function open() {
+  returnTo = document.activeElement instanceof HTMLElement ? document.activeElement : null
   isOpen.value = true
   nextTick(() => searchEl.value?.focus())
 }
 
-function close() {
+function reset() {
   isOpen.value = false
   query.value = ''
   results.value = []
 }
 
+// Closing without going anywhere (Esc, the Esc button, a click outside): give focus back to where it was, if that
+// element is still on the page and visible, otherwise to the Search button (which is hidden on phones).
+function close() {
+  reset()
+  const target = returnTo && document.contains(returnTo) && returnTo.offsetParent !== null ? returnTo : triggerEl.value
+  returnTo = null
+  nextTick(() => target?.focus())
+}
+
+// Keep Tab and Shift+Tab inside the dialog while it is open.
+function trapTab(e: KeyboardEvent) {
+  const panel = panelEl.value
+  if (!panel) return
+  const items = [...panel.querySelectorAll<HTMLElement>('a[href],button,input,[tabindex]:not([tabindex="-1"])')].filter(el => el.offsetParent !== null)
+  if (!items.length) return
+  const first = items[0]
+  const last = items[items.length - 1]
+  const active = document.activeElement
+  if (e.shiftKey && (active === first || !panel.contains(active))) { e.preventDefault(); last.focus() }
+  else if (!e.shiftKey && (active === last || !panel.contains(active))) { e.preventDefault(); first.focus() }
+}
+
 function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape' && isOpen.value) close()
+  if (e.key === 'Tab' && isOpen.value) trapTab(e)
   if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); open() }
 }
 
@@ -105,7 +134,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
 const router = useRouter()
 function navigate(url: string) {
-  close()
+  reset()
   router.push(url)
 }
 
@@ -123,7 +152,7 @@ const quickLinks = [
 <template>
   <div>
     <!-- Trigger -->
-    <button @click="open"
+    <button ref="triggerEl" type="button" aria-haspopup="dialog" @click="open"
       style="display:flex;align-items:center;gap:6px;padding:4px 10px;border:0.5px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;color:#9ca3af;font-size:12px;">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
@@ -136,7 +165,7 @@ const quickLinks = [
       <div v-if="isOpen"
         @click.self="close"
         style="position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding-top:80px;background:rgba(0,0,0,.3);">
-        <div style="width:100%;max-width:560px;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);overflow:hidden;margin:0 16px;">
+        <div ref="panelEl" role="dialog" aria-modal="true" aria-label="Search the site" style="width:100%;max-width:560px;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);overflow:hidden;margin:0 16px;">
 
           <!-- Input -->
           <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:0.5px solid #f3f4f6;">
@@ -147,9 +176,10 @@ const quickLinks = [
               ref="searchEl"
               v-model="query"
               @input="search"
+              aria-label="Search the site"
               placeholder="Search highlights, news, team, events…"
-              style="flex:1;border:none;outline:none;font-size:15px;color:#111827;background:transparent;" />
-            <button @click="close"
+              style="flex:1;border:none;font-size:15px;color:#111827;background:transparent;" />
+            <button type="button" aria-label="Close search" @click="close"
               style="font-size:11px;color:#9ca3af;border:0.5px solid #e5e7eb;border-radius:4px;padding:2px 6px;background:white;cursor:pointer;">
               Esc
             </button>
@@ -176,7 +206,7 @@ const quickLinks = [
 
           <!-- Idle: quick links -->
           <div v-else style="padding:16px;display:flex;flex-wrap:wrap;gap:6px;">
-            <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to" @click="close"
+            <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to" @click="reset"
               style="font-size:12px;padding:4px 10px;border-radius:99px;background:#f3f4f6;color:#6b7280;text-decoration:none;">
               {{ link.label }}
             </NuxtLink>

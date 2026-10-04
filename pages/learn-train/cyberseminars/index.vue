@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Cyberseminars · CUAHSI' })
+useHead({ title: 'Cyberseminars' })
 const { data: seminars } = await useAsyncData('cyberseminars', () =>
   queryContent('cyberseminars').where({ published: true }).sort({ date: -1 }).find()
 )

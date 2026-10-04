@@ -8,7 +8,7 @@ const { data: event } = await useAsyncData(`event-${route.params.slug}`, () =>
 if (!event.value) throw createError({ statusCode: 404, message: 'Event not found' })
 
 useHead({
-  title: `${event.value.title} · CUAHSI Events`,
+  title: `${event.value.title} · Events`,
   meta: [{ name: 'description', content: event.value.description }]
 })
 

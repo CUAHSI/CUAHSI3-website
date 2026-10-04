@@ -28,5 +28,5 @@ const style = computed(() => {
 </script>
 
 <template>
-  <button :style="style"><slot /></button>
+  <button type="button" :aria-pressed="active ? 'true' : 'false'" :style="style"><slot /></button>
 </template>

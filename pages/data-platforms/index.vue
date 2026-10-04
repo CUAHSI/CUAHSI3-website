@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Data & Computing · CUAHSI',
+  title: 'Data & Computing',
   meta: [{ name: 'description', content: 'HydroShare, JupyterHub, and the water data tools built for the hydrologic science community.' }]
 })
 

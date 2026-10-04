@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Contact · CUAHSI',
+  title: 'Contact',
   meta: [{ name: 'description', content: 'Get in touch with CUAHSI — technical help, membership questions, paid work inquiries, or press.' }]
 })
 
