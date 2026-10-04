@@ -89,17 +89,20 @@ const resources = [
         </div>
         <p class="font-mono text-[11px] text-muted mb-5">{{ filtered.length }} representative{{ filtered.length === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
 
-        <div class="flex flex-col gap-6">
-          <div v-for="group in grouped" :key="group.institution">
-            <p class="font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-navy mb-[8px]">{{ group.institution }}</p>
-            <div class="grid grid-cols-[1fr] min-[641px]:grid-cols-[1fr_1fr] gap-px bg-[rgba(15,33,43,.08)] rounded-[8px] overflow-hidden">
-              <div v-for="rep in group.reps" :key="rep.email" class="bg-paper p-[12px_14px]">
-                <p class="font-['Hanken_Grotesk'] font-medium text-[13px] leading-[normal] text-ink m-[0_0_2px]">{{ rep.first_name }} {{ rep.last_name }}</p>
-                <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water">{{ rep.email }}</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- One compact row per institution: the name on the left, its representatives flowing across on the right
+             (on a phone the name sits above them). Was a heading plus a card per representative. -->
+        <ul v-if="grouped.length" class="list-none p-0 m-0 border border-[rgba(15,33,43,.1)] rounded-[8px] overflow-hidden">
+          <li v-for="group in grouped" :key="group.institution"
+            class="p-[8px_14px] border-b border-b-[rgba(15,33,43,.08)] last:border-b-0 odd:bg-[rgba(15,33,43,.025)] min-[641px]:grid min-[641px]:grid-cols-[240px_minmax(0,1fr)] min-[641px]:gap-x-[16px] min-[641px]:items-baseline">
+            <p class="font-['Hanken_Grotesk'] font-semibold text-[13px] leading-[1.35] text-navy m-0">{{ group.institution }}</p>
+            <ul class="list-none p-0 m-[2px_0_0] min-[641px]:m-0 flex flex-wrap gap-x-[22px] gap-y-[2px]">
+              <li v-for="rep in group.reps" :key="rep.email" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-ink">
+                {{ rep.first_name }} {{ rep.last_name }}
+                <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water break-all">{{ rep.email }}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
 
         <p v-if="!filtered.length" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-muted p-[24px_0]">No representatives match "{{ query }}".</p>
       </div>
