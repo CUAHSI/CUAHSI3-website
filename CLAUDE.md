@@ -21,7 +21,8 @@ pages/ components/ composables/ assets/ public/   the site code. This is what yo
 content/           the content. Do not modify in Phase 1 (rule 3).
 visual/            the visual baseline: 52 committed screenshots and README.md. tests/visual/ and
                    playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
-scripts/verify.sh  the verification suite. Run before every commit.
+scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
+                   (.github/workflows/verify.yml; not the screenshot comparison, which needs a Mac).
 scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
                    content-schemas.mjs + validate-content.mjs (Zod schemas and the
                    content validator; Content v2 cannot enforce schemas itself)
@@ -45,8 +46,9 @@ npm run dev                        # localhost:3000, hot reload. Search does not
 npm run build:search               # nuxt generate && pagefind --site .output/public
 npx serve .output/public -l 4000   # preview the built site. Search only works here.
 ./scripts/verify.sh                # static checks, seconds
-./scripts/verify.sh --build        # static checks, then the full build
-npm run validate:content           # read-only check of content/ against the schemas; not in verify.sh yet
+./scripts/verify.sh --build        # static checks, then the full build and the built-site link check
+npm run validate:content           # read-only check of content/ against the schemas; verify.sh runs it too
+node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 npm run visual:compare             # after a build: 52 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
