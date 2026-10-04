@@ -75,6 +75,11 @@ if [ -d pages ]; then
   [ -n "$out" ] && { warn "throw createError in a page; breaks client-side navigation in dev:"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages"
 fi
 
+# 8b. public/robots.txt (footgun 11): the @nuxtjs/robots module moves it to public/_robots.txt on every build (and then serves
+#     both /robots.txt and /_robots.txt). The source lives at assets/robots.txt.
+[ -e public/robots.txt ] && fail "public/robots.txt exists; a build would move it. Keep the source at assets/robots.txt (CLAUDE.md, footgun 11)." || ok "no public/robots.txt"
+[ -e public/_robots.txt ] && warn "public/_robots.txt exists (left by a build from before the move); delete it"
+
 # 9-11. Git state
 if git rev-parse --git-dir >/dev/null 2>&1; then
   branch=$(git branch --show-current)

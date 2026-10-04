@@ -113,7 +113,7 @@ version mismatch. Ignore it.
 
 ## Known footguns
 
-Every one of these cost real debugging time. All but the third failed silently; the third is unverified (see below).
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), and the eleventh printed a warning but left the tree dirty.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -164,6 +164,11 @@ Every one of these cost real debugging time. All but the third failed silently; 
     `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
     `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
     fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
+11. **A build modified a tracked file: `public/robots.txt`.** The `@nuxtjs/robots` module finds a robots.txt in
+    several places and, when it is `public/robots.txt`, renames it to `public/_robots.txt` on every build or dev run
+    (the tree is left dirty with a deleted tracked file and an untracked one). Observed in the 4 October build: the
+    built site then also contained the copy as `/_robots.txt`; after the move it does not. The source now lives at `assets/robots.txt`, which the module reads without moving it;
+    the built `/robots.txt` was byte-identical before and after the move (checked with diff on one build). `verify.sh` fails if `public/robots.txt` exists.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
