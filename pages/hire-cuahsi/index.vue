@@ -125,7 +125,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
 
           <!-- Confirmed state -->
           <div v-if="matchedInstitution" class="flex items-center justify-between gap-2">
-            <p style="font:400 12.5px 'Hanken Grotesk';color:#1f9d55;margin:0;">✓ {{ matchedInstitution.name }} — member since {{ matchedInstitution.since }}</p>
+            <p style="font:400 12.5px 'Hanken Grotesk';color:#0F7A57;margin:0;">✓ {{ matchedInstitution.name }} — member since {{ matchedInstitution.since }}</p>
             <button @click="clearInstitution" style="font:500 11.5px 'Hanken Grotesk';color:#5C6E78;background:none;border:none;cursor:pointer;text-decoration:underline;">Change</button>
           </div>
 

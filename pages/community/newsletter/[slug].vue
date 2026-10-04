@@ -115,7 +115,7 @@ function fmtDate(d: string) {
               <div>
                 <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }}</p>
                 <p style="font-size:11px;color:#5C6E78;">{{ person.role }}</p>
-                <p v-if="person.institution" style="font-size:11px;color:#d1d5db;">{{ person.institution }}</p>
+                <p v-if="person.institution" style="font-size:11px;color:#5C6E78;">{{ person.institution }}</p>
               </div>
             </div>
             </template>
