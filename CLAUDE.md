@@ -179,7 +179,8 @@ as mobile-first utilities, with the same breakpoints the old helpers had:
 - Use the exact track list (`1fr`, `minmax(0,1fr)`) the design needs: `grid-cols-2` writes
   `minmax(0,1fr)`, which differs from `1fr` when an item is wider than its track.
 - `.site-container` (in `assets/css/global.css`): responsive horizontal padding, 40px down to 20px.
-- `verify.sh` still fails on `grid-template-columns` inside a `style` attribute.
+- `verify.sh` still fails on `grid-template-columns` inside a `style="..."` attribute on one line; it does not
+  see a value built across several lines, so do not rely on it for those.
 
 ## Deliberate oddities. Do not fix.
 

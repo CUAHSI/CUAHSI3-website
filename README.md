@@ -235,22 +235,20 @@ Note the trailing slash — that's what disambiguates `/news/` from `/newsletter
 
 ## Responsive layout system
 
-Grids are **not** set with inline `style="display:grid;grid-template-columns:..."` — that pattern can't be overridden by a media query (inline styles beat CSS specificity), which caused a real mobile-breakage bug earlier in this project. Instead, use the `.rgrid` classes defined in `assets/css/global.css`:
+Grids are **not** set with inline `style="display:grid;grid-template-columns:..."` — that pattern can't be overridden by a media query (inline styles beat CSS specificity), which caused a real mobile-breakage bug earlier in this project. Write them as mobile-first Tailwind utilities instead (the old `.rgrid` / `.rg-*` classes and the `--cols` variable were removed in the Tailwind migration):
 
 ```html
-<div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
-  <!-- 3-up card grid: 1 col on phones, 2 col on tablets, 3 col on desktop -->
+<!-- 3-up card grid: 1 col on phones, 2 col on tablets (640px), 3 col on desktop (900px) -->
+<div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
 </div>
 
-<div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:1fr 1fr;">
-  <!-- asymmetric 2-col split (hero, sidebar): stacked until 900px, then splits -->
+<!-- asymmetric 2-col split (hero, sidebar): stacked until 900px, then splits -->
+<div class="grid grid-cols-[1fr] gap-[48px] min-[900px]:grid-cols-[minmax(0,1fr)_240px]">
 </div>
 ```
 
-- `.rgrid-multi` — for symmetric N-up grids (card grids, footer columns, stats bands). Collapses to 2-up at 640px, full column count at 900px.
-- `.rgrid-split` — for asymmetric 2-track layouts (heroes, sidebars, intro bands). Stays fully stacked below 900px, then splits into the `--cols` template.
-- The actual column definition goes in `--cols` inside the `style` attribute — never write `grid-template-columns` directly in a `style` attribute again.
-- `.site-container` — use for outer page containers needing responsive side padding (40px → 20px on mobile).
+- Use the exact track list the design needs (`1fr`, `minmax(0,1fr)`): `grid-cols-2` writes `minmax(0,1fr)`, which differs from `1fr` when an item is wider than its track.
+- `.site-container` (in `assets/css/global.css`) — use for outer page containers needing responsive side padding (40px → 20px on mobile).
 
 If a page you're editing still has raw `grid-template-columns` in a `style` attribute, that's a bug — convert it to this system.
 
