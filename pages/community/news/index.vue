@@ -32,14 +32,14 @@ const tagColors: Record<string, { bg: string, text: string }> = {
 
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
       <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
-        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-          <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / News
+        <p style="font-size:11px;color:#5C6E78;margin-bottom:8px;">
+          <NuxtLink to="/community" style="text-decoration:none;color:#5C6E78;">Get involved</NuxtLink> / News
         </p>
         <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">News</h1>
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
           Platform updates, announcements, and time-sensitive news from CUAHSI.
-          For deeper program coverage, see the <NuxtLink to="/community/newsletter" style="color:#1D9E75;text-decoration:none;">monthly newsletter</NuxtLink>
-          and <NuxtLink to="/highlights" style="color:#1D9E75;text-decoration:none;">program highlights</NuxtLink>.
+          For deeper program coverage, see the <NuxtLink to="/community/newsletter" style="color:#0F7A57;text-decoration:none;">monthly newsletter</NuxtLink>
+          and <NuxtLink to="/highlights" style="color:#0F7A57;text-decoration:none;">program highlights</NuxtLink>.
         </p>
       </div>
 
@@ -52,14 +52,14 @@ const tagColors: Record<string, { bg: string, text: string }> = {
               :style="`font-size:11px;padding:1px 8px;border-radius:99px;font-weight:500;background:${tagColors[tag]?.bg ?? '#F3F4F6'};color:${tagColors[tag]?.text ?? '#374151'};`">
               {{ tag }}
             </span>
-            <span style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</span>
+            <span style="font-size:11px;color:#5C6E78;">{{ fmtDate(item.date) }}</span>
           </div>
-          <p style="font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.3;">{{ item.title }} <span style="font-size:12px;color:#1D9E75;">→</span></p>
+          <p style="font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.3;">{{ item.title }} <span style="font-size:12px;color:#0F7A57;">→</span></p>
           <p style="font-size:13px;color:#6b7280;line-height:1.6;">{{ item.excerpt }}</p>
         </NuxtLink>
 
         <div v-if="!items?.length" style="padding:32px 0;">
-          <p style="font-size:13px;color:#9ca3af;">No news items yet.</p>
+          <p style="font-size:13px;color:#5C6E78;">No news items yet.</p>
         </div>
       </div>
 
@@ -69,13 +69,13 @@ const tagColors: Record<string, { bg: string, text: string }> = {
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Monthly newsletter</p>
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">In-depth coverage of programs, community, and events.</p>
-          <p style="font-size:12px;color:#1D9E75;">Browse issues →</p>
+          <p style="font-size:12px;color:#0F7A57;">Browse issues →</p>
         </NuxtLink>
         <NuxtLink to="/highlights"
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Program highlights</p>
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">Research outcomes, infrastructure work, and training impact.</p>
-          <p style="font-size:12px;color:#1D9E75;">Browse highlights →</p>
+          <p style="font-size:12px;color:#0F7A57;">Browse highlights →</p>
         </NuxtLink>
       </div>
     </div>

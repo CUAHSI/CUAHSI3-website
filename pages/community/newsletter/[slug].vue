@@ -56,9 +56,9 @@ function fmtDate(d: string) {
 
         <!-- Main content -->
         <article>
-          <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← Newsletter archive</NuxtLink>
+          <NuxtLink to="/community/newsletter" style="font-size:12px;color:#5C6E78;text-decoration:none;display:block;margin-bottom:16px;">← Newsletter archive</NuxtLink>
 
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;">{{ fmtDate(issue.date) }}</p>
+          <p style="font-size:11px;color:#5C6E78;margin-bottom:6px;">{{ fmtDate(issue.date) }}</p>
           <h1 style="font-size:26px;font-weight:500;margin-bottom:10px;line-height:1.25;">{{ issue.title }}</h1>
           <p style="font-size:14px;color:#6b7280;line-height:1.6;margin-bottom:14px;">{{ issue.summary }}</p>
 
@@ -93,7 +93,7 @@ function fmtDate(d: string) {
 
           <!-- People mentioned -->
           <div v-if="people?.length" style="margin-bottom:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">People in this issue</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">People in this issue</p>
             <template v-for="person in people" :key="person.slug">
             <NuxtLink v-if="person.has_profile"
               :key="`person-link-${person.slug}`"
@@ -103,8 +103,8 @@ function fmtDate(d: string) {
                 {{ person.name.split(' ').map((n:string) => n[0]).join('').slice(0,2) }}
               </div>
               <div style="flex:1;">
-                <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }} <span style="font-size:10px;color:#1D9E75;">→</span></p>
-                <p style="font-size:11px;color:#9ca3af;">{{ person.role }}</p>
+                <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }} <span style="font-size:10px;color:#0F7A57;">→</span></p>
+                <p style="font-size:11px;color:#5C6E78;">{{ person.role }}</p>
               </div>
             </NuxtLink>
             <div v-else :key="`person-div-${person.slug}`"
@@ -114,8 +114,8 @@ function fmtDate(d: string) {
               </div>
               <div>
                 <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }}</p>
-                <p style="font-size:11px;color:#9ca3af;">{{ person.role }}</p>
-                <p v-if="person.institution" style="font-size:11px;color:#d1d5db;">{{ person.institution }}</p>
+                <p style="font-size:11px;color:#5C6E78;">{{ person.role }}</p>
+                <p v-if="person.institution" style="font-size:11px;color:#5C6E78;">{{ person.institution }}</p>
               </div>
             </div>
             </template>
@@ -123,7 +123,7 @@ function fmtDate(d: string) {
 
           <!-- Topics -->
           <div style="margin-bottom:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Topics</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Topics</p>
             <div style="display:flex;flex-direction:column;gap:4px;">
               <span v-for="t in issue.topics" :key="t"
                 style="font-size:12px;color:#6b7280;">
@@ -134,7 +134,7 @@ function fmtDate(d: string) {
 
           <!-- Events mentioned -->
           <div v-if="relatedEvents?.length" style="margin-bottom:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Events in this issue</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Events in this issue</p>
             <NuxtLink v-for="event in relatedEvents" :key="event.slug"
               :to="`/community/events/${event.slug}`"
               style="display:block;padding:8px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
@@ -144,18 +144,18 @@ function fmtDate(d: string) {
                   {{ event.type }}
                 </span>
               </div>
-              <p style="font-size:11px;color:#9ca3af;margin-top:2px;">
+              <p style="font-size:11px;color:#5C6E78;margin-top:2px;">
                 {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
                 <span v-if="event.location?.city"> · {{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode === 'virtual'"> · Virtual</span>
-                <span style="color:#1D9E75;margin-left:4px;">→</span>
+                <span style="color:#0F7A57;margin-left:4px;">→</span>
               </p>
             </NuxtLink>
           </div>
 
           <!-- Other issues -->
           <div style="margin-bottom:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Other issues</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Other issues</p>
             <div style="display:flex;flex-direction:column;gap:6px;">
               <NuxtLink v-if="prevIssue" :to="`/community/newsletter/${prevIssue.slug}`"
                 style="font-size:12px;color:#6b7280;text-decoration:none;">
@@ -170,9 +170,9 @@ function fmtDate(d: string) {
 
           <!-- Original Mailchimp link -->
           <div v-if="issue.mailchimp_url" style="padding-top:16px;border-top:0.5px solid #f3f4f6;">
-            <p style="font-size:11px;color:#9ca3af;margin-bottom:4px;">Original version</p>
+            <p style="font-size:11px;color:#5C6E78;margin-bottom:4px;">Original version</p>
             <a :href="issue.mailchimp_url" target="_blank" rel="noopener"
-              style="font-size:11px;color:#9ca3af;word-break:break-all;">
+              style="font-size:11px;color:#5C6E78;word-break:break-all;">
               Mailchimp archive ↗
             </a>
           </div>

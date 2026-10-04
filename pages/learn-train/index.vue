@@ -25,7 +25,7 @@ const extras = [
 
     <StatsBand />
 
-    <p class="mx-auto site-container" style="max-width:1240px;padding-top:20px;font:400 12.5px 'Hanken Grotesk';color:#9ca3af;">
+    <p class="mx-auto site-container" style="max-width:1240px;padding-top:20px;font:400 12.5px 'Hanken Grotesk';color:#5C6E78;">
       Training content lives here first. Scheduled instances (dates, registration) also appear on
       <NuxtLink to="/community/events" style="color:#1F6FB2;">Community → Events</NuxtLink> — same session, one canonical page.
     </p>

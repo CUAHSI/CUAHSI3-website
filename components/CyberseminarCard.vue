@@ -71,7 +71,7 @@ watch(isOpen, (open) => {
           <svg width="16" height="16" viewBox="0 0 20 20"><polygon points="6,4 16,10 6,16" fill="#0F2E44"/></svg>
         </div>
       </div>
-      <span v-if="seminar.has_transcript" class="absolute font-mono font-bold text-white rounded-[4px]" style="right:10px;top:10px;font-size:9.5px;background:rgba(31,159,85,.9);padding:3px 7px;">TRANSCRIPT ✓</span>
+      <span v-if="seminar.has_transcript" class="absolute font-mono font-bold text-white rounded-[4px]" style="right:10px;top:10px;font-size:9.5px;background:#1B7F46;padding:3px 7px;">TRANSCRIPT ✓</span>
     </div>
     <!-- Large player when open -->
     <div v-if="isOpen" class="bg-black">
@@ -82,7 +82,7 @@ watch(isOpen, (open) => {
     <div class="flex flex-col flex-1" style="padding:16px;">
       <div class="flex items-center gap-2 mb-2 flex-wrap">
         <span class="font-mono text-[10px] text-muted">{{ seminar.date }}</span>
-        <span v-if="seminar.series" class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:2px 7px;">{{ seminar.series }}</span>
+        <span v-if="seminar.series" class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1A5F9A;padding:2px 7px;">{{ seminar.series }}</span>
       </div>
       <h2 style="font:700 15px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 8px;flex:1;">{{ seminar.title }}</h2>
       <p v-if="seminar.speakers?.length" class="font-mono text-[10px] text-muted">{{ seminar.speakers.join(' · ') }}</p>

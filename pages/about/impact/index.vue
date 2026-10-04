@@ -13,10 +13,10 @@ const { data: allHighlights } = await useAsyncData('highlights', () =>
 const catDefs = [
   { key: 'all',                label: 'All',                color: '#15212B' },
   { key: 'research',           label: 'Research',           color: 'oklch(0.55 0.13 245)' },
-  { key: 'cyberinfrastructure',label: 'Cyberinfrastructure',color: 'oklch(0.56 0.12 200)' },
+  { key: 'cyberinfrastructure',label: 'Cyberinfrastructure',color: 'oklch(0.53 0.12 200)' },
   { key: 'data-infrastructure',label: 'Data infrastructure',color: 'oklch(0.52 0.13 290)' },
-  { key: 'training',           label: 'Training & programs', color: 'oklch(0.55 0.12 150)' },
-  { key: 'community',          label: 'Community',           color: 'oklch(0.61 0.13 55)' },
+  { key: 'training',           label: 'Training & programs', color: 'oklch(0.54 0.12 150)' },
+  { key: 'community',          label: 'Community',           color: 'oklch(0.56 0.13 55)' },
 ]
 
 const selectedCat  = ref('all')

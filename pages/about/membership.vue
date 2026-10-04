@@ -194,7 +194,7 @@ function categoryLabel(key: string) {
       <div class="rg-3" style="gap:1px;background:rgba(15,33,43,.08);border-radius:10px;overflow:hidden;">
         <div v-for="m in filtered" :key="m.name" class="bg-paper" style="padding:14px 16px;">
           <p style="font:500 13.5px 'Hanken Grotesk';color:#15212B;margin:0 0 2px;">{{ m.name }}</p>
-          <p v-if="activeCategory === 'all'" class="font-mono text-[10px]" style="color:#9ca3af;">{{ categoryLabel(m.category) }}</p>
+          <p v-if="activeCategory === 'all'" class="font-mono text-[10px]" style="color:#5C6E78;">{{ categoryLabel(m.category) }}</p>
         </div>
       </div>
       <p v-if="!filtered.length" style="font:400 13.5px 'Hanken Grotesk';color:#5C6E78;padding:20px 0;">No institutions match "{{ query }}".</p>

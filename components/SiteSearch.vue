@@ -153,7 +153,7 @@ const quickLinks = [
   <div>
     <!-- Trigger -->
     <button ref="triggerEl" type="button" aria-haspopup="dialog" @click="open"
-      style="display:flex;align-items:center;gap:6px;padding:4px 10px;border:0.5px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;color:#9ca3af;font-size:12px;">
+      style="display:flex;align-items:center;gap:6px;padding:4px 10px;border:0.5px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;color:#5C6E78;font-size:12px;">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
       </svg>
@@ -180,7 +180,7 @@ const quickLinks = [
               placeholder="Search highlights, news, team, events…"
               style="flex:1;border:none;font-size:15px;color:#111827;background:transparent;" />
             <button type="button" aria-label="Close search" @click="close"
-              style="font-size:11px;color:#9ca3af;border:0.5px solid #e5e7eb;border-radius:4px;padding:2px 6px;background:white;cursor:pointer;">
+              style="font-size:11px;color:#5C6E78;border:0.5px solid #e5e7eb;border-radius:4px;padding:2px 6px;background:white;cursor:pointer;">
               Esc
             </button>
           </div>
@@ -199,7 +199,7 @@ const quickLinks = [
 
           <!-- No results -->
           <div v-else-if="query.length > 1" style="padding:24px 16px;text-align:center;">
-            <p style="font-size:13px;color:#9ca3af;">
+            <p style="font-size:13px;color:#5C6E78;">
               No results for <strong style="color:#374151;">{{ query }}</strong>
             </p>
           </div>
@@ -207,7 +207,7 @@ const quickLinks = [
           <!-- Idle: quick links -->
           <div v-else style="padding:16px;display:flex;flex-wrap:wrap;gap:6px;">
             <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to" @click="reset"
-              style="font-size:12px;padding:4px 10px;border-radius:99px;background:#f3f4f6;color:#6b7280;text-decoration:none;">
+              style="font-size:12px;padding:4px 10px;border-radius:99px;background:#f3f4f6;color:#5C6E78;text-decoration:none;">
               {{ link.label }}
             </NuxtLink>
           </div>

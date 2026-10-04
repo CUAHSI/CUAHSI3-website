@@ -17,15 +17,15 @@
             A consortium of 100+ universities advancing water science through shared infrastructure and community.
           </p>
           <div class="flex gap-4">
-            <a href="https://bsky.app/profile/cuahsi.bsky.social" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">BLUESKY</a>
-            <a href="https://www.youtube.com/CUAHSI" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">YOUTUBE</a>
-            <a href="https://www.linkedin.com/company/consortium-of-universities-for-the-advancement-of-hydrologic-science-inc-cuahsi-" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">LINKEDIN</a>
+            <a href="https://bsky.app/profile/cuahsi.bsky.social" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#6a8ea9;">BLUESKY</a>
+            <a href="https://www.youtube.com/CUAHSI" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#6a8ea9;">YOUTUBE</a>
+            <a href="https://www.linkedin.com/company/consortium-of-universities-for-the-advancement-of-hydrologic-science-inc-cuahsi-" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#6a8ea9;">LINKEDIN</a>
           </div>
         </div>
 
         <!-- Explore -->
         <div>
-          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
+          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#6a8ea9;">Explore</p>
           <div class="flex flex-col gap-3">
             <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/hire-cuahsi'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
@@ -36,7 +36,7 @@
 
         <!-- Tools -->
         <div>
-          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Tools</p>
+          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#6a8ea9;">Tools</p>
           <div class="flex flex-col gap-3">
             <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyter.cuahsi.org'},{t:'Water Services',h:'https://data.cuahsi.org/'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
               :key="l.h" :href="l.h" target="_blank" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
@@ -47,7 +47,7 @@
 
         <!-- Connect -->
         <div>
-          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Connect</p>
+          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#6a8ea9;">Connect</p>
           <div class="flex flex-col gap-3">
             <NuxtLink v-for="l in [{t:'Newsletter',h:'/community/newsletter'},{t:'Events',h:'/community/events'},{t:'Job board',h:'/community/jobs'},{t:'News',h:'/community/news'},{t:'Campus visits',h:'/community/campus-visits'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
@@ -60,8 +60,8 @@
 
     <div style="border-top:1px solid rgba(255,255,255,.08);">
       <div class="mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 site-container" style="max-width:1240px;padding-top:16px;padding-bottom:16px;">
-        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#5f829c;">© 2026 CUAHSI · A 501(c)(3) nonprofit</span>
-        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#5f829c;">Supported by the National Science Foundation</span>
+        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#6a8ea9;">© 2026 CUAHSI · A 501(c)(3) nonprofit</span>
+        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#6a8ea9;">Supported by the National Science Foundation</span>
       </div>
     </div>
   </footer>
