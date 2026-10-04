@@ -9,7 +9,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 2 | Zod schemas (`scripts/content-schemas.mjs`) plus a standalone validator (`npm run validate:content`) | merged | low |
 | 3 | Extract repeated markup into components | merged | medium |
 | 3b | Visual baseline: screenshots of every route before task 4 | merged | low |
-| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | not started | **highest** |
+| 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | in progress (PR 1 of 4 open) | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
 | 5 | Linting and CI, with `verify.sh` as a required check | not started | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit merged; fixes: all but contrast in PR) | medium |
@@ -130,3 +130,5 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | contrast | after the contrast fixes, 263 of 10,076 text runs on 121 pages still fall below WCAG AA: decorative arrows and the Cmd+K hint (153), past events shown dimmed with opacity (48 plus the dimmed type pills), the clay accent #C0603C used for small labels and prices (42; 4.04:1 on paper, 3.65 on sand), the ORCID badge (5). The clay accent is a brand colour and a tailwind.config token (rule 8), so darkening it for small text is Jordan's decision.
 261004 | pages/community/events/index.vue | on the built page at 1280px the single upcoming event is laid out as a full-width grey bar with the date centred, then the title block and a faint arrow below it, unlike the past list where the date sits to the left of the title. Looks like the upcoming row's layout is not as intended. Not changed.
 261004 | dev server | npm run dev fails with 'spawn EBADF' from esbuild on Jordan's machine and on mine; see the eval log (261004, task/a11y-contrast). Preview a build instead: npm run build:search and npx serve .output/public -l 4000.
+261004 | components/AppFooter.vue | the footer links (BLUESKY, YOUTUBE, LINKEDIN and the Explore, Tools and Connect lists) carried a hover:text-white class that never worked, because an inline colour overrode it. When the Tailwind migration moved the colour into a class I removed the dead hover classes so behaviour stays identical. If white-on-hover is wanted, it is a one-line, visible change. Also: PageHero now renders empty style="" attributes on the container, heading and lead of the migrated pages (harmless); they go when its old *-style props are removed in the last migration PR.
+261004 | components/CommunityHero.vue | unused (no page renders it) and still has 7 inline styles; the Tailwind migration leaves it alone because the style comparison cannot see it. Delete it or migrate it in the last PR.

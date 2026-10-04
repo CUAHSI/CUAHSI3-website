@@ -49,6 +49,8 @@ npx serve .output/public -l 4000   # preview the built site. Search only works h
 npm run validate:content           # read-only check of content/ against the schemas; not in verify.sh yet
 npm run visual:compare             # after a build: 52 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
+node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
+node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
 rm -rf .nuxt .output node_modules/.vite && npm run dev   # when something seems stale
 ```
 
@@ -146,6 +148,16 @@ Every one of these cost real debugging time. All but the third failed silently; 
    404 aborts the whole build. Leave it.
 9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
    balance check in `verify.sh` exists because of it. See "Bulk edit."
+
+10. **Inline styles beat classes.** When an inline style becomes a Tailwind class, an element that had both a
+    class and an inline value for the same property changes (the inline one used to win), and a class that was
+    dead under an inline value, such as `hover:text-white` under an inline `color`, suddenly works. Also: Tailwind's
+    `antialiased` adds a second property, `grid-cols-N` uses `minmax(0,1fr)` where plain CSS `1fr` is
+    `minmax(auto,1fr)`, and the build adds `-webkit-backdrop-filter`; use the exact arbitrary form when the
+    inline style was exact. No `verify.sh` check: none of this can be found by a pattern; the style comparison finds it. Check with
+    `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
+    `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
+    fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
