@@ -38,7 +38,7 @@ const typeColors: Record<string, {bg: string; text: string}> = {
   workshop:   { bg: '#EDE9FE', text: '#5B21B6' },
   webinar:    { bg: '#DCFCE7', text: '#15803D' },
   deadline:   { bg: '#FEF9C3', text: '#854D0E' },
-  default:    { bg: '#F3F4F6', text: '#6B7280' },
+  default:    { bg: '#F3F4F6', text: '#5C6E78' },
 }
 function typeStyle(type: string) {
   const c = typeColors[type] ?? typeColors.default
@@ -123,7 +123,7 @@ const waysin = [
 
       <!-- Hero -->
       <section style="padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;color:#9ca3af;font-weight:500;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;">Get involved</p>
+        <p style="font-size:11px;color:#5C6E78;font-weight:500;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;">Get involved</p>
         <h1 style="font-size:32px;font-weight:500;line-height:1.2;margin-bottom:16px;max-width:560px;">
           Connect with the water science community
         </h1>
@@ -143,13 +143,13 @@ const waysin = [
             students with a consistent and well-resourced hub for academic exchange, data and modeling tools,
             conferences, training, and cross-disciplinary, trans-institutional programming."
           </p>
-          <p style="font-size:12px;color:#9ca3af;">Scott H. Ensign, Ph.D., Assistant Director and Research Scientist, Stroud Water Research Center</p>
+          <p style="font-size:12px;color:#5C6E78;">Scott H. Ensign, Ph.D., Assistant Director and Research Scientist, Stroud Water Research Center</p>
         </blockquote>
       </section>
 
       <!-- Ways to get involved -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:20px;">Ways to get involved</p>
+        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:20px;">Ways to get involved</p>
         <div class="rgrid rgrid-multi" style="display:grid;gap:12px;--cols:repeat(4,minmax(0,1fr));">
           <div v-for="way in waysin" :key="way.title"
             style="border:0.5px solid #e5e7eb;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;">
@@ -157,10 +157,10 @@ const waysin = [
             <p style="font-size:13px;font-weight:500;line-height:1.35;">{{ way.title }}</p>
             <p style="font-size:12px;color:#6b7280;line-height:1.55;flex:1;">{{ way.desc }}</p>
             <NuxtLink v-if="way.internal" :to="way.href"
-              style="font-size:12px;color:#1D9E75;text-decoration:none;margin-top:4px;">
+              style="font-size:12px;color:#0F7A57;text-decoration:none;margin-top:4px;">
               {{ way.cta }} →
             </NuxtLink>
-            <a v-else :href="way.href" style="font-size:12px;color:#1D9E75;text-decoration:none;margin-top:4px;">
+            <a v-else :href="way.href" style="font-size:12px;color:#0F7A57;text-decoration:none;margin-top:4px;">
               {{ way.cta }} →
             </a>
           </div>
@@ -173,30 +173,30 @@ const waysin = [
         <div>
           <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
             <p style="font-size:13px;font-weight:500;">Latest news</p>
-            <NuxtLink to="/community/news" style="font-size:12px;color:#9ca3af;text-decoration:none;">All news →</NuxtLink>
+            <NuxtLink to="/community/news" style="font-size:12px;color:#5C6E78;text-decoration:none;">All news →</NuxtLink>
           </div>
           <div v-if="latestNews?.length">
             <div v-for="post in latestNews" :key="post._path"
               style="padding:11px 0;border-bottom:0.5px solid #f3f4f6;">
-              <p style="font-size:11px;color:#9ca3af;margin-bottom:3px;">{{ fmtDate(post.date) }}</p>
+              <p style="font-size:11px;color:#5C6E78;margin-bottom:3px;">{{ fmtDate(post.date) }}</p>
               <p style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:3px;">{{ post.title }}</p>
               <p v-if="post.excerpt" style="font-size:12px;color:#6b7280;line-height:1.5;">{{ post.excerpt }}</p>
             </div>
           </div>
-          <p v-else style="font-size:13px;color:#9ca3af;">No news yet.</p>
+          <p v-else style="font-size:13px;color:#5C6E78;">No news yet.</p>
         </div>
 
         <div>
           <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
             <p style="font-size:13px;font-weight:500;">Upcoming events</p>
-            <NuxtLink to="/community/events" style="font-size:12px;color:#9ca3af;text-decoration:none;">All events →</NuxtLink>
+            <NuxtLink to="/community/events" style="font-size:12px;color:#5C6E78;text-decoration:none;">All events →</NuxtLink>
           </div>
           <div v-if="upcomingEvents?.length">
             <NuxtLink v-for="event in upcomingEvents" :key="event._path"
               :to="`/community/events/${event.slug}`"
               style="display:flex;gap:10px;padding:10px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
               <div style="flex-shrink:0;width:36px;background:#f9fafb;border-radius:6px;text-align:center;padding:5px 2px;">
-                <p style="font-size:9px;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;">
+                <p style="font-size:9px;color:#5C6E78;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;">
                   {{ new Date(event.start).toLocaleDateString('en-US',{month:'short'}) }}
                 </p>
                 <p style="font-size:16px;font-weight:500;line-height:1;">{{ new Date(event.start).getDate() }}</p>
@@ -205,24 +205,24 @@ const waysin = [
                 <p style="font-size:13px;font-weight:500;line-height:1.35;margin-bottom:3px;">{{ event.title }}</p>
                 <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
                   <span :style="typeStyle(event.type)">{{ event.type }}</span>
-                  <span v-if="event.location?.city" style="font-size:11px;color:#9ca3af;">{{ event.location.city }}</span>
-                  <span v-else-if="event.location?.mode==='virtual'" style="font-size:11px;color:#9ca3af;">Virtual</span>
+                  <span v-if="event.location?.city" style="font-size:11px;color:#5C6E78;">{{ event.location.city }}</span>
+                  <span v-else-if="event.location?.mode==='virtual'" style="font-size:11px;color:#5C6E78;">Virtual</span>
                 </div>
               </div>
             </NuxtLink>
           </div>
-          <p v-else style="font-size:13px;color:#9ca3af;">No upcoming events.</p>
+          <p v-else style="font-size:13px;color:#5C6E78;">No upcoming events.</p>
         </div>
 
         <div>
           <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
             <p style="font-size:13px;font-weight:500;">Newsletter</p>
-            <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;">Archive →</NuxtLink>
+            <NuxtLink to="/community/newsletter" style="font-size:12px;color:#5C6E78;text-decoration:none;">Archive →</NuxtLink>
           </div>
           <div v-if="latestNewsletter" style="border:0.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:12px;">
             <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
               <span style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></span>
-              <span style="font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;font-weight:500;">Latest issue</span>
+              <span style="font-size:11px;color:#5C6E78;text-transform:uppercase;letter-spacing:.05em;font-weight:500;">Latest issue</span>
             </div>
             <NuxtLink :to="`/community/newsletter/${latestNewsletter.slug}`"
               style="font-size:13px;font-weight:500;line-height:1.4;display:block;margin-bottom:6px;text-decoration:none;color:inherit;">
@@ -253,7 +253,7 @@ const waysin = [
       <section class="rgrid rgrid-split" style="display:grid;gap:20px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;--cols:minmax(0,1fr) minmax(0,1fr);">
 
         <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:22px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Research initiative</p>
+          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:10px;">Research initiative</p>
           <p style="font-size:15px;font-weight:500;margin-bottom:8px;">Critical Zone Collaborative Network</p>
           <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:14px;">
             CUAHSI is the Coordinating Hub for the Critical Zone Collaborative Network (CZNet), the next
@@ -262,11 +262,11 @@ const waysin = [
             CUAHSI hub activities enhance water data services and broaden the community.
           </p>
           <a href="https://criticalzone.org" target="_blank" rel="noopener"
-            style="font-size:13px;color:#1D9E75;text-decoration:none;">Visit criticalzone.org ↗</a>
+            style="font-size:13px;color:#0F7A57;text-decoration:none;">Visit criticalzone.org ↗</a>
         </div>
 
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:2px;">Community resources</p>
+          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:2px;">Community resources</p>
 
           <a href="https://www.cuahsi.org/hydrologic-instrumentation-facilities" target="_blank" rel="noopener"
             style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">

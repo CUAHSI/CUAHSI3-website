@@ -25,7 +25,7 @@ useHead({ title: computed(() => program.value ? program.value.title : 'Not found
         <template #lead>{{ program.excerpt }}</template>
         <div class="flex gap-2 flex-wrap">
           <span v-if="program.season" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(15,33,43,.07);color:#5C6E78;padding:5px 10px;">{{ program.season }}</span>
-          <span v-for="a in program.audience" :key="a" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:5px 10px;">{{ a.replace(/-/g,' ') }}</span>
+          <span v-for="a in program.audience" :key="a" class="font-mono text-[11px] rounded-[5px]" style="background:rgba(31,111,178,.09);color:#1A5F9A;padding:5px 10px;">{{ a.replace(/-/g,' ') }}</span>
         </div>
       </PageHero>
       <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;padding-bottom:80px;">

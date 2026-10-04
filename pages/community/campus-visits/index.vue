@@ -71,8 +71,8 @@ const targets = [
       <!-- Hero -->
       <section class="rgrid rgrid-split" style="display:grid;gap:40px;padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;align-items:start;--cols:minmax(0,1fr) 260px;">
         <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-            <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Bring CUAHSI to your campus
+          <p style="font-size:11px;color:#5C6E78;margin-bottom:8px;">
+            <NuxtLink to="/community" style="text-decoration:none;color:#5C6E78;">Get involved</NuxtLink> / Bring CUAHSI to your campus
           </p>
           <h1 style="font-size:28px;font-weight:500;line-height:1.25;margin-bottom:14px;">
             Bring CUAHSI to your campus
@@ -100,19 +100,19 @@ const targets = [
 
         <!-- Recent visits sidebar -->
         <div style="background:#f9fafb;border-radius:12px;padding:18px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:14px;">Recent visits</p>
+          <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5C6E78;margin-bottom:14px;">Recent visits</p>
           <div v-for="(v, i) in recentVisits" :key="v.inst"
             :style="`padding-bottom:10px;margin-bottom:10px;${i < recentVisits.length-1 ? 'border-bottom:0.5px solid #e5e7eb;' : ''}`">
             <p style="font-size:13px;font-weight:500;margin-bottom:2px;">{{ v.inst }}</p>
             <p style="font-size:12px;color:#6b7280;margin-bottom:1px;">{{ v.type }}</p>
-            <p style="font-size:11px;color:#9ca3af;">{{ v.context }}</p>
+            <p style="font-size:11px;color:#5C6E78;">{{ v.context }}</p>
           </div>
         </div>
       </section>
 
       <!-- Menu of options -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px;">Menu of options</p>
+        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:6px;">Menu of options</p>
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;margin-bottom:24px;">
           Most visits combine elements — a seminar followed by a hands-on session, or a lab consultation
           after a department talk. We tailor content to your audience and needs.
@@ -125,14 +125,14 @@ const targets = [
               <div>
                 <p style="font-size:14px;font-weight:500;line-height:1.3;margin-bottom:4px;">{{ o.title }}</p>
                 <div style="display:flex;gap:5px;flex-wrap:wrap;">
-                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">{{ o.duration }}</span>
+                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#f3f4f6;color:#5C6E78;">{{ o.duration }}</span>
                   <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#E1F5EE;color:#0F6E56;">{{ o.format }}</span>
                 </div>
               </div>
             </div>
             <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:12px;flex:1;">{{ o.desc }}</p>
             <div style="border-top:0.5px solid #f3f4f6;padding-top:10px;">
-              <p style="font-size:11px;color:#9ca3af;margin-bottom:5px;">Works well for</p>
+              <p style="font-size:11px;color:#5C6E78;margin-bottom:5px;">Works well for</p>
               <div style="display:flex;flex-wrap:wrap;gap:4px;">
                 <span v-for="g in o.goodFor" :key="g"
                   style="font-size:11px;padding:2px 8px;border-radius:99px;border:0.5px solid #e5e7eb;color:#6b7280;">
@@ -146,21 +146,21 @@ const targets = [
 
       <!-- Included with membership vs. Fee-for-service -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">What's included, and what isn't</p>
+        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:8px;">What's included, and what isn't</p>
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;margin-bottom:20px;">
           Campus visits above are free for member institutions. Larger, ongoing, or highly customized engagements
           are fee-for-service work through Hire CUAHSI.
         </p>
         <div class="rgrid rgrid-split" style="display:grid;gap:14px;--cols:repeat(2,minmax(0,1fr));">
           <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#1D9E75;margin-bottom:12px;">Included with membership</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#0F7A57;margin-bottom:12px;">Included with membership</p>
             <div v-for="item in [
               'One seminar, workshop, or consultation visit per year',
               'Standard curriculum from the menu above',
               'Half-day to full-day formats, in-person or virtual',
               'Follow-up email support after the visit'
             ]" :key="item" style="display:flex;gap:8px;font-size:13px;color:#374151;padding:6px 0;">
-              <span style="color:#1D9E75;flex-shrink:0;">✓</span> {{ item }}
+              <span style="color:#0F7A57;flex-shrink:0;">✓</span> {{ item }}
             </div>
           </div>
           <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
@@ -182,7 +182,7 @@ const targets = [
 
       <!-- Who we want to reach -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Who we especially want to reach</p>
+        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5C6E78;margin-bottom:8px;">Who we especially want to reach</p>
         <p style="font-size:14px;color:#6b7280;line-height:1.7;max-width:600px;margin-bottom:20px;">
           We are actively working to connect with institutions and communities that have not yet engaged
           deeply with CUAHSI programs. We prioritize building new relationships in year one.
@@ -216,7 +216,7 @@ const targets = [
               'Preferred dates or semester window',
               'In-person or virtual preference'
             ]" :key="item" style="display:flex;gap:8px;font-size:12px;color:#6b7280;">
-              <span style="color:#1D9E75;flex-shrink:0;">✓</span> {{ item }}
+              <span style="color:#0F7A57;flex-shrink:0;">✓</span> {{ item }}
             </div>
           </div>
           <a href="mailto:connect@cuahsi.org?subject=Campus visit request"
@@ -235,7 +235,7 @@ const targets = [
             <span style="font-size:28px;">📄</span>
             <div>
               <p style="font-size:12px;font-weight:500;margin-bottom:1px;">CUAHSI Campus Engagement</p>
-              <p style="font-size:11px;color:#9ca3af;">One-page overview · PDF</p>
+              <p style="font-size:11px;color:#5C6E78;">One-page overview · PDF</p>
             </div>
           </div>
           <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" rel="noopener"

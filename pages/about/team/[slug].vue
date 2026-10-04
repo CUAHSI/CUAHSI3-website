@@ -52,7 +52,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
           <p style="font:400 15px 'Hanken Grotesk';color:#5C6E78;margin:4px 0 14px;">{{ person.role }}</p>
           <div class="flex gap-3 flex-wrap">
             <a v-if="person.links?.orcid" :href="person.links.orcid" target="_blank" class="font-mono font-bold text-[10px] rounded" style="color:#A6CE39;border:1px solid #A6CE39;padding:3px 8px;">iD</a>
-            <a v-if="person.links?.google_scholar" :href="person.links.google_scholar" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#4285F4;">Scholar</a>
+            <a v-if="person.links?.google_scholar" :href="person.links.google_scholar" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#2563C4;">Scholar</a>
             <a v-if="person.links?.github" :href="person.links.github" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#5C6E78;">GitHub</a>
             <a v-if="person.links?.linkedin" :href="person.links.linkedin" target="_blank" style="font:500 12px 'Hanken Grotesk';color:#0A66C2;">LinkedIn</a>
           </div>

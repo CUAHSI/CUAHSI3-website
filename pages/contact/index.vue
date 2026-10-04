@@ -17,7 +17,7 @@ const routes = [
   },
   {
     tag: 'MEMBERSHIP',
-    accent: 'oklch(0.55 0.12 150)',
+    accent: 'oklch(0.54 0.12 150)',
     id: 'membership',
     title: 'Joining, benefits & invoicing',
     desc: 'Questions about becoming a member institution, current benefits, dues, or invoicing for an existing membership.',
@@ -38,7 +38,7 @@ const routes = [
   },
   {
     tag: 'PRESS & GENERAL',
-    accent: 'oklch(0.56 0.12 200)',
+    accent: 'oklch(0.53 0.12 200)',
     id: 'general',
     title: 'Everything else',
     desc: 'Press inquiries, partnership proposals, speaking requests, or anything that doesn\'t fit the categories above.',
@@ -78,7 +78,7 @@ const routes = [
 
           <div class="flex flex-col gap-1 mb-4" style="padding-top:16px;border-top:1px solid rgba(15,33,43,.1);">
             <span style="font:400 12.5px 'Hanken Grotesk';color:#5C6E78;">{{ r.who }}</span>
-            <span class="font-mono text-[11px]" style="color:#9ca3af;">{{ r.time }}</span>
+            <span class="font-mono text-[11px]" style="color:#5C6E78;">{{ r.time }}</span>
           </div>
 
           <a v-if="r.email" :href="`mailto:${r.email}`"

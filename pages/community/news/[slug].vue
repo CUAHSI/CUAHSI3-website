@@ -24,27 +24,27 @@ function fmtDate(d: string) {
   <div>
     <!-- Not found state -->
     <div v-if="notFound" style="max-width:720px;margin:80px auto;padding:0 24px;text-align:center;">
-      <p style="font-size:14px;color:#9ca3af;margin-bottom:12px;">404</p>
+      <p style="font-size:14px;color:#5C6E78;margin-bottom:12px;">404</p>
       <h1 style="font-size:22px;font-weight:500;margin-bottom:12px;">Page not found</h1>
       <p style="font-size:14px;color:#6b7280;margin-bottom:24px;">That news item doesn't exist.</p>
-      <NuxtLink to="/community/news" style="font-size:13px;color:#1D9E75;text-decoration:none;">← Back to news</NuxtLink>
+      <NuxtLink to="/community/news" style="font-size:13px;color:#0F7A57;text-decoration:none;">← Back to news</NuxtLink>
     </div>
 
     <div v-else-if="item">
 
     <div style="max-width:720px;margin:0 auto;padding:0 24px;">
       <div style="padding:36px 0 12px;">
-        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-          <NuxtLink to="/community/news" style="text-decoration:none;color:#9ca3af;">← News</NuxtLink>
+        <p style="font-size:11px;color:#5C6E78;margin-bottom:8px;">
+          <NuxtLink to="/community/news" style="text-decoration:none;color:#5C6E78;">← News</NuxtLink>
         </p>
         <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
           <span v-for="tag in item.tags" :key="tag"
-            style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+            style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#5C6E78;">
             {{ tag }}
           </span>
         </div>
         <h1 style="font-size:26px;font-weight:500;line-height:1.3;margin-bottom:10px;">{{ item.title }}</h1>
-        <p style="font-size:13px;color:#9ca3af;margin-bottom:0;">
+        <p style="font-size:13px;color:#5C6E78;margin-bottom:0;">
           {{ fmtDate(item.date) }}
           <span v-if="item.author"> · {{ item.author }}</span>
         </p>
@@ -64,13 +64,13 @@ function fmtDate(d: string) {
       <div v-if="item.source_url" style="margin-bottom:48px;padding:16px 20px;background:#f9fafb;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
         <p style="font-size:13px;color:#6b7280;">Originally published on cuahsi.org</p>
         <a :href="item.source_url" target="_blank" rel="noopener"
-          style="font-size:13px;font-weight:500;color:#1D9E75;text-decoration:none;white-space:nowrap;">
+          style="font-size:13px;font-weight:500;color:#0F7A57;text-decoration:none;white-space:nowrap;">
           Read full article ↗
         </a>
       </div>
 
       <div style="padding:24px 0;border-top:0.5px solid #f3f4f6;margin-bottom:48px;">
-        <NuxtLink to="/community/news" style="font-size:13px;color:#1D9E75;text-decoration:none;">← Back to news</NuxtLink>
+        <NuxtLink to="/community/news" style="font-size:13px;color:#0F7A57;text-decoration:none;">← Back to news</NuxtLink>
       </div>
     </div>
     </div>
