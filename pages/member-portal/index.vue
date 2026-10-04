@@ -91,11 +91,11 @@ const resources = [
 
         <!-- One compact row per institution: the name on the left, its representatives flowing across on the right
              (on a phone the name sits above them). Was a heading plus a card per representative. -->
-        <ul v-if="grouped.length" class="list-none p-0 m-0 border border-[rgba(15,33,43,.1)] rounded-[8px] overflow-hidden">
+        <ul v-if="grouped.length" role="list" class="list-none p-0 m-0 border border-[rgba(15,33,43,.1)] rounded-[8px] overflow-hidden">
           <li v-for="group in grouped" :key="group.institution"
             class="p-[8px_14px] border-b border-b-[rgba(15,33,43,.08)] last:border-b-0 odd:bg-[rgba(15,33,43,.025)] min-[641px]:grid min-[641px]:grid-cols-[240px_minmax(0,1fr)] min-[641px]:gap-x-[16px] min-[641px]:items-baseline">
             <p class="font-['Hanken_Grotesk'] font-semibold text-[13px] leading-[1.35] text-navy m-0">{{ group.institution }}</p>
-            <ul class="list-none p-0 m-[2px_0_0] min-[641px]:m-0 flex flex-wrap gap-x-[22px] gap-y-[2px]">
+            <ul role="list" class="list-none p-0 m-[2px_0_0] min-[641px]:m-0 flex flex-wrap gap-x-[22px] gap-y-[2px]">
               <li v-for="rep in group.reps" :key="rep.email" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-ink">
                 {{ rep.first_name }} {{ rep.last_name }}
                 <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water break-all">{{ rep.email }}</a>
