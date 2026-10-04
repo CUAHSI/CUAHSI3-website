@@ -19,6 +19,8 @@ same PR (see "New footgun").
 ```
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
 content/           the content. Do not modify in Phase 1 (rule 3).
+visual/            the visual baseline: 52 committed screenshots and README.md. tests/visual/ and
+                   playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit.
 scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
                    content-schemas.mjs + validate-content.mjs (Zod schemas and the
@@ -45,6 +47,8 @@ npx serve .output/public -l 4000   # preview the built site. Search only works h
 ./scripts/verify.sh                # static checks, seconds
 ./scripts/verify.sh --build        # static checks, then the full build
 npm run validate:content           # read-only check of content/ against the schemas; not in verify.sh yet
+npm run visual:compare             # after a build: 52 screenshots vs visual/baseline; any changed pixel fails
+npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
 rm -rf .nuxt .output node_modules/.vite && npm run dev   # when something seems stale
 ```
 
