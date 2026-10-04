@@ -86,7 +86,11 @@ async function search() {
   }
 }
 
+// Whatever had focus when the dialog opened (the Search button, or any element if it was opened with Ctrl/Cmd+K).
+let returnTo: HTMLElement | null = null
+
 function open() {
+  returnTo = document.activeElement instanceof HTMLElement ? document.activeElement : null
   isOpen.value = true
   nextTick(() => searchEl.value?.focus())
 }
@@ -97,10 +101,13 @@ function reset() {
   results.value = []
 }
 
-// Closing without going anywhere (Esc, the Esc button, a click outside): give focus back to the Search button.
+// Closing without going anywhere (Esc, the Esc button, a click outside): give focus back to where it was, if that
+// element is still on the page and visible, otherwise to the Search button (which is hidden on phones).
 function close() {
   reset()
-  nextTick(() => triggerEl.value?.focus())
+  const target = returnTo && document.contains(returnTo) && returnTo.offsetParent !== null ? returnTo : triggerEl.value
+  returnTo = null
+  nextTick(() => target?.focus())
 }
 
 // Keep Tab and Shift+Tab inside the dialog while it is open.

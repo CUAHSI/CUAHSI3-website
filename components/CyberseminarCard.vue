@@ -26,6 +26,21 @@ const closeEl = ref<HTMLButtonElement | null>(null)
 let restoreFocus = false
 function closeVideo() { restoreFocus = true; emit('toggle') }
 
+// Opening with Enter: the key may still be held down (and auto-repeating) when the card opens. If focus moved to
+// the Close button right away, the repeats would press it and the video would close again. So the thumbnail
+// ignores repeats, and when a key is still held the move to Close waits for the key to be released.
+let keyHeld = false
+let focusCloseOnKeyup = false
+function onThumbKey(e: KeyboardEvent) {
+  if (e.repeat) return
+  keyHeld = true
+  window.addEventListener('keyup', () => {
+    keyHeld = false
+    if (focusCloseOnKeyup) { focusCloseOnKeyup = false; closeEl.value?.focus({ preventScroll: true }) }
+  }, { once: true })
+  emit('toggle')
+}
+
 watch(isOpen, (open) => {
   if (!open) {
     if (restoreFocus) { restoreFocus = false; nextTick(() => thumbEl.value?.focus()) }
@@ -34,7 +49,8 @@ watch(isOpen, (open) => {
   nextTick(() => {
     const calm = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
     root.value?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' })
-    closeEl.value?.focus({ preventScroll: true })
+    if (keyHeld) focusCloseOnKeyup = true
+    else closeEl.value?.focus({ preventScroll: true })
   })
 })
 </script>
@@ -44,7 +60,7 @@ watch(isOpen, (open) => {
     <!-- Thumbnail or placeholder (replaced by the large player while open) -->
     <div v-if="!isOpen" ref="thumbEl" class="relative cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-water" style="height:160px;" @click="$emit('toggle')"
       :role="seminar.youtube_id ? 'button' : undefined" :tabindex="seminar.youtube_id ? 0 : undefined" :aria-label="seminar.youtube_id ? `Play video: ${seminar.title}` : undefined"
-      @keydown.enter.prevent="$emit('toggle')" @keydown.space.prevent="$emit('toggle')">
+      @keydown.enter.prevent="onThumbKey" @keydown.space.prevent="onThumbKey">
       <img v-if="seminar.youtube_id" :src="ytThumb(seminar.youtube_id)" :alt="seminar.title" style="width:100%;height:100%;object-fit:cover;" />
       <div v-else class="w-full h-full flex items-center justify-center" style="background:linear-gradient(150deg,#10324c,#1F6FB2);">
         <span class="font-mono font-bold tracking-[.1em]" style="font-size:11px;color:rgba(255,255,255,.7);">NO VIDEO YET</span>
