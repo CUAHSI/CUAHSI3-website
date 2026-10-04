@@ -118,6 +118,11 @@ if [ -f scripts/validate-content.mjs ] && [ -d node_modules/zod ] && [ -d node_m
   fi
 else need "content validator skipped (scripts/validate-content.mjs, node_modules/zod or node_modules/yaml missing; run npm ci)"; fi
 
+# 11c. ESLint over the Vue templates (roadmap task 5; template-only, see eslint.config.mjs)
+if [ -d node_modules/eslint ] && [ -d node_modules/eslint-plugin-vue ] && [ -d node_modules/vue-eslint-parser ]; then
+  eout=$(npx eslint . 2>&1) && ok "eslint: no problems in the Vue templates" || { fail "eslint:"; echo "$eout" | sed 's/^/      /'; }
+else need "eslint skipped (node_modules/eslint or eslint-plugin-vue missing; run npm ci)"; fi
+
 # 12. Build
 if [ "$1" = "--build" ]; then
   echo "----  npm run build:search"
