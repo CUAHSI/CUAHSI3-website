@@ -1,2 +1,0 @@
-content/research/2025-datacite-migration.md
-content/research/2025-hydrocare-ndistem.md

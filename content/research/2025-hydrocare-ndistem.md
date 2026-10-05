@@ -9,7 +9,7 @@ people_mentioned: [abner-bogan, martin-seul]
 partners: [NDiSTEM Conference]
 funding: NSF EAR-1849458
 published: true
-excerpt: Two HydroCARE Travel Fellows attended the National Diversity in STEM (NDiSTEM) Conference in Columbus and participated in CUAHSI's workshop on data management — providing feedback that surfaced a central theme: trust-building must come before technical solutions, and CARE-aligned engagement requires long-term commitment to Indigenous-led initiatives.
+excerpt: "Two HydroCARE Travel Fellows attended the National Diversity in STEM (NDiSTEM) Conference in Columbus and participated in CUAHSI's workshop on data management — providing feedback that surfaced a central theme: trust-building must come before technical solutions, and CARE-aligned engagement requires long-term commitment to Indigenous-led initiatives."
 ---
 
 CUAHSI piloted the HydroCARE Travel Fellowship in 2025, providing travel support and honoraria for two fellows to attend the National Diversity in STEM (NDiSTEM) Conference in Columbus, Ohio (October 30–November 1, 2025). The fellowship was designed to deepen CUAHSI's understanding of community data governance needs from a user-centered perspective, particularly around CARE principles — Collective Benefit, Authority to Control, Responsibility, and Ethics.
