@@ -1,8 +1,8 @@
 # Parity analysis: this site against www.cuahsi.org
 
 A staged, read-only comparison of the legacy site at https://www.cuahsi.org with this
-one, in structure and in content. Run a stage only when Jordan asks for it. Three
-stages end with a stop for his review.
+one, in structure and in content. Run a stage only when Jordan asks for it. Stages
+marked STOP end with a stop for his review.
 
 ## What "parity" means here
 
@@ -17,9 +17,34 @@ goal is that **every legacy page has a decided fate** before this site replaces 
   partner site).
 - `undecided`: needs Jordan.
 
+Fates are decided **per body of work** (stage 7) and each URL inherits its body's fate
+unless a row in `dispositions-urls.csv` overrides it (exceptions, tier A pages, cited
+URLs); a script expands this to every URL. `link out` is not a separate fate: it is
+`external` with the target named. A body proposed to be brought here is `migrated`
+(proposed) with the collection or page named, and stays `proposed` until it is done.
+
 The analysis ends when no legacy URL is `undecided` and Jordan has seen the gaps
 ranked by how much they matter. Closing the gaps is separate work, scheduled from the
 backlog this analysis produces.
+
+## Priority (set by Jordan on 5 October 2026)
+
+The question that matters is **which large concepts or bodies of work on the legacy
+site are missing from this one**, not whether individual items agree. Item-level
+accuracy (an event's date, a title's wording, whether one of 118 old events has a
+twin here) is out of scope for stages 5 to 8 except where it changes a decision about
+a whole body of work. A **body of work** is a group of legacy URLs that serve one
+purpose for one audience: a section, a collection or a type (for example "document
+library", "graduate programs directory", "policies and conduct"). The unit of analysis
+and of decision from stage 5 on is the body of work, not the URL. Stage 4's per-URL
+mapping (`agent/parity/mapping.csv`, with the stage 3 report: both are on open pull
+requests and must be merged before stage 5 starts) is the evidence underneath; its open
+questions (the ten least-sure matches, the `probe review` rows) matter only if a ruling
+would change a body-level answer.
+
+Known and deferred: the **cyberseminar archive** is known to be largely missing and
+has not been started (Jordan, 5 October 2026). It stays in the ranking, sized and
+marked "known, deferred", so the backlog has its size; it is not a finding.
 
 ## Rules for this analysis
 
@@ -148,80 +173,118 @@ count here with no legacy counterpart. Then the unmatched legacy URLs in full, a
 the ten `probable` matches you are least sure of, for Jordan to rule on. His rulings
 are recorded in the CSV as `matched_by: jordan`.
 
-## Stage 5. Content depth, for matched pairs.
+## Stage 5. Bodies of work, and spot checks.
 
-For every pair at `exact` or `probable`, compare what the pages say. Delegate in
-batches of about twenty pairs to the `page-comparer` subagent, which reads the
-snapshot file and the built HTML and returns a fixed-format finding per pair. Output
-`agent/parity/depth.csv` and `agent/parity/discrepancies.csv`.
+Replaces the page-by-page depth comparison. Two parts.
 
-Per pair: word count on each side; legacy headings with no counterpart here; links,
-files, images and embeds on the legacy page that are absent here; and a verdict of
-`equivalent`, `summary` (this site is deliberately shorter and links out),
-`partial`, or `stub`.
+**5a. The bodies of work.** Group every legacy URL into a body of work, by rule from
+the inventory and the stage 3 and 4 outputs (path prefix, page type, navigation
+section), and write `agent/parity/bodies.csv`, one row per body:
 
-Discrepancies are factual differences between the two (P4), each with both values
-and both locations, typed as: number, date, name or role, contact detail, URL,
-status (open or closed, current or past), other. Differences in wording are not
-discrepancies.
+`body, audience, legacy_urls, legacy_words, in_nav, here_equivalent, here_status, known_to_jordan, notes`
 
-Before the full run, do ten pairs yourself and ten through the subagent, and compare
-the results. Report the disagreement rate. Proceed only if Jordan accepts it.
+`here_status` is `absent` (nothing here), `partial` (some of it, or a page that
+covers it in outline), `present`, or `different` (done another way: say how).
+`legacy_words` and `legacy_urls` show size; `here_equivalent` names the route,
+collection or page. Bodies are named in plain language. Where the grouping is a
+judgment (is "Policies & Conduct" one body or four pages?), say so (P6). `known_to_jordan` is `yes` where Jordan has said in the conversation that he knows the
+gap and its status (the date and quote go in `notes`), otherwise `no`; I set it and
+never infer it. Every legacy URL belongs to exactly one body; check that by script.
+URLs that fit no rule go into a body named "Unassigned", listed in the report with
+their count, and the stage does not finish until I have read them.
 
-## Stage 6. Importance.
+**5b. Spot checks.** For the largest matched bodies and the pages a visitor lands on
+first (About, Membership, Governance, the data tools, Donate, Contact, the program
+pages), compare ten to fifteen pairs with the `page-comparer` subagent (one finding
+per pair, fixed format, snapshot file against built HTML). The aim is to see whether
+a body that is "present" is present in substance: `equivalent`, `summary` (shorter on
+purpose, links out), `partial` or `stub`. Record only factual differences a reader would act
+on: numbers, names or roles, status (open or closed, current or past), URLs and
+whether contact details differ (P8: say that they differ, never the details), for
+example "more than 130 member organizations" against "101 member institutions".
+Wording, the dates of single events and typos are not recorded. This narrows the
+earlier plan: `depth.csv` and `discrepancies.csv` are not produced; their place is
+`agent/parity/spot-checks.csv` (verdict and differences per pair). The pilot is five
+pairs by me and the same five through the subagent (earlier plan: ten each); report
+how many verdicts differ. **Gate:** if more than one of the five differs, stop and
+ask Jordan before the rest; otherwise proceed and say so.
 
-Rank the gaps so effort goes where it matters. For each legacy URL that is unmatched,
-`weak`, `partial` or `stub`, compute and show the inputs separately, then a tier:
+## Stage 6. Importance of each body of work.
 
-- Search Console clicks and impressions over twelve months, if Jordan supplied the
-  export. This is the strongest signal; say plainly if it is missing.
-- Internal links pointing to it on the legacy site, and whether it is in the
-  navigation or footer.
-- Recency: date of the item, and whether it is still current.
-- Whether it appears in Jordan's list of externally cited URLs.
+Rank the bodies, not the URLs. For each body show the inputs separately, then a tier:
 
-Tiers: `A` a visitor or funder would notice its absence; `B` worth having; `C` long
-tail. State the thresholds you used. The tier is a proposal (P6).
+- Search Console clicks and impressions over twelve months, summed over the body's
+  URLs (the export is at `raw/search-console/261005_pages_all.csv`; say plainly if it
+  does not cover a body).
+- Internal links pointing into the body from the rest of the legacy site, and whether
+  it is in the navigation or footer.
+- Who it serves and what an absence costs them (a visitor, a member, a funder, staff,
+  a legal or organisational obligation such as a code of conduct). This is the
+  strongest input and it is a judgment: label it as mine and give the reason.
+- Recency and whether it is still current.
+- Whether it is externally cited. Jordan has no list (stage 0); I build one from the
+  newsletters and `content/` (cuahsi.org URLs they cite: 47 found in stage 0, 8 of
+  them not found on the legacy site in stage 1) and say how it was built. **Every
+  cited URL gets its own row in `dispositions-urls.csv`, whatever its body's tier.**
 
-## Stage 7. Dispositions and redirects. STOP for decisions.
+Tiers: `A` a visitor, member or funder would notice its absence, or it carries an
+obligation; `B` worth having; `C` long tail. State the thresholds. The tier is a
+proposal (P6). Per-URL tiers are produced only inside tier A bodies, to find the few
+pages that matter most.
 
-Propose a fate for every legacy URL (the list under "What parity means"). Output
-`agent/parity/dispositions.csv`:
+## Stage 7. A fate for each body of work. STOP for decisions.
 
-`legacy_url, disposition, target_route, tier, rule, decided_by`
+Propose one fate per body of work, from the list under "What parity means" (a
+body proposed to come here is `migrated`, naming the collection or page). Output `agent/parity/dispositions.csv`
+with rows per body and per rule, and `agent/parity/dispositions-urls.csv` for
+exceptions and for tier A URLs:
 
-Propose by rule wherever a pattern covers many URLs ("past events before 2024:
-redirect to the events archive, 312 URLs"), and list the rules first so Jordan can
-approve or change a rule in one decision. Individual rows are for exceptions and for
-tier A. `decided_by` is `proposed` until Jordan rules.
+`body_or_url, disposition, target, tier, rule, decided_by`
+
+The report for this stage is a **one-page decision list for Jordan**: each body, its
+size, its tier, my proposal and why, in plain language, ordered by tier. He rules by
+body; `decided_by` is `proposed` until he does. Rules for the long tail (for example
+"events before 2024: redirect to the events archive, N URLs") are listed first so a
+single decision covers them.
 
 From the approved dispositions, generate `agent/parity/redirects-draft.txt` in the
-host's redirect format. It is a draft: do not install it. Check it by script: every
-legacy URL with a 200 status appears exactly once; no target is itself redirected;
-every target route exists in the built site.
+host's redirect format: the script expands each body's fate and target to its URLs
+(a body needs a target route, or `none` for retired) and applies the URL-level
+overrides. It is a draft: do not install it. Check it by script: every legacy URL with
+a 200 status appears exactly once; no target is itself redirected; every target route
+exists in the built site. Separately, the draft has a section for **this site's own
+stubs**: Jordan asked (5 October 2026) for "replace meta-refresh stubs with real
+redirects" under `pages/highlights/` to be done with this list. They are routes here,
+not legacy URLs, so the legacy check does not cover them; the script checks that each
+stub's target exists. Installing anything is a code change and a URL change (rule 8),
+with Jordan's approval, in its own pull request.
 
 ## Stage 8. Report and backlog.
 
 `agent/reports/YYMMDD_parity-summary.md`, two pages, for a reader who is not a
-developer:
+developer. It leads with the answer to the question in "Priority":
 
-1. The headline counts: legacy URLs; how many are migrated, merged, redirected,
-   retired, external, undecided; the same split for tier A alone.
+1. **The bodies of work, ranked**: a table of body, size (URLs and words), who it
+   serves, status here, tier, decided fate. Cyberseminars appear as "known, deferred".
 2. What this site has that the legacy site does not.
-3. Structural gaps: navigation entries, page types and functions with no counterpart.
-4. Content gaps by collection, with counts ("cyberseminars: N of M present").
-5. Factual discrepancies, by type, with the ten that matter most.
-6. What was not examined (P7).
-7. A proposed backlog, as roadmap tasks: content tasks (which collection, how many
+3. Structural gaps: navigation entries, page types and functions with no counterpart
+   (from stage 3).
+4. The headline counts: legacy URLs; how many are migrated, merged, redirected,
+   retired, external, undecided; the same split for tier A alone.
+5. Content gaps by collection, with counts ("cyberseminars: N of M present"), from
+   `bodies.csv` and `mapping.csv`.
+6. Factual discrepancies that matter (stage 5b), with the ten that matter most.
+7. What was not examined (P7).
+8. A proposed backlog, as roadmap tasks: content tasks (which collection, how many
    items, what source), code tasks (schema fields, page types, functions), and
    decisions. Each with its tier and a rough size. Nothing is started.
 
 ## Refresh
 
 The legacy site keeps publishing until this one replaces it. When Jordan says
-"refresh parity": take a new snapshot under a new date, re-run stages 1 and 4 by
-script, and report only the difference since the last run: new legacy URLs, changed
-pages among tier A, and matches that broke. Append one line per refresh to
+"refresh parity": take a new snapshot under a new date, re-run stages 1, 4 and 5a by
+script, and report only the difference since the last run: new legacy URLs (and any
+that fit no body), changed pages among tier A, and matches that broke. Append one line per refresh to
 `agent/ingest-log.md`.
 
 ## Starting observations
