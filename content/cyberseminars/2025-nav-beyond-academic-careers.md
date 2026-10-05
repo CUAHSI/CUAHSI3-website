@@ -9,5 +9,6 @@ speakers: [Mazvita Chikomo, Kelly Garvey, Billy Williams, Kelly Caylor, Heather 
 speaker_orgs: [Rutgers University, UC Santa Barbara, AGU, UC Santa Barbara, US EPA, NSF, Oregon State University]
 tags: [career-development, non-academic, skills, early-career]
 has_transcript: false
-published: true
+published: false
 description: Session 2 of 4. Panel discussion on identifying and communicating transferable skill sets for careers in government, industry, non-profit, and policy — with speakers from across the hydrology career spectrum. 110 live attendees.
+---
