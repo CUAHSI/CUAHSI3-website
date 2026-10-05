@@ -30,7 +30,7 @@ http.createServer(async (req, res) => {
   if (mode === 'pagerredirect') {
     if (home) return html('<a href="/events">e</a>')
     if (u.pathname === '/events' && !u.search) return html('<a href="/events?page=2">next</a>')
-    if (u.pathname === '/events' && u.search) { res.writeHead(301, { location: '/events/' + u.search }); return res.end() }
+    if (u.pathname === '/events' && u.search) { res.writeHead(301, { location: '/events/' + u.search + '&utm_x=1' }); return res.end() }
     return html('listing page ' + u.pathname + u.search)
   }
 

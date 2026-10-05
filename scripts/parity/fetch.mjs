@@ -115,7 +115,7 @@ const logRow = (seq, method, url, status, location, ctype, bytes, seconds, saved
 
 // ---- the stop marker: only Jordan's decision removes it ----------------------------------------------------------------
 if (argv['clear-stop'] !== undefined) {
-  if (argv['clear-stop'] !== g.stopped) die(5, '--clear-stop needs the exact stop reason as its value: "' + g.stopped + '"')
+  if (argv['clear-stop'] !== g.stopped) die(5, '--clear-stop needs the exact stop reason as its value (shown when a run is refused). It is Jordan\'s decision.')
   logRow(Math.max(0, ...fs.readFileSync(LOG, 'utf8').split('\n').slice(1).filter(Boolean).map(l => Number(parseCsvLine(l)[0]) || 0)), 'NOTE', '', '', '', '', '', '', '', 'stop marker cleared by decision: ' + g.stopped)
   g.stopped = null; g.consecutiveFailures = 0; saveG(); console.log('stop marker cleared (it is Jordan\'s decision)')
 }
@@ -130,6 +130,7 @@ if (state.inflight) {           // killed between sending a request and logging 
   const [m, ...u] = state.inflight.split(' '); requests++; done.add(state.inflight)
   logRow(requests, m, u.join(' '), 'LOST', '', '', '', '', '', 'in flight when the previous run ended: counted, not repeated')
   state.inflight = null; saveState()
+  g.lastEnd = Date.now(); saveG()                               // the killed request may still be running: wait the full spacing
 }
 const files = readJson(FILES_JSON, {})   // url -> { pages: [...] }
 const queue = []                // ordinary pages
@@ -167,7 +168,8 @@ function followRedirect(url, location) {
   const c = canon(target.href, url)
   if (!c || c.external || c.file) return
   if (c.url === url) {
-    const exact = new URL(target.href); exact.hash = ''; if (!c.pager) exact.search = ''
+    const exact = new URL(target.href); exact.hash = ''; exact.protocol = new URL(ORIGIN).protocol
+    exact.search = c.pager && c.url.includes('?') ? '?' + c.url.split('?')[1] : ''           // only ?page=N, never the redirect's own query
     if (exact.href !== url && !done.has('GET ' + exact.href) && !queued.has(exact.href)) { queued.add(exact.href); (c.pager ? pagerQueue : queue).unshift({ url: exact.href, why: 'redirect-slash' }) }
   } else enqueue(c, 'redirect')
 }
@@ -254,10 +256,12 @@ async function request(method, url, why) {
     state.checkpointDone = true; saveState()
     const per = state.activeMs / 1000 / requests
     const known = requests + queue.length + pagerQueue.length + Object.keys(files).length
+    const slashRedirects = fs.readFileSync(LOG, 'utf8').split('\n').filter(l => l.endsWith(',redirect-slash')).length
     const text = [
       'CHECKPOINT after ' + requests + ' requests of this snapshot (' + new Date().toISOString() + ')',
       'measured: ' + per.toFixed(2) + ' s per request including the ' + (SPACING / 1000) + ' s spacing (active time only)',
       'known so far: ' + requests + ' made, ' + queue.length + ' pages queued, ' + pagerQueue.length + ' pager pages queued, ' + Object.keys(files).length + ' files seen = ' + known + ' requests: ' + (known * per / 60).toFixed(0) + ' minutes at this rate',
+      'requests that followed a trailing-slash redirect: ' + slashRedirects + ' of ' + requests + ' (if this is large, every page costs two requests)',
       'worst case at the ' + CAP + '-request cap: ' + (CAP * per / 60).toFixed(0) + ' minutes (the limit is ' + MAX_MINUTES + ')'
     ].join('\n')
     fs.writeFileSync(path.join(DIR, 'rate-report.txt'), text + '\n'); console.log(text)
