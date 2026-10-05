@@ -48,6 +48,8 @@ Tiers: A 10 bodies (227 URLs, 16,197 clicks, 75% of www clicks), B 8 bodies (501
 | C | Student resources | 31 (0.1%) | 5,815 | 3 | 1 | 0 | Low | absent |
 | - | Broken or empty legacy URLs | 358 (1.7%) | 8,173 | 25 | 1 | 0 | n/a | n/a |
 
+**Share of all www clicks (21,591; the other CUAHSI properties are excluded):** tier A bodies cover **75.0%** (16,197), tier A plus B **89.9%** (19,406), and **6.7%** (1,436 clicks) fall on www URLs outside every body (not in the snapshot: section 4). The rest is tier C 1.8% (391) and the broken or redirecting body 1.7% (358); the four add to 100%.
+
 **What to look at first (mine):**
 1. **Graduate programs directory: tier A, absent, 12.3% of www clicks.** 2,646 clicks and 150,000 impressions on 67 URLs, making it the **largest absent body by clicks** (among the bodies in the snapshot). Partial bodies are thinner here but not absent: data tools (1,804 clicks) and programs (1,922) draw similar traffic; and 716 clicks on job-board URLs and 496 on files sit outside every body (section 4). The 23 listing pages carry 2,467 of the clicks (the single listing page, `/students/graduate-programs-in-water-science`, 1,359); the 44 `-dev` stubs Jordan noted at stage 1 carry 179.
 2. **Policies and conduct: tier A, absent, 0.2% of clicks.** Tier A on cost, not traffic: a code of conduct and a way to report a concern.
