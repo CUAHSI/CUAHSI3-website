@@ -7,6 +7,5 @@ content/cyberseminars/2025-nav-beyond-academic-funding.md
 content/cyberseminars/2025-post-field-data-practices.md
 content/cyberseminars/2025-usgs-nwaa-understanding.md
 content/cyberseminars/2025-usgs-water-data-apis.md
-content/members/reps.json[47]
 content/research/2025-datacite-migration.md
 content/research/2025-hydrocare-ndistem.md
