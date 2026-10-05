@@ -46,7 +46,9 @@ const FILE_EXT = /\.(pdf|docx?|xlsx?|pptx?|zip|gz|csv|txt|rtf|odt|ods|odp|kml|km
 fs.mkdirSync(OUT, { recursive: true })
 
 const EMAIL_G = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g   // P8: an email address never appears in an output
-const csvCell = v => { const s = String(v ?? '').replace(/[\r\n]+/g, ' ').replace(EMAIL_G, '<email>'); return /[",]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s }
+const emailIds = new Map()                      // each distinct address gets a number, in order of first appearance (rows are sorted, so it is stable)
+const maskEmail = a => { const k = a.toLowerCase(); if (!emailIds.has(k)) emailIds.set(k, emailIds.size + 1); return '<email-' + emailIds.get(k) + '>' }
+const csvCell = v => { const s = String(v ?? '').replace(/[\r\n]+/g, ' ').replace(EMAIL_G, maskEmail); return /[",]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s }
 const parseCsvLine = line => { const out = []; let cur = '', q = false; for (let i = 0; i < line.length; i++) { const ch = line[i]; if (q) { if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++ } else if (ch === '"') q = false; else cur += ch } else if (ch === '"') q = true; else if (ch === ',') { out.push(cur); cur = '' } else cur += ch } return [...out, cur] }
 const writeCsv = (file, header, rows) => fs.writeFileSync(path.join(OUT, file), header.join(',') + '\n' + rows.map(r => header.map(h => csvCell(r[h])).join(',')).join('\n') + '\n')
 
@@ -127,8 +129,8 @@ for (const [url, g] of gets) {
   const h1 = ($main.find('h1').first().text() || $('h1').first().text()).replace(/\s+/g, ' ').trim()
   // on item pages the <h1> is only a back-link ("←News") and <title> only the section name: the item's own title is the
   // first non-empty heading below it (h2 to h6)
-  let title = h1
-  if (/^[←‹<]/.test(h1) || !h1) { title = ''; $main.find('h2,h3,h4,h5,h6').each((_, e) => { const t = $(e).text().replace(/\s+/g, ' ').trim(); if (t && !title) title = t }); if (!title) title = headTitle }
+  let title = h1 || headTitle
+  if (/^[←‹<]/.test(h1)) { title = ''; $main.find('h2,h3,h4,h5,h6').each((_, e) => { const t = $(e).text().replace(/\s+/g, ' ').trim(); if (t && !title) title = t }); if (!title) title = headTitle }
   // a heading that is only the site's script-hidden email block means the name itself is not in the fetched HTML (P7); the
   // script is not decoded because it also holds email addresses (P8)
   if (/email hidden; JavaScript is required/i.test(title)) title = '(hidden by script)'
@@ -178,6 +180,7 @@ const rules = []
 const rule = (id, description, test, type) => rules.push({ id, description, test, type, count: 0 })
 const segs = u => pathOf(u).split('/').filter(Boolean)
 rule('R00a', 'status is not 200: a redirect or an error has no page content (its redirect_target, if any, is in the row)', (u, i, st) => st !== '200', 'other')
+rule('R00c', 'status 200 but the page content is empty (no text in <main>)', (u, i, st) => st === '200' && !!i && i.word_count === 0, 'other')
 rule('R00b', 'a listing by structure: the page carries the category filter form, or the URL ends in /pN (a pager page)', (u, i) => !!i?.hasFilter || /\/p\d+$/.test(pathOf(u)), 'listing')
 rule('R01', 'path /community/news/<slug> whose slug or title mentions "newsletter"', (u, i) => segs(u)[0] === 'community' && segs(u)[1] === 'news' && segs(u).length === 3 && /newsletter/i.test(segs(u)[2] + ' ' + (i?.title || '')), 'newsletter issue')
 rule('R02', 'path /community/news/<slug>', u => segs(u)[0] === 'community' && segs(u)[1] === 'news' && segs(u).length === 3, 'news post')
@@ -192,7 +195,7 @@ rule('R10', 'path /students/graduate-programs-in-water-science-dev/<slug> (a stu
 rule('R11', 'path /community/water-data-portals/<slug>', u => segs(u)[0] === 'community' && segs(u)[1] === 'water-data-portals' && segs(u).length === 3, 'data portal entry')
 rule('R12', 'path /workshops/<slug>, except the past-workshops list and /workshops/propose-a-workshop (a call page)', u => segs(u)[0] === 'workshops' && segs(u).length === 2 && !['past-workshops', 'propose-a-workshop'].includes(segs(u)[1]), 'workshop')
 rule('R13', 'a listing: a collection root (/events, /community/news, /cyberseminars, /cyberseminars/all-upcoming, /job-board, /about/our-team, /about/library and its four category pages (annual-reports, board-and-membership-minutes, reports-and-publications, strategic-plans: they list documents and are linked only from the library page), /faculty/guest-lecturer-database, /community/water-data-portals, /workshops, /all-programs-services), anything under /students/graduate-programs-in-water-science (the paginated lists) and /workshops/past-workshops', u => ['/events', '/community/news', '/cyberseminars', '/cyberseminars/all-upcoming', '/job-board', '/about/our-team', '/about/library', '/faculty/guest-lecturer-database', '/community/water-data-portals', '/workshops', '/all-programs-services', '/workshops/past-workshops', '/about/library/annual-reports', '/about/library/board-and-membership-minutes', '/about/library/reports-and-publications', '/about/library/strategic-plans'].includes(pathOf(u)) || pathOf(u) === '/students/graduate-programs-in-water-science' || pathOf(u).startsWith('/students/graduate-programs-in-water-science/') || pathOf(u).startsWith('/workshops/past-workshops/'), 'listing')
-rule('R14', 'the home page and the top-level navigation pages (/about, /students, /faculty, /community, /data-services/solutions, /donate)', u => pathOf(u) === '/' || [...navTree].some(t => t.url && pathOf(t.url) === pathOf(u)), 'landing page')
+rule('R14', 'the home page and the top-level navigation pages that returned a page (/students, /faculty, /community, /data-services/solutions, /donate; /about is a redirect and falls under R00a)', u => pathOf(u) === '/' || [...navTree].some(t => t.url && pathOf(t.url) === pathOf(u)), 'landing page')
 rule('R15', 'a named CUAHSI program page (my judgment): /summer-institute, /virtual-university, /cyberwater, /next-generation-modeling-ci, /grant-opportunities (with its fellowship pages)', u => ['/summer-institute', '/virtual-university', '/cyberwater', '/next-generation-modeling-ci'].includes(pathOf(u)) || pathOf(u) === '/grant-opportunities' || pathOf(u).startsWith('/grant-opportunities/'), 'program')
 rule('R16', 'any other page with content (an <h1> or a title)', (u, i) => !!i && !!(i.h1 || i.title), 'static page')
 rule('R17', 'nothing else matched: a page with no title and no h1', () => true, 'other')
@@ -263,6 +266,7 @@ fs.writeFileSync(path.join(OUT, 'stage1-numbers.json'), JSON.stringify({
   brokenEmailLinks: brokenLinks.filter(b => b.kind.startsWith('an email')).length, linkedNotInSitemap: [...linkedAnywhere].filter(u => !sitemap.has(u)).length, linkedAnywhere: linkedAnywhere.size,
   files: fileRows.length, filesSized: fileRows.filter(f => f.size_bytes).length, redirects: redirects.length, brokenLinkRows: brokenLinks.length,
   navTopLevel: navTree.length, navLinks: navLinks.size, footerLinks: footerLinks.size,
+  emptyPages: rows.filter(r => r.status === '200' && r.word_count === 0).length,
   titleHiddenByScript: rows.filter(r => r.title === '(hidden by script)').length,
   hasForm: rows.filter(r => r.has_form === true).length, hasEmbed: rows.filter(r => r.has_embed === true).length, hasContact: rows.filter(r => r.has_contact_details === true).length, inNav: rows.filter(r => r.in_nav).length,
   unassignedSection: rows.filter(r => r.section === 'none').length, ruleCounts: rules.map(r => [r.id, r.type, r.count])

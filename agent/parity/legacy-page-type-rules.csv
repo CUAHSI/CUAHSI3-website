@@ -1,5 +1,6 @@
 rule,page_type,urls_caught,description
 R00a,other,12,"status is not 200: a redirect or an error has no page content (its redirect_target, if any, is in the row)"
+R00c,other,5,status 200 but the page content is empty (no text in <main>)
 R00b,listing,62,"a listing by structure: the page carries the category filter form, or the URL ends in /pN (a pager page)"
 R01,newsletter issue,19,"path /community/news/<slug> whose slug or title mentions ""newsletter"""
 R02,news post,49,path /community/news/<slug>
@@ -14,7 +15,7 @@ R10,graduate program,107,"path /students/graduate-programs-in-water-science-dev/
 R11,data portal entry,44,path /community/water-data-portals/<slug>
 R12,workshop,20,"path /workshops/<slug>, except the past-workshops list and /workshops/propose-a-workshop (a call page)"
 R13,listing,11,"a listing: a collection root (/events, /community/news, /cyberseminars, /cyberseminars/all-upcoming, /job-board, /about/our-team, /about/library and its four category pages (annual-reports, board-and-membership-minutes, reports-and-publications, strategic-plans: they list documents and are linked only from the library page), /faculty/guest-lecturer-database, /community/water-data-portals, /workshops, /all-programs-services), anything under /students/graduate-programs-in-water-science (the paginated lists) and /workshops/past-workshops"
-R14,landing page,6,"the home page and the top-level navigation pages (/about, /students, /faculty, /community, /data-services/solutions, /donate)"
+R14,landing page,6,"the home page and the top-level navigation pages that returned a page (/students, /faculty, /community, /data-services/solutions, /donate; /about is a redirect and falls under R00a)"
 R15,program,5,"a named CUAHSI program page (my judgment): /summer-institute, /virtual-university, /cyberwater, /next-generation-modeling-ci, /grant-opportunities (with its fellowship pages)"
-R16,static page,47,any other page with content (an <h1> or a title)
+R16,static page,42,any other page with content (an <h1> or a title)
 R17,other,0,nothing else matched: a page with no title and no h1

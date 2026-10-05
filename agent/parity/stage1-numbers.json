@@ -21,8 +21,8 @@
  },
  "byType": {
   "landing page": 6,
-  "other": 12,
-  "static page": 47,
+  "other": 17,
+  "static page": 42,
   "listing": 73,
   "document or file": 76,
   "person": 91,
@@ -92,10 +92,11 @@
  "sitemapNotLinkedByType": {
   "document or file": 76,
   "person": 22,
-  "static page": 8,
+  "static page": 3,
   "cyberseminar": 1,
   "event": 105,
-  "listing": 3
+  "listing": 3,
+  "other": 5
  },
  "linkedNotInSitemapByType": {
   "listing": 56,
@@ -113,6 +114,7 @@
  "navTopLevel": 6,
  "navLinks": 26,
  "footerLinks": 5,
+ "emptyPages": 5,
  "titleHiddenByScript": 67,
  "hasForm": 61,
  "hasEmbed": 38,
@@ -124,6 +126,11 @@
    "R00a",
    "other",
    12
+  ],
+  [
+   "R00c",
+   "other",
+   5
   ],
   [
    "R00b",
@@ -208,7 +215,7 @@
   [
    "R16",
    "static page",
-   47
+   42
   ],
   [
    "R17",
