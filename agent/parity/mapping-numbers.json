@@ -1,0 +1,178 @@
+{
+ "total": 767,
+ "byType": {
+  "landing page": {
+   "legacy": 6,
+   "exact": 1,
+   "probable": 3,
+   "weak": 0,
+   "none": 2
+  },
+  "other": {
+   "legacy": 17,
+   "exact": 0,
+   "probable": 3,
+   "weak": 2,
+   "none": 12
+  },
+  "static page": {
+   "legacy": 42,
+   "exact": 0,
+   "probable": 3,
+   "weak": 10,
+   "none": 29
+  },
+  "listing": {
+   "legacy": 73,
+   "exact": 0,
+   "probable": 18,
+   "weak": 2,
+   "none": 53
+  },
+  "document or file": {
+   "legacy": 76,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 76
+  },
+  "person": {
+   "legacy": 91,
+   "exact": 22,
+   "probable": 0,
+   "weak": 0,
+   "none": 69
+  },
+  "news post": {
+   "legacy": 49,
+   "exact": 4,
+   "probable": 2,
+   "weak": 1,
+   "none": 42
+  },
+  "newsletter issue": {
+   "legacy": 19,
+   "exact": 8,
+   "probable": 0,
+   "weak": 2,
+   "none": 9
+  },
+  "data portal entry": {
+   "legacy": 44,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 44
+  },
+  "cyberseminar": {
+   "legacy": 67,
+   "exact": 4,
+   "probable": 7,
+   "weak": 2,
+   "none": 54
+  },
+  "cyberseminar series": {
+   "legacy": 20,
+   "exact": 0,
+   "probable": 0,
+   "weak": 5,
+   "none": 15
+  },
+  "program": {
+   "legacy": 5,
+   "exact": 2,
+   "probable": 0,
+   "weak": 0,
+   "none": 3
+  },
+  "event": {
+   "legacy": 118,
+   "exact": 6,
+   "probable": 4,
+   "weak": 8,
+   "none": 100
+  },
+  "job": {
+   "legacy": 13,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 13
+  },
+  "graduate program": {
+   "legacy": 107,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 107
+  },
+  "workshop": {
+   "legacy": 20,
+   "exact": 2,
+   "probable": 2,
+   "weak": 4,
+   "none": 12
+  }
+ },
+ "hereWithout": {
+  "events": {
+   "items": 40,
+   "withoutLegacy": 23
+  },
+  "news": {
+   "items": 12,
+   "withoutLegacy": 1
+  },
+  "research": {
+   "items": 31,
+   "withoutLegacy": 29
+  },
+  "newsletter": {
+   "items": 9,
+   "withoutLegacy": 4
+  },
+  "cyberseminars": {
+   "items": 11,
+   "withoutLegacy": 2
+  },
+  "jobs": {
+   "items": 29,
+   "withoutLegacy": 29
+  },
+  "programs": {
+   "items": 4,
+   "withoutLegacy": 0
+  }
+ },
+ "staffMapped": 22,
+ "newTargetsWithMoreThanOneLegacy": [
+  {
+   "target": "content/programs/snow-field-school.md",
+   "legacy": 6
+  },
+  {
+   "target": "content/cyberseminars/2025-post-field-data-practices.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/cyberseminars/2025-usgs-water-data-apis.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/events/260101-snow-field-school.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/events/260701-watersofthack.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/newsletter/260910-september.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/research/2025-spatial-modeling-workshop.md",
+   "legacy": 2
+  }
+ ]
+}
