@@ -146,14 +146,16 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | .claude/agents/reviewer.md | line 21 says any path under content/ is a finding. In Phase 2 every content task would be flagged. The file is protected (permission rules deny edits under .claude/), so Jordan has to change it: for example 'a path under content/ is a finding unless the branch is a content task (task/content-...)'. Same file as the dead .rgrid checklist line noted earlier.
 261004 | visual tests | the screenshot suite fails one or two tests in the first run after a build, each time a test that took about 11 s instead of about 2 s (about-membership 390; about and about-governance 1280); reruns pass. Probably a slow first load on a busy machine; the tests wait for images and fonts but not for the machine to catch up. Not fixed (playwright.config.ts / tests/visual are not rule-8 files; a longer wait or one retry is a candidate).
 261004 | content/events/ | two apparent duplicate events (visible as repeated rows on /community/events): WaterSoftHack 2026, 20 Jul, in 260701-watersofthack.md (slug watersofthack-2026) and 260720-watersofthack-2026.md (slug watersofthack-2026-july); and the 24 Jun open house in 260601-virtual-open-house.md ('CUAHSI Virtual Open House', slug virtual-open-house-2026) and 260624-spring-virtual-open-house.md ('CUAHSI Spring Virtual Open House', slug spring-virtual-open-house-2026). Both pairs have different slugs, so each has its own page and URL; removing one would break a URL (rule 8) and the slugs may be linked from newsletters. A Phase 2 content question for Jordan, not touched.
+261005 | .claude/hooks/guard.mjs | line 36 blocks any git command that sends commits to a remote when the command text contains the whole word for the default branch (or its older name) anywhere, so a content branch named like `content/<that word>-page-fix` could not be sent, and a command whose commit message or PR title merely contains the word is blocked too (seen several times on 5 October). Jordan's file; not touched. Workaround so far: keep those words out of branch names and split commands.
 
 # Phase 2 roadmap (content agent)
 
 Phase 2 was opened by Jordan on 4 October 2026. Content changes go on `content/short-name`
 branches under the content rules in CLAUDE.md (C1 to C13). The guard hook and permission
-setting that block edits to `content/` are protected files and change only when Jordan runs
-the unlock; until then the guardrails in `verify.sh` (branch kind, deletions, slugs,
-`people_mentioned`, known-failures) are in place but the hook still blocks content edits.
+setting that blocked edits to `content/` were unlocked by Jordan on 5 October 2026
+(`PHASE = 2`; deny rule removed; the commit reaches the default branch through the unlock PR). The hook
+does not check branch kind, so content-versus-code separation rests on the guardrails in
+`verify.sh` (branch kind, deletions, slugs, `people_mentioned`, known-failures) and review.
 
 | # | Task | Status | Notes |
 |---|---|---|---|
