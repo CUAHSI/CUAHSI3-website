@@ -31,8 +31,8 @@ So do not report that anything "looks correct." Report what you read.
    attention to: any `queryContent()` call; any element that switches between `<a>`,
    `<NuxtLink>` and a non-link; any `v-for` whose iterations render an `<img>` or
    differ in element type; any `findOne()`.
-3. **Layout.** Any `grid-template-columns` in a `style` attribute. Any `.rgrid` use
-   missing `rgrid-multi` or `rgrid-split`. Any grid that had responsive behaviour
+3. **Layout.** Any `grid-template-columns` in a `style` attribute. Any leftover
+   `.rgrid`, `rgrid-*` or `--cols` use (retired in the Tailwind migration). Any grid that had responsive behaviour
    before the change and has no visible mechanism for it after. For Tailwind
    migrations: for each migrated element, state the columns at phone, 640px and 900px
    before and after, as you read them from the classes. Flag every element where

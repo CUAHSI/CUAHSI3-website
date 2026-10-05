@@ -35,7 +35,7 @@ agent/eval-log.md  append-only record of tasks, interventions and defects
 agent/reports/     dated reports you produce (reconcile, audits, the Phase 1 evaluation). YYMMDD_name.md
 .agent/            scratch space, gitignored. Diffs for the reviewer, build baselines.
 .claude/agents/reviewer.md   read-only reviewer subagent
-.claude/hooks/guard.mjs      blocks edits to content/ while its PHASE is 1, and unsafe git commands
+.claude/hooks/guard.mjs      unsafe git commands; blocks edits to content/ only if its PHASE is set back to 1
 .claude/settings.json        permissions and hook wiring
 .github/pull_request_template.md  the PR description format
 ```
@@ -426,7 +426,8 @@ denominators. Do not fix silently.
 **Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
 reports any path outside the allowed set in rule 3.
 
-**Locks.** Until Jordan runs the unlock, `.claude/hooks/guard.mjs` (its `PHASE`) and the
-deny rule in `.claude/settings.json` still block edits to `content/`, and `reviewer.md`
-still calls any `content/` path a finding. Those files are Jordan's to change. If a hook
-or permission blocks you, stop and tell him; do not look for a way around it.
+**Locks.** Jordan lifted the Phase 2 locks on 5 October 2026: `PHASE = 2` in
+`.claude/hooks/guard.mjs`, the `content/` deny rule removed from `.claude/settings.json`,
+and `reviewer.md` check 1b added. Those files, and the rest of `.claude/`, are still
+Jordan's to change. If a hook or permission blocks you, stop and tell him; do not look
+for a way around it.
