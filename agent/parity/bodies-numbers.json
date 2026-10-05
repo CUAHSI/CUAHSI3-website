@@ -1,0 +1,13 @@
+{
+ "legacyUrls": 767,
+ "assigned": 767,
+ "unassigned": 0,
+ "bodies": 25,
+ "byStatus": {
+  "partial": 327,
+  "absent": 385,
+  "different": 24,
+  "present": 19,
+  "n/a": 12
+ }
+}
