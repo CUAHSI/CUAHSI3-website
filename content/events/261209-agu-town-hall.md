@@ -11,7 +11,7 @@ location:
   city: San Francisco
   url: https://www.cuahsi.org/events/2026-american-geophysical-union-annual-meeting
 description: >
-  CUAHSI's Town Hall at the AGU Annual Meeting (December 7 to 11, 2026),
+  Time: 1 to 2 pm PST (13:00 to 14:00). CUAHSI's Town Hall at the AGU Annual Meeting (December 7 to 11, 2026),
   session TH33F, in MC Room 2007 - West. Shaping the future of water science
   infrastructure and education as CUAHSI turns 25.
 tags: [conference, AGU, town-hall, community]

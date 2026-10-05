@@ -9,7 +9,7 @@ timezone: America/New_York
 location:
   mode: virtual
 description: >
-  Connect with CUAHSI staff, hear updates on upcoming plans, and share your
+  Time: 12 to 2 pm ET. Connect with CUAHSI staff, hear updates on upcoming plans, and share your
   perspectives.
 registration:
   required: true

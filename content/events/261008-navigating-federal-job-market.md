@@ -10,7 +10,7 @@ location:
   mode: virtual
   url: https://www.cuahsi.org/cyberseminars/series/2026-navigating-beyond-academic-waters
 description: >
-  A session in the 2026 Navigating (beyond) Academic Waters series, hosted by
+  Time: 1 to 2 pm ET. A session in the 2026 Navigating (beyond) Academic Waters series, hosted by
   the AGU Hydrology Section Student Subcommittee and CUAHSI for early career
   hydrologists. It brings together federal workers and contractors to discuss
   the current landscape and give a practical overview of today's federal job

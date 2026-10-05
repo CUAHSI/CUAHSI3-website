@@ -17,7 +17,7 @@ description: >
   professionals and senior scientists, modelers and remote sensors, with
   priority for graduate students and early career researchers. Participants
   must be able to spend days active in snow, and prior participants are not
-  eligible. Applications close October 7, 2026.
+  eligible. The final date to submit applications is October 7, 2026.
 registration:
   required: true
   url: https://cuahsi.jotform.com/262427634602960

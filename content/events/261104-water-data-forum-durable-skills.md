@@ -9,7 +9,7 @@ location:
   mode: virtual
   url: https://www.clevelandwateralliance.org/webinars
 description: >
-  A Water Data Forum on durable skills for the water workforce in the age of
+  Time: noon ET. A Water Data Forum on durable skills for the water workforce in the age of
   AI, held on Zoom with the Water Environment Federation and the Cleveland
   Water Alliance. Registration details will be posted on the Cleveland Water
   Alliance website.

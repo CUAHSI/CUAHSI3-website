@@ -9,7 +9,7 @@ timezone: America/New_York
 location:
   mode: virtual
 description: >
-  A 2.5-hour lecture-style webinar on how HydroShare supports the full
+  Time: 2:00 to 4:30 pm ET. A 2.5-hour lecture-style webinar on how HydroShare supports the full
   research data lifecycle, from planning and collection through description,
   preservation, discovery and integration. Open to any researcher interested
   in using HydroShare, with no capacity limit.
