@@ -332,15 +332,17 @@ October 2026). Things also change upstream, and not only on its `main`: on 5 Oct
 commits of job updates (3 new job files, 17 jobs set to `published: false`) and about 22 job
 and audit PRs were open against it. Check, read only: `git fetch upstream`;
 `git rev-list --count main..upstream/main`; `git log main..upstream/main`;
-`git branch -r --no-merged upstream/main`;
+`git branch -r --no-merged upstream/main` (it also lists `origin/*`; read the `upstream/` ones);
 `gh pr list --repo CUAHSI/CUAHSI3-website --state all --limit 40`. Bring upstream changes
-into the fork only through a branch from an up-to-date `main` and a PR (`content/short-name`
-for jobs files, with the content rules), never by merging on `main`. Do not merge a whole
+into the fork only through a branch from an up-to-date `main` and a PR, never by merging on
+`main`. Jobs files are content: a `content/short-name` branch with the content rules, never a
+`task/` branch (rule 3). Do not merge a whole
 upstream branch that is far behind `main` (`agent-prototype` was 222 commits behind): copy
 only the changed files, or ask Jordan. Run the validator on the result before opening the
 PR. If incoming files fail it (the three new jobs use `source: usajobs` and a `source_id`
 key, which the schema rejects), stop and tell Jordan: a schema change is a separate code PR
-(C1). Never describe what upstream holds without having fetched it.
+(C1), raised with Jordan before it is started. Never describe what upstream holds without
+having fetched it.
 
 **Start a task.** Jordan names a roadmap task or describes a new one. Confirm the tree
 is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`
