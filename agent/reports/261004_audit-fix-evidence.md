@@ -1,5 +1,7 @@
 # Evidence for the lockfile-only `npm audit fix` (4 October 2026)
 
+> **Status (added when this report was committed):** Jordan approved the lockfile-only fix; it was applied and merged as #40. The options below are the choices as they stood before that.
+
 **Nothing in the repository was changed.** This adds evidence to the recommendation already in `agent/reports/261004_dependency-audit.md` ("a separate small task: apply the lockfile-only fix; run `verify.sh --build` and the screenshot comparison"). That report decided which of the 36 findings matter and which can be fixed; **read it for those questions**. This one answers a different question: *if we ran the fix, what would happen to the built site and to the install?* I ran the real fix twice, each time in a throwaway git worktree of the default branch (commit `caa156a`, thrown away afterwards), and built and compared the result. Rule 8 applies to any dependency change, so the decision is Jordan's.
 
 ## What the fix does (it matches the earlier report)

@@ -1,5 +1,7 @@
 # Plan: the 12 content validator failures (4 October 2026)
 
+> **Status (added when this report was committed):** Jordan chose option A. The edits are waiting for the Phase 2 content locks to be lifted.
+
 Read-only analysis, written while the Phase 2 locks were still closed, so no content file was changed. It says what each failure is, the exact edit I would make, what changes on the site, and what I need from Jordan. Everything below was read from the files in the repo on the day; "I expect" marks anything I could not see without making the change.
 
 `npm run validate:content` reports **11 YAML parse failures** (9 cyberseminar files, 2 research files) and **1 schema failure** (1 of 229 entries in `members/reps.json`). `scripts/validate-content.known-failures.txt` lists them (12 lines).

@@ -1,5 +1,7 @@
 # Accessibility leftovers: options with measured contrast (4 October 2026)
 
+> **Status (added when this report was committed):** Jordan chose to leave accessibility as it is for now; nothing here was changed.
+
 Options for Jordan to choose from. **Nothing was changed.** Each item below is a visible design change (`tailwind.config.ts` is a rule-8 file and the colours are brand decisions), so I measured and laid out the choices; I did not pick. Contrast ratios are WCAG 2.x relative-luminance ratios that I computed myself from the hex values (not from a screenshot); AA needs 4.5:1 for normal-size text and 3:1 for large text (24px, or 18.66px bold).
 
 Background: after the contrast PR, `agent/eval-log.md` and the Noticed list record that 263 of 10,076 text runs on 121 pages still fall below AA: decorative arrows and the Cmd+K hint (153), dimmed past events (48), the clay accent (42), the ORCID badge (5). Those four add up to 248; the other 15 of the 263 are, per the log, the dimmed event type pills and one muted label on a darker tile.

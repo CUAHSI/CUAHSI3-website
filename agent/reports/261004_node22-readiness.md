@@ -1,5 +1,7 @@
 # Is the site ready to move from Node 20 to Node 22? (4 October 2026)
 
+> **Status (added when this report was committed):** Jordan decided not to change CI or Netlify yet; Node stays at 20.
+
 Evidence only. **Nothing was changed**: moving Netlify and CI to Node 22 edits `netlify.toml` (`NODE_VERSION = "20"`, line 6) and `.github/workflows/verify.yml` (`node-version: 20`, line 23). `netlify.toml` is a rule-8 file; the workflow is not named in rule 8, but I would ask first all the same. This report is the evidence for that decision.
 
 ## Why look
