@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./scripts/verify.sh)",
+      "Bash(./scripts/verify.sh --build)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch --show-current)"
+    ],
+    "deny": [
+      "Edit(/.claude/hooks/**)",
+      "Edit(/.claude/settings.json)",
+      "Read(/.env)",
+      "Read(/.env.*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

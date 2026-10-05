@@ -1,6 +1,6 @@
 # CUAHSI Website — cuahsi.org v3
 
-Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed via Cloudflare Pages.
+Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed on Netlify (see `netlify.toml`).
 
 **Local dev:** `npm install && npm run dev` → http://localhost:3000
 
@@ -127,24 +127,27 @@ All content lives in `content/` as Markdown (`.md`) or JSON files, queried via `
 
 ### File naming convention
 
-Dated content files use **YYMMDD-slug.md**:
+**Every dated content type uses YYMMDD-slug.md, no exceptions** — this includes `newsletter/`, which earlier used a `YYYY-MM.md` format inconsistent with the rest of the site. All newsletter files should follow the same convention as everything else:
 ```
-260531-hydrolearn-fellows.md     # May 31, 2026
-260211-board-marco-maneta.md     # February 11, 2026
+260531-hydrolearn-fellows.md     # May 31, 2026  (research)
+260701-july.md                   # July 2026 issue (newsletter — day is always 01)
+260211-board-marco-maneta.md     # February 11, 2026  (news)
 ```
-Unknown day → use `01`. The `slug` field in frontmatter drives the URL; the filename prefix is sort-order only.
+Unknown or not-applicable day → use `01`. The `slug` field in frontmatter drives the URL — the filename prefix is sort-order only, so renaming a file to match this convention never breaks a live link.
+
+`content/programs/` is the one exception: those three files aren't dated content (they're evergreen program descriptions), so they're just named by slug with no date prefix (`virtual-university.md`, not `260101-virtual-university.md`).
 
 ```
 content/
 ├── team/full-team.json          Single source of truth for all staff (array of objects)
 ├── members/reps.json            229 member institution reps — name, institution, email
-├── newsletter/    YYYY-MM.md    One file per issue
+├── newsletter/    YYMMDD-slug   One file per issue (day is always 01, e.g. 260701-july.md)
 ├── events/        YYMMDD-slug   One file per event
-├── cyberseminars/ YYYY-slug     One file per recording (+ transcripts/ subfolder)
+├── cyberseminars/ YYMMDD-slug   One file per recording (+ transcripts/ subfolder)
 ├── research/      YYMMDD-slug   One file per highlight (URL is /about/impact/, not /research/)
 ├── jobs/          YYMMDD-slug   One file per job listing
 ├── news/          YYMMDD-slug   Operational announcements only — see schema note below
-├── programs/      slug.md       CVU, Snow Field School, Summer Institute (3 files)
+├── programs/      slug.md       CVU, Snow Field School, Summer Institute — not dated, no prefix
 ├── board/                       Stub — no rendering page yet
 └── community/                   Stub — no rendering page yet
 ```
@@ -232,22 +235,20 @@ Note the trailing slash — that's what disambiguates `/news/` from `/newsletter
 
 ## Responsive layout system
 
-Grids are **not** set with inline `style="display:grid;grid-template-columns:..."` — that pattern can't be overridden by a media query (inline styles beat CSS specificity), which caused a real mobile-breakage bug earlier in this project. Instead, use the `.rgrid` classes defined in `assets/css/global.css`:
+Grids are **not** set with inline `style="display:grid;grid-template-columns:..."` — that pattern can't be overridden by a media query (inline styles beat CSS specificity), which caused a real mobile-breakage bug earlier in this project. Write them as mobile-first Tailwind utilities instead (the old `.rgrid` / `.rg-*` classes and the `--cols` variable were removed in the Tailwind migration):
 
 ```html
-<div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
-  <!-- 3-up card grid: 1 col on phones, 2 col on tablets, 3 col on desktop -->
+<!-- 3-up card grid: 1 col on phones, 2 col on tablets (640px), 3 col on desktop (900px) -->
+<div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
 </div>
 
-<div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:1fr 1fr;">
-  <!-- asymmetric 2-col split (hero, sidebar): stacked until 900px, then splits -->
+<!-- asymmetric 2-col split (hero, sidebar): stacked until 900px, then splits -->
+<div class="grid grid-cols-[1fr] gap-[48px] min-[900px]:grid-cols-[minmax(0,1fr)_240px]">
 </div>
 ```
 
-- `.rgrid-multi` — for symmetric N-up grids (card grids, footer columns, stats bands). Collapses to 2-up at 640px, full column count at 900px.
-- `.rgrid-split` — for asymmetric 2-track layouts (heroes, sidebars, intro bands). Stays fully stacked below 900px, then splits into the `--cols` template.
-- The actual column definition goes in `--cols` inside the `style` attribute — never write `grid-template-columns` directly in a `style` attribute again.
-- `.site-container` — use for outer page containers needing responsive side padding (40px → 20px on mobile).
+- Use the exact track list the design needs (`1fr`, `minmax(0,1fr)`): `grid-cols-2` writes `minmax(0,1fr)`, which differs from `1fr` when an item is wider than its track.
+- `.site-container` (in `assets/css/global.css`) — use for outer page containers needing responsive side padding (40px → 20px on mobile).
 
 If a page you're editing still has raw `grid-template-columns` in a `style` attribute, that's a bug — convert it to this system.
 
@@ -310,9 +311,10 @@ npx serve .output/public -l 4000
 ```
 Visit http://localhost:4000 to test search. Keep `npm run dev` running on :3000 for editing; use :4000 only to verify search.
 
-**Cloudflare Pages build settings:**
-- Build command: `nuxt generate && pagefind --site .output/public`
-- Build output directory: `.output/public`
+**Netlify build settings** (defined in `netlify.toml`):
+- Build command: `npm run build:search` (that is `nuxt generate && pagefind --site .output/public`)
+- Publish directory: `.output/public`
+- `NODE_VERSION = "20"`, `NITRO_PRESET = "static"`; every response carries `X-Robots-Tag: noindex, nofollow, noarchive`, and `/archive` redirects to `/community/newsletter`.
 
 ---
 

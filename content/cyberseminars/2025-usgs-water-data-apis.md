@@ -11,3 +11,4 @@ tags: [USGS, water-data, APIs, research-workflows, data-access]
 has_transcript: false
 published: true
 description: Joint webinar with USGS reviewing upcoming changes to the USGS Water Services APIs and their impacts on research workflows that depend on USGS streamflow, groundwater, and water quality data. 68 live attendees and 172 archived views.
+---

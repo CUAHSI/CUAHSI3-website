@@ -9,5 +9,6 @@ speakers: [Sujana Timilsina, Lindsay Platt, Admin Husic, Ashleigh Kirker, Paul L
 speaker_orgs: [University of Texas Austin, CUAHSI, Virginia Tech, Virginia Tech, NC State University]
 tags: [AI, machine-learning, data-science, career-development, hydrology]
 has_transcript: false
-published: true
+published: false
 description: Session 4 of 4. Panel on how AI and data science are reshaping hydrology careers — practical tools, emerging opportunities, and how to position yourself at the intersection of machine learning and water science. 162 live attendees, 425 archived views — the most-viewed session in the series.
+---
