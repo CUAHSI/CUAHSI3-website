@@ -131,7 +131,7 @@ Present (inventory row against the saved HTML, recomputed independently): `/even
 
 No email address and no phone number appears in any committed output (checked by search: 0 and 0); email addresses that occur as URLs are masked as `<email>`. **Names do appear**, as the legacy site's public URLs and titles state them: the titles of the 22 staff pages (one staff slug also carries the person's pronouns), about 69 lecturer names in URL slugs (`/faculty/guest-lecturer-database/<name>`), and names inside some event, news and cyberseminar titles and slugs. P8 asks only that contact details not be recorded, and none is; but the inventory is a list of URLs and the URLs carry names. Jordan to decide (item 12.3).
 
-## 12. For Jordan's review
+## 12. For Jordan's review (answered: see "Decisions" at the end)
 
 1. **Page types:** accept, merge or rename the four types I added (graduate program 107, data portal entry 44, workshop 20, program 5)? Merging them into `static page` would hide 176 URLs in one group.
 2. **The `-dev` path:** `/students/graduate-programs-in-water-science-dev/...` is 107 small stub pages (a median of 22 words, 46 of them under 20; one per university) in the sitemap, linked from the paginated lists; the path name suggests a development copy but they are the pages the live lists link to.
@@ -141,3 +141,44 @@ No email address and no phone number appears in any committed output (checked by
 6. **Leads for later stages, not findings:** the AGU 2025 title and date line disagree (stage 5, P4); cyberseminars here are 67 sessions plus 20 series pages, against the homepage's "over 150 recorded cyberseminars" (stage 4: matching will show how the 150 is counted); the three malformed email links; `/workshops/propose-a-workshop` is a call page.
 
 Next: stage 2 (inventory of this site's routes) once Jordan has reviewed.
+
+## Decisions (Jordan, 5 October 2026)
+
+- **Page types:** graduate program, data portal entry, workshop and program are accepted as separate types and are **not** merged, so that stage 7 can propose a fate by rule for each.
+- **Names in URLs:** kept. They are public URLs and stages 4 and 7 need them; the personal-data rule covers contact details, which the inventory does not hold. The email-hiding script is left undecoded.
+- **The 107 `-dev` graduate-program stubs and the 27 URLs with no navigation section:** noted. The 27 are listed below.
+- **Next:** after this PR merges, stages 2 and 3 each on their own branch without a pause between them, then stage 4, which stops for review. The Search Console export is at `raw/search-console/261005_pages_all.csv` (for stage 6).
+
+## Appendix: the 27 URLs with no navigation section
+
+No navigation entry covers these paths, and no page that links to them has a section (the rule is in the header of `parse.mjs`). By type: 16 workshops, 5 empty pages, 4 static pages, 2 listings.
+
+| URL | Page type | Status | Section rule |
+|---|---|---|---|
+| `/workshops/past-workshops` | listing | 200 | no section found |
+| `/workshops/past-workshops/p2` | listing | 200 | no section found |
+| `/library/annual-report` | other | 200 | no section found |
+| `/library/board-meeting-minutes` | other | 200 | no section found |
+| `/library/membership-meeting-minutes` | other | 200 | no section found |
+| `/library/strategic-plan` | other | 200 | no section found |
+| `/library/technical-report` | other | 200 | no section found |
+| `/authorship-agreement-water-prediction-innovators-summer-institute` | static page | 200 | no section found |
+| `/new-grad-guide` | static page | 200 | no section found |
+| `/news-opportunities` | static page | 200 | no section found |
+| `/travel-policy` | static page | 200 | no section found |
+| `/workshops/advanced-short-course-integrated-simulation-of-watershed-systems-using-parflow` | workshop | 200 | no section found |
+| `/workshops/diy-water-monitoring-data-portals-and-watershed-modeling` | workshop | 200 | no section found |
+| `/workshops/master-class-advanced-techniques-in-watershed-science` | workshop | 200 | no section found |
+| `/workshops/master-class-food-energy-and-water-systems-in-a-global-economy` | workshop | 200 | no section found |
+| `/workshops/open-hydrological-sensor-technologies-diy-stream-sensor-networks` | workshop | 200 | no section found |
+| `/workshops/open-source-electronics-for-water-research-and-real-time-water-monitoring` | workshop | 200 | no section found |
+| `/workshops/open-source-urban-hydrology-sensor-bootcamp` | workshop | 200 | no section found |
+| `/workshops/reactive-transport-with-sophisticated-reaction-networks-hands-on-experience-with-the-pflotran-reaction-sandbox` | workshop | 200 | no section found |
+| `/workshops/short-course-the-science-and-practice-of-operational-ensemble-hydrological-prediction` | workshop | 200 | no section found |
+| `/workshops/snow-measurement-field-school-2023` | workshop | 200 | no section found |
+| `/workshops/snow-measurement-field-school-2024-2` | workshop | 200 | no section found |
+| `/workshops/snow-measurement-field-school-2026` | workshop | 200 | no section found |
+| `/workshops/snow-measurement-field-school-january-2022` | workshop | 200 | no section found |
+| `/workshops/stakeholder-informed-spatial-modeling-for-hydrologic-sciences` | workshop | 200 | no section found |
+| `/workshops/surface-water-field-school` | workshop | 200 | no section found |
+| `/workshops/the-community-wrf-hydro-modeling-system-abridged-virtual-training-workshop-october-2021` | workshop | 200 | no section found |
