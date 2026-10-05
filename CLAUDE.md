@@ -18,20 +18,21 @@ same PR (see "New footgun").
 
 ```
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
-content/           the content. Phase 2 is open (rule 3): content tasks only, one per branch.
+content/           the content. Phase 2: changed only on a content/short-name branch (rule 3).
 visual/            the visual baseline: 52 committed screenshots and README.md. tests/visual/ and
                    playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
                    (.github/workflows/verify.yml; not the screenshot comparison, which needs a Mac).
+                   check-content-branch.mjs: the branch-kind, deletion, slug and known-failures checks.
 scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
                    content-schemas.mjs + validate-content.mjs (Zod schemas and the
                    content validator; Content v2 cannot enforce schemas itself)
-agent/roadmap.md   Phase 1 tasks in order, with status and acceptance criteria
+agent/roadmap.md   Phase 1 tasks and the Phase 2 roadmap, with status and acceptance criteria
 agent/reconcile.md the "verify first" checklist for task 1
 agent/content-model.md  collection schemas, cross-link rules, editorial rules.
                    Written from memory by the previous agent. Read before task 2.
 agent/eval-log.md  append-only record of tasks, interventions and defects
-agent/reports/     dated reports you produce (reconcile, audits). YYMMDD_name.md
+agent/reports/     dated reports you produce (reconcile, audits, the Phase 1 evaluation). YYMMDD_name.md
 .agent/            scratch space, gitignored. Diffs for the reviewer, build baselines.
 .claude/agents/reviewer.md   read-only reviewer subagent
 .claude/hooks/guard.mjs      blocks edits to content/ while its PHASE is 1, and unsafe git commands
@@ -73,23 +74,33 @@ version mismatch. Ignore it.
    change touching layout, markup structure or links, do not write "verified,"
    "tested" or "works." Write what you checked, and list what a human must look at
    (see "Visual review request").
-3. **`content/**` changes only in a content task (Phase 2, opened by Jordan on 4 October 2026).**
-   Phase 1 froze `content/` so that any breakage was a code regression; that period is over. Now:
-   a content change is its own task, its own branch (`task/content-short-name`) and its own PR, and
-   it changes `content/` (plus the log and, if a validator failure is fixed, the known-failures list)
-   and no site code; a code change that a content change needs is a second PR. Never invent content:
-   every fact comes from Jordan or from a file already in the repo, and existing prose is not
-   rewritten beyond the task. Follow the content model as the files actually are (rule 1: check
-   `agent/content-model.md` against them). The frontmatter `slug` drives the URL, so changing a slug
-   changes a URL, and deleting or unpublishing a content file removes a route (rule 8: ask first). A
-   problem found outside the task goes in Noticed (rule 5). `npm run validate:content` must not get worse. A content PR says which
-   pages change on the deploy preview and lists them in the visual review request.
-4. **Git.** Work on a branch named `task/short-name`, cut from an up-to-date `main`.
+3. **A branch changes content or code, never both.** Content work goes on a branch
+   named `content/short-name` and changes only `content/**`, plus: `agent/` (logs, reports,
+   roadmap); `public/` files that belong to a content item the PR names; `visual/baseline/`
+   images (the PR lists which images changed and why); and
+   `scripts/validate-content.known-failures.txt`, only to remove lines, never to add them.
+   Code work stays on `task/short-name` and does not touch `content/**`. What kind of branch
+   it is comes from what the diff changes, not from its name, so the check also works in CI
+   (where the checkout has no branch name); locally `verify.sh` also fails when the name and
+   the diff disagree. `verify.sh` fails a branch that mixes the two. The reason is the same
+   as in Phase 1: when something breaks, the kind of branch that merged tells you where to
+   look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
+   content rules C1 to C13 apply to every change under `content/`. A code change that a
+   content change needs is a second PR.
+4. **Git.** Work on a branch named `task/short-name` (code) or `content/short-name`
+   (content, rule 3), cut from an up-to-date `main`.
    Never commit on `main`. Commit on the task branch only after `./scripts/verify.sh`
    passes. Stage files by name and read `git diff --staged` before committing; never
    `git add -A` or `git add .`. Never skip hooks. Push the branch and open the PR only
    when Jordan says to in that conversation. Never merge a PR, never force-push, never
-   push to `main`.
+   push to `main`. **Every PR targets `main`.** No stacked PRs: if a task needs a change
+   that has not merged yet, wait for it to merge, or put both in one branch. Before
+   opening a PR: `git fetch origin`, and `git merge-base --is-ancestor origin/main HEAD`
+   must exit 0 (the branch contains the current `main`). Open it with the base named
+   explicitly: `gh pr create --repo jordansread/CUAHSI3-website --base main --head
+   <branch>`. After opening, `gh pr view <number> --repo jordansread/CUAHSI3-website
+   --json baseRefName` must say `main`. `verify.sh` fails, in CI, any PR whose base is not
+   `main`, and warns locally when the branch does not contain `origin/main`.
 5. **One task per branch, one concern per PR.** No drive-by fixes. If you notice a
    problem outside the task, add a line to "Noticed" in `agent/roadmap.md` and leave it.
 6. **Do not "fix" deliberate oddities.** See the list below. Tidying them breaks live
@@ -117,6 +128,70 @@ version mismatch. Ignore it.
 13. **A new footgun goes in this file.** If something built cleanly and was wrong,
     it belongs under "Known footguns," and if it can be detected by a pattern, in
     `scripts/verify.sh` too.
+
+## Content rules (Phase 2)
+
+These apply to every change under `content/`. `verify.sh` enforces C1, C5 and C6 where a
+check can; the rest are checked by the reviewer and by Jordan.
+
+C1. **The validator must not get worse, and the known-failures list only shrinks.**
+    `npm run validate:content` reports no failure that is not on
+    `scripts/validate-content.known-failures.txt`. Never add a line to that file; a fix
+    removes its own line in the same PR. Once the list is empty (or the file is gone) the
+    validator must exit 0 on every branch, and `verify.sh` fails otherwise. Never loosen
+    a schema on a content branch; a schema change is code, with its own PR and reason.
+C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
+    (optional in the schema today; give it whenever it is known). An event announced in a
+    newsletter has `newsletter_source` (the schema requires the field on every event today;
+    see "New content item"). A news item summarising an article has `source_url`. If Jordan
+    or a staff member supplied the facts directly, say so in the PR description: who, and
+    when.
+C3. **Never invent.** No guessed dates, URLs, YouTube IDs, email addresses, names,
+    funding numbers or deadlines. If a required field is unknown, the item is not ready:
+    leave it `published: false` and list what is missing under "To verify" in the PR. If an
+    optional field is unknown, leave it out.
+C4. **Check for duplicates before creating anything.** Search the collection for the same
+    `slug`, the same `url`, and the same title with a nearby date. Recurring events are
+    announced in several newsletter issues; update the existing entry and add the new issue
+    to `newsletter_source`. Show Jordan each plausible match and let him decide.
+C5. **A published slug never changes, and a published file is never deleted or renamed.**
+    To withdraw something, set `published: false`. To merge duplicates, keep one and
+    unpublish the other. Ask Jordan whether a redirect is needed. `verify.sh` fails a branch
+    that deletes or renames a file under `content/` or changes the slug of a published item
+    (a rename Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so).
+C6. **`people_mentioned` takes slugs of people who have a profile in the repo:** team slugs
+    (copied from `full-team.json`), board slugs and community slugs (the `slug` of a file in
+    `content/board/` or `content/community/`). Not display names, not guesses. Whether a
+    named person has a profile is a fact to check against those files. A new value that
+    matches no profile is not allowed, and `verify.sh` fails it. Three values already in the
+    content match no profile; the validator lists them as informational output and they are
+    not a repair item.
+C7. **Editorial judgment is proposed, not applied.** News versus impact story, `category`,
+    which stories get a tool's tag, and every `excerpt` are judgment calls. Make the call,
+    label it as yours in the PR ("Agent's choice: news, because it expires"), and let Jordan
+    change it.
+C8. **Do not mirror external articles.** Write a short summary in your own words and set
+    `source_url`. Do not copy a job posting's full text.
+C9. **A newsletter issue is, today, an input; assembling issues from entries is the goal.**
+    An issue is currently decomposed into `news/`, `research/`, `events/` and `jobs/` entries
+    (content model, section 9). Every fact in an issue should end up in an entry: if a fact
+    is only in the newsletter, the entry it belongs to is missing. The target state is the
+    other direction, an issue assembled from entries plus an editor's note. Do not describe
+    the target as current practice.
+C10. **Leave what you were not asked to change.** Do not reformat, reorder, re-wrap or "tidy"
+    frontmatter or body text in a file you are editing for another reason. The diff should
+    show the change and nothing else.
+C11. **Personal data.** `content/members/reps.json` holds names and email addresses. Change
+    only the rows a task names. Never copy its contents into a report, a PR description or
+    the eval log; refer to a row by its position ("row 47 of the members file"). The diff of
+    the PR that changes the row necessarily shows it; that is the only place.
+C12. **Bulk content edits follow "Bulk edits."** Ten files or fewer by hand. More than ten:
+    state the pattern and the count, do one by hand, wait for approval.
+C13. **File names.** New files follow the pattern of their collection: `news`, `newsletter`,
+    `events`, `jobs`: `YYMMDD-slug.md`. `cyberseminars`: `YYYY-slug.md`. `research`:
+    `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; Jordan to confirm).
+    `programs`, `board`, `community`, `team`: `slug.md`. Existing files are not renamed
+    unless Jordan asks. The frontmatter `slug` drives the URL, not the file name.
 
 ## Known footguns
 
@@ -244,7 +319,8 @@ in three lines where things stand: branch, task in progress, anything uncommitte
 wait for direction. Do not start a roadmap task unprompted.
 
 **Start a task.** Jordan names a roadmap task or describes a new one. Confirm the tree
-is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`.
+is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`
+(`content/short-name` for a content task).
 Before changing anything, state the plan: files you expect to touch, how you will
 check the result, what will need human eyes. For roadmap tasks 3 and 4, wait for
 Jordan to approve the plan. Append a `start` line to the eval log.
@@ -275,8 +351,10 @@ log with `caught: reviewer`.
 
 **Finish a task.** Run Verify, then Review, then commit (rule 4). Fill in
 `.github/pull_request_template.md` and show Jordan the description. When he says to
-open the PR: `git push -u origin task/short-name` and `gh pr create` with that
-description. Give him the PR link and say the deploy preview will appear on the PR.
+open the PR: `git push -u origin <branch>` and `gh pr create --repo
+jordansread/CUAHSI3-website --base main --head <branch>` with that description, then
+check the base with `gh pr view` (rule 4). Give him the PR link and say the deploy preview
+will appear on the PR.
 Update the Status column in `agent/roadmap.md` on the branch. Append a `pr` line to
 the eval log.
 
@@ -305,16 +383,40 @@ the PR that fixes it.
 eval log and `git`, not from memory of the session. Give counts from the eval log:
 tasks started, PRs merged, interventions, defects by where they were caught.
 
-**Phase 2 (open).** Content tasks follow Start a task, Verify, Review and Finish a task like any
-other, with these differences. The branch is `task/content-short-name`. Before editing, read the
-files involved and run `npm run validate:content` for a before count. After editing, run it again and
-report the before and after counts with denominators; remove a fixed file from
-`scripts/validate-content.known-failures.txt` in the same PR. Build the site and open the pages the
-change reaches; the PR lists each changed page (from the built HTML) and what should look different,
-and the visual baseline is re-written only for images whose page changed on purpose. Mixed
-content-and-code branches get a WARN from `verify.sh` (a warning, not a failure, so say why in the PR).
+## Content procedures (Phase 2)
 
-**Phase 2 locks, status.** Jordan opened Phase 2 on 4 October 2026. `scripts/verify.sh` is switched. Two
-guardrails are his to change and the tools refuse my edits to them: `PHASE` in `.claude/hooks/guard.mjs`
-and the `Edit(/content/**)` deny rule in `.claude/settings.json`. Until he has changed both, the hook still
-blocks every content edit: stop and tell him, do not look for a way around it.
+A content task follows Start a task, Verify, Review and Finish a task like any other, on a
+`content/short-name` branch, with the content rules above and these procedures.
+
+**Content repair.** For fixing existing files. State each file, line and change before
+making it. Run `npm run validate:content` for a before count. Apply. Run the validator again
+and the full build, and report both counts with denominators. In the PR, list every page
+whose visible content changes and what changes on it, as a visual review list; list every
+baseline image that changed and why; remove fixed entries from the known-failures file in
+the same PR (C1).
+
+**New content item.** Jordan or a staff member gives a draft: an event, a news item, a job,
+an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write
+the file from the collection's schema, named by the pattern in C13. Fill only what the draft
+supports (C3). Show Jordan the frontmatter and the "To verify" list before committing. Then
+validator, build, PR. **Known gap:** the event schema requires `newsletter_source` (an array)
+on every event, so an event supplied directly by a staff member, with no newsletter, cannot
+be written honestly until that field becomes optional. That is a schema change, so it is
+proposed as its own code PR (roadmap P2.3), not made on a content branch (C1).
+
+**Propose, then apply.** For any task that creates or changes more than five items from one
+source (a newsletter issue, a job harvest, a batch of tags). First show a proposal and stop:
+for each item, the collection, the slug, new or update, the judgment calls, and what is
+unverified; then the items you would skip and why; then counts. Apply only what Jordan
+approves. Do not go beyond the approved list.
+
+**Unpublish.** Set `published: false`. Say in the PR which routes disappear and which pages
+linked to them (rule 8: removing a route needs Jordan's approval first).
+
+**Content lint.** On request: run the validator; list `published: false` items older than 60
+days; events whose `end` has passed and are still `featured`; jobs past `deadline`;
+cross-reference values that match nothing; items with no source (C2). Report with counts and
+denominators. Do not fix silently.
+
+**Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
+reports any path outside the allowed set in rule 3.

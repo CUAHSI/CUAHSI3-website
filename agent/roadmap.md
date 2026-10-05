@@ -1,6 +1,6 @@
 # Phase 1 roadmap
 
-(Phase 2, the content agent, was opened by Jordan on 4 October 2026; see CLAUDE.md rule 3. The Phase 1 acceptance text below is kept as it was written.)
+(The Phase 2 roadmap is at the end of this file. The Phase 1 acceptance text below is kept as it was written.)
 
 Tasks in order. Do not start one unprompted. Update Status on the task's own branch.
 Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reason`.
@@ -13,7 +13,7 @@ Status values: `not started`, `in progress`, `PR open`, `merged`, `blocked: reas
 | 3b | Visual baseline: screenshots of every route before task 4 | merged | low |
 | 4 | Inline styles to Tailwind; retire `.rgrid` / `--cols` | merged (4 PRs: #24, #27, #28, #29) | **highest** |
 | 4b | Dependency audit report (read-only): the 36 `npm audit` findings, sorted by whether they reach the built site | merged | none (read-only) |
-| 5 | Linting and CI, with `verify.sh` as a required check | PR open (part 1 merged: workflow, link check, validator; part 2: ESLint, template-only, PR #31; "required" is a GitHub setting for Jordan) | low |
+| 5 | Linting and CI, with `verify.sh` as a required check | merged (workflow, link check, validator; ESLint template-only, PR #31). "Required" is a GitHub setting for Jordan; not checked here | low |
 | 6 | Accessibility audit: contrast, semantic HTML, ARIA | in progress (audit, keyboard and semantic fixes, and contrast fixes merged; leftovers in the Noticed list) | medium |
 
 ## Acceptance criteria
@@ -145,3 +145,32 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | .claude/agents/reviewer.md | line 21 says any path under content/ is a finding. In Phase 2 every content task would be flagged. The file is protected (permission rules deny edits under .claude/), so Jordan has to change it: for example 'a path under content/ is a finding unless the branch is a content task (task/content-...)'. Same file as the dead .rgrid checklist line noted earlier.
 261004 | visual tests | the screenshot suite fails one or two tests in the first run after a build, each time a test that took about 11 s instead of about 2 s (about-membership 390; about and about-governance 1280); reruns pass. Probably a slow first load on a busy machine; the tests wait for images and fonts but not for the machine to catch up. Not fixed (playwright.config.ts / tests/visual are not rule-8 files; a longer wait or one retry is a candidate).
 261004 | content/events/ | two apparent duplicate events (visible as repeated rows on /community/events): WaterSoftHack 2026, 20 Jul, in 260701-watersofthack.md (slug watersofthack-2026) and 260720-watersofthack-2026.md (slug watersofthack-2026-july); and the 24 Jun open house in 260601-virtual-open-house.md ('CUAHSI Virtual Open House', slug virtual-open-house-2026) and 260624-spring-virtual-open-house.md ('CUAHSI Spring Virtual Open House', slug spring-virtual-open-house-2026). Both pairs have different slugs, so each has its own page and URL; removing one would break a URL (rule 8) and the slugs may be linked from newsletters. A Phase 2 content question for Jordan, not touched.
+
+# Phase 2 roadmap (content agent)
+
+Phase 2 was opened by Jordan on 4 October 2026. Content changes go on `content/short-name`
+branches under the content rules in CLAUDE.md (C1 to C13). The guard hook and permission
+setting that block edits to `content/` are protected files and change only when Jordan runs
+the unlock; until then the guardrails in `verify.sh` (branch kind, deletions, slugs,
+`people_mentioned`, known-failures) are in place but the hook still blocks content edits.
+
+| # | Task | Status | Notes |
+|---|---|---|---|
+| P2.0 | Phase 1 evaluation summary | merged | `agent/reports/261004_phase1-evaluation.md` |
+| P2.1 | Integrate the Phase 2 rules, branch checks and roadmap (this PR) | PR open once pushed | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
+| P2.2 | Unlock: Jordan edits the two protected files | not started: Jordan | after P2.1 merges |
+| P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | not started | patches are prepared on `task/content-patches`, unpushed. Also proposed as its own code PR: make `newsletter_source` optional on events, so a staff-submitted event can validate |
+| P2.4 | Jobs: harvest and maintain `content/jobs/` | not started | A new job source (beyond `newsletter` and `joshswaterjobs`) needs a schema change first, as a code PR |
+| P2.5 | Events and news from newsletters: decomposition per C9 | not started | propose, then apply |
+| P2.6 | Decision backlog from Phase 1 (below) | not started: Jordan | |
+| P2.7 | Editing workflow for staff | not started | DecapCMS is mentioned in the handoff; not verified in this repo |
+
+Decisions waiting for Jordan before P2.3 to P2.6: four YouTube IDs, two apparent duplicate
+event pairs, which stories carry a tool's tag, his own LinkedIn URL on the team page,
+cyberseminar transcripts, and the research file-name pattern (C13).
+
+The three `people_mentioned` values that match no profile file (informational, not a repair
+item): listed in the PR description for Phase 2 integration.
+
+After P2.1 merges, small code PR: delete `scripts/validate-content.known-failures.txt` once
+it is empty and drop the check from `verify.sh`.
