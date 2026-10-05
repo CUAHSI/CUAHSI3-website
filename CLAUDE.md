@@ -138,8 +138,8 @@ check can; the rest are checked by the reviewer and by Jordan.
 C1. **The validator must exit 0.** `npm run validate:content` reports no failure, no
     cross-reference problem and no skipped check group, and `verify.sh` fails a branch
     where it does not. Until 5 October 2026 a known-failures list
-    (`scripts/validate-content.known-failures.txt`) tolerated the 12 files that were
-    still broken; the three repair PRs emptied it and it was deleted. Do not recreate
+    (`scripts/validate-content.known-failures.txt`) tolerated the 12 failing files or
+    entries; the three repair PRs emptied it and it was deleted. Do not recreate
     it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
     a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
