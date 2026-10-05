@@ -194,7 +194,7 @@ C12. **Bulk content edits follow "Bulk edits."** Ten files or fewer by hand. Mor
     state the pattern and the count, do one by hand, wait for approval.
 C13. **File names.** New files follow the pattern of their collection: `news`, `newsletter`,
     `events`, `jobs`: `YYMMDD-slug.md`. `cyberseminars`: `YYYY-slug.md`. `research`:
-    `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; Jordan to confirm).
+    `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; confirmed by Jordan).
     `programs`, `board`, `community`, `team`: `slug.md`. Existing files are not renamed
     unless Jordan asks. The frontmatter `slug` drives the URL, not the file name.
 

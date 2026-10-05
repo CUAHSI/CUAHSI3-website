@@ -100,6 +100,7 @@ and need Jordan's eye on the design tokens.
 - Cyberseminar transcripts and descriptions: per-seminar pages with the text in the static HTML, versus an on-click panel. Decide in Phase 2 after the 9 files are repaired.
 - Deferred, cyberseminar transcript timestamps: fix `scripts/fetch-transcripts.mjs` so it writes real times. All 733 paragraph timestamps in the 7 transcript files read `NaN:NaN`, and the script builds them from `seg.start`, probably the wrong field (unverified). Depends on: Phase 2 (the regenerated files are content, in `content/` and `public/`), Jordan's approval of two new dependencies, `youtube-transcript` and `gray-matter` (rule 8), and network access.
 - Deferred, cyberseminar follow-in-time sync (the transcript following the video). Depends on: the timestamp fix above, the transcripts-and-descriptions decision above, and a decision about loading the YouTube IFrame Player API, a script served from youtube.com.
+- Rename research and cyberseminar files to `YYMMDD-`: one bulk task, only after checking that no query or link depends on the file name or path. (Until then new research files use `YYYY-slug.md`, C13.)
 
 ## Noticed
 
@@ -156,7 +157,7 @@ the unlock; until then the guardrails in `verify.sh` (branch kind, deletions, sl
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| P2.0 | Phase 1 evaluation summary | in the P2.1 PR (not merged yet) | `agent/reports/261004_phase1-evaluation.md` |
+| P2.0 | Phase 1 evaluation summary | in the P2.1 PR | `agent/reports/261004_phase1-evaluation.md` |
 | P2.1 | Integrate the Phase 2 rules, branch checks and roadmap (this PR) | PR open once pushed | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
 | P2.2 | Unlock: Jordan edits the two protected files | not started: Jordan | after P2.1 merges |
 | P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | not started | patches are prepared on `task/content-patches`, unpushed. That branch changes `content/`, so under rule 3 it must be recut as `content/...` branches (one per repair) before a PR; as named it would fail `verify.sh`. Also proposed as its own code PR: make `newsletter_source` optional on events, so a staff-submitted event can validate |
