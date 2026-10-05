@@ -11,3 +11,4 @@ tags: [data-management, field-data, post-field, reproducibility]
 published: true
 has_transcript: true
 description: Even the most carefully planned field season can throw you curveballs. This webinar covers best practices for organizing, cleaning, and preparing field data for publication — including exploratory data analysis and getting ready for HydroShare submission.
+---

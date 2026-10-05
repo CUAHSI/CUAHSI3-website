@@ -10,3 +10,4 @@ speaker_orgs: [CUAHSI]
 tags: [jupyterhub, cloud-computing, getting-started, python, R]
 published: true
 description: Introduction to CUAHSI's free cloud computing services — how to access JupyterHub, launch pre-configured environments for Python and R, and connect to HydroShare datasets.
+---

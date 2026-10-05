@@ -1,9 +1,0 @@
-content/cyberseminars/2024-intro-compute-services-july.md
-content/cyberseminars/2024-intro-hydroshare-may.md
-content/cyberseminars/2025-nav-beyond-academic-ai.md
-content/cyberseminars/2025-nav-beyond-academic-broader-impacts.md
-content/cyberseminars/2025-nav-beyond-academic-careers.md
-content/cyberseminars/2025-nav-beyond-academic-funding.md
-content/cyberseminars/2025-post-field-data-practices.md
-content/cyberseminars/2025-usgs-nwaa-understanding.md
-content/cyberseminars/2025-usgs-water-data-apis.md

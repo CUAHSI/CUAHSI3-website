@@ -9,5 +9,6 @@ speakers: [Berina Kilicarslan, Rebecca Composto, Antônio Alves Meira Neto, Jeff
 speaker_orgs: [New York University, NC State University, Colorado State University, Water Research Foundation, Vibrant Planet]
 tags: [career-development, funding, non-federal, grants, early-career]
 has_transcript: false
-published: true
+published: false
 description: Session 3 of 4. Explores non-federal funding opportunities for early-career water scientists — foundation grants, industry partnerships, and non-profit research funding — with speakers from across sectors. 73 live attendees.
+---
