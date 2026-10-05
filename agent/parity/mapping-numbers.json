@@ -19,8 +19,8 @@
    "legacy": 42,
    "exact": 0,
    "probable": 3,
-   "weak": 9,
-   "none": 30
+   "weak": 10,
+   "none": 29
   },
   "listing": {
    "legacy": 73,
@@ -47,8 +47,8 @@
    "legacy": 49,
    "exact": 4,
    "probable": 2,
-   "weak": 0,
-   "none": 43
+   "weak": 1,
+   "none": 42
   },
   "newsletter issue": {
    "legacy": 19,
@@ -75,8 +75,8 @@
    "legacy": 20,
    "exact": 0,
    "probable": 0,
-   "weak": 0,
-   "none": 20
+   "weak": 5,
+   "none": 15
   },
   "program": {
    "legacy": 5,
@@ -88,9 +88,9 @@
   "event": {
    "legacy": 118,
    "exact": 6,
-   "probable": 2,
-   "weak": 3,
-   "none": 107
+   "probable": 4,
+   "weak": 8,
+   "none": 100
   },
   "job": {
    "legacy": 13,
@@ -109,23 +109,23 @@
   "workshop": {
    "legacy": 20,
    "exact": 2,
-   "probable": 1,
-   "weak": 0,
-   "none": 17
+   "probable": 2,
+   "weak": 4,
+   "none": 12
   }
  },
  "hereWithout": {
   "events": {
    "items": 40,
-   "withoutLegacy": 25
+   "withoutLegacy": 23
   },
   "news": {
    "items": 12,
-   "withoutLegacy": 2
+   "withoutLegacy": 1
   },
   "research": {
    "items": 31,
-   "withoutLegacy": 31
+   "withoutLegacy": 29
   },
   "newsletter": {
    "items": 9,
@@ -133,7 +133,7 @@
   },
   "cyberseminars": {
    "items": 11,
-   "withoutLegacy": 4
+   "withoutLegacy": 2
   },
   "jobs": {
    "items": 29,
@@ -141,7 +141,7 @@
   },
   "programs": {
    "items": 4,
-   "withoutLegacy": 2
+   "withoutLegacy": 0
   }
  },
  "staffMapped": 22,

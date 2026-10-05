@@ -115,7 +115,9 @@ for (const l of legacy) {
     const b = bestDated(l, seminars, 14)
     if (b && b.conf !== 'none') {
       const listed = b.c.fm.published === true
-      put(row(l, listed ? '/learn-train/cyberseminars' : '', b.c.file, b.conf, 'title+date', dateNote(b, l) + (listed ? '' : '; the file is published: false, so it is not shown on this site') + (ids.size ? `; legacy has YouTube id(s) not in any file here` : '; no YouTube id on the legacy page')), b.c.file); continue
+      const snap = `raw/legacy-site/261005/pages/${rel(l.url).replace(/^\//, '')}.html`
+      const yt = ids.size ? (b.c.yt && ids.has(b.c.yt) ? 'the YouTube id agrees' : `DISCREPANCY: legacy page ${[...ids].join(', ')} (https://www.youtube.com/watch?v=${[...ids][0]}), file here ${b.c.yt ? b.c.yt + ' (https://www.youtube.com/watch?v=' + b.c.yt + ')' : '(empty)'}; Jordan to say which is right`) : `no YouTube id on the legacy page (${snap}; only the channel link in the footer)`
+      put(row(l, listed ? '/learn-train/cyberseminars' : '', b.c.file, b.conf, 'title+date', (listed ? '' : 'matched, unpublished here (published: false); ') + dateNote(b, l) + '; ' + yt), b.c.file); continue
     }
     const be = bestDated(l, events, 14)                           // a seminar announced here as an event
     if (be && be.conf !== 'none') { put(row(l, be.c.route, be.c.file, be.conf === 'exact' ? 'probable' : be.conf, 'title+date (events)', dateNote(be, l) + '; counterpart is an event here, not a seminar'), be.c.file); continue }
@@ -219,6 +221,39 @@ function staticRow(l, u) {
   if (/^\/workshops\//.test(u) && l.page_type === 'listing') return J('/learn-train/archive', 'weak', 'listing root', 'a view of the workshops list')
   if (l.page_type === 'listing') return N(`no counterpart for the ${base} listing (its items have none either)`, 'listing root')
   return N({ landing: 'no entry point of this kind here (stage 3, table 1)' }[l.page_type.split(' ')[0]] || 'no page here covers this; see stage 3 table 1')
+}
+
+// ---- matches found by the probes (scripts/parity/mapping-probe.mjs) and read by hand ------------------------------------------
+// Each was a "none" from the rules above. Only a row still at none is changed; a rule match is never overridden.
+// [legacy path, file here, confidence, note]. A seminar file has no page, so its route is the seminar list.
+const PROBE_REVIEW = [
+  ['/events/webinar-an-introduction-to-cuahsi-compute-services', 'content/cyberseminars/2024-intro-compute-services-july.md', 'probable', 'a legacy event page for a webinar that is a seminar here: same title words, same day (2024-07-09)'],
+  ['/events/free-webinar-an-introduction-to-cuahsi-cloud-computing', 'content/cyberseminars/2024-intro-hydroshare-may.md', 'probable', 'a legacy event page whose title reads "An Introduction to HydroShare", same day (2024-05-14) as the seminar here; the legacy URL says "cloud computing" and the title says HydroShare: both are the legacy page\'s own'],
+  ['/workshops/stakeholder-informed-spatial-modeling-for-hydrologic-sciences', 'content/research/2025-spatial-modeling-workshop.md', 'probable', 'the legacy workshop page and an impact story here have the same title and dates one day apart (2025-08-18, 2025-08-19); the counterpart is a story, not an event'],
+  ['/events/application-deadline-stakeholder-informed-spatial-modeling-for-hydrologic-sciences', 'content/research/2025-spatial-modeling-workshop.md', 'weak', 'an application-deadline notice for the same workshop; no legacy date'],
+  ['/events/cuahsi-virtual-open-house', 'content/news/251022-virtual-open-house.md', 'weak', 'same day (2025-10-22); the news item here is a recap, not an event'],
+  ['/cyberseminars/series/changes-coming-to-usgs-water-data-apis', 'content/cyberseminars/2025-usgs-water-data-apis.md', 'weak', 'the legacy series page of the same talk (title similarity 0.86)'],
+  ['/cyberseminars/series/post-field-season-data-practices-for-research-success', 'content/cyberseminars/2025-post-field-data-practices.md', 'weak', 'the legacy series page of the same talk (title similarity 0.88)'],
+  ['/cyberseminars/series/integrating-hydrology-and-geophysics', 'content/events/260101-earthscope-geophysics.md', 'weak', 'a series here titled "Webinar Series: Integrating Hydrology and Geophysics"; no legacy date'],
+  ['/cyberseminars/series/water-data-forum', 'content/events/260630-water-data-forum.md', 'weak', 'an event here titled "Water Data Forum: ..."; no legacy date'],
+  ['/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america', 'content/research/2025-perceptual-models.md', 'weak', 'an impact story with a similar title (0.67); no legacy date'],
+  ['/workshops/snow-measurement-field-school-january-2022', 'content/programs/snow-field-school.md', 'weak', 'a year instance of the field school; the program here is the series, not one year'],
+  ['/workshops/snow-measurement-field-school-2023', 'content/programs/snow-field-school.md', 'weak', 'a year instance of the field school; the program here is the series, not one year'],
+  ['/workshops/snow-measurement-field-school-2024-2', 'content/programs/snow-field-school.md', 'weak', 'a year instance of the field school; the program here is the series, not one year'],
+  ['/workshops/snow-measurement-field-school-2025', 'content/programs/snow-field-school.md', 'weak', 'a year instance of the field school; the program here is the series, not one year'],
+  ['/events/deadline-to-submit-application-for-snow-measurement-field-school-2024', 'content/programs/snow-field-school.md', 'weak', 'an application deadline for a year of the field school'],
+  ['/community/news/snow-measurement-field-school-2025-recap', 'content/programs/snow-field-school.md', 'weak', 'a recap of a year of the field school'],
+  ['/events/watersofthack', 'content/programs/watersofthack.md', 'weak', 'the 2025 event page for the program that is a program page here'],
+  ['/events/application-deadline-watersofthack-2026', 'content/events/260701-watersofthack.md', 'weak', 'an application-deadline notice; no legacy date; two files here describe the 2026 event (a duplicate pair)'],
+  ['/news-opportunities', '', 'weak', 'the nearest here is the news list, /community/news']
+]
+for (const [lp, file, conf, note] of PROBE_REVIEW) {
+  const r = out.find(x => x.legacy_url === ORIGIN + lp)
+  if (!r) throw new Error('probe review: no such legacy row ' + lp)
+  if (r.confidence !== 'none') continue
+  const item = file ? [...events, ...news, ...impact, ...seminars, ...programs].find(x => x.file === file) : null
+  const route = !file ? '/community/news' : file.includes('/cyberseminars/') ? '/learn-train/cyberseminars' : (item?.route || routeOfFile(file))
+  Object.assign(r, { new_route: route, new_source: file || newInv.find(n => n.url === route)?.source || '', confidence: conf, matched_by: 'probe review', notes: note })
 }
 
 // ---- the types with no counterpart by design ------------------------------------------------------------------------
