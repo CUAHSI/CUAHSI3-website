@@ -1,0 +1,217 @@
+{
+ "snapshot": "261005",
+ "urls": 767,
+ "requestsLogged": 883,
+ "getRows": 767,
+ "headRows": 116,
+ "sitemapUrls": 681,
+ "byStatus": {
+  "200": 755,
+  "302": 8,
+  "404": 4
+ },
+ "bySection": {
+  "Community": 384,
+  "About": 118,
+  "none": 27,
+  "Data Services & Software": 11,
+  "Donate": 1,
+  "Faculty": 87,
+  "Students": 139
+ },
+ "byType": {
+  "landing page": 7,
+  "static page": 48,
+  "listing": 44,
+  "document or file": 80,
+  "person": 101,
+  "other": 3,
+  "news post": 58,
+  "newsletter issue": 19,
+  "data portal entry": 48,
+  "cyberseminar": 67,
+  "cyberseminar series": 20,
+  "program": 8,
+  "event": 120,
+  "job": 16,
+  "graduate program": 107,
+  "workshop": 21
+ },
+ "bySectionRule": {
+  "via links": 27,
+  "nav prefix": 713,
+  "(none)": 27
+ },
+ "byFoundVia": {
+  "sitemap+nav+footer": 4,
+  "sitemap+nav": 17,
+  "sitemap": 659,
+  "link": 81,
+  "sitemap+footer": 1,
+  "nav": 5
+ },
+ "dateRange": {
+  "document or file": {
+   "n": 1,
+   "min": "2018-12-05",
+   "max": "2018-12-05"
+  },
+  "news post": {
+   "n": 55,
+   "min": "2022-03-04",
+   "max": "2026-09-08"
+  },
+  "newsletter issue": {
+   "n": 19,
+   "min": "2023-04-13",
+   "max": "2026-09-10"
+  },
+  "cyberseminar": {
+   "n": 66,
+   "min": "2021-02-25",
+   "max": "2026-11-19"
+  },
+  "event": {
+   "n": 105,
+   "min": "2022-04-14",
+   "max": "2026-12-07"
+  },
+  "job": {
+   "n": 13,
+   "min": "2026-08-14",
+   "max": "2026-10-01"
+  },
+  "workshop": {
+   "n": 20,
+   "min": "2019-01-13",
+   "max": "2027-01-04"
+  }
+ },
+ "withContent": 755,
+ "sitemapOnlyCount": 659,
+ "notInSitemapCount": 86,
+ "sitemapNotLinked": 215,
+ "sitemapNotLinkedByType": {
+  "document or file": 76,
+  "person": 22,
+  "static page": 8,
+  "cyberseminar": 1,
+  "event": 105,
+  "job": 3
+ },
+ "linkedNotInSitemapByType": {
+  "document or file": 4,
+  "static page": 3,
+  "other": 2,
+  "listing": 34,
+  "news post": 9,
+  "data portal entry": 4,
+  "cyberseminar series": 20,
+  "event": 1,
+  "person": 6,
+  "program": 3
+ },
+ "brokenEmailLinks": 3,
+ "linkedNotInSitemap": 86,
+ "linkedAnywhere": 552,
+ "files": 116,
+ "filesSized": 116,
+ "redirects": 8,
+ "brokenLinkRows": 4,
+ "navTopLevel": 6,
+ "navLinks": 26,
+ "footerLinks": 5,
+ "titleHiddenByScript": 67,
+ "hasForm": 61,
+ "hasEmbed": 38,
+ "hasContact": 221,
+ "inNav": 27,
+ "unassignedSection": 27,
+ "ruleCounts": [
+  [
+   "R01",
+   "newsletter issue",
+   19
+  ],
+  [
+   "R02",
+   "news post",
+   58
+  ],
+  [
+   "R03",
+   "event",
+   120
+  ],
+  [
+   "R04",
+   "cyberseminar series",
+   20
+  ],
+  [
+   "R05",
+   "cyberseminar",
+   67
+  ],
+  [
+   "R06",
+   "job",
+   16
+  ],
+  [
+   "R07",
+   "person",
+   22
+  ],
+  [
+   "R08",
+   "person",
+   79
+  ],
+  [
+   "R09",
+   "document or file",
+   80
+  ],
+  [
+   "R10",
+   "graduate program",
+   107
+  ],
+  [
+   "R11",
+   "data portal entry",
+   48
+  ],
+  [
+   "R12",
+   "workshop",
+   21
+  ],
+  [
+   "R13",
+   "listing",
+   44
+  ],
+  [
+   "R14",
+   "landing page",
+   7
+  ],
+  [
+   "R15",
+   "program",
+   8
+  ],
+  [
+   "R16",
+   "static page",
+   48
+  ],
+  [
+   "R17",
+   "other",
+   3
+  ]
+ ]
+}
