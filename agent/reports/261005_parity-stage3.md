@@ -23,7 +23,7 @@ Legacy tree (from `legacy-nav.txt`): 6 top-level items and 26 header entries in 
 | FACULTY | none | no entry point for faculty as an audience |
 | COMMUNITY | Community (`/community`) | |
 | Community > Jobs | `/community/jobs` | |
-| Community > Instrumentation Facilities | none | 3 built pages mention it; no page of its own |
+| Community > Instrumentation Facilities | none | the exact phrase is on 1 built page (`/community`), the bare word on 3; no page of its own |
 | Community > Data Portals | none | 44 legacy entry pages; none here (see table 2) |
 | Community > Cyberseminar Archives | `/learn-train/cyberseminars` | different section |
 | Community > Research Projects | `/about/impact` | the nearest, not the same thing; **(mine)** |
