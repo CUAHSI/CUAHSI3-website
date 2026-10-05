@@ -54,3 +54,15 @@ Other CUAHSI hosts: `www.hydroshare.org`, `jupyter.cuahsi.org`, `data.cuahsi.org
 - **D4.** `HEAD` requests for file sizes in stage 1: yes or no.
 - **D5.** The User-Agent carries `jread@cuahsi.org` (P2 asks for your contact address); it is now in the legacy site's server log. Confirm, or give another address for later requests.
 - **D6.** `agent/parity.md` is untracked in your working tree: commit it with the stage 1 branch, or keep it local?
+
+## Decisions (Jordan, 5 October 2026)
+
+- **D1, approved, with these terms:** 1.5 s between requests, one request at a time, same host (`www.cuahsi.org`) only, cap of 1,500 pages. Follow paginated listings (news, events, cyberseminars, jobs); **ignore every other query string**. If repeated 429 or 5xx responses appear, **stop and tell Jordan; do not retry harder.** Report the measured rate after the first 50 pages and continue, **unless it implies more than three hours** (then stop and ask).
+- **D2, approved:** `cheerio` as a **pinned** devDependency. Goes on the stage 1 branch (`task/parity-stage1`), not this one.
+- **D3, approved:** add `raw/legacy-site/` to `.gitignore`. Also on the stage 1 branch.
+- **D4, approved:** `HEAD` requests for linked files, at the same spacing, **counted toward the 1,500 cap**. Report how many.
+- **D5, confirmed:** the User-Agent carries `jread@cuahsi.org`.
+- **D6:** `agent/parity.md` is committed on this branch (`task/parity-stage0`).
+- **Order:** stage 1 starts on `task/parity-stage1` only after this PR merges.
+- **Inputs:** the Search Console export will be placed in `raw/search-console/` (Jordan will say when). There is no list of NSF-cited URLs: build what can be built from the newsletters and content (the 47 cited URLs in section 5 are the start).
+
