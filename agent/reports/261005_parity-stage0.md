@@ -13,7 +13,7 @@ Requests made to www.cuahsi.org: **2** (`/robots.txt`, `/sitemap.xml`), 2 second
 - Every entry has `priority 0.5` and `changefreq weekly`; `lastmod` runs 2022-01-20 to 2026-10-01 and **330 of 681 are 2022 dates**. That looks generated, so I propose to treat `lastmod` as a weak recency signal in stage 6 (P6: my judgment).
 - By first path segment: events 119, community 114, students 112, about 110, faculty 77, cyberseminars 68, workshops 23, job-board 16, data-services 10, hydrologic-instrumentation-facilities 10, library 5, and 17 single pages (home, donate, virtual-university, summer-institute, community-awards, travel-policy, and others; 119+114+112+110+77+68+23+16+10+10+5 = 664 in the named sections, 664+17 = 681). Path depth: 1 home, 23 at depth 1, 260 at depth 2, 397 at depth 3.
 
-**The sitemap is not complete.** Test (offline, no extra requests): our own content cites 47 distinct `cuahsi.org` URLs. 9 are `/uploads/` files (a sitemap would not list them). Of the other **38 pages, 28 are in the sitemap and 10 are not** (74% covered): 7 `job-board` pages, 1 cyberseminar series page, 1 `/apply/` page, 1 `/register/` page. Six items checked by reading the saved file (P5): present: `/events/data-publishing-program`, `/community/water-science-exchange`, `/workshops/snow-measurement-field-school-2027`; absent: `/job-board` (the index itself), `/cyberseminars/series/2026-navigating-beyond-academic-waters`, `/apply/watersofthack`. If 74% held across the whole site, the legacy site would have roughly 920 pages (681 divided by 0.74; an extrapolation from a sample of 38, not a count). Stage 1 therefore needs the navigation-and-footer crawl, as `parity.md` already says.
+**The sitemap does not list 10 of the 38 cited pages (cause unknown).** Test (offline, no extra requests; the sample is pages that our newsletters and jobs cite, so it leans toward recent and short-lived pages): our own content cites 47 distinct `cuahsi.org` URLs. 9 are `/uploads/` files (a sitemap would not list them). Of the other **38 pages, 28 are in the sitemap and 10 are not** (74% of this sample): 7 `job-board` pages (postings that have been taken down would be absent for that reason alone, which two requests cannot tell apart from a gap), 1 cyberseminar series page, 1 `/apply/` page and 1 `/register/` page (these two may be form or redirect routes rather than pages). Six items checked by reading the saved file (P5): present: `/events/data-publishing-program`, `/community/water-science-exchange`, `/workshops/snow-measurement-field-school-2027`; absent: `/job-board` (the index itself), `/cyberseminars/series/2026-navigating-beyond-academic-waters`, `/apply/watersofthack`. If 74% held across the whole site it would have roughly 920 pages (681 divided by 0.74), but that is arithmetic on a biased sample of 38, an illustration and not an estimate I would plan around. What the test does show is that the sitemap cannot be assumed to be the whole site, so stage 1 needs the navigation-and-footer crawl, as `parity.md` already says.
 
 ## 2. Proposed tooling (my proposal)
 
@@ -23,10 +23,10 @@ Requests made to www.cuahsi.org: **2** (`/robots.txt`, `/sitemap.xml`), 2 second
 
 ## 3. Crawl size, duration, and where it stops (my estimate)
 
-- **Size:** 681 URLs from the sitemap, plus pages found only through the navigation and footer: about **920 in total if the 74% sample holds**, and more if it does not. I have not fetched a listing page, so I do not yet know the pagination format.
-- **Duration:** assuming about 0.7 s per response (the only measured pages were two requests: 0.7 s and 3.7 s) plus the 1.5 s pause, about 2.2 s per page: **681 pages about 25 minutes; about 920 about 34 minutes; the cap (1,500) about 55 minutes.** An assumption, to be replaced by the real rate after the first 50 pages.
+- **Size:** 681 URLs from the sitemap, plus pages found only through the navigation and footer: an unknown number; **about 920 is only an illustration** (section 1). I have not fetched a listing page, so I do not yet know the pagination format.
+- **Duration:** only two responses have been timed: 0.7 s (the robots.txt 404 error page, so a small response) and 3.7 s (the 158 KB sitemap). A normal page is probably between the two, so I give both ends, each plus the 1.5 s pause (2.2 s and 5.2 s per page): **681 pages 25 to 59 minutes; 920 pages 34 to 80 minutes; the cap of 1,500 pages 55 to 130 minutes.** I will replace this with the measured rate after the first 50 pages and report it before continuing.
 - **Scope:** same host only (`www.cuahsi.org`). Start from the sitemap, then follow internal links found in the navigation, the footer and listing pages. **Page cap: 1,500 distinct URLs** (stop and report if exceeded). Strip `#fragments` and `utm_*` parameters; do not follow search or filter query strings. **Listings:** follow pagination links (rel=next or a numbered pager) up to 50 pages per listing and report the pattern found. **Stop rules:** pause and report after 5 consecutive 429 or 5xx responses; stop if more than 5% of requests fail.
-- **Files:** `legacy-files.csv` needs a size for each PDF or download; that takes one `HEAD` request per file (no downloads). The 9 of 47 links in our own content that point to `/uploads/` suggest this could be a few hundred requests, about 10 more minutes (an estimate). See D4.
+- **Files:** `legacy-files.csv` needs a size for each PDF or download; that takes one `HEAD` request per file (no downloads). How many files the legacy site has is unknown until stage 1 (our own content links to only 9 of them, which says nothing about the total); each `HEAD` costs about 2.2 to 5.2 s at the rates above. See D4.
 
 ## 4. Out of scope
 
@@ -40,7 +40,7 @@ Other CUAHSI hosts: `www.hydroshare.org`, `jupyter.cuahsi.org`, `data.cuahsi.org
 
 ## 6. Leads from the sitemap for later stages (not findings)
 
-`/students` has 112 URLs and `/faculty` 77: the nav sections in `parity.md`'s starting observations exist in the path structure (stage 3 decides what they hold). `/cyberseminars` has 68 URLs against the homepage's "over 150 recorded cyberseminars" and the series page we cite is not in the sitemap: the sitemap may undercount cyberseminars (stage 4). The legacy `/job-board` index is not in the sitemap (relevant to the backlog item on past links to it).
+`/students` has 112 URLs and `/faculty` 77: the nav sections in `parity.md`'s starting observations exist in the path structure (stage 3 decides what they hold). `/cyberseminars` has 68 URLs against the homepage's "over 150 recorded cyberseminars" and the series page we cite is not in the sitemap: the sitemap may undercount cyberseminars (stage 4). The legacy `/job-board` index is not in the sitemap (relevant to the backlog decision on past links to it, in `agent/roadmap.md` under Open decisions).
 
 ## 7. Not examined (P7)
 
@@ -48,7 +48,7 @@ Other CUAHSI hosts: `www.hydroshare.org`, `jupyter.cuahsi.org`, `data.cuahsi.org
 
 ## Decisions needed
 
-- **D1.** Approve the crawl parameters in section 3 (1.5 s spacing, cap 1,500, sitemap plus navigation and footer, same host only, pagination rule, stop rules).
+- **D1.** Approve the crawl parameters in section 3 (1.5 s spacing, cap 1,500, sitemap plus navigation and footer, same host only, pagination rule, stop rules), knowing the duration is a range, 25 to 130 minutes depending on the page count and response time.
 - **D2.** Approve `cheerio` as a devDependency (rule 8), or choose another route.
 - **D3.** Add `raw/legacy-site/` to `.gitignore` (P2 says gitignored; today it is excluded only by my local `.git/info/exclude`, which does not protect another checkout). One line, with stage 1.
 - **D4.** `HEAD` requests for file sizes in stage 1: yes or no.
