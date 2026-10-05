@@ -190,3 +190,4 @@ item; checked with `npm run validate:content` on 5 October 2026): `masoumeh-hash
 
 The known-failures file and its check were deleted on 5 October 2026 (`task/known-failures-cleanup`):
 the validator must now exit 0 (C1).
+- 261005 | CLAUDE.md / pages/highlights | CLAUDE.md calls the 14 `/highlights/*` pages "301 redirect stubs"; the built pages are meta-refresh HTML (`<meta http-equiv="refresh" ...>`), and netlify.toml has no redirect for them. Not changed (rules 6 and 8); raised for Jordan in the stage 2 report.
