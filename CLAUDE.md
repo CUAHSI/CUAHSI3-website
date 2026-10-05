@@ -143,7 +143,8 @@ C1. **The validator must exit 0.** `npm run validate:content` reports no failure
     it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
     a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
-    (optional in the schema today; give it whenever it is known). An event announced in a
+    (optional; `newsletter`, `joshswaterjobs` or `usajobs`; give it whenever it is known; a
+    USAJOBS posting also carries its id in the optional `source_id`). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
     that no newsletter announced, and say where the facts came from). A news item
     summarising an article has `source_url`. If Jordan or a staff member supplied the facts

@@ -174,7 +174,7 @@ does not check branch kind, so content-versus-code separation rests on the guard
 | P2.1 | Integrate the Phase 2 rules, branch checks and roadmap | merged (#43; P2.0 report included) | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
 | P2.2 | Unlock: Jordan edits the two protected files | merged (#44) | the commit was made after #43 merged and reached the default branch through #44 |
 | P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | repairs merged (#45, #46, #47); known-failures list empty, validator exits 0 | `newsletter_source` optional on events (so a staff-submitted event can validate): this branch, `task/events-newsletter-source-optional`, PR open once pushed. `task/content-patches` (unpushed) is superseded by the three merged branches |
-| P2.4 | Jobs: harvest and maintain `content/jobs/` | not started | A new job source (beyond `newsletter` and `joshswaterjobs`) needs a schema change first, as a code PR |
+| P2.4 | Jobs: harvest and maintain `content/jobs/` | not started | A new job source (beyond `newsletter`, `joshswaterjobs` and `usajobs`) needs a schema change first, as a code PR; `usajobs` and an optional `source_id` were added in `task/jobs-schema-usajobs` |
 | P2.5 | Events and news from newsletters: decomposition per C9 | not started | propose, then apply |
 | P2.6 | Decision backlog from Phase 1 (below) | not started: Jordan | |
 | P2.7 | Editing workflow for staff | not started | DecapCMS is mentioned in the handoff; not verified in this repo |
