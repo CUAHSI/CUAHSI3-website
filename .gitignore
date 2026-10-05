@@ -27,3 +27,6 @@ dist/
 dist
 .positai
 .agent/
+
+# Parity analysis: the legacy-site snapshot (agent/parity.md, P2). Never committed.
+raw/legacy-site/

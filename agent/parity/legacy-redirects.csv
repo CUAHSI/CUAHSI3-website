@@ -1,0 +1,9 @@
+url,status,redirect_target,target_status,linked_from_pages
+https://www.cuahsi.org/about,302,https://www.cuahsi.org/about/who-we-are-2,200,0
+https://www.cuahsi.org/community/job-board,302,https://www.cuahsi.org/job-board,200,13
+https://www.cuahsi.org/data-models/discovery-and-analysis,302,https://www.cuahsi.org/data-services/solutions,200,1
+https://www.cuahsi.org/data-services,302,https://www.cuahsi.org/data-services/solutions,200,1
+https://www.cuahsi.org/events/cuahsi-water-science-exchange-water-in-working-landscapes,302,https://www.cuahsi.org/community/water-science-exchange,200,1
+https://www.cuahsi.org/grant-opportunities/hydroinformatics-innovation-fellowship,302,https://www.cuahsi.org/grant-opportunities,200,3
+https://www.cuahsi.org/grant-opportunities/instrumentation-discovery-travel-grant,302,https://www.cuahsi.org/grant-opportunities,200,1
+https://www.cuahsi.org/grant-opportunities/pathfinder-fellowship,302,https://www.cuahsi.org/grant-opportunities,200,1
