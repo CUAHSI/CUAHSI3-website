@@ -38,7 +38,7 @@ Click the graphic below to open a full-size version.
 
 ### Registration for the Inaugural CUAHSI Water Science Exchange is now Open!
 
-[![CUAHSI Water Science Exchange: Water in Working Landscapes, November 12-14, 2026, University of Missouri](/newsletter-images/2026-september/water-science-exchange-banner.jpg)](https://www.cuahsi.org/community/water-science-exchange)
+![CUAHSI Water Science Exchange: Water in Working Landscapes, November 12-14, 2026, University of Missouri](/newsletter-images/2026-september/water-science-exchange-banner.jpg)
 
 **November 12-14, 2026 | University of Missouri**
 
@@ -129,7 +129,7 @@ This webinar is open to any researcher interested in using HydroShare for data m
 
 ### Save the Date: CUAHSI Virtual Open House
 
-[![CUAHSI Virtual Open House](/newsletter-images/2026-september/virtual-open-house-banner.png)](https://us06web.zoom.us/meeting/register/v9ipN35JRPmBYX4Bd8w2bA#/registration)
+![CUAHSI Virtual Open House](/newsletter-images/2026-september/virtual-open-house-banner.png)
 
 **October 29, 2026 | 12-2pm ET**
 
