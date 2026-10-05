@@ -82,7 +82,9 @@ version mismatch. Ignore it.
    Code work stays on `task/short-name` and does not touch `content/**`. What kind of branch
    it is comes from what the diff changes, not from its name, so the check also works in CI
    (where the checkout has no branch name); locally `verify.sh` also fails when the name and
-   the diff disagree. `verify.sh` fails a branch that mixes the two. The reason is the same
+   the diff disagree. `verify.sh` fails a branch that mixes the two (locally, if `node_modules/yaml` is missing
+   this check is a warning, not a failure; in CI it fails). A branch that changes only
+   `public/`, `visual/baseline/` or the known-failures file counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
    content rules C1 to C13 apply to every change under `content/`. A code change that a
@@ -157,11 +159,14 @@ C4. **Check for duplicates before creating anything.** Search the collection for
 C5. **A published slug never changes, and a published file is never deleted or renamed.**
     To withdraw something, set `published: false`. To merge duplicates, keep one and
     unpublish the other. Ask Jordan whether a redirect is needed. `verify.sh` fails a branch
-    that deletes or renames a file under `content/` or changes the slug of a published item
-    (a rename Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so).
+    that deletes or renames any file under `content/` (published or not), changes the slug of
+    a published `.md` item, or removes or changes a slug in a content JSON array (a rename
+    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so). It cannot
+    read the slug of a file whose front matter does not parse (the 9 cyberseminar files
+    with no closing `---`), so for those the check passes silently; look yourself.
 C6. **`people_mentioned` takes slugs of people who have a profile in the repo:** team slugs
     (copied from `full-team.json`), board slugs and community slugs (the `slug` of a file in
-    `content/board/` or `content/community/`). Not display names, not guesses. Whether a
+    `content/board/` or `content/community/`; `verify.sh` also accepts a file name there). Not display names, not guesses. Whether a
     named person has a profile is a fact to check against those files. A new value that
     matches no profile is not allowed, and `verify.sh` fails it. Three values already in the
     content match no profile; the validator lists them as informational output and they are
@@ -420,3 +425,8 @@ denominators. Do not fix silently.
 
 **Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
 reports any path outside the allowed set in rule 3.
+
+**Locks.** Until Jordan runs the unlock, `.claude/hooks/guard.mjs` (its `PHASE`) and the
+deny rule in `.claude/settings.json` still block edits to `content/`, and `reviewer.md`
+still calls any `content/` path a finding. Those files are Jordan's to change. If a hook
+or permission blocks you, stop and tell him; do not look for a way around it.

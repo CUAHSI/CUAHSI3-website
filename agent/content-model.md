@@ -10,7 +10,7 @@ check against the actual files in `content/` (rule 1). The reconcile report, Par
 records what the files really contain; where it disagrees with this document, the
 report is right and this document gets corrected.
 
-Read this before roadmap task 2. Phase 2 is open (CLAUDE.md rule 3): `content/` changes only in a content task. Check this document against the files before relying on it (rule 1).
+Read this before roadmap task 2. Phase 2 is open (CLAUDE.md rule 3): `content/` changes only on a `content/short-name` branch. Check this document against the files before relying on it (rule 1).
 
 Section numbers below are the handoff's own. References to §6, §7 and §2 point to
 material now in `CLAUDE.md` (Layout, Known footguns) and the strategic goals: the

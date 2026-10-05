@@ -156,10 +156,10 @@ the unlock; until then the guardrails in `verify.sh` (branch kind, deletions, sl
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| P2.0 | Phase 1 evaluation summary | merged | `agent/reports/261004_phase1-evaluation.md` |
+| P2.0 | Phase 1 evaluation summary | in the P2.1 PR (not merged yet) | `agent/reports/261004_phase1-evaluation.md` |
 | P2.1 | Integrate the Phase 2 rules, branch checks and roadmap (this PR) | PR open once pushed | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
 | P2.2 | Unlock: Jordan edits the two protected files | not started: Jordan | after P2.1 merges |
-| P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | not started | patches are prepared on `task/content-patches`, unpushed. Also proposed as its own code PR: make `newsletter_source` optional on events, so a staff-submitted event can validate |
+| P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | not started | patches are prepared on `task/content-patches`, unpushed. That branch changes `content/`, so under rule 3 it must be recut as `content/...` branches (one per repair) before a PR; as named it would fail `verify.sh`. Also proposed as its own code PR: make `newsletter_source` optional on events, so a staff-submitted event can validate |
 | P2.4 | Jobs: harvest and maintain `content/jobs/` | not started | A new job source (beyond `newsletter` and `joshswaterjobs`) needs a schema change first, as a code PR |
 | P2.5 | Events and news from newsletters: decomposition per C9 | not started | propose, then apply |
 | P2.6 | Decision backlog from Phase 1 (below) | not started: Jordan | |
@@ -170,7 +170,8 @@ event pairs, which stories carry a tool's tag, his own LinkedIn URL on the team 
 cyberseminar transcripts, and the research file-name pattern (C13).
 
 The three `people_mentioned` values that match no profile file (informational, not a repair
-item): listed in the PR description for Phase 2 integration.
+item; checked with `npm run validate:content` on 5 October 2026): `masoumeh-hashemi`
+(newsletter 260101-january), `marco-maneta` and `punwath-prum` (newsletter 260201-february).
 
 After P2.1 merges, small code PR: delete `scripts/validate-content.known-failures.txt` once
 it is empty and drop the check from `verify.sh`.
