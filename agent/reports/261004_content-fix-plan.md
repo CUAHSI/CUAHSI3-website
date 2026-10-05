@@ -43,11 +43,11 @@ If you choose A or B I would also like the real YouTube links for the 4 (the pag
 
 ## 3. One bad email in `members/reps.json`
 
-**Diagnosis.** Entry 47 (Yadu Pokhrel, Michigan State University) has the email `ypokhrel@msu.edu` followed by a stray character, written in the file as the JSON escape `\u00c2` (not the letter itself, so a search for the letter finds nothing; search for `u00c2`) (a capital A with a circumflex, left over from a text-encoding mix-up). It is the only occurrence of that escape in all of `content/` (searched for `u00c2` and `u00c3`).
+**Diagnosis.** Row 47 of the members file has an email address followed by a stray character, written in the file as the JSON escape `\u00c2` (not the letter itself, so a search for the letter finds nothing; search for `u00c2`) (a capital A with a circumflex, left over from a text-encoding mix-up). It is the only occurrence of that escape in all of `content/` (searched for `u00c2` and `u00c3`).
 
-**The edit.** On line 288, remove `\u00c2` from the email value so it reads `ypokhrel@msu.edu`. That is the address already in the file, minus the junk character.
+**The edit.** On line 288, remove `\u00c2` from the email value so it reads as the address without the stray character. That is the address already in the file, minus the junk character.
 
-**What changes on the site.** On `/member-portal` the Pokhrel row currently shows `ypokhrel@msu.eduÂ` and its mailto link includes the stray character, so the link does not open a correct address. After the edit the text and link are correct. One row changes.
+**What changes on the site.** On `/member-portal` row 47 currently shows the address with the stray character and its mailto link includes the stray character, so the link does not open a correct address. After the edit the text and link are correct. One row changes.
 
 ## Order and size
 

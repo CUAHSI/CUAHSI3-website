@@ -28,7 +28,7 @@ The findings that matter, in order:
 
 1. **9 of 15 cyberseminar files carry no fields as far as the site is concerned.** They have no closing `---` line, so the site reads no fields from them (details below). This is the largest problem the validator found. The reconcile report did not catch it: its key counts for cyberseminars (every key "15 of 15") came from a parser that did not need the closing line, so they described the YAML text in the file, not what the site reads.
 2. **2 of 31 research files have broken YAML** (an unquoted `: ` in `excerpt`). The site keeps going and stores `excerpt` as an object.
-3. **1 of 229 member reps has a bad email** (`ypokhrel@msu.eduÂ`, with a stray character).
+3. **1 of 229 member reps has a bad email** (row 47 of the members file; the email ends in a stray character).
 4. **8 distinct `people_mentioned` values are not staff slugs** (they name board and community people). 72 references in 24 files were checked. By Jordan's decision these are **unresolved, informational**, not errors: they have their own list and do not change the exit code (section 3).
 
 A repair list for the 12 failing files (file, line, exact change) is in section 10. It has not been applied; applying it on a scratch copy took the validator from 377 to 389 of 389 passing.
@@ -58,7 +58,7 @@ The site does not stop. It keeps whatever the parser recovered, and the recovere
 
 ## 2. Schema failures
 
-One: `content/members/reps.json[47]` (Yadu Pokhrel), `email: Invalid email address`. The value is `ypokhrel@msu.eduÂ`. The last character is a stray `Â`. That looks like a non-breaking space saved in the wrong encoding, but I only inferred that from the character.
+One: `content/members/reps.json[47]`, `email: Invalid email address`. The last character of the value is a stray `Â`. That looks like a non-breaking space saved in the wrong encoding, but I only inferred that from the character.
 
 No other file fails its schema. That includes the checks I added beyond what the model document says (non-empty strings, slug format, real calendar dates, valid URLs): every existing file satisfies them, so they catch nothing today but will catch new mistakes.
 
@@ -204,15 +204,15 @@ excerpt: "Two HydroCARE Travel Fellows attended the National Diversity in STEM (
 
 ### 10c. One member email
 
-`content/members/reps.json`, **line 288** (entry 47, Yadu Pokhrel). The file stores the stray character as the JSON escape `\u00c2` directly after `msu.edu`.
+`content/members/reps.json`, **line 288** (row 47 of the members file). The file stores the stray character as the JSON escape `\u00c2` directly after the domain.
 
-Before (the text to search for: after `msu.edu` the file has the six characters backslash, `u`, `0`, `0`, `c`, `2`, not the letter Â itself):
+Before (the text to search for: after the domain the file has the six characters backslash, `u`, `0`, `0`, `c`, `2`, not the letter Â itself):
 ```
-    "email": "ypokhrel@msu.edu\u00c2"
+    "email": "<address>\u00c2"
 ```
 After:
 ```
-    "email": "ypokhrel@msu.edu"
+    "email": "<address>"
 ```
 
-**What visitors would see change:** `pages/member-portal/index.vue` (`/member-portal`, which is deliberately not linked from the nav) prints each rep's email as text and as a `mailto:` link, and also searches on it. Today this rep's link is `mailto:ypokhrel@msu.eduÂ`, which a mail program is unlikely to deliver to the right address. After the edit it would be `mailto:ypokhrel@msu.edu`. I read that in the page's code; I did not open the page.
+**What visitors would see change:** `pages/member-portal/index.vue` (`/member-portal`, which is deliberately not linked from the nav) prints each rep's email as text and as a `mailto:` link, and also searches on it. Today row 47's link ends in the stray character, which a mail program is unlikely to deliver to the right address. After the edit it would end at the domain. I read that in the page's code; I did not open the page.
