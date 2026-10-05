@@ -320,8 +320,27 @@ Lessons from real errors. Follow these whenever a change touches many files.
 
 **Start of session.** Run `git status` and `git branch --show-current`. Read the Status
 column in `agent/roadmap.md` and the last ten lines of `agent/eval-log.md`. Tell Jordan
-in three lines where things stand: branch, task in progress, anything uncommitted. Then
-wait for direction. Do not start a roadmap task unprompted.
+in three lines where things stand: branch, task in progress, anything uncommitted. Add one
+line on upstream (see "Upstream"): run `git fetch upstream` and report what it has that the
+fork lacks, with counts. Then wait for direction. Do not start a roadmap task unprompted.
+
+**Upstream.** `origin` is Jordan's fork (`jordansread/CUAHSI3-website`); `upstream` is the
+organisation repo (`CUAHSI/CUAHSI3-website`). All your work goes to `origin`; never push to
+`upstream` (Jordan opens the fork-to-organisation PRs, for example organisation PR #28 on 5
+October 2026). Things also change upstream, and not only on its `main`: on 5 October 2026
+`upstream/main` held nothing the fork lacked, but the branch `upstream/agent-prototype` held 24
+commits of job updates (3 new job files, 17 jobs set to `published: false`) and about 22 job
+and audit PRs were open against it. Check, read only: `git fetch upstream`;
+`git rev-list --count main..upstream/main`; `git log main..upstream/main`;
+`git branch -r --no-merged upstream/main`;
+`gh pr list --repo CUAHSI/CUAHSI3-website --state all --limit 40`. Bring upstream changes
+into the fork only through a branch from an up-to-date `main` and a PR (`content/short-name`
+for jobs files, with the content rules), never by merging on `main`. Do not merge a whole
+upstream branch that is far behind `main` (`agent-prototype` was 222 commits behind): copy
+only the changed files, or ask Jordan. Run the validator on the result before opening the
+PR. If incoming files fail it (the three new jobs use `source: usajobs` and a `source_id`
+key, which the schema rejects), stop and tell Jordan: a schema change is a separate code PR
+(C1). Never describe what upstream holds without having fetched it.
 
 **Start a task.** Jordan names a roadmap task or describes a new one. Confirm the tree
 is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`
