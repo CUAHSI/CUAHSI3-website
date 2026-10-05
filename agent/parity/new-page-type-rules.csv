@@ -1,0 +1,11 @@
+rule,page_type,routes_caught,description
+N01,redirect stub,14,"the HTML carries a meta refresh (a redirect stub: status 200, redirect_target is the refresh target)"
+N02,event,40,path /community/events/<slug>
+N03,news post,12,path /community/news/<slug>
+N04,newsletter issue,9,path /community/newsletter/<slug>
+N05,impact story,31,path /about/impact/<slug> (the content/research collection)
+N06,person,6,path /about/team/<slug>
+N07,program,4,path /learn-train/programs/<slug>
+N08,listing,9,"a listing: /community/events, /community/news, /community/newsletter, /community/jobs (all jobs on one page), /about/impact, /about/team, /learn-train/cyberseminars (all seminars on one page), /learn-train/archive, /community/campus-visits"
+N09,landing page,6,the home page and the top-level navigation pages
+N10,static page,5,any other route

@@ -192,3 +192,4 @@ The known-failures file and its check were deleted on 5 October 2026 (`task/know
 the validator must now exit 0 (C1).
 - 261005 | pages/index.vue, pages/hire-cuahsi/index.vue | The home-page newsletter email box (not a form, no handler) and the quote form on /hire-cuahsi (`@submit.prevent`, no handler) do nothing when used. Not changed; see agent/reports/261005_parity-stage3.md.
 - 261005 | pages/member-portal/index.vue, components/AppHeader.vue | /member-portal renders the member-representative directory (229 mailto links) in public HTML and the header links to it, while CLAUDE.md says it is unlinked from the nav. Not changed; Jordan to decide (personal data, C11).
+- 261005 | CLAUDE.md / pages/highlights | CLAUDE.md calls the 14 `/highlights/*` pages "301 redirect stubs"; the built pages are meta-refresh HTML (`<meta http-equiv="refresh" ...>`), and netlify.toml has no redirect for them. Not changed (rules 6 and 8); raised for Jordan in the stage 2 report.
