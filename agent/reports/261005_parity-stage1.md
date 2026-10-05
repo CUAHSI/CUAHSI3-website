@@ -130,7 +130,7 @@ No email address and no phone number appears in any committed output (checked by
 ## 12. For Jordan's review
 
 1. **Page types:** accept, merge or rename the four types I added (graduate program 107, data portal entry 44, workshop 20, program 5)? Merging them into `static page` would hide 176 URLs in one group.
-2. **The `-dev` path:** `/students/graduate-programs-in-water-science-dev/...` is 107 small stub pages (about 15 words each, one per university; 46 of them under 20 words) in the sitemap, linked from the paginated lists; the path name suggests a development copy but they are the pages the live lists link to.
+2. **The `-dev` path:** `/students/graduate-programs-in-water-science-dev/...` is 107 small stub pages (a median of 22 words, 46 of them under 20; one per university) in the sitemap, linked from the paginated lists; the path name suggests a development copy but they are the pages the live lists link to.
 3. **Names in the inventory:** about 69 lecturer names are in URL slugs, and the 67 hidden names could only be matched in stage 4 by those slugs (decoding the script would also expose the email addresses). Keep the URLs as they are (needed to map and redirect them), or mask the lecturer slugs and keep only a numbered key?
 4. **Section "none" (27 URLs):** 16 of them are `/workshops/<slug>` pages, which have no navigation entry (the Workshops section is not in the navigation).
 5. **Sitemap-only URLs (215):** mainly events (105 of 118 are reachable only from the sitemap) and library documents (all 76); the legacy site's own links do not reach them.
