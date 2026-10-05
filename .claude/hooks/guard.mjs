@@ -7,7 +7,7 @@ import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
-const PHASE = 1;          // 1 = content/ is frozen. Change only when Jordan opens Phase 2.
+const PHASE = 2;          // 1 = content/ is frozen. Change only when Jordan opens Phase 2.
 const BASE = 'main';
 
 let input;

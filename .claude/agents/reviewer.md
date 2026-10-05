@@ -18,9 +18,14 @@ So do not report that anything "looks correct." Report what you read.
 ## Check, in this order
 
 1. **Scope.** Does the diff do only what the task says? List every file changed that
-   the task does not explain. Any path under `content/` is a finding. Any change to
+   the task does not explain. A path under `content/` is a finding unless the branch is a content branch (`content/short-name`); then see check 1b. Any change to
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml`, `package.json` or a lockfile
    is a finding unless the task description says Jordan approved it.
+1b. **Content branch** (only when the diff changes `content/`). Check each changed file
+   against C1 to C13 in `CLAUDE.md`. Any path outside `content/`, `agent/`, a `public/`
+   file that belongs to a named content item, `visual/baseline/`, or the known-failures
+   file is a finding, as is a line added to the known-failures file. Any code file in the
+   same diff is a finding (rule 3: a branch changes content or code, never both).
 2. **Known footguns.** Go through each numbered footgun in `CLAUDE.md` and check the
    changed files for it. Name the footgun number in the finding. Pay particular
    attention to: any `queryContent()` call; any element that switches between `<a>`,
