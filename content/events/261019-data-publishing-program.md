@@ -15,10 +15,6 @@ description: >
   publishing scientific data in HydroShare. For researchers with datasets near
   or ready for publication who can attend most or all sessions.
   Registration closed October 2, 2026.
-registration:
-  required: true
-  url: https://cuahsi.jotform.com/262436049129863
-  cost: null
 tags: [workshop, data-publishing, HydroShare, training]
 published: true
 ---
