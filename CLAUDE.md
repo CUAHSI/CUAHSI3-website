@@ -144,10 +144,10 @@ C1. **The validator must not get worse, and the known-failures list only shrinks
     a schema on a content branch; a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
     (optional in the schema today; give it whenever it is known). An event announced in a
-    newsletter has `newsletter_source` (the schema requires the field on every event today;
-    see "New content item"). A news item summarising an article has `source_url`. If Jordan
-    or a staff member supplied the facts directly, say so in the PR description: who, and
-    when.
+    newsletter has `newsletter_source` (optional in the schema; leave it out for an event
+    that no newsletter announced, and say where the facts came from). A news item
+    summarising an article has `source_url`. If Jordan or a staff member supplied the facts
+    directly, say so in the PR description: who, and when.
 C3. **Never invent.** No guessed dates, URLs, YouTube IDs, email addresses, names,
     funding numbers or deadlines. If a required field is unknown, the item is not ready:
     leave it `published: false` and list what is missing under "To verify" in the PR. If an
@@ -404,10 +404,9 @@ the same PR (C1).
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write
 the file from the collection's schema, named by the pattern in C13. Fill only what the draft
 supports (C3). Show Jordan the frontmatter and the "To verify" list before committing. Then
-validator, build, PR. **Known gap:** the event schema requires `newsletter_source` (an array)
-on every event, so an event supplied directly by a staff member, with no newsletter, cannot
-be written honestly until that field becomes optional. That is a schema change, so it is
-proposed as its own code PR (roadmap P2.3), not made on a content branch (C1).
+validator, build, PR. An event supplied directly by a staff member, with no newsletter,
+leaves `newsletter_source` out (the field is optional in the schema since 5 October 2026);
+say in the PR who supplied it and when (C2).
 
 **Propose, then apply.** For any task that creates or changes more than five items from one
 source (a newsletter issue, a job harvest, a batch of tags). First show a proposal and stop:

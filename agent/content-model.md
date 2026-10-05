@@ -87,7 +87,7 @@ registration:
   url: https://...
   cost: free
 tags: [cyberinfrastructure, machine-learning]
-newsletter_source: [2026-july]   # newsletter slugs that announced this — see §4
+newsletter_source: [2026-july]   # newsletter slugs that announced this — see §4. Optional: omit for an event no newsletter announced
 featured: false
 published: true
 ```

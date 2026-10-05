@@ -92,7 +92,7 @@ const events = z.strictObject({
     cost: z.string().nullable().optional(),
   }).optional(),
   tags: strings,
-  newsletter_source: z.array(z.string()), // checked against newsletter slugs in the cross-reference section
+  newsletter_source: z.array(z.string()).optional(), // 27 of 27 have it; optional so an event supplied by staff, not announced in a newsletter, validates. Checked against newsletter slugs in the cross-reference section
   featured: z.boolean().optional(),       // 13 of 27
   published: z.boolean(),
 })
