@@ -160,9 +160,9 @@ does not check branch kind, so content-versus-code separation rests on the guard
 | # | Task | Status | Notes |
 |---|---|---|---|
 | P2.0 | Phase 1 evaluation summary | in the P2.1 PR | `agent/reports/261004_phase1-evaluation.md` |
-| P2.1 | Integrate the Phase 2 rules, branch checks and roadmap (this PR) | PR open once pushed | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
-| P2.2 | Unlock: Jordan edits the two protected files | not started: Jordan | after P2.1 merges |
-| P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | not started | patches are prepared on `task/content-patches`, unpushed. That branch changes `content/`, so under rule 3 it must be recut as `content/...` branches (one per repair) before a PR; as named it would fail `verify.sh`. Also proposed as its own code PR: make `newsletter_source` optional on events, so a staff-submitted event can validate |
+| P2.1 | Integrate the Phase 2 rules, branch checks and roadmap | merged (#43; P2.0 report included) | CLAUDE.md rules 3 and 4, C1 to C13, `verify.sh` branch checks |
+| P2.2 | Unlock: Jordan edits the two protected files | merged (#44) | the commit was made after #43 merged and reached the default branch through #44 |
+| P2.3 | Content repairs: three PRs (member email, excerpts, cyberseminars) emptying the known-failures list | repairs merged (#45, #46, #47); known-failures list empty, validator exits 0 | `newsletter_source` optional on events (so a staff-submitted event can validate): this branch, `task/events-newsletter-source-optional`, PR open once pushed. `task/content-patches` (unpushed) is superseded by the three merged branches |
 | P2.4 | Jobs: harvest and maintain `content/jobs/` | not started | A new job source (beyond `newsletter` and `joshswaterjobs`) needs a schema change first, as a code PR |
 | P2.5 | Events and news from newsletters: decomposition per C9 | not started | propose, then apply |
 | P2.6 | Decision backlog from Phase 1 (below) | not started: Jordan | |
