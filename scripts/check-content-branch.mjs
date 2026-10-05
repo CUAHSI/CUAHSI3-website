@@ -7,10 +7,10 @@
 // checkout has no branch name (the name is then read from GITHUB_HEAD_REF). Locally the name is also checked
 // against the diff.
 //   content branch: the diff touches content/. It may also touch agent/, public/ (assets belonging to a content item),
-//                   visual/baseline/ (images) and scripts/validate-content.known-failures.txt (removing lines only).
+//                   visual/baseline/ (images).
 //   code branch:    the diff touches anything else and not content/.
 // Also checked on any branch: nothing under content/ is deleted or renamed, the slug of a published item does not
-// change, a new people_mentioned value matches a profile file, and the known-failures list only shrinks.
+// change, a new people_mentioned value matches a profile file, and the known-failures list is not recreated.
 import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -34,7 +34,7 @@ const status = (git('diff', '--name-status', '-M', base) || '').split('\n').filt
 for (const f of (git('ls-files', '--others', '--exclude-standard') || '').split('\n').filter(Boolean)) status.push({ s: 'A', a: f, b: f })
 const files = status.map(x => x.b)
 const isContent = f => f.startsWith('content/')
-const isAllowedExtra = f => f.startsWith('agent/') || f.startsWith('public/') || f.startsWith('visual/baseline/') || f === KF
+const isAllowedExtra = f => f.startsWith('agent/') || f.startsWith('public/') || f.startsWith('visual/baseline/')
 const contentFiles = files.filter(isContent)
 const nonContent = files.filter(f => !isContent(f))
 const outsideAllowed = nonContent.filter(f => !isAllowedExtra(f))
@@ -45,7 +45,7 @@ const name = (git('branch', '--show-current') || '').trim() || process.env.GITHU
 const prefix = name.startsWith('content/') ? 'content/' : name.startsWith('task/') ? 'task/' : ''
 
 if (kind === 'content') {
-  if (outsideAllowed.length) say('FAIL', `a content branch changes only content/ (plus agent/, public/, visual/baseline/ and the known-failures list), but this one also changes ${outsideAllowed.length} other file(s): ${outsideAllowed.slice(0, 6).join(', ')}${outsideAllowed.length > 6 ? ', ...' : ''} (rule 3: a branch changes content or code, never both)`)
+  if (outsideAllowed.length) say('FAIL', `a content branch changes only content/ (plus agent/, public/ and visual/baseline/), but this one also changes ${outsideAllowed.length} other file(s): ${outsideAllowed.slice(0, 6).join(', ')}${outsideAllowed.length > 6 ? ', ...' : ''} (rule 3: a branch changes content or code, never both)`)
   else say('ok', `content branch: ${contentFiles.length} content file(s) changed, nothing else but allowed extras`)
 } else if (kind === 'code') say('ok', 'code branch: content/ untouched')
 else say('ok', 'content/ untouched')
@@ -125,12 +125,8 @@ else if (contentFiles.length) say('ok', 'no slug of an existing published item c
 if (mentionProblems.length) say('FAIL', `new people_mentioned value(s) that match no profile file in team, board or community (C6): ${mentionProblems.join('; ')}`)
 else if (contentFiles.length) say('ok', 'every new people_mentioned value matches a profile file')
 
-// --- the known-failures list only shrinks (C1)
-const kfDiff = git('diff', base, '--', KF) || ''
-const added = kfDiff.split('\n').filter(l => l.startsWith('+') && !l.startsWith('+++'))
-if (!git('ls-files', '--error-unmatch', KF) && fs.existsSync(KF)) added.push(...(now(KF) || '').split('\n').filter(Boolean))
-if (added.length) say('FAIL', `line(s) added to ${KF}: ${added.map(l => l.replace(/^\+/, '')).join(', ')} (C1: the list only shrinks; fix the file instead)`)
-else if (files.includes(KF)) say('ok', 'known-failures list: lines removed only')
+// --- the known-failures list is gone (C1): the validator must exit 0, so a list that tolerates failures must not come back
+if (fs.existsSync(KF)) say('FAIL', `${KF} exists (C1: the list was deleted once the validator reached 0 failures; the validator must exit 0, fix the file instead)`)
 
 finish()
 function finish() { console.log(out.join('\n')); process.exit(0) }

@@ -147,6 +147,7 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 261004 | visual tests | the screenshot suite fails one or two tests in the first run after a build, each time a test that took about 11 s instead of about 2 s (about-membership 390; about and about-governance 1280); reruns pass. Probably a slow first load on a busy machine; the tests wait for images and fonts but not for the machine to catch up. Not fixed (playwright.config.ts / tests/visual are not rule-8 files; a longer wait or one retry is a candidate).
 261004 | content/events/ | two apparent duplicate events (visible as repeated rows on /community/events): WaterSoftHack 2026, 20 Jul, in 260701-watersofthack.md (slug watersofthack-2026) and 260720-watersofthack-2026.md (slug watersofthack-2026-july); and the 24 Jun open house in 260601-virtual-open-house.md ('CUAHSI Virtual Open House', slug virtual-open-house-2026) and 260624-spring-virtual-open-house.md ('CUAHSI Spring Virtual Open House', slug spring-virtual-open-house-2026). Both pairs have different slugs, so each has its own page and URL; removing one would break a URL (rule 8) and the slugs may be linked from newsletters. A Phase 2 content question for Jordan, not touched.
 261005 | .claude/hooks/guard.mjs | line 36 blocks any git command that sends commits to a remote when the command text contains the whole word for the default branch (or its older name) anywhere, so a content branch named like `content/<that word>-page-fix` could not be sent, and a command whose commit message or PR title merely contains the word is blocked too (seen several times on 5 October). Jordan's file; not touched. Workaround so far: keep those words out of branch names and split commands.
+261005 | .github/workflows/verify.yml | the first comment line says the content validator's known failures stay a warning and extra ones fail. After the known-failures list was deleted any non-zero validator exit is a FAIL, so the comment is untrue. Comment only, no behaviour depends on it; not edited because Jordan said not to change CI. Also .claude/agents/reviewer.md check 1b still lists the known-failures file as an allowed extra (Jordan's file by convention).
 
 # Phase 2 roadmap (content agent)
 
@@ -155,7 +156,7 @@ branches under the content rules in CLAUDE.md (C1 to C13). The guard hook and pe
 setting that blocked edits to `content/` were unlocked by Jordan on 5 October 2026
 (`PHASE = 2`; deny rule removed; the commit reaches the default branch through the unlock PR). The hook
 does not check branch kind, so content-versus-code separation rests on the guardrails in
-`verify.sh` (branch kind, deletions, slugs, `people_mentioned`, known-failures) and review.
+`verify.sh` (branch kind, deletions, slugs, `people_mentioned`) and review.
 
 | # | Task | Status | Notes |
 |---|---|---|---|
@@ -176,5 +177,5 @@ The three `people_mentioned` values that match no profile file (informational, n
 item; checked with `npm run validate:content` on 5 October 2026): `masoumeh-hashemi`
 (newsletter 260101-january), `marco-maneta` and `punwath-prum` (newsletter 260201-february).
 
-After P2.1 merges, small code PR: delete `scripts/validate-content.known-failures.txt` once
-it is empty and drop the check from `verify.sh`.
+The known-failures file and its check were deleted on 5 October 2026 (`task/known-failures-cleanup`):
+the validator must now exit 0 (C1).

@@ -35,8 +35,7 @@ Warnings from verify.sh, and what I did about each:
 
 <!-- Delete this section on a code PR. -->
 
-- Validator before and after, with denominators:
-- Known-failures lines removed (only removals are allowed):
+- Validator exit code (must be 0, C1), with the counts it reports:
 - Sources, one line per item added or changed (C2). If Jordan or staff supplied the facts, who and when:
 - To verify: facts I could not confirm, and fields left empty (C3):
 - Agent's judgment calls, each labelled as mine (C7):
