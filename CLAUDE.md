@@ -426,8 +426,9 @@ denominators. Do not fix silently.
 **Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
 reports any path outside the allowed set in rule 3.
 
-**Locks.** Jordan lifted the Phase 2 locks on 5 October 2026: `PHASE = 2` in
+**Locks.** Phase 2 was opened on 4 October 2026; Jordan lifted the locks on 5 October 2026: `PHASE = 2` in
 `.claude/hooks/guard.mjs`, the `content/` deny rule removed from `.claude/settings.json`,
-and `reviewer.md` check 1b added. Those files, and the rest of `.claude/`, are still
-Jordan's to change. If a hook or permission blocks you, stop and tell him; do not look
+and `reviewer.md` check 1b added. The hook and `settings.json` are protected by the
+deny rules; `.claude/agents/` is not (an edit goes through), so it is Jordan's by
+convention only: tell him in the PR when you touch it. If a hook or permission blocks you, stop and tell him; do not look
 for a way around it.
