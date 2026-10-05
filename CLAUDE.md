@@ -145,9 +145,9 @@ C1. **The validator must not get worse, and the known-failures list only shrinks
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
     (optional in the schema today; give it whenever it is known). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
-    that no newsletter announced, and say where the facts came from). A news item summarising an article has `source_url`. If Jordan
-    or a staff member supplied the facts directly, say so in the PR description: who, and
-    when.
+    that no newsletter announced, and say where the facts came from). A news item
+    summarising an article has `source_url`. If Jordan or a staff member supplied the facts
+    directly, say so in the PR description: who, and when.
 C3. **Never invent.** No guessed dates, URLs, YouTube IDs, email addresses, names,
     funding numbers or deadlines. If a required field is unknown, the item is not ready:
     leave it `published: false` and list what is missing under "To verify" in the PR. If an
