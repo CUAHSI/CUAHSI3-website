@@ -1,0 +1,768 @@
+legacy_url,page_type,new_route,new_source,confidence,matched_by,notes
+https://www.cuahsi.org,landing page,/,pages/index.vue,exact,home page,the legacy home page
+https://www.cuahsi.org/about,other,/about,pages/about/index.vue,weak,redirect target,legacy redirects (302) to /about/who-we-are-2; the mapping of that page applies
+https://www.cuahsi.org/about/about-membership,static page,/about/membership,pages/about/membership.vue,probable,nav label,same label (Membership) in the About section
+https://www.cuahsi.org/about/contact-us,static page,/contact,pages/contact/index.vue,probable,nav label,"both are the contact entry point; the legacy page is a Jotform, this one lists addresses"
+https://www.cuahsi.org/about/governance,static page,/about/governance,pages/about/governance.vue,probable,path and label,"same label, same path stem"
+https://www.cuahsi.org/about/library,listing,,,none,listing root,no counterpart for the /about/library listing (its items have none either)
+https://www.cuahsi.org/about/library/2018-membership-meeting-test,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2020-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-april-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-august-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-february-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-january-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-june-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-march-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-may-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-november-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-october-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2021-september-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-april-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-august-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-february-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-january-meeting-minutes-2,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-july-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-march-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-may-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-november-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-october-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2022-september-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-2028-strategic-plan-final,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-april-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-august-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-december-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-february-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-january-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-july-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-june-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-march-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-may-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-november-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-october-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2023-september-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-december-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-february-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-january-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-july-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-june-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-late-june-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-may-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-meeting-minutes-2,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-november-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-october-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2024-september-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-annual-report,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-april-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-february-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-january-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-june-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/2025-may-meeting-minutes,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/a-message-from-cuahsis-executive-director,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/a-national-center-for-hydrologic-synthesis-scientific-objectives-structure-and-implementation,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/a-vision-for-hydrologic-science-research,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/annual-reports,listing,,,none,listing root,no counterpart for the /about/library/annual-reports listing (its items have none either)
+https://www.cuahsi.org/about/library/board-and-membership-minutes,listing,,,none,listing root,no counterpart for the /about/library/board-and-membership-minutes listing (its items have none either)
+https://www.cuahsi.org/about/library/cuahsi-hydrologic-information-systems,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/designing-hydrologic-observatories-a-paper-prototype-of-the-neuse-watershed,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/designing-hydrologic-observatories-as-a-community-service,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/facilities-for-transforming-hydrological-science,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/hydrologic-observatory-network,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2016,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2017,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2018,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2019,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2022,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2023,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/national-water-center-innovators-program-summer-institute-report-2024,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/reports-and-publications,listing,,,none,listing root,no counterpart for the /about/library/reports-and-publications listing (its items have none either)
+https://www.cuahsi.org/about/library/reports-and-publications/p2,listing,,,none,listing root,no counterpart for the /about/library/reports-and-publications listing (its items have none either)
+https://www.cuahsi.org/about/library/statement-on-holistic-evaluation-of-research-in-hydrologic-sciences,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/strategic-plans,listing,,,none,listing root,no counterpart for the /about/library/strategic-plans listing (its items have none either)
+https://www.cuahsi.org/about/library/the-cuahsi-hydrological-measurement-facility-community-survey-2005,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/water-prediction-innovators-program-summer-institute-report-2025,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/library/water-prediction-innovators-summer-institute-report-2026,document or file,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/our-team,listing,/about/team,pages/about/team/index.vue,probable,nav label,same function
+https://www.cuahsi.org/about/our-team/abner-bogan,person,/about/team/abner-bogan,pages/about/team/[slug].vue + content/team/abner-bogan.md,exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/anthony-castronova,person,/about/team/tony-castronova,pages/about/team/[slug].vue + content/team/tony-castronova.md,exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/barbara-walker,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/brianna-kearns,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/callie-porter-borden,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/courtney-di-vittorio,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/danielle-tijerina-kreuzer,person,/about/team/danielle-tijerina-kreuzer,pages/about/team/[slug].vue + content/team/full-team.json (no .md profile),exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/devin-cowan,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/emily-clark,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/henok-tedla,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/irene-garousi-nejad,person,/about/team/irene-garousi-nejad,pages/about/team/[slug].vue + content/team/full-team.json (no .md profile),exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/jordan-read,person,/about/team/jordan-read,pages/about/team/[slug].vue + content/team/jordan-read.md,exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/julia-masterman,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/kaysa-vaarre-lamoureux-she-they,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/kimberlee-wong,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/lindsay-platt,person,/about/team/lindsay-platt,pages/about/team/[slug].vue + content/team/full-team.json (no .md profile),exact,name,legacy title equals full-team.json name
+https://www.cuahsi.org/about/our-team/lisa-mucciacito,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/martin-seul,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/neal-debuhr,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/scott-black,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/summer-conley,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/our-team/zahraa-alhmood,person,/about/team,content/team/full-team.json (no profile page),exact,name,on the team list; has_profile is false so there is no page of its own
+https://www.cuahsi.org/about/policies-and-conduct,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/policies-and-conduct/code-of-conduct-policy,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/policies-and-conduct/conduct-concern-report,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/policies-and-conduct/investigation-resolution-and-consequences-policy-guide,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/about/what-we-do,static page,/about,pages/about/index.vue,weak,nav judgment,no page of its own here; the About page carries the overview
+https://www.cuahsi.org/about/who-we-are-2,static page,/about,pages/about/index.vue,weak,nav judgment,no page of its own here; the About page carries the overview
+https://www.cuahsi.org/acknowledging-cuahsi,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/all-programs-services,listing,/learn-train,pages/learn-train/index.vue,weak,nav judgment,the nearest overview of programs
+https://www.cuahsi.org/authorship-agreement-water-prediction-innovators-summer-institute,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community,landing page,/community,pages/community/index.vue,probable,path and label,same path and label
+https://www.cuahsi.org/community-awards,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/job-board,other,/community/jobs,pages/community/jobs/index.vue,probable,redirect target,legacy redirects (302) to /job-board; the mapping of that page applies
+https://www.cuahsi.org/community/news,listing,/community/news,pages/community/news/index.vue,probable,path,same path
+https://www.cuahsi.org/community/news/<email-1>,other,,,none,status,legacy returns 404
+https://www.cuahsi.org/community/news/<email-2>,other,,,none,status,legacy returns 404
+https://www.cuahsi.org/community/news/<email-3>,other,,,none,status,legacy returns 404
+https://www.cuahsi.org/community/news/10th-anniversary-of-the-water-prediction-innovators-summer-institute,news post,,,none,title+date,best candidate: water-prediction-summer-institute-2026 (0.63); below the thresholds
+https://www.cuahsi.org/community/news/2023-cuahsi-annual-members-report,news post,,,none,title+date,best candidate: experimental-watersheds-database (0.00); below the thresholds
+https://www.cuahsi.org/community/news/2025-pathfinder-fellowship-awardees,news post,,,none,title+date,best candidate: hif-awardees-2025 (0.13); below the thresholds
+https://www.cuahsi.org/community/news/2026-hydrolearn-workshop-and-hackathon-recap,news post,,,none,title+date,best candidate: hydrolearn-ciroh-hackathon-2026 (0.20); below the thresholds
+https://www.cuahsi.org/community/news/a-cuahsi-board-spotlight-with-marco-p-maneta,news post,/community/news/board-spotlight-marco-maneta,content/news/260211-board-marco-maneta.md,probable,title+date,"title similarity 1.00; legacy date 2026-02-11, here 2026-02-11 (0 days apart); counterpart is a news"
+https://www.cuahsi.org/community/news/an-interview-with-cuahsi-staff-about-project-work-on-community-resilience-planning,news post,,,none,title+date,best candidate: floodsavvy-community-resilience (0.17); below the thresholds
+https://www.cuahsi.org/community/news/announcing-cuahsi-2023-2028-strategic-plan,news post,,,none,title+date,best candidate: experimental-watersheds-database (0.00); below the thresholds
+https://www.cuahsi.org/community/news/announcing-the-launch-of-the-new-cuahsi-website,news post,,,none,title+date,best candidate: new-staff-henok-tedla (0.11); below the thresholds
+https://www.cuahsi.org/community/news/april-e-newsletter-community-guest-spotlight-with-2024-watersofthack-fellows,newsletter issue,,,none,month,no issue here for 2025-04
+https://www.cuahsi.org/community/news/as-cuahsi-celebrates-25-years-meet-the-33-universities-that-started-it-all,news post,,,none,title+date,best candidate: 25th-anniversary-rick-hooper (0.23); below the thresholds
+https://www.cuahsi.org/community/news/august-e-newsletter-community-guest-spotlight-with-millie-spencer,newsletter issue,,,none,month,no issue here for 2025-08
+https://www.cuahsi.org/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective,news post,,,none,title+date,best candidate: neon-hydroshare-collection-2026 (0.15); below the thresholds
+https://www.cuahsi.org/community/news/call-for-nominations-cuahsi-board-of-directors,news post,,,none,title+date,best candidate: board-nominees-2025 (0.33); below the thresholds
+https://www.cuahsi.org/community/news/celebrating-a-decade-of-the-water-prediction-innovators-summer-institute,news post,,,none,title+date,best candidate: water-prediction-summer-institute-2026 (0.63); below the thresholds
+https://www.cuahsi.org/community/news/community-data-spotlight-modis-viirs-global-water-reservoir-product,news post,,,none,title+date,best candidate: community-spotlight-punwath-prum (0.29); below the thresholds
+https://www.cuahsi.org/community/news/cuahsi-2025-board-of-director-nominees,news post,/community/news/board-nominees-2025,content/news/251030-board-nominees.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/cuahsi-25th-anniversary-milestones,news post,,,none,title+date,best candidate: 25th-anniversary-rick-hooper (0.22); below the thresholds
+https://www.cuahsi.org/community/news/cuahsi-board-spotlight-with-tao-wen,news post,/community/news/board-spotlight-tao-wen,content/news/260310-board-tao-wen.md,probable,title+date,"title similarity 1.00; legacy date 2026-03-10, here 2026-03-10 (0 days apart); counterpart is a news"
+https://www.cuahsi.org/community/news/cuahsi-e-newsletter-august-2026,newsletter issue,/community/newsletter/2026-august,content/newsletter/260813-august.md,exact,month (title),"title names the month, 2026-08"
+https://www.cuahsi.org/community/news/cuahsi-e-newsletter-july-2026,newsletter issue,/community/newsletter/2026-july,content/newsletter/260701-july.md,exact,month (title),"title names the month, 2026-07"
+https://www.cuahsi.org/community/news/cuahsi-e-newsletter-june-2026,newsletter issue,/community/newsletter/2026-june,content/newsletter/260601-june.md,exact,month (title),"title names the month, 2026-06"
+https://www.cuahsi.org/community/news/cuahsi-e-newsletter-may-2026,newsletter issue,/community/newsletter/2026-may,content/newsletter/260501-may.md,exact,month (title),"title names the month, 2026-05"
+https://www.cuahsi.org/community/news/cuahsi-e-newsletter-september-2026,newsletter issue,/community/newsletter/2026-september,content/newsletter/260910-september.md,exact,month (title),"title names the month, 2026-09"
+https://www.cuahsi.org/community/news/cuahsi-engagement-offerings,news post,,,none,title+date,best candidate: 25th-anniversary-rick-hooper (0.00); below the thresholds
+https://www.cuahsi.org/community/news/cuahsi-member-representatives-vote-to-pass-amendments-to-bylaws,news post,,,none,title+date,best candidate: hydroshare-cloud-migration (0.00); below the thresholds
+https://www.cuahsi.org/community/news/cuahsis-25th-anniversary-reflections-a-challenge-for-todays-hydrologic-scientists-by-rick-hooper,news post,/community/news/25th-anniversary-rick-hooper,content/news/260701-25th-anniversary-rick-hooper.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/cuahsis-25th-anniversary-reflections-convening-the-community-in-the-new-era-of-water-science-by-hoori-ajami,news post,,,none,title+date,best candidate: 25th-anniversary-rick-hooper (0.25); below the thresholds
+https://www.cuahsi.org/community/news/cyberwater-beta-version-has-been-released,news post,,,none,title+date,best candidate: experimental-watersheds-database (0.00); below the thresholds
+https://www.cuahsi.org/community/news/data-services-helpdesk-webinars,news post,,,none,title+date,best candidate: data-subsetter-national-water-model (0.10); below the thresholds
+https://www.cuahsi.org/community/news/december-e-newsletter,newsletter issue,,,none,month,no issue here for 2023-04
+https://www.cuahsi.org/community/news/fair-and-care-data-principles-assessment-for-sustainable-water-resources-management-on-reservation-lands,news post,,,none,title+date,best candidate: indigenous-data-sovereignty-2026 (0.25); below the thresholds
+https://www.cuahsi.org/community/news/february-e-newsletter-community-spotlight-with-wouter-knoben,newsletter issue,,,none,month,no issue here for 2025-02
+https://www.cuahsi.org/community/news/flood-analytics-information-system-fais,news post,,,none,title+date,best candidate: data-subsetter-national-water-model (0.09); below the thresholds
+https://www.cuahsi.org/community/news/floodsavvy,news post,/community/news/floodsavvy-launch,content/news/251112-floodsavvy.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/geopaths-go-jamaica-a-cuahsi-board-spotlight-with-ashley-matheny,news post,,,none,title+date,best candidate: board-spotlight-tao-wen (0.22); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-a-case-for-open-source-based-digital-water-systems,news post,,,none,title+date,best candidate: water-content-portal-2025 (0.12); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-a-framework-for-conducting-environmentally-responsible-hydroinformatics-research,news post,,,none,title+date,best candidate: model-evaluation-hackathon-2026 (0.09); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-a-set-of-open-source-python-tools-for-working-with-river-basin-data-collections,news post,,,none,title+date,best candidate: hif-awardees-2025 (0.14); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-advancing-technology-for-understanding-residential-water-use,news post,,,none,title+date,best candidate: residential-water-use-dataset-2026 (0.18); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-arc-hydros-wim-a-machine-learning-framework-for-wetland-identification,news post,,,none,title+date,best candidate: model-evaluation-hackathon-2026 (0.07); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-classifying-nhdplus-catchments-based-on-drought-propagation-mechanism,news post,,,none,title+date,best candidate: community-spotlight-masoumeh-hashemi (0.06); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-hello-to-gromopo-introducing-a-community-groundwater-model-portal,news post,,,none,title+date,best candidate: floodsavvy-community-resilience (0.13); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-monitor-my-watershed-helps-lower-barriers-for-real-time-data-sharing,news post,,,none,title+date,best candidate: cache-la-poudre-wq-2026 (0.11); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-post-advances-in-biogeochemical-modeling-and-management-of-san-francisco-bay-ecosystem,news post,,,none,title+date,best candidate: data-subsetter-national-water-model (0.06); below the thresholds
+https://www.cuahsi.org/community/news/hydroinformatics-blog-running-research-models-for-hands-on-hydrology-education,news post,,,none,title+date,best candidate: fair4rs-hydrologic-software (0.15); below the thresholds
+https://www.cuahsi.org/community/news/hydrolang-an-open-source-web-based-framework-for-environmental-and-hydrological-analyses,news post,,,none,title+date,best candidate: model-evaluation-hackathon-2026 (0.14); below the thresholds
+https://www.cuahsi.org/community/news/hydrolearn-fellows-reflections,news post,,,none,title+date,best candidate: watersofthack-fellows-2025 (0.40); below the thresholds
+https://www.cuahsi.org/community/news/january-e-newsletter-community-guest-spotlight-with-anna-marshall,newsletter issue,,,none,month,no issue here for 2025-01
+https://www.cuahsi.org/community/news/january-e-newsletter-community-guest-spotlight-with-masoumeh-hashemi,newsletter issue,/community/news/community-spotlight-masoumeh-hashemi,content/news/260107-masoumeh-hashemi.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/january-e-newsletter-community-guest-spotlight-with-punwath-prum,newsletter issue,/community/news/community-spotlight-punwath-prum,content/news/260211-punwath-prum.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/july-e-newsletter-community-guest-spotlight-with-andrew-lewis,newsletter issue,,,none,month,no issue here for 2025-07
+https://www.cuahsi.org/community/news/jupyterhub-data-loss-incident,news post,/community/news/jupyterhub-data-loss-incident,content/news/260423-jupyterhub-incident.md,exact,title+date,"title similarity 1.00; legacy date 2026-04-23, here 2026-04-23 (0 days apart); counterpart is a news"
+https://www.cuahsi.org/community/news/march-e-newsletter-community-guest-spotlight-with-2025-watersofthack-fellows,newsletter issue,/community/news/watersofthack-fellows-2025,content/news/260310-watersofthack-fellows.md,exact,source_url,the news file names this legacy page as its source_url
+https://www.cuahsi.org/community/news/march-e-newsletter-community-guest-spotlight-with-taher-chegini,newsletter issue,,,none,month,no issue here for 2025-03
+https://www.cuahsi.org/community/news/new-publication-integrating-resilience-and-nexus-approaches-in-managing-flood-risk,news post,,,none,title+date,best candidate: experimental-watersheds-database (0.00); below the thresholds
+https://www.cuahsi.org/community/news/november-e-newsletter-community-guest-spotlight-with-mark-wang-2,newsletter issue,,,none,month,no issue here for 2024-11
+https://www.cuahsi.org/community/news/october-e-newsletter-community-guest-spotlight-with-kristina-vrouwenvelder,newsletter issue,,,none,month,no issue here for 2024-10
+https://www.cuahsi.org/community/news/p2,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/p3,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/p4,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/p5,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/p6,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/p7,listing,/community/news,pages/community/news/index.vue,probable,listing root,pager or category view of /community/news; same path
+https://www.cuahsi.org/community/news/registration-is-now-open-cuahsi-biennial-2023,news post,,,none,title+date,best candidate: experimental-watersheds-database (0.00); below the thresholds
+https://www.cuahsi.org/community/news/research-from-smith-college-on-the-effects-of-road-salts-and-the-surrounding-ecosystem-in-kampoosa-bog-ma,news post,,,none,title+date,best candidate: fair4rs-hydrologic-software (0.06); below the thresholds
+https://www.cuahsi.org/community/news/september-e-newsletter-community-guest-spotlight-with-cheristy-jones,newsletter issue,/community/news/community-spotlight-cheristy-jones,content/news/250903-cheristy-jones.md,weak,title+date,"title similarity 0.31; legacy date 2025-09-03, here 2025-09-03 (0 days apart); counterpart is a news item"
+https://www.cuahsi.org/community/news/september-e-newsletter-guest-spotlight-with-amirhossein-montazeri,newsletter issue,/community/newsletter/2026-september,content/newsletter/260910-september.md,weak,month (posted date),a single guest-spotlight post dated 2026-09-08; no news item here matches it; the issue for 2026-09 may carry it (not compared; stage 5)
+https://www.cuahsi.org/community/news/snow-measurement-field-school-2025-recap,news post,,,none,title+date,best candidate: snow-field-school-2026 (0.36); below the thresholds
+https://www.cuahsi.org/community/news/test-news-post,news post,,,none,title+date,best candidate: hydroshare-cloud-migration (0.11); below the thresholds
+https://www.cuahsi.org/community/news/ua-awarded-360-million-to-lead-national-water-effort,news post,,,none,title+date,best candidate: floodsavvy-community-resilience (0.14); below the thresholds
+https://www.cuahsi.org/community/news/update-from-cuahsi-staff-who-attended-the-2025-virtual-esip-meeting,news post,,,none,title+date,best candidate: virtual-university-fall-2025 (0.11); below the thresholds
+https://www.cuahsi.org/community/news/water-use-data-in-the-united-states-challenges-and-future-directions,news post,,,none,title+date,best candidate: indigenous-data-sovereignty-2026 (0.15); below the thresholds
+https://www.cuahsi.org/community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system,news post,,,none,title+date,best candidate: new-staff-henok-tedla (0.07); below the thresholds
+https://www.cuahsi.org/community/news/wikiwatershed-a-cuahsi-board-spotlight-with-jennifer-merrill,news post,,,none,title+date,best candidate: board-spotlight-tao-wen (0.29); below the thresholds
+https://www.cuahsi.org/community/water-data-portals,listing,,,none,listing root,no counterpart for the /community/water-data-portals listing (its items have none either)
+https://www.cuahsi.org/community/water-data-portals/advanced-weather-and-climate-forecasting-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/aquastat,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/centre-for-ecology-hydrology-data,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/cuahsi-data-services,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/datastream,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/earth2observe-water-cycle-integrator,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/eurostat-water-statistics,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/freshwater-information-platform,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/gemstat,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-earth-observation-system-of-systems-portal,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-flood-detection-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-groundwater-information-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-mercury-observation-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-rivers-observatory,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/global-runoff-data-centre,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/groundwater-assessment-platform,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/hydrolakes,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/hydrological-data-and-maps-based-onshuttleelevationderivatives-at-multiples,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/hydrological-predictions-for-the-environment,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/intelligent-dam-decisions-and-assessment,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/international-centre-for-water-resourses-and-global-change,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/international-hydrological-programmes-water-information-network-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/iwrm-data-portal,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/joint-research-centre-water-portal,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/jupiter-national-well-database,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/mekong-and-red-river-water-forecasting-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/monitor-my-watershed,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/national-long-term-surveillance-of-swiss-rivers,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/national-river-flow-archive,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/open-water-data-initiative,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/p2,listing,,,none,listing root,no counterpart for the /community/water-data-portals listing (its items have none either)
+https://www.cuahsi.org/community/water-data-portals/p3,listing,,,none,listing root,no counterpart for the /community/water-data-portals listing (its items have none either)
+https://www.cuahsi.org/community/water-data-portals/p4,listing,,,none,listing root,no counterpart for the /community/water-data-portals listing (its items have none either)
+https://www.cuahsi.org/community/water-data-portals/p5,listing,,,none,listing root,no counterpart for the /community/water-data-portals listing (its items have none either)
+https://www.cuahsi.org/community/water-data-portals/reseau-des-bassins-versants-network-of-drainage-basins,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/south-asian-surface-water-modeling-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/swiss-federal-office-of-the-environment-foen-topic-water,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/the-farm-platform-data-portal,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/transboundary-waters-assessment-programme-twap-data-portal,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/usgs-water-data-for-the-nation,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/usgs-water-services,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/water-data-centre,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/water-data-online,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/water-isotope-system-for-data-analysis-visualization-and-electronic-retriev,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/waterisotopes-org,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/who-unicef-joint-monitoring-programme-for-water-supply-and-sanitation,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/wmo-hydrological-observing-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-data-portals/world-hydrological-cycle-observing-system,data portal entry,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/community/water-science-exchange,static page,/community/events/water-science-exchange-2026,pages/community/events/[slug].vue + content/events/261112-water-science-exchange.md,weak,name,"an event here carries the name; the legacy page describes the series, not one event"
+https://www.cuahsi.org/cyberseminars,listing,/learn-train/cyberseminars,pages/learn-train/cyberseminars/index.vue,probable,nav label,same content type; different section (Learn & Train)
+https://www.cuahsi.org/cyberseminars/2021-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/2022-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/2023-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations-2,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations-3,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/2024-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/2025-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/2026-women-advancing-river-research-lecture-series,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/addressing-social-and-ethical-dilemmas-in-managing-a-citizen-science-project,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/all-upcoming,listing,/learn-train/cyberseminars,pages/learn-train/cyberseminars/index.vue,weak,nav judgment,a filtered view of the seminar list
+https://www.cuahsi.org/cyberseminars/app-mobile-phone-and-sensor-based-hydrological-monitoring,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/building-skills-and-finding-collaborators-for-hydrogeophysics,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/challenges-and-opportunities-in-data-sharing-critical-zone-science,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/changes-coming-to-usgs-water-data-apis,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2025-usgs-water-data-apis.md,exact,title+date,"title similarity 1.00; legacy date 2025-08-13, here 2025-08-13 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/citizen-science-in-outreach-and-education,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/current-research-in-hydrogeodesy-and-hydroseismology,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/cybersecurity-in-small-rural-water-systems,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/data-and-computing-accessibility-across-scales,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/data-driven-approaches-to-understanding-emerging-contaminants,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/developing-effective-mentoring-relationships-part-i-panel-webinar,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/developing-effective-mentoring-relationships-part-i-panel-webinar-2,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2023-nav-academic-waters-mentoring.md,weak,title+date,"title similarity 0.40; legacy date 2023-11-09, here 2023-11-09 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/hydrologic-science-and-indigenous-voices,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/hydrologic-science-and-indigenous-voices-jessi-parfait,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/hydrologic-science-and-indigenous-voices-joesph-gazing-wolf-north-dakota,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/hydrologic-science-and-indigenous-voices-kenny-swift-bird-university-of-colorado-school-of-mines,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/hydrologic-science-and-indigenous-voices-weaving-traditional-ecological-knowledge-into-the-hydrologic-sciences,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/innovative-technical-tools-and-methods,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/integrating-citizen-science-with-water-resources-research-across-the-globe,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/introduction-to-the-national-science-foundations-hydrologic-sciences-program-a-virtual-town-hall-meeting,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/lessons-learned-sustaining-participation-over-decades-and-avoiding-potential-pitfalls,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/national-water-availability-assessment-understanding-the-science,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2025-usgs-nwaa-communicating-nov.md,probable,title+date,"title similarity 0.89; legacy date 2025-11-19, here 2025-11-19 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/national-water-availability-assessment-understanding-the-science-2,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2025-usgs-nwaa-understanding.md,exact,title+date,"title similarity 1.00; legacy date 2025-09-24, here 2025-09-24 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/national-water-availability-assessment-understanding-the-science-3,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2025-usgs-nwaa-leveraging.md,exact,title+date,"title similarity 1.00; legacy date 2025-12-10, here 2025-12-10 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-expanding-funding-landscape-non-federal-funding-opportunities,cyberseminar,,content/cyberseminars/2025-nav-beyond-academic-funding.md,probable,title+date,"title similarity 0.90; legacy date 2025-10-08, here 2025-10-08 (0 days apart); the file is published: false, so it is not shown on this site; no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-highlighting-skill-sets-for-careers-outside-of-academia,cyberseminar,,content/cyberseminars/2025-nav-beyond-academic-careers.md,probable,title+date,"title similarity 0.90; legacy date 2025-09-17, here 2025-09-17 (0 days apart); the file is published: false, so it is not shown on this site; no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-leveraging-ai-and-data-science-in-hydrology,cyberseminar,,content/cyberseminars/2025-nav-beyond-academic-ai.md,probable,title+date,"title similarity 0.89; legacy date 2025-11-05, here 2025-11-05 (0 days apart); the file is published: false, so it is not shown on this site; no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-navigating-todays-federal-job-market,cyberseminar,/community/events/navigating-federal-job-market-2026,content/events/261008-navigating-federal-job-market.md,probable,title+date (events),"title similarity 0.89; legacy date 2026-10-08, here 2026-10-08 (0 days apart); counterpart is an event here, not a seminar"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-reframing-research-language-for-impactful-and-relevant-broader-impact-statements,cyberseminar,,content/cyberseminars/2025-nav-beyond-academic-broader-impacts.md,probable,title+date,"title similarity 0.83; legacy date 2025-08-27, here 2025-08-27 (0 days apart); the file is published: false, so it is not shown on this site; no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-the-connected-researcher-building-networks-that-bridge-academia-industry-and-beyond,cyberseminar,/community/events/connected-researcher-2026,content/events/261119-connected-researcher.md,probable,title+date (events),"title similarity 1.00; legacy date 2026-11-19, here 2026-11-19 (0 days apart); counterpart is an event here, not a seminar"
+https://www.cuahsi.org/cyberseminars/navigating-academic-waters-the-scientist-behind-the-science-the-power-of-storytelling-in-academic-and-professional-spaces,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/navigating-non-academic-waters,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/neon-hydrology-exploring-the-water-cycle-at-co-located-terrestrial-aquatic-sites-within-the-national-ecological-observatory-network-a-data-skills-webinar,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/neon-hydrology-hydrologic-data-products-and-tools-published-by-the-national-ecological-observatory-network-an-introduction,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/novel-model-approaches,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/pipelines-portals-and-visualizations,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/post-field-season-data-practices-for-research-success,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2025-post-field-data-practices.md,exact,title+date,"title similarity 1.00; legacy date 2025-11-12, here 2025-11-12 (0 days apart); legacy has YouTube id(s) not in any file here"
+https://www.cuahsi.org/cyberseminars/postdoctoral-grant-writing,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/proactive-data-management-for-post-field-season-data-success,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/proactive-data-management-for-post-field-season-data-success-2,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-navigating-non-academic-waters,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-postdoctoral-grant-writing,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-succeeding-as-a-postdoc,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2023-navigating-academic-waters-series-with-agu-h3s-finding-your-niche,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2024-navigating-beyond-academic-waters-expectations-collaborations,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2025-navigating-beyond-academic-waters,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/2026-navigating-beyond-academic-waters,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/changes-coming-to-usgs-water-data-apis,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/hydrologic-science-and-indigenous-voices,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/integrating-hydrology-and-geophysics,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/introduction-to-neon-for-hydrology,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/making-waves-in-water-science-open-source-tools,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/ntegrating-citizen-science-with-water-resources-research-across-the-globe,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/post-field-season-data-practices-for-research-success,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/proactive-data-management-for-post-field-season-data-success,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/the-food-energy-water-nexus-using-hydroviz-to-support-undergraduate-student-learning,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/usgs-national-water-availability-assessment,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/water-data-forum,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/series/women-advancing-river-research-lecture-series,cyberseminar series,,,none,type,no series page or entity here: series is a text field on a seminar (stage 3)
+https://www.cuahsi.org/cyberseminars/starting-simple-part-i-simple-hands-on-methods-for-water-quantity-monitoring,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/starting-simple-part-ii-basic-methods-for-water-quality-monitoring,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/succeeding-as-a-postdoc,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/synthesis-workshop-series-easter-coastal-region,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/synthesis-workshop-series-easter-coastal-region-2,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2,cyberseminar,,,none,"youtube id, then title+date",legacy has a YouTube id; no file here has it
+https://www.cuahsi.org/cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2-2,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/the-food-energy-water-nexus-using-hydroviz-to-support-undergraduate-student-learning,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/the-what-why-and-how-of-building-your-personal-research-brand-part-i,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/the-what-why-and-how-of-building-your-personal-research-brand-part-i-2,cyberseminar,/learn-train/cyberseminars,content/cyberseminars/2023-nav-academic-waters-brand.md,weak,title+date,"title similarity 0.31; legacy date 2023-10-12, here 2023-10-12 (0 days apart); no YouTube id on the legacy page"
+https://www.cuahsi.org/cyberseminars/using-citizen-science-data-to-inform-hydrological-models-and-policies,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/where-to-go-from-here-narrowing-your-professional-path-part-i,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/where-to-go-from-here-narrowing-your-professional-path-part-i-2,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/women-advancing-river-research-bedrock-water-storage-forest-health-and-streamflow,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/women-advancing-river-research-hydroclimate-impacts-on-human-water-interactions,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/women-advancing-river-research-urban-stream-biogeochemistry,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberseminars/women-advancing-river-researchopen-discussion-feedbacks-and-community-bonding,cyberseminar,,,none,"youtube id, then title+date",no YouTube id on the legacy page; no title+date match
+https://www.cuahsi.org/cyberwater,program,,,none,name,no program here with this name
+https://www.cuahsi.org/data-models/discovery-and-analysis,other,/data-platforms,pages/data-platforms/index.vue,probable,redirect target,legacy redirects (302) to /data-services/solutions; the mapping of that page applies
+https://www.cuahsi.org/data-services,other,/data-platforms,pages/data-platforms/index.vue,probable,redirect target,legacy redirects (302) to /data-services/solutions; the mapping of that page applies
+https://www.cuahsi.org/data-services/frequently-asked-questions,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/data-services/hydrologic-information-system,static page,/data-platforms,pages/data-platforms/index.vue,weak,tool named on the page,"""HIS"" appears on /data-platforms (checked); the full name does not"
+https://www.cuahsi.org/data-services/hydroshare,static page,/data-platforms,pages/data-platforms/index.vue,weak,tool named on the page,HydroShare is named on /data-platforms (checked); no page of its own
+https://www.cuahsi.org/data-services/jupyterhub,static page,/data-platforms,pages/data-platforms/index.vue,weak,tool named on the page,JupyterHub is named on /data-platforms (checked); no page of its own
+https://www.cuahsi.org/data-services/matlab,static page,/data-platforms,pages/data-platforms/index.vue,weak,tool named on the page,MATLAB is named on /data-platforms (checked); no page of its own
+https://www.cuahsi.org/data-services/model-domain-subsetter,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/data-services/products,static page,/data-platforms,pages/data-platforms/index.vue,weak,nav judgment,one page here covers the section
+https://www.cuahsi.org/data-services/research-data-management-guide,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/data-services/solutions,landing page,/data-platforms,pages/data-platforms/index.vue,probable,nav judgment,both are the Data section landing page
+https://www.cuahsi.org/donate,landing page,/support,pages/support/index.vue,probable,function,"both embed a Zeffy donation form (stage 3, table 3)"
+https://www.cuahsi.org/events,listing,/community/events,pages/community/events/index.vue,probable,nav label,same label (Events)
+https://www.cuahsi.org/events/2025-american-geophysical-union-annual-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.20, 346 days); below the thresholds"
+https://www.cuahsi.org/events/2025-hacking-limnology-5th-joint-summit-and-workshops,event,,,none,title+date,"best candidate: aslo-sil-2026 (0.10, 325 days); below the thresholds"
+https://www.cuahsi.org/events/2026-american-geophysical-union-annual-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.29, 6 days); below the thresholds"
+https://www.cuahsi.org/events/2026-near-surface-geophysics-community-input-workshop,event,/community/events/near-surface-geophysics-workshop-2026,content/events/260625-near-surface-geophysics-workshop.md,exact,title+date,"title similarity 1.00; legacy date 2026-08-25, here 2026-08-25 (0 days apart)"
+https://www.cuahsi.org/events/2026-snow-measurement-field-school-application-deadline,event,/community/events/snow-field-school-2026,content/events/260101-snow-field-school.md,weak,title+date,"title similarity 1.00; legacy date (none), here 2026-01-05"
+https://www.cuahsi.org/events/abstract-deadline-extended-for-waterscicon24,event,,,none,title+date,"best candidate: agu26-abstract-deadline (0.33, 882 days); below the thresholds"
+https://www.cuahsi.org/events/african-voices-in-changing-climates-post-production-and-social-impact-cinema,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1354 days); below the thresholds"
+https://www.cuahsi.org/events/agu-abstract-submission,event,/community/events/agu26-abstract-deadline,content/events/260805-agu26-abstract-deadline.md,weak,title+date,"title similarity 0.40; legacy date 2026-08-05, here 2026-08-05 (0 days apart)"
+https://www.cuahsi.org/events/agu-fall-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.20, 1086 days); below the thresholds"
+https://www.cuahsi.org/events/agu-fall-meeting-2022,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.17, 1446 days); below the thresholds"
+https://www.cuahsi.org/events/agu-meet-greet-cuahsi-awards-fellowships,event,,,none,title+date,"best candidate: cuahsi-agu-gathering-2026 (0.13, 1092 days); below the thresholds"
+https://www.cuahsi.org/events/agu-meet-greet-cuahsi-virtual-university,event,,,none,title+date,"best candidate: virtual-open-house-2026 (0.14, 925 days); below the thresholds"
+https://www.cuahsi.org/events/agu-meet-greet-cznet-nsf-reu-pod,event,,,none,title+date,"best candidate: cuahsi-agu-gathering-2026 (0.10, 1093 days); below the thresholds"
+https://www.cuahsi.org/events/agu-meet-greet-national-water-center-innovators-program-summer-institute,other,,,none,status,legacy returns 404
+https://www.cuahsi.org/events/american-geophysical-union-annual-meeting-2024,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.29, 722 days); below the thresholds"
+https://www.cuahsi.org/events/an-introduction-to-hydroshare,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.14, 806 days); below the thresholds"
+https://www.cuahsi.org/events/an-introduction-to-hydroshare-2,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.14, 862 days); below the thresholds"
+https://www.cuahsi.org/events/application-deadline-hydroinformatics-innovation-fellowship,event,,,none,title+date,"best candidate: agu-bridges-deadline-2026 (0.25, 995 days); below the thresholds"
+https://www.cuahsi.org/events/application-deadline-pathfinder-fellowship,event,,,none,title+date,"best candidate: agu-bridges-deadline-2026 (0.29, 995 days); below the thresholds"
+https://www.cuahsi.org/events/application-deadline-stakeholder-informed-spatial-modeling-for-hydrologic-sciences,event,,,none,title+date,"best candidate: csdms-2026 (0.08, ? days); below the thresholds"
+https://www.cuahsi.org/events/application-deadline-watersofthack-2026,event,,,none,title+date,"best candidate: watersofthack-2026 (0.50, ? days); below the thresholds"
+https://www.cuahsi.org/events/applications-are-open-2024-instrumentation-discovery-grant,event,,,none,title+date,"best candidate: virtual-open-house-2026 (0.13, 784 days); below the thresholds"
+https://www.cuahsi.org/events/applications-are-open-for-watersofthack-cybertraining-2025,event,,,none,title+date,"best candidate: watersofthack-2026 (0.17, 476 days); below the thresholds"
+https://www.cuahsi.org/events/applications-for-the-2026-summer-institute-are-now-open,event,,,none,title+date,"best candidate: water-prediction-innovators-2026 (0.63, 147 days); below the thresholds"
+https://www.cuahsi.org/events/apply-for-the-cuahsi-data-publishing-program,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.75, 171 days); below the thresholds"
+https://www.cuahsi.org/events/apply-to-be-an-instructor-for-the-2026-fall-semester-of-the-cuahsi-virtual-university,event,,,none,title+date,"best candidate: watersofthack-2026 (0.13, ? days); below the thresholds"
+https://www.cuahsi.org/events/association-for-the-sciences-of-limnology-and-oceanography-aquatic-sciences-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.13, 615 days); below the thresholds"
+https://www.cuahsi.org/events/biennial,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 962 days); below the thresholds"
+https://www.cuahsi.org/events/call-for-posters-2023-cuahsi-biennial,event,,,none,title+date,"best candidate: frontiers-water-ml-cfp-2026 (0.10, 1206 days); below the thresholds"
+https://www.cuahsi.org/events/call-for-workshops-and-breakout-sessions-2023-cuahsi-biennial,event,,,none,title+date,"best candidate: frontiers-water-ml-cfp-2026 (0.08, 1336 days); below the thresholds"
+https://www.cuahsi.org/events/ciroh-developers-conference,event,,,none,title+date,"best candidate: ciroh-developers-2026 (1.00, 364 days); below the thresholds"
+https://www.cuahsi.org/events/critical-zone-collaborative-network-research-experience-for-undergraduate-students,event,,,none,title+date,"best candidate: agu-bridges-deadline-2026 (0.14, 967 days); below the thresholds"
+https://www.cuahsi.org/events/csdms-2025-annual-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.40, 567 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-annual-membership-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (1.00, 728 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-annual-membership-meeting-2,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (1.00, 1092 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-biennial-early-bird-registration-deadline,event,,,none,title+date,"best candidate: water-science-exchange-early-bird-deadline-2026 (0.50, 1215 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-biennial-registration-deadline,event,,,none,title+date,"best candidate: water-science-exchange-registration-deadline-2026 (0.29, 1270 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-community-award-nomination,event,/community/events/community-award-nomination-deadline-2026,content/events/260831-community-award-deadline.md,probable,title+date,"title similarity 0.75; legacy date 2026-08-31, here 2026-08-31 (0 days apart)"
+https://www.cuahsi.org/events/cuahsi-community-gathering,event,,,none,title+date,"best candidate: cuahsi-agu-gathering-2026 (0.50, 357 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-virtual-open-house,event,,,none,title+date,"best candidate: virtual-open-house-2026 (1.00, 245 days); below the thresholds"
+https://www.cuahsi.org/events/cuahsi-virtual-open-house-2,event,/community/events/virtual-open-house-2026,content/events/260601-virtual-open-house.md,exact,title+date,"title similarity 1.00; legacy date 2026-06-24, here 2026-06-24 (0 days apart)"
+https://www.cuahsi.org/events/cuahsi-water-science-exchange-water-in-working-landscapes,other,/community/events/water-science-exchange-2026,pages/community/events/[slug].vue + content/events/261112-water-science-exchange.md,weak,redirect target,legacy redirects (302) to /community/water-science-exchange; the mapping of that page applies
+https://www.cuahsi.org/events/cyberwater2-training,event,,,none,title+date,"best candidate: frontiers-water-ml-cfp-2026 (0.00, 8 days); below the thresholds"
+https://www.cuahsi.org/events/cznet-all-hands-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.17, 482 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-help-desk-sessions-2,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.13, 1467 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-help-desk-sessions-3,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.13, 1439 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-workshop,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.20, 1552 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-workshop-2,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.20, 1545 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-workshop-2-2,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.20, 1538 days); below the thresholds"
+https://www.cuahsi.org/events/data-best-practices-workshop-2-2-2,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.20, 1524 days); below the thresholds"
+https://www.cuahsi.org/events/data-publishing-program,event,/community/events/data-publishing-program-fall-2026,content/events/261019-data-publishing-program.md,exact,title+date,"title similarity 1.00; legacy date 2026-10-19, here 2026-10-19 (0 days apart)"
+https://www.cuahsi.org/events/data-services-helpdesk-webinar-an-introduction-to-hydroshare,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.22, 442 days); below the thresholds"
+https://www.cuahsi.org/events/deadline-to-submit-application-for-snow-measurement-field-school-2024,event,,,none,title+date,"best candidate: snow-field-school-2026 (0.44, ? days); below the thresholds"
+https://www.cuahsi.org/events/deadline-to-submit-proposals-for-waterscicon24,event,,,none,title+date,"best candidate: agu26-abstract-deadline (0.14, ? days); below the thresholds"
+https://www.cuahsi.org/events/early-bird-registration-is-open-for-waterscicon24,event,,,none,title+date,"best candidate: water-science-exchange-early-bird-deadline-2026 (0.33, ? days); below the thresholds"
+https://www.cuahsi.org/events/earth-science-information-partners-esip-meeting,event,,,none,title+date,"best candidate: esip-meeting-july-2026 (1.00, 1470 days); below the thresholds"
+https://www.cuahsi.org/events/earth-science-information-partners-esip-meeting-2,event,/community/events/esip-meeting-july-2026,content/events/260728-esip-meeting.md,exact,title+date,"title similarity 1.00; legacy date 2026-07-28, here 2026-07-28 (0 days apart)"
+https://www.cuahsi.org/events/floodsavvy-launch-event,event,,,none,title+date,"best candidate: snow-field-school-2026 (0.00, 47 days); below the thresholds"
+https://www.cuahsi.org/events/free-webinar-an-introduction-to-cuahsi-cloud-computing,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.13, 687 days); below the thresholds"
+https://www.cuahsi.org/events/free-webinar-an-introduction-to-cuahsi-cloud-computing-2,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.11, 750 days); below the thresholds"
+https://www.cuahsi.org/events/free-webinar-an-introduction-to-cuahsi-cloud-computing-3,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.11, 505 days); below the thresholds"
+https://www.cuahsi.org/events/free-webinar-introduction-to-cuahsi-cloud-computing,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.11, 386 days); below the thresholds"
+https://www.cuahsi.org/events/free-webinar-introduction-to-hydroshare,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.13, 568 days); below the thresholds"
+https://www.cuahsi.org/events/free-workshop-practical-strategies-for-reproducible-research-and-robust-data-management,event,,,none,title+date,"best candidate: leveraging-hydroshare-2026 (0.27, 427 days); below the thresholds"
+https://www.cuahsi.org/events/frontiers-in-hydrology-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.20, 1626 days); below the thresholds"
+https://www.cuahsi.org/events/ga6-geoscience-alliance-conference,event,,,none,title+date,"best candidate: ciroh-developers-2026 (0.17, 398 days); below the thresholds"
+https://www.cuahsi.org/events/geosmart-hackweek,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 828 days); below the thresholds"
+https://www.cuahsi.org/events/gsa-connects-2022,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1207 days); below the thresholds"
+https://www.cuahsi.org/events/gsa-connects-2023,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 836 days); below the thresholds"
+https://www.cuahsi.org/events/gtap-virtual-seminar-series-modelling-nutrition-and-food-loss-and-waste-in-a-cge-framework,event,,,none,title+date,"best candidate: virtual-open-house-2026 (0.08, 1373 days); below the thresholds"
+https://www.cuahsi.org/events/hands-on-hydrogeodesy-combining-gps-and-hydrologic-datasets,event,,,none,title+date,"best candidate: agu-bridges-deadline-2026 (0.18, 1632 days); below the thresholds"
+https://www.cuahsi.org/events/hydroinformatics-innovation-fellowship,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, ? days); below the thresholds"
+https://www.cuahsi.org/events/hydrolearn-ciroh-virtual-summer-hackathon-workshop-faculty-fellow-recruitment,event,,,none,title+date,"best candidate: hydrolearn-ciroh-workshop-2026 (0.33, ? days); below the thresholds"
+https://www.cuahsi.org/events/hydrolearn-ciroh-workshop-hackathon,event,,,none,title+date,"best candidate: hydrolearn-ciroh-workshop-2026 (0.75, 506 days); below the thresholds"
+https://www.cuahsi.org/events/hydroml-symposium,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1351 days); below the thresholds"
+https://www.cuahsi.org/events/i-guide-virtual-consulting-office-vco-advanding-transparent-and-reproducible-science-using-hydroshare-and-whats-in-it-for-you,event,,,none,title+date,"best candidate: virtual-open-house-2026 (0.06, 1142 days); below the thresholds"
+https://www.cuahsi.org/events/instrumentation-discovery-travel-grant,event,,,none,title+date,"best candidate: agu-bridges-deadline-2026 (0.22, 1644 days); below the thresholds"
+https://www.cuahsi.org/events/instrumentation-discovery-travel-grant-2,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, ? days); below the thresholds"
+https://www.cuahsi.org/events/interagency-research-in-the-watersheds-conference-icrw8,event,,,none,title+date,"best candidate: ciroh-developers-2026 (0.14, 1087 days); below the thresholds"
+https://www.cuahsi.org/events/introduction-to-cuahsi-compute-services,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.13, 932 days); below the thresholds"
+https://www.cuahsi.org/events/introduction-to-cuahsi-compute-services-2,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.13, 1058 days); below the thresholds"
+https://www.cuahsi.org/events/introduction-to-hydroshare-webinar,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.14, 995 days); below the thresholds"
+https://www.cuahsi.org/events/introduction-to-hydroshare-webinar-2,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.14, 1107 days); below the thresholds"
+https://www.cuahsi.org/events/introduction-to-hydroshare-webinar-3,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.14, 295 days); below the thresholds"
+https://www.cuahsi.org/events/lets-talk-about-water-mayors-make-movies-celebrate-ny-water-week,event,,,none,title+date,"best candidate: awra-geospatial-2026 (0.07, 1157 days); below the thresholds"
+https://www.cuahsi.org/events/leveraging-hydroshare-for-collaborative-research-data-management,event,/community/events/leveraging-hydroshare-2026,content/events/261006-leveraging-hydroshare.md,exact,title+date,"title similarity 1.00; legacy date 2026-10-06, here 2026-10-06 (0 days apart)"
+https://www.cuahsi.org/events/lter-all-scientists-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.17, 1534 days); below the thresholds"
+https://www.cuahsi.org/events/managing-water-for-a-changing-planet-a-virtual-workshop-to-identify-our-most-pressing-water-resources-issues,event,,,none,title+date,"best candidate: uta-water-workshop-2026 (0.15, 1329 days); below the thresholds"
+https://www.cuahsi.org/events/modflow-and-more-conference,event,,,none,title+date,"best candidate: ciroh-developers-2026 (0.11, 1452 days); below the thresholds"
+https://www.cuahsi.org/events/national-diversity-in-stem-conference,event,,,none,title+date,"best candidate: nafws-2026 (0.22, 921 days); below the thresholds"
+https://www.cuahsi.org/events/national-diversity-in-stem-conference-2,event,,,none,title+date,"best candidate: nafws-2026 (0.22, 186 days); below the thresholds"
+https://www.cuahsi.org/events/national-diversity-in-stem-conference-2022,event,,,none,title+date,"best candidate: nafws-2026 (0.20, 1285 days); below the thresholds"
+https://www.cuahsi.org/events/navigating-the-nsf-hydrologic-sciences-program,event,,,none,title+date,"best candidate: data-publishing-program-fall-2026 (0.14, 1302 days); below the thresholds"
+https://www.cuahsi.org/events/net-zero-plus-creating-the-uks-new-woodlands,event,,,none,title+date,"best candidate: indigenous-data-summit-2026 (0.07, 1394 days); below the thresholds"
+https://www.cuahsi.org/events/next-generation-water-resources-modeling-innovation-at-the-intersection-of-domain-computer-and-data-sciences,event,,,none,title+date,"best candidate: uta-water-workshop-2026 (0.14, 1523 days); below the thresholds"
+https://www.cuahsi.org/events/now-recruiting-cvu-faculty,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, ? days); below the thresholds"
+https://www.cuahsi.org/events/nsf-institute-for-geospatial-understanding-through-an-integrative-discovery-environment-i-guide-virtual-consulting-office,event,,,none,title+date,"best candidate: virtual-open-house-2026 (0.07, 1428 days); below the thresholds"
+https://www.cuahsi.org/events/registration-deadline-reactive-transport-with-sophisticated-reaction-networks-hands-on-experience-with-the-pflotran-reaction-sandbox,event,,,none,title+date,"best candidate: water-science-exchange-registration-deadline-2026 (0.13, ? days); below the thresholds"
+https://www.cuahsi.org/events/snowex-hackweek,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1353 days); below the thresholds"
+https://www.cuahsi.org/events/society-for-freshwater-science-annual-meeting,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.33, 562 days); below the thresholds"
+https://www.cuahsi.org/events/submit-a-workshop-proposal,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1155 days); below the thresholds"
+https://www.cuahsi.org/events/submit-abstracts-for-waterscicon24,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 735 days); below the thresholds"
+https://www.cuahsi.org/events/summer-institute-alumni-2025-agu-presentations,event,,,none,title+date,"best candidate: water-prediction-innovators-2026 (0.22, 174 days); below the thresholds"
+https://www.cuahsi.org/events/surface-water-field-school,event,,,none,title+date,"best candidate: snow-field-school-2026 (0.29, 1327 days); below the thresholds"
+https://www.cuahsi.org/events/symposium-in-honor-of-david-maidment,event,,,none,title+date,"best candidate: uta-water-workshop-2026 (0.18, 1495 days); below the thresholds"
+https://www.cuahsi.org/events/ucowr-annual-conference,event,,,none,title+date,"best candidate: ucwr-2026 (0.29, 370 days); below the thresholds"
+https://www.cuahsi.org/events/ucowr-annual-meeting-workshop-seize-the-data-data-best-practices-and-free-open-source-infrastructure-to-ease-data-sharing-and-reuse-with-cuahsi-data-tools,event,,,none,title+date,"best candidate: annual-membership-meeting-2026 (0.13, 544 days); below the thresholds"
+https://www.cuahsi.org/events/un-water-conference-2023-virtual-side-meeting,event,,,none,title+date,"best candidate: awra-geospatial-2026 (0.20, 1155 days); below the thresholds"
+https://www.cuahsi.org/events/virtual-open-house,event,/community/events/virtual-open-house-fall-2026,content/events/261029-virtual-open-house-fall.md,probable,title+date,"title similarity 1.00; legacy date 2026-10-29, here 2026-10-29 (0 days apart)"
+https://www.cuahsi.org/events/water-data-forum-cybersecurity-in-small-rural-water-systems-webinar,event,,,none,title+date,"best candidate: water-data-forum-data-centers-2026 (0.33, 378 days); below the thresholds"
+https://www.cuahsi.org/events/water-prediction-innovators-summer-institute-capstone-event,event,/community/events/water-prediction-innovators-2026,content/events/260601-water-prediction-innovators.md,weak,title+date,"title similarity 0.71; legacy date 2026-07-22, here 2026-06-08 (44 days apart)"
+https://www.cuahsi.org/events/waterscicon24,event,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 583 days); below the thresholds"
+https://www.cuahsi.org/events/watersofthack,event,,,none,title+date,"best candidate: watersofthack-2026 (0.50, 357 days); below the thresholds"
+https://www.cuahsi.org/events/watersofthack-2026,event,/community/events/watersofthack-2026,content/events/260701-watersofthack.md,exact,title+date,"title similarity 1.00; legacy date 2026-07-20, here 2026-07-20 (0 days apart)"
+https://www.cuahsi.org/events/watersofthack-cybertraining-event,event,,,none,title+date,"best candidate: watersofthack-2026 (0.25, 728 days); below the thresholds"
+https://www.cuahsi.org/events/watersofthack-cybertraining-event-2,event,,,none,title+date,"best candidate: watersofthack-2026 (0.25, ? days); below the thresholds"
+https://www.cuahsi.org/events/webinar-an-introduction-to-cuahsi-compute-services,event,,,none,title+date,"best candidate: neon-cyberseminar-april-2026 (0.13, 631 days); below the thresholds"
+https://www.cuahsi.org/events/webinar-cuahsi-tools-and-resources-to-advance-water-science,event,,,none,title+date,"best candidate: uta-water-workshop-2026 (0.25, 270 days); below the thresholds"
+https://www.cuahsi.org/events/world-water-day-march-22-2025,event,,,none,title+date,"best candidate: awra-geospatial-2026 (0.10, 422 days); below the thresholds"
+https://www.cuahsi.org/events/world-water-film-festival-new-york-city,event,,,none,title+date,"best candidate: awra-geospatial-2026 (0.09, 1156 days); below the thresholds"
+https://www.cuahsi.org/faculty,landing page,,,none,no counterpart found,"no entry point of this kind here (stage 3, table 1)"
+https://www.cuahsi.org/faculty/guest-lecturer-database,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/%C3%A9owyn-campbell,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/adam-ward,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/aditi-bhaskar,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/adnan-rajib,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/adrian-harpold,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/aida-farough,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/alexandre-martinez,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/amber-s-jones,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/anne-jefferson,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/arpita-mondal,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/ashish-mishra,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/audrey-sawyer,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/b-s-daya-sagar,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/behzad-ghanbarian,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/chelsea-clifford,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/christopher-chini,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/darren-ficklin,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/dipankar-dwivedi,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/elco-luijendijk,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/elizabeth-perera,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/emily-stephan,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/erin-bray,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/erin-white,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/eswar-rajasekaran,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/gabriela-ioana-toroimac,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/general-audience,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database/general-audience listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/general-audience/p2,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database/general-audience listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/hamza-jakada,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/ingrid-luffman,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/intro-level,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database/intro-level listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/jack-wittman,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/jakob-f-steiner,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/jan-seibert,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/jennifer-drake,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/jerad-bales,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/john-england,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/julia-knapp,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/kamini-singha,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/lara-fowler,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/laura-decicco,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/li-li,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/manuela-i-brunner,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/maram-alrehaili,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/matthew-siegfried,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/melinda-erickson,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/mesenbet-yibeltal-sebaht,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/michael-tso,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nasrin-fathollahzadeh-attar,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nate-jones,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nicholas-john-stanislaus-kinar,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nick-wildman-cerp,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nicole-gasparini,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/niko-wanders,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/nils-moosdorf,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/other,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database/other listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p2,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p3,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p4,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p5,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p6,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/p7,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/penny-beames,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/raymond-slade,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/razi-sheikholeslami,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/rebecca-barnes,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/robia-shaheen,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/sabina-khatri,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/sam-prentice,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/sam-zipper,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/sanjib-sharma,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/scott-hamsahw,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/shahryar-ahmad,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/skuyler-herzog,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/steven-loheide,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/tamlin-pavelsky,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/thomas-y-chen,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/tim-scheibe,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/upper-level,listing,,,none,listing root,no counterpart for the /faculty/guest-lecturer-database/upper-level listing (its items have none either)
+https://www.cuahsi.org/faculty/guest-lecturer-database/viviana-re,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/guest-lecturer-database/woonsup-choi,person,,,none,type,"guest lecturer: no collection or page for lecturers here (stage 3, table 2)"
+https://www.cuahsi.org/faculty/professional-resources,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/faculty/resources-for-online-education,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/faculty/teaching-resources,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/grant-opportunities,program,,,none,name,no program here with this name
+https://www.cuahsi.org/grant-opportunities/hydroinformatics-innovation-fellowship,other,,,none,redirect target,legacy redirects (302) to /grant-opportunities; the mapping of that page applies
+https://www.cuahsi.org/grant-opportunities/instrumentation-discovery-travel-grant,other,,,none,redirect target,legacy redirects (302) to /grant-opportunities; the mapping of that page applies
+https://www.cuahsi.org/grant-opportunities/pathfinder-fellowship,other,,,none,redirect target,legacy redirects (302) to /grant-opportunities; the mapping of that page applies
+https://www.cuahsi.org/hydrologic-instrumentation-facilities,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/center-for-transformative-environmental-monitoring-programs,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/continental-scientific-drilling-coordination-office,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/iris-passcal,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/national-center-for-airborne-laser-mapping,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/national-ecological-observatory-network,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/opens-openly-published-environmental-sensing-lab,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/purdue-rare-isotope-measurement-laboratory,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/u-s-geological-survey-hydrologic-instrumentation-facility-hie,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/unavco,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/hydrologic-instrumentation-facilities/wyoming-near-surface-geophysics-instrumentation-center,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/job-board,listing,/community/jobs,pages/community/jobs/index.vue,probable,nav label,same function
+https://www.cuahsi.org/job-board/1-2-fully-funded-phd-positions-in-coastal-geomorphology-fall-2027,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/assistant-professor-in-climate-science,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/assoc-full-prof-in-environmental-science,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/faculty-and-postdoctoral-positions-in-environmental-science-and-engineering,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/graduate-assistantship,listing,/community/jobs,pages/community/jobs/index.vue,probable,listing root,a category view of the job board; filter chips here do the same
+https://www.cuahsi.org/job-board/graduate-research-assistantships-in-urban-water-systems,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/hydrologic-sciences-assistant-professor,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/p2,listing,/community/jobs,pages/community/jobs/index.vue,probable,listing root,pager or category view of /job-board; same function
+https://www.cuahsi.org/job-board/permanent-position,listing,/community/jobs,pages/community/jobs/index.vue,probable,listing root,a category view of the job board; filter chips here do the same
+https://www.cuahsi.org/job-board/phd-positions-in-ecohydrology-and-critical-zone-science,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/phd-positions-in-snow-extremes,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/post-doc,listing,/community/jobs,pages/community/jobs/index.vue,probable,listing root,a category view of the job board; filter chips here do the same
+https://www.cuahsi.org/job-board/postdoctoral-researcher-with-expertise-in-fluvial-geomorphology,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/postdoctoral-scholar-in-terrestrial-hydrology-and-remote-sensing,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/research-and-operations-hydrologist,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/research-director-national-alliance-for-water-innovation-nawi,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/job-board/survey-hydrogeologist,job,,,none,"external url, then title",apply link matches no job url here; no title match
+https://www.cuahsi.org/library/annual-report,other,,,none,status,empty legacy page (stage 1)
+https://www.cuahsi.org/library/board-meeting-minutes,other,,,none,status,empty legacy page (stage 1)
+https://www.cuahsi.org/library/membership-meeting-minutes,other,,,none,status,empty legacy page (stage 1)
+https://www.cuahsi.org/library/strategic-plan,other,,,none,status,empty legacy page (stage 1)
+https://www.cuahsi.org/library/technical-report,other,,,none,status,empty legacy page (stage 1)
+https://www.cuahsi.org/logos,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/new-grad-guide,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/news-opportunities,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/next-generation-modeling-ci,program,,,none,name,no program here with this name
+https://www.cuahsi.org/ongoing-research-projects,static page,/about/impact,pages/about/impact/index.vue,weak,nav judgment,"the nearest here, not the same thing (stage 3, table 1)"
+https://www.cuahsi.org/resources-for-undergraduate-students,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students,landing page,,,none,no counterpart found,"no entry point of this kind here (stage 3, table 1)"
+https://www.cuahsi.org/students/graduate-programs-in-water-science,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/colorado-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/environmental-and-water-resources-engineering,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-program-at-universidad-de-las-americas-puebla,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-arizona-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-auburn-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-boise-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-brigham-young-universit,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-clarkson-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-clemson-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-colorado-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-columbia-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-dartmouth-college,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-drexel-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-duke-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-georgia-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-humboldt-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-iowa-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-johns-hopkins-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-kansas-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-kent-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-manhattan-college,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-massachusetts-institute-of-technology,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-michigan-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-missouri-university-of-science-and-technology,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-murray-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-new-mexico-institute-of-mining-and-technology,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-new-mexico-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-north-carolina-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-northeastern-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-northern-arizona-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-northwestern-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-ohio-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-oregon-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-plymouth-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-portland-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-purdue-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-rutgers-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-san-diego-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-south-dakota-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-southern-illinois-university-carbondale,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-syracuse-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-temple-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-texas-am-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-city-college-of-new-york,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-colorado-school-of-mines,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-state-university-of-new-york-suny,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-at-buffalo,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-akron,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-alaska-fairbanks,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-arizon,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-davis,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-irvine,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-riverside,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-colorado,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-delaware,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-florida,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-florida-water-institute,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-georgia,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-hawaii-at-manoa,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-idaho,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-illinois,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-iowa,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-kansas,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-kentucky,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-massachusetts-boston,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-memphis-ground-water-institute,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-minnesota,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-missouri,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nebraska-lincoln,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nevada-las-vegas,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nevada-reno,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-north-carolina-charlotte,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-north-dakota,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-notre-dame,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-oklahoma,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-rhode-island,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-south-carolina,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-tennessee,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-texas-at-arlington,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-texas-at-austin,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-trento,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-washington,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-wisconsin,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-wyoming,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-tuft-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-at-buffalo,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-california-merced,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-new-mexico,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-south-florida,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-texas-san-antonio,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-utah,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-wisconsin-madison,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-wisconsin-milwaukee,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-zurich,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/graduate-programs-at-utah-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/illinois-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/louisiana-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/pennsylvania-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/surface-water-and-hydrometeorology-modeling-and-machine-learning,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/the-ohio-state-university,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/universitat-polit%C3%A8cnica-de-catalunya,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/university-abdou-moumouni,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/university-of-louisiana-at-lafayette,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/university-of-pittsburgh,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/university-of-wisconsin-madison,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/virginia-tech,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science-dev/water-science-network,graduate program,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p2,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p3,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p4,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p5,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p6,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p7,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p8,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/masters/p9,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/masters listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/other-professional,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/other-professional listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p10,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p11,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p2,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p3,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p4,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p5,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p6,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p7,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p8,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/p9,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p2,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p3,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p4,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p5,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p6,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p7,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/ph-d/p8,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/ph-d listing (its items have none either)
+https://www.cuahsi.org/students/graduate-programs-in-water-science/undergraduate,listing,,,none,listing root,no counterpart for the /students/graduate-programs-in-water-science/undergraduate listing (its items have none either)
+https://www.cuahsi.org/summer-institute,program,/learn-train/programs/summer-institute,content/programs/summer-institute.md,exact,name,title similarity 1.00
+https://www.cuahsi.org/travel-policy,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/virtual-university,program,/learn-train/programs/virtual-university,content/programs/virtual-university.md,exact,name,title similarity 1.00
+https://www.cuahsi.org/workshops,listing,/learn-train/archive,pages/learn-train/archive/index.vue,probable,nav judgment,both list past workshops
+https://www.cuahsi.org/workshops/advanced-short-course-integrated-simulation-of-watershed-systems-using-parflow,workshop,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 2309 days); below the thresholds"
+https://www.cuahsi.org/workshops/diy-water-monitoring-data-portals-and-watershed-modeling,workshop,,,none,title+date,"best candidate: water-data-forum-data-centers-2026 (0.20, 2485 days); below the thresholds"
+https://www.cuahsi.org/workshops/hands-on-hydrogeodesy-combining-gps-and-hydrologic-datasets,workshop,,,none,title+date,"best candidate: earthscope-hydrology-geophysics-2026 (0.00, 1290 days); below the thresholds"
+https://www.cuahsi.org/workshops/hydrolearn-ciroh-may-june-2026-workshop-and-hackathon,workshop,/community/events/hydrolearn-ciroh-workshop-2026,content/events/260501-hydrolearn-workshop.md,probable,title+date,"title similarity 0.67; legacy date 2026-05-27, here 2026-05-27 (0 days apart)"
+https://www.cuahsi.org/workshops/master-class-advanced-techniques-in-watershed-science,workshop,,,none,title+date,"best candidate: water-science-exchange-2026 (0.10, 2860 days); below the thresholds"
+https://www.cuahsi.org/workshops/master-class-food-energy-and-water-systems-in-a-global-economy,workshop,,,none,title+date,"best candidate: awra-geospatial-2026 (0.08, 2562 days); below the thresholds"
+https://www.cuahsi.org/workshops/open-hydrological-sensor-technologies-diy-stream-sensor-networks,workshop,,,none,title+date,"best candidate: virtual-open-house-2026 (0.11, 1738 days); below the thresholds"
+https://www.cuahsi.org/workshops/open-source-electronics-for-water-research-and-real-time-water-monitoring,workshop,,,none,title+date,"best candidate: virtual-open-house-2026 (0.10, 1366 days); below the thresholds"
+https://www.cuahsi.org/workshops/open-source-urban-hydrology-sensor-bootcamp,workshop,,,none,title+date,"best candidate: virtual-open-house-2026 (0.13, 2513 days); below the thresholds"
+https://www.cuahsi.org/workshops/past-workshops,listing,/learn-train/archive,pages/learn-train/archive/index.vue,probable,nav judgment,both list past workshops
+https://www.cuahsi.org/workshops/past-workshops/p2,listing,/learn-train/archive,pages/learn-train/archive/index.vue,probable,listing root,pager or category view of /workshops/past-workshops; both list past workshops
+https://www.cuahsi.org/workshops/propose-a-workshop,static page,,,none,no counterpart found,no page here covers this; see stage 3 table 1
+https://www.cuahsi.org/workshops/reactive-transport-with-sophisticated-reaction-networks-hands-on-experience-with-the-pflotran-reaction-sandbox,workshop,,,none,title+date,"best candidate: connected-researcher-2026 (0.05, 1109 days); below the thresholds"
+https://www.cuahsi.org/workshops/short-course-the-science-and-practice-of-operational-ensemble-hydrological-prediction,workshop,,,none,title+date,"best candidate: water-prediction-innovators-2026 (0.08, 2575 days); below the thresholds"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-2023,workshop,,,none,title+date,"best candidate: snow-field-school-2026 (0.67, 1037 days); below the thresholds"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-2024-2,workshop,,,none,title+date,"best candidate: snow-field-school-2026 (0.67, 728 days); below the thresholds"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-2025,workshop,,,none,title+date,"best candidate: snow-field-school-2026 (0.67, 364 days); below the thresholds"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-2026,workshop,/community/events/snow-field-school-2026,content/events/260101-snow-field-school.md,exact,title+date,"title similarity 1.00; legacy date 2026-01-05, here 2026-01-05 (0 days apart)"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-2027,workshop,/community/events/snow-field-school-2027,content/events/270104-snow-field-school-2027.md,exact,title+date,"title similarity 1.00; legacy date 2027-01-04, here 2027-01-04 (0 days apart)"
+https://www.cuahsi.org/workshops/snow-measurement-field-school-january-2022,workshop,,,none,title+date,"best candidate: snow-field-school-2026 (0.57, 1464 days); below the thresholds"
+https://www.cuahsi.org/workshops/stakeholder-informed-spatial-modeling-for-hydrologic-sciences,workshop,,,none,title+date,"best candidate: csdms-2026 (0.08, 274 days); below the thresholds"
+https://www.cuahsi.org/workshops/surface-water-field-school,workshop,,,none,title+date,"best candidate: snow-field-school-2026 (0.29, 1253 days); below the thresholds"
+https://www.cuahsi.org/workshops/the-community-wrf-hydro-modeling-system-abridged-virtual-training-workshop-october-2021,workshop,,,none,title+date,"best candidate: csdms-2026 (0.21, 1686 days); below the thresholds"

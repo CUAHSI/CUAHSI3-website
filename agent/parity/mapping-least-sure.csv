@@ -1,0 +1,11 @@
+legacy_url,page_type,new_route,new_source,confidence,matched_by,notes
+https://www.cuahsi.org/about/about-membership,static page,/about/membership,pages/about/membership.vue,probable,nav label,same label (Membership) in the About section
+https://www.cuahsi.org/about/contact-us,static page,/contact,pages/contact/index.vue,probable,nav label,"both are the contact entry point; the legacy page is a Jotform, this one lists addresses"
+https://www.cuahsi.org/about/governance,static page,/about/governance,pages/about/governance.vue,probable,path and label,"same label, same path stem"
+https://www.cuahsi.org/about/our-team,listing,/about/team,pages/about/team/index.vue,probable,nav label,same function
+https://www.cuahsi.org/community,landing page,/community,pages/community/index.vue,probable,path and label,same path and label
+https://www.cuahsi.org/community/news,listing,/community/news,pages/community/news/index.vue,probable,path,same path
+https://www.cuahsi.org/cyberseminars,listing,/learn-train/cyberseminars,pages/learn-train/cyberseminars/index.vue,probable,nav label,same content type; different section (Learn & Train)
+https://www.cuahsi.org/data-services/solutions,landing page,/data-platforms,pages/data-platforms/index.vue,probable,nav judgment,both are the Data section landing page
+https://www.cuahsi.org/donate,landing page,/support,pages/support/index.vue,probable,function,"both embed a Zeffy donation form (stage 3, table 3)"
+https://www.cuahsi.org/events,listing,/community/events,pages/community/events/index.vue,probable,nav label,same label (Events)

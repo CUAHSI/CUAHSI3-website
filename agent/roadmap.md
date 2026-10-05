@@ -190,3 +190,4 @@ item; checked with `npm run validate:content` on 5 October 2026): `masoumeh-hash
 
 The known-failures file and its check were deleted on 5 October 2026 (`task/known-failures-cleanup`):
 the validator must now exit 0 (C1).
+- 261005 | content/cyberseminars/2025-post-field-data-practices.md | its youtube_id differs from the id on the matching legacy page (stage 4, discrepancy 1); neither video was opened. Not changed.

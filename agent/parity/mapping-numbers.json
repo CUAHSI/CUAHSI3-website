@@ -1,0 +1,158 @@
+{
+ "total": 767,
+ "byType": {
+  "landing page": {
+   "legacy": 6,
+   "exact": 1,
+   "probable": 3,
+   "weak": 0,
+   "none": 2
+  },
+  "other": {
+   "legacy": 17,
+   "exact": 0,
+   "probable": 3,
+   "weak": 2,
+   "none": 12
+  },
+  "static page": {
+   "legacy": 42,
+   "exact": 0,
+   "probable": 3,
+   "weak": 9,
+   "none": 30
+  },
+  "listing": {
+   "legacy": 73,
+   "exact": 0,
+   "probable": 18,
+   "weak": 2,
+   "none": 53
+  },
+  "document or file": {
+   "legacy": 76,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 76
+  },
+  "person": {
+   "legacy": 91,
+   "exact": 22,
+   "probable": 0,
+   "weak": 0,
+   "none": 69
+  },
+  "news post": {
+   "legacy": 49,
+   "exact": 4,
+   "probable": 2,
+   "weak": 0,
+   "none": 43
+  },
+  "newsletter issue": {
+   "legacy": 19,
+   "exact": 8,
+   "probable": 0,
+   "weak": 2,
+   "none": 9
+  },
+  "data portal entry": {
+   "legacy": 44,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 44
+  },
+  "cyberseminar": {
+   "legacy": 67,
+   "exact": 4,
+   "probable": 7,
+   "weak": 2,
+   "none": 54
+  },
+  "cyberseminar series": {
+   "legacy": 20,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 20
+  },
+  "program": {
+   "legacy": 5,
+   "exact": 2,
+   "probable": 0,
+   "weak": 0,
+   "none": 3
+  },
+  "event": {
+   "legacy": 118,
+   "exact": 6,
+   "probable": 2,
+   "weak": 3,
+   "none": 107
+  },
+  "job": {
+   "legacy": 13,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 13
+  },
+  "graduate program": {
+   "legacy": 107,
+   "exact": 0,
+   "probable": 0,
+   "weak": 0,
+   "none": 107
+  },
+  "workshop": {
+   "legacy": 20,
+   "exact": 2,
+   "probable": 1,
+   "weak": 0,
+   "none": 17
+  }
+ },
+ "hereWithout": {
+  "events": {
+   "items": 40,
+   "withoutLegacy": 25
+  },
+  "news": {
+   "items": 12,
+   "withoutLegacy": 2
+  },
+  "research": {
+   "items": 31,
+   "withoutLegacy": 31
+  },
+  "newsletter": {
+   "items": 9,
+   "withoutLegacy": 4
+  },
+  "cyberseminars": {
+   "items": 11,
+   "withoutLegacy": 4
+  },
+  "jobs": {
+   "items": 29,
+   "withoutLegacy": 29
+  },
+  "programs": {
+   "items": 4,
+   "withoutLegacy": 2
+  }
+ },
+ "staffMapped": 22,
+ "newTargetsWithMoreThanOneLegacy": [
+  {
+   "target": "content/newsletter/260910-september.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/events/260101-snow-field-school.md",
+   "legacy": 2
+  }
+ ]
+}
