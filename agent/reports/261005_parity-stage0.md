@@ -1,6 +1,6 @@
 # Parity analysis, stage 0: setup and scope
 
-Fetch date: **5 October 2026** (13:46 UTC). Method and rules: `agent/parity.md` (P1 to P8). Read-only: nothing under `content/`, `pages/` or `components/` was changed, and nothing was created from legacy pages. **Stop for Jordan's approval; no crawl has run.**
+Fetch date: **5 October 2026** (13:46 UTC). Method and rules: `agent/parity.md` (P1 to P8). Read-only: nothing under `content/`, `pages/` or `components/` was changed, and nothing was created from legacy pages. **Stop for Jordan's approval; no crawl has run.** (Approved on 5 October with terms: see "Decisions (Jordan, 5 October 2026)" and "Where the decisions change earlier sections" at the end.)
 
 Requests made to www.cuahsi.org: **2** (`/robots.txt`, `/sitemap.xml`), 2 seconds apart, one at a time, with the User-Agent `CUAHSI3-parity-check/1.0 (CUAHSI website rebuild, read-only; contact jread@cuahsi.org)`. Saved under `raw/legacy-site/261005/` (gitignored locally only, see D3) with `fetch-log.txt` and the response headers.
 
@@ -46,7 +46,7 @@ Other CUAHSI hosts: `www.hydroshare.org`, `jupyter.cuahsi.org`, `data.cuahsi.org
 
 0 pages fetched beyond the two files; 681 sitemap URLs listed, not fetched; no listing, nav or footer examined; no PDFs or downloads opened or sized; no forms, embeds or JavaScript-drawn content seen; no pagination format seen; the 9 `/uploads/` links not tested. Contact details: the sitemap contains none (P8).
 
-## Decisions needed
+## Decisions needed (answered: see the end of this report)
 
 - **D1.** Approve the crawl parameters in section 3 (1.5 s spacing, cap 1,500, sitemap plus navigation and footer, same host only, pagination rule, stop rules), knowing the duration is a range, 25 to 130 minutes depending on the page count and response time.
 - **D2.** Approve `cheerio` as a devDependency (rule 8), or choose another route.
@@ -57,12 +57,23 @@ Other CUAHSI hosts: `www.hydroshare.org`, `jupyter.cuahsi.org`, `data.cuahsi.org
 
 ## Decisions (Jordan, 5 October 2026)
 
-- **D1, approved, with these terms:** 1.5 s between requests, one request at a time, same host (`www.cuahsi.org`) only, cap of 1,500 pages. Follow paginated listings (news, events, cyberseminars, jobs); **ignore every other query string**. If repeated 429 or 5xx responses appear, **stop and tell Jordan; do not retry harder.** Report the measured rate after the first 50 pages and continue, **unless it implies more than three hours** (then stop and ask).
+- **D1, approved, with these terms:** 1.5 s between requests, one request at a time, same host (`www.cuahsi.org`) only, cap of 1,500 pages. Follow paginated listings (news, events, cyberseminars, jobs); **ignore every other query string**. If repeated 429 or 5xx responses appear, **stop and tell Jordan; do not retry harder.** Report the measured rate after the first 50 pages and continue, **unless it implies more than three hours** (my reading of "continue unless": then stop and ask).
 - **D2, approved:** `cheerio` as a **pinned** devDependency. Goes on the stage 1 branch (`task/parity-stage1`), not this one.
 - **D3, approved:** add `raw/legacy-site/` to `.gitignore`. Also on the stage 1 branch.
 - **D4, approved:** `HEAD` requests for linked files, at the same spacing, **counted toward the 1,500 cap**. Report how many.
 - **D5, confirmed:** the User-Agent carries `jread@cuahsi.org`.
 - **D6:** `agent/parity.md` is committed on this branch (`task/parity-stage0`).
 - **Order:** stage 1 starts on `task/parity-stage1` only after this PR merges.
-- **Inputs:** the Search Console export will be placed in `raw/search-console/` (Jordan will say when). There is no list of NSF-cited URLs: build what can be built from the newsletters and content (the 47 cited URLs in section 5 are the start).
+- **Inputs:** the Search Console export will be placed in `raw/search-console/` (Jordan will say when). There is no list of NSF-cited URLs: build what can be built from the newsletters and content (my note, not Jordan's: the 47 cited URLs in section 5 are the start).
 
+## Where the decisions change earlier sections
+
+Earlier sections are kept as written (they are the record). Where they disagree with the decisions above, **the decisions apply**. My readings are labelled as mine.
+
+- **Cap (section 3).** The cap of 1,500 counts **requests**: page fetches plus `HEAD` requests for linked files (D4). It is not 1,500 "distinct URLs". The two requests already made (robots.txt, sitemap.xml) are not counted. When the cap is reached I stop and report.
+- **Pagination (section 3).** The "50 pages per listing" limit is dropped. Follow the pager links of the four named listing types (news, events, cyberseminars, jobs); the pager's own query string is the only query string followed; **every other query string is ignored** (Jordan's wording). Fragments and `utm_*` parameters are stripped (my addition, not contradicted). The pagination pattern found is reported.
+- **Stop rule (section 3).** Jordan's rule replaces my "pause after 5 consecutive and stop at 5% failure": the "stop if more than 5% of requests fail" rule is dropped. **My reading of "repeated":** 5 consecutive 429 or 5xx responses, counting page and `HEAD` requests together; then stop and tell Jordan. **No retries:** a failed URL is recorded as failed and not requested again in the run. If a 429 carries `Retry-After`, I wait that long before the next request (this is not a retry of the same URL); the response still counts as a failure.
+- **Duration (section 3).** Jordan's limit: report the measured rate after the first 50 requests and continue unless it implies more than three hours (180 minutes). My range for the 1,500-request cap, **55 to 130 minutes**, already includes the `HEAD` requests because the cap does; the 681-page and 920-page figures (25 to 59 and 34 to 80) exclude them and are lower bounds for a run that also sizes files. At the cap, 180 minutes corresponds to a rate of 7.2 s per request, so only a slow site would trip the limit.
+- **cheerio (section 2).** Pinned (D2), on the stage 1 branch. Section 2 says only "as a devDependency".
+- **D2 and D3 in this PR.** They appear only as recorded decisions: this diff contains no `.gitignore`, `package.json` or lockfile change.
+- **D6.** The "Decisions needed" list offered "with the stage 1 branch"; Jordan chose this branch, and `agent/parity.md` is committed here.
