@@ -155,7 +155,7 @@ branches under the content rules in CLAUDE.md (C1 to C13). The guard hook and pe
 setting that blocked edits to `content/` were unlocked by Jordan on 5 October 2026
 (`PHASE = 2`; deny rule removed; the commit reaches the default branch through the unlock PR). The hook
 does not check branch kind, so content-versus-code separation rests on the guardrails in
-`verify.sh` (branch kind, deletions, slugs, `people_mentioned`, known-failures) and review.
+`verify.sh` (branch kind, deletions, slugs, `people_mentioned`) and review.
 
 | # | Task | Status | Notes |
 |---|---|---|---|
@@ -176,5 +176,5 @@ The three `people_mentioned` values that match no profile file (informational, n
 item; checked with `npm run validate:content` on 5 October 2026): `masoumeh-hashemi`
 (newsletter 260101-january), `marco-maneta` and `punwath-prum` (newsletter 260201-february).
 
-After P2.1 merges, small code PR: delete `scripts/validate-content.known-failures.txt` once
-it is empty and drop the check from `verify.sh`.
+The known-failures file and its check were deleted on 5 October 2026 (`task/known-failures-cleanup`):
+the validator must now exit 0 (C1).

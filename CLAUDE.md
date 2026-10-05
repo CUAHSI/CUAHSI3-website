@@ -23,7 +23,7 @@ visual/            the visual baseline: 52 committed screenshots and README.md. 
                    playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
                    (.github/workflows/verify.yml; not the screenshot comparison, which needs a Mac).
-                   check-content-branch.mjs: the branch-kind, deletion, slug and known-failures checks.
+                   check-content-branch.mjs: the branch-kind, deletion, slug and people_mentioned checks.
 scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
                    content-schemas.mjs + validate-content.mjs (Zod schemas and the
                    content validator; Content v2 cannot enforce schemas itself)
@@ -77,14 +77,13 @@ version mismatch. Ignore it.
 3. **A branch changes content or code, never both.** Content work goes on a branch
    named `content/short-name` and changes only `content/**`, plus: `agent/` (logs, reports,
    roadmap); `public/` files that belong to a content item the PR names; `visual/baseline/`
-   images (the PR lists which images changed and why); and
-   `scripts/validate-content.known-failures.txt`, only to remove lines, never to add them.
+   images (the PR lists which images changed and why).
    Code work stays on `task/short-name` and does not touch `content/**`. What kind of branch
    it is comes from what the diff changes, not from its name, so the check also works in CI
    (where the checkout has no branch name); locally `verify.sh` also fails when the name and
    the diff disagree. `verify.sh` fails a branch that mixes the two (locally, if `node_modules/yaml` is missing
    this check is a warning, not a failure; in CI it fails). A branch that changes only
-   `public/`, `visual/baseline/` or the known-failures file counts as a code branch. The reason is the same
+   `public/` or `visual/baseline/` counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
    content rules C1 to C13 apply to every change under `content/`. A code change that a
@@ -136,12 +135,13 @@ version mismatch. Ignore it.
 These apply to every change under `content/`. `verify.sh` enforces C1, C5 and C6 where a
 check can; the rest are checked by the reviewer and by Jordan.
 
-C1. **The validator must not get worse, and the known-failures list only shrinks.**
-    `npm run validate:content` reports no failure that is not on
-    `scripts/validate-content.known-failures.txt`. Never add a line to that file; a fix
-    removes its own line in the same PR. Once the list is empty (or the file is gone) the
-    validator must exit 0 on every branch, and `verify.sh` fails otherwise. Never loosen
-    a schema on a content branch; a schema change is code, with its own PR and reason.
+C1. **The validator must exit 0.** `npm run validate:content` reports no failure, no
+    cross-reference problem and no skipped check group, and `verify.sh` fails a branch
+    where it does not. Until 5 October 2026 a known-failures list
+    (`scripts/validate-content.known-failures.txt`) tolerated the 12 files that were
+    still broken; the three repair PRs emptied it and it was deleted. Do not recreate
+    it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
+    a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
     (optional in the schema today; give it whenever it is known). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
@@ -397,8 +397,7 @@ A content task follows Start a task, Verify, Review and Finish a task like any o
 making it. Run `npm run validate:content` for a before count. Apply. Run the validator again
 and the full build, and report both counts with denominators. In the PR, list every page
 whose visible content changes and what changes on it, as a visual review list; list every
-baseline image that changed and why; remove fixed entries from the known-failures file in
-the same PR (C1).
+baseline image that changed and why.
 
 **New content item.** Jordan or a staff member gives a draft: an event, a news item, a job,
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write

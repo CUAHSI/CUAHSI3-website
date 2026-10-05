@@ -97,7 +97,7 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
 
   if git rev-parse --verify -q "$BASE" >/dev/null; then
     mb=$(git merge-base "$BASE" HEAD)
-    # Branch kind, decided from the diff (rule 3); also the name against the diff, deletions, slugs, people_mentioned, known-failures list.
+    # Branch kind, decided from the diff (rule 3); also the name against the diff, deletions, slugs, people_mentioned.
     if [ -f scripts/check-content-branch.mjs ] && [ -d node_modules/yaml ]; then
       while IFS= read -r line; do
         case "$line" in
@@ -118,27 +118,16 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
   fi
 fi
 
-# 11b. Content validator (roadmap task 5). Its known failures stay visible as a WARN until the files are fixed
-#      (Phase 2 content tasks). A failing file that is not in scripts/validate-content.known-failures.txt, any
-#      cross-reference problem and any skipped check group is a FAIL. The list only shrinks: a fix removes its line
-#      (check-content-branch.mjs fails an added line). Once the list is empty or the file is gone, the validator must
-#      exit 0 (C1). In CI (CI is set) a missing prerequisite is a FAIL.
+# 11b. Content validator (roadmap task 5). It must exit 0 (C1). Until 5 October 2026 a known-failures list tolerated the
+#      files that were still broken; the three repair PRs emptied it and it was deleted. Any failure, cross-reference problem
+#      or skipped check group makes the validator exit non-zero, and that is a FAIL here. In CI (CI is set) a missing
+#      prerequisite is a FAIL.
 if [ -f scripts/validate-content.mjs ] && [ -d node_modules/zod ] && [ -d node_modules/yaml ]; then
   vout=$(node scripts/validate-content.mjs 2>&1); vcode=$?
-  vline=$(echo "$vout" | grep -E '^(FAILED|OK):' | tail -1)
   if [ $vcode -eq 0 ]; then ok "content validator passes"
   else
-    cur=$(echo "$vout" | sed '/^== Cross-references/q' | grep -E '^ {0,2}content/[^ ]+' | awk '{print $1}' | sort -u)
-    KF=scripts/validate-content.known-failures.txt   # a missing or empty file is an empty list
-    if [ -s "$KF" ]; then known=$(sort -u "$KF"); else known=""; fi
-    newf=$(comm -13 <(echo "$known") <(echo "$cur"))
-    x=$(echo "$vline" | sed -n 's/.* \([0-9]*\) cross-reference problem.*/\1/p')
-    if [ -z "$vline" ] || [ -z "$x" ]; then fail "content validator failed and its summary line could not be read: $vline"
-    elif [ -n "$newf" ]; then fail "content validator: failing file(s) not in the known-failures list:"; echo "$newf" | sed 's/^/      /'
-    elif [ ! -s "$KF" ]; then fail "content validator exits non-zero and the known-failures list is empty (or missing): once it is empty the validator must exit 0 (C1). Run npm run validate:content."
-    elif [ "$x" -gt 0 ]; then fail "content validator: $x cross-reference problem(s). Run npm run validate:content."
-    elif echo "$vline" | grep -q SKIPPED; then fail "content validator: a cross-reference check group was skipped. Run npm run validate:content."
-    else warn "content validator: $(echo "$cur" | grep -c .) known failing file/entry(ies), none new (scripts/validate-content.known-failures.txt). Run npm run validate:content for the list; fix them in a content task and remove them from the list."; fi
+    vline=$(echo "$vout" | grep -E '^(FAILED|OK):' | tail -1)
+    fail "content validator exits non-zero (C1: it must exit 0): $vline Run npm run validate:content."
   fi
 else need "content validator skipped (scripts/validate-content.mjs, node_modules/zod or node_modules/yaml missing; run npm ci)"; fi
 
