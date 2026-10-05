@@ -5,7 +5,7 @@
 ## What I checked
 
 - [ ] `./scripts/verify.sh --build` : N FAIL, N WARN
-- [ ] `content/` untouched
+- [ ] `content/` untouched, or this is a content task and the PR lists the pages that change
 - [ ] Routes fetched from the built site, with status:
 - [ ] Internal links in changed markup resolve to a built file: N of N
 - [ ] Rendered HTML compared against `main` (refactors only). Differences:

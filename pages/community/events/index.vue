@@ -90,7 +90,7 @@ function fmtDate(start: string, end?: string) {
         <div v-if="filteredUpcoming?.length">
           <NuxtLink v-for="event in filteredUpcoming" :key="event._path"
             :to="`/community/events/${event.slug}`"
-            class="grid gap-[16px] [align-items:start] p-[16px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
+            class="grid grid-cols-[1fr] min-[900px]:grid-cols-[56px_1fr_auto] gap-[16px] [align-items:start] p-[16px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
             <!-- Date block -->
             <div class="text-center bg-[#f9fafb] rounded-[8px] p-[8px_4px]">
               <p class="text-[9px] text-muted uppercase tracking-[.06em] mb-[2px]">
