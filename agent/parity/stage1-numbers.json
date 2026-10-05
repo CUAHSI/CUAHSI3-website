@@ -20,22 +20,22 @@
   "Students": 139
  },
  "byType": {
-  "landing page": 7,
-  "static page": 48,
-  "listing": 44,
-  "document or file": 80,
-  "person": 101,
-  "other": 3,
-  "news post": 58,
+  "landing page": 6,
+  "other": 12,
+  "static page": 47,
+  "listing": 73,
+  "document or file": 76,
+  "person": 91,
+  "news post": 49,
   "newsletter issue": 19,
-  "data portal entry": 48,
+  "data portal entry": 44,
   "cyberseminar": 67,
   "cyberseminar series": 20,
-  "program": 8,
-  "event": 120,
-  "job": 16,
+  "program": 5,
+  "event": 118,
+  "job": 13,
   "graduate program": 107,
-  "workshop": 21
+  "workshop": 20
  },
  "bySectionRule": {
   "via links": 27,
@@ -51,13 +51,8 @@
   "nav": 5
  },
  "dateRange": {
-  "document or file": {
-   "n": 1,
-   "min": "2018-12-05",
-   "max": "2018-12-05"
-  },
   "news post": {
-   "n": 55,
+   "n": 49,
    "min": "2022-03-04",
    "max": "2026-09-08"
   },
@@ -88,8 +83,11 @@
   }
  },
  "withContent": 755,
- "sitemapOnlyCount": 659,
+ "foundViaSitemapAloneNotNavOrFooter": 659,
  "notInSitemapCount": 86,
+ "pagesWithoutMain": 0,
+ "pagesWithBase": 0,
+ "pagesWithFilterForm": 61,
  "sitemapNotLinked": 215,
  "sitemapNotLinkedByType": {
   "document or file": 76,
@@ -97,19 +95,13 @@
   "static page": 8,
   "cyberseminar": 1,
   "event": 105,
-  "job": 3
+  "listing": 3
  },
  "linkedNotInSitemapByType": {
-  "document or file": 4,
-  "static page": 3,
-  "other": 2,
-  "listing": 34,
-  "news post": 9,
-  "data portal entry": 4,
+  "listing": 56,
+  "other": 9,
   "cyberseminar series": 20,
-  "event": 1,
-  "person": 6,
-  "program": 3
+  "static page": 1
  },
  "brokenEmailLinks": 3,
  "linkedNotInSitemap": 86,
@@ -129,6 +121,16 @@
  "unassignedSection": 27,
  "ruleCounts": [
   [
+   "R00a",
+   "other",
+   12
+  ],
+  [
+   "R00b",
+   "listing",
+   62
+  ],
+  [
    "R01",
    "newsletter issue",
    19
@@ -136,12 +138,12 @@
   [
    "R02",
    "news post",
-   58
+   49
   ],
   [
    "R03",
    "event",
-   120
+   118
   ],
   [
    "R04",
@@ -156,7 +158,7 @@
   [
    "R06",
    "job",
-   16
+   13
   ],
   [
    "R07",
@@ -166,12 +168,12 @@
   [
    "R08",
    "person",
-   79
+   69
   ],
   [
    "R09",
    "document or file",
-   80
+   76
   ],
   [
    "R10",
@@ -181,37 +183,37 @@
   [
    "R11",
    "data portal entry",
-   48
+   44
   ],
   [
    "R12",
    "workshop",
-   21
+   20
   ],
   [
    "R13",
    "listing",
-   44
+   11
   ],
   [
    "R14",
    "landing page",
-   7
+   6
   ],
   [
    "R15",
    "program",
-   8
+   5
   ],
   [
    "R16",
    "static page",
-   48
+   47
   ],
   [
    "R17",
    "other",
-   3
+   0
   ]
  ]
 }

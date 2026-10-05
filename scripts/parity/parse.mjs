@@ -91,8 +91,11 @@ function findDate($, $main) {
   if (metas[0] && /^\d{4}-\d{2}-\d{2}/.test(metas[0])) return metas[0].slice(0, 10)
   const t = $main.find('time[datetime]').first().attr('datetime'); if (t && /^\d{4}-\d{2}-\d{2}/.test(t)) return t.slice(0, 10)
   const text = $main.text().replace(/\s+/g, ' ')
-  // "June 5, 2025", "June 21 - 25, 2025" (a range: its start) and "June 28 - July 2, 2025"
-  let m = text.match(new RegExp('\\b(' + MONTH_RE + ')\\s+(\\d{1,2})(?:\\s*[-–]\\s*(?:' + MONTH_RE + '\\s+)?\\d{1,2})?,?\\s+(\\d{4})\\b'))
+  // "Posted Aug 17, 2026" (news and jobs) comes first; then the first date on the page: "June 5, 2025", "June 21 - 25, 2025"
+  // (a range: its start) or "June 28 - July 2, 2025"
+  let m = text.match(new RegExp('\\bPosted\\s+(' + MONTH_RE + ')\\s+(\\d{1,2}),?\\s+(\\d{4})\\b'))
+  if (m) return isoFrom(m[1], m[2], m[3])
+  m = text.match(new RegExp('\\b(' + MONTH_RE + ')\\s+(\\d{1,2})(?:\\s*[-–]\\s*(?:' + MONTH_RE + '\\s+)?\\d{1,2})?,?\\s+(\\d{4})\\b'))
   if (m) return isoFrom(m[1], m[2], m[3])
   m = text.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/); if (m) return `${m[3]}-${String(m[1]).padStart(2, '0')}-${String(m[2]).padStart(2, '0')}`
   return ''
@@ -100,8 +103,11 @@ function findDate($, $main) {
 for (const [url, g] of gets) {
   if (!(g.status === '200' && g.saved && fs.existsSync(g.saved))) continue
   const $ = cheerio.load(fs.readFileSync(g.saved, 'utf8'))
-  $('a[href]').each((_, el) => { const c = canon($(el).attr('href'), url); if (c && !c.external && !c.file && c.url !== url) linkedAnywhere.add(c.url) })
-  const $main = $('main').first().length ? $('main').first() : $('body')
+  const pageBase = (() => { const b = $('base[href]').attr('href'); try { return b ? new URL(b, url).href : url } catch { return url } })()
+  $('a[href]').each((_, el) => { const c = canon($(el).attr('href'), pageBase); if (c && !c.external && !c.file && c.url !== url) linkedAnywhere.add(c.url) })
+  const hasMain = $('main').first().length > 0, hasBase = $('base[href]').length > 0
+  const $main = hasMain ? $('main').first() : $('body')
+  const hasFilter = $main.find('form.results-form-box, select[name="selcat"]').length > 0      // the category filter that every listing page carries
   const hiddenContact = /enkoder|email hidden/i.test($main.html() || '')            // emails the site hides behind a script: still contact details
   $main.find('script, style, noscript, svg').remove()
   const sub = $main.find('section.section-subscribe, .section-subscribe').length ? $main.find('section.section-subscribe, .section-subscribe') : null
@@ -131,6 +137,7 @@ for (const [url, g] of gets) {
     word_count: text ? text.split(' ').length : 0,
     heading_count: $main.find('h1,h2,h3,h4,h5,h6').length,
     out: [...out].filter(u => u !== url), files: [...files],
+    hasMain, hasBase, hasFilter,
     has_form: $main.find('form').filter((_, f) => !/\/search\/results/.test($(f).attr('action') || '')).length > 0,
     has_embed: embeds > 0,
     has_contact_details: mail || hiddenContact || EMAIL.test(text) || PHONE.test(text),
@@ -170,6 +177,8 @@ const sectionByPrefix = u => {
 const rules = []
 const rule = (id, description, test, type) => rules.push({ id, description, test, type, count: 0 })
 const segs = u => pathOf(u).split('/').filter(Boolean)
+rule('R00a', 'status is not 200: a redirect or an error has no page content (its redirect_target, if any, is in the row)', (u, i, st) => st !== '200', 'other')
+rule('R00b', 'a listing by structure: the page carries the category filter form, or the URL ends in /pN (a pager page)', (u, i) => !!i?.hasFilter || /\/p\d+$/.test(pathOf(u)), 'listing')
 rule('R01', 'path /community/news/<slug> whose slug or title mentions "newsletter"', (u, i) => segs(u)[0] === 'community' && segs(u)[1] === 'news' && segs(u).length === 3 && /newsletter/i.test(segs(u)[2] + ' ' + (i?.title || '')), 'newsletter issue')
 rule('R02', 'path /community/news/<slug>', u => segs(u)[0] === 'community' && segs(u)[1] === 'news' && segs(u).length === 3, 'news post')
 rule('R03', 'path /events/<slug>', u => segs(u)[0] === 'events' && segs(u).length === 2, 'event')
@@ -178,15 +187,15 @@ rule('R05', 'path /cyberseminars/<slug> (not series, not all-upcoming)', u => se
 rule('R06', 'path /job-board/<slug>, not a pager page /job-board/pN', u => segs(u)[0] === 'job-board' && segs(u).length === 2 && !/^p\d+$/.test(segs(u)[1]), 'job')
 rule('R07', 'path /about/our-team/<slug>', u => segs(u)[0] === 'about' && segs(u)[1] === 'our-team' && segs(u).length === 3, 'person')
 rule('R08', 'path /faculty/guest-lecturer-database/<slug>', u => segs(u)[0] === 'faculty' && segs(u)[1] === 'guest-lecturer-database' && segs(u).length === 3, 'person')
-rule('R09', 'path /about/library/<slug>', u => segs(u)[0] === 'about' && segs(u)[1] === 'library' && segs(u).length === 3, 'document or file')
+rule('R09', 'path /about/library/<slug>, except the four category pages (listed under R13)', u => segs(u)[0] === 'about' && segs(u)[1] === 'library' && segs(u).length === 3 && !['annual-reports', 'board-and-membership-minutes', 'reports-and-publications', 'strategic-plans'].includes(segs(u)[2]), 'document or file')
 rule('R10', 'path /students/graduate-programs-in-water-science-dev/<slug> (a stub page per university, linked from the paginated lists)', u => segs(u)[0] === 'students' && segs(u)[1] === 'graduate-programs-in-water-science-dev' && segs(u).length === 3, 'graduate program')
 rule('R11', 'path /community/water-data-portals/<slug>', u => segs(u)[0] === 'community' && segs(u)[1] === 'water-data-portals' && segs(u).length === 3, 'data portal entry')
-rule('R12', 'path /workshops/<slug>, not the past-workshops pager', u => segs(u)[0] === 'workshops' && segs(u).length === 2 && segs(u)[1] !== 'past-workshops' && !/^p\d+$/.test(segs(u)[1]), 'workshop')
-rule('R13', 'a listing: a collection root (/events, /community/news, /cyberseminars, /cyberseminars/all-upcoming, /job-board, /about/our-team, /about/library, /faculty/guest-lecturer-database, /community/water-data-portals, /workshops, /all-programs-services), anything under /students/graduate-programs-in-water-science (the paginated lists), /workshops/past-workshops, and any /pN pager page under these', u => ['/events', '/community/news', '/cyberseminars', '/cyberseminars/all-upcoming', '/job-board', '/about/our-team', '/about/library', '/faculty/guest-lecturer-database', '/community/water-data-portals', '/workshops', '/all-programs-services', '/workshops/past-workshops'].includes(pathOf(u)) || pathOf(u) === '/students/graduate-programs-in-water-science' || pathOf(u).startsWith('/students/graduate-programs-in-water-science/') || pathOf(u).startsWith('/workshops/past-workshops/') || (/\/p\d+$/.test(pathOf(u)) && LISTING_ROOTS.some(r => pathOf(u).startsWith(r + '/'))), 'listing')
+rule('R12', 'path /workshops/<slug>, except the past-workshops list and /workshops/propose-a-workshop (a call page)', u => segs(u)[0] === 'workshops' && segs(u).length === 2 && !['past-workshops', 'propose-a-workshop'].includes(segs(u)[1]), 'workshop')
+rule('R13', 'a listing: a collection root (/events, /community/news, /cyberseminars, /cyberseminars/all-upcoming, /job-board, /about/our-team, /about/library and its four category pages (annual-reports, board-and-membership-minutes, reports-and-publications, strategic-plans: they list documents and are linked only from the library page), /faculty/guest-lecturer-database, /community/water-data-portals, /workshops, /all-programs-services), anything under /students/graduate-programs-in-water-science (the paginated lists) and /workshops/past-workshops', u => ['/events', '/community/news', '/cyberseminars', '/cyberseminars/all-upcoming', '/job-board', '/about/our-team', '/about/library', '/faculty/guest-lecturer-database', '/community/water-data-portals', '/workshops', '/all-programs-services', '/workshops/past-workshops', '/about/library/annual-reports', '/about/library/board-and-membership-minutes', '/about/library/reports-and-publications', '/about/library/strategic-plans'].includes(pathOf(u)) || pathOf(u) === '/students/graduate-programs-in-water-science' || pathOf(u).startsWith('/students/graduate-programs-in-water-science/') || pathOf(u).startsWith('/workshops/past-workshops/'), 'listing')
 rule('R14', 'the home page and the top-level navigation pages (/about, /students, /faculty, /community, /data-services/solutions, /donate)', u => pathOf(u) === '/' || [...navTree].some(t => t.url && pathOf(t.url) === pathOf(u)), 'landing page')
 rule('R15', 'a named CUAHSI program page (my judgment): /summer-institute, /virtual-university, /cyberwater, /next-generation-modeling-ci, /grant-opportunities (with its fellowship pages)', u => ['/summer-institute', '/virtual-university', '/cyberwater', '/next-generation-modeling-ci'].includes(pathOf(u)) || pathOf(u) === '/grant-opportunities' || pathOf(u).startsWith('/grant-opportunities/'), 'program')
 rule('R16', 'any other page with content (an <h1> or a title)', (u, i) => !!i && !!(i.h1 || i.title), 'static page')
-rule('R17', 'nothing else matched: no page content (a redirect, an error, a page without a title)', () => true, 'other')
+rule('R17', 'nothing else matched: a page with no title and no h1', () => true, 'other')
 
 // ---- assemble the inventory ------------------------------------------------------------------------------------------
 const allUrls = new Set([...sitemap, ...gets.keys()])
@@ -208,7 +217,7 @@ for (const url of [...allUrls].sort()) {
     if (best) { section = best[0]; section_rule = 'via links' }
   }
   let page_type = '', type_rule = ''
-  for (const r of rules) { if (r.test(url, i)) { page_type = r.type; type_rule = r.id; r.count++; break } }
+  for (const r of rules) { if (r.test(url, i, g.status || '')) { page_type = r.type; type_rule = r.id; r.count++; break } }
   const dated = ['news post', 'newsletter issue', 'event', 'job', 'cyberseminar', 'document or file', 'workshop'].includes(page_type)
   rows.push({
     url, status: g.status || '', redirect_target: /^3/.test(g.status || '') ? g.location : '', title: i?.title || '', h1: i?.h1 || '', head_title: i?.head_title || '',
@@ -246,7 +255,8 @@ fs.writeFileSync(path.join(OUT, 'stage1-numbers.json'), JSON.stringify({
   snapshot: DATE, urls: rows.length, requestsLogged: logRows.length, getRows: gets.size, headRows: heads.size, sitemapUrls: sitemap.size,
   byStatus: count(rows, r => r.status || '(not fetched)'), bySection: count(rows, r => r.section), byType: count(rows, r => r.page_type || '(none)'),
   bySectionRule: count(rows, r => r.section_rule || '(none)'), byFoundVia: count(rows, r => r.found_via), dateRange,
-  withContent: rows.filter(r => r.word_count !== '').length, sitemapOnlyCount: sitemapOnly.length, notInSitemapCount: notInSitemap.length,
+  withContent: rows.filter(r => r.word_count !== '').length, foundViaSitemapAloneNotNavOrFooter: sitemapOnly.length, notInSitemapCount: notInSitemap.length,
+  pagesWithoutMain: [...info.values()].filter(x => !x.hasMain).length, pagesWithBase: [...info.values()].filter(x => x.hasBase).length, pagesWithFilterForm: [...info.values()].filter(x => x.hasFilter).length,
   sitemapNotLinked: [...sitemap].filter(u => !linkedAnywhere.has(u) && u !== ORIGIN).length,
   sitemapNotLinkedByType: count(rows.filter(r => sitemap.has(r.url) && !linkedAnywhere.has(r.url) && r.url !== ORIGIN), r => r.page_type),
   linkedNotInSitemapByType: count(rows.filter(r => !sitemap.has(r.url)), r => r.page_type),
