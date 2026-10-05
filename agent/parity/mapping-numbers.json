@@ -147,11 +147,31 @@
  "staffMapped": 22,
  "newTargetsWithMoreThanOneLegacy": [
   {
-   "target": "content/newsletter/260910-september.md",
+   "target": "content/programs/snow-field-school.md",
+   "legacy": 6
+  },
+  {
+   "target": "content/cyberseminars/2025-post-field-data-practices.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/cyberseminars/2025-usgs-water-data-apis.md",
    "legacy": 2
   },
   {
    "target": "content/events/260101-snow-field-school.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/events/260701-watersofthack.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/newsletter/260910-september.md",
+   "legacy": 2
+  },
+  {
+   "target": "content/research/2025-spatial-modeling-workshop.md",
    "legacy": 2
   }
  ]

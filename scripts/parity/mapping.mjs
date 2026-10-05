@@ -116,7 +116,7 @@ for (const l of legacy) {
     if (b && b.conf !== 'none') {
       const listed = b.c.fm.published === true
       const snap = `raw/legacy-site/261005/pages/${rel(l.url).replace(/^\//, '')}.html`
-      const yt = ids.size ? (b.c.yt && ids.has(b.c.yt) ? 'the YouTube id agrees' : `DISCREPANCY: legacy page ${[...ids].join(', ')} (https://www.youtube.com/watch?v=${[...ids][0]}), file here ${b.c.yt ? b.c.yt + ' (https://www.youtube.com/watch?v=' + b.c.yt + ')' : '(empty)'}; Jordan to say which is right`) : `no YouTube id on the legacy page (${snap}; only the channel link in the footer)`
+      const yt = ids.size ? (b.c.yt && ids.has(b.c.yt) ? 'the YouTube id agrees' : `DISCREPANCY: legacy page ${[...ids].join(', ')} (https://www.youtube.com/watch?v=${[...ids][0]}), file here ${b.c.yt ? b.c.yt + ' (https://www.youtube.com/watch?v=' + b.c.yt + ')' : '(empty)'}; Jordan to say which is right`) : `no YouTube id found on the legacy page by the pattern (youtube.com/embed/, watch?v= or youtu.be/ in the main content; snapshot file ${snap})`
       put(row(l, listed ? '/learn-train/cyberseminars' : '', b.c.file, b.conf, 'title+date', (listed ? '' : 'matched, unpublished here (published: false); ') + dateNote(b, l) + '; ' + yt), b.c.file); continue
     }
     const be = bestDated(l, events, 14)                           // a seminar announced here as an event
@@ -228,7 +228,7 @@ function staticRow(l, u) {
 // [legacy path, file here, confidence, note]. A seminar file has no page, so its route is the seminar list.
 const PROBE_REVIEW = [
   ['/events/webinar-an-introduction-to-cuahsi-compute-services', 'content/cyberseminars/2024-intro-compute-services-july.md', 'probable', 'a legacy event page for a webinar that is a seminar here: same title words, same day (2024-07-09)'],
-  ['/events/free-webinar-an-introduction-to-cuahsi-cloud-computing', 'content/cyberseminars/2024-intro-hydroshare-may.md', 'probable', 'a legacy event page whose title reads "An Introduction to HydroShare", same day (2024-05-14) as the seminar here; the legacy URL says "cloud computing" and the title says HydroShare: both are the legacy page\'s own'],
+  ['/events/free-webinar-an-introduction-to-cuahsi-cloud-computing', 'content/cyberseminars/2024-intro-hydroshare-may.md', 'probable', 'a legacy event page whose title reads "An Introduction to HydroShare", same day (2024-05-14) as the seminar here; the legacy URL says "cloud computing" while the legacy page title says HydroShare; Jordan to check'],
   ['/workshops/stakeholder-informed-spatial-modeling-for-hydrologic-sciences', 'content/research/2025-spatial-modeling-workshop.md', 'probable', 'the legacy workshop page and an impact story here have the same title and dates one day apart (2025-08-18, 2025-08-19); the counterpart is a story, not an event'],
   ['/events/application-deadline-stakeholder-informed-spatial-modeling-for-hydrologic-sciences', 'content/research/2025-spatial-modeling-workshop.md', 'weak', 'an application-deadline notice for the same workshop; no legacy date'],
   ['/events/cuahsi-virtual-open-house', 'content/news/251022-virtual-open-house.md', 'weak', 'same day (2025-10-22); the news item here is a recap, not an event'],
@@ -267,7 +267,9 @@ fs.writeFileSync('agent/parity/mapping.csv', [cols.join(','), ...out.map(r => co
 
 const byType = {}
 for (const r of out) { (byType[r.page_type] ??= { legacy: 0, exact: 0, probable: 0, weak: 0, none: 0 }); byType[r.page_type].legacy++; byType[r.page_type][r.confidence]++ }
-const dupTargets = [...used].filter(([, v]) => v.length > 1).map(([k, v]) => ({ target: k, legacy: v.length }))
+const perTarget = {}
+for (const r of out) if (r.new_source.startsWith('content/') && r.new_source.endsWith('.md')) perTarget[r.new_source] = (perTarget[r.new_source] || 0) + 1
+const dupTargets = Object.entries(perTarget).filter(([, n]) => n > 1).map(([target, legacy]) => ({ target, legacy })).sort((a, b) => b.legacy - a.legacy || a.target.localeCompare(b.target))   // counts every row, probe review included, any confidence
 // new routes (item pages and listed items) with no legacy counterpart
 const itemsHere = [
   ...events.map(e => ['events', e.file]), ...news.map(e => ['news', e.file]), ...impact.map(e => ['research', e.file]), ...newsletters.map(e => ['newsletter', e.file]),
