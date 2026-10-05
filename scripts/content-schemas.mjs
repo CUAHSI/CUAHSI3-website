@@ -109,7 +109,8 @@ const jobs = z.strictObject({
   url,
   tags: strings,
   published: z.boolean(),
-  source: z.enum(['newsletter', 'joshswaterjobs']).optional(), // 23 of 29; the model names these two values
+  source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
+  source_id: nonEmpty.optional(), // the posting's id at its source (a USAJOBS control number); only the usajobs files have it
 })
 
 // content/cyberseminars/ : 15 files. The transcripts/ folder (7 .json files) is not validated here.

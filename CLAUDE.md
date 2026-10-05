@@ -143,7 +143,8 @@ C1. **The validator must exit 0.** `npm run validate:content` reports no failure
     it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
     a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
-    (optional in the schema today; give it whenever it is known). An event announced in a
+    (optional; `newsletter`, `joshswaterjobs` or `usajobs`; give it whenever it is known; a
+    USAJOBS posting also carries its id in the optional `source_id`). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
     that no newsletter announced, and say where the facts came from). A news item
     summarising an article has `source_url`. If Jordan or a staff member supplied the facts
@@ -339,8 +340,8 @@ into the fork only through a branch from an up-to-date `main` and a PR, never by
 `task/` branch (rule 3). Do not merge a whole
 upstream branch that is far behind `main` (`agent-prototype` was 222 commits behind): copy
 only the changed files, or ask Jordan. Run the validator on the result before opening the
-PR. If incoming files fail it (the three new jobs use `source: usajobs` and a `source_id`
-key, which the schema rejects), stop and tell Jordan: a schema change is a separate code PR
+PR. If incoming files fail it (on 5 October 2026 three jobs used `source: usajobs` and a
+`source_id` key, which the schema rejected until it was extended for both), stop and tell Jordan: a schema change is a separate code PR
 (C1), raised with Jordan before it is started. Never describe what upstream holds without
 having fetched it.
 
