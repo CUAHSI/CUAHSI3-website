@@ -1,0 +1,264 @@
+[
+  {
+    "name": "Aquastat",
+    "owner": "Food and Agriculture Organization of the United Nations (FAO)",
+    "scope": "global",
+    "url": "http://www.fao.org/nr/water/aquastat/main/index.stm",
+    "last_reviewed": "2026-10-06"
+  },
+  {
+    "name": "eartH2Observe Water Cycle Integrator",
+    "owner": "Plymouth Marine Laboratory (PML)",
+    "scope": "global",
+    "url": "https://wci.earth2observe.eu/"
+  },
+  {
+    "name": "GEMStat",
+    "owner": "International Centre for Water Resources and Global Change (ICWRGC)",
+    "scope": "global",
+    "url": "http://www.waterandchange.org/en/#gemstat"
+  },
+  {
+    "name": "Global Earth Observation System of Systems portal",
+    "owner": "European Space Agency (ESA)",
+    "scope": "global",
+    "url": "http://www.geoportal.org/"
+  },
+  {
+    "name": "Global Flood Detection System",
+    "owner": "Global Disaster Alert and Coordination System (GDACS)",
+    "scope": "global",
+    "url": "http://www.gdacs.org/flooddetection/overview.aspx"
+  },
+  {
+    "name": "Global Groundwater Information System",
+    "owner": "International Groundwater Resources Assessment Centre (IGRAC)",
+    "scope": "global",
+    "url": "https://www.un-igrac.org/global-groundwater-information-system-ggis"
+  },
+  {
+    "name": "Global Mercury Observation System",
+    "owner": "National Research Council of Italy (CNR), Institute of Atmospheric Pollution Research",
+    "scope": "global",
+    "url": "https://www.gmos.eu"
+  },
+  {
+    "name": "Global Rivers Observatory",
+    "scope": "global",
+    "url": "http://www.globalrivers.org/"
+  },
+  {
+    "name": "Global Runoff Data Centre",
+    "owner": "Bundesamt für Gewässerkunde",
+    "scope": "global",
+    "url": "http://www.bafg.de/GRDC/EN/Home/homepage_node.html"
+  },
+  {
+    "name": "Groundwater Assessment Platform",
+    "owner": "Eawag",
+    "scope": "global",
+    "url": "https://www.gapmaps.org/Home/Public"
+  },
+  {
+    "name": "HydroLAKES",
+    "owner": "World Wildlife Fund (WWF)",
+    "scope": "global",
+    "url": "http://www.hydrosheds.org/page/hydrolakes"
+  },
+  {
+    "name": "Hydrological data and maps based on SHuttle Elevation Derivatives at multiple Scales",
+    "owner": "World Wildlife Fund (WWF)",
+    "scope": "global",
+    "url": "http://www.hydrosheds.org/"
+  },
+  {
+    "name": "International Centre for Water Resources and Global Change",
+    "scope": "Global",
+    "url": "http://www.gtn-h.info"
+  },
+  {
+    "name": "International Hydrological Programme’s Water Information Network System",
+    "owner": "Unesco",
+    "scope": "global",
+    "url": "https://core.unesco.org/en/home"
+  },
+  {
+    "name": "IWRM Data Portal",
+    "owner": "UNEP-DHI Partnership",
+    "scope": "global",
+    "url": "http://iwrmdataportal.unepdhi.org/"
+  },
+  {
+    "name": "Water Isotope System for Data Analysis, Visualization, and Electronic Retrieval",
+    "owner": "International Atomic Energy Agency (IAEA)",
+    "scope": "global",
+    "url": "http://www-naweb.iaea.org/napc/ih/IHS_resources_isohis.html"
+  },
+  {
+    "name": "Waterisotopes.org",
+    "owner": "Gabriel Bowen/IsoMAP group",
+    "scope": "Global",
+    "url": "http://wateriso.utah.edu/waterisotopes/"
+  },
+  {
+    "name": "WHO/UNICEF Joint Monitoring Programme for Water Supply and Sanitation",
+    "owner": "World Health Organization (WHO), Unicef",
+    "scope": "global",
+    "url": "https://washdata.org"
+  },
+  {
+    "name": "WMO Hydrological Observing System",
+    "owner": "World Meteorological Organization (WMO)",
+    "scope": "global",
+    "url": "https://public.wmo.int/en"
+  },
+  {
+    "name": "CUAHSI Data Services",
+    "owner": "Consortium of Universities for the Advancement of Hydrological Science, Inc.",
+    "scope": "USA",
+    "url": "https://www.cuahsi.org/data-services/solutions"
+  },
+  {
+    "name": "Open Water Data Initiative",
+    "owner": "Federal Geographic Data Committee (FGDC)",
+    "scope": "USA",
+    "url": "https://www.fgdc.gov/initiatives/open-water-data-initiative"
+  },
+  {
+    "name": "USGS Water Data for the Nation",
+    "owner": "US Geological Survey (USGS)",
+    "scope": "USA",
+    "url": "https://waterdata.usgs.gov/nwis"
+  },
+  {
+    "name": "USGS Water Services",
+    "owner": "US Geological Survey (USGS)",
+    "scope": "USA",
+    "url": "https://waterservices.usgs.gov"
+  },
+  {
+    "name": "Water Data Online",
+    "owner": "Commonwealth of Australia, Bureau of Meteorology (BOM)",
+    "scope": "Australia",
+    "url": "http://www.bom.gov.au/waterdata/"
+  },
+  {
+    "name": "Advanced Weather and Climate Forecasting System",
+    "owner": "Bangladesh Water Development Board",
+    "scope": "Bangladesh and South Asia",
+    "url": "https://bwdb.portal.gov.bd"
+  },
+  {
+    "name": "DataStream",
+    "owner": "The DataStream Initiative",
+    "scope": "Canada",
+    "url": "https://datastream.org",
+    "last_reviewed": "2026-10-06"
+  },
+  {
+    "name": "Jupiter (National well database)",
+    "owner": "Geological Survey of Denmark and Greenland",
+    "scope": "Denmark",
+    "url": "http://www.geus.dk/UK/data-maps/jupiter/Pages/default.aspx"
+  },
+  {
+    "name": "Eurostat Water statistics",
+    "owner": "European Commission",
+    "scope": "Europe",
+    "url": "http://ec.europa.eu/eurostat/statistics-explained/index.php/Water_statistics"
+  },
+  {
+    "name": "Water Data Centre",
+    "owner": "European Environment Agency",
+    "scope": "Europe",
+    "url": "http://www.eea.europa.eu/themes/water/dc"
+  },
+  {
+    "name": "Freshwater Information Platform",
+    "owner": "BOKU Vienna, UDE Essen, IGB Berlin & RBINS Brussels",
+    "scope": "Europe, partly global",
+    "url": "http://www.freshwaterplatform.eu/"
+  },
+  {
+    "name": "Joint Research Centre Water Portal",
+    "owner": "European Commission",
+    "scope": "Europe, partly global",
+    "url": "https://water.jrc.ec.europa.eu/"
+  },
+  {
+    "name": "The Farm Platform Data Portal",
+    "owner": "Rothamsted Research",
+    "scope": "North Wyke in Devon, UK",
+    "url": "https://nwfp.rothamsted.ac.uk/"
+  },
+  {
+    "name": "Intelligent Dam Decisions and Assessment",
+    "owner": "University of Washington",
+    "scope": "Oregon and Washington",
+    "url": "http://depts.washington.edu/saswe/damdss/#"
+  },
+  {
+    "name": "HYdrological Predictions for the Environment",
+    "owner": "Swedish Meteorological and Hydrological Institute (SMHI)",
+    "scope": "selected regions (global)",
+    "url": "http://hypeweb.smhi.se/"
+  },
+  {
+    "name": "Réseau des bassins versants (Network of Drainage Basins)",
+    "scope": "selected regions (global)",
+    "url": "http://portailrbv.sedoo.fr"
+  },
+  {
+    "name": "Transboundary Waters Assessment Programme (TWAP) Data Portal",
+    "owner": "United Nations Environment Program (UNEP)",
+    "scope": "selected regions (global)",
+    "url": "http://www.geftwap.org/data-portal"
+  },
+  {
+    "name": "World Hydrological Cycle Observing System",
+    "owner": "World Meteorological Organization (WMO)",
+    "scope": "selected regions (global)",
+    "url": "http://www.whycos.org/whycos/"
+  },
+  {
+    "name": "South Asian Surface Water Modeling System",
+    "owner": "University of Washington",
+    "scope": "South and Southeast Asia",
+    "url": "http://depts.washington.edu/saswe/"
+  },
+  {
+    "name": "Mekong and Red River Water Forecasting System",
+    "owner": "Vietnam National Water Resources Planning and Investigation (NAWAPI)",
+    "scope": "South East Asia (Vietnam, Cambodia and Laos)",
+    "url": "http://forecasting.vaci.org.vn"
+  },
+  {
+    "name": "National long-term surveillance of Swiss rivers",
+    "owner": "Eawag",
+    "scope": "Switzerland",
+    "url": "https://www.eawag.ch/en/research/water-for-ecosystem/ecosystems/rivers-program/"
+  },
+  {
+    "name": "Swiss Federal Office of the Environment (FOEN) – Topic Water",
+    "owner": "Swiss Federal Office of the Environment (FOEN)",
+    "scope": "Switzerland",
+    "url": "https://www.bafu.admin.ch/bafu/en/home/topics/water.html"
+  },
+  {
+    "name": "Centre for Ecology & Hydrology: Data",
+    "owner": "Research Centre of the Natural Environment Research Council (NERC)",
+    "scope": "UK",
+    "url": "http://www.ceh.ac.uk/data"
+  },
+  {
+    "name": "National River Flow Archive",
+    "owner": "Centre for Ecology & Hydrology (CEH); Research Centre of the Natural Environment Research Council (NERC)",
+    "scope": "UK",
+    "url": "http://nrfa.ceh.ac.uk/data/search"
+  },
+  {
+    "name": "Monitor My Watershed",
+    "owner": "Stroud Water Research Center",
+    "url": "https://monitormywatershed.org/"
+  }
+]
