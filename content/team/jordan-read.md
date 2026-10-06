@@ -11,8 +11,7 @@ published: true
 - **CEO, CUAHSI**, July 2025 to present
 - **Executive Director, CUAHSI**, January 2023 to July 2025
 - **Chief, Data Science Branch, USGS Water Mission Area**, 2017 to December 2022. Led the USGS water data science group.
-- **Data science team lead and supervisor, USGS Office of Water Information**, 2016 to 2017
-- **Data science team lead, USGS Center for Integrated Data Analytics**, 2014 to 2016
+- **Data science team lead and supervisor, USGS Office of Water Information / Center for Integrated Data Analytics (CIDA)**, 2014 to 2017
 - **Engineer/developer, USGS Center for Integrated Data Analytics**, 2012 to 2014
 
 ## Education
