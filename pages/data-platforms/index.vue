@@ -32,7 +32,7 @@ const tools = [
     points: ['Pre-built hydrology environments', 'Large-memory options for big runs', 'Share notebooks as HydroShare resources'],
     tags: ['Python', 'R', 'Cloud'],
     cta: 'Launch compute',
-    href: 'https://jupyter.cuahsi.org',
+    href: 'https://jupyterhub.cuahsi.org',
   },
   {
     name: 'Water Services',
