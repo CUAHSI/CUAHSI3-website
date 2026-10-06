@@ -27,7 +27,7 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5 text-[#6a8ea9]">Explore</p>
           <div class="flex flex-col gap-3">
-            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/hire-cuahsi'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'}]"
+            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/hire-cuahsi'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'},{t:'Documents & policies',h:'/about/documents'},{t:'Graduate programs',h:'/learn-train/graduate-programs'}]"
               :key="l.h" :to="l.h" class="transition-colors font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-[#7fa4bf] no-underline">
               {{ l.t }}
             </NuxtLink>
@@ -38,7 +38,7 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5 text-[#6a8ea9]">Tools</p>
           <div class="flex flex-col gap-3">
-            <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyter.cuahsi.org'},{t:'Water Services',h:'https://data.cuahsi.org/'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
+            <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyterhub.cuahsi.org'},{t:'Water Services',h:'https://data.cuahsi.org/'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
               :key="l.h" :href="l.h" target="_blank" class="transition-colors font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-[#7fa4bf] no-underline">
               {{ l.t }}
             </a>

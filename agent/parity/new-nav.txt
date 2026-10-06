@@ -1,0 +1,24 @@
+Header navigation (flat: no submenus in the HTML):
+    About (/about)
+    Data & Computing (/data-platforms)
+    Learn & Train (/learn-train)
+    Community (/community)
+    Hire CUAHSI (/hire-cuahsi)
+
+Utility links in the header:
+    Support CUAHSI (/support)
+    Contact (/contact)
+    Member Portal (/member-portal)
+
+Footer:
+    Data & Computing (/data-platforms)
+    Learn & Train (/learn-train)
+    Community (/community)
+    Hire CUAHSI (/hire-cuahsi)
+    About (/about)
+    Impact (/about/impact)
+    Newsletter (/community/newsletter)
+    Events (/community/events)
+    Job board (/community/jobs)
+    News (/community/news)
+    Campus visits (/community/campus-visits)

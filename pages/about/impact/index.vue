@@ -49,18 +49,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
       <template #kicker>Impact</template>
       <template #title>What the community is building, measuring, and discovering.</template>
       <template #lead>Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</template>
-      <template #below>
-        <!-- About sub-nav -->
-        <div class="mx-auto max-w-site p-[0_40px]">
-          <div class="flex gap-0 border-t border-t-[rgba(15,33,43,.08)] overflow-x-auto">
-            <a v-for="l in [{t:'Overview',h:'/about'},{t:'Mission & values',h:'/about#mission'},{t:'What we do',h:'/about#what-we-do'},{t:'History',h:'/about#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'/about#contact'}]"
-              :key="l.h" :href="l.h"
-              class="transition-colors font-['Hanken_Grotesk'] font-medium text-[13px] leading-[normal] text-muted p-[14px_16px_14px_0] no-underline whitespace-nowrap">
-              {{ l.t }}
-            </a>
-          </div>
-        </div>
-      </template>
+      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <!-- Stats band -->

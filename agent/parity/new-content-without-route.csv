@@ -1,0 +1,6 @@
+collection,file,slug,title,reason
+team,content/team/brianna-kearns.md,brianna-kearns,Brianna Kearns,"has_profile is false in full-team.json, so the team list does not link a profile page"
+team,content/team/callie-porter-borden.md,callie-porter-borden,Callie Porter-Borden,"has_profile is false in full-team.json, so the team list does not link a profile page"
+team,content/team/kimmy-wong.md,kimmy-wong,Kimmy Wong,"has_profile is false in full-team.json, so the team list does not link a profile page"
+team,content/team/lisa-mucciacito.md,lisa-mucciacito,Lisa Mucciacito,"has_profile is false in full-team.json, so the team list does not link a profile page"
+team,content/team/zahraa-alhmood.md,zahraa-alhmood,Zahraa Alhmood,"has_profile is false in full-team.json, so the team list does not link a profile page"

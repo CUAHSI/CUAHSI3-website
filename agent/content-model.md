@@ -138,7 +138,7 @@ tags: [PhD, computational-hydrology]
 published: true
 ```
 > The `source` field exists specifically to support the planned harvesting agent.
-> Existing values include `newsletter` and `joshswaterjobs`.
+> Existing values include `newsletter`, `joshswaterjobs` and, since 5 October 2026, `usajobs` (federal postings written by the upstream jobs automation, which also records the posting's id in an optional `source_id`).
 
 **`content/cyberseminars/`**
 ```yaml

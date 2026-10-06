@@ -1,0 +1,5 @@
+broken_url,status,kind,linked_from
+https://www.cuahsi.org/community/news/<email-3>,404,an email address written as a link without mailto: (a relative URL),https://www.cuahsi.org/community/news/floodsavvy
+https://www.cuahsi.org/community/news/<email-1>,404,an email address written as a link without mailto: (a relative URL),https://www.cuahsi.org/community/news/floodsavvy
+https://www.cuahsi.org/community/news/<email-2>,404,an email address written as a link without mailto: (a relative URL),https://www.cuahsi.org/community/news/floodsavvy
+https://www.cuahsi.org/events/agu-meet-greet-national-water-center-innovators-program-summer-institute,404,broken link,https://www.cuahsi.org/events/agu-fall-meeting

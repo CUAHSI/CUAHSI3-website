@@ -74,6 +74,8 @@ if [ -d pages ]; then
   [ -n "$out" ] && { warn "throw createError in a page; breaks client-side navigation in dev:"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages"
 fi
 
+# 8a. public/_redirects is the generator's output (CI does not build, so this is the check that always runs)
+gout=$(node scripts/parity/redirects.mjs --check 2>&1) && ok "$gout" || { fail "$gout"; }
 # 8b. public/robots.txt (footgun 11): the @nuxtjs/robots module moves it to public/_robots.txt on every build (and then serves
 #     both /robots.txt and /_robots.txt). The source lives at assets/robots.txt.
 [ -e public/robots.txt ] && fail "public/robots.txt exists; a build would move it. Keep the source at assets/robots.txt (CLAUDE.md, footgun 11)." || ok "no public/robots.txt"
@@ -143,6 +145,8 @@ if [ "$1" = "--build" ]; then
     ok "build passed"
     # 13. Every internal link in the built site resolves to a file (roadmap task 5). Not a click.
     lout=$(node scripts/check-links.mjs 2>&1) && ok "$(echo "$lout" | head -1)" || { fail "built-site link check:"; echo "$lout" | sed 's/^/      /'; }
+    # 14. Redirects (public/_redirects): every target is in the built site, no source is a page that exists, no repeated source.
+    rout=$(node scripts/check-redirects.mjs 2>&1) && ok "$(echo "$rout" | head -1)" || { fail "redirect check:"; echo "$rout" | sed 's/^/      /'; }
   else fail "build failed"; fi
 else
   echo "      (build not run; use --build before a PR)"

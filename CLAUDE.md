@@ -51,6 +51,8 @@ npx serve .output/public -l 4000   # preview the built site. Search only works h
 npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .ts and .mjs files are only parsed (syntax errors), no rules; verify.sh runs it
 npm run validate:content           # read-only check of content/ against the schemas; verify.sh runs it too
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
+node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
+node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
 npm run visual:compare             # after a build: 52 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
@@ -143,7 +145,8 @@ C1. **The validator must exit 0.** `npm run validate:content` reports no failure
     it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
     a schema change is code, with its own PR and reason.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
-    (optional in the schema today; give it whenever it is known). An event announced in a
+    (optional; `newsletter`, `joshswaterjobs` or `usajobs`; give it whenever it is known; a
+    USAJOBS posting also carries its id in the optional `source_id`). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
     that no newsletter announced, and say where the facts came from). A news item
     summarising an article has `source_url`. If Jordan or a staff member supplied the facts
@@ -320,8 +323,29 @@ Lessons from real errors. Follow these whenever a change touches many files.
 
 **Start of session.** Run `git status` and `git branch --show-current`. Read the Status
 column in `agent/roadmap.md` and the last ten lines of `agent/eval-log.md`. Tell Jordan
-in three lines where things stand: branch, task in progress, anything uncommitted. Then
-wait for direction. Do not start a roadmap task unprompted.
+in three lines where things stand: branch, task in progress, anything uncommitted. Add one
+line on upstream (see "Upstream"): run `git fetch upstream` and report what it has that the
+fork lacks, with counts. Then wait for direction. Do not start a roadmap task unprompted.
+
+**Upstream.** `origin` is Jordan's fork (`jordansread/CUAHSI3-website`); `upstream` is the
+organisation repo (`CUAHSI/CUAHSI3-website`). All your work goes to `origin`; never push to
+`upstream` (Jordan opens the fork-to-organisation PRs, for example organisation PR #28 on 5
+October 2026). Things also change upstream, and not only on its `main`: on 5 October 2026
+`upstream/main` held nothing the fork lacked, but the branch `upstream/agent-prototype` held 24
+commits of job updates (3 new job files, 17 jobs set to `published: false`) and about 22 job
+and audit PRs were open against it. Check, read only: `git fetch upstream`;
+`git rev-list --count main..upstream/main`; `git log main..upstream/main`;
+`git branch -r --no-merged upstream/main` (it also lists `origin/*`; read the `upstream/` ones);
+`gh pr list --repo CUAHSI/CUAHSI3-website --state all --limit 40`. Bring upstream changes
+into the fork only through a branch from an up-to-date `main` and a PR, never by merging on
+`main`. Jobs files are content: a `content/short-name` branch with the content rules, never a
+`task/` branch (rule 3). Do not merge a whole
+upstream branch that is far behind `main` (`agent-prototype` was 222 commits behind): copy
+only the changed files, or ask Jordan. Run the validator on the result before opening the
+PR. If incoming files fail it (on 5 October 2026 three jobs used `source: usajobs` and a
+`source_id` key, which the schema rejected until it was extended for both), stop and tell Jordan: a schema change is a separate code PR
+(C1), raised with Jordan before it is started. Never describe what upstream holds without
+having fetched it.
 
 **Start a task.** Jordan names a roadmap task or describes a new one. Confirm the tree
 is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`

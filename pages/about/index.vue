@@ -25,18 +25,7 @@ const timeline = [
         <a href="https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">Download brochure <span class="arr">→</span></a>
         <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">2025 Annual Report <span class="arr">→</span></a>
       </div>
-      <template #below>
-        <!-- Sub-nav -->
-        <div class="mx-auto max-w-site p-[0_40px]">
-          <div class="flex gap-0 border-t border-t-[rgba(15,33,43,.08)] overflow-x-auto">
-            <a v-for="l in [{t:'Mission & values',h:'#mission'},{t:'What we do',h:'#what-we-do'},{t:'History',h:'#history'},{t:'Our team',h:'/about/team'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'},{t:'Impact',h:'/about/impact'},{t:'Contact',h:'#contact'}]"
-              :key="l.h" :href="l.h"
-              class="transition-colors font-['Hanken_Grotesk'] font-medium text-[13px] leading-[normal] text-muted p-[14px_16px_14px_0] no-underline whitespace-nowrap">
-              {{ l.t }}
-            </a>
-          </div>
-        </div>
-      </template>
+      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-site p-[0_40px]">

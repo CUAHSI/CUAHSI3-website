@@ -9,7 +9,7 @@ deadline: null
 url: https://www.joshswaterjobs.com/jobs/373945/
 source: joshswaterjobs
 tags: [water-resources, resilience, conservation, partnership, remote]
-published: true
+published: false
 ---
 
 Full-time position supporting TNC's water and resilience programs. The role involves building and managing strategic partnerships to advance freshwater conservation and community resilience initiatives. 5–9 years of experience required.

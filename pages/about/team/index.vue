@@ -23,6 +23,7 @@ function initials(name: string) { return name.split(' ').map((n:string)=>n[0]).j
       title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[14px_0_0]">
       <template #kicker>About · Team</template>
       <template #title>The people behind CUAHSI.</template>
+      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
     <div class="mx-auto max-w-site p-[48px_40px_80px]">
       <div v-for="dept in deptOrder" :key="dept">
