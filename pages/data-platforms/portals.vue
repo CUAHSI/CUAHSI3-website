@@ -12,8 +12,14 @@ const { data } = await useAsyncData('data-portals-json', () =>
 )
 const rows = computed<Row[]>(() => (Array.isArray(data.value?.body) ? data.value.body : []) as Row[])
 
+// Order: portals with a global scope first, then the USA, then every other scope alphabetically (portals with no scope last);
+// within the same scope, by portal name. The order does not depend on the order of the rows in the file.
+const same = (a?: string, b?: string) => (a ?? '').localeCompare(b ?? '', 'en', { sensitivity: 'base' })
+const scopeRank = (s?: string) => { const t = (s ?? '').trim().toLowerCase(); return t === 'global' ? 0 : t === 'usa' ? 1 : t ? 2 : 3 }
+const sorted = computed(() => [...rows.value].sort((a, b) => scopeRank(a.scope) - scopeRank(b.scope) || (scopeRank(a.scope) === 2 ? same(a.scope, b.scope) : 0) || same(a.name, b.name)))
+
 const query = ref('')
-const filtered = computed(() => rows.value.filter(r =>
+const filtered = computed(() => sorted.value.filter(r =>
   !query.value || (r.name + ' ' + (r.owner ?? '') + ' ' + (r.scope ?? '')).toLowerCase().includes(query.value.toLowerCase())
 ))
 function fmtDate(d: string) {
