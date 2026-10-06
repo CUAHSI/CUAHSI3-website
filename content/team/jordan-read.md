@@ -10,7 +10,10 @@ published: true
 
 - **CEO, CUAHSI**, July 2025 to present
 - **Executive Director, CUAHSI**, January 2023 to July 2025
-- **Chief, Data Science Branch, USGS Water Mission Area**, 2017 to December 2022. Led the USGS water data science group; before that, data science team lead and supervisor at the USGS Office of Water Information and the Center for Integrated Data Analytics (2014 to 2017), and engineer/developer there (2012 to 2014).
+- **Chief, Data Science Branch, USGS Water Mission Area**, 2017 to December 2022. Led the USGS water data science group.
+- **Data science team lead and supervisor, USGS Office of Water Information**, 2016 to 2017
+- **Data science team lead, USGS Center for Integrated Data Analytics**, 2014 to 2016
+- **Engineer/developer, USGS Center for Integrated Data Analytics**, 2012 to 2014
 
 ## Education
 
@@ -49,12 +52,12 @@ The full list is on the ORCID (iD) and Scholar records, linked at the top of thi
 - Council of Fellows, CIROH
 - Advisory Board, LTER APEAL
 - Collaboration Committee, GeoFAIR Network
-- Hydroinformatics committee, CUAHSI (since 2018)
+- Hydroinformatics committee, CUAHSI (2018 to 2022)
 - Steering committee, Global Lake Ecological Observatory Network (GLEON), 2013 to 2021
 
 ## Tools and visualizations
 
-**Software:** [dataRetrieval](https://CRAN.R-project.org/package=dataRetrieval), [geoknife](https://CRAN.R-project.org/package=geoknife), [laketemps](https://CRAN.R-project.org/package=laketemps), [glmtools](https://github.com/GLEON/glmtools), [GLM3r](https://github.com/GLEON/GLM3r), [LakeEnsemblR](https://github.com/aemon-j/LakeEnsemblR) and [scipiper](https://github.com/DOI-USGS/scipiper) (lead author or co-author).
+**Software:** [geoknife](https://github.com/DOI-USGS/geoknife), [laketemps](https://github.com/GLEON/laketemps), [glmtools](https://github.com/GLEON/glmtools), [GLM3r](https://github.com/GLEON/GLM3r), [LakeEnsemblR](https://github.com/aemon-j/LakeEnsemblR) and [scipiper](https://github.com/DOI-USGS/scipiper) (lead author or co-author).
 
 **USGS data visualizations:**
 
