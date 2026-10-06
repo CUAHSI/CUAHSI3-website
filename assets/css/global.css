@@ -28,6 +28,23 @@ a { color: inherit; text-decoration: none; }
 .program-prose li, .newsletter-prose li, .profile-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; list-style: disc; }
 .program-prose strong, .newsletter-prose strong, .profile-prose strong { font-weight: 600; color: #15212B; }
 
+/* Research data management guide: the profile prose rules plus what a long guide needs (numbered lists, tables, h4, images). */
+.guide-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
+.guide-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
+.guide-prose h4 { font: 600 14px/1.3 'Hanken Grotesk'; color: #15212B; margin: 14px 0 6px; }
+.guide-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
+.guide-prose a { color: #1F6FB2; overflow-wrap: anywhere; }
+.guide-prose a:hover { text-decoration: underline; }
+.guide-prose ul, .guide-prose ol { padding-left: 22px; margin-bottom: 14px; }
+.guide-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; }
+.guide-prose ul > li { list-style: disc; }
+.guide-prose ol > li { list-style: decimal; }
+.guide-prose strong { font-weight: 600; color: #15212B; }
+.guide-prose table { display: block; overflow-x: auto; border-collapse: collapse; margin-bottom: 14px; max-width: 100%; }
+.guide-prose th, .guide-prose td { font: 400 14px/1.5 'Hanken Grotesk'; color: #3a4d57; border: 1px solid rgba(15,33,43,.15); padding: 6px 10px; text-align: left; vertical-align: top; }
+.guide-prose th { font-weight: 600; color: #15212B; background: rgba(15,33,43,.04); }
+.guide-prose img { max-width: 100%; height: auto; }
+
 /* News articles: the shared prose style above with the news page's own overrides folded in. Before this was
    one definition here plus a second, conflicting one in pages/community/news/[slug].vue, and the page's won. */
 .news-prose h2 { font-style: normal; font-family: 'Schibsted Grotesk'; font-size: 16px; font-weight: 600; line-height: 1.3; color: #111827; margin: 28px 0 10px; letter-spacing: -.008em; }

@@ -38,7 +38,7 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5 text-[#6a8ea9]">Tools</p>
           <div class="flex flex-col gap-3">
-            <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyter.cuahsi.org'},{t:'Water Services',h:'https://data.cuahsi.org/'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
+            <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyterhub.cuahsi.org'},{t:'Water Services',h:'https://data.cuahsi.org/'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
               :key="l.h" :href="l.h" target="_blank" class="transition-colors font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-[#7fa4bf] no-underline">
               {{ l.t }}
             </a>

@@ -26,6 +26,7 @@ const SECTIONS: Record<string, { label: string; tabs: Tab[] }> = {
     tabs: [
       { t: 'Overview', h: '/data-platforms', exact: true },
       { t: 'Water data portals', h: '/data-platforms/portals' },
+      { t: 'Data management guide', h: '/data-platforms/data-management-guide' },
     ],
   },
   learn: {

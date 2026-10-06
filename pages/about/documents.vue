@@ -8,7 +8,7 @@ useHead({
   meta: [{ name: 'description', content: 'CUAHSI policies, annual reports, strategic plans, meeting minutes and historical papers.' }]
 })
 
-type Doc = { title: string; kind: string; series?: string; year: number; date?: string; file?: string; url?: string; citation?: string; note?: string }
+type Doc = { title: string; kind: string; series?: string; year?: number; date?: string; file?: string; url?: string; citation?: string; note?: string }
 const { data } = await useAsyncData('documents-json', () =>
   queryContent('documents').where({ _extension: 'json' }).findOne().catch(() => null)
 )
@@ -20,7 +20,7 @@ const byKind = (k: string) => docs.value.filter(d => d.kind === k)
 // reports and plans: one card per series (newest year first); a document with no series is its own card
 const reportCards = computed(() => {
   const cards: { title: string; items: Doc[] }[] = []
-  for (const d of [...byKind('report'), ...byKind('plan')].sort((a, b) => b.year - a.year)) {
+  for (const d of [...byKind('report'), ...byKind('plan')].sort((a, b) => (b.year ?? 0) - (a.year ?? 0))) {
     const title = d.series ?? d.title
     const card = cards.find(c => c.title === title)
     if (card) card.items.push(d); else cards.push({ title, items: [d] })
@@ -30,7 +30,7 @@ const reportCards = computed(() => {
 // meeting minutes: by year, newest first, each meeting by date
 const minutesByYear = computed(() => {
   const map = new Map<number, Doc[]>()
-  for (const d of byKind('minutes')) map.set(d.year, [...(map.get(d.year) ?? []), d])
+  for (const d of byKind('minutes')) map.set(d.year ?? 0, [...(map.get(d.year ?? 0) ?? []), d])
   return [...map.keys()].sort((a, b) => b - a).map(y => ({ year: y, items: (map.get(y) ?? []).sort((a, b) => (a.date ?? a.title).localeCompare(b.date ?? b.title)) }))
 })
 const sections = computed(() => [
