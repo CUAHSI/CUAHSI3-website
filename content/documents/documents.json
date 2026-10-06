@@ -411,5 +411,19 @@
     "year": 2018,
     "date": "2018-12-04",
     "file": "/documents/minutes/2018-12-04-membership-meeting-minutes.pdf"
+  },
+  {
+    "title": "Travel Policy",
+    "kind": "policy",
+    "file": "/documents/policies/travel-policy.pdf",
+    "note": "How CUAHSI-sponsored travel is authorized and reimbursed. A copy of the policy page on the CUAHSI website; the page carries no date."
+  },
+  {
+    "title": "Water Prediction Innovators Summer Institute Authorship Agreement",
+    "kind": "policy",
+    "year": 2026,
+    "date": "2026-02-18",
+    "file": "/documents/policies/wpi-summer-institute-authorship-agreement.pdf",
+    "note": "Adopted June 18, 2025; revised February 18, 2026. A copy of the page on the CUAHSI website."
   }
 ]
