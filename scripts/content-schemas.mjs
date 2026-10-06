@@ -252,7 +252,7 @@ const webUrl = url.refine(u => /^https?:\/\//.test(u), 'must start with http:// 
 const graduateProgram = z.strictObject({
   institution: nonEmpty,
   programs: nonEmpty,
-  degrees: z.array(z.enum(['masters', 'phd', 'undergraduate', 'professional'])).min(1),
+  degrees: z.array(z.enum(['masters', 'phd', 'undergraduate', 'professional'])),   // may be empty: the legacy list gives no degree for some institutions, and none is guessed
   url: webUrl.optional(),
   last_reviewed: isoDate,
 })

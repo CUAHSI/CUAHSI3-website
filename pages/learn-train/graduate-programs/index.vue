@@ -71,7 +71,7 @@ function fmtDate(d: string) {
               <span v-else>{{ r.institution }}</span>
             </p>
             <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0">{{ r.programs }}</p>
-            <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0">{{ r.degrees.map(degreeLabel).join(' · ') }}</p>
+            <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0">{{ r.degrees.length ? r.degrees.map(degreeLabel).join(' · ') : 'Degrees not listed' }}</p>
             <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</p>
           </div>
           </div>
