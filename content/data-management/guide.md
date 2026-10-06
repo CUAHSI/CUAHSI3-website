@@ -20,7 +20,13 @@ The 'Research Data and Data Products Guide' provided here is offered for potenti
 
 A standardized set of quality control levels to describe data and data products.
 
-![Quality control levels 0 to 4: raw data, quality controlled data, derived products, interpreted products, knowledge products](/documents/data-management/DQL.png)
+| Level | Definition | Explanation |
+|---|---|---|
+| 0 | Raw Data | Raw and unprocessed data and data products that have not undergone quality control. Depending on the variable, data type, and data transmission system, raw data may be available within seconds or minutes after the measurements have been made. Examples include real time precipitation, streamflow, and water quality measurements. |
+| 1 | Quality Controlled Data | Quality controlled data that have passed quality assurance procedures such as routine estimation of timing and sensor calibration or visual inspection and removal of obvious errors. An example is USGS published streamflow records following parsing |
+| 2 | Derived Products | Derived products that require scientific and technical interpretation and may include multiple-sensor data. An example is basin average precipitation derived from rain gauges using an interpolation procedure. |
+| 3 | Interpreted Products | Interpreted products that require researcher driven analysis and interpretation, model-based interpretation using other data and/or strong prior assumptions. An example is basin average precipitation derived from the combination of rain gauges and radar return data. |
+| 4 | Knowledge Products | Knowledge products that require researcher driven scientific interpretation and multidisciplinary data integration and include model-based interpretation using other data and/or strong prior assumptions. An example is percentages of old or new water in a hydrograph inferred from an isotope analysis. |
 
 CUAHSI Research Data and Data Products Guide
 
