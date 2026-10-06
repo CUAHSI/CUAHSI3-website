@@ -28,7 +28,11 @@ published: true
 
 - **Willard et al. (2022)** — [Daily surface temperatures for 185,549 lakes in the conterminous United States estimated using deep learning (1980–2020)](https://doi.org/10.1002/lol2.10249). *Limnology and Oceanography Letters*, 7(4), 287–301.
 
-- **Appling et al. (2022)** — [Machine learning for understanding inland water quantity, quality, and ecology](https://doi.org/10.1016/B978-0-12-819166-8.00121-3). In *Encyclopedia of Inland Waters*, Elsevier, 585–606.
+- **Appling et al. (2022)** — [Machine learning for understanding inland water quantity, quality, and ecology](https://doi.org/10.1016/B978-0-12-819166-8.00121-3). In *Encyclopedia of Inland Waters*, Elsevier, 585–606 (paywalled). [Free preprint](https://doi.org/10.31223/X5964S).
+
+- **Zwart et al. (2023)** — [Near-term forecasts of stream temperature using deep learning and data assimilation in support of management decisions](https://doi.org/10.1111/1752-1688.13093). *JAWRA Journal of the American Water Resources Association*, 59(2), 317–337.
+
+- **Diaz et al. (2026)** — [Predicting Minnesota lake ice phenology with deep learning, explainable methods, and a physically based benchmark, 1980–2018](https://doi.org/10.1029/2025WR042118). *Water Resources Research*, 62(9), e2025WR042118.
 
 ### Lake and river processes
 
@@ -40,6 +44,8 @@ published: true
 
 
 - **Appling et al. (2018)** — [The metabolic regimes of 356 rivers in the United States](https://doi.org/10.1038/sdata.2018.292). *Scientific Data*, 5, 180292.
+
+- **Sullivan et al. (2025)** — [Climate-driven alterations of lake thermal regimes](https://doi.org/10.1002/lno.70128). *Limnology and Oceanography*, 70(8), 2348–2364.
 
 ### Recent data and collaboration work
 
