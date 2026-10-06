@@ -9,14 +9,17 @@ useHead({
 // all content in the build regardless of any JS gate. Access to this route should
 // be restricted at the edge (e.g. Cloudflare Access) before this page is public.
 
-const { data: repsData } = await useAsyncData('member-reps', () =>
-  queryContent('members/reps').findOne().catch(() => null)
-)
-
-const reps = computed<any[]>(() => {
-  const body = repsData.value?.body
-  return Array.isArray(body) ? body : []
+// The directory shows names and institutions only. The email addresses in content/members/reps.json are not shown (6 Oct 2026,
+// Jordan: "for now"), and they are dropped here, inside the fetch, so they are not in the page's data either: whatever this
+// function returns is what ships to the browser. Do not return the whole row.
+type Rep = { first_name: string; last_name: string; institution: string }
+const { data: repsData } = await useAsyncData('member-reps', async (): Promise<Rep[]> => {
+  const doc = await queryContent('members/reps').findOne().catch(() => null)
+  const rows: any[] = Array.isArray(doc?.body) ? doc.body : []
+  return rows.map(r => ({ first_name: r.first_name, last_name: r.last_name, institution: r.institution }))
 })
+
+const reps = computed<Rep[]>(() => repsData.value ?? [])
 
 const query = ref('')
 
@@ -25,14 +28,13 @@ const filtered = computed(() => {
   const q = query.value.toLowerCase()
   return reps.value.filter(r =>
     `${r.first_name} ${r.last_name}`.toLowerCase().includes(q) ||
-    r.institution.toLowerCase().includes(q) ||
-    r.email.toLowerCase().includes(q)
+    r.institution.toLowerCase().includes(q)
   )
 })
 
 // Group filtered reps by institution, alphabetically
 const grouped = computed(() => {
-  const map: Record<string, any[]> = {}
+  const map: Record<string, Rep[]> = {}
   for (const r of filtered.value) {
     if (!map[r.institution]) map[r.institution] = []
     map[r.institution].push(r)
@@ -84,7 +86,7 @@ const resources = [
       <div class="pb-[80px]">
         <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
           <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member representative directory</p>
-          <input v-model="query" type="text" aria-label="Search member representatives" placeholder="Search name, institution, or email…"
+          <input v-model="query" type="text" aria-label="Search member representatives" placeholder="Search name or institution…"
             class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[280px]" />
         </div>
         <p class="font-mono text-[11px] text-muted mb-5">{{ filtered.length }} representative{{ filtered.length === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
@@ -96,9 +98,8 @@ const resources = [
             class="p-[8px_14px] border-b border-b-[rgba(15,33,43,.08)] last:border-b-0 odd:bg-[rgba(15,33,43,.025)] min-[641px]:grid min-[641px]:grid-cols-[240px_minmax(0,1fr)] min-[641px]:gap-x-[16px] min-[641px]:items-baseline">
             <p class="font-['Hanken_Grotesk'] font-semibold text-[13px] leading-[1.35] text-navy m-0">{{ group.institution }}</p>
             <ul role="list" class="list-none p-0 m-[2px_0_0] min-[641px]:m-0 flex flex-wrap gap-x-[22px] gap-y-[2px]">
-              <li v-for="rep in group.reps" :key="rep.email" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-ink">
+              <li v-for="(rep, i) in group.reps" :key="`${rep.last_name}-${rep.first_name}-${i}`" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-ink">
                 {{ rep.first_name }} {{ rep.last_name }}
-                <a :href="`mailto:${rep.email}`" class="font-mono text-[11px] text-water break-all">{{ rep.email }}</a>
               </li>
             </ul>
           </li>

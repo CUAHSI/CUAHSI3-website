@@ -259,6 +259,14 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     (the tree is left dirty with a deleted tracked file and an untracked one). Observed in the 4 October build: the
     built site then also contained the copy as `/_robots.txt`; after the move it does not. The source now lives at `assets/robots.txt`, which the module reads without moving it;
     the built `/robots.txt` was byte-identical before and after the move (checked with diff on one build). `verify.sh` fails if `public/robots.txt` exists.
+12. **Not showing data on a page does not stop the site publishing it.** `@nuxt/content` v2 writes every content file, whole, into
+    the static output (`/api/_content/cache.<id>.json`, `/api/_content/query/<hash>.json`) so pages can query it in the browser.
+    Taking the member representatives' email addresses out of `/member-portal` left all 229 in those files. A field that must not
+    be public has to be removed when the file is parsed: `server/plugins/strip-rep-emails.ts` does it for `content/members/reps.json`,
+    and `scripts/check-member-emails.mjs` (run by `verify.sh --build`) fails the build if any address, in plain, %40 or &#64; form, or a
+    row with an email key, is found in `.output/public` or `.output/server`. The dev server also serves `/api/_content/*` live; the plugin
+    covers it too, the check does not.
+    The file is still in the repository, which is public.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
