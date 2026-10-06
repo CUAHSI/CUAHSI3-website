@@ -274,13 +274,14 @@ const documentEntry = z.strictObject({
   title: nonEmpty,
   kind: z.enum(['policy', 'report', 'plan', 'minutes', 'governance', 'historical']),
   series: nonEmpty.optional(),       // documents of one series (for example "Annual reports") are shown together, by year
-  year: z.number().int().min(1980).max(2100),
+  year: z.number().int().min(1980).max(2100).optional(),   // required except for a policy: a policy may carry no date (none is guessed)
   date: isoDate.optional(),          // the meeting or publication date, when the title does not give it
   file: z.string().regex(/^\/documents\/[A-Za-z0-9._\/-]+\.pdf$/, 'must be a PDF under /documents/').optional(),
   url: webUrl.optional(),
   citation: nonEmpty.optional(),
   note: nonEmpty.optional(),
 }).refine(d => Boolean(d.file) !== Boolean(d.url), { message: 'exactly one of file and url is required' })
+  .refine(d => d.kind === 'policy' || d.year !== undefined, { message: 'year is required for every kind except a policy' })
   .refine(d => d.kind !== 'minutes' || Boolean(d.date), { message: 'minutes need a date (they are listed by date within the year)' })
 
 // content/data-management/guide.md : the research data management guide (a tab on /data-platforms/data-management-guide).
