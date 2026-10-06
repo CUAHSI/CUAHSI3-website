@@ -1,0 +1,865 @@
+[
+  {
+    "institution": "Arizona State University",
+    "programs": "School of Sustainable Engineering and The Built Environment:",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.asu.edu/"
+  },
+  {
+    "institution": "Auburn University",
+    "programs": "Auburn University Water Resources Center",
+    "degrees": [],
+    "url": "https://aaes.auburn.edu/wrc/education/"
+  },
+  {
+    "institution": "Boise State University",
+    "programs": "The Hydrologic Science MS program attracts students with backgrounds in the applied and natural sciences, mathematics, biology, and engineering.",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://www.boisestate.edu/coen-ce/graduate-students/areas-of-study/water-resources-engineering/",
+    "last_reviewed": "2026-10-06"
+  },
+  {
+    "institution": "Brigham Young University",
+    "programs": "The Department of Plant and Wildlife Sciences offers both MS and PhD graduate degrees",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://pws.byu.edu/"
+  },
+  {
+    "institution": "City College of New York",
+    "programs": "Department of Civil Engineering M.S, Ph.D",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.ccny.cuny.edu/civileng"
+  },
+  {
+    "institution": "Clarkson University",
+    "programs": "Water Resources Engineering; Water Resources Engineering group",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.clarkson.edu/graduate/civil-environmental-engineering"
+  },
+  {
+    "institution": "Clemson University",
+    "programs": "Hydrogeology (M.S.); Environmental Engineering & Science (M.S., M.Eng., Ph.D.); Biosystems Engineering (M.S., Ph.D.); The Department Civil Engineering (M.S., M.Eng., Ph.D.); Environmental Toxicology Program (M.S., Ph.D.)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.clemson.edu/ces/eees/"
+  },
+  {
+    "institution": "Colorado School of Mines",
+    "programs": "Hydrologic Science and Engineering (HSE) Program, M.S and Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://hydrology.mines.edu/"
+  },
+  {
+    "institution": "Colorado State University",
+    "programs": "Civil and Environmental Engineering; Watershed Science, M.S.; Earth Sciences with either a Geosciences or a Watershed Science specialization, Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.engr.colostate.edu/ce/graduate/hydrologic-science-and-engineering/"
+  },
+  {
+    "institution": "Columbia University",
+    "programs": "Columbia offers a variety of programs expressly designed for M.S., M.P.A. and M.A. students. Doctoral students will also find an array of programs related to Water Science.",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://www.earth.columbia.edu"
+  },
+  {
+    "institution": "Dartmouth College",
+    "programs": "Ecology & Evolutionary Biology (EEB)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://sites.dartmouth.edu/EEES/"
+  },
+  {
+    "institution": "Drexel University",
+    "programs": "Water Resources Engineering, Environmental Modeling, Environmental Treatment Processes and Human Risk and Environmental Science",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://drexel.edu/engineering/academics/departments/civil-architectural-environmental-engineering/academic-programs/graduate/"
+  },
+  {
+    "institution": "Duke University",
+    "programs": "Pratt School of Engineering; Hydrology & Fluid Dynamics",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://pratt.duke.edu/research/resilience"
+  },
+  {
+    "institution": "Georgia State University",
+    "programs": "Master of Science in Water Science",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://geosciences.gsu.edu/grad-programs/m-s-degree-in-geosciences/"
+  },
+  {
+    "institution": "Humboldt State University",
+    "programs": "College of Natural Resources and Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://cnrs.humboldt.edu/programs/graduate"
+  },
+  {
+    "institution": "Illinois State University",
+    "programs": "Department of Geography, Geology, and the Environment",
+    "degrees": [],
+    "url": "https://geo.illinoisstate.edu/academics/hydrogeology/"
+  },
+  {
+    "institution": "Iowa State University",
+    "programs": "Agricultural and Biosystems Engineering - Water and Environmental Stewardship Focus Area; Agronomy; Ecology and Evolutionary Biology (EEB); Environmental and Water Resources Engineering; Environmental Science; Geological and Atmospheric Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.iastate.edu/"
+  },
+  {
+    "institution": "Johns Hopkins University",
+    "programs": "Department of Geography and Environmental Engineering (DoGEE); Department of Earth and Planetary Sciences (EPS); MSE degree in Water Resources Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.jhu.edu/"
+  },
+  {
+    "institution": "Kansas State University",
+    "programs": "Department of Civil Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.ce.ksu.edu/grad/degrees/"
+  },
+  {
+    "institution": "Kent State University",
+    "programs": "Department of Geography; Department of Biological Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.kent.edu/biology/graduate"
+  },
+  {
+    "institution": "Louisiana State University",
+    "programs": "Civil and Environmental Engineering",
+    "degrees": [],
+    "url": "https://www.lsu.edu/eng/cee/people/area-water.php"
+  },
+  {
+    "institution": "Manhattan College",
+    "programs": "Environmental Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://manhattan.edu/academics/graduate-programs/environmental-engineering.php"
+  },
+  {
+    "institution": "Marquette University",
+    "programs": "Environmental and Water Resources Engineering",
+    "degrees": [],
+    "url": "https://www.marquette.edu/water-quality-center/"
+  },
+  {
+    "institution": "Massachusetts Institute of Technology",
+    "programs": "Massachusetts Institute of Technology/Woods Hole Oceanographic Institution (MIT/WHOI) Joint Program",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://mit.whoi.edu/home"
+  },
+  {
+    "institution": "Michigan State University",
+    "programs": "MSU Center for Water Sciences; Institute of Water Research; Water Science Network",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://msu.edu"
+  },
+  {
+    "institution": "Missouri University of Science and Technology",
+    "programs": "Geological Engineering, Geology and Geophysicsprograms include remote sensing of freshwater resources, hydrogeophysics, and contaminant hydrogeology and water science and engineering.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://waterscience.mst.edu/"
+  },
+  {
+    "institution": "Murray State University",
+    "programs": "Watershed Studies, M.S.",
+    "degrees": [
+      "masters"
+    ],
+    "url": "http://www.murraystate.edu/wsi/"
+  },
+  {
+    "institution": "New Mexico Institute of Mining and Technology",
+    "programs": "The Hydrology Program, M.S and Ph. D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.nmt.edu/academics/ees/hydrology/index.php"
+  },
+  {
+    "institution": "New Mexico State University",
+    "programs": "Interdisciplinary Degree Program in Water Science & Management (WSM)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://wsm.nmsu.edu/"
+  },
+  {
+    "institution": "North Carolina State University",
+    "programs": "Several Departments offer degrees related to Water Science, as well as an interdisciplinary graduate minor: Biological and Agricultural Engineering; Civil, Construction and Environmental Engineering; Forestry and Environmental Resources; Marine, Earth and Atmospheric Sciences; Department of Crop and Soil Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.ncsu.edu"
+  },
+  {
+    "institution": "Northeastern University",
+    "programs": "College of Science, Engineering and Technology",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.civ.neu.edu/"
+  },
+  {
+    "institution": "Northern Arizona University",
+    "programs": "M.S. in Geology, M.S. in Environmental Science and Policy, Ph.D. in Earth Sciences and Environmental Sustainability",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://nau.edu/ses/graduate-degrees/"
+  },
+  {
+    "institution": "Northwestern University",
+    "programs": "Department of Civil and Environmental Engineering; Department of Earth and Planetary Sciences, Ph.D.; Graduate Program in Plant Biology and Conservation, M.S. and Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.northwestern.edu/"
+  },
+  {
+    "institution": "Oregon State University",
+    "programs": "The Water Resources Program, M.S. and Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://gradwater.oregonstate.edu/"
+  },
+  {
+    "institution": "Pennsylvania State University",
+    "programs": "Multiple graduate programs: Agricultural & Biological Engineering, Civil & Environmental Engineering, Ecosystem Science & Management, Geography, Geosciences. Dual title program in Biogeochemistry",
+    "degrees": [],
+    "url": "https://www.psu.edu/"
+  },
+  {
+    "institution": "Plymouth State University",
+    "programs": "Environmental Science and Policy",
+    "degrees": [
+      "undergraduate"
+    ],
+    "url": "http://www.plymouth.edu/environment-sustainability/program/bs/environmental-science-policy"
+  },
+  {
+    "institution": "Portland State University",
+    "programs": "Environmental and Water Resources Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.pdx.edu/civil-environmental-engineering/"
+  },
+  {
+    "institution": "Purdue University",
+    "programs": "Water related graduate programs are available through many departments, including Civil Engineering, Agricultural and Biological Engineering, Agronomy, Forestry and Natural Resources and Earth and Atmospheric Sciences.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.purdue.edu"
+  },
+  {
+    "institution": "Rutgers University",
+    "programs": "M.S. and Ph.D. granting programs related to hydrology, hydroclimate, and water resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://soe.rutgers.edu"
+  },
+  {
+    "institution": "San Diego State University",
+    "programs": "The Geography Department offers a Master's of Science in Geography with an emphasis in Watershed Science, and a joint PhD program in Geography with the University of California, Santa Barbara",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://geography.sdsu.edu/"
+  },
+  {
+    "institution": "South Dakota State University",
+    "programs": "Civil Engineering, M.S.; Agricultural and Biosystems Engineering, M.S.; Wildlife and Fisheries Sciences, M.S and Ph.D.; Biological Sciences, M.S and Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.sdstate.edu/"
+  },
+  {
+    "institution": "Southern Illinois University Carbondale",
+    "programs": "Several graduate programs involving water science are offered by the departments below: Environmental Resources and Policy; Geosciences; Civil and Environmental Engineering; Zoology and Agricultural Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://gradschool.siu.edu/academics/"
+  },
+  {
+    "institution": "State University of New York (SUNY)",
+    "programs": "SUNY College of Environmental Science and Forestry",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.esf.edu"
+  },
+  {
+    "institution": "Syracuse University",
+    "programs": "Department of Earth Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://thecollege.syr.edu/earth-sciences-department/"
+  },
+  {
+    "institution": "Temple University",
+    "programs": "Geology, M.S.; Geoscience, Ph.D.",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://ees.cst.temple.edu/"
+  },
+  {
+    "institution": "Texas A&M University",
+    "programs": "Water Management and Hydrological Science (WMHS) Program",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://waterprogram.tamu.edu/"
+  },
+  {
+    "institution": "The Ohio State University",
+    "programs": "Food, Agricultural, and Biological Engineering; School of Earth Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://fabe.osu.edu/graduate/specializationresearch-areas"
+  },
+  {
+    "institution": "Tufts University",
+    "programs": "Environmental and Water Resources Engineering",
+    "degrees": [],
+    "url": "https://engineering.tufts.edu/cee/current/mscee/water"
+  },
+  {
+    "institution": "Universidad de las Americas Puebla",
+    "programs": "Ph.D. in Water Science",
+    "degrees": [
+      "phd"
+    ],
+    "url": "https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2"
+  },
+  {
+    "institution": "Universitat Politècnica de Catalunya",
+    "programs": "Master's in Groundwater Hydrology",
+    "degrees": [
+      "masters"
+    ]
+  },
+  {
+    "institution": "University Abdou Moumouni",
+    "programs": "Geology",
+    "degrees": [],
+    "url": "https://www.uam.edu.ne/contact.php"
+  },
+  {
+    "institution": "University at Buffalo",
+    "programs": "Department of Geology; Civil/Environmental Engineering; Ecosystem Restoration through Interdisciplinary Exchange (ERIE); MS and PhD in Environmental and Water Resources Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.buffalo.edu/grad.html"
+  },
+  {
+    "institution": "University of Akron",
+    "programs": "Department of Geology & Environmental Science, M.S and Ph. D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.uakron.edu/geology/"
+  },
+  {
+    "institution": "University of Alabama",
+    "programs": "Surface Water and Hydrometeorology Modeling and Machine Learning",
+    "degrees": [],
+    "url": "https://geo.ua.edu"
+  },
+  {
+    "institution": "University of Alaska Fairbanks",
+    "programs": "Water and Environmental Research Center (WERC)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://ine.uaf.edu/werc/"
+  },
+  {
+    "institution": "University of Arizona",
+    "programs": "Atmospheric Sciences, Hydrology, and Hydrometeorology, Accelerated BS/MS, MS, and PHD",
+    "degrees": [
+      "masters",
+      "phd",
+      "undergraduate"
+    ],
+    "url": "http://has.arizona.edu/"
+  },
+  {
+    "institution": "University of California Davis",
+    "programs": "Hydrologic Science Graduate Group spans departments to offer M.S. and Ph.D.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.ucdavis.edu/graduate-programs/civil-and-environmental-engineering"
+  },
+  {
+    "institution": "University of California Irvine",
+    "programs": "Hydrology and Water Resources Systems",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://engineering.uci.edu/dept/cee"
+  },
+  {
+    "institution": "University of California Riverside",
+    "programs": "Environmental Sciences, with a specialized track in Soil and Water Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://envisci.ucr.edu/graduate/"
+  },
+  {
+    "institution": "University of California, Merced",
+    "programs": "Environmental Systems Graduate Program",
+    "degrees": [],
+    "url": "https://www.ucmerced.edu/majors-and-minors/environmental-engineering-bs"
+  },
+  {
+    "institution": "University of Colorado",
+    "programs": "Hydrology, Water Resources & Environmental Fluid Mechanics, Interdepartmental Geophysics Program",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://colorado.edu/"
+  },
+  {
+    "institution": "University of Delaware",
+    "programs": "Water Science & Policy",
+    "degrees": [],
+    "url": "http://www.udel.edu/watersciencepolicy/index.html"
+  },
+  {
+    "institution": "University of Florida",
+    "programs": "Soil and Water Science Department",
+    "degrees": [],
+    "url": "http://soils.ifas.ufl.edu/"
+  },
+  {
+    "institution": "University of Florida Water Institute",
+    "programs": "Water Institute Graduate Fellows",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://waterinstitute.ufl.edu/education/wigf/"
+  },
+  {
+    "institution": "University of Georgia",
+    "programs": "Water Resources Program",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://water.uga.edu/"
+  },
+  {
+    "institution": "University of Hawaii at Manoa",
+    "programs": "The focus work at this lab is to study surface hydrology, specifically looking into the water science that applies to conservation for the natural environment.",
+    "degrees": [],
+    "url": "https://yinphantsang.org/"
+  },
+  {
+    "institution": "University of Idaho",
+    "programs": "Integrated Water Resources, Engineering & Science, Science & Management, and Law, Management & Policy.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.uidaho.edu/cals/water-resources"
+  },
+  {
+    "institution": "University of Illinois",
+    "programs": "Environmental Hydrology and Hydraulic Engineering and Environmental Engineering and Science, Atmospheric Sciences, Geography, and Geology, and River, Watershed and Landscape Dynamics Program, Natural Resources and Environmental Sciences, Agricultural and Consumer Economics",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://illinois.edu/"
+  },
+  {
+    "institution": "University of Iowa",
+    "programs": "Water and the Environment graduate program includes focus areas on Environmental Engineering and Science, Hydraulics and Water Resources, as well as Sustainable Water Development",
+    "degrees": [],
+    "url": "https://cee.engineering.uiowa.edu/graduate-program"
+  },
+  {
+    "institution": "University of Kansas",
+    "programs": "At the University of Kansas, four entities proudly support membership in CUAHSI: The Departments of Geology, Geography and Atmospheric Sciences, and Civil, Environmental and Architectural Engineering; and the Kansas Geological Survey. As entities at an R-1 university, these programs bring solid science, engineering, and innovation to the study of hydrologic systems.",
+    "degrees": [
+      "masters",
+      "phd",
+      "professional"
+    ],
+    "url": "http://hydrogeology.ku.edu/"
+  },
+  {
+    "institution": "University of Kentucky",
+    "programs": "Bioenvironmental Graduate Program in the Biosystems and Agricultural Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.uky.edu/"
+  },
+  {
+    "institution": "University of Louisiana at Lafayette",
+    "programs": "Civil Engineering",
+    "degrees": [],
+    "url": "https://louisiana.edu/"
+  },
+  {
+    "institution": "University of Massachusetts Boston",
+    "programs": "Environmental Science, Ph. D and Masters, Environmental Biology Ph.D. Program and Masters",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.umb.edu/"
+  },
+  {
+    "institution": "University of Memphis Ground Water Institute",
+    "programs": "Earth Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://umwa.memphis.edu/campusmap/deptsbldg.php?Building_Id=29&Dept_Id=224"
+  },
+  {
+    "institution": "University of Minnesota",
+    "programs": "Water Resources Science",
+    "degrees": [
+      "masters"
+    ],
+    "url": "http://wrs.umn.edu/"
+  },
+  {
+    "institution": "University of Missouri",
+    "programs": "Applied Physical Hydrology",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://snr.missouri.edu"
+  },
+  {
+    "institution": "University of Nebraska Lincoln",
+    "programs": "Agricultural Economics, Biological and Agricultural Engineering, Biological Sciences, Civil Engineering, Earth and Atmospheric Sciences, Environmental Engineering, and Natural Resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://water.unl.edu/home"
+  },
+  {
+    "institution": "University of Nevada Las Vegas",
+    "programs": "Water Resources Management",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.unlv.edu/sciences"
+  },
+  {
+    "institution": "University of Nevada Reno",
+    "programs": "Hydrologic Sciences Graduate Program offers M.S. and Ph.D. degrees in both Hydrology and Hydrogeology",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.unr.edu/hydrologic-sciences"
+  },
+  {
+    "institution": "University of New Mexico",
+    "programs": "Water Resources Program offers the Master of Water Resources (MWR) degree.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://wrp.unm.edu/"
+  },
+  {
+    "institution": "University of North Carolina Charlotte",
+    "programs": "Geography and Earth Sciences, Civil Engineering, Biology, and Engineering Technology, Environmental Systems, Earth Sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.uncc.edu/"
+  },
+  {
+    "institution": "University of North Dakota",
+    "programs": "Ph.D., M.S., M.A., and M.Engr. degrees in water resources and aquatic sciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://und.edu/"
+  },
+  {
+    "institution": "University of Notre Dame",
+    "programs": "Environmental Fluid Dynamics, Environmental Engineering, and Environmental Geosciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://engineering.nd.edu/departments-programs/graduate-programs/"
+  },
+  {
+    "institution": "University of Oklahoma",
+    "programs": "CEES expertise covers environmental chemistry, hydrogeology, and surface water hydrology including inland and coastal flooding, numerical modeling, radar hydrology, remote sensing, and climate change",
+    "degrees": [
+      "masters",
+      "phd",
+      "professional"
+    ],
+    "url": "http://www.ou.edu/content/coe/cees/grad_programs/environmental.html"
+  },
+  {
+    "institution": "University of Pittsburgh",
+    "programs": "Geology and Environmental Science",
+    "degrees": [],
+    "url": "https://www.geology.pitt.edu/"
+  },
+  {
+    "institution": "University of Rhode Island",
+    "programs": "Water Resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.uri.edu/academics/"
+  },
+  {
+    "institution": "University of South Carolina",
+    "programs": "environmental geosciences, geochemistry, geophysics, global climate change, hydrocarbon exploration, paleoclimatology, petrology, remote sensing, sedimentology, seismology, structural geology, and tectonics",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.sc.edu/"
+  },
+  {
+    "institution": "University of South Florida",
+    "programs": "Water Resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.usf.edu/engineering/cee/graduate/index.aspx"
+  },
+  {
+    "institution": "University of Tennessee",
+    "programs": "Watershed Hydrology, Geography , Microbiology, Civil and Environmental Engineering, and Biosystems Engineering and Soil Science.",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.utk.edu/"
+  },
+  {
+    "institution": "University of Texas at Arlington",
+    "programs": "Department of Civil Engineering; MS and PhD degree programs for the study of Hydrology, Hydraulics and Water Resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.uta.edu/uta/"
+  },
+  {
+    "institution": "University of Texas at Austin",
+    "programs": "Goesciences",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.jsg.utexas.edu/education/graduate/"
+  },
+  {
+    "institution": "University of Texas, San Antonio",
+    "programs": "MS and PhD degree programs for the study of Hydrology, Hydraulics, and Water Resources",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.utsa.edu"
+  },
+  {
+    "institution": "University of Trento",
+    "programs": "Environmental Engineering",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.unitn.it"
+  },
+  {
+    "institution": "University of Utah",
+    "programs": "Hydrology and Water Resources Certificate",
+    "degrees": [
+      "professional"
+    ],
+    "url": "https://environment.utah.edu/hydro-certificate/"
+  },
+  {
+    "institution": "University of Washington",
+    "programs": "Hydrology, Water Resources and Environmental Fluid Mechanics",
+    "degrees": [],
+    "url": "https://www.ce.washington.edu/"
+  },
+  {
+    "institution": "University of Wisconsin",
+    "programs": "Environmental Fluid Mechanics and Water Resources Engineering Graduate Program; Hydrogeology Graduate Program in the Department of Geoscience; Natural Resource & Environment Graduate Program within the Department of Biological Systems Engineering; Limnology & Marine Science Graduate Program",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://www.wisc.edu/"
+  },
+  {
+    "institution": "University of Wisconsin - Madison",
+    "programs": "Water Resources Management (WRM) program in the Nelson Instiute for Environmental Studies; Center for Limnology",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://www.nelson.wisc.edu/graduate/water-resources-management/index.php"
+  },
+  {
+    "institution": "University of Wisconsin-Milwaukee",
+    "programs": "Freshwater Sciences Academics",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://uwm.edu/freshwater/academics/"
+  },
+  {
+    "institution": "University of Wyoming",
+    "programs": "Water Resources/Environmental Science and Engineering (WRESE)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://www.uwyo.edu"
+  },
+  {
+    "institution": "University of Zurich",
+    "programs": "Master in Geography and Master in Earth System Science",
+    "degrees": [
+      "masters"
+    ],
+    "url": "https://www.degrees.uzh.ch/en/master/50000008/51030723/"
+  },
+  {
+    "institution": "Utah State University",
+    "programs": "Interdiscilplinary Water Science and Education",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "http://water.usu.edu/index"
+  },
+  {
+    "institution": "Virginia Tech",
+    "programs": "Virginia Water Resources Research Center",
+    "degrees": [
+      "masters",
+      "phd",
+      "undergraduate",
+      "professional"
+    ],
+    "url": "https://www.vwrrc.vt.edu"
+  }
+]
