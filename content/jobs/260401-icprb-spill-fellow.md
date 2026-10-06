@@ -8,7 +8,7 @@ posted: 2026-04-09
 deadline: 2026-04-24
 url: https://www.cuahsi.org/job-board/river-spill-response-fellow
 tags: [water-quality, spill-response, fellowship, policy]
-published: true
+published: false
 ---
 
 The Interstate Commission on the Potomac River Basin seeks an enthusiastic, detail-oriented scientist for a 1-year term position in its Spill Response team.
