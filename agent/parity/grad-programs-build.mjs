@@ -2,7 +2,7 @@
 // Cleaning only: no text is written by hand. URLs in the free text are removed (the website is its own field), an empty
 // "[]" left by a removed link is dropped, repeated program lines are dropped, and one very long entry (the University of
 // Kansas, 5,746 characters) is cut after its second sentence, which names the four units. Rows are sorted by institution.
-// `last_reviewed` is the date the saved legacy list was read (2026-10-05), not a staff review: staff have not reviewed these rows yet.
+// `last_reviewed` is set only on rows a person at CUAHSI has reviewed: Boise State University, so far. The rest carry no date.
 import fs from 'node:fs'
 const ex = JSON.parse(fs.readFileSync('agent/parity/grad-programs-extract.json', 'utf8'))
 const URLISH = /(https?:\/\/|www\.)[^\s)\];,]+/g
@@ -25,7 +25,7 @@ const rows = ex.final.map(r => {
   const degrees = !r.degrees.length && FROM_TEXT[r.institution] ? FROM_TEXT[r.institution] : r.degrees
   const out = { institution: r.institution, programs, degrees }
   if (r.url) out.url = r.url
-  out.last_reviewed = '2026-10-05'
+  if (r.institution === 'Boise State University') out.last_reviewed = '2026-10-06'   // the only row a person has reviewed so far (Jordan, 6 Oct 2026); every other row has no review date
   return out
 }).sort((a, b) => a.institution.localeCompare(b.institution))
 fs.mkdirSync('content/graduate-programs', { recursive: true })

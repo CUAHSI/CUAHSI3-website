@@ -6,15 +6,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.asu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.asu.edu/"
   },
   {
     "institution": "Auburn University",
     "programs": "Auburn University Water Resources Center",
     "degrees": [],
-    "url": "https://aaes.auburn.edu/wrc/education/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://aaes.auburn.edu/wrc/education/"
   },
   {
     "institution": "Boise State University",
@@ -23,7 +21,7 @@
       "masters"
     ],
     "url": "https://www.boisestate.edu/coen-ce/graduate-students/areas-of-study/water-resources-engineering/",
-    "last_reviewed": "2026-10-05"
+    "last_reviewed": "2026-10-06"
   },
   {
     "institution": "Brigham Young University",
@@ -32,8 +30,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://pws.byu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://pws.byu.edu/"
   },
   {
     "institution": "City College of New York",
@@ -42,8 +39,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.ccny.cuny.edu/civileng",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.ccny.cuny.edu/civileng"
   },
   {
     "institution": "Clarkson University",
@@ -52,8 +48,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.clarkson.edu/graduate/civil-environmental-engineering",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.clarkson.edu/graduate/civil-environmental-engineering"
   },
   {
     "institution": "Clemson University",
@@ -62,8 +57,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.clemson.edu/ces/eees/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.clemson.edu/ces/eees/"
   },
   {
     "institution": "Colorado School of Mines",
@@ -72,8 +66,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://hydrology.mines.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://hydrology.mines.edu/"
   },
   {
     "institution": "Colorado State University",
@@ -82,8 +75,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.engr.colostate.edu/ce/graduate/hydrologic-science-and-engineering/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.engr.colostate.edu/ce/graduate/hydrologic-science-and-engineering/"
   },
   {
     "institution": "Columbia University",
@@ -91,8 +83,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.earth.columbia.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.earth.columbia.edu"
   },
   {
     "institution": "Dartmouth College",
@@ -101,8 +92,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://sites.dartmouth.edu/EEES/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://sites.dartmouth.edu/EEES/"
   },
   {
     "institution": "Drexel University",
@@ -111,8 +101,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://drexel.edu/engineering/academics/departments/civil-architectural-environmental-engineering/academic-programs/graduate/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://drexel.edu/engineering/academics/departments/civil-architectural-environmental-engineering/academic-programs/graduate/"
   },
   {
     "institution": "Duke University",
@@ -121,8 +110,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://pratt.duke.edu/research/resilience",
-    "last_reviewed": "2026-10-05"
+    "url": "https://pratt.duke.edu/research/resilience"
   },
   {
     "institution": "Georgia State University",
@@ -130,8 +118,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://geosciences.gsu.edu/grad-programs/m-s-degree-in-geosciences/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://geosciences.gsu.edu/grad-programs/m-s-degree-in-geosciences/"
   },
   {
     "institution": "Humboldt State University",
@@ -140,15 +127,13 @@
       "masters",
       "phd"
     ],
-    "url": "https://cnrs.humboldt.edu/programs/graduate",
-    "last_reviewed": "2026-10-05"
+    "url": "https://cnrs.humboldt.edu/programs/graduate"
   },
   {
     "institution": "Illinois State University",
     "programs": "Department of Geography, Geology, and the Environment",
     "degrees": [],
-    "url": "https://geo.illinoisstate.edu/academics/hydrogeology/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://geo.illinoisstate.edu/academics/hydrogeology/"
   },
   {
     "institution": "Iowa State University",
@@ -157,8 +142,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.iastate.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.iastate.edu/"
   },
   {
     "institution": "Johns Hopkins University",
@@ -167,8 +151,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.jhu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.jhu.edu/"
   },
   {
     "institution": "Kansas State University",
@@ -177,8 +160,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.ce.ksu.edu/grad/degrees/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.ce.ksu.edu/grad/degrees/"
   },
   {
     "institution": "Kent State University",
@@ -187,15 +169,13 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.kent.edu/biology/graduate",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.kent.edu/biology/graduate"
   },
   {
     "institution": "Louisiana State University",
     "programs": "Civil and Environmental Engineering",
     "degrees": [],
-    "url": "https://www.lsu.edu/eng/cee/people/area-water.php",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.lsu.edu/eng/cee/people/area-water.php"
   },
   {
     "institution": "Manhattan College",
@@ -204,15 +184,13 @@
       "masters",
       "phd"
     ],
-    "url": "https://manhattan.edu/academics/graduate-programs/environmental-engineering.php",
-    "last_reviewed": "2026-10-05"
+    "url": "https://manhattan.edu/academics/graduate-programs/environmental-engineering.php"
   },
   {
     "institution": "Marquette University",
     "programs": "Environmental and Water Resources Engineering",
     "degrees": [],
-    "url": "https://www.marquette.edu/water-quality-center/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.marquette.edu/water-quality-center/"
   },
   {
     "institution": "Massachusetts Institute of Technology",
@@ -221,8 +199,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://mit.whoi.edu/home",
-    "last_reviewed": "2026-10-05"
+    "url": "http://mit.whoi.edu/home"
   },
   {
     "institution": "Michigan State University",
@@ -231,8 +208,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://msu.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://msu.edu"
   },
   {
     "institution": "Missouri University of Science and Technology",
@@ -241,8 +217,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://waterscience.mst.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://waterscience.mst.edu/"
   },
   {
     "institution": "Murray State University",
@@ -250,8 +225,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "http://www.murraystate.edu/wsi/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.murraystate.edu/wsi/"
   },
   {
     "institution": "New Mexico Institute of Mining and Technology",
@@ -260,8 +234,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.nmt.edu/academics/ees/hydrology/index.php",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.nmt.edu/academics/ees/hydrology/index.php"
   },
   {
     "institution": "New Mexico State University",
@@ -270,8 +243,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://wsm.nmsu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://wsm.nmsu.edu/"
   },
   {
     "institution": "North Carolina State University",
@@ -280,8 +252,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.ncsu.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.ncsu.edu"
   },
   {
     "institution": "Northeastern University",
@@ -290,8 +261,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.civ.neu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.civ.neu.edu/"
   },
   {
     "institution": "Northern Arizona University",
@@ -300,8 +270,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://nau.edu/ses/graduate-degrees/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://nau.edu/ses/graduate-degrees/"
   },
   {
     "institution": "Northwestern University",
@@ -310,8 +279,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.northwestern.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.northwestern.edu/"
   },
   {
     "institution": "Oregon State University",
@@ -320,15 +288,13 @@
       "masters",
       "phd"
     ],
-    "url": "https://gradwater.oregonstate.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://gradwater.oregonstate.edu/"
   },
   {
     "institution": "Pennsylvania State University",
     "programs": "Multiple graduate programs: Agricultural & Biological Engineering, Civil & Environmental Engineering, Ecosystem Science & Management, Geography, Geosciences. Dual title program in Biogeochemistry",
     "degrees": [],
-    "url": "https://www.psu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.psu.edu/"
   },
   {
     "institution": "Plymouth State University",
@@ -336,8 +302,7 @@
     "degrees": [
       "undergraduate"
     ],
-    "url": "http://www.plymouth.edu/environment-sustainability/program/bs/environmental-science-policy",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.plymouth.edu/environment-sustainability/program/bs/environmental-science-policy"
   },
   {
     "institution": "Portland State University",
@@ -346,8 +311,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.pdx.edu/civil-environmental-engineering/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.pdx.edu/civil-environmental-engineering/"
   },
   {
     "institution": "Purdue University",
@@ -356,8 +320,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.purdue.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.purdue.edu"
   },
   {
     "institution": "Rutgers University",
@@ -366,8 +329,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://soe.rutgers.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://soe.rutgers.edu"
   },
   {
     "institution": "San Diego State University",
@@ -376,8 +338,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://geography.sdsu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://geography.sdsu.edu/"
   },
   {
     "institution": "South Dakota State University",
@@ -386,8 +347,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.sdstate.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.sdstate.edu/"
   },
   {
     "institution": "Southern Illinois University Carbondale",
@@ -396,8 +356,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://gradschool.siu.edu/academics/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://gradschool.siu.edu/academics/"
   },
   {
     "institution": "State University of New York (SUNY)",
@@ -406,8 +365,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.esf.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.esf.edu"
   },
   {
     "institution": "Syracuse University",
@@ -416,8 +374,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://thecollege.syr.edu/earth-sciences-department/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://thecollege.syr.edu/earth-sciences-department/"
   },
   {
     "institution": "Temple University",
@@ -425,8 +382,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://ees.cst.temple.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://ees.cst.temple.edu/"
   },
   {
     "institution": "Texas A&M University",
@@ -435,8 +391,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://waterprogram.tamu.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://waterprogram.tamu.edu/"
   },
   {
     "institution": "The Ohio State University",
@@ -445,15 +400,13 @@
       "masters",
       "phd"
     ],
-    "url": "https://fabe.osu.edu/graduate/specializationresearch-areas",
-    "last_reviewed": "2026-10-05"
+    "url": "https://fabe.osu.edu/graduate/specializationresearch-areas"
   },
   {
     "institution": "Tufts University",
     "programs": "Environmental and Water Resources Engineering",
     "degrees": [],
-    "url": "https://engineering.tufts.edu/cee/current/mscee/water",
-    "last_reviewed": "2026-10-05"
+    "url": "https://engineering.tufts.edu/cee/current/mscee/water"
   },
   {
     "institution": "Universidad de las Americas Puebla",
@@ -461,23 +414,20 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2"
   },
   {
     "institution": "Universitat Politècnica de Catalunya",
     "programs": "Master's in Groundwater Hydrology",
     "degrees": [
       "masters"
-    ],
-    "last_reviewed": "2026-10-05"
+    ]
   },
   {
     "institution": "University Abdou Moumouni",
     "programs": "Geology",
     "degrees": [],
-    "url": "https://www.uam.edu.ne/contact.php",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.uam.edu.ne/contact.php"
   },
   {
     "institution": "University at Buffalo",
@@ -486,8 +436,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.buffalo.edu/grad.html",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.buffalo.edu/grad.html"
   },
   {
     "institution": "University of Akron",
@@ -496,15 +445,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.uakron.edu/geology/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.uakron.edu/geology/"
   },
   {
     "institution": "University of Alabama",
     "programs": "Surface Water and Hydrometeorology Modeling and Machine Learning",
     "degrees": [],
-    "url": "https://geo.ua.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://geo.ua.edu"
   },
   {
     "institution": "University of Alaska Fairbanks",
@@ -513,8 +460,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://ine.uaf.edu/werc/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://ine.uaf.edu/werc/"
   },
   {
     "institution": "University of Arizona",
@@ -524,8 +470,7 @@
       "phd",
       "undergraduate"
     ],
-    "url": "http://has.arizona.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://has.arizona.edu/"
   },
   {
     "institution": "University of California Davis",
@@ -534,8 +479,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.ucdavis.edu/graduate-programs/civil-and-environmental-engineering",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.ucdavis.edu/graduate-programs/civil-and-environmental-engineering"
   },
   {
     "institution": "University of California Irvine",
@@ -544,8 +488,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://engineering.uci.edu/dept/cee",
-    "last_reviewed": "2026-10-05"
+    "url": "https://engineering.uci.edu/dept/cee"
   },
   {
     "institution": "University of California Riverside",
@@ -554,15 +497,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://envisci.ucr.edu/graduate/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://envisci.ucr.edu/graduate/"
   },
   {
     "institution": "University of California, Merced",
     "programs": "Environmental Systems Graduate Program",
     "degrees": [],
-    "url": "https://www.ucmerced.edu/majors-and-minors/environmental-engineering-bs",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.ucmerced.edu/majors-and-minors/environmental-engineering-bs"
   },
   {
     "institution": "University of Colorado",
@@ -571,22 +512,19 @@
       "masters",
       "phd"
     ],
-    "url": "http://colorado.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://colorado.edu/"
   },
   {
     "institution": "University of Delaware",
     "programs": "Water Science & Policy",
     "degrees": [],
-    "url": "http://www.udel.edu/watersciencepolicy/index.html",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.udel.edu/watersciencepolicy/index.html"
   },
   {
     "institution": "University of Florida",
     "programs": "Soil and Water Science Department",
     "degrees": [],
-    "url": "http://soils.ifas.ufl.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://soils.ifas.ufl.edu/"
   },
   {
     "institution": "University of Florida Water Institute",
@@ -595,8 +533,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://waterinstitute.ufl.edu/education/wigf/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://waterinstitute.ufl.edu/education/wigf/"
   },
   {
     "institution": "University of Georgia",
@@ -605,15 +542,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://water.uga.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://water.uga.edu/"
   },
   {
     "institution": "University of Hawaii at Manoa",
     "programs": "The focus work at this lab is to study surface hydrology, specifically looking into the water science that applies to conservation for the natural environment.",
     "degrees": [],
-    "url": "https://yinphantsang.org/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://yinphantsang.org/"
   },
   {
     "institution": "University of Idaho",
@@ -622,8 +557,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uidaho.edu/cals/water-resources",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.uidaho.edu/cals/water-resources"
   },
   {
     "institution": "University of Illinois",
@@ -632,15 +566,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://illinois.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://illinois.edu/"
   },
   {
     "institution": "University of Iowa",
     "programs": "Water and the Environment graduate program includes focus areas on Environmental Engineering and Science, Hydraulics and Water Resources, as well as Sustainable Water Development",
     "degrees": [],
-    "url": "https://cee.engineering.uiowa.edu/graduate-program",
-    "last_reviewed": "2026-10-05"
+    "url": "https://cee.engineering.uiowa.edu/graduate-program"
   },
   {
     "institution": "University of Kansas",
@@ -650,8 +582,7 @@
       "phd",
       "professional"
     ],
-    "url": "http://hydrogeology.ku.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://hydrogeology.ku.edu/"
   },
   {
     "institution": "University of Kentucky",
@@ -660,15 +591,13 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.uky.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.uky.edu/"
   },
   {
     "institution": "University of Louisiana at Lafayette",
     "programs": "Civil Engineering",
     "degrees": [],
-    "url": "https://louisiana.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://louisiana.edu/"
   },
   {
     "institution": "University of Massachusetts Boston",
@@ -677,8 +606,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.umb.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.umb.edu/"
   },
   {
     "institution": "University of Memphis Ground Water Institute",
@@ -687,8 +615,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://umwa.memphis.edu/campusmap/deptsbldg.php?Building_Id=29&Dept_Id=224",
-    "last_reviewed": "2026-10-05"
+    "url": "https://umwa.memphis.edu/campusmap/deptsbldg.php?Building_Id=29&Dept_Id=224"
   },
   {
     "institution": "University of Minnesota",
@@ -696,8 +623,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "http://wrs.umn.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://wrs.umn.edu/"
   },
   {
     "institution": "University of Missouri",
@@ -706,8 +632,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://snr.missouri.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://snr.missouri.edu"
   },
   {
     "institution": "University of Nebraska Lincoln",
@@ -716,8 +641,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://water.unl.edu/home",
-    "last_reviewed": "2026-10-05"
+    "url": "http://water.unl.edu/home"
   },
   {
     "institution": "University of Nevada Las Vegas",
@@ -726,8 +650,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.unlv.edu/sciences",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.unlv.edu/sciences"
   },
   {
     "institution": "University of Nevada Reno",
@@ -736,8 +659,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.unr.edu/hydrologic-sciences",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.unr.edu/hydrologic-sciences"
   },
   {
     "institution": "University of New Mexico",
@@ -746,8 +668,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://wrp.unm.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://wrp.unm.edu/"
   },
   {
     "institution": "University of North Carolina Charlotte",
@@ -756,8 +677,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.uncc.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.uncc.edu/"
   },
   {
     "institution": "University of North Dakota",
@@ -766,8 +686,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://und.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://und.edu/"
   },
   {
     "institution": "University of Notre Dame",
@@ -776,8 +695,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://engineering.nd.edu/departments-programs/graduate-programs/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://engineering.nd.edu/departments-programs/graduate-programs/"
   },
   {
     "institution": "University of Oklahoma",
@@ -787,15 +705,13 @@
       "phd",
       "professional"
     ],
-    "url": "http://www.ou.edu/content/coe/cees/grad_programs/environmental.html",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.ou.edu/content/coe/cees/grad_programs/environmental.html"
   },
   {
     "institution": "University of Pittsburgh",
     "programs": "Geology and Environmental Science",
     "degrees": [],
-    "url": "https://www.geology.pitt.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.geology.pitt.edu/"
   },
   {
     "institution": "University of Rhode Island",
@@ -804,8 +720,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uri.edu/academics/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.uri.edu/academics/"
   },
   {
     "institution": "University of South Carolina",
@@ -814,8 +729,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.sc.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.sc.edu/"
   },
   {
     "institution": "University of South Florida",
@@ -824,8 +738,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.usf.edu/engineering/cee/graduate/index.aspx",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.usf.edu/engineering/cee/graduate/index.aspx"
   },
   {
     "institution": "University of Tennessee",
@@ -834,8 +747,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.utk.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.utk.edu/"
   },
   {
     "institution": "University of Texas at Arlington",
@@ -844,8 +756,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.uta.edu/uta/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.uta.edu/uta/"
   },
   {
     "institution": "University of Texas at Austin",
@@ -854,8 +765,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.jsg.utexas.edu/education/graduate/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.jsg.utexas.edu/education/graduate/"
   },
   {
     "institution": "University of Texas, San Antonio",
@@ -864,8 +774,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.utsa.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.utsa.edu"
   },
   {
     "institution": "University of Trento",
@@ -874,8 +783,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.unitn.it",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.unitn.it"
   },
   {
     "institution": "University of Utah",
@@ -883,15 +791,13 @@
     "degrees": [
       "professional"
     ],
-    "url": "https://environment.utah.edu/hydro-certificate/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://environment.utah.edu/hydro-certificate/"
   },
   {
     "institution": "University of Washington",
     "programs": "Hydrology, Water Resources and Environmental Fluid Mechanics",
     "degrees": [],
-    "url": "https://www.ce.washington.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.ce.washington.edu/"
   },
   {
     "institution": "University of Wisconsin",
@@ -900,8 +806,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://www.wisc.edu/",
-    "last_reviewed": "2026-10-05"
+    "url": "http://www.wisc.edu/"
   },
   {
     "institution": "University of Wisconsin - Madison",
@@ -909,8 +814,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.nelson.wisc.edu/graduate/water-resources-management/index.php",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.nelson.wisc.edu/graduate/water-resources-management/index.php"
   },
   {
     "institution": "University of Wisconsin-Milwaukee",
@@ -919,8 +823,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://uwm.edu/freshwater/academics/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://uwm.edu/freshwater/academics/"
   },
   {
     "institution": "University of Wyoming",
@@ -929,8 +832,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uwyo.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.uwyo.edu"
   },
   {
     "institution": "University of Zurich",
@@ -938,8 +840,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.degrees.uzh.ch/en/master/50000008/51030723/",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.degrees.uzh.ch/en/master/50000008/51030723/"
   },
   {
     "institution": "Utah State University",
@@ -948,8 +849,7 @@
       "masters",
       "phd"
     ],
-    "url": "http://water.usu.edu/index",
-    "last_reviewed": "2026-10-05"
+    "url": "http://water.usu.edu/index"
   },
   {
     "institution": "Virginia Tech",
@@ -960,7 +860,6 @@
       "undergraduate",
       "professional"
     ],
-    "url": "https://www.vwrrc.vt.edu",
-    "last_reviewed": "2026-10-05"
+    "url": "https://www.vwrrc.vt.edu"
   }
 ]
