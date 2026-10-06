@@ -1,10 +1,10 @@
-// Builds content/graduate-programs/programs.json from agent/parity/grad-programs-extract.json (see grad-programs-extract.mjs).
+// Builds content/graduate-programs/programs.json from .agent/grad-programs-extract.json (see grad-programs-extract.mjs).
 // Cleaning only: no text is written by hand. URLs in the free text are removed (the website is its own field), an empty
 // "[]" left by a removed link is dropped, repeated program lines are dropped, and one very long entry (the University of
 // Kansas, 5,746 characters) is cut after its second sentence, which names the four units. Rows are sorted by institution.
 // `last_reviewed` is set only on rows a person at CUAHSI has reviewed: Boise State University, so far. The rest carry no date.
 import fs from 'node:fs'
-const ex = JSON.parse(fs.readFileSync('agent/parity/grad-programs-extract.json', 'utf8'))
+const ex = JSON.parse(fs.readFileSync('.agent/grad-programs-extract.json', 'utf8'))
 const URLISH = /(https?:\/\/|www\.)[^\s)\];,]+/g
 function cleanText(t) {
   return t

@@ -2,7 +2,7 @@
 // in raw/legacy-site/261005/pages/students/graduate-programs-in-water-science*.html (not committed). Reads only the snapshot.
 // Source of each row: the main list (11 pages), one block per institution: its name, its program text and its "Degrees" links.
 // The Master's, Ph.D., Other/Professional and Undergraduate lists are read to cross-check the degrees (and to fill them in when the
-// main list gives none). Writes agent/parity/grad-programs-extract.json (rows plus checks). Run: node agent/parity/grad-programs-extract.mjs
+// main list gives none). Writes .agent/grad-programs-extract.json (rows plus checks; scratch, not committed: the stub-page text it holds can include a script-encoded email address, which is never decoded and never copied into the data). Run: node agent/parity/grad-programs-extract.mjs
 import fs from 'node:fs'
 import * as cheerio from 'cheerio'
 const DIR = 'raw/legacy-site/261005/pages/students'
@@ -60,7 +60,8 @@ for (const b of rows) {
 const fromCats = {}
 for (const m of merged) { m.fromList = [...m.degrees]; for (const [k, set] of Object.entries(catSets)) if (set.has(m.institution)) m.degrees.add(k) }
 const final = merged.map(m => ({ institution: m.institution, programs: (m.parts.length ? m.parts : m.stubTexts).join('; '), degrees: ['masters', 'phd', 'undergraduate', 'professional'].filter(d => m.degrees.has(d)), url: m.websites[0] ?? null, programs_from_stub: m.parts.length ? false : true, listUrl: m.urls[0] ?? null, degreesFromCategoryLists: m.degrees.size - m.fromList.length, blocks: m.stubs.length }))
-fs.writeFileSync('agent/parity/grad-programs-extract.json', JSON.stringify({ final, rows, catCounts: Object.fromEntries(Object.entries(catSets).map(([k, s]) => [k, s.size])), cats: Object.fromEntries(Object.entries(catSets).map(([k, s]) => [k, [...s]])) }, null, 1))
+fs.mkdirSync('.agent', { recursive: true })
+fs.writeFileSync('.agent/grad-programs-extract.json', JSON.stringify({ final, rows, catCounts: Object.fromEntries(Object.entries(catSets).map(([k, s]) => [k, s.size])), cats: Object.fromEntries(Object.entries(catSets).map(([k, s]) => [k, [...s]])) }, null, 1))
 console.log('main rows', rows.length, 'distinct names', new Set(rows.map(r => r.name)).size, 'category counts', JSON.stringify(Object.fromEntries(Object.entries(catSets).map(([k, s]) => [k, s.size]))))
 console.log('institutions', final.length, '| no degrees anywhere', final.filter(r => !r.degrees.length).length, '| no url', final.filter(r => !r.url).length, '| empty programs', final.filter(r => !r.programs).length, '| url only in list text', final.filter(r => !r.url && r.listUrl).length, '| missing stubs', rows.filter(r => r.stubInfo.missing).length)
 console.log('rows with no Degrees field', rows.filter(r => !r.degrees.length).length, '| rows with an unknown degree label', rows.filter(r => r.degrees.some(d => d.startsWith('?'))).length)
