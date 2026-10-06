@@ -58,12 +58,12 @@ The full list is on the ORCID (iD) and Scholar records, linked at the top of thi
 
 ## Service
 
-- Senior editor, *Limnology and Oceanography Letters*, 2020 to 2022 (junior editor 2016 to 2020)
-- Council of Fellows, CIROH, 2023 to present
-- Advisory Board, LTER APEAL, 2023 to 2025
+- Senior editor, [*Limnology and Oceanography Letters*](https://aslopubs.onlinelibrary.wiley.com/journal/23782242), 2020 to 2022 (junior editor 2016 to 2020)
+- Council of Fellows, [CIROH](https://ciroh.ua.edu/), 2023 to present
+- Advisory Board, [LTER APEAL](https://lternet.edu/apeal-main/), 2023 to 2025
 - Collaboration Committee, [GeoFAIR Network](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2524899), 2025 to present
-- Hydroinformatics committee, CUAHSI, 2018 to 2022
-- Steering committee, Global Lake Ecological Observatory Network (GLEON), 2013
+- Hydroinformatics committee, [CUAHSI](/), 2018 to 2022
+- Steering committee, [Global Lake Ecological Observatory Network (GLEON)](https://gleon.org/), 2013
 
 ## Tools and visualizations
 
