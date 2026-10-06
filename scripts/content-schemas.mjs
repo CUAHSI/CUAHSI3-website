@@ -261,7 +261,7 @@ const graduateProgram = z.strictObject({
 // Short columns only: name, owner, scope and a link; the longer legacy fields (API, export formats, contact) are not kept.
 const dataPortal = z.strictObject({
   name: nonEmpty,
-  owner: nonEmpty,
+  owner: nonEmpty.optional(),        // the legacy entry names no owner for a few portals; none is guessed
   scope: nonEmpty.optional(),        // geographical scope, as the legacy entry gives it
   url: webUrl,
   last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
