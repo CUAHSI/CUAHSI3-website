@@ -15,8 +15,12 @@ const { data: highlights } = await useAsyncData('home-highlights', () =>
 const { data: allEvents } = await useAsyncData('home-events', () =>
   queryContent('events').where({ published: true }).sort({ start: 1 }).find()
 )
+// "Now" starts as the moment the page was built, so the browser's first render matches the built HTML (a filter on the visitor's own
+// clock hid an event that had started since the build and caused a hydration mismatch); it moves to the real time once mounted.
+const renderedAt = useState('home-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
 const upcomingEvents = computed(() => {
-  const now = new Date()
+  const now = new Date(renderedAt.value)
   return (allEvents.value ?? []).filter(e => new Date(e.start) >= now).slice(0, 3)
 })
 
