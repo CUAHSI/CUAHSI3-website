@@ -94,18 +94,8 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
             <div class="absolute inset-0 bg-[repeating-linear-gradient(135deg,rgba(255,255,255,.05)_0_2px,transparent_2px_22px)]"></div>
             <span class="absolute left-5 top-5 font-mono font-bold tracking-[.1em] uppercase text-[11px] text-[rgba(255,255,255,.8)] bg-[rgba(0,0,0,.22)] p-[7px_11px] rounded-[6px]">PHOTO — FIELD TEAM GAUGING A RIVER</span>
           </div>
-          <!-- Live gauge card -->
-          <div class="absolute bg-white rounded-[12px] gauge-card left-[-22px] bottom-[-24px] p-[16px_18px] [box-shadow:0_20px_40px_-18px_rgba(15,46,68,.4)] border border-[rgba(15,33,43,.08)] w-[236px]">
-            <div class="flex items-center gap-[7px] mb-[10px]">
-              <span class="animate-livePulse w-[8px] h-[8px] rounded-[50%] bg-[#1f9d55] inline-block"></span>
-              <span class="font-mono font-bold tracking-[.1em] text-muted text-[10.5px]">LIVE · USGS 06752260</span>
-            </div>
-            <div class="font-['Schibsted_Grotesk'] font-bold text-[26px] text-navy leading-[1]">142 <span class="font-mono text-[13px] text-muted">cfs</span></div>
-            <div class="font-['Hanken_Grotesk'] font-normal text-[12px] leading-[normal] text-muted m-[3px_0_12px]">Cache la Poudre River, CO</div>
-            <div class="flex items-end gap-[3px] h-[34px]">
-              <span v-for="(h, i) in [40,55,48,70,62,85,100,78]" :key="i" class="flex-1 rounded-sm" :style="`height:${h}%;background:${i < 3 ? '#cfe0ee' : i < 5 ? '#9cc4e2' : '#2A86C9'};`"></span>
-            </div>
-          </div>
+          <!-- Live gauge card: a real USGS reading, see components/GageCard.vue -->
+          <GageCard />
         </div>
     </PageHero>
 

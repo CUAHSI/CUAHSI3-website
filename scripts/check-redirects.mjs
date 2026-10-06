@@ -11,8 +11,10 @@ const lines = fs.readFileSync('public/_redirects', 'utf8').split('\n')
 lines.forEach((line, i) => {
   if (!line.trim() || line.startsWith('#')) return
   const parts = line.trim().split(/\s+/)
-  if (parts.length !== 3 || parts[2] !== '301' || !parts[0].startsWith('/') || !parts[1].startsWith('/')) { problems.push(`line ${i + 1}: not "/source /target 301": ${line}`); return }
+  const rewrite = parts.length === 3 && parts[2] === '200' && parts[0] === '/flooding-gages.json' && parts[1].startsWith('https://raw.githubusercontent.com/')
+  if (!rewrite && (parts.length !== 3 || parts[2] !== '301' || !parts[0].startsWith('/') || !parts[1].startsWith('/'))) { problems.push(`line ${i + 1}: not "/source /target 301" (or the one flood-data rewrite): ${line}`); return }
   const [from, to] = parts
+  if (rewrite) return // served from another host; its source may also exist as a file in a local build
   n++
   if (seen.has(from)) problems.push(`line ${i + 1}: source repeated: ${from}`)
   seen.add(from)

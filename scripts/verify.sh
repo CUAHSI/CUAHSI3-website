@@ -147,6 +147,8 @@ if [ "$1" = "--build" ]; then
     lout=$(node scripts/check-links.mjs 2>&1) && ok "$(echo "$lout" | head -1)" || { fail "built-site link check:"; echo "$lout" | sed 's/^/      /'; }
     # 14. Redirects (public/_redirects): every target is in the built site, no source is a page that exists, no repeated source.
     rout=$(node scripts/check-redirects.mjs 2>&1) && ok "$(echo "$rout" | head -1)" || { fail "redirect check:"; echo "$rout" | sed 's/^/      /'; }
+    # 15. No member representative email address anywhere in the built site (C11); content v2 publishes whole content files.
+    mout=$(node scripts/check-member-emails.mjs 2>&1) && ok "$(echo "$mout" | head -1)" || { fail "member email check:"; echo "$mout" | sed 's/^/      /'; }
   else fail "build failed"; fi
 else
   echo "      (build not run; use --build before a PR)"
