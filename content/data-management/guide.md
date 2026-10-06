@@ -83,17 +83,33 @@ Model-related datasets, including input datasets for computational models, model
 
 ## Section 7: Data Typology
 
-The following is a data typology for categorizing datasets and other products (e.g., model results) so that specific policies related to sharing, access, and timeframes can be appropriately applied. The data types are defined as:** Type A** - Primary datasets or research products produced by a research team or at a project level. These include raw and quality controlled sensor data, baseline sampling datasets across facilities and sites, and general datasets collected.** Type B** - Datasets or other research products that are created by a specific investigator, student, or coordinated research group to support a particular research question or goal.** Type C** - Type A and Type B datasets or products that include personally identifiable information or information about human subjects/participants and are subject to IRB restrictions.** Type D** – Datasets or other research products that are subject to licensing, copyright, or use restrictions/agreements from the data source that may prohibit general distribution of the data.
+The following is a data typology for categorizing datasets and other products (e.g., model results) so that specific policies related to sharing, access, and timeframes can be appropriately applied. The data types are defined as:
+
+**Type A** - Primary datasets or research products produced by a research team or at a project level. These include raw and quality controlled sensor data, baseline sampling datasets across facilities and sites, and general datasets collected.
+
+**Type B** - Datasets or other research products that are created by a specific investigator, student, or coordinated research group to support a particular research question or goal.
+
+**Type C** - Type A and Type B datasets or products that include personally identifiable information or information about human subjects/participants and are subject to IRB restrictions.
+
+**Type D** – Datasets or other research products that are subject to licensing, copyright, or use restrictions/agreements from the data source that may prohibit general distribution of the data.
 
 Groups of researchers and/or individual investigators often create derived data or other research products based on shared or published datasets. These derived products typically fall under Type B or C.
 
 ## Section 8: Timing of Metadata and Dataset Submission and Availability
 
-A metadata record for any datasets falling into the categories given by the data typology above (Type A – D) should be created and submitted for sharing within one month of the onset of data collection. General access to datasets will generally follow a time frame specific to each data type. Suggested timing of data availability as outlined below:** Type A -** Where possible, automated data streams should be streamed directly into live databases and made available online in near real time. Quality controlled and derived data products should be published within six months of data collection. All other primary datasets should be published within 3 months of the time they become available (e.g., as soon as results are created).** Type B -** Finalized data should be submitted for sharing within one year of the completion of data creation activities. Projects may consider making submission of data collected by students a condition of their successful thesis/dissertation defense. For long running data creation activities (i.e., efforts that last longer than one year), the following should be considered:
+A metadata record for any datasets falling into the categories given by the data typology above (Type A – D) should be created and submitted for sharing within one month of the onset of data collection. General access to datasets will generally follow a time frame specific to each data type. Suggested timing of data availability as outlined below:
+
+**Type A -** Where possible, automated data streams should be streamed directly into live databases and made available online in near real time. Quality controlled and derived data products should be published within six months of data collection. All other primary datasets should be published within 3 months of the time they become available (e.g., as soon as results are created).
+
+**Type B -** Finalized data should be submitted for sharing within one year of the completion of data creation activities. Projects may consider making submission of data collected by students a condition of their successful thesis/dissertation defense. For long running data creation activities (i.e., efforts that last longer than one year), the following should be considered:
 
 1. The initial metadata description should be reviewed and updated at least once per year.
 2. Intermediate data sets should be submitted for archival storage at least every 6 months. These data should not be published or released until the dataset is finalized by the data creator.
-3. Finalized data should be submitted within one year of collection or by the end of the project, whichever comes first.** Type C -** Type C datasets should be subject to time requirements described for Type A and Type B datasets. However, they may require the additional step of anonymization, data transformation, or aggregation with methods described in the Data Collection Plan.** Type D -** Type D datasets should be published as soon as possible (within three months) and to the greatest extent allowable by the licensing, copyright, and/or data use agreements under which they were created/procured. Some Type D datasets may be permanently restricted and/or have regulated access limited to identified groups via password or other protections.
+3. Finalized data should be submitted within one year of collection or by the end of the project, whichever comes first.
+
+**Type C -** Type C datasets should be subject to time requirements described for Type A and Type B datasets. However, they may require the additional step of anonymization, data transformation, or aggregation with methods described in the Data Collection Plan.
+
+**Type D -** Type D datasets should be published as soon as possible (within three months) and to the greatest extent allowable by the licensing, copyright, and/or data use agreements under which they were created/procured. Some Type D datasets may be permanently restricted and/or have regulated access limited to identified groups via password or other protections.
 
 Data creators and collectors should have the reasonable expectation for the first rights to analysis and publication. Datasets that do not fall into one of the categories above should be reviewed to determine the appropriate timeframe for publication. Section 9 contains a sample data management workflow that illustrates the order and timing of operations related to sharing and publishing datasets.
 
@@ -105,10 +121,10 @@ The following is an example data management workflow that is included here to pr
 2. Data collection/creation commences.
 3. Submit metadata to HydroShare: Initial metadata submitted according to the standard metadata format within one month of the onset of data collection/creation.
 4. Submit data to HydroShare.
-  1. Datasets to be widely accessible should be submitted as soon as they are available.
-  2. Datasets created by graduate student research may be considered a condition of their successful thesis/dissertation defense.
-  3. Datasets created by others should be submitted within one year of the completion of data collection/creation.
-  4. Data subsets/updates for long running datasets should be submitted at least every 6 months.
+   1. Datasets to be widely accessible should be submitted as soon as they are available.
+   2. Datasets created by graduate student research may be considered a condition of their successful thesis/dissertation defense.
+   3. Datasets created by others should be submitted within one year of the completion of data collection/creation.
+   4. Data subsets/updates for long running datasets should be submitted at least every 6 months.
 
 5. Datasets should be shared publicly within one month of successful submission.
 6. Authors should formally publish their data resources via HydroShare to obtain digital object identifiers (DOIs) and promote citation of their published products.
@@ -126,12 +142,14 @@ For HydroShare:
 5. Give ownership privileges to the Data Manager. Note that ownership does not imply authorship.
 6. Share the resource with relevant HydroShare Groups.
 7. Set Data Sharing Level: This should be done according to the resource’s status and agreed upon level of availability listed in the Data Collection Plan you submitted.
-  1.** Private:** Only HydroShare users with specific permission can discover and access the resource.
-  2.** Discoverable:** Anyone can discover the resource, but only HydroShare users with permission can access the content files.
-  3.** Public:** Anyone can discover the resource and access the resource’s content files.
-  4.** Shareable:** Anyone you have given access to the resource can give other users access at the same level.
+   1. **Private:** Only HydroShare users with specific permission can discover and access the resource.
+   2. **Discoverable:** Anyone can discover the resource, but only HydroShare users with permission can access the content files.
+   3. **Public:** Anyone can discover the resource and access the resource’s content files.
+   4. **Shareable:** Anyone you have given access to the resource can give other users access at the same level.
 
-8. Formally Publish Your resource: Formally publishing your resource assigns a digital object identifier that can be cited, makes the content files, resource title, and authors immutable (so that the citation will not change), and should be viewed similar to publishing a research paper. This is a FINAL step and should ONLY be done when you are SURE that the content files, title, and authorship of your resource are complete. Metadata such as the abstract, keywords, and related resources can still be edited for published resources.** For EarthChem:**
+8. Formally Publish Your resource: Formally publishing your resource assigns a digital object identifier that can be cited, makes the content files, resource title, and authors immutable (so that the citation will not change), and should be viewed similar to publishing a research paper. This is a FINAL step and should ONLY be done when you are SURE that the content files, title, and authorship of your resource are complete. Metadata such as the abstract, keywords, and related resources can still be edited for published resources.
+
+**For EarthChem:**
 
 1. Log into [Earthchem](http://earthchem.org/) using OrcID or GeoPass
 2. Review the checklist, submission guidelines, and FAQ, as well as the data templates linked at the top of the data submission form.
@@ -141,7 +159,7 @@ For HydroShare:
 
 DataONE Project Team. 2011. DataONE structure and potential partnership as a member node. Accessed: September 14, 2011. Available from: [http://www.dataone.org/content/dataonestructure-and-potential-member-node](http://www.dataone.org/content/dataonestructure-and-potential-member-node).
 
-de la Beaujardiere, J. (editor) 2006. Open GIS web page map server implementation specification, OGC implementation specification OGC 06-042, version 1.3.0, [http://portal.opengeospatial.o...](http://portal.opengeospatial.org/files/?artifact_id=14416), pp.
+de la Beaujardiere, J. (editor) 2006. Open GIS web page map server implementation specification, OGC implementation specification OGC 06-042, version 1.3.0, [http://portal.opengeospatial.org/files/?artifact_id=14416](http://portal.opengeospatial.org/files/?artifact_id=14416), pp.
 
 Horsburgh, J.S., D.G. Tarboton, D.R. Maidment, and I. Zaslavsky. 2008. A Relational Model for Environmental and Water Resources Data. Water Resour. Res. 44:W05406.
 
@@ -155,21 +173,29 @@ National Academy of Sciences, National Academy of Engineering, and Institute of 
 
 United States Office of Management and Budget (US OMB). 1999. OMB Circular A-110, "Uniform Administrative Requirements for Grants and Agreements with Institutions of Higher Education, Hospitals, and Other Non-Profit Organizations", [http://www.whitehouse.gov/omb/circulars_a110#36](http://www.whitehouse.gov/omb/circulars_a110#36)
 
-Vretanos, P.A. (editor) 2010. Open GIS web feature service 2.0 interface standard. OGC implementation standard OGC 09-025r1 and IOS/DIS 19142, version 2.0.0, [http://portal.opengeospatial.o...](http://portal.opengeospatial.org/files/?artifact_id=39967), pp. Whiteside, A. and J.D. Evans. 2008. Web coverage service (WCS) implementation standard. OGC implementation standard OGC 07-067r5, version 1.1.2, [http://portal.opengeospatial.o...](http://portal.opengeospatial.org/files/?artifact_id=27297), pp.
+Vretanos, P.A. (editor) 2010. Open GIS web feature service 2.0 interface standard. OGC implementation standard OGC 09-025r1 and IOS/DIS 19142, version 2.0.0, [http://portal.opengeospatial.org/files/?artifact_id=39967](http://portal.opengeospatial.org/files/?artifact_id=39967), pp. Whiteside, A. and J.D. Evans. 2008. Web coverage service (WCS) implementation standard. OGC implementation standard OGC 07-067r5, version 1.1.2, [http://portal.opengeospatial.org/files/?artifact_id=27297](http://portal.opengeospatial.org/files/?artifact_id=27297), pp.
 
 Zaslavsky, I., D. Valentine, and T. Whiteaker. 2007. CUAHSI WaterML, Open Geospatial Consortium Discussion Paper OGC 07-041r1. Accessed. Version 0.3.0: [Available from: http://portal.opengeospatial.org/files/?artifact_id=21743.]
 
-Appendix 1: Sample Data Collection Plan
+## Appendix 1: Sample Data Collection Plan
 
-## Appendix 1: Sample Data Collection Plan** Effort Name:**
+**Effort Name:**
 
-Provide a tentative name for the data collection effort - e.g., “Data related to nitrogen cycling from the atmosphere to soils to streams” or “Continuous monitoring data for the Logan River Observatory”** Collaborators:**
+Provide a tentative name for the data collection effort - e.g., “Data related to nitrogen cycling from the atmosphere to soils to streams” or “Continuous monitoring data for the Logan River Observatory”
 
-Provide a list of the names for those who will be collaborating on data collection and creation of data products. If the same collaborators will not be authors for all of the products defined in the table below, consider listing authorship for each product here.** Brief Summary :**
+**Collaborators:**
 
-Provide a brief summary (1-2 paragraphs) of the data collection effort, including a description of the data collection methods, timing and location of data collection, the parties responsible, etc.** Individual(s) Responsible for Metadata Completion:**
+Provide a list of the names for those who will be collaborating on data collection and creation of data products. If the same collaborators will not be authors for all of the products defined in the table below, consider listing authorship for each product here.
 
-Provide the names of individuals who will be responsible for generating the metadata describint the data products produced.** Datasets Expected to be Generated:**
+**Brief Summary:**
+
+Provide a brief summary (1-2 paragraphs) of the data collection effort, including a description of the data collection methods, timing and location of data collection, the parties responsible, etc.
+
+**Individual(s) Responsible for Metadata Completion:**
+
+Provide the names of individuals who will be responsible for generating the metadata describint the data products produced.
+
+**Datasets Expected to be Generated:**
 
 In this table, identify and describe the specific data products that will be produced. Data “products” should be thought of as individual datasets or other aggregations of data that will be shared together and will receive a dataset citation. Each product should have a separate row in the table. The following list describes what should be included within each column in the table:
 
@@ -183,7 +209,3 @@ In this table, identify and describe the specific data products that will be pro
 - Access During Collection: Describe who will have access to the data during data collection. Indicate access level and point of contact for access.
 - Access After Completion: Describe who will have access to the data after it is complete.
 - Anonymization for IRB: Describe whether anonymization of the data is required and provide a brief description of methods.
-
-## Join our mailing list!** Keep up with CUAHSI news and events**
-
-Subscribe
