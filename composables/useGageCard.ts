@@ -55,13 +55,8 @@ function distanceKm(aLat: number, aLon: number, bLat: number, bLon: number) {
   return 2 * 6371 * Math.asin(Math.sqrt(h))
 }
 
-export function nearestGage(lat: number, lon: number): { gage: Gage; km: number } {
-  let best = { gage: DEFAULT_GAGE, km: Infinity }
-  for (const g of GAGES) {
-    const km = distanceKm(lat, lon, g.lat, g.lon)
-    if (km < best.km) best = { gage: g, km }
-  }
-  return best
+export function nearestGages(lat: number, lon: number, count: number): { gage: Gage; km: number }[] {
+  return GAGES.map(g => ({ gage: g, km: distanceKm(lat, lon, g.lat, g.lon) })).sort((a, b) => a.km - b.km).slice(0, count)
 }
 
 // A position farther than this from every gage in the list (Alaska, Hawaii, US territories) gets the default gage.
@@ -122,6 +117,7 @@ export type Pick = {
   how: 'location' | 'timezone' | 'default'
   km: number | null
   reading: Reading | null
+  byActivity: boolean // chosen because it moved more than a nearer gage
   flood: { category: FloodGage['category']; time: string; where: 'near' | 'national' } | null
 }
 
@@ -142,27 +138,40 @@ export async function pickCard(): Promise<Pick> {
       const stillFlooding = !Number.isFinite(g.minorStage) || !g.minorStage || (r !== null && r.value >= g.minorStage - 0.1)
       if (r && /^ft/i.test(r.unit) && Math.abs(r.value - g.stage) <= 1 && stillFlooding) {
         const km = place ? distanceKm(place.lat, place.lon, g.lat, g.lon) : null
-        return { gage: { id: g.usgsId, name: g.name, state: g.state ?? '' }, how: place ? place.how : 'default', km, reading: r, flood: { category: g.category, time: g.time, where: near.includes(g) ? 'near' : 'national' } }
+        return { gage: { id: g.usgsId, name: g.name, state: g.state ?? '' }, how: place ? place.how : 'default', km, reading: r, byActivity: false, flood: { category: g.category, time: g.time, where: near.includes(g) ? 'near' : 'national' } }
       }
     }
   }
-  // B and C. a normal gage
-  const n = place ? nearestGage(place.lat, place.lon) : null
-  const useIt = n && n.km <= MAX_KM
-  const gage = useIt ? n.gage : DEFAULT_GAGE
-  const reading = await fetchReading(gage.id, '00060')
-  return { gage, how: useIt && place ? place.how : 'default', km: useIt ? n.km : null, reading, flood: null }
+  // B and C. a normal gage. With a position: the three nearest gages on the list are read at once and the one that moved most over the
+  // last 48 hours is shown (a steady river makes a flat, dull plot); on a tie, the nearest. Without one: the default gage.
+  const cands = place ? nearestGages(place.lat, place.lon, 3).filter(c => c.km <= ACTIVE_RADIUS_KM) : []
+  if (!cands.length) return { gage: DEFAULT_GAGE, how: 'default', km: null, reading: await fetchReading(DEFAULT_GAGE.id, '00060'), byActivity: false, flood: null }
+  const reads = await Promise.all(cands.map(c => fetchReading(c.gage.id, '00060')))
+  // the nearest gage unless a farther one moved clearly more; among the farther ones the most active wins
+  let best = 0
+  for (let k = 1; k < cands.length; k++) {
+    const bar = best === 0 ? (reads[0]?.spread ?? -1) + ACTIVE_MARGIN : (reads[best]?.spread ?? -1)
+    if ((reads[k]?.spread ?? -1) > bar) best = k
+  }
+  return { gage: cands[best].gage, how: place!.how, km: cands[best].km, reading: reads[best], byActivity: best > 0, flood: null }
 }
 
 export type Reading = {
-  value: number; unit: string; time: Date; bars: number[]; low: number; high: number; provisional: boolean
+  value: number; unit: string; time: Date; bars: number[]; low: number; high: number; provisional: boolean; spread: number
 }
 export const monitoringUrl = (id: string) => `https://waterdata.usgs.gov/monitoring-location/USGS-${id}/`
 
-// 2. the last 24 hours of discharge (parameter 00060) from the USGS Water Data API. Readings with a qualifier (ice, equipment
-// malfunction, and so on), missing values and negative values are dropped. The bars are the mean of each 2-hour block, newest last.
+// 2. the last 48 hours of discharge (parameter 00060, or gage height 00065) from the USGS Water Data API (about 6 KB a gage). Readings
+// with a qualifier (ice, equipment malfunction, and so on), missing values and negative values are dropped. The bars are the mean of
+// each 2-hour block, 24 of them, newest last. `spread` says how much the series moved (its highest block mean less its lowest, as a share
+// of the highest), so the card can prefer a gage that is doing something over one that is flat. The request is sorted newest first, so
+// if a gage reports so often that the 1000-reading limit is hit, it is the oldest readings that are cut, never the latest.
+const ACTIVE_RADIUS_KM = 800 // the "most active" choice looks only this far
+const ACTIVE_MARGIN = 0.1 // and a farther gage must be this much more active (share of its own highest value) than the nearest
+export const WINDOW_HOURS = 48
+const BARS = 24
 export async function fetchReading(id: string, param: '00060' | '00065' = '00060'): Promise<Reading | null> {
-  const key = `gage-${id}-${param}`
+  const key = `gage48-${id}-${param}`
   try {
     const c = JSON.parse(sessionStorage.getItem(key) ?? 'null')
     if (c && Date.now() - c.t < 10 * 60 * 1000) return { ...c.r, time: new Date(c.r.time) }
@@ -170,7 +179,7 @@ export async function fetchReading(id: string, param: '00060' | '00065' = '00060
   try {
     const ctl = new AbortController()
     const timer = setTimeout(() => ctl.abort(), 7000)
-    const url = `https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=PT24H&limit=500&skipGeometry=true`
+    const url = `https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=PT${WINDOW_HOURS}H&limit=1000&sortby=-time&skipGeometry=true`
       + `&properties=time,value,qualifier,unit_of_measure,approval_status&monitoring_location_id=USGS-${id}`
     const res = await fetch(url, { signal: ctl.signal })
     clearTimeout(timer)
@@ -185,10 +194,10 @@ export async function fetchReading(id: string, param: '00060' | '00065' = '00060
     if (!pts.length) return null
     const last = pts[pts.length - 1]
     const end = last.t
-    const blocks = Array.from({ length: 12 }, () => [] as number[])
+    const blocks = Array.from({ length: BARS }, () => [] as number[])
     for (const p of pts) {
       const ago = end - p.t
-      const i = 11 - Math.min(11, Math.floor(ago / (2 * 3600 * 1000)))
+      const i = BARS - 1 - Math.min(BARS - 1, Math.floor(ago / (2 * 3600 * 1000)))
       blocks[i].push(p.v)
     }
     const means = blocks.map(b => (b.length ? b.reduce((s, x) => s + x, 0) / b.length : null))
@@ -198,7 +207,7 @@ export async function fetchReading(id: string, param: '00060' | '00065' = '00060
     // like a swing); a block with no readings shows a thin stub.
     const flat = param === '00065' ? hi - lo < 0.15 : hi === 0 || (hi - lo) / hi < 0.02
     const bars = means.map(m => (m === null ? 6 : flat ? 55 : 18 + 82 * (m - lo) / (hi - lo)))
-    const r: Reading = { value: last.v, unit: last.unit, time: new Date(last.t), bars, low: Math.min(...pts.map((p: any) => p.v)), high: Math.max(...pts.map((p: any) => p.v)), provisional: last.prov }
+    const r: Reading = { value: last.v, unit: last.unit, time: new Date(last.t), bars, low: Math.min(...pts.map((p: any) => p.v)), high: Math.max(...pts.map((p: any) => p.v)), provisional: last.prov, spread: hi > 0 ? (hi - lo) / hi : 0 }
     try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), r })) } catch { /* ignore */ }
     return r
   } catch { return null }
