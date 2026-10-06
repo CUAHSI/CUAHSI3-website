@@ -48,18 +48,24 @@ if (!fs.existsSync(ROOT)) {
 process.chdir(ROOT)
 
 const only = process.argv.slice(2).filter(a => !a.startsWith('-'))
-const selected = only.length ? COLLECTIONS.filter(c => only.includes(c.name)) : COLLECTIONS
-if (only.length && selected.length !== only.length) {
+const picked = only.length ? COLLECTIONS.filter(c => only.includes(c.name)) : COLLECTIONS
+if (only.length && picked.length !== only.length) {
   console.error(`Unknown collection. Known: ${COLLECTIONS.map(c => c.name).join(', ')}`)
   process.exit(2)
 }
-for (const c of selected) {
+// A collection marked `optional` may not exist yet (its schema is added by a code change and its first file by a later
+// content change): that is reported under "Not validated", not treated as a failure. Any other missing file stops the run.
+const notYet = []
+const selected = picked.filter(c => {
   const where = c.dir ?? c.file
-  if (!fs.existsSync(where)) {
-    console.error(`Not found: ${where} (looking in ${ROOT}). Nothing was validated.`)
-    process.exit(2)
-  }
-}
+  if (fs.existsSync(where)) return true
+  // optional only while its whole folder is absent: a folder without the expected file would let unchecked data reach a page,
+  // and a run that names the collection must find it
+  const folder = path.dirname(where)
+  if (c.optional && !only.length && !fs.existsSync(c.dir ?? folder)) { notYet.push(`${where} (not created yet: an optional collection)`); return false }
+  console.error(`Not found: ${where} (looking in ${ROOT}). Nothing was validated.`)
+  process.exit(2)
+})
 
 // ---- frontmatter, mimicking the site's reader ---------------------------------------
 
@@ -130,7 +136,7 @@ function lines(error) {
 // ---- load and check every collection ------------------------------------------------
 
 const results = []        // one per collection
-const skipped = []        // files not validated, with the reason
+const skipped = [...notYet]   // files not validated, with the reason
 const refs = {            // collected for the cross-reference section
   slugs: new Map(),       // collection name -> [{ id, slug }]
   people: [],             // { file, value, yamlFailed }
@@ -182,6 +188,11 @@ for (const c of selected) {
       r.total = 1
       r.schemaFail.push({ file: c.file, issues: ['(whole file): expected a JSON array'] })
       continue
+    }
+    if (c.uniqueBy) {   // a key that must not repeat (a duplicate row would show twice)
+      const seen = new Map()
+      arr.forEach((entry, i) => { const k = c.uniqueBy(entry); if (k == null) return; (seen.get(k) ?? seen.set(k, []).get(k)).push(i) })
+      for (const [k, idx] of seen) if (idx.length > 1) r.schemaFail.push({ file: `${c.file}[${idx.join(', ')}]`, issues: [`(duplicate): ${idx.length} entries have the same ${c.uniqueLabel ?? 'key'}: ${k}`] })
     }
     arr.forEach((entry, i) => {
       r.total++

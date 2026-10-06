@@ -244,6 +244,45 @@ const memberRep = z.strictObject({
   email: z.email(),
 })
 
+// content/graduate-programs/programs.json : the directory of graduate programs in water science (a table on
+// /learn-train/graduate-programs). One entry per institution, as on the legacy list: the programs are free text
+// (department or program names as the institution gives them), the degrees are from a fixed list. `last_reviewed`
+// is how the list is kept alive: staff review each row once a year and the content lint lists rows older than 12 months.
+const webUrl = url.refine(u => /^https?:\/\//.test(u), 'must start with http:// or https://')
+const graduateProgram = z.strictObject({
+  institution: nonEmpty,
+  programs: nonEmpty,
+  degrees: z.array(z.enum(['masters', 'phd', 'undergraduate', 'professional'])),   // may be empty: the legacy list gives no degree for some institutions, and none is guessed
+  url: webUrl.optional(),
+  last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
+})
+
+// content/data-portals/portals.json : the catalog of water data portals (a table on /data-platforms/portals).
+// Short columns only: name, owner, scope and a link; the longer legacy fields (API, export formats, contact) are not kept.
+const dataPortal = z.strictObject({
+  name: nonEmpty,
+  owner: nonEmpty.optional(),        // the legacy entry names no owner for a few portals; none is guessed
+  scope: nonEmpty.optional(),        // geographical scope, as the legacy entry gives it
+  url: webUrl,
+  last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
+})
+
+// content/documents/documents.json : the library on /about/documents (reports, plans, minutes, governance documents,
+// historical papers). Exactly one of `file` (a PDF hosted here, under public/documents/) or `url` (hosted elsewhere, for
+// example a HydroShare resource) is required; a document hosted elsewhere may carry a `citation`.
+const documentEntry = z.strictObject({
+  title: nonEmpty,
+  kind: z.enum(['policy', 'report', 'plan', 'minutes', 'governance', 'historical']),
+  series: nonEmpty.optional(),       // documents of one series (for example "Annual reports") are shown together, by year
+  year: z.number().int().min(1980).max(2100),
+  date: isoDate.optional(),          // the meeting or publication date, when the title does not give it
+  file: z.string().regex(/^\/documents\/[A-Za-z0-9._\/-]+\.pdf$/, 'must be a PDF under /documents/').optional(),
+  url: webUrl.optional(),
+  citation: nonEmpty.optional(),
+  note: nonEmpty.optional(),
+}).refine(d => Boolean(d.file) !== Boolean(d.url), { message: 'exactly one of file and url is required' })
+  .refine(d => d.kind !== 'minutes' || Boolean(d.date), { message: 'minutes need a date (they are listed by date within the year)' })
+
 // ---- what the validator reads ---------------------------------------------------------
 
 // kind "md": every *.md in the folder except README.md, frontmatter validated.
@@ -261,4 +300,8 @@ export const COLLECTIONS = [
   { name: 'community',     kind: 'md', dir: 'content/community',     schema: communityProfile },
   { name: 'team/full-team.json',  kind: 'json', file: 'content/team/full-team.json',  schema: fullTeamEntry },
   { name: 'members/reps.json',    kind: 'json', file: 'content/members/reps.json',    schema: memberRep },
+  // optional: the folders are created by the content changes that fill them (see the schemas above)
+  { name: 'graduate-programs',    kind: 'json', file: 'content/graduate-programs/programs.json', schema: graduateProgram, optional: true, uniqueBy: e => e?.institution, uniqueLabel: 'institution' },
+  { name: 'data-portals',         kind: 'json', file: 'content/data-portals/portals.json',       schema: dataPortal,      optional: true, uniqueBy: e => e?.name, uniqueLabel: 'name' },
+  { name: 'documents',            kind: 'json', file: 'content/documents/documents.json',        schema: documentEntry,   optional: true, uniqueBy: e => e?.title, uniqueLabel: 'title' },
 ]
