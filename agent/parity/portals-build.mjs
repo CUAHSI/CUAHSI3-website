@@ -15,9 +15,8 @@ const rows = ex.entries.map(e => {
   out.url = url
   return out
 }).map(r => {
-  // Jordan's edits (6 Oct 2026): a typo fixed, a person's name dropped from one owner, two rows marked reviewed
+  // Jordan's edits (6 Oct 2026): a typo fixed, two rows marked reviewed
   if (r.name === 'International Centre for Water Resourses and Global Change') r.name = 'International Centre for Water Resources and Global Change'
-  if (r.name === 'Waterisotopes.org') r.owner = 'IsoMAP group'
   if (r.name === 'DataStream' || r.name === 'Aquastat') r.last_reviewed = '2026-10-06'
   return r
 }).sort((a, b) => rank(a.scope) - rank(b.scope) || (rank(a.scope) === 2 ? same(a.scope, b.scope) : 0) || same(a.name, b.name))
