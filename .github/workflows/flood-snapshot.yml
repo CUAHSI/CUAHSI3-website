@@ -1,0 +1,37 @@
+# Every 3 hours: asks NOAA's National Weather Service which gages are in flood, and publishes the result as flooding-gages.json on
+# the `flood-data` branch (never on the default branch). The website serves it at /flooding-gages.json (a rewrite in
+# public/_redirects), and the home page's gage card reads it. If NOAA cannot be reached the script writes nothing and the previous
+# file stays; the card ignores a file more than 12 hours old. The branch always holds one commit (each run replaces it), so it does
+# not grow. Run it by hand from the Actions tab (workflow_dispatch) the first time and to test it. Scheduled runs only start from the
+# default branch of the repository, and GitHub switches them off after 60 days without repository activity.
+name: Flood snapshot
+on:
+  schedule:
+    - cron: '23 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: flood-snapshot
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Read the flooding gages from NOAA
+        run: node scripts/flooding-gages.mjs --out "$RUNNER_TEMP/flooding-gages.json"
+      - name: Publish to the flood-data branch
+        run: |
+          if [ ! -s "$RUNNER_TEMP/flooding-gages.json" ]; then echo "No new snapshot; keeping the previous one."; exit 0; fi
+          git config user.name "flood-snapshot"
+          git config user.email "flood-snapshot@users.noreply.github.com"
+          git checkout --orphan flood-data
+          git rm -rf . >/dev/null 2>&1 || true
+          cp "$RUNNER_TEMP/flooding-gages.json" flooding-gages.json
+          git add flooding-gages.json
+          git commit -m "Flood snapshot $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push --force origin flood-data

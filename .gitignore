@@ -30,3 +30,6 @@ dist
 
 # Parity analysis: the legacy-site snapshot (agent/parity.md, P2). Never committed.
 raw/legacy-site/
+
+# generated before a build by scripts/flooding-gages.mjs (NWS flood snapshot)
+public/flooding-gages.json

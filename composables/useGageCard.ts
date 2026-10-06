@@ -1,9 +1,11 @@
 // The home page gage card: which USGS gage to show, and its recent readings from the USGS Water Data API
 // (https://api.waterdata.usgs.gov/ogcapi/v0, the newer service; the older waterservices.usgs.gov is being retired).
-// Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over:
-//   1. /api/geo (a Netlify edge function) says roughly where the visitor is; if there is no answer, or it is not the US,
-//   2. the browser's time zone gives a rough position; if that does not map to a US region,
-//   3. the default gage is shown.
+// Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over.
+// Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if there is no answer, or it is not the US,
+// 2. the browser's time zone gives a rough position; if that does not map to a US region, 3. there is no position.
+// Which gage: A. a gage in flood now (NWS category minor or worse, from /flooding-gages.json, written by scripts/flooding-gages.mjs):
+// the most severe one within 500 km of the visitor, else the most severe one in the country; its reading must agree with the NWS
+// stage (within 1 ft) or the next candidate is tried; B. otherwise a gage from the hand-picked list near the visitor; C. the default gage.
 // If the USGS call itself fails, the card says the reading is unavailable and still links to the gage's USGS page.
 
 export type Gage = { id: string; name: string; state: string; lat: number; lon: number }
@@ -62,7 +64,6 @@ export function nearestGage(lat: number, lon: number): { gage: Gage; km: number 
   return best
 }
 
-export type Pick = { gage: Gage; how: 'location' | 'timezone' | 'default'; km: number | null }
 // A position farther than this from every gage in the list (Alaska, Hawaii, US territories) gets the default gage.
 const MAX_KM = 1500
 
@@ -85,15 +86,72 @@ async function lookUpPlace(): Promise<{ lat: number; lon: number } | null> {
   } catch { return null }
 }
 
-export async function pickGage(): Promise<Pick> {
+// where the visitor is, roughly: the edge function, else the time zone, else nobody knows
+async function locate(): Promise<{ lat: number; lon: number; how: 'location' | 'timezone' } | null> {
   const place = await lookUpPlace()
-  if (place) { const n = nearestGage(place.lat, place.lon); if (n.km <= MAX_KM) return { gage: n.gage, how: 'location', km: n.km } }
+  if (place) return { ...place, how: 'location' }
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
     const c = TZ_CENTRES[tz]
-    if (c && !NO_GAGE_NEARBY.has(tz)) { const n = nearestGage(c[0], c[1]); return { gage: n.gage, how: 'timezone', km: n.km } }
+    if (c && !NO_GAGE_NEARBY.has(tz)) return { lat: c[0], lon: c[1], how: 'timezone' }
   } catch { /* no Intl */ }
-  return { gage: DEFAULT_GAGE, how: 'default', km: null }
+  return null
+}
+
+export type FloodGage = { usgsId: string; lid: string; name: string; state: string | null; lat: number; lon: number; category: 'minor' | 'moderate' | 'major'; stage: number; stageUnit: string; time: string; minorStage?: number | null }
+const SEVERITY = { minor: 1, moderate: 2, major: 3 } as const
+const SNAPSHOT_MAX_AGE_MS = 12 * 3600 * 1000
+
+// the NWS flood snapshot; null if the file is missing, unreadable or more than 12 hours old (then the card shows a normal gage)
+async function fetchFlooding(): Promise<FloodGage[]> {
+  try {
+    const ctl = new AbortController()
+    const timer = setTimeout(() => ctl.abort(), 4000)
+    const res = await fetch('/flooding-gages.json', { signal: ctl.signal })
+    clearTimeout(timer)
+    // no content-type check: GitHub serves .json files as text/plain, and Netlify passes that through on a rewrite
+    if (!res.ok) return []
+    const body = await res.json()
+    if (!Array.isArray(body?.gages) || !(Date.now() - Date.parse(body.generated) <= SNAPSHOT_MAX_AGE_MS)) return []
+    return body.gages.filter((g: any) => g && g.usgsId && Object.hasOwn(SEVERITY, g.category) && /^\d{8,15}$/.test(String(g.usgsId)) && Number.isFinite(g.stage) && Number.isFinite(g.lat) && Number.isFinite(g.lon))
+  } catch { return [] }
+}
+
+export type Pick = {
+  gage: { id: string; name: string; state: string }
+  how: 'location' | 'timezone' | 'default'
+  km: number | null
+  reading: Reading | null
+  flood: { category: FloodGage['category']; time: string; where: 'near' | 'national' } | null
+}
+
+export async function pickCard(): Promise<Pick> {
+  const [place, flooding] = await Promise.all([locate(), fetchFlooding()])
+  // A. a gage in flood. Near the visitor (within 500 km) any category counts; a gage far away only if it is a moderate or major flood,
+  // so a small flood on the other side of the country does not push the near-you gage off the card.
+  if (flooding.length) {
+    const near = place ? flooding.filter(g => distanceKm(place.lat, place.lon, g.lat, g.lon) <= 500) : []
+    const pool = near.length ? near : flooding.filter(g => g.category !== 'minor')
+    const dist = (g: FloodGage) => (place ? distanceKm(place.lat, place.lon, g.lat, g.lon) : 0)
+    const ordered = [...pool].sort((a, b) => SEVERITY[b.category] - SEVERITY[a.category] || dist(a) - dist(b)).slice(0, 3)
+    // check the top three against USGS at once (one wait, not three): USGS's own stage must agree with NWS's (a different datum or a stale
+    // value would not), and must still be at or above flood stage (the category can be hours old); the first in order that passes wins
+    const readings = await Promise.all(ordered.map(g => fetchReading(g.usgsId, '00065')))
+    for (let k = 0; k < ordered.length; k++) {
+      const g = ordered[k], r = readings[k]
+      const stillFlooding = !Number.isFinite(g.minorStage) || !g.minorStage || (r !== null && r.value >= g.minorStage - 0.1)
+      if (r && /^ft/i.test(r.unit) && Math.abs(r.value - g.stage) <= 1 && stillFlooding) {
+        const km = place ? distanceKm(place.lat, place.lon, g.lat, g.lon) : null
+        return { gage: { id: g.usgsId, name: g.name, state: g.state ?? '' }, how: place ? place.how : 'default', km, reading: r, flood: { category: g.category, time: g.time, where: near.includes(g) ? 'near' : 'national' } }
+      }
+    }
+  }
+  // B and C. a normal gage
+  const n = place ? nearestGage(place.lat, place.lon) : null
+  const useIt = n && n.km <= MAX_KM
+  const gage = useIt ? n.gage : DEFAULT_GAGE
+  const reading = await fetchReading(gage.id, '00060')
+  return { gage, how: useIt && place ? place.how : 'default', km: useIt ? n.km : null, reading, flood: null }
 }
 
 export type Reading = {
@@ -103,8 +161,8 @@ export const monitoringUrl = (id: string) => `https://waterdata.usgs.gov/monitor
 
 // 2. the last 24 hours of discharge (parameter 00060) from the USGS Water Data API. Readings with a qualifier (ice, equipment
 // malfunction, and so on), missing values and negative values are dropped. The bars are the mean of each 2-hour block, newest last.
-export async function fetchReading(id: string): Promise<Reading | null> {
-  const key = `gage-${id}`
+export async function fetchReading(id: string, param: '00060' | '00065' = '00060'): Promise<Reading | null> {
+  const key = `gage-${id}-${param}`
   try {
     const c = JSON.parse(sessionStorage.getItem(key) ?? 'null')
     if (c && Date.now() - c.t < 10 * 60 * 1000) return { ...c.r, time: new Date(c.r.time) }
@@ -112,7 +170,7 @@ export async function fetchReading(id: string): Promise<Reading | null> {
   try {
     const ctl = new AbortController()
     const timer = setTimeout(() => ctl.abort(), 7000)
-    const url = 'https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=00060&time=PT24H&limit=500&skipGeometry=true'
+    const url = `https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=PT24H&limit=500&skipGeometry=true`
       + `&properties=time,value,qualifier,unit_of_measure,approval_status&monitoring_location_id=USGS-${id}`
     const res = await fetch(url, { signal: ctl.signal })
     clearTimeout(timer)
@@ -136,9 +194,9 @@ export async function fetchReading(id: string): Promise<Reading | null> {
     const means = blocks.map(b => (b.length ? b.reduce((s, x) => s + x, 0) / b.length : null))
     const present = means.filter((m): m is number => m !== null)
     const lo = Math.min(...present), hi = Math.max(...present)
-    // bar heights 18% to 100% of the range. A series that varies by less than 2% shows level bars (so a steady river does not look
+    // bar heights 18% to 100% of the range. A series that varies by less than 2% (0.15 ft for a stage) shows level bars (so a steady river does not look
     // like a swing); a block with no readings shows a thin stub.
-    const flat = hi === 0 || (hi - lo) / hi < 0.02
+    const flat = param === '00065' ? hi - lo < 0.15 : hi === 0 || (hi - lo) / hi < 0.02
     const bars = means.map(m => (m === null ? 6 : flat ? 55 : 18 + 82 * (m - lo) / (hi - lo)))
     const r: Reading = { value: last.v, unit: last.unit, time: new Date(last.t), bars, low: Math.min(...pts.map((p: any) => p.v)), high: Math.max(...pts.map((p: any) => p.v)), provisional: last.prov }
     try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), r })) } catch { /* ignore */ }
@@ -152,4 +210,6 @@ export function formatFlow(v: number) {
   if (tenth < 10) return tenth.toFixed(1)
   return Math.round(v).toLocaleString('en-US')
 }
+// a river stage is shown to a tenth of a foot; a flow keeps formatFlow's rounding
+export const formatReading = (v: number, unit?: string) => (unit && /^ft$/i.test(unit) ? v.toFixed(1) : formatFlow(v))
 export const unitLabel = (u?: string) => (!u ? 'cfs' : /ft\^?3\/s/i.test(u) ? 'cfs' : u)
