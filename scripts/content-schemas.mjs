@@ -254,7 +254,7 @@ const graduateProgram = z.strictObject({
   programs: nonEmpty,
   degrees: z.array(z.enum(['masters', 'phd', 'undergraduate', 'professional'])),   // may be empty: the legacy list gives no degree for some institutions, and none is guessed
   url: webUrl.optional(),
-  last_reviewed: isoDate,
+  last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
 })
 
 // content/data-portals/portals.json : the catalog of water data portals (a table on /data-platforms/portals).
@@ -264,7 +264,7 @@ const dataPortal = z.strictObject({
   owner: nonEmpty,
   scope: nonEmpty.optional(),        // geographical scope, as the legacy entry gives it
   url: webUrl,
-  last_reviewed: isoDate,
+  last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
 })
 
 // content/documents/documents.json : the library on /about/documents (reports, plans, minutes, governance documents,

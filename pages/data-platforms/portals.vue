@@ -6,7 +6,7 @@ useHead({
   meta: [{ name: 'description', content: 'A catalog of water data portals: who runs them, what they cover, and where to find them.' }]
 })
 
-type Row = { name: string; owner: string; scope?: string; url: string; last_reviewed: string }
+type Row = { name: string; owner: string; scope?: string; url: string; last_reviewed?: string }
 const { data } = await useAsyncData('data-portals-json', () =>
   queryContent('data-portals').where({ _extension: 'json' }).findOne().catch(() => null)
 )
@@ -29,7 +29,7 @@ function fmtDate(d: string) {
       <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/data-platforms" class="text-muted">Data &amp; Computing</NuxtLink> / Water data portals</p></template>
       <template #kicker>Data &amp; Computing · Water data portals</template>
       <template #title>Where to find water data.</template>
-      <template #lead>A catalog of portals that publish water data: who runs each one, what it covers, and a link. We review each entry every year.</template>
+      <template #lead>A catalog of portals that publish water data: who runs each one, what it covers, and a link. We review each entry every year; entries without a date have not been reviewed yet.</template>
       <template #below><SectionNav section="data" fixed /></template>
     </PageHero>
 
@@ -56,7 +56,7 @@ function fmtDate(d: string) {
             </p>
             <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0"><span class="font-mono text-[10px] text-muted min-[900px]:hidden">Owner: </span>{{ r.owner }}</p>
             <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0"><span v-if="r.scope" class="min-[900px]:hidden">Scope: </span>{{ r.scope ?? '' }}</p>
-            <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</p>
+            <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><template v-if="r.last_reviewed"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</template></p>
           </div>
           </div>
         </div>
