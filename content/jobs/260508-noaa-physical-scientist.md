@@ -9,7 +9,7 @@ deadline: null
 url: https://www.joshswaterjobs.com/jobs/
 source: joshswaterjobs
 tags: [water-prediction, national-water-model, NOAA, flood-forecasting, operations]
-published: true
+published: false
 ---
 
 Physical scientist positions at NOAA's National Water Center support development and operational use of the National Water Model. Responsibilities include hydrologic model evaluation, data assimilation, and improving flood forecast skill. Strong alignment with CUAHSI's CIROH partnership and Water Prediction Innovators Summer Institute alumni.
