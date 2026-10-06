@@ -7,7 +7,7 @@ useHead({
   meta: [{ name: 'description', content: 'A directory of university graduate programs in water science, by degree, reviewed every year.' }]
 })
 
-type Row = { institution: string; programs: string; degrees: string[]; url?: string; last_reviewed: string }
+type Row = { institution: string; programs: string; degrees: string[]; url?: string; last_reviewed?: string }
 const { data } = await useAsyncData('graduate-programs-json', () =>
   queryContent('graduate-programs').where({ _extension: 'json' }).findOne().catch(() => null)
 )
@@ -41,7 +41,7 @@ function fmtDate(d: string) {
       <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/learn-train" class="text-muted">Learn &amp; Train</NuxtLink> / Graduate programs</p></template>
       <template #kicker>Learn &amp; Train · Graduate programs</template>
       <template #title>Find a graduate program in water science.</template>
-      <template #lead>Many universities have no hydrology department, which makes it hard to know where to start. This is a starting point: programs by institution and degree. We review each row every year.</template>
+      <template #lead>Many universities have no hydrology department, which makes it hard to know where to start. This is a starting point: programs by institution and degree. We review each row every year; rows without a date have not been reviewed yet.</template>
       <template #below><SectionNav section="learn" fixed /></template>
     </PageHero>
 
@@ -72,7 +72,7 @@ function fmtDate(d: string) {
             </p>
             <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0">{{ r.programs }}</p>
             <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0">{{ r.degrees.length ? r.degrees.map(degreeLabel).join(' · ') : 'Degrees not listed' }}</p>
-            <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</p>
+            <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><template v-if="r.last_reviewed"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</template></p>
           </div>
           </div>
         </div>
