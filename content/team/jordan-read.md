@@ -22,9 +22,15 @@ published: true
 
 ## Selected publications
 
-### Lake and river modeling
+### Knowledge-guided machine learning and AI research
 
 - **Read et al. (2019)** — [Process-guided deep learning predictions of lake water temperature](https://doi.org/10.1029/2019WR024922). *Water Resources Research*, 55(11), 9173–9190.
+
+- **Willard et al. (2022)** — [Daily surface temperatures for 185,549 lakes in the conterminous United States estimated using deep learning (1980–2020)](https://doi.org/10.1002/lol2.10249). *Limnology and Oceanography Letters*, 7(4), 287–301.
+
+- **Appling et al. (2022)** — [Machine learning for understanding inland water quantity, quality, and ecology](https://doi.org/10.1016/B978-0-12-819166-8.00121-3). In *Encyclopedia of Inland Waters*, Elsevier, 585–606.
+
+### Lake and river processes
 
 - **Read et al. (2011)** — [Derivation of lake mixing and stratification indices from high-resolution lake buoy data](https://doi.org/10.1016/j.envsoft.2011.05.006). *Environmental Modelling & Software*, 26(11), 1325–1336.
 
@@ -32,7 +38,6 @@ published: true
 
 - **O'Reilly et al. (2015)** — [Rapid and highly variable warming of lake surface waters around the globe](https://doi.org/10.1002/2015GL066235). *Geophysical Research Letters*, 42(24).
 
-- **Willard et al. (2022)** — [Daily surface temperatures for 185,549 lakes in the conterminous United States estimated using deep learning (1980–2020)](https://doi.org/10.1002/lol2.10249). *Limnology and Oceanography Letters*, 7(4), 287–301.
 
 - **Appling et al. (2018)** — [The metabolic regimes of 356 rivers in the United States](https://doi.org/10.1038/sdata.2018.292). *Scientific Data*, 5, 180292.
 
