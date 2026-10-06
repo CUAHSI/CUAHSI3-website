@@ -5,19 +5,18 @@ useHead({
 })
 
 // Issue 9: institution lookup replaces the plain toggle.
-// Placeholder member list — swap for the real member roster from About > Membership.
-const memberInstitutions = [
-  { name: 'University of Vermont', since: 2004 },
-  { name: 'Utah State University', since: 2001 },
-  { name: 'University of Virginia', since: 2005 },
-  { name: 'Colorado State University', since: 2001 },
-  { name: 'University of Alabama', since: 2008 },
-  { name: 'Syracuse University', since: 2007 },
-  { name: 'Princeton University', since: 2010 },
-]
+// Member roster: the institutions in content/members/reps.json (names only; no addresses or join years leave this block).
+type Member = { name: string }
+const { data: memberData } = await useAsyncData('hire-member-institutions', async (): Promise<Member[]> => {
+  const doc = await queryContent('members/reps').findOne().catch(() => null)
+  const rows: any[] = Array.isArray(doc?.body) ? doc.body : []
+  const names = [...new Set(rows.map(r => String(r.institution || '').trim()).filter(Boolean))].sort()
+  return names.map(name => ({ name }))
+})
+const memberInstitutions = computed<Member[]>(() => memberData.value ?? [])
 
 const institutionQuery = ref('')
-const matchedInstitution = ref<{ name: string; since: number } | null>(null)
+const matchedInstitution = ref<Member | null>(null)
 const showLookupResults = ref(false)
 const useLegacyToggle = ref(false) // no-JS fallback path
 const isMember = ref(false) // drives the legacy toggle only
@@ -25,12 +24,12 @@ const isMember = ref(false) // drives the legacy toggle only
 const lookupMatches = computed(() => {
   if (!institutionQuery.value.trim()) return []
   const q = institutionQuery.value.toLowerCase()
-  return memberInstitutions.filter(i => i.name.toLowerCase().includes(q)).slice(0, 6)
+  return memberInstitutions.value.filter(i => i.name.toLowerCase().includes(q)).slice(0, 8)
 })
 
 const isMemberConfirmed = computed(() => !!matchedInstitution.value || (useLegacyToggle.value && isMember.value))
 
-function selectInstitution(inst: { name: string; since: number }) {
+function selectInstitution(inst: Member) {
   matchedInstitution.value = inst
   institutionQuery.value = inst.name
   showLookupResults.value = false
@@ -125,7 +124,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
 
           <!-- Confirmed state -->
           <div v-if="matchedInstitution" class="flex items-center justify-between gap-2">
-            <p class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[normal] text-[#0F7A57] m-0">✓ {{ matchedInstitution.name }} — member since {{ matchedInstitution.since }}</p>
+            <p class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[normal] text-[#0F7A57] m-0">✓ {{ matchedInstitution.name }} — member institution</p>
             <button @click="clearInstitution" class="font-['Hanken_Grotesk'] font-medium text-[11.5px] leading-[normal] text-muted cursor-pointer underline">Change</button>
           </div>
 
