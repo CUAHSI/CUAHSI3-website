@@ -59,7 +59,7 @@ for f in sorted(glob.glob(SRC + '/*.pdf')):
 def one(name): return f'{SRC}/{name}'
 bt = first_page(one('2024-07-24-Bylaws_Final.docx.pdf'))
 bm = re.search(r'ADOPTED BY ELECTRONIC VOTE OF MORE THAN SIXTY PERCENT OF MEMBERS, ([A-Z][a-z]+ \d{1,2}, \d{4})', bt)
-add('governance', 'Bylaws', int(bm.group(1)[-4:]), 'governance/bylaws-2024.pdf', one('2024-07-24-Bylaws_Final.docx.pdf'), note=f'Adopted by electronic vote of the members, {bm.group(1)}.', text=bt)
+add('governance', 'Bylaws', int(bm.group(1)[-4:]), 'governance/bylaws-2024.pdf', one('2024-07-24-Bylaws_Final.docx.pdf'), note=f'Adopted by electronic vote of the members, {bm.group(1)}. Text revised July 2024.', text=bt)
 add('plan', 'Strategic Plan 2023–2028', 2023, 'strategic-plans/strategic-plan-2023-2028.pdf', one('Strategic-Plan-2023-Final.1.pdf'), series='Strategic plans', text=first_page(one('Strategic-Plan-2023-Final.1.pdf')))
 add('plan', 'Strategic Plan 2018–2023', 2018, 'strategic-plans/strategic-plan-2018-2023.pdf', one('StrategicPlan_SinglePages.pdf'), series='Strategic plans', text=first_page(one('StrategicPlan_SinglePages.pdf')))
 for y, name in [(2020, 'Annual_Report_2020_Final.pdf'), (2022, 'Annual-Report-2022_FINAL.pdf'), (2023, 'Annual-Report-2023-FINAL.pdf'), (2024, 'Annual-Report-2024.pdf'), (2025, '2025-Annual-Report_Final_reduced.pdf')]:
