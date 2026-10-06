@@ -6,7 +6,7 @@ useHead({
   meta: [{ name: 'description', content: 'A catalog of water data portals: who runs them, what they cover, and where to find them.' }]
 })
 
-type Row = { name: string; owner: string; scope?: string; url: string; last_reviewed?: string }
+type Row = { name: string; owner?: string; scope?: string; url: string; last_reviewed?: string }
 const { data } = await useAsyncData('data-portals-json', () =>
   queryContent('data-portals').where({ _extension: 'json' }).findOne().catch(() => null)
 )
@@ -14,7 +14,7 @@ const rows = computed<Row[]>(() => (Array.isArray(data.value?.body) ? data.value
 
 const query = ref('')
 const filtered = computed(() => rows.value.filter(r =>
-  !query.value || (r.name + ' ' + r.owner + ' ' + (r.scope ?? '')).toLowerCase().includes(query.value.toLowerCase())
+  !query.value || (r.name + ' ' + (r.owner ?? '') + ' ' + (r.scope ?? '')).toLowerCase().includes(query.value.toLowerCase())
 ))
 function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
@@ -54,7 +54,7 @@ function fmtDate(d: string) {
             <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">
               <a :href="r.url" target="_blank" rel="noopener" class="text-ink no-underline">{{ r.name }} <span class="text-water">↗</span></a>
             </p>
-            <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0"><span class="font-mono text-[10px] text-muted min-[900px]:hidden">Owner: </span>{{ r.owner }}</p>
+            <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0"><template v-if="r.owner"><span class="font-mono text-[10px] text-muted min-[900px]:hidden">Owner: </span>{{ r.owner }}</template></p>
             <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0"><span v-if="r.scope" class="min-[900px]:hidden">Scope: </span>{{ r.scope ?? '' }}</p>
             <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><template v-if="r.last_reviewed"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</template></p>
           </div>
