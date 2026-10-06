@@ -9,7 +9,7 @@ deadline: null
 url: https://www.joshswaterjobs.com/jobs/
 source: joshswaterjobs
 tags: [graduate-assistantship, watershed, biogeochemistry, ecohydrology, california]
-published: true
+published: false
 ---
 
 Fully funded PhD position in watershed hydrology and biogeochemistry in Stanford's Department of Earth System Science. Research involves field and modeling work on nutrient cycling, water quality, and ecohydrological processes in western U.S. watersheds. CUAHSI tools and HydroShare encouraged for data management.
