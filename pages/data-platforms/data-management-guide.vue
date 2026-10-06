@@ -20,7 +20,7 @@ const hasBody = computed(() => Boolean(guide.value?.body?.children?.length))
       <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/data-platforms" class="text-muted">Data &amp; Computing</NuxtLink> / Data management guide</p></template>
       <template #kicker>Data &amp; Computing · Data management guide</template>
       <template #title>Planning for your data.</template>
-      <template #lead>CUAHSI's guidance on data collection plans and data management plans, how to store, describe and share your data, and answers to common questions.</template>
+      <template #lead>CUAHSI's guidance on data collection plans and data management plans, and how to store, describe and share your data.</template>
       <template #below><SectionNav section="data" fixed /></template>
     </PageHero>
 
