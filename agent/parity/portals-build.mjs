@@ -1,7 +1,7 @@
-// Builds content/data-portals/portals.json from agent/parity/portals-extract.json (see portals-extract.mjs). Cleaning only.
+// Builds content/data-portals/portals.json from .agent/portals-extract.json (see portals-extract.mjs). Cleaning only.
 // Columns: name, owner, scope, url. No review date is set: no person at CUAHSI has reviewed these rows yet. Sorted by name.
 import fs from 'node:fs'
-const ex = JSON.parse(fs.readFileSync('agent/parity/portals-extract.json', 'utf8'))
+const ex = JSON.parse(fs.readFileSync('.agent/portals-extract.json', 'utf8'))
 const rows = ex.entries.map(e => {
   const owner = e.dl['Site Owner']?.text ?? ''; const scope = e.dl['Geographical Scope']?.text ?? ''; const w = e.dl['Website']
   const url = (w?.href || w?.text || '').trim()
