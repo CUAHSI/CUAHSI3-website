@@ -55,6 +55,12 @@ The curriculum is developed in the open in CUAHSI's [federal-water-data-curricul
 
 Expect about 20 hours over the four weeks: 14 hours of live (synchronous) sessions plus work outside class hours. Office hours are included, with opportunities to ask questions and get feedback. To earn the completion certificate, participants must pass assessments with hard deadlines: short "check your understanding" quizzes and a final presentation.
 
+## Schedule
+
+[![Pilot course schedule, November 3 to December 4, 2026, in weekly rows from Monday to Friday, all times Eastern. Live sessions are on Tuesdays and Thursdays at 2:00 PM. Week of Nov 2: Module I Nov 3, Module II Nov 5, with quizzes due Nov 4 and 6. Week of Nov 9: Module III-A (NASA SWOT) Nov 10, Module III-B (NOAA NWM) Nov 12 with midpoint office hours. Week of Nov 16: Module III-C (USGS NWIS) Nov 17, Module IV Nov 19, with quizzes due Nov 18 and 20. Week of Nov 23: independent work, no session on Thanksgiving. Week of Nov 30: peer review Dec 1 with optional office hours, final assessment demos Dec 3, and the pilot feedback survey due Dec 4.](/program-images/skills-certificate-pilot-schedule.png)](/program-images/skills-certificate-pilot-schedule.png)
+
+Select the schedule to open it full size.
+
 ## Who it is for
 
 The course is designed for graduate students, postdocs, early-career researchers and professionals who use federal water data in their research. Participants should have intermediate Python experience: comfortable with variables, loops and functions, able to adapt example code to install and use libraries, load data into common structures, clean and plot data, write short scripts, organize code in a Jupyter notebook and troubleshoot common errors. If those skills are new, CUAHSI recommends building them before enrolling.
