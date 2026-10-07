@@ -58,14 +58,14 @@ function fmtDate(d: string) {
         <p class="font-mono text-[11px] text-muted mb-4" role="status" aria-live="polite">{{ filtered.length }} institution{{ filtered.length === 1 ? '' : 's' }}</p>
 
         <div role="table" aria-label="Graduate programs by institution" class="border border-[rgba(15,33,43,.1)] rounded-card overflow-hidden">
-          <div role="row" class="hidden min-[900px]:grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_auto] gap-[16px] p-[10px_18px] bg-[rgba(15,33,43,.04)] border-b border-b-[rgba(15,33,43,.08)]">
+          <div role="row" class="hidden min-[900px]:grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] gap-[16px] p-[10px_18px] bg-[rgba(15,33,43,.04)] border-b border-b-[rgba(15,33,43,.08)]">
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Institution</p>
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Programs</p>
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Degrees</p>
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Reviewed</p>
           </div>
           <div class="divide-y divide-[rgba(15,33,43,.08)]">
-          <div v-for="(r, i) in filtered" :key="r.institution + '|' + i" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_auto] min-[900px]:gap-[16px] items-baseline bg-paper">
+          <div v-for="(r, i) in filtered" :key="r.institution + '|' + i" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] min-[900px]:gap-[16px] items-baseline bg-paper">
             <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">
               <a v-if="r.url" :href="r.url" target="_blank" rel="noopener" class="text-ink no-underline">{{ r.institution }} <span class="text-water">↗</span></a>
               <span v-else>{{ r.institution }}</span>

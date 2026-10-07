@@ -19,3 +19,5 @@ The HIF enabled Prum to develop a harmonization algorithm that reconciles Landsa
 The work led directly to a NASA FINESST24 award and invitations to present findings at AGU and ASLO. The dataset has been deposited in HydroShare and will be made publicly accessible following completion of peer review of the associated manuscript.
 
 This is a clear example of the CUAHSI fellowship pipeline in action: targeted funding for a specific methodological gap, resulting in both a publicly accessible dataset and competitive external funding that will sustain the research program.
+
+The resource is listed on HydroShare as the [Global coastal rivers and estuaries Landsat derived surface reflectance database](https://www.hydroshare.org/resource/ef728cff303a4d3bb49b69702283184c/).

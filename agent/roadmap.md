@@ -163,7 +163,7 @@ Append-only. Things seen outside the task in hand. One line each: date, file, wh
 # Phase 2 roadmap (content agent)
 
 Phase 2 was opened by Jordan on 4 October 2026. Content changes go on `content/short-name`
-branches under the content rules in CLAUDE.md (C1 to C13). The guard hook and permission
+branches under the content rules in CLAUDE.md (C1 to C14). The guard hook and permission
 setting that blocked edits to `content/` were unlocked by Jordan on 5 October 2026
 (`PHASE = 2`; deny rule removed; the commit reaches the default branch through the unlock PR). The hook
 does not check branch kind, so content-versus-code separation rests on the guardrails in

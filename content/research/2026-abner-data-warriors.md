@@ -17,3 +17,5 @@ Since January 2026, CUAHSI Research Analyst Abner Bogan has been volunteering wi
 Abner mentored one student group investigating how municipal snow removal services vary across Syracuse neighborhoods — a question with direct implications for equity in city services. The group collected and analyzed open city data, identified spatial disparities in service delivery, and developed a presentation of their findings. They presented their results to the City of Syracuse, and the project is now featured on the City of Syracuse Open Data page.
 
 The project illustrates how the data skills central to CUAHSI's mission — finding, analyzing, and communicating with data — can extend beyond academic water science to strengthen civic engagement and environmental justice at the community level.
+
+More: the [Data Warriors program](https://thedatawarriors.com/) and the students' project on the [City of Syracuse Open Data page](https://data.syr.gov/pages/winters-education-access~88ac799ee7aa49a48590a9909f83053e).
