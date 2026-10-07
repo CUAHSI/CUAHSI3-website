@@ -88,7 +88,7 @@ version mismatch. Ignore it.
    `public/` or `visual/baseline/` counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
-   content rules C1 to C13 apply to every change under `content/`. A code change that a
+   content rules C1 to C14 apply to every change under `content/`. A code change that a
    content change needs is a second PR.
 4. **Git.** Work on a branch named `task/short-name` (code) or `content/short-name`
    (content, rule 3), cut from an up-to-date `main`.
@@ -200,6 +200,18 @@ C13. **File names.** New files follow the pattern of their collection: `news`, `
     `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; confirmed by Jordan).
     `programs`, `board`, `community`, `team`: `slug.md`. Existing files are not renamed
     unless Jordan asks. The frontmatter `slug` drives the URL, not the file name.
+C14. **An item about a thing links to the thing.** A news item, impact story, event or recording that
+    describes a dataset, software tool, paper, award, program, report or video links to its primary
+    source in the body: the HydroShare resource or DOI, the code repository, the publisher's page, the
+    funder's award page, the program page. Take the link from the source the item was written from (the
+    newsletter, the article, the draft) and open it before using it; C3 applies, never guess a URL. Link
+    text names the thing, not "click here". For a PDF, prefer a copy hosted here (`public/documents/`) to
+    a link to the legacy cuahsi.org site, which will go. If the source gives no link and none can be found,
+    say so under "To verify" in the PR instead of leaving the item silent. An item with nothing to link to
+    (a welcome, a staff announcement) needs no link. The rule applies to new items and to any item a task
+    already changes; stories written before it are not edited just for this (C10), so adding their links is
+    its own task and PR. No `verify.sh` check: a pattern cannot tell which items describe a thing, so the
+    reviewer checks it by reading the item against its source.
 
 ## Known footguns
 
@@ -434,7 +446,7 @@ baseline image that changed and why.
 **New content item.** Jordan or a staff member gives a draft: an event, a news item, a job,
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write
 the file from the collection's schema, named by the pattern in C13. Fill only what the draft
-supports (C3). Show Jordan the frontmatter and the "To verify" list before committing. Then
+supports (C3), and link the item's primary source (C14). Show Jordan the frontmatter and the "To verify" list before committing. Then
 validator, build, PR. An event supplied directly by a staff member, with no newsletter,
 leaves `newsletter_source` out (the field is optional in the schema since 5 October 2026);
 say in the PR who supplied it and when (C2).
@@ -453,7 +465,7 @@ days; events whose `end` has passed and are still `featured`; jobs past `deadlin
 cross-reference values that match nothing; items with no source (C2). Report with counts and
 denominators. Do not fix silently.
 
-**Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
+**Review of a content branch.** The reviewer checks each changed file against C1 to C14 and
 reports any path outside the allowed set in rule 3.
 
 **Locks.** Phase 2 was opened on 4 October 2026; Jordan lifted the locks on 5 October 2026: `PHASE = 2` in
