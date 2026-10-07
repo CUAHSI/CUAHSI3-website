@@ -17,3 +17,5 @@ Educators, researchers, and hydrology professionals from across the United State
 The event combined three days of in-person collaboration in Salt Lake City during the CIROH Developers Conference (May 27–29) with an intensive eight-day virtual hackathon, producing 11 new HydroLearn modules showcasing research tools developed by the CIROH community.
 
 Twenty-two fellows — research scientists, postdoctoral scholars, and graduate students — were selected to participate, paired and assigned to module topics aligned with their expertise. Guided by education and hydrology experts, fellows transformed their research into engaging, peer-reviewed learning modules now freely available through the HydroLearn platform.
+
+More: [HydroLearn](https://hydrolearn.org/) and the [workshop and hackathon page](https://www.cuahsi.org/workshops/hydrolearn-ciroh-may-june-2026-workshop-and-hackathon).
