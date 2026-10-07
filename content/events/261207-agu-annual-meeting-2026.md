@@ -16,7 +16,7 @@ description: >
   programs. Community gathering: December 9, 6 to 9 pm PST, at Underdogs Cantina,
   a chance to connect with CUAHSI staff and water science community members.
   Town Hall: "CUAHSI Turns 25: Shaping the Future of Water Science
-  Infrastructure and Education," December 9, 1 to 3 pm PST, in MC Room 2007 -
+  Infrastructure and Education," December 9, 1 to 2 pm PST, in MC Room 2007 -
   West. Sessions co-convened by CUAHSI staff: H014, Advances in Integrated
   Hydrological Modeling: Methods, Solvers, and Computational Innovation
   (conveners Nick Engdahl, Danielle Tijerina-Kreuzer and Amelia Peeples); H005,
