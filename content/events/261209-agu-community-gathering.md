@@ -3,7 +3,8 @@ title: "CUAHSI Community Gathering at AGU 2026"
 slug: cuahsi-agu-gathering-2026
 type: conference
 audience: [community]
-start: "2026-12-09"
+start: "2026-12-09T18:00:00-08:00"
+end: "2026-12-09T21:00:00-08:00"
 timezone: America/Los_Angeles
 location:
   mode: in-person
