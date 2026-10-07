@@ -13,7 +13,7 @@ description: >
   Time: 11 am to 12 pm ET. A session in the Women Advancing River Research
   cyberseminar series, an ongoing monthly series that began in 2021 and features
   women guest speakers from around the world. Speakers: Amanda Donaldson
-  (University of Pittsburgh) and Daniella Rempe.
+  (University of Pittsburgh) and Daniella Rempe (University of Texas at Austin).
 registration:
   required: true
   url: https://psu.zoom.us/meeting/register/wbbSk8Z5RW6lX_1hErxZsw#/registration
