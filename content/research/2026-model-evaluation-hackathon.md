@@ -17,3 +17,5 @@ In late March 2026, CUAHSI research team members Danielle Tijerina-Kreuzer, Iren
 The event brought together hydrologic modelers to co-design an open evaluation framework built on interoperable, community-accessible tools. Participants used Jupyter Notebook workflows leveraging the HydroData data catalog API to evaluate model outputs — including ParFlow-CONUS and the National Water Model — against observational datasets such as USGS streamflow records and SNOTEL snow data.
 
 Key outcomes included the successful evaluation of streamflow from a participant's VIC model, initial integrations of SUMMA and iSnowbal for snow output evaluation, and strong community interest in continuing to develop a shared framework that works across diverse models, datasets, and scientific questions.
+
+The Jupyter Notebook workflows are on GitHub, for example the [National Water Model snow water equivalent point-scale evaluation notebook](https://github.com/hydroframe/cssi_evaluation/blob/main/examples/nwm/nwm_swe_point_scale_evaluation.ipynb).
