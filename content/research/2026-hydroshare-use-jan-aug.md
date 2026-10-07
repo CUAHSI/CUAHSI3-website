@@ -14,7 +14,7 @@ excerpt: "Between January and August 2026, an estimated 35,816 visitors download
 
 CUAHSI's counts for January 1 to August 31, 2026 show how [HydroShare](https://www.hydroshare.org/) and CUAHSI's cloud services were used:
 
-- **Publishing.** The report counts 351 resources published in the period; a second table in the same report counts 325 resources issued a permanent DOI, 215 of which listed an NSF award number. These help federally funded researchers meet public access requirements.
+- **Publishing.** 351 resources were published in the period. These help federally funded researchers meet public access requirements.
 - **Reach.** (Download tracking was about 90% complete, and cloud computing tracking about 50% complete, when the report was written.) An estimated 35,816 unique visitors (identified by IP address and browser) downloaded 107,244 files. About 95% of them, 33,933, were not logged in.
 - **Accounts.** 786 new users created accounts and 905 returning users logged in, for 1,691 active users.
 - **Cloud computing.** 238 individuals from at least 98 institutions launched 1,365 computing instances across CUAHSI's cloud services.
