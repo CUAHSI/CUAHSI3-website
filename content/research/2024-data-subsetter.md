@@ -16,3 +16,5 @@ CUAHSI upgraded and expanded **data subsetting services** to address the needs o
 The Data Subsetter provides access to critical hydrologic modeling datasets including multiple versions of the **National Water Model** and **ParFlow-CONUS** — continental hydrologic simulations that would otherwise require extensive computational resources and expertise to generate.
 
 This service has supported scientific research studies investigating streamflow predictions using multi-model and multi-precipitation forcings, and continental hydrologic intercomparisons. By co-locating data with compute resources in the HydroShare Ecosystem, CUAHSI enables cloud-native workflows without requiring local hardware or software installations.
+
+The service is the [CUAHSI Model Domain Subsetter](https://subset.cuahsi.org/). Covered in the [CUAHSI 2024 Annual Report](/documents/annual-reports/annual-report-2024.pdf).

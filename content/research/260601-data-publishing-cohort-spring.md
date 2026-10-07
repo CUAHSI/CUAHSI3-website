@@ -17,3 +17,5 @@ Publishing research data well is one of the most challenging parts of the resear
 The spring 2026 cohort, the program's second, brought together 20 participants from 20 institutions spanning career stages from graduate students to full professors and postdocs. Over six sessions across three weeks, participants worked hands-on to build out HydroShare resources with data, metadata, and documentation — supported by CUAHSI staff, optional one-on-one coaching, and peer review with fellow cohort members.
 
 Each cohort surfaces new insight into what researchers need most during the publishing process, and participant feedback directly informs refinements to program content and structure. CUAHSI aims to offer the program twice yearly, once in spring and once in fall; a Fall 2026 cohort is already in planning.
+
+The program continues: see the [Data Publishing Program](/community/events/data-publishing-program-fall-2026). Covered in the [June 2026 e-newsletter](/community/newsletter/2026-june).

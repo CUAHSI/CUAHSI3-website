@@ -19,3 +19,5 @@ The workshop addressed two skill gaps for early-career researchers: integrating 
 Demand significantly exceeded capacity: 68 people applied for 15 participant slots, with the final cohort representing 13 unique institutions. Participant feedback indicated strong satisfaction and intent to apply the skills directly to their research.
 
 At 4.5 applicants per available spot, the workshop represents one of the clearest signals in CUAHSI's recent programming of unmet demand for training at the science-society interface in hydrology.
+
+The workshop is described on its [CUAHSI workshop page](https://www.cuahsi.org/workshops/stakeholder-informed-spatial-modeling-for-hydrologic-sciences). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).
