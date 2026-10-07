@@ -29,7 +29,7 @@ Warnings from verify.sh, and what I did about each:
 ## Interventions during this task
 
 <!-- Every time Jordan corrected or redirected the work. Copy the lines from
-     agent/eval-log.md. "None" is a valid answer only if it is true. -->
+     your agent/log/ file. "None" is a valid answer only if it is true. -->
 
 ## Content PRs only (a `content/short-name` branch)
 

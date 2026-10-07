@@ -8,7 +8,7 @@ looking at the Netlify deploy preview, not by reading Vue.
 
 This work is also an experiment: can an agent own and evolve a production website, as
 an alternative to CUAHSI's software engineering team rebuilding it? The record you keep
-in `agent/eval-log.md` is the data. A negative result is a real result. Record what
+in `agent/log/` (and, for 3 to 7 October 2026, the frozen `agent/eval-log.md`) is the data. A negative result is a real result. Record what
 happened, including what makes you look bad.
 
 This file is living. When you find a new footgun or convention, add it here in the
@@ -31,7 +31,9 @@ agent/roadmap.md   Phase 1 tasks and the Phase 2 roadmap, with status and accept
 agent/reconcile.md the "verify first" checklist for task 1
 agent/content-model.md  collection schemas, cross-link rules, editorial rules.
                    Written from memory by the previous agent. Read before task 2.
-agent/eval-log.md  append-only record of tasks, interventions and defects
+agent/log/         the evaluation log: one file per branch, `<YYMMDD>-<branch>.md`; format and commands in its README.
+                   `node scripts/eval-log.mjs` prints it all, `--counts` counts it
+agent/eval-log.md  the log before 7 October 2026, frozen (one shared file made every open PR conflict on every merge)
 agent/reports/     dated reports you produce (reconcile, audits, the Phase 1 evaluation). YYMMDD_name.md
 .agent/            scratch space, gitignored. Diffs for the reviewer, build baselines.
 .claude/agents/reviewer.md   read-only reviewer subagent
@@ -118,12 +120,18 @@ version mismatch. Ignore it.
 9. **Refactors preserve behaviour.** Component extraction and the Tailwind migration
    must not change what a visitor sees. If a refactor changes rendered output on
    purpose, that is a second concern and a second PR.
-10. **Logs are append-only.** `agent/eval-log.md` and the Noticed list are never
-    rewritten. If an entry is wrong, add a new dated entry that says what was wrong
-    and points to it. `verify.sh` fails if the eval log loses a line.
+10. **Logs are append-only.** The files in `agent/log/`, `agent/eval-log.md` and the Noticed list
+    are never rewritten. If an entry is wrong, add a new dated entry that says what was wrong
+    and points to it (a `correction` line in your own branch's log file). Each branch writes only
+    its own file, `agent/log/<YYMMDD>-<branch>.md`. `verify.sh` fails if `agent/eval-log.md`
+    changes at all (it is frozen), if a log file already on the base branch changes, or if a line
+    in `agent/log/` is not in the format in `agent/log/README.md`. A branch cut before 7 October 2026
+    that appended to `agent/eval-log.md` moves those lines (`git diff origin/main -- agent/eval-log.md`)
+    into its own log file, then restores the frozen file with `git checkout origin/main -- agent/eval-log.md`;
+    in a merge conflict in that file, take the default branch's version and keep your lines in your own file.
 11. **Log every intervention.** Whenever Jordan corrects you, redirects you, rejects
     an approach, or has to decide something you should have been able to decide, add
-    an `intervention` line to the eval log in that session. Do not wait to be asked.
+    an `intervention` line to your branch's log file in that session. Do not wait to be asked.
 12. **Report counts with denominators and show your sample.** "31 of 44 grids
     migrated," not "most grids migrated." Before reporting any bulk result, open three
     affected files and three unaffected ones and confirm by reading them. Say which
@@ -342,7 +350,7 @@ Lessons from real errors. Follow these whenever a change touches many files.
 ## Procedures
 
 **Start of session.** Run `git status` and `git branch --show-current`. Read the Status
-column in `agent/roadmap.md` and the last ten lines of `agent/eval-log.md`. Tell Jordan
+column in `agent/roadmap.md` and the last ten lines of the log (`node scripts/eval-log.mjs --tail 10`). Tell Jordan
 in three lines where things stand: branch, task in progress, anything uncommitted. Add one
 line on upstream (see "Upstream"): run `git fetch upstream` and report what it has that the
 fork lacks, with counts. Then wait for direction. Do not start a roadmap task unprompted.
@@ -372,7 +380,7 @@ is clean. `git switch main && git pull --ff-only`, then `git switch -c task/shor
 (`content/short-name` for a content task).
 Before changing anything, state the plan: files you expect to touch, how you will
 check the result, what will need human eyes. For roadmap tasks 3 and 4, wait for
-Jordan to approve the plan. Append a `start` line to the eval log.
+Jordan to approve the plan. Create your branch's log file (`agent/log/<YYMMDD>-<branch with / as ->.md`) with a `start` line.
 
 **Reconcile.** Roadmap task 1. Read `agent/reconcile.md` and follow it. It is
 read-only: it produces a report and changes no code.
@@ -395,8 +403,8 @@ design, so this does not replace the visual baseline (roadmap task 3b).
 with `git diff >> .agent/review.diff`). Delegate to the `reviewer` subagent with the
 task description and that path. Put its findings in the PR description unchanged,
 then say what you did about each. If you disagree with a finding, say so and leave
-it for Jordan; do not drop it. Each finding you fix is a `defect` line in the eval
-log with `caught: reviewer`.
+it for Jordan; do not drop it. Each finding you fix is a `defect` line in your
+branch's log file with `caught: reviewer`.
 
 **Finish a task.** Run Verify, then Review, then commit (rule 4). Fill in
 `.github/pull_request_template.md` and show Jordan the description. When he says to
@@ -404,8 +412,8 @@ open the PR: `git push -u origin <branch>` and `gh pr create --repo
 jordansread/CUAHSI3-website --base main --head <branch>` with that description, then
 check the base with `gh pr view` (rule 4). Give him the PR link and say the deploy preview
 will appear on the PR.
-Update the Status column in `agent/roadmap.md` on the branch. Append a `pr` line to
-the eval log.
+Update the Status column in `agent/roadmap.md` on the branch. Add a `pr` line to
+your branch's log file.
 
 **Visual review request.** Part of every PR touching layout, markup or links. List the
 exact routes to open on the deploy preview, at phone width (390px) and desktop width
@@ -414,22 +422,23 @@ exact routes to open on the deploy preview, at phone width (390px) and desktop w
 each should open that person's profile." Jordan is not a developer. Make the list
 short enough that he will actually do all of it.
 
-**After review.** When Jordan reports the outcome of a PR, append lines to the eval
-log: `merged` or `abandoned`, plus one `defect` line for each problem found, with
+**After review.** When Jordan reports the outcome of a PR, add lines to the log file of
+the branch you are now working on (the finished branch's own file is already on the default
+branch and does not change): `merged` or `abandoned`, plus one `defect` line for each problem found, with
 where it was caught (`human-review`, `deploy-preview` or `production`). If he asks
 for changes, each request is an `intervention` line.
 
-**Quick log.** When Jordan types "log:" followed by a note, append it to the eval log
+**Quick log.** When Jordan types "log:" followed by a note, append it to your branch's log file
 as an `intervention` or `note` line with today's date and the current branch. Keep his
 wording. Do not discuss it.
 
 **New footgun.** When something built cleanly and was wrong: add a numbered entry
 under "Known footguns" with the symptom and the fix; add a check to `scripts/verify.sh`
-if a pattern can detect it; append a `defect` line to the eval log. Do all three in
+if a pattern can detect it; add a `defect` line to your branch's log file. Do all three in
 the PR that fixes it.
 
 **Status.** When Jordan asks where things stand, answer from `agent/roadmap.md`, the
-eval log and `git`, not from memory of the session. Give counts from the eval log:
+log and `git`, not from memory of the session. Give counts from `node scripts/eval-log.mjs --counts`:
 tasks started, PRs merged, interventions, defects by where they were caught.
 
 ## Content procedures (Phase 2)
