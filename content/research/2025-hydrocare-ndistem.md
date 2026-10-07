@@ -19,3 +19,5 @@ Fellows attended a preparatory virtual meeting with CUAHSI staff Martin Seul and
 The feedback surfaced a central theme that will shape CUAHSI's approach going forward: **trust-building must come before the implementation of technical solutions**. Fellows also raised concerns about long-term stewardship, institutional sustainability, and the risk of misuse of Tribal data by outside organizations — reinforcing that CARE-aligned engagement is not a one-time intervention but requires sustained commitment to collaboration with existing Indigenous-led initiatives.
 
 These findings directly inform CUAHSI's plans for building the HydroCARE initiative under the new cooperative agreement (EAR-2535162).
+
+The CARE principles for Indigenous data governance are described by the [Global Indigenous Data Alliance](https://www.gida-global.org/). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

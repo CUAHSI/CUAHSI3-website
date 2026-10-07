@@ -19,3 +19,5 @@ Over three weeks, 10 selected participants (from 16 applicants) attended five we
 A small participation stipend was offered to recognize participants' time and reduce barriers to engagement. The program concluded with a listening session in December 2025 to collect feedback on the experience and identify improvements for future cohorts.
 
 The cohort model — structured curriculum plus individualized support — represents a more scalable approach to data publishing assistance than the help desk alone, and is designed to expand in subsequent years under the new cooperative agreement (EAR-2535162).
+
+The program continues: see the [Data Publishing Program](/community/events/data-publishing-program-fall-2026). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

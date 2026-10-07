@@ -19,3 +19,5 @@ The migration involved a new publishing workflow, development of bulk migration 
 The most immediate practical benefit for researchers: NSF Public Access Repository (PAR) submissions can now be auto-populated using only a HydroShare DOI — metadata including author, title, and abstract import directly into the PAR submission form, eliminating manual re-entry. This directly reduces the compliance burden on PIs whose NSF grants require public access reporting.
 
 A longer-term benefit is improved alignment with FAIR data principles, particularly in the Findable and Interoperable dimensions, as DataCite's schema supports richer, more structured metadata than what Crossref offered for HydroShare resources.
+
+HydroShare's release notes are on [GitHub](https://github.com/hydroshare/hydroshare/releases), and DataCite is at [datacite.org](https://datacite.org/). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

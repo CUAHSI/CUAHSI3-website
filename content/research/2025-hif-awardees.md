@@ -31,3 +31,5 @@ The 2025 awardees and their projects:
 **Seongeun Park** (Carnegie Mellon University) — *Rescuing water infrastructure operational knowledge via AI-driven data integration.* Applying AI to integrate and rescue operational knowledge from water infrastructure systems, preserving institutional knowledge that is at risk of being lost.
 
 **Alex Saunders** (University of Arizona) — *A community dataset and deep learning toolkit for remotely sensed historical flood exposure in the US Midwest.* Building a community flood exposure dataset and deep learning tools for historical flood detection from remote sensing archives.
+
+About the fellowship: the [HydroInformatics Innovation Fellowship page](https://www.cuahsi.org/events/hydroinformatics-innovation-fellowship). The [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf) lists the eight awardees.

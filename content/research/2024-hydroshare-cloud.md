@@ -22,3 +22,5 @@ This transition adopted modern architecture patterns including containerized ser
 - Averaging approximately 100 new user accounts per month, with nearly 80% being graduate students, faculty, or staff
 
 In 2025, HydroShare ran reliably with minimal downtime and continued performance improvements following the cloud migration. DOI registration was transitioned from Crossref to DataCite, better aligning with FAIR data principles and improving integration into global data-sharing networks.
+
+HydroShare is at [hydroshare.org](https://www.hydroshare.org/), and its release notes are on [GitHub](https://github.com/hydroshare/hydroshare/releases). Covered in the [CUAHSI 2024 Annual Report](/documents/annual-reports/annual-report-2024.pdf) and the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

@@ -19,3 +19,5 @@ A notable addition this year was a new Data Competency talk developed and delive
 The nine modules in Fall 2025 spanned the breadth of hydrologic science and data analysis: geospatial and hydrologic data processing with Google Earth Engine, infiltration modeling, standardized evapotranspiration, hydrologic data visualization, uncertainty quantification and inverse methods, snow hydrology modeling, ecohydrology of groundwater dependent ecosystems, GIS for terrain and watershed analysis, and sustainable human-water systems. Total enrollment across modules ranged from 6 to 27 students, with most modules enrolling 15–25.
 
 The CVU continues to demonstrate that inter-institutional graduate education in hydrology — where specialized expertise at one institution is made available to students at partner institutions — is both operationally viable and valued by the community.
+
+About the program: [CUAHSI Virtual University](/learn-train/programs/virtual-university). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

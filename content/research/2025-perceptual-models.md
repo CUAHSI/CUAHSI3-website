@@ -22,3 +22,5 @@ These workshops enabled a structured community synthesis that integrated large-s
 - 35 perceptual models describing dominant processes within each landscape
 
 Made possible through broad community participation, this work reflects the strength of CUAHSI's convening model: bringing interdisciplinary experts together to translate distributed knowledge into shared scientific understanding that advances hydrologic understanding and informs related fields.
+
+The series is described on the [synthesis workshop series page](https://www.cuahsi.org/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

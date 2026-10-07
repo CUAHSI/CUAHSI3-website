@@ -19,3 +19,5 @@ The project targets a gap the editors identified in a study of 43 introductory h
 CUAHSI will host an interactive HTML version of the book and its source code at no charge, ensuring free, durable access alongside the Pressbooks, PDF, EPUB, and print editions distributed through VIVA Publishing and Virginia Tech Press. Hosting is supported through CUAHSI's Open Learning initiatives.
 
 Writing begins at a Virginia Tech workshop in summer 2026, with classroom piloting in spring 2027 and publication targeted for fall 2027.
+
+Covered in the [June 2026 e-newsletter](/community/newsletter/2026-june).

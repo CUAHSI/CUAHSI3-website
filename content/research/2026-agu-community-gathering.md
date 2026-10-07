@@ -17,3 +17,5 @@ At the AGU 2025 Annual Meeting in New Orleans (December 15–19), nine CUAHSI st
 On the evening of December 17, CUAHSI hosted a community gathering at Ernst Café that brought together 164 attendees for informal networking. Later that evening, 29 attendees joined a dedicated Water Prediction Innovators Summer Institute alumni gathering.
 
 The scale of engagement at AGU reflects the breadth of CUAHSI's community reach — from students encountering HydroShare for the first time at the booth to faculty reconnecting with the Summer Institute program they attended years earlier.
+
+Covered in the [January 2026 e-newsletter](/community/newsletter/2026-january).

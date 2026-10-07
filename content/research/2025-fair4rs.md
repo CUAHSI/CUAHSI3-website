@@ -18,3 +18,5 @@ To address this, CUAHSI developed a **meta-driven evaluation framework** to quan
 In collaboration with Arizona State University and the Community Surface Dynamics Modeling System (CSDMS), CUAHSI completed a preliminary analysis of all research models within the HydroShare and CSDMS repositories. The approach leverages a descriptive and extensible metadata standard (Schema.org and Codemeta) that supports translation of metadata across repositories and scientific domains.
 
 FAIR scoring serves as a useful and engaging tool for individuals and groups to improve the reusability of their software and models, while providing valuable insights into the metadata quality of research software to community repositories.
+
+Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).
