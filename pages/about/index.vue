@@ -8,7 +8,7 @@ const timeline = [
   { year: '1992', text: 'NSF-GEO establishes a core program in hydrologic sciences with $2M initial funding' },
   { year: '2001', text: 'CUAHSI incorporated in Washington D.C. with 33 founding member universities' },
   { year: '2003', text: 'Cyberseminar program launched, now 350+ recordings on YouTube' },
-  { year: '2026', text: '25th anniversary: 100+ members, 16,000+ HydroShare users' },
+  { year: '2026', text: '25th anniversary: 96 members, 16,000+ HydroShare users' },
 ]
 </script>
 
@@ -20,7 +20,7 @@ const timeline = [
       lead-class="font-['Hanken_Grotesk'] font-normal text-[17px] leading-[1.6] text-[#3a4d57] max-w-[580px] mb-[24px]">
       <template #kicker>About CUAHSI</template>
       <template #title>Advancing water science through shared infrastructure and community.</template>
-      <template #lead>The Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) is a 501(c)(3) research organization representing 101 U.S. universities and international water science organizations.</template>
+      <template #lead>The Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) is a 501(c)(3) research organization representing 96 U.S. and international universities and water science organizations.</template>
       <div class="flex gap-3 flex-wrap">
         <a href="https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">Download brochure <span class="arr">→</span></a>
         <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">2025 Annual Report <span class="arr">→</span></a>
@@ -81,7 +81,7 @@ const timeline = [
           <div>
             <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.75] text-[#3a4d57] mb-[14px]">CUAHSI was incorporated in June 2001 following recognition of the need for the water science community to organize and extend the national and international research portfolio — particularly to develop shared infrastructure for investigating the behavior and effect of water in large and complex environmental systems.</p>
             <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.75] text-[#3a4d57] mb-[14px]">The path to CUAHSI began two decades earlier. Following a reorganization at NSF in 1984 that discontinued the Hydrology and Hydraulics Program, the community spent years building the case for renewed investment. In 1991, the National Academies published <em>Opportunities in Hydrologic Sciences</em> — widely known as the "blue book" — establishing the case for a coordinated national infrastructure investment in hydrologic science.</p>
-            <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.75] text-[#3a4d57]">2026 marks CUAHSI's 25th anniversary. From 33 founding members to 101 today, the organization has grown alongside the field.</p>
+            <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.75] text-[#3a4d57]">2026 marks CUAHSI's 25th anniversary. From 33 founding members to 96 today, the organization has grown alongside the field.</p>
           </div>
           <div class="flex flex-col gap-0">
             <div v-for="(t, i) in timeline" :key="t.year" class="flex gap-0 pb-[16px]">
@@ -102,7 +102,7 @@ const timeline = [
       <section class="p-[48px_0_60px]">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4 text-[11px]">More about CUAHSI</p>
         <div class="grid grid-cols-[1fr] gap-[14px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
-          <NuxtLink v-for="l in [{t:'Our team',d:'20+ staff and contractors across research, engineering, programs, operations, and communications.',cta:'Meet the team',to:'/about/team'},{t:'Governance',d:'Board of Directors elected by membership, advisory committees, and organizational bylaws.',cta:'View governance',to:'/about/governance'},{t:'Membership',d:'Join a network of 100+ universities and organizations advancing water science together.',cta:'Learn about membership',to:'/about/membership'}]"
+          <NuxtLink v-for="l in [{t:'Our team',d:'20+ staff and contractors across research, engineering, programs, operations, and communications.',cta:'Meet the team',to:'/about/team'},{t:'Governance',d:'Board of Directors elected by membership, advisory committees, and organizational bylaws.',cta:'View governance',to:'/about/governance'},{t:'Membership',d:'Join a network of 96 universities and organizations advancing water science together.',cta:'Learn about membership',to:'/about/membership'}]"
             :key="l.to" :to="l.to" class="card-lift rounded-card flex flex-col gap-2 border border-[rgba(15,33,43,.1)] p-[22px] no-underline">
             <p class="font-['Schibsted_Grotesk'] font-bold text-[16px] leading-[normal] text-navy">{{ l.t }}</p>
             <p class="font-['Hanken_Grotesk'] font-normal text-[13px] leading-[1.55] text-muted flex-1">{{ l.d }}</p>

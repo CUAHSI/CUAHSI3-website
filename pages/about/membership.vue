@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({ title: 'Membership' })
 
-// Canonical member institution list — current as of July 2026, sourced from cuahsi.org/about/about-membership, plus the University of Calgary (joined August 2026).
+// Canonical member institution list — current as of August 2026, as on the legacy page cuahsi.org/about/about-membership (96 institutions: 83 graduate, 6 primarily undergraduate, 5 non-profit, 2 international).
 // The Hire CUAHSI institution lookup (pages/hire-cuahsi/index.vue) should read from this same list;
 // consider extracting to a shared content/members.json if both need to stay in sync going forward.
 const memberInstitutions = [
@@ -13,13 +13,11 @@ const memberInstitutions = [
   { name: 'Clemson University', category: 'gi' },
   { name: 'Colorado School of Mines', category: 'gi' },
   { name: 'Colorado State University', category: 'gi' },
-  { name: 'Cornell University', category: 'gi' },
   { name: 'Drexel University', category: 'gi' },
   { name: 'Duke University', category: 'gi' },
   { name: 'Florida International University', category: 'gi' },
   { name: 'Georgia Institute of Technology', category: 'gi' },
   { name: 'Georgia State University', category: 'gi' },
-  { name: 'Idaho State University', category: 'gi' },
   { name: 'Indiana University', category: 'gi' },
   { name: 'Iowa State University', category: 'gi' },
   { name: 'Johns Hopkins University', category: 'gi' },
@@ -83,7 +81,6 @@ const memberInstitutions = [
   { name: 'University of Tennessee - Knoxville', category: 'gi' },
   { name: 'University of Texas - Arlington', category: 'gi' },
   { name: 'University of Texas - Austin', category: 'gi' },
-  { name: 'University of Utah', category: 'gi' },
   { name: 'University of Vermont', category: 'gi' },
   { name: 'University of Virginia', category: 'gi' },
   { name: 'University of Wisconsin - Madison', category: 'gi' },
@@ -106,10 +103,7 @@ const memberInstitutions = [
   { name: 'RTI International', category: 'nonprofit' },
   { name: 'Stroud Water Research Center', category: 'nonprofit' },
   // International Affiliate Members
-  { name: 'Suez Canal University', category: 'intl' },
   { name: 'University of Calgary', category: 'intl' },   // joined August 2026 (August 2026 e-newsletter, member spotlight)
-  { name: 'University of Ljubljana', category: 'intl' },
-  { name: 'University of Sidi Mohamed ben Abdellah', category: 'intl' },
   { name: 'University of Zurich', category: 'intl' },
 ]
 
@@ -145,7 +139,7 @@ function categoryLabel(key: string) {
       lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[560px] mb-[24px]">
       <template #kicker>About · Membership</template>
       <template #title>Join the water science consortium.</template>
-      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 102 member institutions advancing water science together.</template>
+      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 96 member institutions advancing water science together.</template>
       <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] p-[13px_22px]">Get in touch <span class="arr">→</span></a>
       <template #top><SectionNav section="about" fixed /></template>
     </PageHero>
@@ -179,7 +173,7 @@ function categoryLabel(key: string) {
     <!-- Member institution list -->
     <div class="mx-auto site-container max-w-site pb-[80px]">
       <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
-        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member institutions · as of July 2026</p>
+        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member institutions · as of August 2026</p>
         <input v-model="query" type="text" aria-label="Search member institutions" placeholder="Search institutions…"
           class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[240px]" />
       </div>

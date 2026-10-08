@@ -76,8 +76,8 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           </div>
           <div class="flex gap-[28px] mt-[38px] flex-wrap">
             <div>
-              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">100+</div>
-              <div class="font-mono text-[12px] tracking-[.03em] text-muted">MEMBER UNIVERSITIES</div>
+              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">96</div>
+              <div class="font-mono text-[12px] tracking-[.03em] text-muted">MEMBER INSTITUTIONS</div>
             </div>
             <div class="w-px bg-[rgba(15,33,43,.12)]"></div>
             <div>
