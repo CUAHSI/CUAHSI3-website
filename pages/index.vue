@@ -106,6 +106,9 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <!-- ── Stats band ── -->
     <StatsBand />
 
+    <!-- ── Job board: a slim band, so the way to the jobs is on the front page ── -->
+    <JobsStrip />
+
     <!-- ── Find your path ── -->
     <section class="mx-auto max-w-site p-[84px_40px_20px]">
       <div class="flex justify-between items-end gap-6 mb-9 flex-wrap">
