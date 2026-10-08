@@ -123,7 +123,6 @@ const waysin = [
 
       <!-- Hero -->
       <section class="p-[48px_0_40px] border-b-[0.5px] border-b-[#f3f4f6]">
-                <SectionNav section="community" bare />
         <p class="text-[11px] text-muted font-medium tracking-[.07em] uppercase mb-[12px]">Get involved</p>
         <h1 class="text-[32px] font-medium leading-[1.2] mb-[16px] max-w-[560px]">
           Connect with the water science community

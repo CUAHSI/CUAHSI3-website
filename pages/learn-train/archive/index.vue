@@ -52,7 +52,6 @@ function fmtDate(d: string) {
         A comprehensive record of CUAHSI-run workshops and field training — past and upcoming. Looking for our three flagship structured programs instead?
         <NuxtLink to="/learn-train#programs" class="text-water">See Programs →</NuxtLink>
       </template>
-      <template #top><SectionNav section="learn" fixed class="max-[640px]:-mt-[44px]" /></template>
     </PageHero>
 
     <div class="mx-auto site-container max-w-site pt-[52px] pb-[80px]">

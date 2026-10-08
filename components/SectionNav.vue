@@ -1,14 +1,12 @@
 <script setup lang="ts">
-// The second level of navigation for a section (About, Data & Computing, Learn & Train, Community): one list per
-// section, drawn as a row of pills at the top of the page's banner, above the heading, so a visitor sees the other pages
-// of the section as part of the page and not as a second bar under the header. The pills wrap onto more lines on
-// a phone, so every page of the section is visible without scrolling the row. The header itself is unchanged
-// (five items). (This replaced a row of small grey text tabs at the bottom of the banner, whose last tabs
-// were hidden behind a faint fade on a phone.)
+// The second level of navigation for the About section: a row of pills at the top of the page's banner, above the
+// heading, in the same place on every About page (the banner slot "top", see PageHero). The pills wrap onto more
+// lines on a phone, so every page of the section is visible without scrolling the row. The header itself is
+// unchanged (five items). (Data & Computing, Learn & Train and Community do not use it: Data & Computing links its
+// two sub-pages from its own banner; Learn & Train's overview page links the archive, cyberseminars and programs, but Graduate programs
+// is linked only from the footer; Community is reached from its overview cards.)
 // `fixed`: the page above uses a hard-coded 40px side padding (most pages do), so the row uses the same, to line up with the heading.
-// Without it the row uses the responsive site-container padding (the archive page).
-// `bare`: no container or banner spacing at all, for a page that sets its own width (the Community page).
-const props = defineProps<{ section: 'about' | 'learn' | 'data' | 'community'; fixed?: boolean; bare?: boolean }>()
+const props = defineProps<{ section: 'about'; fixed?: boolean }>()
 const route = useRoute()
 
 type Tab = { t: string; h: string; match?: string; exact?: boolean }
@@ -24,35 +22,6 @@ const SECTIONS: Record<string, { label: string; tabs: Tab[] }> = {
       { t: 'Documents & policies', h: '/about/documents' },
     ],
   },
-  data: {
-    label: 'Data & Computing sections',
-    tabs: [
-      { t: 'Overview', h: '/data-platforms', exact: true },
-      { t: 'Water data portals', h: '/data-platforms/portals' },
-      { t: 'Data management guide', h: '/data-platforms/data-management-guide' },
-    ],
-  },
-  learn: {
-    label: 'Learn & Train sections',
-    tabs: [
-      { t: 'Overview', h: '/learn-train', exact: true },
-      { t: 'Programs', h: '/learn-train#programs', match: '/learn-train/programs' },
-      { t: 'Cyberseminars', h: '/learn-train/cyberseminars' },
-      { t: 'Archive', h: '/learn-train/archive' },
-      { t: 'Graduate programs', h: '/learn-train/graduate-programs' },
-    ],
-  },
-  community: {
-    label: 'Community sections',
-    tabs: [
-      { t: 'Overview', h: '/community', exact: true },
-      { t: 'Events', h: '/community/events' },
-      { t: 'News', h: '/community/news' },
-      { t: 'Newsletter', h: '/community/newsletter' },
-      { t: 'Jobs', h: '/community/jobs' },
-      { t: 'Campus visits', h: '/community/campus-visits' },
-    ],
-  },
 }
 const cfg = computed(() => SECTIONS[props.section])
 function isActive(tab: Tab) {
@@ -65,7 +34,7 @@ function isActive(tab: Tab) {
 <template>
   <!-- in a banner the row sits at the very top, above the heading (slot "top"), so it is in the same place on every page of the section; the
        negative bottom margin takes up some of the 64px of space the banner leaves above its heading -->
-  <div :class="bare ? 'mb-[28px]' : ['mx-auto max-w-site pt-[28px] -mb-[24px]', fixed ? 'px-[40px]' : 'site-container']">
+  <div :class="['mx-auto max-w-site pt-[28px] -mb-[24px]', fixed ? 'px-[40px]' : 'site-container']">
     <nav :aria-label="cfg.label" class="flex flex-wrap gap-[10px]">
       <NuxtLink v-for="tab in cfg.tabs" :key="tab.h" :to="tab.h"
         class="transition-colors font-['Hanken_Grotesk'] text-[14.5px] leading-[normal] no-underline whitespace-nowrap rounded-full border p-[9px_18px]"

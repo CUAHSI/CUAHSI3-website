@@ -31,7 +31,6 @@ watch([selectedSeries, selectedTag], () => { expanded.value = null })
       <template #kicker>Learn &amp; Train · Cyberseminars</template>
       <template #title>350+ free recordings on water science.</template>
       <template #lead>Virtual presentations, panels, and demos from leading water scientists — all free, all archived, many with full transcripts.</template>
-      <template #top><SectionNav section="learn" fixed /></template>
     </PageHero>
 
     <!-- Filters -->
