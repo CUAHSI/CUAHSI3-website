@@ -132,6 +132,7 @@ const waysin = [
           environmental and watershed organizations, and federal and state agencies. Everyone involved in water
           science, water-resources management, or water-resources protection has a place here.
         </p>
+        <SectionNav section="community" bare />
       </section>
 
       <!-- Quote -->

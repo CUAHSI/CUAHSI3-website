@@ -49,6 +49,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
       <template #kicker>Impact</template>
       <template #title>What the community is building, measuring, and discovering.</template>
       <template #lead>Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</template>
+      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <!-- Stats band -->

@@ -42,6 +42,7 @@ function fmtDate(d: string) {
       <template #kicker>Learn &amp; Train · Graduate programs</template>
       <template #title>Find a graduate program in water science.</template>
       <template #lead>Many universities have no hydrology department, which makes it hard to know where to start. This is a starting point: programs by institution and degree. We review each row every year; rows without a date have not been reviewed yet.</template>
+      <template #below><SectionNav section="learn" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-site p-[40px_40px_80px]">
