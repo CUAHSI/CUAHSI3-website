@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({ title: 'Membership' })
 
-// Canonical member institution list — current as of July 2026, sourced from cuahsi.org/about/about-membership.
+// Canonical member institution list — current as of July 2026, sourced from cuahsi.org/about/about-membership, plus the University of Calgary (joined August 2026).
 // The Hire CUAHSI institution lookup (pages/hire-cuahsi/index.vue) should read from this same list;
 // consider extracting to a shared content/members.json if both need to stay in sync going forward.
 const memberInstitutions = [
@@ -107,6 +107,7 @@ const memberInstitutions = [
   { name: 'Stroud Water Research Center', category: 'nonprofit' },
   // International Affiliate Members
   { name: 'Suez Canal University', category: 'intl' },
+  { name: 'University of Calgary', category: 'intl' },   // joined August 2026 (August 2026 e-newsletter, member spotlight)
   { name: 'University of Ljubljana', category: 'intl' },
   { name: 'University of Sidi Mohamed ben Abdellah', category: 'intl' },
   { name: 'University of Zurich', category: 'intl' },
@@ -144,7 +145,7 @@ function categoryLabel(key: string) {
       lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[560px] mb-[24px]">
       <template #kicker>About · Membership</template>
       <template #title>Join the water science consortium.</template>
-      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 101 member institutions advancing water science together.</template>
+      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 102 member institutions advancing water science together.</template>
       <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] p-[13px_22px]">Get in touch <span class="arr">→</span></a>
       <template #top><SectionNav section="about" fixed /></template>
     </PageHero>
