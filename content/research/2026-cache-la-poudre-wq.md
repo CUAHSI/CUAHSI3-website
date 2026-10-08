@@ -8,6 +8,7 @@ tags: [water-quality, high-frequency, HydroShare, open-data, Colorado]
 people_mentioned: []
 partners: [Colorado State University, Radical Open Science Syndicate]
 funding: null
+awards: []
 published: true
 excerpt: A new HydroShare resource from Colorado State's Radical Open Science Syndicate aggregates 15-minute water quality observations from monitoring stations across the Cache la Poudre River watershed, including raw and quality-controlled data, detailed metadata, QA/QC documentation, and reproducible data workflow code.
 ---

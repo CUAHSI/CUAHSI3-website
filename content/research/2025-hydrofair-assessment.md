@@ -8,6 +8,7 @@ tags: [FAIR, HydroShare, DataONE, metadata, open-science, assessment]
 people_mentioned: [lindsay-platt]
 partners: [DataONE]
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: CUAHSI and DataONE completed the first systematic FAIR assessment of HydroShare resources using the MetaDig framework — evaluating all public and published datasets against 52 criteria across Findability, Accessibility, Interoperability, and Reusability. Published resources pass 38–48% of criteria; public resources pass 25–40%, establishing a measurable baseline for future improvement.
 ---

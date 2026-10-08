@@ -8,6 +8,7 @@ tags: [engagement, campus-visits, outreach, universities, HydroShare]
 people_mentioned: [abner-bogan, kimmy-wong, jordan-read]
 partners: [Hamilton College, University of Florida, University of Iowa, Iowa State University, University of Nebraska-Lincoln]
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "After an April engagement summit in Madison, CUAHSI staff identified about 15 targeted outreach efforts and 25 priority institutions with water programs but little engagement, and made campus visits to Hamilton College, the University of Florida, Iowa and Nebraska."
 ---
@@ -27,4 +28,4 @@ Visits made this year:
 - **Iowa State University**, April 16: a visit organized by the university's CUAHSI member representatives, with roundtables with faculty from five departments, a student lunch and a seminar.
 - **University of Nebraska-Lincoln**, April 17: meetings with the university's member representatives and a lunch with faculty and administrators.
 
-To request a visit, see the [campus visits page](/community/campus-visits). The program is supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028).
+To request a visit, see the [campus visits page](/community/campus-visits).

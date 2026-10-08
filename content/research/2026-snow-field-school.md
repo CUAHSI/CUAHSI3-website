@@ -8,6 +8,7 @@ tags: [field-school, snow-hydrology, field-methods, SNOTEL, early-career]
 people_mentioned: [julia-masterman]
 partners: [YMCA of the Rockies]
 funding: null
+awards: [nsf-2535162]
 published: true
 excerpt: Julia Masterman facilitated the 2026 Snow Measurement Field School at Snow Mountain Ranch in Granby, CO (January 5–9), bringing together 25 students and 7 instructors for a week-long progression from snow pit fundamentals to student-designed mini field campaigns, with visits to a SNOTEL site and Fraser Experimental Forest.
 ---

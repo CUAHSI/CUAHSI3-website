@@ -8,6 +8,7 @@ tags: [HydroShare, usage, metrics, cloud-computing, engagement]
 people_mentioned: []
 partners: []
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "Between January and August 2026, an estimated 35,816 visitors downloaded 107,244 files from HydroShare, hundreds of resources were published, and 238 people from at least 98 institutions launched 1,365 cloud computing instances."
 ---
@@ -20,4 +21,4 @@ CUAHSI's counts for January 1 to August 31, 2026 show how [HydroShare](https://w
 - **Cloud computing.** 238 individuals from at least 98 institutions launched 1,365 computing instances across CUAHSI's cloud services.
 - **Help desk.** Staff answered 371 tickets (about 46 a month), 320 of them about publishing, with a peak in April when a collection of NEON resources was published individually.
 
-Across all of CUAHSI's programs and services, more than 5,000 individuals and 120 institutions engaged with CUAHSI in this period, and HydroShare use accounts for about 56% of the weighted engagement score for individuals. The year is not complete, so these figures are not directly comparable with full-year totals for 2024 and 2025. They come from CUAHSI's reporting under [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028).
+Across all of CUAHSI's programs and services, more than 5,000 individuals and 120 institutions engaged with CUAHSI in this period, and HydroShare use accounts for about 56% of the weighted engagement score for individuals. The year is not complete, so these figures are not directly comparable with full-year totals for 2024 and 2025. They come from CUAHSI's reporting to NSF.

@@ -8,6 +8,7 @@ tags: [virtual-university, CVU, graduate-education, data-literacy, inter-institu
 people_mentioned: [julia-masterman]
 partners: [University of Wisconsin-Madison, Utah State University, Virginia Tech, University of Washington, University of Kansas]
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: The Fall 2025 CUAHSI Virtual University enrolled 74 students across nine modules at nine institutions, adding three new instructors and two new institutions to the program — and introducing a new Data Competency talk delivered to six of nine modules to strengthen foundational data literacy across the cohort.
 ---

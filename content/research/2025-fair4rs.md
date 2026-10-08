@@ -7,6 +7,7 @@ category: research
 tags: [FAIR-data, research-software, hydroshare, open-science, metadata]
 people_mentioned: [tony-castronova, irene-garousi-nejad]
 partners: [Arizona State University, Community Surface Dynamics Modeling System]
+awards: [nsf-2103780]
 published: true
 excerpt: CUAHSI developed a meta-driven evaluation framework to quantify how well published research software meets FAIR for Research Software principles, completing a preliminary analysis of all research models within HydroShare and CSDMS repositories.
 ---

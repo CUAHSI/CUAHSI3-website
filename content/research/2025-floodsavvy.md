@@ -8,6 +8,7 @@ tags: [flood-forecasting, national-water-model, community-resilience, cyberinfra
 people_mentioned: [tony-castronova]
 partners: [Northeastern University, NOAA, CIROH]
 funding: "NOAA NA22NWS4320003 via CIROH"
+awards: [ciroh-a22-0257-s001]
 published: true
 excerpt: CUAHSI and the Global Resilience Institute at Northeastern University released FloodSavvy, a web application combining National Water Model predictions with Flood Inundation Mapping to support local resilience planning across six stakeholder communities in Vermont and Missouri.
 ---

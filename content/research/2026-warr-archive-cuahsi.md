@@ -8,6 +8,7 @@ tags: [cyberseminars, rivers, women-in-science, archive]
 people_mentioned: []
 partners: [Penn State University, Colorado State University]
 funding: null
+awards: [nsf-2535162]
 published: true
 excerpt: "CUAHSI now hosts the archive of the Women Advancing River Research webinar series on its YouTube channel and website, and will facilitate the series fully from 2027."
 ---

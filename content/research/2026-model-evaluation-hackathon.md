@@ -8,6 +8,7 @@ tags: [modeling, evaluation, ParFlow, NWM, SUMMA, HydroData, open-science]
 people_mentioned: [danielle-tijerina-kreuzer, irene-garousi-nejad, tony-castronova]
 partners: [Princeton University, University of Arizona]
 funding: null
+awards: [nsf-2410992-princeton-subaward]
 published: true
 excerpt: A three-day hackathon co-organized by CUAHSI brought together hydrologic modelers to co-design an open, community-driven model evaluation framework — successfully evaluating ParFlow-CONUS, NWM, VIC, SUMMA, and iSnowbal outputs against USGS and SNOTEL observations using shared Jupyter workflows.
 ---

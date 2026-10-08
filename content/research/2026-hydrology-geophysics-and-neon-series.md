@@ -8,6 +8,7 @@ tags: [cyberseminars, EarthScope, NEON, geophysics, hydrology]
 people_mentioned: []
 partners: [EarthScope, NEON]
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "CUAHSI's two 2026 cyberseminar series, Integrating Hydrology and Geophysics with EarthScope and Introduction to NEON for Hydrology, held six webinars between January and April and drew 1,111 live and 1,625 archived views by late summer."
 ---
@@ -28,4 +29,4 @@ Between January and August 2026 CUAHSI hosted two cyberseminar series, six webin
 
 Across the six webinars that is 1,111 live views and 1,625 archived views (counts as of the report in September 2026, and archived views keep growing). The NEON series also produced two lasting outcomes: a collection of NEON hydrologic data products published to HydroShare (see [the NEON collection](/about/impact/neon-hydroshare-collection-2026)), and NEON-authored code-lab notebooks contributed to CUAHSI's open learning platform.
 
-The series are supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028). More: [EarthScope](https://www.earthscope.org/) and [NEON](https://www.neonscience.org/).
+More: [EarthScope](https://www.earthscope.org/) and [NEON](https://www.neonscience.org/).

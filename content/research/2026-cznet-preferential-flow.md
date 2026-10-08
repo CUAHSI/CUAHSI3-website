@@ -8,6 +8,7 @@ tags: [CZNet, critical-zone, synthesis, preferential-flow, deep-learning, Powell
 people_mentioned: []
 partners: [CZNet, John Wesley Powell Center for Analysis and Synthesis]
 funding: NSF 2012893 (CZNet Hub)
+awards: [nsf-2012893]
 published: true
 excerpt: A new paper in Earth's Future, led by Bonan Li of Northeast Normal University, uses a deep learning model trained on 33 U.S. sites to show that precipitation characteristics and soil clay content drive preferential flow, with climate projections suggesting it will speed up. The work came from a synthesis project funded by the CZNet Hub at CUAHSI.
 ---
@@ -18,6 +19,6 @@ A new paper from the Critical Zone Collaborative Network (CZNet) Synthesis Worki
 
 The study trains a deep learning model on data from 33 U.S. sites to predict when and how quickly preferential flow occurs. It finds that precipitation characteristics and soil clay content are the key drivers, and climate projections suggest this flow will speed up in the future.
 
-The work was supported through a synthesis project funded by the CZNet Hub, which is housed at CUAHSI and convenes teams of scientists at the John Wesley Powell Center for Analysis and Synthesis to address Critical Zone science questions that cross disciplinary and site boundaries. The Hub is supported by NSF award [2012893](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012893), "Collaborative Research: Network Hub: Enabling, Supporting, and Communicating Critical Zone Research" (September 2020 to August 2027), awarded to CUAHSI.
+The work was supported through a synthesis project funded by the CZNet Hub, which is housed at CUAHSI and convenes teams of scientists at the John Wesley Powell Center for Analysis and Synthesis to address Critical Zone science questions that cross disciplinary and site boundaries.
 
 Source: the August 2026 e-newsletter.

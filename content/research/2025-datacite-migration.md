@@ -8,6 +8,7 @@ tags: [HydroShare, DOI, DataCite, NSF-PAR, FAIR, metadata, open-science]
 people_mentioned: [lindsay-platt, martin-seul]
 partners: [DataCite, Crossref]
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: "HydroShare completed migration of all DOI registration from Crossref to DataCite — a registry better suited for data publication — with a direct benefit for researchers: NSF Public Access Repository submissions can now be auto-populated from a HydroShare DOI, importing author, title, and abstract without manual re-entry."
 ---

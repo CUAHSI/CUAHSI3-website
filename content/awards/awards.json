@@ -1,0 +1,87 @@
+[
+  {
+    "id": "nsf-2535162",
+    "funder": "NSF",
+    "number": "2535162",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162",
+    "text": "The work is supported by NSF award {number}, \"Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support\" (January 2026 to December 2028)."
+  },
+  {
+    "id": "nsf-1849458",
+    "funder": "NSF",
+    "number": "1849458",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1849458",
+    "text": "The work is supported by NSF award {number}, \"CUAHSI: Promoting Discovery in Water Science Through Data, Modeling, and Community Services\" (June 2019 to July 2027)."
+  },
+  {
+    "id": "nsf-2322510",
+    "funder": "NSF",
+    "number": "2322510",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2322510",
+    "text": "The work is supported by NSF award {number}, \"Synthesizing hydrologic process knowledge to determine global drivers of dominant processes\" (awarded to San Diego State University; November 2023 to October 2027)."
+  },
+  {
+    "id": "nsf-1835818",
+    "funder": "NSF",
+    "number": "1835818",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1835818",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Framework: Software: NSCI: Computational and data innovation implementing a national community hydrologic modeling framework for scientific discovery\" (October 2018 to September 2024)."
+  },
+  {
+    "id": "nsf-2012893",
+    "funder": "NSF",
+    "number": "2012893",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012893",
+    "text": "The CZNet Hub is supported by NSF award {number}, \"Collaborative Research: Network Hub: Enabling, Supporting, and Communicating Critical Zone Research\" (September 2020 to August 2027), awarded to CUAHSI."
+  },
+  {
+    "id": "nsf-2103780",
+    "funder": "NSF",
+    "number": "2103780",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2103780",
+    "text": "The work is supported by NSF award {number}, \"Frameworks: Collaborative Research: Integrative Cyberinfrastructure for Next-Generation Modeling Science\" (October 2021 to September 2027)."
+  },
+  {
+    "id": "nsf-2410992-princeton-subaward",
+    "funder": "NSF",
+    "number": "2410992",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2410992",
+    "text": "The work is supported by a CUAHSI subaward from Princeton University under NSF award {number}, \"Collaborative Research: Frameworks: Building a national integrated watershed evaluation framework: A community platform to improve model evaluation and decision making\" (September 2024 to August 2028)."
+  },
+  {
+    "id": "ciroh-a22-0306-s004",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A22-0306-S004, \"CUAHSI HydroShare Modernization\"."
+  },
+  {
+    "id": "ciroh-a22-0257-s001",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A22-0257-S001, \"An Analysis and Demonstration of the National Water Model's Applicability to Community Resilience Planning\"."
+  },
+  {
+    "id": "ciroh-a23-0274-s002",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A23-0274-S002, \"Hydrologic Process Synthesis Across Diverse Landscapes: Providing Theoretical Support for Spatially Varying Model Formulations in Future Instantiations of the National Water Model\"."
+  },
+  {
+    "id": "ciroh-a23-0230-s002",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A23-0230-S002, \"HydroLearn Training Workshop and Hackathon Learning Module Development to Support CIROH Diverse Education and Workforce Development\"."
+  },
+  {
+    "id": "ciroh-hydrolearn-2024-2025",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subawards A23-0230-S002, \"HydroLearn Training Workshop and Hackathon Learning Module Development to Support CIROH Diverse Education and Workforce Development\" (the 2024 workshop), and A24-0507-S002, \"Advancing and Sustaining HydroLearn to Support CIROH Professional Training Needs\" (the 2025 workshop)."
+  },
+  {
+    "id": "ciroh-a25-0364-s008",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A25-0364-S008, \"Summer Institute 26-27\"."
+  }
+]
