@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// The second level of navigation for the About section: a row of pills at the top of the page's banner, above the
-// heading, in the same place on every About page (the banner slot "top", see PageHero). The pills wrap onto more
+// The second level of navigation for the About section: a quiet row of small links at the top of the page's banner, above the
+// heading, in the same place on every About page (the banner slot "top", see PageHero). The links wrap onto more
 // lines on a phone, so every page of the section is visible without scrolling the row. The header itself is
 // unchanged (five items). (Data & Computing, Learn & Train and Community do not use it: Data & Computing links its
 // two sub-pages from its own banner; Learn & Train's overview page links the archive, cyberseminars and programs, but Graduate programs
@@ -35,12 +35,12 @@ function isActive(tab: Tab) {
   <!-- in a banner the row sits at the very top, above the heading (slot "top"), so it is in the same place on every page of the section; the
        negative bottom margin takes up some of the 64px of space the banner leaves above its heading -->
   <div :class="['mx-auto max-w-site pt-[28px] -mb-[24px]', fixed ? 'px-[40px]' : 'site-container']">
-    <nav :aria-label="cfg.label" class="flex flex-wrap gap-[10px]">
+    <nav :aria-label="cfg.label" class="flex flex-wrap gap-[4px_4px] -ml-[10px]">
       <NuxtLink v-for="tab in cfg.tabs" :key="tab.h" :to="tab.h"
-        class="transition-colors font-['Hanken_Grotesk'] text-[14.5px] leading-[normal] no-underline whitespace-nowrap rounded-full border p-[9px_18px]"
+        class="transition-colors font-['Hanken_Grotesk'] text-[13.5px] leading-[normal] no-underline whitespace-nowrap rounded-full p-[6px_10px]"
         :class="isActive(tab)
-          ? 'font-semibold bg-navy text-white border-navy'
-          : 'font-medium bg-white text-navy border-[rgba(15,33,43,.4)] hover:border-water hover:text-water'"
+          ? 'font-semibold text-navy bg-[rgba(15,33,43,.08)]'
+          : 'font-medium text-[#4b5d68] hover:text-navy hover:bg-[rgba(15,33,43,.05)]'"
         :aria-current="isActive(tab) ? 'page' : undefined">
         {{ tab.t }}
       </NuxtLink>

@@ -46,7 +46,6 @@ const sections = computed(() => [
     <PageHero container-class="mx-auto max-w-site p-[64px_40px_52px]"
       title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[14px_0_14px]"
       lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[600px] mb-[18px]">
-      <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" class="text-muted">About</NuxtLink> / Documents &amp; policies</p></template>
       <template #kicker>About · Documents &amp; policies</template>
       <template #title>Our policies, reports and record.</template>
       <template #lead>The documents that say how CUAHSI works and what it has done, in one place.</template>
