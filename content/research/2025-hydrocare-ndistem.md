@@ -8,6 +8,7 @@ tags: [CARE, indigenous-data, equity, NDiSTEM, fellowship, data-governance]
 people_mentioned: [abner-bogan, martin-seul]
 partners: [NDiSTEM Conference]
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: "Two HydroCARE Travel Fellows attended the National Diversity in STEM (NDiSTEM) Conference in Columbus and participated in CUAHSI's workshop on data management — providing feedback that surfaced a central theme: trust-building must come before technical solutions, and CARE-aligned engagement requires long-term commitment to Indigenous-led initiatives."
 ---

@@ -8,6 +8,7 @@ tags: [HydroShare, AI, data-access, metadata, schema.org]
 people_mentioned: []
 partners: []
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "Downloads of HydroShare data by self-identified AI agents rose from 29 between March and December 2025 to 936 between January and August 2026, and the number of agent families active each month grew from one to seven, shaping where CUAHSI invests."
 ---
@@ -21,4 +22,4 @@ CUAHSI is using the signal to guide where it invests:
 - **Resource pages built from schemas,** so the platform can adapt to new self-describing data types without custom development.
 - **Reassessing an R client.** CUAHSI paused development of a new R client after finding no clear evidence of demand, and noted that researchers increasingly turn to AI coding assistants, which tend to give more reliable help in Python than in R.
 
-CUAHSI is also leading a community conversation on how AI changes water science and the skills it needs, including a Water Data Forum panel on November 4, 2026. The work is supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028).
+CUAHSI is also leading a community conversation on how AI changes water science and the skills it needs, including a Water Data Forum panel on November 4, 2026.

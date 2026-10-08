@@ -8,6 +8,7 @@ tags: [HIF, fellowship, hydroinformatics, data-rescue, machine-learning, early-c
 people_mentioned: []
 partners: []
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: CUAHSI awarded eight HydroInformatics Innovation Fellowships in 2025, selected from 28 applications across 23 universities — funding projects spanning a continental streamflow database for AI model benchmarking, AI-assisted rescue of California water records, a community soil moisture database for global analysis, and open-source tools for hydrologic network design and flood exposure mapping.
 ---

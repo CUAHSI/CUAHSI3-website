@@ -8,6 +8,7 @@ tags: [spatial-modeling, stakeholder-engagement, workshop, early-career, hydrolo
 people_mentioned: []
 partners: [Indiana University-Bloomington, Northeastern University]
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: CUAHSI co-organized a two-day workshop in Nahant, Massachusetts (August 18–19, 2025) that drew 68 applicants for 15 spots — helping early-career researchers integrate spatial and hydrologic sciences for modeling and engage stakeholders in designing model outcomes that are meaningful to real-world users.
 ---

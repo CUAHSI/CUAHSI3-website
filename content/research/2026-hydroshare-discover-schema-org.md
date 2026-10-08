@@ -8,6 +8,7 @@ tags: [HydroShare, discovery, schema.org, metadata, FAIR]
 people_mentioned: []
 partners: [DataONE]
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "CUAHSI released a new HydroShare Discover interface in the second quarter of 2026, built on schema.org metadata that is generated automatically for each resource, and extended that metadata toward a DataCite-based profile ahead of a new FAIRness baseline scan."
 ---
@@ -21,4 +22,4 @@ Behind it:
 - **A new baseline scan.** The report records a rescan of HydroShare resources by DataONE, described as completed at the end of the third quarter, to establish a FAIRness baseline that later efforts such as the data publishing cohorts can be measured against. The baseline itself is to be completed in the fourth quarter.
 - **A prototype redesigned resource landing page** generated from the same metadata and schema, so supporting a different domain's metadata means changing the schema rather than rewriting the page. It was previewed at the June 24 Virtual Open House.
 
-The earlier assessment is described in [the first FAIR assessment of HydroShare](/about/impact/hydrofair-fair-assessment-2025). The work is supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028); the [schema.org](https://schema.org/) vocabulary is a community standard, and [DataONE](https://www.dataone.org/) provides the MetaDig framework.
+The earlier assessment is described in [the first FAIR assessment of HydroShare](/about/impact/hydrofair-fair-assessment-2025). The [schema.org](https://schema.org/) vocabulary is a community standard, and [DataONE](https://www.dataone.org/) provides the MetaDig framework.

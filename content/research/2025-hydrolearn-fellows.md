@@ -8,6 +8,7 @@ tags: [HydroLearn, CIROH, education, water-prediction, module-development, fello
 people_mentioned: [irene-garousi-nejad]
 partners: [CIROH, University of Alabama, HydroLearn]
 funding: NOAA Cooperative Institute Program (NA22NWS4320003)
+awards: [ciroh-hydrolearn-2024-2025]
 published: true
 excerpt: HydroLearn Fellows from two CIROH-funded workshops reflect on how the platform is reshaping water science education — with CUAHSI staff Irene Garousi-Nejad among the contributors developing modules at the intersection of hydroinformatics, snow modeling, and water prediction.
 ---
@@ -36,4 +37,4 @@ Most Fellows plan to stay engaged with HydroLearn, continuing to build modules t
 
 ---
 
-*This work was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. Additional details about the [2024](https://ciroh.ua.edu/research-project/hydrolearn-training-workshop-and-hackathon-learning-module-development-to-support-ciroh-diverse-education-and-workforce-development/) and [2025](https://ciroh.ua.edu/research-project/advancing-and-sustaining-hydrolearn-to-support-ciroh-professional-training-needs/) workshops are on the CIROH website.*
+*Additional details about the [2024](https://ciroh.ua.edu/research-project/hydrolearn-training-workshop-and-hackathon-learning-module-development-to-support-ciroh-diverse-education-and-workforce-development/) and [2025](https://ciroh.ua.edu/research-project/advancing-and-sustaining-hydrolearn-to-support-ciroh-professional-training-needs/) workshops are on the CIROH website.*

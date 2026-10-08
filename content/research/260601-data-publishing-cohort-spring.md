@@ -8,6 +8,7 @@ tags: [data-publishing, FAIR, HydroShare, cohort, training, open-science]
 people_mentioned: []
 partners: []
 funding: NSF EAR-2535162
+awards: [nsf-2535162]
 published: true
 excerpt: CUAHSI's second Data Publishing Program cohort — Get Your Data Across the Finish Line — brought together 20 participants from 20 institutions across career stages to build out HydroShare resources over six sessions, with peer review and one-on-one coaching support.
 ---

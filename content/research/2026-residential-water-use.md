@@ -8,6 +8,7 @@ tags: [HydroShare, water-use, residential, open-data, machine-learning]
 people_mentioned: []
 partners: []
 funding: null
+awards: []
 published: true
 excerpt: A HydroShare resource supporting the paper on indoor residential water use publishes datasets, code, and modeling results that disentangle the relative contributions of fixture efficiency and household behavior to water consumption across more than 33,000 single-family households throughout the US.
 ---

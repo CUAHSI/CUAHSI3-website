@@ -8,6 +8,7 @@ tags: [AGU, community-building, conferences, hydroshare, water-prediction]
 people_mentioned: []
 partners: [American Geophysical Union]
 funding: null
+awards: [nsf-1849458]
 published: true
 excerpt: At AGU 2025 in New Orleans, nine CUAHSI staff contributed to 18 presentations and hosted a community gathering that drew 164 attendees — the CUAHSI booth featured live HydroShare demos, a global institutional map, and an exhibit hall tour stop for data management.
 ---

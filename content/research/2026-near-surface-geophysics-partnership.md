@@ -8,6 +8,7 @@ tags: [geophysics, partnership, EarthScope, workshop, community-input]
 people_mentioned: [jordan-read, julia-masterman]
 partners: [EarthScope, NHERI, CTEMPS, OpenTopography, AGU]
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "After a March 2026 strategy meeting with EarthScope, NHERI, CTEMPS and OpenTopography, CUAHSI helped plan the August 25 and 26 Near-Surface Geophysics Community Input Workshop in Albuquerque, which drew about 91 attendees."
 ---
@@ -18,4 +19,4 @@ That meeting led to the [2026 Near-Surface Geophysics Community Input Workshop](
 
 The workshop brought researchers, educators and the National Geophysical Facility together to assess gaps and coordination opportunities across near-surface geophysics research and education. Its outcomes will be captured in a forthcoming workshop report. Discussions pointed to practical coordination between the organizations, such as referring community members to each other's training and educational resources.
 
-Earlier in the year CUAHSI and the EarthScope-operated National Geophysical Facility ran the joint [Integrating Hydrology and Geophysics webinar series](/about/impact/hydrology-geophysics-and-neon-series-2026). CUAHSI's part is supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028); see also [the workshop page on CUAHSI's site](https://www.cuahsi.org/events/2026-near-surface-geophysics-community-input-workshop).
+Earlier in the year CUAHSI and the EarthScope-operated National Geophysical Facility ran the joint [Integrating Hydrology and Geophysics webinar series](/about/impact/hydrology-geophysics-and-neon-series-2026). CUAHSI's part is supported by the award named below. See also [the workshop page on CUAHSI's site](https://www.cuahsi.org/events/2026-near-surface-geophysics-community-input-workshop).

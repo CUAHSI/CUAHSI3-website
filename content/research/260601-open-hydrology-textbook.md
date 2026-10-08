@@ -8,6 +8,7 @@ tags: [open-education, textbook, Water-Content-Portal, hydrology-curriculum, VIV
 people_mentioned: []
 partners: [Virginia Tech, William & Mary, Lafayette College, VIVA Open Education]
 funding: VIVA Open Education grant
+awards: []
 published: true
 excerpt: Backed by a VIVA Open Education grant, a team of co-editors from Virginia Tech, William & Mary, and Lafayette College is writing an openly licensed introductory hydrology textbook with ten institutions already committed to adopting it — CUAHSI will host a free interactive HTML edition through its Open Learning initiatives.
 ---

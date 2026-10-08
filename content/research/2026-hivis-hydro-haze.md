@@ -8,6 +8,7 @@ tags: [HydroShare, streamgages, machine-learning, Alaska, image-quality, open-da
 people_mentioned: []
 partners: [USGS]
 funding: null
+awards: []
 published: true
 excerpt: A HydroShare dataset of USGS streamgage camera images from nine Alaska stations documents image quality issues caused by harsh environmental conditions, using diffusion-leveraged GAN-based dehazing — highlighted by CUAHSI as a model of transparent data documentation, quality categorization, and reproducibility.
 ---

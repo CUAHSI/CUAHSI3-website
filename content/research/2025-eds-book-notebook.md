@@ -8,6 +8,7 @@ tags: [reproducibility, R, open-science, hurricane, data-pipelines, EDS-book]
 people_mentioned: [abner-bogan, lindsay-platt]
 partners: [Environmental Data Science Book]
 funding: null
+awards: [nsf-1849458]
 published: true
 excerpt: Abner Bogan and Lindsay Platt published the first hydrology-focused notebook in the Environmental Data Science E-Book — a reproducible hurricane data visualization built with the R package targets, demonstrating accessible and powerful data pipelining workflows using multi-agency water data.
 ---

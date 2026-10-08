@@ -8,6 +8,7 @@ tags: [indigenous-data-sovereignty, CARE, data-governance, equity]
 people_mentioned: [kimmy-wong]
 partners: []
 funding: null
+awards: [nsf-2535162]
 published: true
 excerpt: CUAHSI Environmental Data Science Fellow Kimmy Wong attended the U.S. Indigenous Data Sovereignty & Governance Summit in Tucson to better understand the data needs of Indigenous communities and the CARE Maturity Model — informing how CUAHSI approaches data governance and equitable data infrastructure.
 ---

@@ -8,6 +8,7 @@ tags: [data-publishing, FAIR, HydroShare, cohort, training, open-science]
 people_mentioned: [lindsay-platt, kimmy-wong]
 partners: []
 funding: NSF EAR-1849458
+awards: [nsf-1849458]
 published: true
 excerpt: CUAHSI piloted its first Data Publishing Cohort — a three-week structured program with five webinar sessions on metadata, file organization, and cloud computing, plus optional one-on-one consulting and a small participation stipend — supporting 10 selected researchers in preparing high-quality, FAIR data for publication in HydroShare.
 ---

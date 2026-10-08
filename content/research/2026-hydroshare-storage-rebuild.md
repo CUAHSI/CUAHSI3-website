@@ -8,6 +8,7 @@ tags: [HydroShare, cloud, storage, open-source, sustainability]
 people_mentioned: []
 partners: [Utah State University]
 funding: "NSF EAR-2535162"
+awards: [nsf-2535162]
 published: true
 excerpt: "When MinIO ended development of its community edition, the object storage software under HydroShare, CUAHSI rebuilt quota management, external storage and direct S3 access on Google Cloud Storage, removing a component that accounted for roughly a quarter of HydroShare's compute costs, and the effect on costs is still being measured."
 ---
@@ -21,4 +22,4 @@ What changed:
 - **MinIO was replaced**, which removes a component that accounted for roughly a quarter of HydroShare's compute costs. CUAHSI has built a cost-tracking dashboard and will report the trend against a baseline once it is complete. The same work supports the external storage mounts piloted with the Cooperative Institute for Research to Operations in Hydrology (CIROH).
 - **Operations stayed stable.** HydroShare had five minor releases through August 2026, backups ran on schedule, and 351 resources were published between January 1 and August 31, 2026. The full application was deployed on Cloud Run, a managed serverless platform, on September 29, 2026, instead of self-managed Kubernetes, and CUAHSI will evaluate the cost savings with daily data after the move.
 
-CUAHSI led the work, in collaboration with Utah State University developers, who contributed through a subaward and code review. HydroShare's code and issues are tracked publicly on [GitHub](https://github.com/hydroshare/hydroshare). It was supported by [NSF award 2535162](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2535162), "Sustained Resources: Advancing Water Science Through Integrated Water Data Management and Community Support" (January 2026 to December 2028).
+CUAHSI led the work, in collaboration with Utah State University developers, who contributed through a subaward and code review. HydroShare's code and issues are tracked publicly on [GitHub](https://github.com/hydroshare/hydroshare).

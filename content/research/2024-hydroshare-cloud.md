@@ -7,6 +7,7 @@ category: data-infrastructure
 tags: [hydroshare, cloud-computing, cyberinfrastructure, open-science]
 people_mentioned: [tony-castronova, jordan-read, martin-seul]
 funding: "NSF EAR-1849458, NOAA NA22NWS4320003"
+awards: [nsf-1849458, ciroh-a22-0306-s004]
 published: true
 excerpt: CUAHSI completed migration of HydroShare to a modern commercial cloud environment, adopting containerized services orchestrated with Kubernetes, infrastructure-as-code deployments, and automated CI/CD pipelines — improving scalability, security, and long-term sustainability.
 ---

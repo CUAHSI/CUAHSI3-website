@@ -8,6 +8,7 @@ tags: [NEON, HydroShare, data-discovery, ecology, hydrology]
 people_mentioned: []
 partners: [National Ecological Observatory Network]
 funding: null
+awards: [nsf-2535162]
 published: true
 excerpt: A new HydroShare collection makes NEON hydrologic data products discoverable alongside water science datasets for the first time — one resource per NEON site, covering observational, instrumented, and remote sensing methods, developed to support the CUAHSI Introduction to NEON for Hydrology cyberseminar series.
 ---

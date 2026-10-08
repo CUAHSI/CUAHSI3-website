@@ -7,6 +7,7 @@ category: cyberinfrastructure
 tags: [national-water-model, parflow, cloud-computing, hydrologic-modeling, cyberinfrastructure]
 people_mentioned: [tony-castronova]
 funding: "NSF award 1835818"
+awards: [nsf-1835818]
 published: true
 excerpt: CUAHSI upgraded and expanded its Data Subsetter service, enabling researchers to work with broader geographic regions and multiple versions of the National Water Model and ParFlow-CONUS without requiring extensive local computational resources.
 ---

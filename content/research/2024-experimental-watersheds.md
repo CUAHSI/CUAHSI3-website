@@ -7,6 +7,7 @@ category: research
 tags: [synthesis, experimental-watersheds, open-science, community-data]
 partners: [San Diego State University]
 funding: "NSF award 2322510"
+awards: [nsf-2322510]
 published: true
 excerpt: CUAHSI supported development of a community database linking hydrologic process knowledge from hundreds of experimental watersheds, standardizing metadata to enable cross-site comparisons and a prototype web application for community discovery.
 ---
@@ -17,4 +18,4 @@ By standardizing metadata and linking observations from diverse sites, this capa
 
 This work helps unify hydrologic knowledge and fosters large-scale collaborations that address pressing water challenges. It represents CUAHSI's commitment to making distributed scientific knowledge discoverable and reusable across the water science community.
 
-The initiative is supported by NSF award [2322510](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2322510), "Synthesizing hydrologic process knowledge to determine global drivers of dominant processes" (San Diego State University). Covered in the [CUAHSI 2024 Annual Report](/documents/annual-reports/annual-report-2024.pdf).
+Covered in the [CUAHSI 2024 Annual Report](/documents/annual-reports/annual-report-2024.pdf).

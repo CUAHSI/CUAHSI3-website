@@ -8,6 +8,7 @@ tags: [data-literacy, community-engagement, K-12, open-data, equity]
 people_mentioned: [abner-bogan]
 partners: [Syracuse City School District, City of Syracuse]
 funding: null
+awards: [nsf-2535162]
 published: true
 excerpt: CUAHSI Research Analyst Abner Bogan has been volunteering since January with the Data Warriors program in Syracuse, NY, mentoring high school students who investigated inequities in municipal snow removal services — a project whose findings were presented to the City of Syracuse and are now featured on the City's open data portal.
 ---
