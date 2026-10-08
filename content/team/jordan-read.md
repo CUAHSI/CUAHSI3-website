@@ -66,7 +66,7 @@ The full list is on the ORCID (iD) and Scholar records, linked at the top of thi
 
 ## Tools and visualizations
 
-**Software:** [geoknife](https://github.com/DOI-USGS/geoknife), [laketemps](https://github.com/GLEON/laketemps), [glmtools](https://github.com/GLEON/glmtools), [GLM3r](https://github.com/GLEON/GLM3r), [LakeEnsemblR](https://github.com/aemon-j/LakeEnsemblR) and [scipiper](https://github.com/DOI-USGS/scipiper) (lead author or co-author).
+**Software:** [geoknife](https://github.com/DOI-USGS/geoknife), [laketemps](https://github.com/GLEON/laketemps), [glmtools](https://github.com/GLEON/glmtools), [GLM3r](https://github.com/GLEON/GLM3r), [LakeEnsemblR](https://github.com/aemon-j/LakeEnsemblR), [sbtools](https://github.com/DOI-USGS/sbtools) and [scipiper](https://github.com/DOI-USGS/scipiper) (lead author or co-author).
 
 **USGS data visualizations:**
 
