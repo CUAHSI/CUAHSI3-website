@@ -10,12 +10,12 @@ partners: [Princeton University, University of Arizona]
 funding: null
 awards: [nsf-2410992-princeton-subaward]
 published: true
-excerpt: A three-day hackathon co-organized by CUAHSI brought together hydrologic modelers to co-design an open, community-driven model evaluation framework — successfully evaluating ParFlow-CONUS, NWM, VIC, SUMMA, and iSnowbal outputs against USGS and SNOTEL observations using shared Jupyter workflows.
+excerpt: A three-day hackathon co-organized by CUAHSI brought together hydrologic modelers to co-design an open, community-driven model evaluation framework, successfully evaluating ParFlow-CONUS, NWM, VIC, SUMMA, and iSnowbal outputs against USGS and SNOTEL observations using shared Jupyter workflows.
 ---
 
 In late March 2026, CUAHSI research team members Danielle Tijerina-Kreuzer, Irene Garousi-Nejad, and Tony Castronova co-organized the National Model Evaluation Hackathon at Princeton University in collaboration with researchers at Princeton and the University of Arizona.
 
-The event brought together hydrologic modelers to co-design an open evaluation framework built on interoperable, community-accessible tools. Participants used Jupyter Notebook workflows leveraging the HydroData data catalog API to evaluate model outputs — including ParFlow-CONUS and the National Water Model — against observational datasets such as USGS streamflow records and SNOTEL snow data.
+The event brought together hydrologic modelers to co-design an open evaluation framework built on interoperable, community-accessible tools. Participants used Jupyter Notebook workflows that use the HydroData data catalog API to evaluate model outputs, including ParFlow-CONUS and the National Water Model, against observational datasets such as USGS streamflow records and SNOTEL snow data.
 
 Key outcomes included the successful evaluation of streamflow from a participant's VIC model, initial integrations of SUMMA and iSnowbal for snow output evaluation, and strong community interest in continuing to develop a shared framework that works across diverse models, datasets, and scientific questions.
 

@@ -10,12 +10,12 @@ partners: [University of Pittsburgh, NASA]
 funding: CUAHSI HydroInformatics Innovation Fellowship; NASA FINESST24
 awards: [nsf-1849458]
 published: true
-excerpt: Punwath Prum (PhD candidate, University of Pittsburgh), a CUAHSI HIF awardee, used his fellowship to develop a harmonization algorithm and create the first global coastal surface reflectance database using Landsat data — work that led directly to a NASA FINESST24 award and presentations at AGU and ASLO. The dataset is deposited in HydroShare pending peer review.
+excerpt: Punwath Prum (PhD candidate, University of Pittsburgh), a CUAHSI HIF awardee, used his fellowship to develop a harmonization algorithm and create the first global coastal surface reflectance database using Landsat data, work that led directly to a NASA FINESST24 award and presentations at AGU and ASLO. The dataset is deposited in HydroShare pending peer review.
 ---
 
 Punwath Prum, a PhD candidate in the Department of Geology and Environmental Science at the University of Pittsburgh, received a CUAHSI HydroInformatics Innovation Fellowship (HIF) to pursue research on tracking global water quality changes in coastal rivers and estuaries using Landsat satellite data.
 
-The HIF enabled Prum to develop a harmonization algorithm that reconciles Landsat data across sensor generations and created the first global coastal surface reflectance database from that harmonized data — a methodological contribution that makes long-term, large-scale water quality analysis possible in coastal environments that have historically been difficult to monitor from space.
+The HIF enabled Prum to develop a harmonization algorithm that reconciles Landsat data across sensor generations and created the first global coastal surface reflectance database from that harmonized data: a methodological contribution that makes long-term, large-scale water quality analysis possible in coastal environments that have historically been difficult to monitor from space.
 
 The work led directly to a NASA FINESST24 award and invitations to present findings at AGU and ASLO. The dataset has been deposited in HydroShare and will be made publicly accessible following completion of peer review of the associated manuscript.
 
