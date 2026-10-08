@@ -24,6 +24,8 @@ const typeFilters = computed(() => [
 ])
 const activeFilter = ref('all')
 const showPast = ref(false)
+// A chip for faculty or temporary can disappear (when the expired listings are hidden again); fall back to "All types" so the list is not left empty with no chip selected.
+watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilter.value = 'all' })
 
 // The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
 // time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
@@ -123,19 +125,24 @@ const typeColors: Record<string, {bg: string; text: string}> = {
   temporary:               { bg: '#ECFEFF', text: '#0E7490' },
 }
 
-// "via Josh's Water Jobs" is a condition of Josh's permission to list his postings. Link to the
-// posting's page on his site: source_url when the agent wrote one, else url if it already points there.
-function isJwjUrl(u: unknown): u is string {
+// Reposted listings carry a visible credit ("via Josh's Water Jobs", "via AGU Career Center") that links to
+// the posting on the source site: source_url when the agent wrote one, else url if it already points there.
+const CREDITS: Record<string, { name: string; host: string }> = {
+  joshswaterjobs: { name: "Josh's Water Jobs", host: 'joshswaterjobs.com' },
+  agu: { name: 'AGU Career Center', host: 'findajob.agu.org' },
+}
+function onHost(u: unknown, host: string): u is string {
   if (typeof u !== 'string') return false
   try {
     const x = new URL(u)
-    return (x.protocol === 'https:' || x.protocol === 'http:') && (x.hostname === 'joshswaterjobs.com' || x.hostname.endsWith('.joshswaterjobs.com'))
+    return (x.protocol === 'https:' || x.protocol === 'http:') && (x.hostname === host || x.hostname.endsWith('.' + host))
   } catch { return false }
 }
-function jwjLink(job: any): string | null {
-  if (job.source !== 'joshswaterjobs') return null
-  if (isJwjUrl(job.source_url)) return job.source_url
-  return isJwjUrl(job.url) ? job.url : null
+function credit(job: any): { name: string; href: string } | null {
+  const c = CREDITS[job.source]
+  if (!c) return null
+  if (onHost(job.source_url, c.host)) return { name: c.name, href: job.source_url }
+  return onHost(job.url, c.host) ? { name: c.name, href: job.url } : null
 }
 
 function typeStyle(type: string) {
@@ -220,8 +227,8 @@ function daysUntil(d: string) {
                     {{ t.replace(/-/g,' ') }}
                   </span>
                 </div>
-                <p v-if="jwjLink(job)" class="text-[11px] text-muted mt-[8px]">
-                  via <a :href="jwjLink(job)!" target="_blank" rel="noopener" class="relative z-10 underline text-inherit">Josh's Water Jobs</a>
+                <p v-if="credit(job)" class="text-[11px] text-muted mt-[8px]">
+                  via <a :href="credit(job)!.href" target="_blank" rel="noopener" class="relative z-10 underline text-inherit">{{ credit(job)!.name }}</a>
                 </p>
               </div>
               <span aria-hidden="true" class="text-[13px] text-[#d1d5db] shrink-0 pt-[2px]">↗</span>
