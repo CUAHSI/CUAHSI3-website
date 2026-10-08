@@ -20,7 +20,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
     <!-- Utility bar (hidden on mobile) -->
     <div class="bg-navy hidden md:block text-[#aecbe0]">
       <div class="mx-auto flex items-center justify-between site-container max-w-site h-[36px]">
-        <span class="font-mono text-[11px] tracking-[.04em] truncate">An NSF-supported consortium · advancing water science since 2001</span>
+        <span class="font-mono text-[11px] tracking-[.04em] truncate">Supported by NSF · advancing water science since 2001</span>
         <div class="flex gap-[22px] flex-none font-['Hanken_Grotesk'] font-medium text-[12.5px] leading-[normal]">
           <NuxtLink to="/community/jobs" class="text-white hover:underline transition-colors">Jobs</NuxtLink>
           <NuxtLink to="/support" class="hover:text-white transition-colors">Support CUAHSI</NuxtLink>
