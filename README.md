@@ -64,7 +64,7 @@ pages/
 ├── about/
 │   ├── index.vue                          About hub (mission, history, what we do)
 │   ├── governance.vue                     Board and advisory committees
-│   ├── membership.vue                     Member roster (101 institutions, searchable/filterable)
+│   ├── membership.vue                     Member roster (96 institutions, searchable/filterable)
 │   ├── impact/
 │   │   ├── index.vue                      Highlights index (category + year filters)
 │   │   └── [slug].vue                     Individual highlight detail
@@ -259,13 +259,25 @@ If a page you're editing still has raw `grid-template-columns` in a `style` attr
 ```
 scripts/
 ├── download-team-photos.mjs     Downloads headshots for staff with photo: null
-└── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminars
+├── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminars
+└── newsletter-extract.mjs       Collects what a newsletter issue could draw on for one month (read-only)
 ```
 
 **Team photos:**
 ```bash
 node scripts/download-team-photos.mjs
 ```
+
+**Newsletter extraction** (read-only; drafts nothing, writes nothing under `content/`):
+```bash
+node scripts/newsletter-extract.mjs --month 2026-09                 # Markdown to stdout
+node scripts/newsletter-extract.mjs --month 2026-09 --format json --out bundle.json
+node scripts/newsletter-extract.mjs --month 2026-09 --as-of 2026-10-06   # fix the "today" used for passed deadlines (default: this machine's date)
+node scripts/newsletter-extract.mjs --month 2026-09 --root=/path/to/checkout   # read another checkout's content/ (exit 2 if absent)
+```
+Lists upcoming events (the month and the next), research outcomes, news, new jobs, recordings and programs with a window nearby, then a
+"gaps and findings" section on what the content does not capture. Exit 0 even for a thin month; exit 1 on bad arguments or a file whose
+frontmatter cannot be read.
 
 **Cyberseminar transcripts:**
 ```bash

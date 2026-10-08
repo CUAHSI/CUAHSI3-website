@@ -111,13 +111,24 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
         esac
       done < <(node scripts/check-content-branch.mjs "$BASE" 2>&1)
     else need "branch checks skipped (scripts/check-content-branch.mjs or node_modules/yaml missing; run npm ci)"; fi
+    # The evaluation log (rule 10). agent/eval-log.md is frozen history since 7 October 2026 (one shared file made every open PR conflict
+    # on every merge); new lines go in the branch's own file under agent/log/, and a log file already on the base never changes.
     if [ -f agent/eval-log.md ]; then
-      del=$(git diff --numstat "$mb" -- agent/eval-log.md | awk '{print $2}')
-      [ -n "$del" ] && [ "$del" != "0" ] && fail "agent/eval-log.md lost $del line(s); it is append-only (rule 10)" || ok "eval log append-only"
+      chg=$(git diff --numstat "$mb" -- agent/eval-log.md | awk '{print $1+$2}')
+      [ -n "$chg" ] && [ "$chg" != "0" ] && fail "agent/eval-log.md changed ($chg line(s)); it is frozen history, write your lines in agent/log/<YYMMDD>-<branch>.md (rule 10, agent/log/README.md)" || ok "frozen eval log unchanged"
+    fi
+    if [ -d agent/log ] || git cat-file -e "$mb:agent/log/README.md" 2>/dev/null; then
+      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A"')
+      [ -n "$oldlog" ] && fail "a log file already on the base branch changed or was removed (append-only, rule 10): $(echo "$oldlog" | tr '\n' ';')" || ok "log files on the base branch unchanged"
     fi
   else
     need "no '$BASE' ref; skipped the branch checks and the eval-log check (rules 3 and 10)"
   fi
+fi
+
+# 11a. Evaluation log files: every line in agent/log/ is `YYMMDD | branch | event | detail` with a known event (scripts/eval-log.mjs --check)
+if [ -f scripts/eval-log.mjs ]; then
+  if out=$(node scripts/eval-log.mjs --check 2>&1); then ok "eval log files in format ($out)"; else fail "eval log files: $(echo "$out" | head -4 | tr '\n' ';')"; fi
 fi
 
 # 11b. Content validator (roadmap task 5). It must exit 0 (C1). Until 5 October 2026 a known-failures list tolerated the

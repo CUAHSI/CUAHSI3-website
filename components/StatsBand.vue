@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const stats = [
-  { n: '101',    l: 'Member universities' },
-  { n: '25K+',   l: 'HydroShare resources' },
+  { n: '96',     l: 'Member institutions' },
+  { n: '16K+',   l: 'HydroShare users' },
   { n: '350+',   l: 'Cyberseminars archived' },
   { n: '4,000+', l: 'Community subscribers' },
 ]

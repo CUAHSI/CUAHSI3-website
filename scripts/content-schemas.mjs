@@ -111,6 +111,7 @@ const jobs = z.strictObject({
   published: z.boolean(),
   source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
   source_id: nonEmpty.optional(), // the posting's id at its source (a USAJOBS control number); only the usajobs files have it
+  member_institution: nonEmpty.nullable().optional(), // a name from content/members/reps.json (checked by the validator): the employer is or belongs to that CUAHSI member institution. null = checked, not a member (turns off the board's name match); absent = not decided (the board falls back to matching the member names in `organization`)
   source_url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(), // the posting's page on the source site; the jobs board shows "via Josh's Water Jobs" (or "via AGU Career Center" for source agu) with it. Written by the upstream jobs automation for joshswaterjobs postings
 })
 
@@ -146,7 +147,19 @@ const research = z.strictObject({
   funding: z.string().nullable().optional(),
   partners: strings.optional(),
   people_mentioned: slugs.optional(),
+  awards: slugs.optional(),   // ids from content/awards/awards.json; the page shows each award's acknowledgment under the story. [] means checked, no award of CUAHSI's to acknowledge; absent means not yet decided
 })
+
+// content/awards/awards.json : the awards CUAHSI's stories acknowledge, each written once. A story lists award ids (see `awards`
+// above) and /about/impact/<story> shows the acknowledgment sentence. `text` is the whole sentence; `{number}` stands where the
+// award number goes, and that is the only place the number is typed (it becomes a link when `url` is given).
+const award = z.strictObject({
+  id: slug,
+  funder: nonEmpty,
+  number: nonEmpty,
+  url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(),
+  text: nonEmpty,
+}).refine(a => a.text.split('{number}').length === 2, { message: 'text must contain {number} exactly once' })
 
 // content/programs/ : 4 files, two shapes. Three are program descriptions (the shape the model
 // documents); watersofthack.md is a different shape (an application call with a date and place).
@@ -314,5 +327,6 @@ export const COLLECTIONS = [
   { name: 'graduate-programs',    kind: 'json', file: 'content/graduate-programs/programs.json', schema: graduateProgram, optional: true, uniqueBy: e => e?.institution, uniqueLabel: 'institution' },
   { name: 'data-portals',         kind: 'json', file: 'content/data-portals/portals.json',       schema: dataPortal,      optional: true, uniqueBy: e => e?.name, uniqueLabel: 'name' },
   { name: 'data-management',       kind: 'md',   dir: 'content/data-management',                                   schema: dataManagementGuide, optional: true },
+  { name: 'awards',               kind: 'json', file: 'content/awards/awards.json',              schema: award,           optional: true, uniqueBy: e => e?.id, uniqueLabel: 'id' },
   { name: 'documents',            kind: 'json', file: 'content/documents/documents.json',        schema: documentEntry,   optional: true, uniqueBy: e => e?.title, uniqueLabel: 'title' },
 ]

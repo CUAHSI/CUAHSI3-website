@@ -15,8 +15,12 @@ const { data: highlights } = await useAsyncData('home-highlights', () =>
 const { data: allEvents } = await useAsyncData('home-events', () =>
   queryContent('events').where({ published: true }).sort({ start: 1 }).find()
 )
+// "Now" starts as the moment the page was built, so the browser's first render matches the built HTML (a filter on the visitor's own
+// clock hid an event that had started since the build and caused a hydration mismatch); it moves to the real time once mounted.
+const renderedAt = useState('home-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
 const upcomingEvents = computed(() => {
-  const now = new Date()
+  const now = new Date(renderedAt.value)
   return (allEvents.value ?? []).filter(e => new Date(e.start) >= now).slice(0, 3)
 })
 
@@ -41,8 +45,8 @@ const pathways = [
 ]
 
 const homeTools = [
-  { name: 'HydroShare', kicker: 'DATA REPOSITORY', tagline: 'Publish, share, and collaborate on hydrologic data and models with a citable DOI.', tags: ['Repository', 'DOI', 'Open data'], cta: 'Open HydroShare', href: 'https://www.hydroshare.org' },
-  { name: 'CUAHSI JupyterHub', kicker: 'CLOUD COMPUTE', tagline: 'Cloud notebooks for hydrologic analysis — no local setup, ready in seconds.', tags: ['Python', 'R', 'Cloud'], cta: 'Launch compute', href: 'https://jupyterhub.cuahsi.org' },
+  { name: 'HydroShare', kicker: 'DATA REPOSITORY', tagline: 'Publish, share, and collaborate on water data and models with a citable DOI.', tags: ['Repository', 'DOI', 'Open data'], cta: 'Open HydroShare', href: 'https://www.hydroshare.org' },
+  { name: 'CUAHSI JupyterHub', kicker: 'CLOUD COMPUTE', tagline: 'Cloud notebooks for water science analysis — no local setup, ready in seconds.', tags: ['Python', 'R', 'Cloud'], cta: 'Launch compute', href: 'https://jupyterhub.cuahsi.org' },
   { name: 'Water Services', kicker: 'TIME-SERIES DATA', tagline: 'Discover and access national time-series water data — map-based search plus standardized WaterOneFlow/WaterML services.', tags: ['WaterML', 'Time series', 'Map'], cta: 'Explore Water Services', href: 'https://data.cuahsi.org/' },
 ]
 
@@ -55,7 +59,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <!-- ── Hero ── -->
     <PageHero container-class="mx-auto max-w-site p-[76px_40px_72px] grid grid-cols-[1fr] min-[900px]:grid-cols-[1.04fr_.96fr] gap-[60px] items-center">
         <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">Consortium of Universities · Hydrologic Science</span>
+          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">The Shared Capacity of Water Science</span>
           <h1 class="font-['Schibsted_Grotesk'] font-bold text-[clamp(40px,5vw,62px)] leading-[1.03] tracking-[-.022em] text-navy m-[18px_0_0] [text-wrap:balance]">
             Advancing the science of water, together.
           </h1>
@@ -72,8 +76,8 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           </div>
           <div class="flex gap-[28px] mt-[38px] flex-wrap">
             <div>
-              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">100+</div>
-              <div class="font-mono text-[12px] tracking-[.03em] text-muted">MEMBER UNIVERSITIES</div>
+              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">96</div>
+              <div class="font-mono text-[12px] tracking-[.03em] text-muted">MEMBER INSTITUTIONS</div>
             </div>
             <div class="w-px bg-[rgba(15,33,43,.12)]"></div>
             <div>
@@ -101,6 +105,9 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 
     <!-- ── Stats band ── -->
     <StatsBand />
+
+    <!-- ── Job board: a slim band, so the way to the jobs is on the front page ── -->
+    <JobsStrip />
 
     <!-- ── Find your path ── -->
     <section class="mx-auto max-w-site p-[84px_40px_20px]">

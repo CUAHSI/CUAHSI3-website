@@ -158,7 +158,7 @@ const quickLinks = [
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
       </svg>
       <span>Search</span>
-      <span class="text-[10px] text-[#d1d5db] ml-[2px]">⌘K</span>
+      <span class="text-[10px] text-[#6b7280] ml-[2px]">⌘K</span>
     </button>
 
     <Teleport to="body">

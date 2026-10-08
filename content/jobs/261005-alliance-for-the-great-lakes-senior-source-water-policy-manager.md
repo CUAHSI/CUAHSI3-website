@@ -2,7 +2,7 @@
 title: "Senior Source Water Policy Manager"
 slug: alliance-for-the-great-lakes-senior-source-water-policy-manager
 organization: "Alliance for the Great Lakes"
-location: "Great Lakes region (remote/hybrid likely)"
+location: "Home-based/Remote (Ohio, USA)"
 type: permanent
 posted: 2026-10-05
 deadline: 

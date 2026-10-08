@@ -20,8 +20,9 @@ watch(() => route.path, () => { mobileOpen.value = false })
     <!-- Utility bar (hidden on mobile) -->
     <div class="bg-navy hidden md:block text-[#aecbe0]">
       <div class="mx-auto flex items-center justify-between site-container max-w-site h-[36px]">
-        <span class="font-mono text-[11px] tracking-[.04em] truncate">An NSF-supported consortium · advancing water science since 2001</span>
+        <span class="font-mono text-[11px] tracking-[.04em] truncate">Supported by NSF · advancing water science since 2001</span>
         <div class="flex gap-[22px] flex-none font-['Hanken_Grotesk'] font-medium text-[12.5px] leading-[normal]">
+          <NuxtLink to="/community/jobs" class="text-white hover:underline transition-colors">Jobs</NuxtLink>
           <NuxtLink to="/support" class="hover:text-white transition-colors">Support CUAHSI</NuxtLink>
           <NuxtLink to="/contact" class="hover:text-white transition-colors">Contact</NuxtLink>
         </div>
@@ -40,7 +41,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
         </span>
         <span class="hidden sm:flex flex-col items-start leading-none">
           <span class="font-['Schibsted_Grotesk'] font-extrabold text-[20px] leading-[normal] tracking-[.01em] text-navy">CUAHSI</span>
-          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">HYDROLOGIC SCIENCE</span>
+          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">WATER SCIENCE</span>
         </span>
       </NuxtLink>
 
@@ -79,6 +80,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
         </NuxtLink>
         <div class="flex flex-col gap-2 mt-3 pt-3 border-t border-t-[rgba(15,33,43,.08)]">
           <NuxtLink to="/member-portal" class="text-center bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] p-[12px]">Member Portal</NuxtLink>
+          <NuxtLink to="/community/jobs" class="text-center border border-[rgba(15,33,43,.25)] text-navy rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] p-[12px]">Job board</NuxtLink>
           <NuxtLink to="/support" class="font-['Hanken_Grotesk'] font-medium text-[13.5px] leading-[normal] text-muted p-[8px_6px]">Support CUAHSI</NuxtLink>
           <NuxtLink to="/contact" class="font-['Hanken_Grotesk'] font-medium text-[13.5px] leading-[normal] text-muted p-[8px_6px]">Contact</NuxtLink>
         </div>

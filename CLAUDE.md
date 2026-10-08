@@ -8,7 +8,7 @@ looking at the Netlify deploy preview, not by reading Vue.
 
 This work is also an experiment: can an agent own and evolve a production website, as
 an alternative to CUAHSI's software engineering team rebuilding it? The record you keep
-in `agent/eval-log.md` is the data. A negative result is a real result. Record what
+in `agent/log/` (and, for 3 to 7 October 2026, the frozen `agent/eval-log.md`) is the data. A negative result is a real result. Record what
 happened, including what makes you look bad.
 
 This file is living. When you find a new footgun or convention, add it here in the
@@ -31,7 +31,9 @@ agent/roadmap.md   Phase 1 tasks and the Phase 2 roadmap, with status and accept
 agent/reconcile.md the "verify first" checklist for task 1
 agent/content-model.md  collection schemas, cross-link rules, editorial rules.
                    Written from memory by the previous agent. Read before task 2.
-agent/eval-log.md  append-only record of tasks, interventions and defects
+agent/log/         the evaluation log: one file per branch, `<YYMMDD>-<branch>.md`; format and commands in its README.
+                   `node scripts/eval-log.mjs` prints it all, `--counts` counts it
+agent/eval-log.md  the log before 7 October 2026, frozen (one shared file made every open PR conflict on every merge)
 agent/reports/     dated reports you produce (reconcile, audits, the Phase 1 evaluation). YYMMDD_name.md
 .agent/            scratch space, gitignored. Diffs for the reviewer, build baselines.
 .claude/agents/reviewer.md   read-only reviewer subagent
@@ -88,7 +90,7 @@ version mismatch. Ignore it.
    `public/` or `visual/baseline/` counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
-   content rules C1 to C13 apply to every change under `content/`. A code change that a
+   content rules C1 to C16 apply to every change under `content/`. A code change that a
    content change needs is a second PR.
 4. **Git.** Work on a branch named `task/short-name` (code) or `content/short-name`
    (content, rule 3), cut from an up-to-date `main`.
@@ -118,12 +120,18 @@ version mismatch. Ignore it.
 9. **Refactors preserve behaviour.** Component extraction and the Tailwind migration
    must not change what a visitor sees. If a refactor changes rendered output on
    purpose, that is a second concern and a second PR.
-10. **Logs are append-only.** `agent/eval-log.md` and the Noticed list are never
-    rewritten. If an entry is wrong, add a new dated entry that says what was wrong
-    and points to it. `verify.sh` fails if the eval log loses a line.
+10. **Logs are append-only.** The files in `agent/log/`, `agent/eval-log.md` and the Noticed list
+    are never rewritten. If an entry is wrong, add a new dated entry that says what was wrong
+    and points to it (a `correction` line in your own branch's log file). Each branch writes only
+    its own file, `agent/log/<YYMMDD>-<branch>.md`. `verify.sh` fails if `agent/eval-log.md`
+    changes at all (it is frozen), if a log file already on the base branch changes, or if a line
+    in `agent/log/` is not in the format in `agent/log/README.md`. A branch cut before 7 October 2026
+    that appended to `agent/eval-log.md` moves those lines (`git diff origin/main -- agent/eval-log.md`)
+    into its own log file, then restores the frozen file with `git checkout origin/main -- agent/eval-log.md`;
+    in a merge conflict in that file, take the default branch's version and keep your lines in your own file.
 11. **Log every intervention.** Whenever Jordan corrects you, redirects you, rejects
     an approach, or has to decide something you should have been able to decide, add
-    an `intervention` line to the eval log in that session. Do not wait to be asked.
+    an `intervention` line to your branch's log file in that session. Do not wait to be asked.
 12. **Report counts with denominators and show your sample.** "31 of 44 grids
     migrated," not "most grids migrated." Before reporting any bulk result, open three
     affected files and three unaffected ones and confirm by reading them. Say which
@@ -200,10 +208,40 @@ C13. **File names.** New files follow the pattern of their collection: `news`, `
     `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; confirmed by Jordan).
     `programs`, `board`, `community`, `team`: `slug.md`. Existing files are not renamed
     unless Jordan asks. The frontmatter `slug` drives the URL, not the file name.
+C14. **An item about a thing links to the thing.** A news item, impact story, event or recording that
+    describes a dataset, software tool, paper, award, program, report or video links to its primary
+    source in the body: the HydroShare resource or DOI, the code repository, the publisher's page, the
+    funder's award page, the program page. Take the link from the source the item was written from (the
+    newsletter, the article, the draft) and open it before using it; C3 applies, never guess a URL. Link
+    text names the thing, not "click here". For a PDF, prefer a copy hosted here (`public/documents/`) to
+    a link to the legacy cuahsi.org site, which will go. If the source gives no link and none can be found,
+    say so under "To verify" in the PR instead of leaving the item silent. An item with nothing to link to
+    (a welcome, a staff announcement) needs no link. The rule applies to new items and to any item a task
+    already changes; stories written before it are not edited just for this (C10), so adding their links is
+    its own task and PR. No `verify.sh` check: a pattern cannot tell which items describe a thing, so the
+    reviewer checks it by reading the item against its source.
+
+C15. **An impact story names the award that supports it, in `awards`.** Each story in `content/research/` lists the ids
+    of the awards (from `content/awards/awards.json`) that its acknowledgment should show; `/about/impact/<story>` prints each
+    award's sentence under the story, small and in italic. The sentence is written once, in the registry (the award number is
+    typed once, in `number`, so a typo cannot repeat), and never in a story's body. If the registry has no suitable award, add
+    one with the funder's own title and number, checked at the funder's page (C3); for a CIROH subaward give the long form of
+    the number (A25-0364-S008) and the subaward's official title, with the standard CIROH sentence. `awards: []` means checked,
+    nothing of CUAHSI's to acknowledge: use it for a highlight of other people's funded work (a dataset a researcher published
+    on HydroShare, a book others are writing), and make the story say who made the work and, where known, who funded it. Leave
+    `awards` out only while the attribution is undecided; `npm run validate:content` lists those stories. A story dated before
+    an award began does not cite it. `verify.sh` fails a story that names an id the registry does not have.
+
+C16. **A job names its member institution only when it is sure.** `member_institution` on a `content/jobs/` file (optional) is
+    a name exactly as it is spelled in `content/members/reps.json`: the employer is, or is part of, that CUAHSI member institution.
+    Set it when a member's name is in the employer text or the posting itself says the employer belongs to a member (for example
+    the Alabama Water Institute, part of the University of Alabama); never from a guess. `null` means checked and not a member (it
+    turns off the job board's name match for that job). Leave it out when unsure: the board then falls back to matching member names
+    in `organization`. The job board shades member listings and lists them first. `verify.sh` fails a name that is not in the member list.
 
 ## Known footguns
 
-Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), and the eleventh printed a warning but left the tree dirty.
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, and the fourteenth crashed one page with a green build.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -267,6 +305,19 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     row with an email key, is found in `.output/public` or `.output/server`. The dev server also serves `/api/_content/*` live; the plugin
     covers it too, the check does not.
     The file is still in the repository, which is public.
+13. **A page that compares dates with `new Date()` hydrates wrong.** The build writes the page on the day it is built; the browser
+    then runs the same code on a later day. Where a date decides which list an item is in (upcoming or past), the browser's first
+    render differs from the server's, and Vue does not repair a differing `style` attribute (my reading; the fix removed the symptom, the mechanism was not isolated): an event kept the tag colour of
+    the item that had been in its place (a workshop in green, a deadline in blue). It built cleanly and the visual baseline
+    had the wrong colours in it. Fix: take the time from `useState('<page>-rendered-at', () => Date.now())` (the build's time on
+    the server and for the first browser render) and set it to the real time in `onMounted`, as the job board, the home page
+    and the events pages do. Do not call `new Date()` inside a `computed` that picks what to render. No `verify.sh` check:
+    `new Date()` is also fine in a handler or a one-off format.
+14. **A `watch()` on a computed, placed above what the computed reads, crashes the page and the build passes.** `watch(typeFilters, ...)`
+    runs `typeFilters` at once, which read `jobs` before the `const jobs = ...` line below it had run (a temporal dead zone error in `setup`).
+    `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
+    that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
+    `npm run visual:compare` after any change to a page's script.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
@@ -330,7 +381,7 @@ Lessons from real errors. Follow these whenever a change touches many files.
 ## Procedures
 
 **Start of session.** Run `git status` and `git branch --show-current`. Read the Status
-column in `agent/roadmap.md` and the last ten lines of `agent/eval-log.md`. Tell Jordan
+column in `agent/roadmap.md` and the last ten lines of the log (`node scripts/eval-log.mjs --tail 10`). Tell Jordan
 in three lines where things stand: branch, task in progress, anything uncommitted. Add one
 line on upstream (see "Upstream"): run `git fetch upstream` and report what it has that the
 fork lacks, with counts. Then wait for direction. Do not start a roadmap task unprompted.
@@ -360,7 +411,7 @@ is clean. `git switch main && git pull --ff-only`, then `git switch -c task/shor
 (`content/short-name` for a content task).
 Before changing anything, state the plan: files you expect to touch, how you will
 check the result, what will need human eyes. For roadmap tasks 3 and 4, wait for
-Jordan to approve the plan. Append a `start` line to the eval log.
+Jordan to approve the plan. Create your branch's log file (`agent/log/<YYMMDD>-<branch with / as ->.md`) with a `start` line.
 
 **Reconcile.** Roadmap task 1. Read `agent/reconcile.md` and follow it. It is
 read-only: it produces a report and changes no code.
@@ -383,8 +434,8 @@ design, so this does not replace the visual baseline (roadmap task 3b).
 with `git diff >> .agent/review.diff`). Delegate to the `reviewer` subagent with the
 task description and that path. Put its findings in the PR description unchanged,
 then say what you did about each. If you disagree with a finding, say so and leave
-it for Jordan; do not drop it. Each finding you fix is a `defect` line in the eval
-log with `caught: reviewer`.
+it for Jordan; do not drop it. Each finding you fix is a `defect` line in your
+branch's log file with `caught: reviewer`.
 
 **Finish a task.** Run Verify, then Review, then commit (rule 4). Fill in
 `.github/pull_request_template.md` and show Jordan the description. When he says to
@@ -392,8 +443,8 @@ open the PR: `git push -u origin <branch>` and `gh pr create --repo
 jordansread/CUAHSI3-website --base main --head <branch>` with that description, then
 check the base with `gh pr view` (rule 4). Give him the PR link and say the deploy preview
 will appear on the PR.
-Update the Status column in `agent/roadmap.md` on the branch. Append a `pr` line to
-the eval log.
+Update the Status column in `agent/roadmap.md` on the branch. Add a `pr` line to
+your branch's log file.
 
 **Visual review request.** Part of every PR touching layout, markup or links. List the
 exact routes to open on the deploy preview, at phone width (390px) and desktop width
@@ -402,22 +453,23 @@ exact routes to open on the deploy preview, at phone width (390px) and desktop w
 each should open that person's profile." Jordan is not a developer. Make the list
 short enough that he will actually do all of it.
 
-**After review.** When Jordan reports the outcome of a PR, append lines to the eval
-log: `merged` or `abandoned`, plus one `defect` line for each problem found, with
+**After review.** When Jordan reports the outcome of a PR, add lines to the log file of
+the branch you are now working on (the finished branch's own file is already on the default
+branch and does not change): `merged` or `abandoned`, plus one `defect` line for each problem found, with
 where it was caught (`human-review`, `deploy-preview` or `production`). If he asks
 for changes, each request is an `intervention` line.
 
-**Quick log.** When Jordan types "log:" followed by a note, append it to the eval log
+**Quick log.** When Jordan types "log:" followed by a note, append it to your branch's log file
 as an `intervention` or `note` line with today's date and the current branch. Keep his
 wording. Do not discuss it.
 
 **New footgun.** When something built cleanly and was wrong: add a numbered entry
 under "Known footguns" with the symptom and the fix; add a check to `scripts/verify.sh`
-if a pattern can detect it; append a `defect` line to the eval log. Do all three in
+if a pattern can detect it; add a `defect` line to your branch's log file. Do all three in
 the PR that fixes it.
 
 **Status.** When Jordan asks where things stand, answer from `agent/roadmap.md`, the
-eval log and `git`, not from memory of the session. Give counts from the eval log:
+log and `git`, not from memory of the session. Give counts from `node scripts/eval-log.mjs --counts`:
 tasks started, PRs merged, interventions, defects by where they were caught.
 
 ## Content procedures (Phase 2)
@@ -434,7 +486,7 @@ baseline image that changed and why.
 **New content item.** Jordan or a staff member gives a draft: an event, a news item, a job,
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write
 the file from the collection's schema, named by the pattern in C13. Fill only what the draft
-supports (C3). Show Jordan the frontmatter and the "To verify" list before committing. Then
+supports (C3), and link the item's primary source (C14). Show Jordan the frontmatter and the "To verify" list before committing. Then
 validator, build, PR. An event supplied directly by a staff member, with no newsletter,
 leaves `newsletter_source` out (the field is optional in the schema since 5 October 2026);
 say in the PR who supplied it and when (C2).
@@ -453,7 +505,7 @@ days; events whose `end` has passed and are still `featured`; jobs past `deadlin
 cross-reference values that match nothing; items with no source (C2). Report with counts and
 denominators. Do not fix silently.
 
-**Review of a content branch.** The reviewer checks each changed file against C1 to C13 and
+**Review of a content branch.** The reviewer checks each changed file against C1 to C16 and
 reports any path outside the allowed set in rule 3.
 
 **Locks.** Phase 2 was opened on 4 October 2026; Jordan lifted the locks on 5 October 2026: `PHASE = 2` in

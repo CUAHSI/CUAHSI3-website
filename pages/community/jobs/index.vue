@@ -1,7 +1,13 @@
 <script setup lang="ts">
+const rights = "CUAHSI job board. Reuse of this compilation of listings without CUAHSI's permission is not allowed, and where a listing comes from another provider, such as Josh's Water Jobs, that provider's permissions must be honored."
 useHead({
   title: 'Job board',
-  meta: [{ name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' }]
+  meta: [
+    { name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' },
+    // the same statement as the notice at the bottom of the page, for anyone or anything that reads page metadata
+    { name: 'copyright', content: rights },
+    { name: 'dcterms.rights', content: rights }
+  ]
 })
 
 const { data: jobs } = await useAsyncData('jobs', () =>
@@ -19,18 +25,78 @@ const typeFilters = computed(() => [
 const activeFilter = ref('all')
 const showPast = ref(false)
 
-const today = new Date()
+// The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
+// time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
+const renderedAt = useState('jobs-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
+const today = computed(() => new Date(renderedAt.value))
 
 function isExpired(deadline: string | null) {
   if (!deadline) return false
-  return new Date(deadline) < today
+  return new Date(deadline) < today.value
+}
+
+// Member institutions: the names in content/members/reps.json (names only; no addresses leave this block). A listing with a
+// member_institution value is decided by it; otherwise it is from a member when its employer text contains a member's name (compared without case, punctuation, "the" and "of"). This is a text match, so
+// a department, centre or institute that does not carry its university's name in the employer text is not recognised.
+const { data: memberNames } = await useAsyncData('jobs-member-institutions', async (): Promise<string[]> => {
+  const doc = await queryContent('members/reps').findOne().catch(() => null)
+  const rows: any[] = Array.isArray(doc?.body) ? doc.body : []
+  return [...new Set(rows.map(r => String(r.institution || '').trim()).filter(Boolean))]
+})
+const normName = (s: string) => ` ${s.toLowerCase().replace(/['’]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()} `
+// Other ways the same institution is written in an employer line: "University of Texas, Austin" is also "University of Texas at
+// Austin", and a few well-known short forms. A match is not counted when the name is followed by "of", "in" or "at" (Indiana
+// University of Pennsylvania, University of Alabama in Huntsville are not the members Indiana University and University of Alabama).
+const ALIASES: Record<string, string> = { 'penn state': 'Pennsylvania State University', 'virginia polytechnic institute': 'Virginia Tech' }
+const normMembers = computed(() => {
+  const names = memberNames.value ?? []
+  const forms = names.flatMap(n => (n.includes(',') ? [n, n.replace(',', ' at')] : [n]))
+  return [...forms, ...Object.keys(ALIASES).filter(a => names.includes(ALIASES[a]))].map(normName).filter(n => n.trim())
+})
+function isMember(job: any) {
+  // the job's own answer wins: a name from the member list = a member, null = checked and not a member
+  if (job.member_institution === null) return false
+  if (typeof job.member_institution === 'string' && job.member_institution) return true
+  const org = normName(String(job.organization ?? ''))
+  return normMembers.value.some(m => {
+    const i = org.indexOf(m)
+    if (i < 0) return false
+    return !/^(of|in|at) /.test(org.slice(i + m.length))
+  })
+}
+
+// Order of the list: (1) listings closing within CLOSING_SOON_DAYS days, soonest first; (2) the rest, newest first. Ties (the same
+// closing date, or the same posted date) go to listings from CUAHSI member institutions, then newest, then alphabetical by title
+// and employer. In words: "Listings closing within 7 days come first (soonest first), then the newest. When dates tie, listings from
+// CUAHSI member institutions come first, then the newest, then A to Z." (This rule is not printed on the page.) Expired listings (only shown on request) come last, the most recently closed first.
+const CLOSING_SOON_DAYS = 7
+const DAY_MS = 86400000
+function isClosingSoon(job: any) {
+  if (!job.deadline) return false
+  const left = Math.ceil((new Date(job.deadline).getTime() - today.value.getTime()) / DAY_MS)
+  return left >= 0 && left <= CLOSING_SOON_DAYS
+}
+const byTitle = (a: any, b: any) =>
+  String(a.title).localeCompare(String(b.title), 'en', { sensitivity: 'base' }) || String(a.organization).localeCompare(String(b.organization), 'en', { sensitivity: 'base' })
+function compareJobs(a: any, b: any) {
+  const ea = isExpired(a.deadline), eb = isExpired(b.deadline)
+  if (ea !== eb) return ea ? 1 : -1
+  if (ea) return new Date(b.deadline).getTime() - new Date(a.deadline).getTime() || (isMember(a) === isMember(b) ? 0 : isMember(a) ? -1 : 1) || byTitle(a, b)
+  const ca = isClosingSoon(a), cb = isClosingSoon(b)
+  if (ca !== cb) return ca ? -1 : 1
+  if (ca) { const d = new Date(a.deadline).getTime() - new Date(b.deadline).getTime(); if (d) return d }
+  else { const p = new Date(b.posted).getTime() - new Date(a.posted).getTime(); if (p) return p }
+  const ma = isMember(a), mb = isMember(b)
+  if (ma !== mb) return ma ? -1 : 1
+  return new Date(b.posted).getTime() - new Date(a.posted).getTime() || byTitle(a, b)
 }
 
 const filtered = computed(() => {
   let items = jobs.value ?? []
   if (activeFilter.value !== 'all') items = items.filter(j => j.type === activeFilter.value)
   if (!showPast.value) items = items.filter(j => !isExpired(j.deadline))
-  return items
+  return [...items].sort(compareJobs)
 })
 
 const expiredCount = computed(() =>
@@ -87,13 +153,16 @@ function fmtDate(d: string) {
 }
 
 function daysUntil(d: string) {
-  const diff = Math.ceil((new Date(d).getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+  const diff = Math.ceil((new Date(d).getTime() - today.value.getTime()) / (1000 * 60 * 60 * 24))
   if (diff < 0) return null
   if (diff === 0) return 'Closes today'
   if (diff === 1) return 'Closes tomorrow'
-  if (diff <= 7) return `Closes in ${diff} days`
+  if (diff <= CLOSING_SOON_DAYS) return `Closes in ${diff} days`
   return null
 }
+
+// A chip for faculty or temporary can disappear (when the expired listings are hidden again); fall back to "All types" so the list is not left empty with no chip selected.
+watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilter.value = 'all' })
 </script>
 
 <template>
@@ -131,7 +200,8 @@ function daysUntil(d: string) {
       <div class="mb-[32px]">
         <div v-if="filtered?.length">
           <div v-for="job in filtered" :key="job._path"
-            class="relative block p-[20px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
+            class="relative block border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit"
+            :class="isMember(job) ? 'p-[20px_16px] -mx-[16px] bg-[#EAF3FB] rounded-[10px] mb-[6px]' : 'p-[20px_0]'">
             <div class="flex items-start justify-between gap-[16px]">
               <div class="flex-1 min-w-[0]">
                 <div class="flex items-center gap-[8px] mb-[5px] flex-wrap">
@@ -142,13 +212,16 @@ function daysUntil(d: string) {
                     {{ daysUntil(job.deadline) }}
                   </span>
                 </div>
-                <p class="text-[13px] text-[#374151] font-medium mb-[4px]">{{ job.organization }}</p>
+                <p class="text-[13px] text-[#374151] font-medium mb-[4px] flex items-center gap-[8px] flex-wrap">
+                  {{ job.organization }}
+                  <span v-if="isMember(job)" class="text-[11px] font-medium p-[2px_8px] rounded-[99px] bg-[#CFE3F5] text-[#0F2E44]">CUAHSI member</span>
+                </p>
                 <div class="flex gap-[12px] text-[12px] text-muted mb-[8px] flex-wrap">
                   <span v-if="job.location">📍 {{ job.location }}</span>
                   <span>Posted {{ fmtDate(job.posted) }}</span>
                   <span v-if="job.deadline">Deadline {{ fmtDate(job.deadline) }}</span>
                 </div>
-                <p class="text-[13px] text-[#6b7280] leading-[1.55]">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
+                <p class="text-[13px] leading-[1.55]" :class="isMember(job) ? 'text-[#4b5563]' : 'text-[#6b7280]'">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
                 <div class="flex gap-[5px] flex-wrap mt-[8px]">
                   <span v-for="t in job.tags" :key="t"
                     class="text-[11px] p-[2px_7px] rounded-[99px] bg-[#f3f4f6] text-muted">
@@ -188,6 +261,15 @@ function daysUntil(d: string) {
           Submit a listing →
         </a>
       </div>
+
+      <!-- Terms of use of the list -->
+      <p class="text-[12px] text-muted leading-[1.65] max-w-[760px] mb-[64px]">
+        <strong class="font-medium">Terms of use.</strong> CUAHSI compiles the listings on this page to help job seekers in the water
+        science community. This compilation may not be copied, scraped, republished or redistributed without CUAHSI's written permission.
+        Where a listing comes from another provider, such as Josh's Water Jobs, which shares its listings under its own permission, anyone
+        who reuses or cites that listing must honor that provider's terms. To ask about reuse, write to
+        <a href="mailto:connect@cuahsi.org" class="underline text-inherit">connect@cuahsi.org</a>.
+      </p>
 
     </div>
   </div>

@@ -41,18 +41,18 @@ const stamp = (t: Date) => {
 }
 const when = computed(() => (reading.value ? stamp(reading.value.time) : ''))
 const valueText = computed(() => (reading.value ? formatReading(reading.value.value, reading.value.unit) : ''))
-const aria = computed(() => {
-  const base = `${gage.value.name}${gage.value.state ? ', ' + gage.value.state : ''}.`
+// The link's accessible name is its visible text (so voice-control users can say what they see); this extra text, read only by screen
+// readers, adds what the bars show and where the link goes.
+const srNote = computed(() => {
   const r = reading.value
-  const unitWords = unitLabel(r?.unit) === 'cfs' ? 'cubic feet per second' : r?.unit === 'ft' ? 'feet' : r?.unit
-  const fl = flood.value && r ? ` ${FLOOD_LABEL[flood.value.category]} according to the National Weather Service. River stage` : ''
-  const flow = r ? `${fl} ${valueText.value} ${unitWords}, ${when.value}. Over the last 48 hours it ranged from ${formatReading(r.low, r.unit)} to ${formatReading(r.high, r.unit)}.` : ''
-  return `${label.value}, USGS ${gage.value.id}. ${base}${flow} Opens the USGS monitoring page for this gage in a new tab.`
+  const range = r ? ` Over the last 48 hours it ranged from ${formatReading(r.low, r.unit)} to ${formatReading(r.high, r.unit)}.` : ''
+  const fl = flood.value && r ? ` ${FLOOD_LABEL[flood.value.category]} according to the National Weather Service.` : ''
+  return `${fl}${range} Opens the USGS monitoring page for this gage in a new tab.`
 })
 </script>
 
 <template>
-  <a :href="monitoringUrl(gage.id)" target="_blank" rel="noopener" :aria-label="aria"
+  <a :href="monitoringUrl(gage.id)" target="_blank" rel="noopener"
     class="absolute block no-underline bg-white rounded-[12px] gauge-card left-[-22px] bottom-[-24px] p-[16px_18px] [box-shadow:0_20px_40px_-18px_rgba(15,46,68,.4)] border border-[rgba(15,33,43,.08)] w-[236px] card-lift">
     <div class="flex items-center gap-[7px] mb-[10px]">
       <span class="w-[8px] h-[8px] rounded-[50%] inline-block" :class="isLive ? 'animate-livePulse bg-[#1f9d55]' : 'bg-[#9aa8b1]'"></span>
@@ -73,6 +73,7 @@ const aria = computed(() => {
     <div class="font-mono text-[10px] leading-[normal] text-muted m-[8px_0_0]">
       <template v-if="status === 'ok'">Updated {{ when }}<template v-if="reading?.provisional"> · provisional</template> · USGS ↗<template v-if="flood"><br>Flood category: NWS, {{ floodWhen }}</template></template>
       <template v-else>View this gage on USGS ↗</template>
+      <span class="sr-only">{{ srNote }}</span>
     </div>
   </a>
 </template>
