@@ -90,7 +90,7 @@ version mismatch. Ignore it.
    `public/` or `visual/baseline/` counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
-   content rules C1 to C14 apply to every change under `content/`. A code change that a
+   content rules C1 to C15 apply to every change under `content/`. A code change that a
    content change needs is a second PR.
 4. **Git.** Work on a branch named `task/short-name` (code) or `content/short-name`
    (content, rule 3), cut from an up-to-date `main`.
@@ -220,6 +220,17 @@ C14. **An item about a thing links to the thing.** A news item, impact story, ev
     already changes; stories written before it are not edited just for this (C10), so adding their links is
     its own task and PR. No `verify.sh` check: a pattern cannot tell which items describe a thing, so the
     reviewer checks it by reading the item against its source.
+
+C15. **An impact story names the award that supports it, in `awards`.** Each story in `content/research/` lists the ids
+    of the awards (from `content/awards/awards.json`) that its acknowledgment should show; `/about/impact/<story>` prints each
+    award's sentence under the story, small and in italic. The sentence is written once, in the registry (the award number is
+    typed once, in `number`, so a typo cannot repeat), and never in a story's body. If the registry has no suitable award, add
+    one with the funder's own title and number, checked at the funder's page (C3); for a CIROH subaward give the long form of
+    the number (A25-0364-S008) and the subaward's official title, with the standard CIROH sentence. `awards: []` means checked,
+    nothing of CUAHSI's to acknowledge: use it for a highlight of other people's funded work (a dataset a researcher published
+    on HydroShare, a book others are writing), and make the story say who made the work and, where known, who funded it. Leave
+    `awards` out only while the attribution is undecided; `npm run validate:content` lists those stories. A story dated before
+    an award began does not cite it. `verify.sh` fails a story that names an id the registry does not have.
 
 ## Known footguns
 
@@ -474,7 +485,7 @@ days; events whose `end` has passed and are still `featured`; jobs past `deadlin
 cross-reference values that match nothing; items with no source (C2). Report with counts and
 denominators. Do not fix silently.
 
-**Review of a content branch.** The reviewer checks each changed file against C1 to C14 and
+**Review of a content branch.** The reviewer checks each changed file against C1 to C15 and
 reports any path outside the allowed set in rule 3.
 
 **Locks.** Phase 2 was opened on 4 October 2026; Jordan lifted the locks on 5 October 2026: `PHASE = 2` in
