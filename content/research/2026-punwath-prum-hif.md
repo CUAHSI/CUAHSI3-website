@@ -8,6 +8,7 @@ tags: [fellowship, HIF, remote-sensing, water-quality, Landsat, HydroShare, NASA
 people_mentioned: []
 partners: [University of Pittsburgh, NASA]
 funding: CUAHSI HydroInformatics Innovation Fellowship; NASA FINESST24
+awards: [nsf-1849458]
 published: true
 excerpt: Punwath Prum (PhD candidate, University of Pittsburgh), a CUAHSI HIF awardee, used his fellowship to develop a harmonization algorithm and create the first global coastal surface reflectance database using Landsat data — work that led directly to a NASA FINESST24 award and presentations at AGU and ASLO. The dataset is deposited in HydroShare pending peer review.
 ---
