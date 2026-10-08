@@ -66,9 +66,9 @@ function isMember(job: any) {
   })
 }
 
-// Order of the list: (1) employers that are CUAHSI member institutions, (2) listings closing within CLOSING_SOON_DAYS days, soonest
-// first, (3) newest first, (4) alphabetical by title, then employer, for ties. Expired listings (only shown on request) come last,
-// the most recently closed first.
+// Order of the list: (1) listings closing within CLOSING_SOON_DAYS days, soonest first; (2) the rest, newest first. Ties (the same
+// closing date, or the same posted date) go to listings from CUAHSI member institutions, then newest, then alphabetical by title
+// and employer. Expired listings (only shown on request) come last, the most recently closed first.
 const CLOSING_SOON_DAYS = 14
 const DAY_MS = 86400000
 function isClosingSoon(job: any) {
@@ -82,11 +82,12 @@ function compareJobs(a: any, b: any) {
   const ea = isExpired(a.deadline), eb = isExpired(b.deadline)
   if (ea !== eb) return ea ? 1 : -1
   if (ea) return new Date(b.deadline).getTime() - new Date(a.deadline).getTime() || byTitle(a, b)
-  const ma = isMember(a), mb = isMember(b)
-  if (ma !== mb) return ma ? -1 : 1
   const ca = isClosingSoon(a), cb = isClosingSoon(b)
   if (ca !== cb) return ca ? -1 : 1
   if (ca) { const d = new Date(a.deadline).getTime() - new Date(b.deadline).getTime(); if (d) return d }
+  else { const p = new Date(b.posted).getTime() - new Date(a.posted).getTime(); if (p) return p }
+  const ma = isMember(a), mb = isMember(b)
+  if (ma !== mb) return ma ? -1 : 1
   return new Date(b.posted).getTime() - new Date(a.posted).getTime() || byTitle(a, b)
 }
 
@@ -188,8 +189,8 @@ function daysUntil(d: string) {
 
       <!-- How the list is ordered -->
       <p v-if="filtered?.length" class="text-[12px] text-muted leading-[1.6] mb-[16px]">
-        Listings from <span class="inline-block p-[0_6px] rounded-[4px] bg-[#EAF3FB] text-[#0F2E44]">CUAHSI member institutions</span>
-        come first, then those closing within {{ CLOSING_SOON_DAYS }} days (soonest first), then the newest; ties are alphabetical.
+        Listings closing within {{ CLOSING_SOON_DAYS }} days come first (soonest first), then the newest. When dates tie, listings from
+        <span class="inline-block p-[0_6px] rounded-[4px] bg-[#EAF3FB] text-[#0F2E44]">CUAHSI member institutions</span> come first, then A to Z.
       </p>
 
       <!-- Listings -->
