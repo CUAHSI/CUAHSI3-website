@@ -7,7 +7,7 @@ frequency: annual
 season: June–July (7 weeks)
 audience: [graduate-students]
 contact: jmasterman@cuahsi.org
-partners: [University of Alabama, CIROH, NOAA]
+partners: [University of Alabama, CIROH, NOAA National Water Center]
 funding: NOAA Cooperative Institute Program (NA22NWS4320003)
 tags: [water-prediction, flood-forecasting, graduate-students, residential, CIROH, NWM]
 excerpt: A seven-week residential experiential learning program at the University of Alabama bringing graduate students together with academic researchers and operational water prediction professionals to advance flood forecasting and the National Water Model — 250+ alumni since 2015.
@@ -16,7 +16,7 @@ published: true
 
 The Water Prediction Innovators Summer Institute is a seven-week residential program that brings graduate students together with academic researchers and professionals to advance water prediction and flood forecasting. Since the first Summer Institute in 2015, more than 250 students have participated, contributing to a program that has played a direct role in advancing the National Water Model and the broader U.S. water prediction enterprise.
 
-The program is a partnership between CUAHSI and the University of Alabama, supported by CIROH with funding from NOAA.
+The program is a partnership between CUAHSI, the University of Alabama, the Cooperative Institute for Research to Operations in Hydrology (CIROH) and NOAA's National Water Center. NOAA's Office of Water Prediction is the program's sponsor.
 
 ## 2027 Summer Institute
 
