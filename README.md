@@ -64,7 +64,7 @@ pages/
 ├── about/
 │   ├── index.vue                          About hub (mission, history, what we do)
 │   ├── governance.vue                     Board and advisory committees
-│   ├── membership.vue                     Member roster (101 institutions, searchable/filterable)
+│   ├── membership.vue                     Member roster (96 institutions, searchable/filterable)
 │   ├── impact/
 │   │   ├── index.vue                      Highlights index (category + year filters)
 │   │   └── [slug].vue                     Individual highlight detail
