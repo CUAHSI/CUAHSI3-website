@@ -36,8 +36,8 @@ function isExpired(deadline: string | null) {
   return new Date(deadline) < today.value
 }
 
-// Member institutions: the names in content/members/reps.json (names only; no addresses leave this block). A listing is from a member
-// when its employer text contains a member's name (compared without case, punctuation, "the" and "of"). This is a text match, so
+// Member institutions: the names in content/members/reps.json (names only; no addresses leave this block). A listing with a
+// member_institution value is decided by it; otherwise it is from a member when its employer text contains a member's name (compared without case, punctuation, "the" and "of"). This is a text match, so
 // a department, centre or institute that does not carry its university's name in the employer text is not recognised.
 const { data: memberNames } = await useAsyncData('jobs-member-institutions', async (): Promise<string[]> => {
   const doc = await queryContent('members/reps').findOne().catch(() => null)
@@ -55,6 +55,9 @@ const normMembers = computed(() => {
   return [...forms, ...Object.keys(ALIASES).filter(a => names.includes(ALIASES[a]))].map(normName).filter(n => n.trim())
 })
 function isMember(job: any) {
+  // the job's own answer wins: a name from the member list = a member, null = checked and not a member
+  if (job.member_institution === null) return false
+  if (typeof job.member_institution === 'string' && job.member_institution) return true
   const org = normName(String(job.organization ?? ''))
   return normMembers.value.some(m => {
     const i = org.indexOf(m)

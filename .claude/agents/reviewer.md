@@ -22,7 +22,7 @@ So do not report that anything "looks correct." Report what you read.
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml`, `package.json` or a lockfile
    is a finding unless the task description says Jordan approved it.
 1b. **Content branch** (only when the diff changes `content/`). Check each changed file
-   against C1 to C15 in `CLAUDE.md`. Any path outside `content/`, `agent/`, a `public/`
+   against C1 to C16 in `CLAUDE.md`. Any path outside `content/`, `agent/`, a `public/`
    file that belongs to a named content item, `visual/baseline/`, or the known-failures
    file is a finding, as is a line added to the known-failures file. Any code file in the
    same diff is a finding (rule 3: a branch changes content or code, never both).
