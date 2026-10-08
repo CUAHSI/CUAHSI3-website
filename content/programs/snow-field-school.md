@@ -10,11 +10,11 @@ contact: jmasterman@cuahsi.org
 partners: [SINTER, NASA, US Forest Service, Boise State University, Portland State University, Oregon State University]
 funding: NASA
 tags: [field-methods, snow-hydrology, in-person, early-career, measurement]
-excerpt: A week-long intensive field school in the Colorado mountains providing hands-on training in snow measurement methods — from snow pit fundamentals to student-designed field campaigns — for graduate students, postdocs, and researchers who work with snowpack data.
+excerpt: A week-long intensive field school each January, at a mountain location that changes from year to year, providing hands-on training in snow measurement methods — from snow pit fundamentals to student-designed field campaigns — for graduate students, postdocs, and researchers who work with snowpack data.
 published: true
 ---
 
-The CUAHSI Snow Measurement Field School (co-organized with SINTER and supported by NASA) provides hands-on training in snow measurement methods for researchers across career stages. The program runs for five days each January at a mountain location in Colorado and is designed for graduate students, postdocs, professionals, and scientists who will make snow measurements as part of their research or who use snowpack data in their modeling and remote sensing work.
+The CUAHSI Snow Measurement Field School (co-organized with SINTER and supported by NASA) provides hands-on training in snow measurement methods for researchers across career stages. The program runs for five days each January at a mountain location that changes from year to year and is designed for graduate students, postdocs, professionals, and scientists who will make snow measurements as part of their research or who use snowpack data in their modeling and remote sensing work.
 
 ## What participants learn
 
@@ -37,7 +37,7 @@ Undergraduate students may participate on a space-available basis.
 
 ## Logistics
 
-The field school is hosted at a mountain facility in Colorado (typically Snow Mountain Ranch, YMCA of the Rockies, in Granby, CO). Housing, meals, and local transportation are provided on-site; participants share rooms. Registration costs are announced with each year's application cycle.
+The field school is hosted at a mountain facility, and the location changes from year to year: past sessions have been held in the Sierra Nevada, the Rocky Mountains and the northeastern United States, and each year's location is announced with its application cycle. Housing, meals, and local transportation are provided on-site; participants share rooms. Registration costs are announced with each year's application cycle.
 
 The program is competitive — applications are reviewed by workshop organizers and instructors and space is limited. Applications are typically reviewed on a rolling basis beginning in September for the following January program.
 
