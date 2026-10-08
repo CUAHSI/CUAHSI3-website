@@ -74,8 +74,8 @@ function fmtDate(start: string, end?: string) {
           CUAHSI hosts, co-organizes, or participates in events year-round.
         </p>
         <p class="text-[12px] text-muted leading-[1.6] max-w-[520px] mb-[20px]">
-          Training sessions with a scheduled date appear here alongside their full description on
-          <NuxtLink to="/learn-train" class="text-water">Learn &amp; Train</NuxtLink> — same session, one canonical page.
+          Training sessions with a scheduled date appear here. The programs are described on
+          <NuxtLink to="/learn-train" class="text-water">Learn &amp; Train</NuxtLink>.
         </p>
         <div class="flex gap-[6px] flex-wrap">
           <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
