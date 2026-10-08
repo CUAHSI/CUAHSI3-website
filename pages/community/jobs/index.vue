@@ -68,8 +68,9 @@ function isMember(job: any) {
 
 // Order of the list: (1) listings closing within CLOSING_SOON_DAYS days, soonest first; (2) the rest, newest first. Ties (the same
 // closing date, or the same posted date) go to listings from CUAHSI member institutions, then newest, then alphabetical by title
-// and employer. Expired listings (only shown on request) come last, the most recently closed first.
-const CLOSING_SOON_DAYS = 14
+// and employer. In words: "Listings closing within 7 days come first (soonest first), then the newest. When dates tie, listings from
+// CUAHSI member institutions come first, then the newest, then A to Z." (This rule is not printed on the page.) Expired listings (only shown on request) come last, the most recently closed first.
+const CLOSING_SOON_DAYS = 7
 const DAY_MS = 86400000
 function isClosingSoon(job: any) {
   if (!job.deadline) return false
@@ -186,12 +187,6 @@ function daysUntil(d: string) {
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
         </FilterChip>
       </div>
-
-      <!-- How the list is ordered -->
-      <p v-if="filtered?.length" class="text-[12px] text-muted leading-[1.6] mb-[16px]">
-        Listings closing within {{ CLOSING_SOON_DAYS }} days come first (soonest first), then the newest. When dates tie, listings from
-        <span class="inline-block p-[0_6px] rounded-[4px] bg-[#EAF3FB] text-[#0F2E44]">CUAHSI member institutions</span> come first, then the newest, then A to Z.
-      </p>
 
       <!-- Listings -->
       <div class="mb-[32px]">
