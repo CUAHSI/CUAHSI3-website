@@ -10,12 +10,12 @@ partners: [CIROH, University of Alabama, HydroLearn]
 funding: NOAA Cooperative Institute Program (NA22NWS4320003)
 awards: [ciroh-hydrolearn-2024-2025]
 published: true
-excerpt: HydroLearn Fellows from two CIROH-funded workshops reflect on how the platform is reshaping water science education — with CUAHSI staff Irene Garousi-Nejad among the contributors developing modules at the intersection of hydroinformatics, snow modeling, and water prediction.
+excerpt: HydroLearn Fellows from two CIROH-funded workshops reflect on how the platform is reshaping water science education, with CUAHSI staff Irene Garousi-Nejad among the contributors developing modules at the intersection of hydroinformatics, snow modeling, and water prediction.
 ---
 
 [HydroLearn](https://hydrolearn.org/) is an educational project initially funded by the NSF that offers free, customizable active-learning resources in hydrology and water resources engineering. CUAHSI has been collaborating on a series of three projects funded by the Cooperative Institute for Research to Operations in Hydrology (CIROH) to develop learning modules that align with CIROH's research themes and support the advancement of water prediction. As part of this effort, HydroLearn Fellows receive training and coaching from both hydrologists and education experts to create high-quality learning modules for use in both academic courses and professional development.
 
-In June 2024 and January 2025, virtual and in-person workshops brought together HydroLearn Fellows — consisting of faculty, students, and postdocs — to integrate their work into educational modules aligned with CIROH's research priorities. For many Fellows, participation began through connections within the water science community: some found the opportunity through the CUAHSI newsletter, others at conferences or through personal connections. No matter the entry point, each Fellow found they could apply their expertise to contribute to HydroLearn's purpose of being a platform where instructors find and collaborate on developing learning modules, and where students discover and learn from authentic problems.
+In June 2024 and January 2025, virtual and in-person workshops brought together HydroLearn Fellows (consisting of faculty, students, and postdocs) to integrate their work into educational modules aligned with CIROH's research priorities. For many Fellows, participation began through connections within the water science community: some found the opportunity through the CUAHSI newsletter, others at conferences or through personal connections. No matter the entry point, each Fellow found they could apply their expertise to contribute to HydroLearn's purpose of being a platform where instructors find and collaborate on developing learning modules, and where students discover and learn from authentic problems.
 
 ## The modules
 
@@ -33,7 +33,7 @@ For many, the fellowship was as much about community as curriculum. Mehan credit
 
 ## Looking ahead
 
-Most Fellows plan to stay engaged with HydroLearn, continuing to build modules that translate cutting-edge research into meaningful, applied learning. CUAHSI and CIROH are planning another workshop. Explore the platform and see how it is transforming hydrology education at [HydroLearn.org](https://hydrolearn.org/).
+Most Fellows plan to stay engaged with HydroLearn, continuing to build modules that translate current research into meaningful, applied learning. CUAHSI and CIROH are planning another workshop. Explore the platform and see how it is transforming hydrology education at [HydroLearn.org](https://hydrolearn.org/).
 
 ---
 

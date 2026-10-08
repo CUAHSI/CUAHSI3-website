@@ -17,7 +17,7 @@ CUAHSI and the University of Alabama announced the participants for the 2026 Wat
 
 The 2026 cohort includes 24+ student fellows from universities across the United States, working on projects that advance water prediction and flood forecasting capabilities.
 
-The Summer Institute is one of CUAHSI's most direct pipelines from graduate training to operational impact — alumni have contributed to improvements in National Water Model flood inundation mapping and to the cyberinfrastructure that disseminates NWM outputs to researchers and practitioners.
+The Summer Institute is one of CUAHSI's most direct pipelines from graduate training to operational impact. Alumni have contributed to improvements in National Water Model flood inundation mapping and to the cyberinfrastructure that disseminates NWM outputs to researchers and practitioners.
 
 ## Capstone and outcomes
 
