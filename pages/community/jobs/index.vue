@@ -81,7 +81,7 @@ const byTitle = (a: any, b: any) =>
 function compareJobs(a: any, b: any) {
   const ea = isExpired(a.deadline), eb = isExpired(b.deadline)
   if (ea !== eb) return ea ? 1 : -1
-  if (ea) return new Date(b.deadline).getTime() - new Date(a.deadline).getTime() || byTitle(a, b)
+  if (ea) return new Date(b.deadline).getTime() - new Date(a.deadline).getTime() || (isMember(a) === isMember(b) ? 0 : isMember(a) ? -1 : 1) || byTitle(a, b)
   const ca = isClosingSoon(a), cb = isClosingSoon(b)
   if (ca !== cb) return ca ? -1 : 1
   if (ca) { const d = new Date(a.deadline).getTime() - new Date(b.deadline).getTime(); if (d) return d }
@@ -190,7 +190,7 @@ function daysUntil(d: string) {
       <!-- How the list is ordered -->
       <p v-if="filtered?.length" class="text-[12px] text-muted leading-[1.6] mb-[16px]">
         Listings closing within {{ CLOSING_SOON_DAYS }} days come first (soonest first), then the newest. When dates tie, listings from
-        <span class="inline-block p-[0_6px] rounded-[4px] bg-[#EAF3FB] text-[#0F2E44]">CUAHSI member institutions</span> come first, then A to Z.
+        <span class="inline-block p-[0_6px] rounded-[4px] bg-[#EAF3FB] text-[#0F2E44]">CUAHSI member institutions</span> come first, then the newest, then A to Z.
       </p>
 
       <!-- Listings -->
