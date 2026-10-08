@@ -8,7 +8,7 @@ const timeline = [
   { year: '1992', text: 'NSF-GEO establishes a core program in hydrologic sciences with $2M initial funding' },
   { year: '2001', text: 'CUAHSI incorporated in Washington D.C. with 33 founding member universities' },
   { year: '2003', text: 'Cyberseminar program launched, now 350+ recordings on YouTube' },
-  { year: '2026', text: '25th anniversary: 100+ members, 25,000+ HydroShare users' },
+  { year: '2026', text: '25th anniversary: 100+ members, 16,000+ HydroShare users' },
 ]
 </script>
 

@@ -45,8 +45,8 @@ const pathways = [
 ]
 
 const homeTools = [
-  { name: 'HydroShare', kicker: 'DATA REPOSITORY', tagline: 'Publish, share, and collaborate on hydrologic data and models with a citable DOI.', tags: ['Repository', 'DOI', 'Open data'], cta: 'Open HydroShare', href: 'https://www.hydroshare.org' },
-  { name: 'CUAHSI JupyterHub', kicker: 'CLOUD COMPUTE', tagline: 'Cloud notebooks for hydrologic analysis — no local setup, ready in seconds.', tags: ['Python', 'R', 'Cloud'], cta: 'Launch compute', href: 'https://jupyterhub.cuahsi.org' },
+  { name: 'HydroShare', kicker: 'DATA REPOSITORY', tagline: 'Publish, share, and collaborate on water data and models with a citable DOI.', tags: ['Repository', 'DOI', 'Open data'], cta: 'Open HydroShare', href: 'https://www.hydroshare.org' },
+  { name: 'CUAHSI JupyterHub', kicker: 'CLOUD COMPUTE', tagline: 'Cloud notebooks for water science analysis — no local setup, ready in seconds.', tags: ['Python', 'R', 'Cloud'], cta: 'Launch compute', href: 'https://jupyterhub.cuahsi.org' },
   { name: 'Water Services', kicker: 'TIME-SERIES DATA', tagline: 'Discover and access national time-series water data — map-based search plus standardized WaterOneFlow/WaterML services.', tags: ['WaterML', 'Time series', 'Map'], cta: 'Explore Water Services', href: 'https://data.cuahsi.org/' },
 ]
 
@@ -59,7 +59,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <!-- ── Hero ── -->
     <PageHero container-class="mx-auto max-w-site p-[76px_40px_72px] grid grid-cols-[1fr] min-[900px]:grid-cols-[1.04fr_.96fr] gap-[60px] items-center">
         <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">Consortium of Universities · Hydrologic Science</span>
+          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">The Shared Capacity of Water Science</span>
           <h1 class="font-['Schibsted_Grotesk'] font-bold text-[clamp(40px,5vw,62px)] leading-[1.03] tracking-[-.022em] text-navy m-[18px_0_0] [text-wrap:balance]">
             Advancing the science of water, together.
           </h1>

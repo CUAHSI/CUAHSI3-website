@@ -20,7 +20,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
     <!-- Utility bar (hidden on mobile) -->
     <div class="bg-navy hidden md:block text-[#aecbe0]">
       <div class="mx-auto flex items-center justify-between site-container max-w-site h-[36px]">
-        <span class="font-mono text-[11px] tracking-[.04em] truncate">An NSF-supported consortium · advancing water science since 2001</span>
+        <span class="font-mono text-[11px] tracking-[.04em] truncate">Supported by NSF · advancing water science since 2001</span>
         <div class="flex gap-[22px] flex-none font-['Hanken_Grotesk'] font-medium text-[12.5px] leading-[normal]">
           <NuxtLink to="/community/jobs" class="text-white hover:underline transition-colors">Jobs</NuxtLink>
           <NuxtLink to="/support" class="hover:text-white transition-colors">Support CUAHSI</NuxtLink>
@@ -41,7 +41,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
         </span>
         <span class="hidden sm:flex flex-col items-start leading-none">
           <span class="font-['Schibsted_Grotesk'] font-extrabold text-[20px] leading-[normal] tracking-[.01em] text-navy">CUAHSI</span>
-          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">HYDROLOGIC SCIENCE</span>
+          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">WATER SCIENCE</span>
         </span>
       </NuxtLink>
 
