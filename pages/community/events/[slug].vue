@@ -28,7 +28,10 @@ const { data: relatedNewsletters } = await useAsyncData(`event-newsletters-${rou
     .find()
 )
 
-const isPast = computed(() => event.value ? new Date(event.value.start) < new Date() : false)
+// build time for the first render (it matches the server's), the real time once the page is open
+const renderedAt = useState('event-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
+const isPast = computed(() => event.value ? new Date(event.value.start) < new Date(renderedAt.value) : false)
 
 const typeColors: Record<string, { bg: string; text: string }> = {
   conference: { bg: '#EFF6FF', text: '#1E40AF' },
