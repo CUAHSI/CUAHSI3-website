@@ -1,7 +1,13 @@
 <script setup lang="ts">
+const rights = "CUAHSI job board. Reuse of this compilation of listings without CUAHSI's permission is not allowed, and where a listing comes from another provider, such as Josh's Water Jobs, that provider's permissions must be honored."
 useHead({
   title: 'Job board',
-  meta: [{ name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' }]
+  meta: [
+    { name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' },
+    // the same statement as the notice at the bottom of the page, for anyone or anything that reads page metadata
+    { name: 'copyright', content: rights },
+    { name: 'dcterms.rights', content: rights }
+  ]
 })
 
 const { data: jobs } = await useAsyncData('jobs', () =>
@@ -183,6 +189,15 @@ function daysUntil(d: string) {
           Submit a listing →
         </a>
       </div>
+
+      <!-- Terms of use of the list -->
+      <p class="text-[12px] text-muted leading-[1.65] max-w-[760px] mb-[64px]">
+        <strong class="font-medium">Terms of use.</strong> CUAHSI compiles the listings on this page to help job seekers in the water
+        science community. This compilation may not be copied, scraped, republished or redistributed without CUAHSI's written permission.
+        Where a listing comes from another provider, such as Josh's Water Jobs, which shares its listings under its own permission, anyone
+        who reuses or cites that listing must honor that provider's terms. To ask about reuse, write to
+        <a href="mailto:connect@cuahsi.org" class="underline text-inherit">connect@cuahsi.org</a>.
+      </p>
 
     </div>
   </div>
