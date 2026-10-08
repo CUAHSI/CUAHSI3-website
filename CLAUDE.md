@@ -241,7 +241,7 @@ C16. **A job names its member institution only when it is sure.** `member_instit
 
 ## Known footguns
 
-Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), and the eleventh printed a warning but left the tree dirty.
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, and the thirteenth hydrated with stale tag colours.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -305,6 +305,14 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     row with an email key, is found in `.output/public` or `.output/server`. The dev server also serves `/api/_content/*` live; the plugin
     covers it too, the check does not.
     The file is still in the repository, which is public.
+13. **A page that compares dates with `new Date()` hydrates wrong.** The build writes the page on the day it is built; the browser
+    then runs the same code on a later day. Where a date decides which list an item is in (upcoming or past), the browser's first
+    render differs from the server's, and Vue does not repair a differing `style` attribute (my reading; the fix removed the symptom, the mechanism was not isolated): an event kept the tag colour of
+    the item that had been in its place (a workshop in green, a deadline in blue). It built cleanly and the visual baseline
+    had the wrong colours in it. Fix: take the time from `useState('<page>-rendered-at', () => Date.now())` (the build's time on
+    the server and for the first browser render) and set it to the real time in `onMounted`, as the job board, the home page
+    and the events pages do. Do not call `new Date()` inside a `computed` that picks what to render. No `verify.sh` check:
+    `new Date()` is also fine in a handler or a one-off format.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
