@@ -1,8 +1,9 @@
 # Visual baseline
 
 Full-page screenshots of 26 routes at 390px and 1280px (52 images), taken from a build of `main` at
-`2ae92b5`, before the Tailwind migration (roadmap task 4). They are the reference that
-task 4 pull requests are compared against.
+`b5fefd7` (8 October 2026). They replaced the first set, taken at `2ae92b5` before the Tailwind migration
+(roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
+content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
