@@ -3,3 +3,4 @@
 261008 | task/brand-line | note | After PR 109 and 110 merged: main merged into this branch (10 baseline images conflicted; main's taken, then all 52 rewritten from this branch's build; the comparison passes 52 of 52 twice).
 261008 | task/brand-line | merged | PR 113 (water science wording; plain Learn & Train and Events notes).
 261008 | task/brand-line | note | PR 115 conflicted after PR 113 merged (12 baseline images): the default branch's images taken, then all 52 rewritten from this branch's build; comparison passes 52 of 52.
+261008 | task/brand-line | merged | PR 114 (Snow Measurement Field School: location no longer always Colorado).
