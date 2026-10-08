@@ -8,7 +8,14 @@ const { data: jobs } = await useAsyncData('jobs', () =>
   queryContent('jobs').where({ published: true }).sort({ posted: -1 }).find()
 )
 
-const typeFilters = ['all', 'permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship']
+const baseTypeFilters = ['all', 'permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship']
+// These two have a chip only while a listing of that type is visible (expired ones count only when shown),
+// so the board does not offer a filter that leads to "No current listings".
+const optionalTypeFilters = ['faculty', 'temporary']
+const typeFilters = computed(() => [
+  ...baseTypeFilters,
+  ...optionalTypeFilters.filter(t => (jobs.value ?? []).some(j => j.type === t && (showPast.value || !isExpired(j.deadline)))),
+])
 const activeFilter = ref('all')
 const showPast = ref(false)
 
@@ -36,6 +43,8 @@ const typeLabels: Record<string, string> = {
   fellowship: 'Fellowship',
   internship: 'Internship',
   'graduate-assistantship': 'Graduate assistantship',
+  faculty: 'Faculty',
+  temporary: 'Temporary position',
 }
 
 const typeColors: Record<string, {bg: string; text: string}> = {
@@ -44,6 +53,28 @@ const typeColors: Record<string, {bg: string; text: string}> = {
   fellowship:              { bg: '#DCFCE7', text: '#15803D' },
   internship:              { bg: '#FFF7ED', text: '#C2410C' },
   'graduate-assistantship':{ bg: '#FEF9C3', text: '#854D0E' },
+  faculty:                 { bg: '#FCE7F3', text: '#9D174D' },
+  temporary:               { bg: '#ECFEFF', text: '#0E7490' },
+}
+
+// Reposted listings carry a visible credit ("via Josh's Water Jobs", "via AGU Career Center") that links to
+// the posting on the source site: source_url when the agent wrote one, else url if it already points there.
+const CREDITS: Record<string, { name: string; host: string }> = {
+  joshswaterjobs: { name: "Josh's Water Jobs", host: 'joshswaterjobs.com' },
+  agu: { name: 'AGU Career Center', host: 'findajob.agu.org' },
+}
+function onHost(u: unknown, host: string): u is string {
+  if (typeof u !== 'string') return false
+  try {
+    const x = new URL(u)
+    return (x.protocol === 'https:' || x.protocol === 'http:') && (x.hostname === host || x.hostname.endsWith('.' + host))
+  } catch { return false }
+}
+function credit(job: any): { name: string; href: string } | null {
+  const c = CREDITS[job.source]
+  if (!c) return null
+  if (onHost(job.source_url, c.host)) return { name: c.name, href: job.source_url }
+  return onHost(job.url, c.host) ? { name: c.name, href: job.url } : null
 }
 
 function typeStyle(type: string) {
@@ -99,13 +130,12 @@ function daysUntil(d: string) {
       <!-- Listings -->
       <div class="mb-[32px]">
         <div v-if="filtered?.length">
-          <a v-for="job in filtered" :key="job._path"
-            :href="job.url" target="_blank" rel="noopener"
-            class="block p-[20px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
+          <div v-for="job in filtered" :key="job._path"
+            class="relative block p-[20px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
             <div class="flex items-start justify-between gap-[16px]">
               <div class="flex-1 min-w-[0]">
                 <div class="flex items-center gap-[8px] mb-[5px] flex-wrap">
-                  <p class="text-[15px] font-medium leading-[1.3]">{{ job.title }}</p>
+                  <p class="text-[15px] font-medium leading-[1.3]"><a :href="job.url" target="_blank" rel="noopener" class="no-underline text-inherit after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-[-2px] focus-visible:after:outline-[#1E40AF]">{{ job.title }}</a></p>
                   <span :style="typeStyle(job.type)">{{ typeLabels[job.type] ?? job.type }}</span>
                   <span v-if="job.deadline && daysUntil(job.deadline)"
                     class="text-[11px] p-[2px_8px] rounded-[99px] bg-[#FEF2F2] text-[#DC2626] border-[0.5px] border-[#FECACA]">
@@ -125,10 +155,13 @@ function daysUntil(d: string) {
                     {{ t.replace(/-/g,' ') }}
                   </span>
                 </div>
+                <p v-if="credit(job)" class="text-[11px] text-muted mt-[8px]">
+                  via <a :href="credit(job)!.href" target="_blank" rel="noopener" class="relative z-10 underline text-inherit">{{ credit(job)!.name }}</a>
+                </p>
               </div>
-              <span class="text-[13px] text-[#d1d5db] shrink-0 pt-[2px]">↗</span>
+              <span aria-hidden="true" class="text-[13px] text-[#d1d5db] shrink-0 pt-[2px]">↗</span>
             </div>
-          </a>
+          </div>
         </div>
         <p v-else class="text-[14px] text-muted p-[24px_0]">No current listings match this filter.</p>
       </div>
