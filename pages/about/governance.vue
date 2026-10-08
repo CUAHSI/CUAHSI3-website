@@ -9,7 +9,6 @@ useHead({ title: 'Governance' })
       <template #kicker>About · Governance</template>
       <template #title>Board, committees, and bylaws.</template>
       <template #lead>CUAHSI is governed by a Board of Directors elected by its member institutions, with input from advisory committees open to any interested water scientist.</template>
-      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
     <div class="mx-auto max-w-site p-[52px_40px_80px]">
       <section id="advisory-committees" class="mb-[52px]">

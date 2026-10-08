@@ -25,7 +25,6 @@ const timeline = [
         <a href="https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">Download brochure <span class="arr">→</span></a>
         <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-navy p-[11px_18px] border-[1.5px] border-[rgba(15,46,68,.22)]">2025 Annual Report <span class="arr">→</span></a>
       </div>
-      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-site p-[0_40px]">

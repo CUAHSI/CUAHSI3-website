@@ -147,7 +147,6 @@ function categoryLabel(key: string) {
       <template #title>Join the water science consortium.</template>
       <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 101 member institutions advancing water science together.</template>
       <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] p-[13px_22px]">Get in touch <span class="arr">→</span></a>
-      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <div class="mx-auto site-container max-w-site pt-[52px] pb-[24px]">

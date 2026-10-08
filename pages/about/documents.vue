@@ -56,7 +56,6 @@ const sections = computed(() => [
           <a :href="'#' + s.id" class="text-water no-underline p-[4px_0]">{{ s.label }}</a>
         </template>
       </div>
-      <template #below><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-site p-[40px_40px_80px]">
