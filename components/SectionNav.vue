@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // The second level of navigation for a section (About, Data & Computing, Learn & Train, Community): one list per
-// section, drawn as a row of pills inside the page's banner, under the heading, so a visitor sees the other pages
+// section, drawn as a row of pills at the top of the page's banner, above the heading, so a visitor sees the other pages
 // of the section as part of the page and not as a second bar under the header. The pills wrap onto more lines on
 // a phone, so every page of the section is visible without scrolling the row. The header itself is unchanged
 // (five items). (This replaced a row of small grey text tabs at the bottom of the banner, whose last tabs
@@ -63,8 +63,9 @@ function isActive(tab: Tab) {
 </script>
 
 <template>
-  <!-- in a banner the row is pulled up under the heading block (banners have 44 to 52px of space below it) -->
-  <div :class="bare ? 'mt-[24px]' : ['mx-auto max-w-site -mt-[24px] pb-[36px]', fixed ? 'px-[40px]' : 'site-container']">
+  <!-- in a banner the row sits at the very top, above the heading (slot "top"), so it is in the same place on every page of the section; the
+       negative bottom margin takes up some of the 64px of space the banner leaves above its heading -->
+  <div :class="bare ? 'mb-[28px]' : ['mx-auto max-w-site pt-[28px] -mb-[24px]', fixed ? 'px-[40px]' : 'site-container']">
     <nav :aria-label="cfg.label" class="flex flex-wrap gap-[10px]">
       <NuxtLink v-for="tab in cfg.tabs" :key="tab.h" :to="tab.h"
         class="transition-colors font-['Hanken_Grotesk'] text-[14.5px] leading-[normal] no-underline whitespace-nowrap rounded-full border p-[9px_18px]"

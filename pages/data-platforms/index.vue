@@ -67,7 +67,7 @@ const tools = [
       <template #kicker>Data &amp; Computing</template>
       <template #title>Tools built for water science.</template>
       <template #lead>CUAHSI operates open infrastructure for the water science community — from data publication and cloud computing to national data discovery.</template>
-      <template #below><SectionNav section="data" fixed /></template>
+      <template #top><SectionNav section="data" fixed /></template>
     </PageHero>
 
     <!-- Stats band -->

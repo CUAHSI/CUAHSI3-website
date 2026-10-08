@@ -21,7 +21,7 @@ const extras = [
       <template #kicker>Learn &amp; Train</template>
       <template #title>Training for every stage of a water science career.</template>
       <template #lead>From first-year graduate students to senior faculty, CUAHSI offers field schools, online courses, summer institutes, fellowships, and free recordings — open to all.</template>
-      <template #below><SectionNav section="learn" fixed /></template>
+      <template #top><SectionNav section="learn" fixed /></template>
     </PageHero>
 
     <StatsBand />
