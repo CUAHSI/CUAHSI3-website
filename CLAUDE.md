@@ -90,7 +90,7 @@ version mismatch. Ignore it.
    `public/` or `visual/baseline/` counts as a code branch. The reason is the same
    as in Phase 1: when something breaks, the kind of branch that merged tells you where to
    look. Changes to `agent/`, the eval log and the roadmap are allowed on either. The
-   content rules C1 to C15 apply to every change under `content/`. A code change that a
+   content rules C1 to C16 apply to every change under `content/`. A code change that a
    content change needs is a second PR.
 4. **Git.** Work on a branch named `task/short-name` (code) or `content/short-name`
    (content, rule 3), cut from an up-to-date `main`.
@@ -231,6 +231,13 @@ C15. **An impact story names the award that supports it, in `awards`.** Each sto
     on HydroShare, a book others are writing), and make the story say who made the work and, where known, who funded it. Leave
     `awards` out only while the attribution is undecided; `npm run validate:content` lists those stories. A story dated before
     an award began does not cite it. `verify.sh` fails a story that names an id the registry does not have.
+
+C16. **A job names its member institution only when it is sure.** `member_institution` on a `content/jobs/` file (optional) is
+    a name exactly as it is spelled in `content/members/reps.json`: the employer is, or is part of, that CUAHSI member institution.
+    Set it when a member's name is in the employer text or the posting itself says the employer belongs to a member (for example
+    the Alabama Water Institute, part of the University of Alabama); never from a guess. `null` means checked and not a member (it
+    turns off the job board's name match for that job). Leave it out when unsure: the board then falls back to matching member names
+    in `organization`. The job board shades member listings and lists them first. `verify.sh` fails a name that is not in the member list.
 
 ## Known footguns
 
@@ -485,7 +492,7 @@ days; events whose `end` has passed and are still `featured`; jobs past `deadlin
 cross-reference values that match nothing; items with no source (C2). Report with counts and
 denominators. Do not fix silently.
 
-**Review of a content branch.** The reviewer checks each changed file against C1 to C15 and
+**Review of a content branch.** The reviewer checks each changed file against C1 to C16 and
 reports any path outside the allowed set in rule 3.
 
 **Locks.** Phase 2 was opened on 4 October 2026; Jordan lifted the locks on 5 October 2026: `PHASE = 2` in

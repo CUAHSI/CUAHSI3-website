@@ -145,6 +145,8 @@ const refs = {            // collected for the cross-reference section
   awardUses: [],          // { file, value }: an id in a research story's `awards`
   awardsUndecided: [],    // published research files with no `awards` key at all
   awardIds: [],           // ids in content/awards/awards.json
+  memberNames: [],        // institution names in content/members/reps.json (names only; nothing else is kept)
+  jobMembers: [],         // { file, value }: a jobs member_institution value
 }
 
 for (const c of selected) {
@@ -170,6 +172,7 @@ for (const c of selected) {
         if (Array.isArray(data.awards)) for (const v of data.awards) refs.awardUses.push({ file, value: v })
         else if (data.published === true) refs.awardsUndecided.push(file)
       }
+      if (c.name === 'jobs' && typeof data.member_institution === 'string') refs.jobMembers.push({ file, value: data.member_institution })
       if (c.name === 'events') {
         for (const v of Array.isArray(data.newsletter_source) ? data.newsletter_source : []) refs.newsletterSource.push({ file, value: v })
       }
@@ -206,6 +209,7 @@ for (const c of selected) {
       const label = `${c.file}[${i}]${typeof entry?.slug === 'string' ? ` (${entry.slug})` : typeof entry?.last_name === 'string' ? ` (${entry.first_name} ${entry.last_name})` : ''}`
       const parsed = c.schema.safeParse(entry)
       if (c.name === 'awards' && typeof entry?.id === 'string') refs.awardIds.push(entry.id)
+      if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberNames.push(entry.institution.trim())
       if (typeof entry?.slug === 'string') (refs.slugs.get(c.name) ?? refs.slugs.set(c.name, []).get(c.name)).push({ id: label, slug: entry.slug })
       if (parsed.success) r.pass++
       else r.schemaFail.push({ file: label, issues: lines(parsed.error) })
@@ -296,6 +300,22 @@ if (nlSlugs.size && refs.newsletterSource.length) {
   })
 } else {
   skippedXref.push('events newsletter_source values vs newsletter slugs: needs both newsletter and events, and found none of one or the other')
+}
+
+// jobs: a member_institution value must be an institution name in content/members/reps.json (checked when both were read in this run;
+// a partial run that read only jobs skips it and says so).
+if (selected.some(c => c.name === 'jobs')) {
+  const rosterRead = selected.some(c => c.name === 'members/reps.json')
+  if (!rosterRead && only.length && refs.jobMembers.length) {
+    skippedXref.push('jobs member_institution values vs content/members/reps.json: the member list was not read in this partial run')
+  } else {
+    const roster = new Set(refs.memberNames)
+    xref.push({
+      title: 'Every jobs member_institution value is an institution in content/members/reps.json',
+      checked: `${refs.jobMembers.length} values in ${new Set(refs.jobMembers.map(j => j.file)).size} files against ${roster.size} member institutions`,
+      problems: refs.jobMembers.filter(j => !roster.has(j.value)).map(j => `${j.file}: "${j.value}" is not a member institution name in content/members/reps.json`),
+    })
+  }
 }
 
 // awards: every id a research story lists must be in the registry. Needs research; needs the registry too, which a run
