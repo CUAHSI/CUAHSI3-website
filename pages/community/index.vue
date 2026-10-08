@@ -8,7 +8,7 @@ const { data: allCommunityEvents } = await useAsyncData('community-events', () =
   queryContent('events').where({ published: true }).sort({ start: 1 }).find()
 )
 const upcomingEvents = computed(() =>
-  (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 4)
+  (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date(renderedAt.value)).slice(0, 4)
 )
 
 const { data: allNews } = await useAsyncData('community-news', () =>

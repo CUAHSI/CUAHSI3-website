@@ -12,12 +12,18 @@ const { data: allEvents } = await useAsyncData('all-events-page', () =>
     .find()
 )
 
+// The time the page works from: the build's time on the server and for the first browser render (so the two match and the
+// colours of the tags, which are set once, are right), then the real time once the page is open.
+const renderedAt = useState('events-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
+const now = computed(() => new Date(renderedAt.value))
+
 const upcoming = computed(() =>
-  (allEvents.value ?? []).filter(e => new Date(e.start) >= new Date())
+  (allEvents.value ?? []).filter(e => new Date(e.start) >= now.value)
 )
 const past = computed(() =>
   (allEvents.value ?? [])
-    .filter(e => new Date(e.start) < new Date())
+    .filter(e => new Date(e.start) < now.value)
     .reverse()
     .slice(0, 12)
 )
