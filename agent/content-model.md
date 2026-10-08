@@ -139,7 +139,7 @@ tags: [PhD, computational-hydrology]
 published: true
 ```
 > The `source` field exists specifically to support the planned harvesting agent.
-> Existing values include `newsletter`, `joshswaterjobs` and, since 5 October 2026, `usajobs` (federal postings written by the upstream jobs automation, which also records the posting's id in an optional `source_id`). Postings from Josh's Water Jobs may carry an optional `source_url`, the posting's page on his site; the jobs board uses it for the required "via Josh's Water Jobs" credit.
+> Existing values include `newsletter`, `joshswaterjobs`, `agu` (AGU Career Center; shown with a "via AGU Career Center" credit) and, since 5 October 2026, `usajobs` (federal postings written by the upstream jobs automation, which also records the posting's id in an optional `source_id`). Postings from Josh's Water Jobs may carry an optional `source_url`, the posting's page on his site; the jobs board uses it for the required "via Josh's Water Jobs" credit.
 
 **`content/cyberseminars/`**
 ```yaml

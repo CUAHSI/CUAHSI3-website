@@ -241,7 +241,7 @@ C16. **A job names its member institution only when it is sure.** `member_instit
 
 ## Known footguns
 
-Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, and the thirteenth hydrated with stale tag colours.
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, and the fourteenth crashed one page with a green build.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -313,6 +313,11 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     the server and for the first browser render) and set it to the real time in `onMounted`, as the job board, the home page
     and the events pages do. Do not call `new Date()` inside a `computed` that picks what to render. No `verify.sh` check:
     `new Date()` is also fine in a handler or a one-off format.
+14. **A `watch()` on a computed, placed above what the computed reads, crashes the page and the build passes.** `watch(typeFilters, ...)`
+    runs `typeFilters` at once, which read `jobs` before the `const jobs = ...` line below it had run (a temporal dead zone error in `setup`).
+    `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
+    that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
+    `npm run visual:compare` after any change to a page's script.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 

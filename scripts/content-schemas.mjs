@@ -109,10 +109,10 @@ const jobs = z.strictObject({
   url,
   tags: strings,
   published: z.boolean(),
-  source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
+  source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
   source_id: nonEmpty.optional(), // the posting's id at its source (a USAJOBS control number); only the usajobs files have it
   member_institution: nonEmpty.nullable().optional(), // a name from content/members/reps.json (checked by the validator): the employer is or belongs to that CUAHSI member institution. null = checked, not a member (turns off the board's name match); absent = not decided (the board falls back to matching the member names in `organization`)
-  source_url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(), // the posting's page on the source site; the jobs board shows "via Josh's Water Jobs" with it. Written by the upstream jobs automation for joshswaterjobs postings
+  source_url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(), // the posting's page on the source site; the jobs board shows "via Josh's Water Jobs" (or "via AGU Career Center" for source agu) with it. Written by the upstream jobs automation for joshswaterjobs postings
 })
 
 // content/cyberseminars/ : 15 files. The transcripts/ folder (7 .json files) is not validated here.
