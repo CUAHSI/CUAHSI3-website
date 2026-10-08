@@ -20,4 +20,16 @@ dist/
 .env.*
 !.env.example
 .Rproj.user
+.Rhistory
+*.Rproj
+
+# nuxt generate recreates dist as a symlink to .output/public; "dist/" above only matches folders
+dist
 .positai
+.agent/
+
+# Parity analysis: the legacy-site snapshot (agent/parity.md, P2). Never committed.
+raw/legacy-site/
+
+# generated before a build by scripts/flooding-gages.mjs (NWS flood snapshot)
+public/flooding-gages.json

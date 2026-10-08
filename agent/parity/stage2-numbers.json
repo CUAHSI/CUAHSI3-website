@@ -1,0 +1,236 @@
+{
+ "routes": 136,
+ "htmlFilesNotRoutes": [
+  "/200.html",
+  "/404.html"
+ ],
+ "byType": {
+  "landing page": 6,
+  "static page": 5,
+  "listing": 9,
+  "impact story": 31,
+  "person": 6,
+  "event": 40,
+  "news post": 12,
+  "newsletter issue": 9,
+  "redirect stub": 14,
+  "program": 4
+ },
+ "bySection": {
+  "none": 15,
+  "About": 42,
+  "Community": 67,
+  "Utility links (header)": 3,
+  "Data & Computing": 1,
+  "Hire CUAHSI": 1,
+  "Learn & Train": 7
+ },
+ "byFoundVia": {
+  "nav": 4,
+  "nav+footer": 5,
+  "link": 108,
+  "footer+redirect": 1,
+  "redirect": 13,
+  "footer": 5
+ },
+ "sourceCount": 136,
+ "withoutComponent": 0,
+ "withContentFile": 102,
+ "hasForm": 1,
+ "hasEmbed": 2,
+ "hasContact": 20,
+ "inNav": 15,
+ "filesLinked": 1,
+ "pagesWithoutMain": 14,
+ "redirectStubs": 14,
+ "published": {
+  "board": {
+   "files": 1,
+   "published": 1,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "community": {
+   "files": 4,
+   "published": 4,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "cyberseminars": {
+   "files": 15,
+   "published": 11,
+   "unpublished": 4,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "events": {
+   "files": 40,
+   "published": 40,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "jobs": {
+   "files": 29,
+   "published": 29,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "members": {
+   "files": 0,
+   "published": 0,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "news": {
+   "files": 12,
+   "published": 12,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "newsletter": {
+   "files": 9,
+   "published": 9,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "programs": {
+   "files": 4,
+   "published": 4,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "research": {
+   "files": 31,
+   "published": 31,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  },
+  "team": {
+   "files": 8,
+   "published": 8,
+   "unpublished": 0,
+   "noFlag": 0,
+   "noFrontMatter": 0
+  }
+ },
+ "itemRoutes": {
+  "events": 40,
+  "news": 12,
+  "newsletter": 9,
+  "research": 31,
+  "team": 6,
+  "programs": 4
+ },
+ "unroutedPublished": 5,
+ "unroutedByCollection": {
+  "team": 5
+ },
+ "unpublishedTotal": 4,
+ "unpublishedByCollection": {
+  "cyberseminars": 4
+ },
+ "ruleCounts": [
+  [
+   "N01",
+   "redirect stub",
+   14
+  ],
+  [
+   "N02",
+   "event",
+   40
+  ],
+  [
+   "N03",
+   "news post",
+   12
+  ],
+  [
+   "N04",
+   "newsletter issue",
+   9
+  ],
+  [
+   "N05",
+   "impact story",
+   31
+  ],
+  [
+   "N06",
+   "person",
+   6
+  ],
+  [
+   "N07",
+   "program",
+   4
+  ],
+  [
+   "N08",
+   "listing",
+   9
+  ],
+  [
+   "N09",
+   "landing page",
+   6
+  ],
+  [
+   "N10",
+   "static page",
+   5
+  ]
+ ],
+ "navItems": [
+  {
+   "label": "About",
+   "route": "/about"
+  },
+  {
+   "label": "Data & Computing",
+   "route": "/data-platforms"
+  },
+  {
+   "label": "Learn & Train",
+   "route": "/learn-train"
+  },
+  {
+   "label": "Community",
+   "route": "/community"
+  },
+  {
+   "label": "Hire CUAHSI",
+   "route": "/hire-cuahsi"
+  }
+ ],
+ "utilityItems": [
+  {
+   "route": "/support",
+   "label": "Support CUAHSI"
+  },
+  {
+   "route": "/contact",
+   "label": "Contact"
+  },
+  {
+   "route": "/member-portal",
+   "label": "Member Portal"
+  }
+ ],
+ "footerLinks": 11,
+ "sitemapLocs": 0,
+ "words": {
+  "median": 145,
+  "under50": 21,
+  "over1000": 6
+ }
+}

@@ -1,6 +1,6 @@
 ---
 title: "Supervisory Hydrologic Technician"
-slug: supervisory-hydrologic-technician
+slug: supervisory-hydrologic-technician-pennsylvania
 organization: "Geological Survey, Pennsylvania Water Science Center"
 location: "Williamsport, Pennsylvania"
 type: permanent

@@ -10,3 +10,4 @@ speaker_orgs: [USGS, USGS]
 tags: [water-availability, USGS, science-communication, national-assessment]
 published: true
 description: Highlights the key findings of the USGS National Water Availability Assessment — water quantity, quality, and use across the U.S. — and what the data means for communities facing imbalances between water supply and demand.
+---

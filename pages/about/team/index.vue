@@ -1,7 +1,7 @@
 <script setup lang="ts">
-useHead({ title: 'Our Team · CUAHSI' })
+useHead({ title: 'Our Team' })
 const { data: teamData } = await useAsyncData('team', () =>
-  queryContent('team').where({ _extension: 'json' }).findOne()
+  queryContent('team').where({ _extension: 'json' }).findOne().catch(() => null)
 )
 const people = computed<any[]>(() =>
   Array.isArray(teamData.value?.body) ? teamData.value.body : []
@@ -19,40 +19,40 @@ function initials(name: string) { return name.split(' ').map((n:string)=>n[0]).j
 </script>
 <template>
   <div>
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 48px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">About · Team</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 0;">The people behind CUAHSI.</h1>
-      </div>
-    </section>
-    <div class="mx-auto" style="max-width:1240px;padding:48px 40px 80px;">
+    <PageHero container-class="mx-auto max-w-site p-[64px_40px_48px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[14px_0_0]">
+      <template #kicker>About · Team</template>
+      <template #title>The people behind CUAHSI.</template>
+      <template #below><SectionNav section="about" fixed /></template>
+    </PageHero>
+    <div class="mx-auto max-w-site p-[48px_40px_80px]">
       <div v-for="dept in deptOrder" :key="dept">
         <div v-if="byDept[dept]?.length" class="mb-12">
           <div class="flex items-center gap-3 mb-6">
-            <span style="font:700 13px/1 'Schibsted Grotesk';color:#0F2E44;">{{ dept }}</span>
+            <span class="font-['Schibsted_Grotesk'] font-bold text-[13px] leading-none text-navy">{{ dept }}</span>
             <span class="font-mono text-[11px] text-muted">{{ byDept[dept].length }} people</span>
           </div>
-          <div class="rgrid rgrid-multi" style="display:grid;gap:16px;--cols:repeat(4,1fr);">
+          <div class="grid grid-cols-[1fr] gap-[16px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(4,1fr)]">
             <div v-for="person in byDept[dept]" :key="person.slug"
-              class="card-lift bg-white rounded-card overflow-hidden"
-              style="border:1px solid rgba(15,33,43,.1);"
-              :style="person.has_profile ? 'cursor:pointer;' : ''"
-              @click="person.has_profile ? $router.push(`/about/team/${person.slug}`) : null">
+              class="card-lift relative bg-white rounded-card overflow-hidden border border-[rgba(15,33,43,.1)]">
+              <!-- The whole card is the link: an empty link stretched over it, so keyboard and screen-reader users can open the profile -->
+              <NuxtLink v-if="person.has_profile" :to="`/about/team/${person.slug}`" :aria-label="`${person.name}, view profile`"
+                class="absolute inset-0 z-10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-water"></NuxtLink>
               <!-- Photo -->
-              <div class="relative" style="height:200px;background:#F3EEE4;overflow:hidden;">
+              <div class="relative h-[200px] bg-sand overflow-hidden">
                 <img v-if="person.photo" :src="person.photo" :alt="`${person.name}`"
                   :key="`img-${person.slug}`"
-                  style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
-                <div v-else class="w-full h-full flex items-center justify-center" style="font:700 32px 'Schibsted Grotesk';color:#5C6E78;">{{ initials(person.name) }}</div>
-                <div v-if="person.has_profile" class="absolute rounded-full" style="top:10px;right:10px;background:rgba(255,255,255,.9);padding:3px 10px;font:600 10.5px 'Hanken Grotesk';color:#0F2E44;">profile →</div>
+                  class="w-full h-full object-cover object-[center_top]" />
+                <div v-else class="w-full h-full flex items-center justify-center font-['Schibsted_Grotesk'] font-bold text-[32px] leading-[normal] text-muted">{{ initials(person.name) }}</div>
+                <div v-if="person.has_profile" class="absolute rounded-full top-[10px] right-[10px] bg-[rgba(255,255,255,.9)] p-[3px_10px] font-['Hanken_Grotesk'] font-semibold text-[10.5px] leading-[normal] text-navy">profile →</div>
               </div>
               <!-- Info -->
-              <div style="padding:14px;">
+              <div class="p-[14px]">
                 <div class="flex items-baseline gap-2 flex-wrap mb-1">
-                  <span style="font:700 14px 'Schibsted Grotesk';color:#0F2E44;">{{ person.name }}</span>
+                  <span class="font-['Schibsted_Grotesk'] font-bold text-[14px] leading-[normal] text-navy">{{ person.name }}</span>
                   <span v-if="person.pronouns" class="font-mono text-[10px] text-muted">{{ person.pronouns }}</span>
                 </div>
-                <p style="font:400 12.5px/1.4 'Hanken Grotesk';color:#5C6E78;">{{ person.role }}</p>
+                <p class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.4] text-muted">{{ person.role }}</p>
               </div>
             </div>
           </div>

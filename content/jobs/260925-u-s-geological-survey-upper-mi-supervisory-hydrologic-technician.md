@@ -1,6 +1,6 @@
 ---
 title: "Supervisory Hydrologic Technician"
-slug: supervisory-hydrologic-technician
+slug: supervisory-hydrologic-technician-upper-midwest
 organization: "U.S. Geological Survey, Upper Midwest Water Science Center"
 location: "Grayling, Michigan"
 type: permanent

@@ -18,33 +18,45 @@ a { color: inherit; text-decoration: none; }
 .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Prose styles for content pages (programs, news, team profiles, impact stories) */
-.program-prose h2, .news-prose h2, .profile-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
-.program-prose h3, .news-prose h3, .profile-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
-.program-prose p, .news-prose p, .profile-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
-.program-prose a, .news-prose a, .profile-prose a { color: #1F6FB2; }
-.program-prose a:hover, .news-prose a:hover, .profile-prose a:hover { text-decoration: underline; }
-.program-prose ul, .news-prose ul, .profile-prose ul { padding-left: 20px; margin-bottom: 14px; }
-.program-prose li, .news-prose li, .profile-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; list-style: disc; }
-.program-prose strong, .news-prose strong, .profile-prose strong { font-weight: 600; color: #15212B; }
+/* Prose styles for content pages (programs, team profiles, impact stories, newsletter issues) */
+.program-prose h2, .newsletter-prose h2, .profile-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
+.program-prose h3, .newsletter-prose h3, .profile-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
+.program-prose p, .newsletter-prose p, .profile-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
+.program-prose a, .newsletter-prose a, .profile-prose a { color: #1F6FB2; }
+.program-prose a:hover, .newsletter-prose a:hover, .profile-prose a:hover { text-decoration: underline; }
+.program-prose ul, .newsletter-prose ul, .profile-prose ul { padding-left: 20px; margin-bottom: 14px; }
+.program-prose li, .newsletter-prose li, .profile-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; list-style: disc; }
+.program-prose strong, .newsletter-prose strong, .profile-prose strong { font-weight: 600; color: #15212B; }
 
-/* ===== Responsive grid utilities ===== */
-/* Use instead of inline grid-template-columns for anything that needs to collapse on mobile */
-.rg-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.rg-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.rg-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.rg-hero { display: grid; grid-template-columns: 1.04fr .96fr; gap: 60px; align-items: center; }
-.rg-featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 22px; }
-.rg-sidebar { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 48px; }
-.rg-intro { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: center; }
+/* Research data management guide: the profile prose rules plus what a long guide needs (numbered lists, tables, h4, images). */
+.guide-prose h2 { font: 700 18px/1.3 'Schibsted Grotesk'; color: #0F2E44; margin: 28px 0 10px; letter-spacing: -.008em; }
+.guide-prose h3 { font: 600 15px/1.3 'Hanken Grotesk'; color: #15212B; margin: 18px 0 6px; }
+.guide-prose h4 { font: 600 14px/1.3 'Hanken Grotesk'; color: #15212B; margin: 14px 0 6px; }
+.guide-prose p { font: 400 15px/1.75 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 14px; }
+.guide-prose a { color: #1F6FB2; overflow-wrap: anywhere; }
+.guide-prose a:hover { text-decoration: underline; }
+.guide-prose ul, .guide-prose ol { padding-left: 22px; margin-bottom: 14px; }
+.guide-prose li { font: 400 15px/1.65 'Hanken Grotesk'; color: #3a4d57; margin-bottom: 5px; }
+.guide-prose ul > li { list-style: disc; }
+.guide-prose ol > li { list-style: decimal; }
+.guide-prose strong { font-weight: 600; color: #15212B; }
+.guide-prose table { display: block; overflow-x: auto; border-collapse: collapse; margin-bottom: 14px; max-width: 100%; }
+.guide-prose th, .guide-prose td { font: 400 14px/1.5 'Hanken Grotesk'; color: #3a4d57; border: 1px solid rgba(15,33,43,.15); padding: 6px 10px; text-align: left; vertical-align: top; }
+.guide-prose th { font-weight: 600; color: #15212B; background: rgba(15,33,43,.04); }
+.guide-prose img { max-width: 100%; height: auto; }
 
-@media (max-width: 900px) {
-  .rg-3, .rg-4 { grid-template-columns: 1fr 1fr; }
-  .rg-hero, .rg-featured, .rg-sidebar, .rg-intro { grid-template-columns: 1fr; }
-}
-@media (max-width: 640px) {
-  .rg-2, .rg-3, .rg-4 { grid-template-columns: 1fr; }
-}
+/* News articles: the shared prose style above with the news page's own overrides folded in. Before this was
+   one definition here plus a second, conflicting one in pages/community/news/[slug].vue, and the page's won. */
+.news-prose h2 { font-style: normal; font-family: 'Schibsted Grotesk'; font-size: 16px; font-weight: 600; line-height: 1.3; color: #111827; margin: 28px 0 10px; letter-spacing: -.008em; }
+.news-prose h3 { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 14px; font-weight: 600; line-height: 1.3; color: #374151; margin: 20px 0 8px; }
+.news-prose p { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.75; color: #374151; margin-bottom: 16px; }
+.news-prose a { color: #0F7A57; text-decoration: none; }
+.news-prose a:hover { text-decoration: underline; }
+.news-prose ul { padding-left: 20px; margin-bottom: 16px; }
+.news-prose li { font-style: normal; font-family: 'Hanken Grotesk'; font-size: 15px; font-weight: 400; line-height: 1.7; color: #374151; margin-bottom: 6px; list-style: disc; }
+.news-prose strong { font-weight: 600; color: #111827; }
+.news-prose em { font-style: italic; color: #6b7280; }
+.news-prose hr { border: none; border-top: 0.5px solid #f3f4f6; margin: 24px 0; }
 
 /* Container padding shrinks on small screens */
 .site-container { padding-left: 40px; padding-right: 40px; }
@@ -55,17 +67,4 @@ a { color: inherit; text-decoration: none; }
 /* Tighten hero vertical padding on mobile */
 @media (max-width: 640px) {
   .hero-section { padding-top: 44px !important; padding-bottom: 32px !important; }
-}
-
-/* ===== Universal responsive grid (replaces ad-hoc .rg-* classes) =====
-   Any inline grid-template-columns is moved into --cols and read here,
-   so a real CSS media query — not inline style — controls the breakpoint.
-   .rgrid-split: 2-track asymmetric layouts (hero, sidebars, intro bands) — stay stacked until 900px.
-   .rgrid-multi: 3+ track symmetric layouts (card grids, footer, stats) — 2-up at 640px, full at 900px. */
-.rgrid { display: grid; grid-template-columns: 1fr; gap: var(--rgap, 18px); }
-@media (min-width: 640px) {
-  .rgrid.rgrid-multi { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 900px) {
-  .rgrid.rgrid-multi, .rgrid.rgrid-split { grid-template-columns: var(--cols); }
 }

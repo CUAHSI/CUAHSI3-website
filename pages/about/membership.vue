@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Membership · CUAHSI' })
+useHead({ title: 'Membership' })
 
 // Canonical member institution list — current as of July 2026, sourced from cuahsi.org/about/about-membership.
 // The Hire CUAHSI institution lookup (pages/hire-cuahsi/index.vue) should read from this same list;
@@ -136,72 +136,69 @@ const filtered = computed(() => {
 function categoryLabel(key: string) {
   return categories.find(c => c.key === key)?.label ?? key
 }
-
-function chipStyle(active: boolean) {
-  return `font:600 12.5px 'Hanken Grotesk';padding:6px 13px;border-radius:22px;border:1px solid ${active ? '#0F2E44' : 'rgba(15,33,43,.18)'};background:${active ? '#0F2E44' : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;`
-}
 </script>
 <template>
   <div>
-    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" style="color:#5C6E78;">About</NuxtLink> / Membership</p>
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">About · Membership</span>
-        <h1 style="font:700 clamp(32px,4vw,48px)/1.05 'Schibsted Grotesk';letter-spacing:-.02em;color:#0F2E44;margin:14px 0 14px;">Join the water science consortium.</h1>
-        <p style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;margin-bottom:24px;">CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 101 member institutions advancing water science together.</p>
-        <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn" style="font:600 15px 'Hanken Grotesk';padding:13px 22px;">Get in touch <span class="arr">→</span></a>
-      </div>
-    </section>
+    <PageHero container-class="mx-auto max-w-site p-[64px_40px_52px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(32px,4vw,48px)] leading-[1.05] tracking-[-.02em] text-navy m-[14px_0_14px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[560px] mb-[24px]">
+      <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" class="text-muted">About</NuxtLink> / Membership</p></template>
+      <template #kicker>About · Membership</template>
+      <template #title>Join the water science consortium.</template>
+      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 101 member institutions advancing water science together.</template>
+      <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] p-[13px_22px]">Get in touch <span class="arr">→</span></a>
+      <template #below><SectionNav section="about" fixed /></template>
+    </PageHero>
 
-    <div class="mx-auto site-container" style="max-width:1240px;padding-top:52px;padding-bottom:24px;">
-      <p style="font:400 15px/1.65 'Hanken Grotesk';color:#3a4d57;max-width:640px;margin-bottom:20px;">HydroShare, JupyterHub, and MATLAB Online are free and open to the whole water science community — but membership comes with tangible advantages layered on top:</p>
-      <ul class="flex flex-col gap-[10px] mb-6" style="list-style:none;padding:0;margin:0;max-width:640px;">
-        <li class="flex items-start gap-3" style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;">
-          <span class="rounded-full flex-none mt-[7px]" style="width:6px;height:6px;background:#2A86C9;"></span>
-          <span><strong style="color:#15212B;">Priority support</strong> on HydroShare, JupyterHub, and MATLAB Online — faster turnaround on feature requests, storage upgrades, and account needs.</span>
+    <div class="mx-auto site-container max-w-site pt-[52px] pb-[24px]">
+      <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.65] text-[#3a4d57] max-w-[640px] mb-[20px]">HydroShare, JupyterHub, and MATLAB Online are free and open to the whole water science community — but membership comes with tangible advantages layered on top:</p>
+      <ul class="flex flex-col gap-[10px] list-none p-0 m-0 max-w-[640px]">
+        <li class="flex items-start gap-3 font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.6] text-[#3a4d57]">
+          <span class="rounded-full flex-none mt-[7px] w-[6px] h-[6px] bg-water-bright"></span>
+          <span><strong class="text-ink">Priority support</strong> on HydroShare, JupyterHub, and MATLAB Online — faster turnaround on feature requests, storage upgrades, and account needs.</span>
         </li>
-        <li class="flex items-start gap-3" style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;">
-          <span class="rounded-full flex-none mt-[7px]" style="width:6px;height:6px;background:#2A86C9;"></span>
-          <span><strong style="color:#15212B;">20% off</strong> CUAHSI-run trainings and events where CUAHSI collects registration.</span>
+        <li class="flex items-start gap-3 font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.6] text-[#3a4d57]">
+          <span class="rounded-full flex-none mt-[7px] w-[6px] h-[6px] bg-water-bright"></span>
+          <span><strong class="text-ink">20% off</strong> CUAHSI-run trainings and events where CUAHSI collects registration.</span>
         </li>
-        <li class="flex items-start gap-3" style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;">
-          <span class="rounded-full flex-none mt-[7px]" style="width:6px;height:6px;background:#2A86C9;"></span>
-          <span><strong style="color:#15212B;">4.2% off</strong> hourly rates on <NuxtLink to="/hire-cuahsi" style="color:#1F6FB2;">Hire CUAHSI</NuxtLink> fee-for-service work.</span>
+        <li class="flex items-start gap-3 font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.6] text-[#3a4d57]">
+          <span class="rounded-full flex-none mt-[7px] w-[6px] h-[6px] bg-water-bright"></span>
+          <span><strong class="text-ink">4.2% off</strong> hourly rates on <NuxtLink to="/hire-cuahsi" class="text-water">Hire CUAHSI</NuxtLink> fee-for-service work.</span>
         </li>
-        <li class="flex items-start gap-3" style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;">
-          <span class="rounded-full flex-none mt-[7px]" style="width:6px;height:6px;background:#2A86C9;"></span>
-          <span><strong style="color:#15212B;">Representation in CUAHSI governance</strong> and priority access to new programs and pilots.</span>
+        <li class="flex items-start gap-3 font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.6] text-[#3a4d57]">
+          <span class="rounded-full flex-none mt-[7px] w-[6px] h-[6px] bg-water-bright"></span>
+          <span><strong class="text-ink">Representation in CUAHSI governance</strong> and priority access to new programs and pilots.</span>
         </li>
       </ul>
-      <p style="font:400 15px/1.65 'Hanken Grotesk';color:#3a4d57;max-width:640px;margin-bottom:16px;">Member universities can also start with a free <NuxtLink to="/community/campus-visits" style="color:#1F6FB2;">campus visit</NuxtLink> before considering fee-for-service work.</p>
-      <div class="rounded-[10px]" style="background:#F3EEE4;padding:16px 20px;max-width:640px;margin-bottom:40px;">
-        <p style="font:400 13.5px/1.6 'Hanken Grotesk';color:#3a4d57;margin:0;">Over the last ten years, member institutions have received <strong style="color:#0F2E44;">more than $100,000</strong> in benefits and student grants through CUAHSI membership.</p>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.65] text-[#3a4d57] max-w-[640px] mb-[16px]">Member universities can also start with a free <NuxtLink to="/community/campus-visits" class="text-water">campus visit</NuxtLink> before considering fee-for-service work.</p>
+      <div class="rounded-[10px] bg-sand p-[16px_20px] max-w-[640px] mb-[40px]">
+        <p class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.6] text-[#3a4d57] m-0">Over the last ten years, member institutions have received <strong class="text-navy">more than $100,000</strong> in benefits and student grants through CUAHSI membership.</p>
       </div>
     </div>
 
     <!-- Member institution list -->
-    <div class="mx-auto site-container" style="max-width:1240px;padding-bottom:80px;">
+    <div class="mx-auto site-container max-w-site pb-[80px]">
       <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
-        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Member institutions · as of July 2026</p>
-        <input v-model="query" type="text" placeholder="Search institutions…"
-          style="border:1px solid rgba(15,33,43,.15);border-radius:8px;padding:9px 12px;font:400 13px 'Hanken Grotesk';outline:none;width:240px;" />
+        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member institutions · as of July 2026</p>
+        <input v-model="query" type="text" aria-label="Search member institutions" placeholder="Search institutions…"
+          class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[240px]" />
       </div>
 
       <div class="flex gap-[6px] flex-wrap mb-5">
-        <button v-for="c in categories" :key="c.key" :style="chipStyle(activeCategory === c.key)" @click="activeCategory = c.key">
+        <FilterChip v-for="c in categories" :key="c.key" variant="navy" :active="activeCategory === c.key" @click="activeCategory = c.key">
           {{ c.label }}
-        </button>
+        </FilterChip>
       </div>
 
       <p class="font-mono text-[11px] text-muted mb-4">{{ filtered.length }} institution{{ filtered.length === 1 ? '' : 's' }}</p>
 
-      <div class="rg-3" style="gap:1px;background:rgba(15,33,43,.08);border-radius:10px;overflow:hidden;">
-        <div v-for="m in filtered" :key="m.name" class="bg-paper" style="padding:14px 16px;">
-          <p style="font:500 13.5px 'Hanken Grotesk';color:#15212B;margin:0 0 2px;">{{ m.name }}</p>
-          <p v-if="activeCategory === 'all'" class="font-mono text-[10px]" style="color:#9ca3af;">{{ categoryLabel(m.category) }}</p>
+      <div class="grid grid-cols-[1fr] min-[641px]:grid-cols-[1fr_1fr] min-[901px]:grid-cols-[repeat(3,1fr)] gap-[1px] bg-[rgba(15,33,43,.08)] rounded-[10px] overflow-hidden">
+        <div v-for="m in filtered" :key="m.name" class="bg-paper p-[14px_16px]">
+          <p class="font-['Hanken_Grotesk'] font-medium text-[13.5px] leading-[normal] text-ink m-[0_0_2px]">{{ m.name }}</p>
+          <p v-if="activeCategory === 'all'" class="font-mono text-[10px] text-muted">{{ categoryLabel(m.category) }}</p>
         </div>
       </div>
-      <p v-if="!filtered.length" style="font:400 13.5px 'Hanken Grotesk';color:#5C6E78;padding:20px 0;">No institutions match "{{ query }}".</p>
+      <p v-if="!filtered.length" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-muted p-[20px_0]">No institutions match "{{ query }}".</p>
     </div>
   </div>
 </template>

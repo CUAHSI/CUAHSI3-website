@@ -9,7 +9,7 @@ people_mentioned: [lindsay-platt, martin-seul]
 partners: [DataCite, Crossref]
 funding: NSF EAR-1849458
 published: true
-excerpt: HydroShare completed migration of all DOI registration from Crossref to DataCite — a registry better suited for data publication — with a direct benefit for researchers: NSF Public Access Repository submissions can now be auto-populated from a HydroShare DOI, importing author, title, and abstract without manual re-entry.
+excerpt: "HydroShare completed migration of all DOI registration from Crossref to DataCite — a registry better suited for data publication — with a direct benefit for researchers: NSF Public Access Repository submissions can now be auto-populated from a HydroShare DOI, importing author, title, and abstract without manual re-entry."
 ---
 
 HydroShare completed a full migration of its digital object identifier (DOI) registration from Crossref to DataCite, the leading metadata registry for research data. DataCite's richer metadata schema is better aligned with data publication than Crossref, which was originally designed for journal articles.

@@ -1,0 +1,53 @@
+{
+ "exportRows": 1000,
+ "www": {
+  "rows": 603,
+  "clicks": 21591,
+  "impressions": 1180476
+ },
+ "other": {
+  "rows": 397,
+  "clicks": 2150,
+  "impressions": 251814
+ },
+ "wwwMatchedClicks": 20155,
+ "unmatchedWww": {
+  "rows": 174,
+  "clicks": 1436,
+  "files": 66
+ },
+ "cited": {
+  "distinct": 47,
+  "pages": 38,
+  "files": 9,
+  "status200": 29,
+  "redirect302": 1,
+  "notInSnapshot": 8
+ },
+ "tiers": {
+  "A": {
+   "bodies": 10,
+   "urls": 227,
+   "clicks": 16197
+  },
+  "B": {
+   "bodies": 8,
+   "urls": 501,
+   "clicks": 3209
+  },
+  "C": {
+   "bodies": 6,
+   "urls": 27,
+   "clicks": 391
+  },
+  "-": {
+   "bodies": 1,
+   "urls": 12,
+   "clicks": 358
+  }
+ },
+ "thresholds": {
+  "A_share": 0.05,
+  "B_share": 0.01
+ }
+}

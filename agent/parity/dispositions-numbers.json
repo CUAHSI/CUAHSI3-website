@@ -1,0 +1,28 @@
+{
+ "rows": 28,
+ "bodies": 25,
+ "outside": [
+  {
+   "what": "Outside every body: job-board URLs (expired postings and year pages)",
+   "urls": 83,
+   "clicks": 716
+  },
+  {
+   "what": "Outside every body: files",
+   "urls": 66,
+   "clicks": 496
+  },
+  {
+   "what": "Outside every body: other pages (staff, events, news, a campaign page)",
+   "urls": 25,
+   "clicks": 224
+  }
+ ],
+ "byFate": {
+  "migrated": 15,
+  "merged": 10,
+  "retired": 1,
+  "redirect": 2
+ },
+ "urlRows": 104
+}

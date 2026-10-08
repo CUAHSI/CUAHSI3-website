@@ -1,6 +1,6 @@
 ---
 title: "Supervisory Hydrologic Technician"
-slug: supervisory-hydrologic-technician
+slug: supervisory-hydrologic-technician-wyoming-montana
 organization: "U.S. Geological Survey, Wyoming-Montana Water Science Center, Billings Field Office"
 location: "Billings, Montana"
 type: permanent

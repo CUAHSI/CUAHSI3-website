@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Events · CUAHSI',
+  title: 'Events',
   meta: [{ name: 'description', content: 'Upcoming and past events from CUAHSI — workshops, conferences, webinars, deadlines, and training programs across the water science community.' }]
 })
 
@@ -41,7 +41,7 @@ const typeColors: Record<string, { bg: string; text: string }> = {
   workshop:   { bg: '#EDE9FE', text: '#5B21B6' },
   webinar:    { bg: '#DCFCE7', text: '#15803D' },
   deadline:   { bg: '#FEF9C3', text: '#854D0E' },
-  default:    { bg: '#F3F4F6', text: '#6B7280' },
+  default:    { bg: '#F3F4F6', text: '#5C6E78' },
 }
 
 function typeStyle(type: string) {
@@ -51,109 +51,107 @@ function typeStyle(type: string) {
 
 function fmtDate(start: string, end?: string) {
   const s = new Date(start)
-  const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' }
+  const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }
   if (!end) return s.toLocaleDateString('en-US', opts)
   const e = new Date(end)
-  if (s.toDateString() === e.toDateString()) return s.toLocaleDateString('en-US', opts)
-  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth())
-    return `${s.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}–${e.getDate()}, ${e.getFullYear()}`
-  return `${s.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – ${e.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
+  if (s.toISOString().slice(0, 10) === e.toISOString().slice(0, 10)) return s.toLocaleDateString('en-US', opts)
+  if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth())
+    return `${s.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}–${e.getUTCDate()}, ${e.getUTCFullYear()}`
+  return `${s.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })} – ${e.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}`
 }
 </script>
 
 <template>
   <div>
 
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
 
-      <div style="padding:36px 0 24px;">
-        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">Community / Events</p>
-        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Events</h1>
-        <p style="font-size:14px;color:#6b7280;line-height:1.6;max-width:520px;margin-bottom:8px;">
+      <div class="p-[36px_0_24px]">
+        <p class="text-[11px] text-muted mb-[8px]">Community / Events</p>
+        <h1 class="text-[28px] font-medium mb-[10px]">Events</h1>
+        <p class="text-[14px] text-[#6b7280] leading-[1.6] max-w-[520px] mb-[8px]">
           Workshops, conferences, webinars, and deadlines across the water science community.
           CUAHSI hosts, co-organizes, or participates in events year-round.
         </p>
-        <p style="font-size:12px;color:#9ca3af;line-height:1.6;max-width:520px;margin-bottom:20px;">
+        <p class="text-[12px] text-muted leading-[1.6] max-w-[520px] mb-[20px]">
           Training sessions with a scheduled date appear here alongside their full description on
-          <NuxtLink to="/learn-train" style="color:#1F6FB2;">Learn &amp; Train</NuxtLink> — same session, one canonical page.
+          <NuxtLink to="/learn-train" class="text-water">Learn &amp; Train</NuxtLink> — same session, one canonical page.
         </p>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
-            :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
+        <div class="flex gap-[6px] flex-wrap">
+          <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
             {{ f === 'all' ? 'All types' : f }}
-          </button>
+          </FilterChip>
         </div>
       </div>
 
       <!-- Upcoming -->
-      <section style="margin-bottom:48px;">
-        <h2 style="font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:0;padding-bottom:10px;border-bottom:0.5px solid #f3f4f6;">Upcoming</h2>
+      <section class="mb-[48px]">
+        <h2 class="text-[12px] font-medium tracking-[.06em] uppercase text-muted mb-[0] pb-[10px] border-b-[0.5px] border-b-[#f3f4f6]">Upcoming</h2>
         <div v-if="filteredUpcoming?.length">
           <NuxtLink v-for="event in filteredUpcoming" :key="event._path"
             :to="`/community/events/${event.slug}`"
-            style="display:grid;gap:16px;align-items:start;padding:16px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
+            class="grid grid-cols-[1fr] min-[900px]:grid-cols-[56px_1fr_auto] gap-[16px] [align-items:start] p-[16px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
             <!-- Date block -->
-            <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:8px 4px;">
-              <p style="font-size:9px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;">
-                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short' }) }}
+            <div class="text-center bg-[#f9fafb] rounded-[8px] p-[8px_4px]">
+              <p class="text-[9px] text-muted uppercase tracking-[.06em] mb-[2px]">
+                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
               </p>
-              <p style="font-size:20px;font-weight:500;line-height:1;color:#111827;">
-                {{ new Date(event.start).getDate() }}
+              <p class="text-[20px] font-medium leading-[1] text-[#111827]">
+                {{ new Date(event.start).getUTCDate() }}
               </p>
             </div>
             <!-- Details -->
             <div>
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
-                <p style="font-size:14px;font-weight:500;line-height:1.35;">{{ event.title }}</p>
+              <div class="flex items-center gap-[8px] mb-[4px] flex-wrap">
+                <p class="text-[14px] font-medium leading-[1.35]">{{ event.title }}</p>
                 <span :style="typeStyle(event.type)">{{ event.type }}</span>
-                <span v-if="event.featured" style="font-size:10px;padding:2px 8px;border-radius:99px;background:#FFF7ED;color:#C2410C;border:0.5px solid #FED7AA;">featured</span>
+                <span v-if="event.featured" class="text-[10px] p-[2px_8px] rounded-[99px] bg-[#FFF7ED] text-[#C2410C] border-[0.5px] border-[#FED7AA]">featured</span>
               </div>
-              <p style="font-size:12px;color:#6b7280;line-height:1.5;margin-bottom:6px;max-width:520px;">{{ event.description }}</p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:#9ca3af;">
+              <p class="text-[12px] text-[#6b7280] leading-[1.5] mb-[6px] max-w-[520px]">{{ event.description }}</p>
+              <div class="flex gap-[12px] flex-wrap text-[11px] text-muted">
                 <span>{{ fmtDate(event.start, event.end) }}</span>
                 <span v-if="event.location?.city">{{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode">{{ event.location.mode }}</span>
-                <span v-if="event.registration?.cost === 'free'" style="color:#15803D;">Free</span>
-                <span v-if="event.registration?.required" style="color:#1E40AF;">Registration required</span>
+                <span v-if="event.registration?.cost === 'free'" class="text-[#15803D]">Free</span>
+                <span v-if="event.registration?.required" class="text-[#1E40AF]">Registration required</span>
               </div>
             </div>
             <!-- Arrow -->
-            <span style="font-size:13px;color:#d1d5db;padding-top:4px;">→</span>
+            <span class="text-[13px] text-[#d1d5db] pt-[4px]">→</span>
           </NuxtLink>
         </div>
-        <p v-else style="font-size:13px;color:#9ca3af;padding:16px 0;">No upcoming events matching this filter.</p>
+        <p v-else class="text-[13px] text-muted p-[16px_0]">No upcoming events matching this filter.</p>
       </section>
 
       <!-- Past -->
-      <section style="margin-bottom:48px;">
-        <h2 style="font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:0;padding-bottom:10px;border-bottom:0.5px solid #f3f4f6;">Past</h2>
+      <section class="mb-[48px]">
+        <h2 class="text-[12px] font-medium tracking-[.06em] uppercase text-muted mb-[0] pb-[10px] border-b-[0.5px] border-b-[#f3f4f6]">Past</h2>
         <div v-if="filteredPast?.length">
-          <NuxtLink class="rgrid rgrid-split" v-for="event in filteredPast" :key="event._path"
-            :to="`/community/events/${event.slug}`"
-            style="display:grid;gap:16px;align-items:start;padding:14px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;opacity:0.65;--cols:56px 1fr auto;">
-            <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:8px 4px;">
-              <p style="font-size:9px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;">
-                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short' }) }}
+          <NuxtLink class="grid grid-cols-[1fr] min-[900px]:grid-cols-[56px_1fr_auto] gap-[16px] [align-items:start] p-[14px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit opacity-[0.65]" v-for="event in filteredPast" :key="event._path"
+            :to="`/community/events/${event.slug}`">
+            <div class="text-center bg-[#f9fafb] rounded-[8px] p-[8px_4px]">
+              <p class="text-[9px] text-muted uppercase tracking-[.06em] mb-[2px]">
+                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
               </p>
-              <p style="font-size:20px;font-weight:500;line-height:1;color:#6b7280;">
-                {{ new Date(event.start).getDate() }}
+              <p class="text-[20px] font-medium leading-[1] text-[#6b7280]">
+                {{ new Date(event.start).getUTCDate() }}
               </p>
             </div>
             <div>
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;flex-wrap:wrap;">
-                <p style="font-size:13px;font-weight:500;line-height:1.35;">{{ event.title }}</p>
+              <div class="flex items-center gap-[8px] mb-[3px] flex-wrap">
+                <p class="text-[13px] font-medium leading-[1.35]">{{ event.title }}</p>
                 <span :style="typeStyle(event.type)">{{ event.type }}</span>
               </div>
-              <div style="display:flex;gap:12px;font-size:11px;color:#9ca3af;">
+              <div class="flex gap-[12px] text-[11px] text-muted">
                 <span>{{ fmtDate(event.start, event.end) }}</span>
                 <span v-if="event.location?.city">{{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode">{{ event.location.mode }}</span>
               </div>
             </div>
-            <span style="font-size:13px;color:#e5e7eb;padding-top:4px;">→</span>
+            <span class="text-[13px] text-[#e5e7eb] pt-[4px]">→</span>
           </NuxtLink>
         </div>
-        <p v-else style="font-size:13px;color:#9ca3af;padding:16px 0;">No past events matching this filter.</p>
+        <p v-else class="text-[13px] text-muted p-[16px_0]">No past events matching this filter.</p>
       </section>
 
     </div>

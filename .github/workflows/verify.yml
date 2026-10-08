@@ -1,0 +1,29 @@
+# Runs scripts/verify.sh --build on every pull request: the static checks, the content validator (known failures
+# stay a warning, extra ones fail), the full build and the built-site link check. Roadmap task 5.
+# Not here on purpose: the screenshot comparison (npm run visual:compare). Its baseline images were drawn on a Mac and
+# any pixel difference fails it, so it would fail on this Linux runner for font reasons alone. Run it locally.
+name: verify
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # verify.sh compares against the base branch with git merge-base
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20   # same as netlify.toml
+          cache: npm
+      - run: npm ci
+      - name: verify.sh --build
+        env:
+          VERIFY_BASE: origin/${{ github.base_ref }}
+        run: ./scripts/verify.sh --build

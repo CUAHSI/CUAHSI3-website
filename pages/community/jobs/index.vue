@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Job board · CUAHSI',
+  title: 'Job board',
   meta: [{ name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' }]
 })
 
@@ -47,12 +47,12 @@ const typeColors: Record<string, {bg: string; text: string}> = {
 }
 
 function typeStyle(type: string) {
-  const c = typeColors[type] ?? { bg: '#F3F4F6', text: '#6B7280' }
+  const c = typeColors[type] ?? { bg: '#F3F4F6', text: '#5C6E78' }
   return `font-size:11px;padding:2px 9px;border-radius:99px;font-weight:500;white-space:nowrap;background:${c.bg};color:${c.text};`
 }
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 }
 
 function daysUntil(d: string) {
@@ -68,91 +68,90 @@ function daysUntil(d: string) {
 <template>
   <div>
 
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
 
       <!-- Header -->
-      <div class="rgrid rgrid-split" style="display:grid;gap:24px;align-items:end;padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;--cols:minmax(0,1fr) auto;">
+      <div class="grid gap-[24px] [align-items:end] p-[36px_0_28px] border-b-[0.5px] border-b-[#f3f4f6] mb-[28px] grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_auto]">
         <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-            <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Job board
+          <p class="text-[11px] text-muted mb-[8px]">
+            <NuxtLink to="/community" class="no-underline text-muted">Get involved</NuxtLink> / Job board
           </p>
-          <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Job board</h1>
-          <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
+          <h1 class="text-[28px] font-medium mb-[10px]">Job board</h1>
+          <p class="text-[14px] text-[#6b7280] leading-[1.65] max-w-[520px]">
             Find and share water science opportunities — postdocs, permanent positions, fellowships,
             and internships. Postings remain active for 60 days. Open to the full water science community.
           </p>
         </div>
         <a href="https://cuahsi.jotform.com/222235514170142" target="_blank" rel="noopener"
-          style="flex-shrink:0;font-size:13px;font-weight:500;padding:10px 18px;background:#111827;color:white;border-radius:8px;text-decoration:none;white-space:nowrap;">
+          class="shrink-0 text-[13px] font-medium p-[10px_18px] bg-[#111827] text-white rounded-[8px] no-underline whitespace-nowrap">
           Post a job →
         </a>
       </div>
 
       <!-- Filters -->
-      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:24px;">
-        <span style="font-size:12px;color:#9ca3af;margin-right:4px;">Type</span>
-        <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
-          :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
+      <div class="flex items-center gap-[6px] flex-wrap mb-[24px]">
+        <span class="text-[12px] text-muted mr-[4px]">Type</span>
+        <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
-        </button>
+        </FilterChip>
       </div>
 
       <!-- Listings -->
-      <div style="margin-bottom:32px;">
+      <div class="mb-[32px]">
         <div v-if="filtered?.length">
           <a v-for="job in filtered" :key="job._path"
             :href="job.url" target="_blank" rel="noopener"
-            style="display:block;padding:20px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
-            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
-              <div style="flex:1;min-width:0;">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;">
-                  <p style="font-size:15px;font-weight:500;line-height:1.3;">{{ job.title }}</p>
+            class="block p-[20px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
+            <div class="flex items-start justify-between gap-[16px]">
+              <div class="flex-1 min-w-[0]">
+                <div class="flex items-center gap-[8px] mb-[5px] flex-wrap">
+                  <p class="text-[15px] font-medium leading-[1.3]">{{ job.title }}</p>
                   <span :style="typeStyle(job.type)">{{ typeLabels[job.type] ?? job.type }}</span>
                   <span v-if="job.deadline && daysUntil(job.deadline)"
-                    style="font-size:11px;padding:2px 8px;border-radius:99px;background:#FEF2F2;color:#DC2626;border:0.5px solid #FECACA;">
+                    class="text-[11px] p-[2px_8px] rounded-[99px] bg-[#FEF2F2] text-[#DC2626] border-[0.5px] border-[#FECACA]">
                     {{ daysUntil(job.deadline) }}
                   </span>
                 </div>
-                <p style="font-size:13px;color:#374151;font-weight:500;margin-bottom:4px;">{{ job.organization }}</p>
-                <div style="display:flex;gap:12px;font-size:12px;color:#9ca3af;margin-bottom:8px;flex-wrap:wrap;">
+                <p class="text-[13px] text-[#374151] font-medium mb-[4px]">{{ job.organization }}</p>
+                <div class="flex gap-[12px] text-[12px] text-muted mb-[8px] flex-wrap">
                   <span v-if="job.location">📍 {{ job.location }}</span>
                   <span>Posted {{ fmtDate(job.posted) }}</span>
                   <span v-if="job.deadline">Deadline {{ fmtDate(job.deadline) }}</span>
                 </div>
-                <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
-                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+                <p class="text-[13px] text-[#6b7280] leading-[1.55]">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
+                <div class="flex gap-[5px] flex-wrap mt-[8px]">
                   <span v-for="t in job.tags" :key="t"
-                    style="font-size:11px;padding:2px 7px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+                    class="text-[11px] p-[2px_7px] rounded-[99px] bg-[#f3f4f6] text-muted">
                     {{ t.replace(/-/g,' ') }}
                   </span>
                 </div>
               </div>
-              <span style="font-size:13px;color:#d1d5db;flex-shrink:0;padding-top:2px;">↗</span>
+              <span class="text-[13px] text-[#d1d5db] shrink-0 pt-[2px]">↗</span>
             </div>
           </a>
         </div>
-        <p v-else style="font-size:14px;color:#9ca3af;padding:24px 0;">No current listings match this filter.</p>
+        <p v-else class="text-[14px] text-muted p-[24px_0]">No current listings match this filter.</p>
       </div>
 
       <!-- Show/hide expired toggle -->
-      <div v-if="expiredCount > 0" style="margin-bottom:48px;">
+      <div v-if="expiredCount > 0" class="mb-[48px]">
         <button @click="showPast=!showPast"
-          style="font-size:12px;color:#9ca3af;background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;">
+          class="text-[12px] text-muted bg-[none] border-0 cursor-pointer p-[0] underline">
           {{ showPast ? 'Hide' : 'Show' }} {{ expiredCount }} expired listing{{ expiredCount === 1 ? '' : 's' }}
         </button>
       </div>
 
       <!-- Post a job CTA -->
-      <div class="rgrid rgrid-split" style="background:#f9fafb;border-radius:12px;padding:22px 24px;margin-bottom:48px;display:grid;gap:20px;align-items:center;--cols:minmax(0,1fr) auto;">
+      <div class="bg-[#f9fafb] rounded-[12px] p-[22px_24px] mb-[48px] grid gap-[20px] items-center grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_auto]">
         <div>
-          <p style="font-size:14px;font-weight:500;margin-bottom:4px;">Have a position to share?</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.6;">
+          <p class="text-[14px] font-medium mb-[4px]">Have a position to share?</p>
+          <p class="text-[13px] text-[#6b7280] leading-[1.6]">
             CUAHSI welcomes job postings relevant to the water science community — faculty positions,
             postdocs, fellowships, internships, and industry roles. Postings are free and remain active for 60 days.
           </p>
         </div>
         <a href="https://cuahsi.jotform.com/222235514170142" target="_blank" rel="noopener"
-          style="flex-shrink:0;font-size:13px;font-weight:500;padding:9px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;white-space:nowrap;">
+          class="shrink-0 text-[13px] font-medium p-[9px_18px] border-[0.5px] border-[#d1d5db] rounded-[8px] no-underline text-inherit whitespace-nowrap">
           Submit a listing →
         </a>
       </div>
