@@ -67,7 +67,10 @@ const tools = [
       <template #kicker>Data &amp; Computing</template>
       <template #title>Tools built for water science.</template>
       <template #lead>CUAHSI operates open infrastructure for the water science community — from data publication and cloud computing to national data discovery.</template>
-      <template #below><SectionNav section="data" fixed /></template>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] text-muted m-[22px_0_0]">Also here:
+        <NuxtLink to="/data-platforms/portals" class="text-water font-medium">Water data portals</NuxtLink> &nbsp;·&nbsp;
+        <NuxtLink to="/data-platforms/data-management-guide" class="text-water font-medium">Data management guide</NuxtLink>
+      </p>
     </PageHero>
 
     <!-- Stats band -->

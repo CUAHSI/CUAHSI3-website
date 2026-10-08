@@ -36,7 +36,6 @@ function fmtDate(d: string) {
       <template #kicker>Data &amp; Computing · Water data portals</template>
       <template #title>Where to find water data.</template>
       <template #lead>A catalog of portals that publish water data: who runs each one, what it covers, and a link. We review each entry every year; entries without a date have not been reviewed yet.</template>
-      <template #below><SectionNav section="data" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-site p-[40px_40px_80px]">
