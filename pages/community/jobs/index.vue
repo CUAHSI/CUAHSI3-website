@@ -24,8 +24,6 @@ const typeFilters = computed(() => [
 ])
 const activeFilter = ref('all')
 const showPast = ref(false)
-// A chip for faculty or temporary can disappear (when the expired listings are hidden again); fall back to "All types" so the list is not left empty with no chip selected.
-watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilter.value = 'all' })
 
 // The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
 // time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
@@ -162,6 +160,9 @@ function daysUntil(d: string) {
   if (diff <= CLOSING_SOON_DAYS) return `Closes in ${diff} days`
   return null
 }
+
+// A chip for faculty or temporary can disappear (when the expired listings are hidden again); fall back to "All types" so the list is not left empty with no chip selected.
+watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilter.value = 'all' })
 </script>
 
 <template>
