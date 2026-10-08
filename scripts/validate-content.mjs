@@ -142,6 +142,9 @@ const refs = {            // collected for the cross-reference section
   people: [],             // { file, value, yamlFailed }
   newsletterSource: [],   // { file, value }
   teamMdSlugs: [],        // { file, slug }
+  awardUses: [],          // { file, value }: an id in a research story's `awards`
+  awardsUndecided: [],    // published research files with no `awards` key at all
+  awardIds: [],           // ids in content/awards/awards.json
 }
 
 for (const c of selected) {
@@ -162,6 +165,10 @@ for (const c of selected) {
       if (c.name === 'team (.md)' && slugOf) refs.teamMdSlugs.push({ file, slug: slugOf })
       if (c.name === 'newsletter' || c.name === 'research') {
         for (const v of Array.isArray(data.people_mentioned) ? data.people_mentioned : []) refs.people.push({ file, value: v, yamlFailed: problems.length > 0 })
+      }
+      if (c.name === 'research') {
+        if (Array.isArray(data.awards)) for (const v of data.awards) refs.awardUses.push({ file, value: v })
+        else if (data.published === true) refs.awardsUndecided.push(file)
       }
       if (c.name === 'events') {
         for (const v of Array.isArray(data.newsletter_source) ? data.newsletter_source : []) refs.newsletterSource.push({ file, value: v })
@@ -198,6 +205,7 @@ for (const c of selected) {
       r.total++
       const label = `${c.file}[${i}]${typeof entry?.slug === 'string' ? ` (${entry.slug})` : typeof entry?.last_name === 'string' ? ` (${entry.first_name} ${entry.last_name})` : ''}`
       const parsed = c.schema.safeParse(entry)
+      if (c.name === 'awards' && typeof entry?.id === 'string') refs.awardIds.push(entry.id)
       if (typeof entry?.slug === 'string') (refs.slugs.get(c.name) ?? refs.slugs.set(c.name, []).get(c.name)).push({ id: label, slug: entry.slug })
       if (parsed.success) r.pass++
       else r.schemaFail.push({ file: label, issues: lines(parsed.error) })
@@ -288,6 +296,27 @@ if (nlSlugs.size && refs.newsletterSource.length) {
   })
 } else {
   skippedXref.push('events newsletter_source values vs newsletter slugs: needs both newsletter and events, and found none of one or the other')
+}
+
+// awards: every id a research story lists must be in the registry. Needs research; needs the registry too, which a run
+// limited to one collection may not have read (then this is skipped and said so, not failed).
+if (selected.some(c => c.name === 'research')) {
+  const registryRead = selected.some(c => c.name === 'awards')
+  const known = new Set(refs.awardIds)
+  const bad = new Map()
+  for (const u of refs.awardUses) if (!known.has(u.value)) bad.set(u.value, [...(bad.get(u.value) ?? []), u.file])
+  if (!registryRead && only.length && refs.awardUses.length) {
+    skippedXref.push('research awards ids vs content/awards/awards.json: the registry was not read in this partial run')
+  } else {
+    xref.push({
+      title: 'Every research awards id is in content/awards/awards.json',
+      checked: `${refs.awardUses.length} references in ${new Set(refs.awardUses.map(u => u.file)).size} files, ${new Set(refs.awardUses.map(u => u.value)).size} distinct ids, against ${known.size} registry entries${registryRead ? '' : ' (content/awards/awards.json does not exist yet)'}`,
+      problems: [...bad].map(([v, files]) => `"${v}" is not an id in content/awards/awards.json${registryRead ? '' : ' (the file does not exist yet)'}; used in ${files.join(', ')}`),
+    })
+  }
+  const used = new Set(refs.awardUses.map(u => u.value))
+  info.push({ title: 'awards: published research stories with no awards key (not yet decided; [] means checked, none): informational', checked: `${refs.awardsUndecided.length} files`, items: refs.awardsUndecided.length ? [`${refs.awardsUndecided.length} files, for example ${refs.awardsUndecided.slice(0, 3).map(f => path.basename(f)).join(', ')}`] : [] })
+  if (registryRead) info.push({ title: 'awards: registry entries no story uses: informational', checked: `${known.size} entries`, items: [...known].filter(id => !used.has(id)) })
 }
 
 // ---- print --------------------------------------------------------------------------
