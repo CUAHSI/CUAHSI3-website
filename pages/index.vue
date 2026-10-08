@@ -59,7 +59,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <!-- ── Hero ── -->
     <PageHero container-class="mx-auto max-w-site p-[76px_40px_72px] grid grid-cols-[1fr] min-[900px]:grid-cols-[1.04fr_.96fr] gap-[60px] items-center">
         <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">Consortium of Universities · Hydrologic Science</span>
+          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]">The Shared Capacity of Water Science</span>
           <h1 class="font-['Schibsted_Grotesk'] font-bold text-[clamp(40px,5vw,62px)] leading-[1.03] tracking-[-.022em] text-navy m-[18px_0_0] [text-wrap:balance]">
             Advancing the science of water, together.
           </h1>
