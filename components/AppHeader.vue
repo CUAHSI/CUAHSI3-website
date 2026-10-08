@@ -41,7 +41,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
         </span>
         <span class="hidden sm:flex flex-col items-start leading-none">
           <span class="font-['Schibsted_Grotesk'] font-extrabold text-[20px] leading-[normal] tracking-[.01em] text-navy">CUAHSI</span>
-          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">HYDROLOGIC SCIENCE</span>
+          <span class="font-mono text-[9px] tracking-[.06em] text-muted mt-[3px]">WATER SCIENCE</span>
         </span>
       </NuxtLink>
 
