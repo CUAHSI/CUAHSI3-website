@@ -24,6 +24,7 @@ registration:
   url: https://cvent.me/Pzey1e
   cost: "Student: $160 member, $200 non-member; professional: $320 member, $400 non-member"
 tags: [workshop, training, certificate, python, federal-data]
+newsletter_source: ["2026-october"]
 featured: false
 published: true
 ---
