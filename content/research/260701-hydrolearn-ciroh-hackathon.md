@@ -8,6 +8,7 @@ tags: [HydroLearn, CIROH, education, module-development, hackathon]
 people_mentioned: []
 partners: [CIROH, HydroLearn]
 funding: NOAA Cooperative Institute Program (NA22NWS4320003)
+awards: [ciroh-a25-0364-s006]
 published: true
 excerpt: Twenty-two fellows from across the US and Canada — research scientists, postdocs, and graduate students — produced 11 new HydroLearn modules during a combined three-day in-person workshop and eight-day virtual hackathon, translating CIROH-developed research tools into peer-reviewed learning resources.
 ---
