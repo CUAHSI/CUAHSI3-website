@@ -129,21 +129,16 @@ const waysin = [
 
 <template>
   <div>
+    <!-- Hero: the same banner as the other sections, and the page below it is now the same width and side padding as theirs (it was a narrower 1024px column) -->
+    <PageHero container-class="mx-auto max-w-site p-[64px_40px_52px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(36px,4.4vw,54px)] leading-[1.04] tracking-[-.022em] text-navy m-[16px_0_16px] max-w-[700px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[17px] leading-[1.6] text-[#3a4d57] max-w-[580px]">
+      <template #kicker>Get involved</template>
+      <template #title>Connect with the water science community</template>
+      <template #lead>CUAHSI community consists of students, educators, researchers, volunteer scientists, outreach coordinators, environmental and watershed organizations, and federal and state agencies. Everyone involved in water science, water-resources management, or water-resources protection has a place here.</template>
+    </PageHero>
 
-    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
-
-      <!-- Hero -->
-      <section class="p-[48px_0_40px] border-b-[0.5px] border-b-[#f3f4f6]">
-        <p class="text-[11px] text-muted font-medium tracking-[.07em] uppercase mb-[12px]">Get involved</p>
-        <h1 class="text-[32px] font-medium leading-[1.2] mb-[16px] max-w-[560px]">
-          Connect with the water science community
-        </h1>
-        <p class="text-[15px] text-[#6b7280] leading-[1.7] max-w-[560px]">
-          CUAHSI community consists of students, educators, researchers, volunteer scientists, outreach coordinators,
-          environmental and watershed organizations, and federal and state agencies. Everyone involved in water
-          science, water-resources management, or water-resources protection has a place here.
-        </p>
-      </section>
+    <div class="mx-auto max-w-site p-[0_40px]">
 
       <!-- Quote -->
       <section class="p-[36px_0] border-b-[0.5px] border-b-[#f3f4f6]">
