@@ -170,11 +170,10 @@ function directUrl(a: Ask): string {
   return `${base}&time=PT${WINDOW_HOURS}H&limit=1000&properties=time,value,qualifier,unit_of_measure,approval_status&${loc}`
 }
 async function usgsGet(a: Ask, ms = 7000): Promise<Response> {
-  const q = new URLSearchParams({ kind: a.kind, id: a.id })
-  if ('param' in a) q.set('param', a.param)
-  if ('days' in a) q.set('days', String(a.days))
+  // the gage and the question are in the path (see gage.ts: the CDN ignores a query string)
+  const path = [a.kind, a.id, ...('param' in a ? [a.param] : []), ...('days' in a ? [String(a.days)] : [])].join('/')
   try {
-    const res = await fetch(`/api/gage?${q}`, { signal: timeoutSignal(Math.min(ms, 6000)) })
+    const res = await fetch(`/api/gage/${path}`, { signal: timeoutSignal(Math.min(ms, 6000)) })
     if (res.headers.get('x-gage-proxy') && res.status < 500) return res
   } catch { /* no function here, or too slow: ask USGS directly */ }
   return fetch(directUrl(a), { signal: timeoutSignal(ms) })
