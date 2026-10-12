@@ -37,7 +37,7 @@ Five top-level nav sections:
 ```
 /                    Homepage — wayfinding, featured content, latest news
 /about               Organization — team, governance, membership, impact
-/data-platforms      Tools — HydroShare, JupyterHub, Water Services, MATLAB Online
+/data-platforms      Tools — HydroShare, JupyterHub, Hydrologic Information System, MATLAB Online
 /learn-train         Training — cyberseminars, structured programs, workshop archive
 /community           Engagement — events, jobs, newsletter, news, campus visits
 /hire-cuahsi         Fee-for-service work — consulting, DevOps, data wrangling, integrations
@@ -72,7 +72,7 @@ pages/
 │       ├── index.vue                      Team photo grid (grouped by department)
 │       └── [slug].vue                     Individual profile (has_profile: true only)
 ├── data-platforms/
-│   └── index.vue                          Tools hub — HydroShare, JupyterHub, Water Services, MATLAB
+│   └── index.vue                          Tools hub — HydroShare, JupyterHub, Hydrologic Information System, MATLAB
 ├── learn-train/
 │   ├── index.vue                          Training hub — cyberseminar feature + Programs + extras
 │   ├── cyberseminars/
@@ -334,6 +334,6 @@ Visit http://localhost:4000 to test search. Keep `npm run dev` running on :3000 
 
 - **`/member-portal` needs real access control** before production — see warning above.
 - **`content/board/`** and **`content/community/`** have stub files with no rendering pages.
-- **`/data-platforms/`** is a single page — HydroShare, JupyterHub, and Water Services could each warrant their own page eventually.
+- **`/data-platforms/`** is a single page — HydroShare, JupyterHub, and the Hydrologic Information System could each warrant their own page eventually.
 - **`content/events/` → `content/programs/` link is manual.** The README describes programs as "authored once" with events as scheduled instances, but this isn't yet enforced at the content-model level — a training session can currently be duplicated between the two collections if someone isn't careful. Treat `content/programs/` as the canonical description and `content/events/` as dated instances only.
 - **Institution data lives in two places.** `pages/about/membership.vue` and `pages/hire-cuahsi/index.vue`'s institution lookup both have their own hardcoded/JSON-sourced member lists. These should be consolidated to one shared source so they can't drift out of sync.

@@ -1,0 +1,4 @@
+261011 | task/hosting-exit | start | Jordan asked whether Netlify is the right host once the site is public ("Yes, write the hosting and exit page"); agent/hosting-and-exit.md only, no code, no content
+261011 | task/usgs-proxy | merged | PR 123 (the gage card asks USGS through a Netlify edge function that holds the key) merged on Jordan's word; the key is set in Netlify (Builds, Functions, Runtime; three deploy contexts), the curl check on the preview not yet reported
+261011 | task/hosting-exit | note | Noticed while reading: indexing is off in three places (netlify.toml header, built robots.txt, meta robots) and Node is still 20; both are listed in the page as pre-launch items, not changed
+261011 | task/hosting-exit | defect | first draft of the page had unchecked or wrong claims: "337" redirects (321 rules), "52 routes" (26 at two widths), function sizes wrong, outside-world facts presented as read in the repo, Node 20 end of life stated as fact; caught: reviewer
