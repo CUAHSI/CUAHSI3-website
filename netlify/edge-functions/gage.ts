@@ -18,6 +18,9 @@
 // never cached; the CDN may serve an older copy meanwhile (stale-if-error). An empty list of readings is kept only 5 minutes.
 // Only the exact paths above are answered (anything else is a 400), so a visitor cannot make cache misses at will; a flood of
 // different gage numbers could still use up the key's hourly allowance (the CDN cannot tell those from real ones).
+// `durable` (in the CDN header) asks Netlify to keep a reply in its shared cache. On a deploy preview, nine repeat requests in a row were
+// all misses (12 October 2026); my guess is that each edge node kept its own copy, which is not established. Whether `durable` fixes it
+// is to be seen on a preview.
 const BASE = 'https://api.waterdata.usgs.gov/ogcapi/v1'
 const PARAMS = new Set(['00060', '00065'])
 const LOW_REMAINING = 100
@@ -71,15 +74,15 @@ export default async (request: Request) => {
   const cacheFor = Number.isFinite(remaining) && res.headers.has('x-ratelimit-remaining') && remaining < LOW_REMAINING ? Math.max(ttl, 3600) : ttl
   const cacheHeaders = {
     'cache-control': 'public, max-age=60', // the browser
-    'netlify-cdn-cache-control': `public, s-maxage=${cacheFor}, stale-while-revalidate=300, stale-if-error=86400`,
+    'netlify-cdn-cache-control': `public, s-maxage=${cacheFor}, stale-while-revalidate=300, stale-if-error=86400, durable`,
   }
-  if (res.status === 404) return reply(404, { error: 'not found' }, { ...cacheHeaders, 'netlify-cdn-cache-control': 'public, s-maxage=3600' })
+  if (res.status === 404) return reply(404, { error: 'not found' }, { ...cacheHeaders, 'netlify-cdn-cache-control': 'public, s-maxage=3600, durable' })
   if (!res.ok) return reply(503, { error: `USGS answered ${res.status}` }, { ...noStore, 'retry-after': '60' })
   const text = await res.text()
   // an empty list of readings may be a glitch, and the card forgets a saved gage on it ("recent"): keep an empty answer only 5 minutes
   let empty = false
   if (kind !== 'name') { try { empty = (JSON.parse(text).features ?? []).length === 0 } catch { empty = false } }
-  if (empty) return reply(200, text, { ...cacheHeaders, 'netlify-cdn-cache-control': 'public, s-maxage=300' })
+  if (empty) return reply(200, text, { ...cacheHeaders, 'netlify-cdn-cache-control': 'public, s-maxage=300, durable' })
   return reply(200, text, cacheHeaders)
 }
 

@@ -13,11 +13,11 @@ console.log('-- live USGS, no key')
 let r = await call('readings/05407000/00060')
 const feats = JSON.parse(r.text).features ?? []
 check(r.status === 200 && feats.length > 0, 'readings', `${feats.length} points; fields: ${Object.keys(feats[0]?.properties ?? {}).join(',')}`)
-check(cdn(r).includes('s-maxage=900') && r.h.get('x-gage-proxy') === '1' && r.h.get('x-gage-key') === 'no', 'readings: 15-minute CDN cache, proxy header, key reported absent')
-r = await call('name/05407000'); check(r.status === 200 && /MUSCODA/i.test(r.text) && cdn(r).includes('s-maxage=86400'), 'name, cached a day')
+check(cdn(r).includes('s-maxage=900') && cdn(r).includes('durable') && r.h.get('x-gage-proxy') === '1' && r.h.get('x-gage-key') === 'no', 'readings: 15-minute CDN cache, proxy header, key reported absent')
+r = await call('name/05407000'); check(r.status === 200 && /MUSCODA/i.test(r.text) && cdn(r).includes('s-maxage=86400') && cdn(r).includes('durable'), 'name, cached a day, durable')
 r = await call('recent/05407000/00060/5'); check(r.status === 200 && cdn(r).includes('s-maxage=3600'), 'recent, cached an hour')
 r = await call('recent/99999999/00060/5'); check(r.status === 200 && cdn(r).includes('s-maxage=300'), 'recent with no readings: kept only 5 minutes', cdn(r))
-r = await call('name/00000001'); check(r.status === 404, 'unknown gage: 404')
+r = await call('name/00000001'); check(r.status === 404 && cdn(r).includes('s-maxage=3600') && cdn(r).includes('durable'), 'unknown gage: 404, cached an hour, durable')
 console.log('-- refusals (400, never cached)')
 for (const qs of ['', 'readings/05407000/99999', 'readings/abc/00060', 'other/05407000', 'recent/05407000/00060/99',
   'name/05407000?x=1', 'readings/05407000/00060?x=1', '?kind=name&id=05407000', 'name/05407000/00060', 'readings/05407000/00060/5', 'readings/05407000', 'recent/05407000/00060', 'name/05407000/', 'readings/05407000/00060/', 'recent/05407000/00060/5/', 'readings//05407000/00060', 'readings/05407000%2F/00060', 'readings/05407000/00060%2F5', 'Readings/05407000/00060', 'name/%30%35407000']) {
@@ -32,7 +32,7 @@ fake(200, { 'x-ratelimit-remaining': '900' }); r = await call('name/05407000')
 check(seen.key === 'SECRET-TEST-KEY-123' && seen.u.includes('/ogcapi/v1/'), 'the key is sent to USGS, on the v1 address')
 check(r.h.get('x-gage-key') === 'yes' && !JSON.stringify([...r.h.entries()]).includes('SECRET') && !r.text.includes('SECRET'), 'the key is not in the response (headers or body)')
 fake(200, { 'x-ratelimit-remaining': '40' }); r = await call('readings/05407000/00060'); check(cdn(r).includes('s-maxage=3600'), 'under 100 requests left: kept at least an hour')
-fake(200, {}, '{"features":[]}'); r = await call('readings/05407000/00060'); check(cdn(r).includes('s-maxage=300'), 'an empty list of readings: 5 minutes')
+fake(200, {}, '{"features":[]}'); r = await call('readings/05407000/00060'); check(cdn(r).includes('s-maxage=300') && cdn(r).includes('durable'), 'an empty list of readings: 5 minutes, durable')
 for (const [label, f] of [['429', () => fake(429)], ['500', () => fake(500)], ['unreachable', () => { globalThis.fetch = async () => { throw new Error('x') } }]]) {
   f(); r = await call('readings/05407000/00060'); check(r.status === 503 && cdn(r) === '' && r.h.get('cache-control') === 'no-store', `USGS ${label}: 503, not cached`)
 }
