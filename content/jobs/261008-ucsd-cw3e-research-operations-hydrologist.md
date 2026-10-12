@@ -9,6 +9,7 @@ deadline: 2026-10-12
 url: https://employment.ucsd.edu/research-and-operations-hydrologist-141678/job/491E2E5ED2C88D361B4BEF5BF895AAAF
 source: newsletter
 tags: [hydrology, operations, weather-water-extremes]
+sector: academic
 published: true
 ---
 

@@ -9,6 +9,7 @@ deadline: 2026-12-31
 url: https://recruit.ap.uci.edu/JPF10415
 source: newsletter
 tags: [postdoc, terrestrial-hydrology, remote-sensing, precipitation, soil-moisture]
+sector: academic
 published: true
 ---
 

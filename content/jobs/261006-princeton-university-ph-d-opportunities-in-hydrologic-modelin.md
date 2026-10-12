@@ -10,6 +10,7 @@ url: https://findajob.agu.org/job/8028571/ph-d-opportunities-in-hydrologic-model
 source: agu
 source_id: "https://findajob.agu.org/job/8028571/ph-d-opportunities-in-hydrologic-modeling-and-scientific-machine-learning?TrackID=26"
 tags: [hydrology, modeling, graduate, hydroinformatics, data]
+sector: academic
 published: true
 ---
 

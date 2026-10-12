@@ -10,6 +10,7 @@ url: https://findajob.agu.org/job/8028405/assoc-full-professor-in-environmental-
 source: agu
 source_id: "https://findajob.agu.org/job/8028405/assoc-full-professor-in-environmental-sciences?TrackID=26"
 tags: [faculty, watershed, hydrology, ecohydrology]
+sector: academic
 published: true
 ---
 

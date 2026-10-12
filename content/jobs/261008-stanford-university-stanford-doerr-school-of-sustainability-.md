@@ -10,6 +10,7 @@ url: https://findajob.agu.org/job/8028143/stanford-doerr-school-of-sustainabilit
 source: agu
 source_id: "https://findajob.agu.org/job/8028143/stanford-doerr-school-of-sustainability-dean-s-postdoctoral-fellowship?TrackID=26"
 tags: [postdoc, hydrology, ecohydrology, watershed]
+sector: academic
 published: true
 ---
 

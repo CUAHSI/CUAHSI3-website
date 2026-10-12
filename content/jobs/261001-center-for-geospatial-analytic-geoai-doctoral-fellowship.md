@@ -10,6 +10,7 @@ url: https://findajob.agu.org/job/8028498/geoai-doctoral-fellowship-at-nc-state-
 source: agu
 source_id: "https://findajob.agu.org/job/8028498/geoai-doctoral-fellowship-at-nc-state-university?TrackID=26"
 tags: [graduate, data, hydroinformatics]
+sector: academic
 published: true
 ---
 
