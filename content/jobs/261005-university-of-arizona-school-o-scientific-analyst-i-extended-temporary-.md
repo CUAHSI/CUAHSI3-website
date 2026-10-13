@@ -11,6 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/391901"
 source_url: https://www.joshswaterjobs.com/jobs/391901
 tags: [hydrology, watershed, data, software, hydroinformatics]
+sector: academic
 published: true
 ---
 

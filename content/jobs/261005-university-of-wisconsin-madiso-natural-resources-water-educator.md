@@ -11,6 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/392230"
 source_url: https://www.joshswaterjobs.com/jobs/392230
 tags: [water-quality, groundwater, watershed, policy, planning]
+sector: academic
 published: true
 ---
 

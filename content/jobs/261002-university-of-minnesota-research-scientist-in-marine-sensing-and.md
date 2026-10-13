@@ -10,6 +10,7 @@ url: https://findajob.agu.org/job/8028503/research-scientist-in-marine-sensing-a
 source: agu
 source_id: "https://findajob.agu.org/job/8028503/research-scientist-in-marine-sensing-and-high-frequency-monitoring?TrackID=26"
 tags: [surface-water, water-quality, remote-sensing, data]
+sector: academic
 published: true
 ---
 
