@@ -14,7 +14,9 @@ const { data: jobs } = await useAsyncData('jobs', () =>
   queryContent('jobs').where({ published: true }).sort({ posted: -1 }).find()
 )
 
-const baseTypeFilters = ['all', 'permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship']
+// No chip for permanent or fellowship: nearly every listing is permanent (a chip for it filters almost nothing, and with a temporary
+// chip it would suggest the two cover everything), and there are no fellowship listings. Those listings show under all types.
+const baseTypeFilters = ['all', 'post-doc', 'internship', 'graduate-assistantship']
 // These two have a chip only while a listing of that type is visible (expired ones count only when shown),
 // so the board does not offer a filter that leads to "No current listings".
 const optionalTypeFilters = ['faculty', 'temporary']
@@ -24,6 +26,13 @@ const typeFilters = computed(() => [
 ])
 const activeFilter = ref('all')
 const showPast = ref(false)
+const activeSector = ref('all')
+
+// Sector: a posting from USAJOBS (`source: usajobs`) is federal, and only those: a job from anywhere else is not a federal job, whoever
+// the employer is (a contractor to a federal agency is not advertised on USAJOBS). `sector: academic` is written on a job's file by
+// hand; anything else is "other". The chips below are offered only for sectors with a visible listing, and only when there are two or more.
+const sectorOf = (j: any) => (j.source === 'usajobs' ? 'federal' : j.sector === 'academic' ? 'academic' : 'other')
+const sectorLabels: Record<string, string> = { federal: 'US federal', academic: 'Academic', other: 'Other' }
 
 // The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
 // time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
@@ -95,8 +104,14 @@ function compareJobs(a: any, b: any) {
 const filtered = computed(() => {
   let items = jobs.value ?? []
   if (activeFilter.value !== 'all') items = items.filter(j => j.type === activeFilter.value)
+  if (activeSector.value !== 'all') items = items.filter(j => sectorOf(j) === activeSector.value)
   if (!showPast.value) items = items.filter(j => !isExpired(j.deadline))
   return [...items].sort(compareJobs)
+})
+
+const sectorFilters = computed(() => {
+  const present = ['federal', 'academic', 'other'].filter(k => (jobs.value ?? []).some(j => sectorOf(j) === k && (showPast.value || !isExpired(j.deadline))))
+  return present.length > 1 ? ['all', ...present] : []
 })
 
 const expiredCount = computed(() =>
@@ -163,6 +178,7 @@ function daysUntil(d: string) {
 
 // A chip for faculty or temporary can disappear (when the expired listings are hidden again); fall back to "All types" so the list is not left empty with no chip selected.
 watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilter.value = 'all' })
+watch(sectorFilters, list => { if (!list.includes(activeSector.value)) activeSector.value = 'all' })
 </script>
 
 <template>
@@ -193,6 +209,12 @@ watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilte
         <span class="text-[12px] text-muted mr-[4px]">Type</span>
         <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
+        </FilterChip>
+      </div>
+      <div v-if="sectorFilters.length" class="flex items-center gap-[6px] flex-wrap mb-[24px] -mt-[12px]">
+        <span class="text-[12px] text-muted mr-[4px]">Sector</span>
+        <FilterChip v-for="f in sectorFilters" :key="f" variant="gray" :active="activeSector===f" @click="activeSector=f">
+          {{ f === 'all' ? 'All sectors' : sectorLabels[f] }}
         </FilterChip>
       </div>
 

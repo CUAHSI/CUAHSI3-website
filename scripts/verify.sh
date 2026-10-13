@@ -160,6 +160,8 @@ if [ "$1" = "--build" ]; then
     rout=$(node scripts/check-redirects.mjs 2>&1) && ok "$(echo "$rout" | head -1)" || { fail "redirect check:"; echo "$rout" | sed 's/^/      /'; }
     # 15. No member representative email address anywhere in the built site (C11); content v2 publishes whole content files.
     mout=$(node scripts/check-member-emails.mjs 2>&1) && ok "$(echo "$mout" | head -1)" || { fail "member email check:"; echo "$mout" | sed 's/^/      /'; }
+    # 16. No USGS API key header or parameter anywhere in the built site (the key is added by the edge function, on the server).
+    kout=$(node scripts/check-no-api-key.mjs 2>&1) && ok "$(echo "$kout" | head -1)" || { fail "API key check:"; echo "$kout" | sed 's/^/      /'; }
   else fail "build failed"; fi
 else
   echo "      (build not run; use --build before a PR)"

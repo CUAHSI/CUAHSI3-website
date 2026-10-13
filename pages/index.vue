@@ -47,7 +47,7 @@ const pathways = [
 const homeTools = [
   { name: 'HydroShare', kicker: 'DATA REPOSITORY', tagline: 'Publish, share, and collaborate on water data and models with a citable DOI.', tags: ['Repository', 'DOI', 'Open data'], cta: 'Open HydroShare', href: 'https://www.hydroshare.org' },
   { name: 'CUAHSI JupyterHub', kicker: 'CLOUD COMPUTE', tagline: 'Cloud notebooks for water science analysis — no local setup, ready in seconds.', tags: ['Python', 'R', 'Cloud'], cta: 'Launch compute', href: 'https://jupyterhub.cuahsi.org' },
-  { name: 'Water Services', kicker: 'TIME-SERIES DATA', tagline: 'Discover and access national time-series water data — map-based search plus standardized WaterOneFlow/WaterML services.', tags: ['WaterML', 'Time series', 'Map'], cta: 'Explore Water Services', href: 'https://data.cuahsi.org/' },
+  { name: 'Hydrologic Information System', kicker: 'TIME-SERIES DATA', tagline: 'Discover and access national time-series water data — map-based search plus standardized WaterOneFlow/WaterML services.', tags: ['WaterML', 'Time series', 'Map'], cta: 'Explore HIS', href: 'https://data.cuahsi.org/' },
 ]
 
 const featured = computed(() => highlights.value?.[0])
