@@ -111,6 +111,7 @@ const jobs = z.strictObject({
   published: z.boolean(),
   source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
   source_id: nonEmpty.optional(), // the posting's id at its source (a USAJOBS control number); only the usajobs files have it
+  sector: z.enum(['academic']).optional(), // written by hand on a job at a university or college; the board's Sector filter shows usajobs as federal, `academic` as Academic and everything else as Other (federal is never written here: it is the source)
   member_institution: nonEmpty.nullable().optional(), // a name from content/members/reps.json (checked by the validator): the employer is or belongs to that CUAHSI member institution. null = checked, not a member (turns off the board's name match); absent = not decided (the board falls back to matching the member names in `organization`)
   source_url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(), // the posting's page on the source site; the jobs board shows "via Josh's Water Jobs" (or "via AGU Career Center" for source agu) with it. Written by the upstream jobs automation for joshswaterjobs postings
 })
