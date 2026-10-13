@@ -1,5 +1,5 @@
-// Asks the USGS Water Data API for the home page gage card (composables/useGageCard.ts) with the site's API key, and lets Netlify's
-// CDN cache the answers, so a busy home page costs USGS a few requests instead of one to three per visitor. The key is the Netlify
+// Asks the USGS Water Data API for the home page gage card (composables/useGageCard.ts) with the site's API key, and asks Netlify's
+// CDN to cache the answers (it does so only partly: see the note below). The key is the Netlify
 // environment variable USGS_API_KEY: it is added here, on the server, and never reaches the browser or the repository. Without it
 // the function still works, keyless and with USGS's lower limit.
 //
@@ -14,13 +14,15 @@
 // The answer is USGS's own JSON, with only the fields the card reads. Every reply carries `x-gage-proxy: 1`, so the page can tell this
 // function's answer (a real 404 for an unknown gage) from a static host that has no such route (local development).
 // Cache: readings 15 minutes (USGS updates about every 15), names a day, the recent check an hour; when USGS says fewer than 100
-// requests are left this hour, everything is kept at least an hour. A USGS failure (including its rate limit) is answered 503 and
+// requests are left this hour, everything is kept at least an hour (as asked of the CDN; see the note below for what it does). A USGS failure (including its rate limit) is answered 503 and
 // never cached; the CDN may serve an older copy meanwhile (stale-if-error). An empty list of readings is kept only 5 minutes.
 // Only the exact paths above are answered (anything else is a 400), so a visitor cannot make cache misses at will; a flood of
 // different gage numbers could still use up the key's hourly allowance (the CDN cannot tell those from real ones).
-// `durable` (in the CDN header) asks Netlify to keep a reply in its shared cache. On a deploy preview, nine repeat requests in a row were
-// all misses (12 October 2026); my guess is that each edge node kept its own copy, which is not established. Whether `durable` fixes it
-// is to be seen on a preview.
+// What was seen on a deploy preview (12 October 2026): the lifetimes above are honoured (a hit showed ttl=86382), but Netlify's edge seems to keep
+// a separate copy per node (my guess, not established): 1 of 11 repeat requests was a hit, and `durable` made no visible difference. So most page loads reach this
+// function and use one request of the key's hourly allowance (1000, from the x-ratelimit-limit header). Past the limit USGS answers 429,
+// this function answers 503, and the page asks USGS directly without the key (usgsGet). The page also keeps each reading for 10 minutes
+// per browser tab (fetchReading), so a visitor's repeat views do not call this function again.
 const BASE = 'https://api.waterdata.usgs.gov/ogcapi/v1'
 const PARAMS = new Set(['00060', '00065'])
 const LOW_REMAINING = 100
