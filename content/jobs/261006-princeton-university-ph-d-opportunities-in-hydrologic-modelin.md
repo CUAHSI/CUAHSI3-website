@@ -5,7 +5,7 @@ organization: "Princeton University"
 location: "Princeton, New Jersey, US"
 type: graduate-assistantship
 posted: 2026-10-06
-deadline: 
+deadline: 2026-12-21
 url: https://findajob.agu.org/job/8028571/ph-d-opportunities-in-hydrologic-modeling-and-scientific-machine-learning?TrackID=26
 source: agu
 source_id: "https://findajob.agu.org/job/8028571/ph-d-opportunities-in-hydrologic-modeling-and-scientific-machine-learning?TrackID=26"
