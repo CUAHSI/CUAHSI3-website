@@ -44,10 +44,12 @@ It has four modules:
 
 By the end, participants should be able to:
 
-- explain the concepts and values behind open science, data stewardship and data literacy
-- find their way around federal water data products and structures
-- access and download federal water datasets programmatically, following the agencies' recommendations and practices that make the work reproducible
-- explain how the datasets complement each other and can be combined for research
+- explain open science, FAIR principles and reproducibility best practices, and their benefits to science products and the science community
+- outline the key elements of a data management plan and the benefits of publishing scientific data in an appropriate repository
+- characterize the river data products from NASA SWOT, NOAA NWM and USGS WDFN, including relevant variables, derivation, spatial and temporal resolution, and known limitations
+- adapt provided Python scripts to retrieve data from NASA SWOT, NOAA NWM and USGS WDFN using their recommended APIs and libraries
+- select the most appropriate programmatic approach for downloading data at large temporal and spatial scales for different hydrologic applications
+- compare and describe the capabilities and limitations of NASA SWOT, NOAA NWM and USGS WDFN data for a single flood event, at the appropriate scales and resolutions
 
 The curriculum is developed in the open in CUAHSI's [federal-water-data-curriculum repository](https://github.com/CUAHSI/federal-water-data-curriculum) on GitHub.
 
@@ -57,7 +59,7 @@ Expect about 20 hours over the four weeks: 14 hours of live (synchronous) sessio
 
 ## Schedule
 
-[![Pilot course schedule, November 3 to December 4, 2026, in weekly rows from Monday to Friday, all times Eastern. Live sessions are on Tuesdays and Thursdays at 2:00 PM. Week of Nov 2: Module I Nov 3, Module II Nov 5, with quizzes due Nov 4 and 6. Week of Nov 9: Module III-A (NASA SWOT) Nov 10, Module III-B (NOAA NWM) Nov 12 with midpoint office hours. Week of Nov 16: Module III-C (USGS NWIS) Nov 17, Module IV Nov 19, with quizzes due Nov 18 and 20. Week of Nov 23: independent work, no session on Thanksgiving. Week of Nov 30: peer review Dec 1 with optional office hours, final assessment demos Dec 3, and the pilot feedback survey due Dec 4.](/program-images/skills-certificate-pilot-schedule.png)](/program-images/skills-certificate-pilot-schedule.png)
+[![Pilot course schedule, November 3 to December 4, 2026. Live sessions are on Tuesdays and Thursdays, all times Eastern. Week of Nov 2: Module I, Data Best Practices, Tuesday Nov 3, 2:00 to 3:30 PM; Module II, Federal Water Data Landscape, Thursday Nov 5, 2:00 to 4:00 PM. Week of Nov 9: Module III-A, retrieve NASA SWOT data, Nov 10, 2:00 to 3:30 PM; Module III-B, retrieve NOAA NWM data, Nov 12, 2:00 to 3:30 PM, followed by office hours 3:30 to 4:00. Week of Nov 16: Module III-C, retrieve USGS NWIS data, Nov 17, 2:00 to 3:30 PM; Module IV, Federal Water Data Synthesis, Nov 19, 2:00 to 4:00 PM. Week of Nov 23: Thanksgiving week, no sessions. Week of Nov 30: Peer Review, Dec 1, 2:00 to 2:45 PM, followed by office hours 2:45 to 4:00; Final Assessment Demos, Dec 3, 2:00 to 4:00 PM.](/program-images/skills-certificate-pilot-schedule.png)](/program-images/skills-certificate-pilot-schedule.png)
 
 Select the schedule to open it full size.
 
