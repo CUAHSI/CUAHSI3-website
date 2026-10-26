@@ -15,10 +15,13 @@ description: >
   hydrologists. It brings together federal workers and contractors to discuss
   the current landscape and give a practical overview of today's federal job
   market. Good for graduate students weighing careers outside the tenure track.
+  Speakers: Emily Smail (NOAA), Emil Cherrington (University of Notre Dame),
+  Lauren N Schaefer (USGS) and Shih-Chieh Kao (Oak Ridge National Laboratory).
 registration:
   required: true
   url: https://us06web.zoom.us/webinar/register/WN_h0tBwv3kR2qpQwEaPJ_J4g#/registration
   cost: null
 tags: [webinar, careers, early-career]
+newsletter_source: ["2026-october"]
 published: true
 ---

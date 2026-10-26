@@ -4,6 +4,7 @@ location: Arlington, TX
 organization: University of Texas at Arlington
 posted: 2026-10-12
 published: false
+sector: academic
 slug: university-of-texas-at-arlington-water-engineering-research-center-project-manag
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393052

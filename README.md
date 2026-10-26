@@ -37,7 +37,7 @@ Five top-level nav sections:
 ```
 /                    Homepage — wayfinding, featured content, latest news
 /about               Organization — team, governance, membership, impact
-/data-platforms      Tools — HydroShare, JupyterHub, Water Services, MATLAB Online
+/data-platforms      Tools — HydroShare, JupyterHub, Hydrologic Information System, MATLAB Online
 /learn-train         Training — cyberseminars, structured programs, workshop archive
 /community           Engagement — events, jobs, newsletter, news, campus visits
 /hire-cuahsi         Fee-for-service work — consulting, DevOps, data wrangling, integrations
@@ -64,7 +64,7 @@ pages/
 ├── about/
 │   ├── index.vue                          About hub (mission, history, what we do)
 │   ├── governance.vue                     Board and advisory committees
-│   ├── membership.vue                     Member roster (101 institutions, searchable/filterable)
+│   ├── membership.vue                     Member roster (96 institutions, searchable/filterable)
 │   ├── impact/
 │   │   ├── index.vue                      Highlights index (category + year filters)
 │   │   └── [slug].vue                     Individual highlight detail
@@ -72,7 +72,7 @@ pages/
 │       ├── index.vue                      Team photo grid (grouped by department)
 │       └── [slug].vue                     Individual profile (has_profile: true only)
 ├── data-platforms/
-│   └── index.vue                          Tools hub — HydroShare, JupyterHub, Water Services, MATLAB
+│   └── index.vue                          Tools hub — HydroShare, JupyterHub, Hydrologic Information System, MATLAB
 ├── learn-train/
 │   ├── index.vue                          Training hub — cyberseminar feature + Programs + extras
 │   ├── cyberseminars/
@@ -259,13 +259,25 @@ If a page you're editing still has raw `grid-template-columns` in a `style` attr
 ```
 scripts/
 ├── download-team-photos.mjs     Downloads headshots for staff with photo: null
-└── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminars
+├── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminars
+└── newsletter-extract.mjs       Collects what a newsletter issue could draw on for one month (read-only)
 ```
 
 **Team photos:**
 ```bash
 node scripts/download-team-photos.mjs
 ```
+
+**Newsletter extraction** (read-only; drafts nothing, writes nothing under `content/`):
+```bash
+node scripts/newsletter-extract.mjs --month 2026-09                 # Markdown to stdout
+node scripts/newsletter-extract.mjs --month 2026-09 --format json --out bundle.json
+node scripts/newsletter-extract.mjs --month 2026-09 --as-of 2026-10-06   # fix the "today" used for passed deadlines (default: this machine's date)
+node scripts/newsletter-extract.mjs --month 2026-09 --root=/path/to/checkout   # read another checkout's content/ (exit 2 if absent)
+```
+Lists upcoming events (the month and the next), research outcomes, news, new jobs, recordings and programs with a window nearby, then a
+"gaps and findings" section on what the content does not capture. Exit 0 even for a thin month; exit 1 on bad arguments or a file whose
+frontmatter cannot be read.
 
 **Cyberseminar transcripts:**
 ```bash
@@ -322,6 +334,6 @@ Visit http://localhost:4000 to test search. Keep `npm run dev` running on :3000 
 
 - **`/member-portal` needs real access control** before production — see warning above.
 - **`content/board/`** and **`content/community/`** have stub files with no rendering pages.
-- **`/data-platforms/`** is a single page — HydroShare, JupyterHub, and Water Services could each warrant their own page eventually.
+- **`/data-platforms/`** is a single page — HydroShare, JupyterHub, and the Hydrologic Information System could each warrant their own page eventually.
 - **`content/events/` → `content/programs/` link is manual.** The README describes programs as "authored once" with events as scheduled instances, but this isn't yet enforced at the content-model level — a training session can currently be duplicated between the two collections if someone isn't careful. Treat `content/programs/` as the canonical description and `content/events/` as dated instances only.
 - **Institution data lives in two places.** `pages/about/membership.vue` and `pages/hire-cuahsi/index.vue`'s institution lookup both have their own hardcoded/JSON-sourced member lists. These should be consolidated to one shared source so they can't drift out of sync.

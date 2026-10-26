@@ -134,6 +134,8 @@ posted: 2026-07-01
 deadline: null                   # expired jobs hidden by default, toggle reveals
 url: https://...                 # external application link
 source: newsletter               # provenance — anticipates automated aggregation
+member_institution: New Mexico State University   # optional: a name from content/members/reps.json when the employer is, or is part of, a CUAHSI member institution; null = checked, not a member; leave out when unsure
+sector: academic               # optional: only value `academic`, written by hand for a job at a university or college; the board's Sector filter reads usajobs as federal, `academic` as Academic, anything else as Other
 tags: [PhD, computational-hydrology]
 published: true
 ```

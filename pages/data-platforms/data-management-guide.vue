@@ -21,7 +21,6 @@ const hasBody = computed(() => Boolean(guide.value?.body?.children?.length))
       <template #kicker>Data &amp; Computing · Data management guide</template>
       <template #title>Planning for your data.</template>
       <template #lead>CUAHSI's guidance on data collection plans and data management plans, and how to store, describe and share your data.</template>
-      <template #below><SectionNav section="data" fixed /></template>
     </PageHero>
 
     <div class="mx-auto max-w-[1024px] p-[40px_40px_80px]">

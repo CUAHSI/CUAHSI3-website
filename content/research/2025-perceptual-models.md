@@ -7,6 +7,7 @@ category: research
 tags: [hydrologic-modeling, synthesis, community-science, water-prediction, landscape]
 partners: [University of Saskatchewan, NOAA, CIROH]
 funding: "NOAA NA22NWS4320003 via CIROH"
+awards: [ciroh-a23-0274-s002]
 published: true
 excerpt: CUAHSI co-led five regional workshops to synthesize hydrologic process knowledge across North America, producing a continental map of hydrologic landscapes, three synthesis manuscripts, and 35 perceptual models describing dominant processes within each landscape.
 ---
@@ -22,3 +23,5 @@ These workshops enabled a structured community synthesis that integrated large-s
 - 35 perceptual models describing dominant processes within each landscape
 
 Made possible through broad community participation, this work reflects the strength of CUAHSI's convening model: bringing interdisciplinary experts together to translate distributed knowledge into shared scientific understanding that advances hydrologic understanding and informs related fields.
+
+The series is described on the [synthesis workshop series page](https://www.cuahsi.org/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america). Covered in the [CUAHSI 2025 Annual Report](/documents/annual-reports/annual-report-2025.pdf).

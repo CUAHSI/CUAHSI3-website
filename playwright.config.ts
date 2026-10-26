@@ -18,7 +18,9 @@ export default defineConfig({
     // Zero tolerance: any changed pixel fails, so a subtle colour or spacing change is not missed.
     toHaveScreenshot: { threshold: 0, maxDiffPixels: 0, animations: 'disabled', caret: 'hide', scale: 'css' }
   },
-  use: { baseURL: 'http://localhost:4100', deviceScaleFactor: 1, reducedMotion: 'reduce' },
+  // timezoneId: the home page's gage card picks a gage near the visitor from the browser's time zone, so a fixed one keeps the
+  // screenshot the same on every machine (Central: the Wisconsin River at Muscoda).
+  use: { baseURL: 'http://localhost:4100', deviceScaleFactor: 1, reducedMotion: 'reduce', timezoneId: 'America/Chicago' },
   projects: [
     { name: '390', use: { viewport: { width: 390, height: 844 } } },
     { name: '1280', use: { viewport: { width: 1280, height: 800 } } }

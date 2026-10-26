@@ -8,7 +8,7 @@ const { data: allCommunityEvents } = await useAsyncData('community-events', () =
   queryContent('events').where({ published: true }).sort({ start: 1 }).find()
 )
 const upcomingEvents = computed(() =>
-  (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 4)
+  (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date(renderedAt.value)).slice(0, 4)
 )
 
 const { data: allNews } = await useAsyncData('community-news', () =>
@@ -48,17 +48,31 @@ function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 }
 
+// The two big cards at the top of "ways to get involved" carry a live fact (the next event, the number of open jobs); the
+// time they use is worked out again in the browser, so a build that is days old does not show a stale event or count.
+const renderedAt = useState('community-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
+const nextEvent = computed(() => {
+  const now = new Date(renderedAt.value)
+  return (allCommunityEvents.value ?? []).find(e => e.type !== 'deadline' && new Date(e.start) >= now) ?? null
+})
+const { data: allJobs } = await useAsyncData('community-jobs', () =>
+  queryContent('jobs').where({ published: true }).only(['deadline']).find()
+)
+// the job board's own rule: published, and no deadline or a deadline that has not passed
+const openJobs = computed(() => {
+  const now = new Date(renderedAt.value)
+  return (allJobs.value ?? []).filter(j => !j.deadline || new Date(j.deadline) >= now).length
+})
+function shortDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
+}
+
+// The six smaller ways. `tile` is the colour of the icon's tile (written out whole so Tailwind sees the classes).
 const waysin = [
   {
-    icon: '📅',
-    title: 'Attend an event',
-    desc: 'Join workshops, webinars, conferences, and the annual Virtual Open House. Most CUAHSI events are free and open to the community regardless of membership.',
-    cta: 'See upcoming events',
-    href: '/community/events',
-    internal: true,
-  },
-  {
-    icon: '🎓',
+    icon: 'learn' as const,
+    tile: 'bg-[#DCEBF7] text-[#0F2E44]',
     title: 'Apply for training or funding',
     desc: 'Workshops, fellowships, the Virtual University, and travel grants are open to students and early-career researchers at any institution.',
     cta: 'Browse programs',
@@ -66,31 +80,8 @@ const waysin = [
     internal: true,
   },
   {
-    icon: '📬',
-    title: 'Subscribe to the newsletter',
-    desc: 'Monthly updates on programs, events, funding deadlines, HydroShare highlights, and community spotlights. The archive is fully indexed on cuahsi.org.',
-    cta: 'Subscribe',
-    href: 'https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca',
-    internal: false,
-  },
-  {
-    icon: '🏛️',
-    title: 'Bring CUAHSI to your campus',
-    desc: 'CUAHSI staff are available for free seminars, hands-on workshops, and consultations at universities and colleges — tailored to your audience, in person or virtual.',
-    cta: 'See what we offer',
-    href: '/community/campus-visits',
-    internal: true,
-  },
-  {
-    icon: '💼',
-    title: 'Post or find a job',
-    desc: 'The CUAHSI job board lists opportunities across water science, hydrology, engineering, and data science. Postings remain active for 60 days.',
-    cta: 'View job board',
-    href: '/community/jobs',
-    internal: false,
-  },
-  {
-    icon: '🤝',
+    icon: 'network' as const,
+    tile: 'bg-[#F6E3DA] text-[#9A4524]',
     title: 'Join a member institution',
     desc: 'If your university or organization is not yet a CUAHSI member, institutional membership connects your community to shared infrastructure, training, and governance.',
     cta: 'Learn about membership',
@@ -98,7 +89,26 @@ const waysin = [
     internal: true,
   },
   {
-    icon: '🔬',
+    icon: 'campus' as const,
+    tile: 'bg-[#E1F0E9] text-[#14573F]',
+    title: 'Bring CUAHSI to your campus',
+    desc: 'CUAHSI staff are available for free seminars, hands-on workshops, and consultations at universities and colleges — tailored to your audience, in person or virtual.',
+    cta: 'See what we offer',
+    href: '/community/campus-visits',
+    internal: true,
+  },
+  {
+    icon: 'mail' as const,
+    tile: 'bg-[#E4E1F4] text-[#3D3480]',
+    title: 'Subscribe to the newsletter',
+    desc: 'Monthly updates on programs, events, funding deadlines, HydroShare highlights, and community spotlights. The archive is fully indexed on cuahsi.org.',
+    cta: 'Subscribe',
+    href: 'https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca',
+    internal: false,
+  },
+  {
+    icon: 'committee' as const,
+    tile: 'bg-[#DCEBF7] text-[#0F2E44]',
     title: 'Serve on an advisory committee',
     desc: 'Advisory committees on informatics, education and outreach, and instrumentation are open to any interested individual regardless of membership status.',
     cta: 'Learn about governance',
@@ -106,7 +116,8 @@ const waysin = [
     internal: true,
   },
   {
-    icon: '💡',
+    icon: 'story' as const,
+    tile: 'bg-[#F6E3DA] text-[#9A4524]',
     title: 'Share your CUAHSI story',
     desc: 'As CUAHSI marks its 25th anniversary, we are collecting reflections from the community. What is a CUAHSI moment that stands out for you?',
     cta: 'Send a reflection',
@@ -118,21 +129,16 @@ const waysin = [
 
 <template>
   <div>
+    <!-- Hero: the same banner as the other sections, and the page below it is now the same width and side padding as theirs (it was a narrower 1024px column) -->
+    <PageHero container-class="mx-auto max-w-site p-[64px_40px_52px]"
+      title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(36px,4.4vw,54px)] leading-[1.04] tracking-[-.022em] text-navy m-[16px_0_16px] max-w-[700px]"
+      lead-class="font-['Hanken_Grotesk'] font-normal text-[17px] leading-[1.6] text-[#3a4d57] max-w-[580px]">
+      <template #kicker>Get involved</template>
+      <template #title>Connect with the water science community</template>
+      <template #lead>CUAHSI community consists of students, educators, researchers, volunteer scientists, outreach coordinators, environmental and watershed organizations, and federal and state agencies. Everyone involved in water science, water-resources management, or water-resources protection has a place here.</template>
+    </PageHero>
 
-    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
-
-      <!-- Hero -->
-      <section class="p-[48px_0_40px] border-b-[0.5px] border-b-[#f3f4f6]">
-        <p class="text-[11px] text-muted font-medium tracking-[.07em] uppercase mb-[12px]">Get involved</p>
-        <h1 class="text-[32px] font-medium leading-[1.2] mb-[16px] max-w-[560px]">
-          Connect with the water science community
-        </h1>
-        <p class="text-[15px] text-[#6b7280] leading-[1.7] max-w-[560px]">
-          CUAHSI community consists of students, educators, researchers, volunteer scientists, outreach coordinators,
-          environmental and watershed organizations, and federal and state agencies. Everyone involved in water
-          science, water-resources management, or water-resources protection has a place here.
-        </p>
-      </section>
+    <div class="mx-auto max-w-site p-[0_40px]">
 
       <!-- Quote -->
       <section class="p-[36px_0] border-b-[0.5px] border-b-[#f3f4f6]">
@@ -147,21 +153,50 @@ const waysin = [
         </blockquote>
       </section>
 
-      <!-- Ways to get involved -->
-      <section class="p-[40px_0] border-b-[0.5px] border-b-[#f3f4f6]">
-        <p class="text-[11px] font-medium tracking-[.07em] uppercase text-muted mb-[20px]">Ways to get involved</p>
-        <div class="grid grid-cols-[1fr] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(4,minmax(0,1fr))] gap-[12px]">
-          <div v-for="way in waysin" :key="way.title"
-            class="border-[0.5px] border-[#e5e7eb] rounded-[12px] p-[18px] flex flex-col gap-[8px]">
-            <div class="text-[22px] mb-[2px]">{{ way.icon }}</div>
-            <p class="text-[13px] font-medium leading-[1.35]">{{ way.title }}</p>
-            <p class="text-[12px] text-[#6b7280] leading-[1.55] flex-1">{{ way.desc }}</p>
+      <!-- Ways to get involved: two big cards with a live fact, then six smaller ones -->
+      <section class="p-[44px_0_48px] border-b-[0.5px] border-b-[#f3f4f6]">
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-[#9A4524] text-[12px]">Ways to get involved</span>
+        <h2 class="font-['Schibsted_Grotesk'] font-bold text-[clamp(24px,3vw,32px)] leading-[1.12] tracking-[-.016em] text-navy m-[12px_0_26px]">Pick a way in.</h2>
+        <div class="grid grid-cols-[1fr] sm:grid-cols-[repeat(2,minmax(0,1fr))] min-[900px]:grid-cols-[repeat(6,minmax(0,1fr))] gap-[16px]">
+
+          <!-- Events -->
+          <NuxtLink to="/community/events" class="card-lift arrow-row flex flex-col sm:col-span-2 min-[900px]:col-span-3 rounded-[16px] bg-navy text-white p-[28px] no-underline">
+            <span class="flex items-center gap-[10px] font-mono font-bold tracking-[.14em] uppercase text-[#7FC0EE] text-[11.5px]"><WayIcon name="calendar" class="w-[20px] h-[20px]" /> Attend an event</span>
+            <template v-if="nextEvent">
+              <span class="font-mono text-[12px] tracking-[.06em] uppercase text-[#aecbe0] m-[24px_0_6px]">Next up</span>
+              <span class="font-['Schibsted_Grotesk'] font-bold text-[clamp(30px,4vw,40px)] leading-[1.05] tracking-[-.02em] text-white">{{ shortDate(nextEvent.start) }}</span>
+              <span class="font-['Hanken_Grotesk'] font-medium text-[16px] leading-[1.4] text-white m-[8px_0_0]">{{ nextEvent.title }}</span>
+            </template>
+            <span v-else class="font-['Schibsted_Grotesk'] font-bold text-[26px] leading-[1.15] tracking-[-.015em] text-white m-[24px_0_0]">Workshops, webinars, and conferences.</span>
+            <span class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-[#c8dceb] flex-1 m-[14px_0_18px]">Join workshops, webinars, conferences, and the annual Virtual Open House. Most CUAHSI events are free and open to the community regardless of membership.</span>
+            <span class="inline-flex items-center gap-2 font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-white">See upcoming events <span class="arr" aria-hidden="true">→</span></span>
+          </NuxtLink>
+
+          <!-- Jobs -->
+          <NuxtLink to="/community/jobs" class="card-lift arrow-row flex flex-col sm:col-span-2 min-[900px]:col-span-3 rounded-[16px] bg-[#16578F] text-white p-[28px] no-underline">
+            <span class="flex items-center gap-[10px] font-mono font-bold tracking-[.14em] uppercase text-[#CFE6F8] text-[11.5px]"><WayIcon name="briefcase" class="w-[20px] h-[20px]" /> Post or find a job</span>
+            <span class="font-mono text-[12px] tracking-[.06em] uppercase text-[#CFE6F8] m-[24px_0_6px]">Job board</span>
+            <span v-if="openJobs > 0" class="font-['Schibsted_Grotesk'] font-bold text-[clamp(30px,4vw,40px)] leading-[1.05] tracking-[-.02em] text-white">{{ openJobs }} open {{ openJobs === 1 ? 'position' : 'positions' }}</span>
+            <span v-else class="font-['Schibsted_Grotesk'] font-bold text-[26px] leading-[1.15] tracking-[-.015em] text-white">Jobs across water science.</span>
+            <span class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-[#DCEBF7] flex-1 m-[14px_0_18px]">The CUAHSI job board lists opportunities across water science, hydrology, engineering, and data science. Postings remain active for 60 days.</span>
+            <span class="inline-flex items-center gap-2 font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[normal] text-white">View job board <span class="arr" aria-hidden="true">→</span></span>
+          </NuxtLink>
+
+          <!-- The rest -->
+          <div v-for="way in waysin" :key="way.title" class="contents">
             <NuxtLink v-if="way.internal" :to="way.href"
-              class="text-[12px] text-[#0F7A57] no-underline mt-[4px]">
-              {{ way.cta }} →
+              class="card-lift arrow-row flex flex-col min-[900px]:col-span-2 rounded-[16px] border border-[rgba(15,33,43,.12)] bg-white p-[22px] no-underline">
+              <span class="flex-none w-[44px] h-[44px] rounded-[12px] flex items-center justify-center m-[0_0_16px]" :class="way.tile"><WayIcon :name="way.icon" /></span>
+              <span class="font-['Schibsted_Grotesk'] font-bold text-[17px] leading-[1.25] text-navy m-[0_0_8px]">{{ way.title }}</span>
+              <span class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.6] text-muted flex-1 m-[0_0_14px]">{{ way.desc }}</span>
+              <span class="inline-flex items-center gap-2 font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-water">{{ way.cta }} <span class="arr" aria-hidden="true">→</span></span>
             </NuxtLink>
-            <a v-else :href="way.href" class="text-[12px] text-[#0F7A57] no-underline mt-[4px]">
-              {{ way.cta }} →
+            <a v-else :href="way.href"
+              class="card-lift arrow-row flex flex-col min-[900px]:col-span-2 rounded-[16px] border border-[rgba(15,33,43,.12)] bg-white p-[22px] no-underline">
+              <span class="flex-none w-[44px] h-[44px] rounded-[12px] flex items-center justify-center m-[0_0_16px]" :class="way.tile"><WayIcon :name="way.icon" /></span>
+              <span class="font-['Schibsted_Grotesk'] font-bold text-[17px] leading-[1.25] text-navy m-[0_0_8px]">{{ way.title }}</span>
+              <span class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.6] text-muted flex-1 m-[0_0_14px]">{{ way.desc }}</span>
+              <span class="inline-flex items-center gap-2 font-['Hanken_Grotesk'] font-semibold text-[13.5px] leading-[normal] text-water">{{ way.cta }} <span class="arr" aria-hidden="true">→</span></span>
             </a>
           </div>
         </div>

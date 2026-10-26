@@ -4,6 +4,7 @@ location: Ames, Iowa, USA
 organization: Iowa State University
 posted: 2026-10-13
 published: false
+sector: academic
 slug: iowa-state-university-postdoctoral-research-associate-in-watershed-hydrology-and
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393302

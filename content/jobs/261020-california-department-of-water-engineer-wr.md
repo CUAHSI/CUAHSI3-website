@@ -4,7 +4,7 @@ location: Sacramento County, CA
 organization: California Department of Water Resources
 posted: 2026-10-20
 published: false
-slug: california-department-of-water-resources-engineer-wr
+slug: california-department-of-water-resources-engineer-wr-261020
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394086
 source_url: https://www.joshswaterjobs.com/jobs/394086

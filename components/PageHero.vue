@@ -2,7 +2,8 @@
 // The banner at the top of a page: a gradient band holding a container with, in this order, an optional
 // line above (slot "before": a breadcrumb or a row of chips), a kicker label (slot "kicker"), the page
 // heading (slot "title"), a lead paragraph (slot "lead") and anything after the lead (the default slot).
-// Slot "below" sits under the container inside the band, for example a sub-nav row.
+// Slot "top" sits above the container inside the band, for example a sub-nav row: at the top it is in the same place on every page of a section.
+// Slot "below" sits under the container inside the band.
 // The kicker, heading and lead elements are drawn only when their slot is given (a slot that is given
 // but empty still draws an empty element), so a hero without a lead simply leaves #lead out.
 //
@@ -22,6 +23,7 @@ defineProps<{
 
 <template>
   <section class="bg-[linear-gradient(180deg,#FBFAF7,#F3EEE4)] border-b border-b-[rgba(15,33,43,.08)]" :class="sectionClass">
+    <slot name="top" />
     <div :class="containerClass">
       <slot name="before" />
       <span v-if="$slots.kicker" class="font-mono font-bold tracking-[.14em] uppercase text-clay text-[12px]"><slot name="kicker" /></span>

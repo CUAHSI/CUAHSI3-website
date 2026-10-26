@@ -9,5 +9,6 @@ deadline: null
 url: https://etap.nsf.gov/award/8245/opportunity/11979
 source: newsletter
 tags: [fellowship, geoscience, NSF-EPSCoR]
+sector: academic
 published: true
 ---

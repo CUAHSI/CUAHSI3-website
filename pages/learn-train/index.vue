@@ -6,7 +6,7 @@ const { data: programs } = await useAsyncData('lt-programs', () =>
 )
 
 const extras = [
-  { tag: 'ONLINE MODULES', name: 'HydroLearn', desc: '60+ peer-reviewed learning modules on hydrology and water resources, free and open-access.', cta: 'Explore HydroLearn', to: 'https://www.hydrolearn.org', external: true },
+  { tag: 'ONLINE MODULES', name: 'HydroLearn', desc: '60+ peer-reviewed learning modules on water science and water resources, free and open-access.', cta: 'Explore HydroLearn', to: 'https://www.hydrolearn.org', external: true },
   { tag: 'FELLOWSHIPS', name: 'HydroInformatics Innovation Fellowship', desc: 'Seed funding for graduate students and postdocs developing innovative water informatics tools and datasets.', cta: 'See funding opportunities', to: '/community/jobs', external: false },
   { tag: 'WORKSHOPS', name: 'Campus Visits & Workshops', desc: 'Bring CUAHSI tools, training, and expertise to your institution through a structured engagement program.', cta: 'Learn about campus visits', to: '/community/campus-visits', external: false },
 ]
@@ -21,14 +21,13 @@ const extras = [
       <template #kicker>Learn &amp; Train</template>
       <template #title>Training for every stage of a water science career.</template>
       <template #lead>From first-year graduate students to senior faculty, CUAHSI offers field schools, online courses, summer institutes, fellowships, and free recordings — open to all.</template>
-      <template #below><SectionNav section="learn" fixed /></template>
     </PageHero>
 
     <StatsBand />
 
     <p class="mx-auto site-container max-w-site pt-[20px] font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[normal] text-muted">
-      Training content lives here first. Scheduled instances (dates, registration) also appear on
-      <NuxtLink to="/community/events" class="text-water">Community → Events</NuxtLink> — same session, one canonical page.
+      Programs are described on this page. When a session has a date, it also appears on
+      <NuxtLink to="/community/events" class="text-water">Community → Events</NuxtLink>, with registration.
     </p>
 
     <!-- Featured cyberseminar -->

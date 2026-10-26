@@ -4,6 +4,7 @@ location: Duluth, Minnesota, USA
 organization: Natural Resources Research Institute (NRRI), University of Minnesota
 posted: 2026-10-13
 published: false
+sector: academic
 slug: natural-resources-research-institute-nrri-university-of-minnesota-nrri-temporary
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393311

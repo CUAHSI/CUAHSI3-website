@@ -45,11 +45,10 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
     <PageHero container-class="mx-auto max-w-site p-[64px_40px_52px]"
       title-class="font-['Schibsted_Grotesk'] font-bold text-[clamp(36px,4.4vw,54px)] leading-[1.04] tracking-[-.022em] text-navy m-[16px_0_16px] max-w-[720px]"
       lead-class="font-['Hanken_Grotesk'] font-normal text-[17px] leading-[1.6] text-[#3a4d57] max-w-[560px]">
-      <template #before><p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/about" class="text-muted">About</NuxtLink> / Impact</p></template>
-      <template #kicker>Impact</template>
+      <template #kicker>About · Impact</template>
       <template #title>What the community is building, measuring, and discovering.</template>
       <template #lead>Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</template>
-      <template #below><SectionNav section="about" fixed /></template>
+      <template #top><SectionNav section="about" fixed /></template>
     </PageHero>
 
     <!-- Stats band -->

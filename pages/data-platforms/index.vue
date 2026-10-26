@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   title: 'Data & Computing',
-  meta: [{ name: 'description', content: 'HydroShare, JupyterHub, and the water data tools built for the hydrologic science community.' }]
+  meta: [{ name: 'description', content: 'HydroShare, JupyterHub, and the water data tools built for the water science community.' }]
 })
 
 // Query all impact entries once, filter per-tool by matching tag below
@@ -18,7 +18,7 @@ const tools = [
     name: 'HydroShare',
     impactTag: 'hydroshare',
     kicker: 'DATA REPOSITORY',
-    tagline: 'Publish, share, and collaborate on hydrologic data and models with a citable DOI.',
+    tagline: 'Publish, share, and collaborate on water data and models with a citable DOI.',
     points: ['Mint DOIs for datasets and models', 'Group spaces for labs and courses', 'Versioning and granular access control'],
     tags: ['Repository', 'DOI', 'Open data'],
     cta: 'Open HydroShare',
@@ -28,30 +28,30 @@ const tools = [
     name: 'CUAHSI JupyterHub',
     impactTag: 'jupyterhub',
     kicker: 'CLOUD COMPUTE',
-    tagline: 'Cloud notebooks for hydrologic analysis — no local setup, ready in seconds.',
-    points: ['Pre-built hydrology environments', 'Large-memory options for big runs', 'Share notebooks as HydroShare resources'],
+    tagline: 'Cloud notebooks for water science analysis — no local setup, ready in seconds.',
+    points: ['Pre-built water science environments', 'Large-memory options for big runs', 'Share notebooks as HydroShare resources'],
     tags: ['Python', 'R', 'Cloud'],
     cta: 'Launch compute',
     href: 'https://jupyterhub.cuahsi.org',
   },
   {
-    name: 'Water Services',
+    name: 'Hydrologic Information System',
     impactTag: 'water-data-services',
     kicker: 'TIME-SERIES DATA',
     tagline: 'Discover and access national time-series water data — map-based search, standardized WaterOneFlow/WaterML services, and export to common formats.',
     points: ['Map-based discovery by location, variable, and date range', 'WaterOneFlow web services with standardized WaterML output', 'Connects to national observation networks'],
     tags: ['WaterML', 'Time series', 'WaterOneFlow', 'Map', 'Discovery'],
-    cta: 'Explore Water Services',
+    cta: 'Explore HIS',
     href: 'https://data.cuahsi.org/',
     deprecation: 'This service is being deprecated and replaced by a community-hosted, open-source sensor data management platform — free for member institutions running small sensor deployments. More details coming as the transition takes shape.',
   },
   {
     name: 'MATLAB Online',
     impactTag: 'matlab',
-    kicker: 'MEMBER BENEFIT',
-    tagline: 'Free browser-based access to MATLAB for member institutions — no install, toolboxes included.',
-    points: ['Browser-based, nothing to install', 'Common toolboxes included', 'Free for member institutions'],
-    tags: ['License', 'Member benefit'],
+    kicker: 'SOFTWARE ACCESS',
+    tagline: 'Free browser-based access to MATLAB — no install, toolboxes included.',
+    points: ['Browser-based, nothing to install', 'Common toolboxes included', 'Free to use'],
+    tags: ['License', 'Free'],
     cta: 'Learn more',
     href: 'https://www.cuahsi.org/matlab',
   },
@@ -67,7 +67,10 @@ const tools = [
       <template #kicker>Data &amp; Computing</template>
       <template #title>Tools built for water science.</template>
       <template #lead>CUAHSI operates open infrastructure for the water science community — from data publication and cloud computing to national data discovery.</template>
-      <template #below><SectionNav section="data" fixed /></template>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] text-muted m-[22px_0_0]">Also here:
+        <NuxtLink to="/data-platforms/portals" class="text-water font-medium">Water data portals</NuxtLink> &nbsp;·&nbsp;
+        <NuxtLink to="/data-platforms/data-management-guide" class="text-water font-medium">Data management guide</NuxtLink>
+      </p>
     </PageHero>
 
     <!-- Stats band -->

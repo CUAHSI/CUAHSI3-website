@@ -5,6 +5,7 @@ organization: University of Wisconsin-Madison Division of Extension, Natural Res
   Institute
 posted: 2026-10-05
 published: false
+sector: academic
 slug: university-of-wisconsin-madison-division-of-extension-natural-resources-institut
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392230

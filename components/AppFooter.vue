@@ -14,7 +14,7 @@
             <span class="font-['Schibsted_Grotesk'] font-extrabold text-[18px] leading-[normal] text-white">CUAHSI</span>
           </div>
           <p class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.6] text-[#7fa4bf] max-w-[280px] mb-[20px]">
-            A consortium of 100+ universities advancing water science through shared infrastructure and community.
+            An evolving commons for data, computing, training, and connection.
           </p>
           <div class="flex gap-4">
             <a href="https://bsky.app/profile/cuahsi.bsky.social" target="_blank" class="font-mono text-[11px] tracking-[.06em] transition-colors text-[#6a8ea9]">BLUESKY</a>

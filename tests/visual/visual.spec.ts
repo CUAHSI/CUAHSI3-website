@@ -17,6 +17,9 @@ for (const r of routes) {
   test(r.name, async ({ page, context }) => {
     // The donation form on /support is a third-party iframe that never goes idle and is not ours to compare.
     await context.route(/zeffy\.com/, route => route.abort())
+    // The home page's gage card loads the latest flow of a real USGS gage in the browser, so its value and bars change every
+    // few minutes. Block that request: the card then shows its "no reading" state, the same on every run.
+    await context.route(/api\.waterdata\.usgs\.gov/, route => route.abort())
     // YouTube thumbnails on the cyberseminars page are third-party and can change or load late (one failed run in
     // a stress test). Replace them with a fixed grey pixel; the page still sizes and crops them as it does today.
     await context.route(/img\.youtube\.com/, route => route.fulfill({ status: 200, contentType: 'image/png', body: GREY_PIXEL }))

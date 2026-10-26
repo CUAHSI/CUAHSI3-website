@@ -9,8 +9,8 @@ location:
   mode: virtual
 description: >
   Last day of general registration for the Water Science Exchange: Water in
-  Working Landscapes (November 12 to 14, 2026). General rates, from October 9
-  to October 29: student member $140, student non-member $175, professional
+  Working Landscapes (November 12 to 14, 2026). General rates, after early-bird
+  registration ends on October 15 and through October 29: student member $140, student non-member $175, professional
   member $280, professional non-member $350. Anyone affiliated with a CUAHSI
   member institution receives a 20% discount.
 registration:
@@ -18,5 +18,6 @@ registration:
   url: https://cvent.me/0r7DMx
   cost: null
 tags: [deadline, registration, water-science-exchange]
+newsletter_source: ["2026-october"]
 published: true
 ---

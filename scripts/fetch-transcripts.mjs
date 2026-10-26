@@ -33,6 +33,15 @@ const singleId = process.argv.find(a => a.startsWith('--id='))?.split('=')[1]
 
 // --- helpers ----------------------------------------------------------------
 
+// Start of a caption segment, in seconds. The youtube-transcript package returns `offset` in MILLISECONDS (and no `start`); an earlier
+// version of this script read `seg.start`, which is undefined, so every timestamp it wrote was "NaN:NaN". `start` (seconds) is kept
+// as a fallback for a version of the package that provides it. A segment with neither is a failure, not a silent "0:00".
+function startSeconds(seg) {
+  if (Number.isFinite(seg.offset)) return seg.offset / 1000
+  if (Number.isFinite(seg.start)) return seg.start
+  throw new Error(`caption segment has no usable offset or start: ${JSON.stringify(seg).slice(0, 120)}`)
+}
+
 function formatTimestamp(seconds) {
   const m = Math.floor(seconds / 60)
   const s = Math.floor(seconds % 60)
@@ -46,7 +55,7 @@ function formatTimestamp(seconds) {
 function buildParagraphs(segments) {
   const WORDS_PER_PARA = 80
   const paras = []
-  let current = { start: segments[0].start, words: [] }
+  let current = { start: null, words: [] }   // start is set from the first segment that adds words to the paragraph
 
   for (const seg of segments) {
     // Clean up auto-caption artifacts
@@ -58,11 +67,12 @@ function buildParagraphs(segments) {
     if (!text) continue
 
     const words = text.split(' ')
+    if (current.start === null) current.start = startSeconds(seg)
     current.words.push(...words)
 
     if (current.words.length >= WORDS_PER_PARA) {
       paras.push({ timestamp: formatTimestamp(current.start), text: current.words.join(' ') })
-      current = { start: seg.start, words: [] }
+      current = { start: null, words: [] }   // the next paragraph starts at the next segment (it used to reuse this one's start)
     }
   }
 
@@ -113,7 +123,14 @@ async function fetchForFile(filepath) {
 
   console.log(`    → ${segments.length} segments fetched`)
 
-  const paragraphs = buildParagraphs(segments)
+  let paragraphs
+  try {
+    paragraphs = buildParagraphs(segments)
+  } catch (err) {
+    // one video with an unexpected caption shape must not stop the rest of a batch; nothing has been written for it yet
+    console.warn(`  ⚠ Could not build paragraphs for ${id}: ${err.message}`)
+    return
+  }
   const plainText = buildPlainText(segments)
 
   // Write the transcript as a separate JSON file keyed by youtube_id
