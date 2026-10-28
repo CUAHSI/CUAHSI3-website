@@ -3,7 +3,7 @@ deadline: null
 location: Helena, Montana
 organization: Montana Department of Natural Resources & Conservation (DNRC)
 posted: 2026-10-12
-published: false
+published: true
 slug: montana-department-of-natural-resources-conservation-dnrc-division-administrator
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393025

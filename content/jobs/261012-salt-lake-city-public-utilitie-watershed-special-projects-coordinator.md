@@ -3,7 +3,7 @@ deadline: null
 location: Salt Lake City, Utah, USA
 organization: Salt Lake City Public Utilities
 posted: 2026-10-12
-published: false
+published: true
 slug: salt-lake-city-public-utilities-watershed-special-projects-coordinator
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393041

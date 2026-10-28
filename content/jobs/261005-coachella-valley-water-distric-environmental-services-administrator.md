@@ -3,7 +3,7 @@ deadline: null
 location: Coachella Valley, CA
 organization: Coachella Valley Water District (CVWD)
 posted: 2026-10-05
-published: false
+published: true
 slug: coachella-valley-water-district-cvwd-environmental-services-administrator
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392339

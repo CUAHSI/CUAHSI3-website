@@ -3,7 +3,7 @@ deadline: 2026-10-30
 location: Yolo County, California
 organization: California Department of Water Resources
 posted: 2026-10-20
-published: false
+published: true
 slug: california-department-of-water-resources-water-quality-scientist
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394090

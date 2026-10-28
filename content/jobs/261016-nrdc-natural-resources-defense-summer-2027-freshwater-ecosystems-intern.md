@@ -3,7 +3,7 @@ deadline: null
 location: Washington, DC
 organization: NRDC (Natural Resources Defense Council)
 posted: 2026-10-16
-published: false
+published: true
 slug: nrdc-natural-resources-defense-council-summer-2027-freshwater-ecosystems-intern
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393555

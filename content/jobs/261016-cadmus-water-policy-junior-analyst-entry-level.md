@@ -3,7 +3,7 @@ deadline: null
 location: United States
 organization: Cadmus
 posted: 2026-10-16
-published: false
+published: true
 slug: cadmus-water-policy-junior-analyst-entry-level
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393508

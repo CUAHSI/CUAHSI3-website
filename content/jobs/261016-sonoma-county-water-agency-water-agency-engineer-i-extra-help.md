@@ -3,7 +3,7 @@ deadline: null
 location: Santa Rosa, CA
 organization: Sonoma County Water Agency
 posted: 2026-10-16
-published: false
+published: true
 slug: sonoma-county-water-agency-water-agency-engineer-i-extra-help
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393518

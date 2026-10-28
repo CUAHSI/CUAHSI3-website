@@ -3,7 +3,7 @@ deadline: null
 location: New York, USA
 organization: New York State Department of Environmental Conservation
 posted: 2026-10-08
-published: false
+published: true
 slug: new-york-state-department-of-environmental-conservation-research-scientist-5-wat
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392376

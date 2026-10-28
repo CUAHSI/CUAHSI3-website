@@ -3,7 +3,7 @@ deadline: null
 location: Dartmouth, Massachusetts, USA
 organization: UMass Dartmouth
 posted: 2026-10-12
-published: false
+published: true
 sector: academic
 slug: umass-dartmouth-technical-associate-estuarine-and-ocean-sciences
 source: joshswaterjobs

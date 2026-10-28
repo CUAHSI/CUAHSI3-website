@@ -3,7 +3,7 @@ deadline: null
 location: Missoula, MT
 organization: Water Rights, Inc.
 posted: 2026-10-20
-published: false
+published: true
 slug: water-rights-inc-water-rights-specialist
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393781

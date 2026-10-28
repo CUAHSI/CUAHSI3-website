@@ -3,7 +3,7 @@ deadline: null
 location: Santa Fe, New Mexico
 organization: New Mexico Office of the State Engineer
 posted: 2026-10-05
-published: false
+published: true
 slug: new-mexico-office-of-the-state-engineer-associate-water-resources-professional
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392350

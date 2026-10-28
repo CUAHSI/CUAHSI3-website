@@ -3,7 +3,7 @@ deadline: null
 location: Pittsburgh, PA
 organization: University of Pittsburgh
 posted: 2026-10-12
-published: false
+published: true
 sector: academic
 slug: university-of-pittsburgh-water-research-and-data-analyst
 source: joshswaterjobs

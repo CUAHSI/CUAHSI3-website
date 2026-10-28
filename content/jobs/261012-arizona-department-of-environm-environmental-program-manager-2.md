@@ -3,7 +3,7 @@ deadline: null
 location: Phoenix, AZ
 organization: Arizona Department of Environmental Quality (ADEQ)
 posted: 2026-10-12
-published: false
+published: true
 slug: arizona-department-of-environmental-quality-adeq-environmental-program-manager-2
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393137
