@@ -14,6 +14,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createHash } from 'node:crypto'
 
 const args = process.argv.slice(2)
 const flag = n => args.includes(`--${n}`)
@@ -24,25 +25,39 @@ const ROOT = rootArg ? path.resolve(rootArg) : path.resolve(path.dirname(fileURL
 const EVENTS = ['start', 'intervention', 'defect', 'pr', 'merged', 'abandoned', 'note', 'correction', 'event']
 const LINE = /^(\d{6}) \| ([^|]+?) \| ([a-z-]+) \| (.+)$/
 
+// Lines that are wrong and cannot be corrected: rule 10 forbids editing a log file that is already on the default
+// branch, and both files were merged that way (the first by the jobs agent's AGU-credit branch, the second with a
+// "caught: verify" value that only the frozen eval log accepts). They are listed by file, line and a hash of the text so that a NEW
+// bad line anywhere, including elsewhere in these two files, still fails the check. Nothing is added to this list
+// for a new mistake: fix the line in your own branch's log file instead.
+const KNOWN = new Set([
+  '261008-task-jobs-agu-credit.md:1:d28d39db7a', '261008-task-jobs-agu-credit.md:3:d1b417cb16',
+  '261008-task-jobs-agu-credit.md:4:12e509dd5f', '261008-task-jobs-agu-credit.md:5:cd8690afbb',
+  '261008-task-jobs-agu-credit.md:6:d8f5e9a4cd', '261008-task-jobs-agu-credit.md:7:90a3c2a240',
+  '261008-task-jobs-agu-credit.md:8:6eaf31c91e', '261008-task-jobs-agu-credit.md:9:764cb5fc21',
+  '261008-task-jobs-agu-credit.md:10:76c0edc19e',
+  '261015-content-upstream-jobs-2026-10-13.md:3:da2ccac173',
+])   // file:line:first 10 hex of the sha1 of the line's text, so a line that is rewritten no longer matches
 const readLines = f => fs.readFileSync(f, 'utf8').split(/\r?\n/)
 
 // ---- check -------------------------------------------------------------------------------------------------------------------
 const dir = path.join(ROOT, 'agent', 'log')
 const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'README.md').sort() : []
 if (flag('check')) {
-  let bad = 0
+  let bad = 0, tolerated = 0
+  const problem = (f, i, msg, text = '') => { if (KNOWN.has(`${f}:${i}:${createHash('sha1').update(text).digest('hex').slice(0, 10)}`)) tolerated++; else { console.log(`agent/log/${f}:${i}: ${msg}`); bad++ } }
   for (const f of files) {
     if (!/^\d{6}-[a-z0-9][a-z0-9._-]*\.md$/.test(f)) { console.log(`agent/log/${f}: the file name must be <YYMMDD>-<branch with / as ->.md`); bad++ }
     readLines(path.join(dir, f)).forEach((l, i) => {
       if (!l.trim()) return
       const m = LINE.exec(l)
-      if (!m) { console.log(`agent/log/${f}:${i + 1}: not in the format "YYMMDD | branch | event | detail"`); bad++; return }
-      if (!EVENTS.includes(m[3])) { console.log(`agent/log/${f}:${i + 1}: unknown event "${m[3]}" (${EVENTS.join(', ')})`); bad++ }
-      if (m[3] === 'defect' && !/\bcaught: (self-check|reviewer|human-review|deploy-preview|production)\b/.test(m[4])) { console.log(`agent/log/${f}:${i + 1}: a defect line's detail must contain "caught: self-check", "reviewer", "human-review", "deploy-preview" or "production"`); bad++ }
+      if (!m) { problem(f, i + 1, 'not in the format "YYMMDD | branch | event | detail"', l); return }
+      if (!EVENTS.includes(m[3])) problem(f, i + 1, `unknown event "${m[3]}" (${EVENTS.join(', ')})`, l)
+      if (m[3] === 'defect' && !/\bcaught: (self-check|reviewer|human-review|deploy-preview|production)\b/.test(m[4])) problem(f, i + 1, `a defect line's detail must contain "caught: self-check", "reviewer", "human-review", "deploy-preview" or "production"`, l)
     })
   }
   if (bad) { console.log(`${bad} problem(s) in ${files.length} log file(s)`); process.exit(1) }
-  console.log(`${files.length} log file(s), all lines in format`)
+  console.log(`${files.length} log file(s), all lines in format` + (tolerated ? ` (${tolerated} known bad line(s) in files already on main are ignored)` : ''))
   process.exit(0)
 }
 
