@@ -125,7 +125,11 @@ version mismatch. Ignore it.
     and points to it (a `correction` line in your own branch's log file). Each branch writes only
     its own file, `agent/log/<YYMMDD>-<branch>.md`. `verify.sh` fails if `agent/eval-log.md`
     changes at all (it is frozen), if a log file already on the base branch changes, or if a line
-    in `agent/log/` is not in the format in `agent/log/README.md`. A branch cut before 7 October 2026
+    in `agent/log/` is not in the format in `agent/log/README.md`. Ten lines in two files already on
+    `main` are the only exception in `agent/log/` (9 in `261008-task-jobs-agu-credit.md`, 1 in
+    `261015-content-upstream-jobs-2026-10-13.md`): they were merged wrong and cannot be edited, so
+    `scripts/eval-log.mjs --check` skips them by file, line and a hash of the text (`KNOWN` in that
+    script). Never add to that list for a new mistake; fix it in your own branch's log file. A branch cut before 7 October 2026
     that appended to `agent/eval-log.md` moves those lines (`git diff origin/main -- agent/eval-log.md`)
     into its own log file, then restores the frozen file with `git checkout origin/main -- agent/eval-log.md`;
     in a merge conflict in that file, take the default branch's version and keep your lines in your own file.
