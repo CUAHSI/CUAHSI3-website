@@ -1,0 +1,98 @@
+# A comment "/publish 2 5" (or "/publish all") on a jobs-agent PR publishes those rows of the PR's review table: the agent adds
+# review jobs as `published: false` and lists them, in row order, in the PR body; this sets `published: true` on the PR's own branch.
+# Only people with write access on this repo can use it. Logic and its tests: scripts/publish-reviewed.mjs, scripts/test-publish-reviewed.mjs.
+# The comment text is never put in a shell command (it goes through a file) and nothing from the PR branch is executed: the script
+# is run from the default branch's checkout and only edits `published:` lines of the files the PR body lists.
+# Not re-run on the pushed commit: a push by this workflow's token does not start the `verify` check (a GitHub rule).
+name: publish-reviewed
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish-reviewed-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event.issue.pull_request != null && github.event.comment.user.type != 'Bot' && startsWith(github.event.comment.body, '/publish')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Is this a jobs-agent PR, and may this person publish?
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+          WHO: ${{ github.event.comment.user.login }}
+          COMMENT: ${{ github.event.comment.body }}
+        run: |
+          set -euo pipefail
+          echo "go=no" >> "$GITHUB_OUTPUT"
+          gh pr view "$PR" --repo "$REPO" --json state,headRefName,headRefOid,isCrossRepository,labels,body > pr.json
+          ok=$(jq -r '(.state == "OPEN") and (.isCrossRepository | not) and (.headRefName | startswith("content/jobs-")) and ([.labels[].name] | index("auto-job") != null)' pr.json)
+          if [ "$ok" != "true" ]; then echo "not an open jobs-agent PR; ignoring"; exit 0; fi
+          perm=$(gh api "repos/$REPO/collaborators/$WHO/permission" --jq .permission 2>/dev/null || echo none)   # 404 for a non-collaborator
+          case "$perm" in
+            admin|maintain|write) ;;
+            *) gh pr comment "$PR" --repo "$REPO" --body "@$WHO only people with write access to this repository can publish jobs with a comment."; exit 0 ;;
+          esac
+          jq -r .body pr.json > body.txt
+          printf '%s' "$COMMENT" > comment.txt
+          echo "head=$(jq -r .headRefName pr.json)" >> "$GITHUB_OUTPUT"
+          echo "sha=$(jq -r .headRefOid pr.json)" >> "$GITHUB_OUTPUT"   # the body and the files are read at this one commit
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          path: trusted
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          ref: ${{ steps.gate.outputs.sha }}
+          path: work
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: 20
+      - name: Publish the listed rows
+        id: edit
+        if: steps.gate.outputs.go == 'yes'
+        run: node trusted/scripts/publish-reviewed.mjs --comment-file comment.txt --body-file body.txt --dir work --out result.md
+      - name: Commit to the PR branch
+        if: steps.gate.outputs.go == 'yes' && steps.edit.outputs.changed != '0'
+        env:
+          HEAD_REF: ${{ steps.gate.outputs.head }}
+          WHO: ${{ github.event.comment.user.login }}
+          N: ${{ steps.edit.outputs.changed }}
+        run: |
+          set -euo pipefail
+          cd work
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/jobs
+          git commit -m "Publish $N reviewed job(s) (/publish comment by @$WHO)"
+          git push origin "HEAD:refs/heads/$HEAD_REF"
+      - name: Reply on the PR
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+        run: |
+          if [ -s result.md ]; then gh pr comment "$PR" --repo "$REPO" --body-file result.md; fi
+      - name: Say so when it did not work
+        if: failure() && steps.gate.outputs.go == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh pr comment "$PR" --repo "$REPO" --body "Could not publish. The run failed, so nothing was changed (for example the branch moved while it ran; comment again to retry). Details: $RUN"
