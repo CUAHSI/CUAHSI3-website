@@ -3,7 +3,7 @@ deadline: null
 location: Multiple offices (fully remote considered case-by-case)
 organization: Cadmus
 posted: 2026-10-12
-published: false
+published: true
 slug: cadmus-data-analyst-water-quality
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393116

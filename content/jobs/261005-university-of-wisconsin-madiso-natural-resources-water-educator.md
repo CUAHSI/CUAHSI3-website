@@ -4,7 +4,7 @@ location: Wisconsin Rapids, WI
 organization: University of Wisconsin-Madison Division of Extension, Natural Resources
   Institute
 posted: 2026-10-05
-published: false
+published: true
 sector: academic
 slug: university-of-wisconsin-madison-division-of-extension-natural-resources-institut
 source: joshswaterjobs

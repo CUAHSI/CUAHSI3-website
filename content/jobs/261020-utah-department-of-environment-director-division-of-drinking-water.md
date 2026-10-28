@@ -3,7 +3,7 @@ deadline: 2026-10-31
 location: Salt Lake City, Utah, USA
 organization: Utah Department of Environmental Quality
 posted: 2026-10-20
-published: false
+published: true
 slug: utah-department-of-environmental-quality-director-division-of-drinking-water
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394140

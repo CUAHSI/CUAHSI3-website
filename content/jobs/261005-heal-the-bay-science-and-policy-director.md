@@ -3,7 +3,7 @@ deadline: null
 location: Santa Monica, CA
 organization: Heal the Bay
 posted: 2026-10-05
-published: false
+published: true
 slug: heal-the-bay-science-and-policy-director
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/391853

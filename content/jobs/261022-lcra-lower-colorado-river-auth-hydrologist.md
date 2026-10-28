@@ -3,7 +3,7 @@ deadline: null
 location: Texas, USA
 organization: LCRA (Lower Colorado River Authority)
 posted: 2026-10-22
-published: false
+published: true
 slug: lcra-lower-colorado-river-authority-hydrologist
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394449

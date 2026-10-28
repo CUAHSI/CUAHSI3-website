@@ -3,7 +3,7 @@ deadline: null
 location: Indiana, USA
 organization: Indiana Department of Environmental Management (IDEM)
 posted: 2026-10-05
-published: false
+published: true
 slug: indiana-department-of-environmental-management-idem-surface-water-monitoring-pro
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392353

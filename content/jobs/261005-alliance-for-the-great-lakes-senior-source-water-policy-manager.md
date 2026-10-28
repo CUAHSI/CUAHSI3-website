@@ -3,7 +3,7 @@ deadline: null
 location: Great Lakes region (remote/hybrid likely)
 organization: Alliance for the Great Lakes
 posted: 2026-10-05
-published: false
+published: true
 slug: alliance-for-the-great-lakes-senior-source-water-policy-manager
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392239

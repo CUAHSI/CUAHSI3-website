@@ -3,7 +3,7 @@ deadline: null
 location: Oak Ridge, TN, US
 organization: Oak Ridge National Laboratory
 posted: 2026-10-12
-published: false
+published: true
 slug: oak-ridge-national-laboratory-energy-water-research-and-partnerships-lead
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393061

@@ -3,7 +3,7 @@ deadline: null
 location: Davis, CA, USA
 organization: Stockholm Environment Institute (SEI)
 posted: 2026-10-08
-published: false
+published: true
 slug: stockholm-environment-institute-sei-software-developer-scientist-weap-platform
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/392511

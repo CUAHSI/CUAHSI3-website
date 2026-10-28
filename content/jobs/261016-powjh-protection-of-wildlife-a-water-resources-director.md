@@ -3,7 +3,7 @@ deadline: null
 location: Jackson Hole, Wyoming, USA
 organization: POWJH (Protection of Wildlife and Jackson Hole)
 posted: 2026-10-16
-published: false
+published: true
 slug: powjh-protection-of-wildlife-and-jackson-hole-water-resources-director
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/393514

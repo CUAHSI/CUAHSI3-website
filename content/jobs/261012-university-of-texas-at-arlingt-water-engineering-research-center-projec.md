@@ -3,7 +3,7 @@ deadline: null
 location: Arlington, TX
 organization: University of Texas at Arlington
 posted: 2026-10-12
-published: false
+published: true
 sector: academic
 slug: university-of-texas-at-arlington-water-engineering-research-center-project-manag
 source: joshswaterjobs

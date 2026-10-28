@@ -3,7 +3,7 @@ deadline: null
 location: Tucson, AZ, USA
 organization: University of Arizona – School of Natural Resources and the Environment
 posted: 2026-10-05
-published: false
+published: true
 sector: academic
 slug: university-of-arizona-school-of-natural-resources-and-the-environment-scientific
 source: joshswaterjobs
