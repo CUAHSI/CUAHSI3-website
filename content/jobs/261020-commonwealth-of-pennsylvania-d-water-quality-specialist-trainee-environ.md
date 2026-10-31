@@ -3,7 +3,7 @@ deadline: 2026-10-29
 location: Scranton, Pennsylvania
 organization: Commonwealth of Pennsylvania Department of Environmental Protection
 posted: 2026-10-20
-published: true
+published: false
 slug: commonwealth-of-pennsylvania-department-of-environmental-protection-water-qualit
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394005
