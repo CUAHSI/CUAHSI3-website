@@ -3,7 +3,7 @@ deadline: 2026-10-30
 location: Sacramento County, CA
 organization: California Department of Water Resources
 posted: 2026-10-20
-published: true
+published: false
 slug: california-department-of-water-resources-engineer-wr-261020
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394086

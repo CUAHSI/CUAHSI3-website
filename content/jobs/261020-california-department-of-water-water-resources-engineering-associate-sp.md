@@ -3,7 +3,7 @@ deadline: 2026-10-29
 location: Castaic, California, USA
 organization: California Department of Water Resources
 posted: 2026-10-20
-published: true
+published: false
 slug: california-department-of-water-resources-water-resources-engineering-associate-s
 source: joshswaterjobs
 source_id: https://www.joshswaterjobs.com/jobs/394014
