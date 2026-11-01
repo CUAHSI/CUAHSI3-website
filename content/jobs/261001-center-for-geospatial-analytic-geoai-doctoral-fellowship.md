@@ -11,7 +11,7 @@ source: agu
 source_id: "https://findajob.agu.org/job/8028498/geoai-doctoral-fellowship-at-nc-state-university?TrackID=26"
 tags: [graduate, data, hydroinformatics]
 sector: academic
-published: true
+published: false
 ---
 
 The Center for Geospatial Analytics at NC State University is hiring doctoral fellows to advance spatial data science research. The fellowship provides $40,000/year plus health insurance and tuition waiver. Candidates should be interested in interdisciplinary geospatial and AI research with real-world applications.
