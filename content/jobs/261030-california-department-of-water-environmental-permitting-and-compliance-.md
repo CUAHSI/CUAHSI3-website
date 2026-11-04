@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/395553"
 source_url: https://www.joshswaterjobs.com/jobs/395553
 tags: [water-quality, policy, planning, watershed, surface-water]
-published: true
+published: false
 ---
 
 The California Department of Water Resources is hiring an Environmental Scientist for its Delta Conveyance Project team in West Sacramento. The role involves developing, reviewing, tracking, and monitoring environmental compliance documents and supporting regulatory permitting activities. Candidates must meet the state Environmental Scientist classification minimum qualifications, with experience in environmental data analysis and technical writing preferred.
