@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/395012"
 source_url: https://www.joshswaterjobs.com/jobs/395012
 tags: [hydrology, water-quality, surface-water, modeling, policy]
-published: true
+published: false
 ---
 
 The Colorado River Board of California is hiring a Principal Engineer (Water Resources) to lead its Research and Technical Support Unit in Glendale, CA. The role involves supervising water resources engineers, overseeing studies on Colorado River water quantity and quality, coordinating with member agencies, and serving as the agency's Chief Information Officer. Candidates must meet California state civil service eligibility requirements and hold a valid California driver's license.
