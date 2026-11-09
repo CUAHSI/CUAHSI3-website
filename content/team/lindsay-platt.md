@@ -1,14 +1,14 @@
 ---
 name: Lindsay Platt
 slug: lindsay-platt
-role: Environmental Data Scientist, Lead of Operations (acting)
-department: Leadership
+role: Environmental Data Scientist
+department: Programs
 published: true
 ---
 
 ## Recent work at CUAHSI
 
-- Builds the automated data processing, reporting and visualizations behind CUAHSI's business operations and interdisciplinary research. Supervisor since April 2025, and acting Lead of Operations since June 2025.
+- Builds the automated data processing, reporting and visualizations behind CUAHSI's business operations and interdisciplinary research. Supervisor since April 2025; acting Lead of Operations from June 2025 to November 2026.
 
 - Teaches open and reproducible water science at conferences. At AGU24 (Washington, DC) she presented *Technical Skills for Publishing and Sharing Data and Code* with Kristina Vrouwenvelder, and was an invited speaker with *Practical Tips and Concepts to Start Your Reproducibility Journey*, with Abner Bogan, Clara Cogswell and Jordan Read. The same group presented *Bridging the reproducibility gap* at WaterSciCon24 (St. Paul, MN).
 
