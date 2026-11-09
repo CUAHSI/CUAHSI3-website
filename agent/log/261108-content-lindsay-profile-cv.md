@@ -1,3 +1,4 @@
 261108 | content/lindsay-profile-cv | start | Lindsay Platt profile: extend content/team/lindsay-platt.md from her CV (supplied by Lindsay Platt, 8 Nov 2026), structured after Tony Castronova's page
 261108 | content/lindsay-profile-cv | note | facts and links taken from Lindsay's CV; DOIs and external links were not opened from this session (doi.org not reachable); two GitHub course links checked by HTTP status (USGS-R/ds-pipelines-targets-1-course redirects to DOI-USGS, so the DOI-USGS address is used)
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): title back to Environmental Data Scientist, acting Lead of Operations dropped; department moved from Leadership to Programs (agent's choice, to confirm); new bio and fun fact in full-team.json, fun fact copied from cuahsi.org/about/our-team
+261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): department stays Leadership (agent had moved it to Programs in the previous commit)

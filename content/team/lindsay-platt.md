@@ -2,7 +2,7 @@
 name: Lindsay Platt
 slug: lindsay-platt
 role: Environmental Data Scientist
-department: Programs
+department: Leadership
 published: true
 ---
 
