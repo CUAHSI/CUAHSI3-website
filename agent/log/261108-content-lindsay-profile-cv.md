@@ -3,3 +3,4 @@
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): title back to Environmental Data Scientist, acting Lead of Operations dropped; department moved from Leadership to Programs (agent's choice, to confirm); new bio and fun fact in full-team.json, fun fact copied from cuahsi.org/about/our-team
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): department stays Leadership (agent had moved it to Programs in the previous commit)
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): page cut to Tony Castronova's two sections (Selected publications, Recent work at CUAHSI), bullets shortened, all data and code releases kept; Career, Education, Software/teaching and Honors removed
+261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): added the federal open water data Skills Certificate to Recent work, linked to /learn-train/programs/skills-certificate-pilot
