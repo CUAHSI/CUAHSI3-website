@@ -34,7 +34,7 @@ The full list is on the ORCID record linked at the top of this page.
 
 ## Recent work at CUAHSI
 
-- Building the CUAHSI Skills Certificate on federal open water data from NASA, NOAA and USGS, and teaching its [Fall 2026 pilot](/learn-train/programs/skills-certificate-pilot).
+- Building the CUAHSI Skills Certificate on federal open water data from NASA, NOAA and USGS, and teaching its Fall 2026 pilot.
 
 - Builds automated data processing, reporting and visualizations for CUAHSI operations and research.
 

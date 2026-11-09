@@ -4,3 +4,4 @@
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): department stays Leadership (agent had moved it to Programs in the previous commit)
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): page cut to Tony Castronova's two sections (Selected publications, Recent work at CUAHSI), bullets shortened, all data and code releases kept; Career, Education, Software/teaching and Honors removed
 261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): added the federal open water data Skills Certificate to Recent work, linked to /learn-train/programs/skills-certificate-pilot
+261108 | content/lindsay-profile-cv | note | per Lindsay (8 Nov 2026): link to the Skills Certificate pilot page removed for now; text kept
