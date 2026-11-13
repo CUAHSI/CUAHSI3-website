@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/395358"
 source_url: https://www.joshswaterjobs.com/jobs/395358
 tags: [watershed, water-quality, surface-water, policy, planning]
-published: true
+published: false
 ---
 
 The California Department of Water Resources is hiring a permanent Environmental Program Manager I (Supervisory) to lead the Watershed and Environmental Assessment Branch in Red Bluff. The role involves managing a multidisciplinary team responsible for environmental assessment, monitoring, planning, and regulatory compliance. Candidates must meet the minimum qualifications for the Environmental Program Manager I (Supervisory) classification, with preference for experience in environmental or water resources program management and staff supervision.
