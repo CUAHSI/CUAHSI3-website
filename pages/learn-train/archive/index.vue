@@ -14,8 +14,11 @@ const workshops = computed(() =>
   (allEvents.value ?? []).filter(e => ['workshop', 'field'].includes(e.type))
 )
 
-const now = ref(new Date())
-onMounted(() => { now.value = new Date() })
+// The time the page works from: the build's time on the server and for the first browser render (so the two match),
+// then the real time once the page is open (CLAUDE.md footgun 13; same pattern as pages/community/events/index.vue).
+const renderedAt = useState('archive-rendered-at', () => Date.now())
+onMounted(() => { renderedAt.value = Date.now() })
+const now = computed(() => new Date(renderedAt.value))
 
 const upcoming = computed(() => workshops.value.filter(e => new Date(e.start) >= now.value))
 const past = computed(() => workshops.value.filter(e => new Date(e.start) < now.value))

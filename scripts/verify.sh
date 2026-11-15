@@ -3,7 +3,7 @@
 #   ./scripts/verify.sh            static checks only (seconds)
 #   ./scripts/verify.sh --build    static checks, then npm run build:search
 # FAIL blocks a commit. WARN must be read and either fixed or explained in the PR.
-# A clean run does not mean the pages look right. See CLAUDE.md rule 2.
+# A clean run does not mean the pages look right. See AGENTS.md rule 2.
 
 BASE="${VERIFY_BASE:-main}"
 CODE_DIRS=()
@@ -25,9 +25,9 @@ done)
 [ -n "$out" ] && { fail "unbalanced backticks:"; echo "$out"; } || ok "backticks balanced"
 
 # 2. (removed) The apostrophe-in-static-style check flagged every font-family quote,
-#    231 lines in 21 files that all build. See CLAUDE.md, footgun 3.
+#    231 lines in 21 files that all build. See footgun 3 (docs/footguns.md).
 
-# 3. grid-template-columns inside a style attribute, static or bound (Layout section)
+# 3. grid-template-columns inside a style attribute, static or bound (the grid rule, .claude/rules/site-code.md)
 out=$(grep -rnE --include='*.vue' 'style="[^"]*grid-template-columns' "${CODE_DIRS[@]}")
 [ -n "$out" ] && { fail "grid-template-columns in a style attribute:"; echo "$out" | sed 's/^/      /'; } || ok "no inline grid-template-columns"
 
@@ -68,18 +68,50 @@ out=$(grep -rn -A2 'findOne()' "${CODE_DIRS[@]}" composables 2>/dev/null | awk '
   END           { if (pending != "") print pending }' | grep -v '\.catch')
 [ -n "$out" ] && { warn "findOne() with no .catch within two lines:"; echo "$out" | sed 's/^/      /'; } || ok "findOne() calls have .catch"
 
-# 8. createError in pages (footgun 6). Heuristic.
-if [ -d pages ]; then
-  out=$(grep -rn 'throw createError' pages)
-  [ -n "$out" ] && { warn "throw createError in a page; breaks client-side navigation in dev:"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages"
-fi
+# 8. throw createError in pages or components (footgun 6): breaks client-side navigation in dev. Use a notFound computed.
+out=$(grep -rn 'throw createError' pages components 2>/dev/null)
+[ -n "$out" ] && { fail "throw createError in pages/ or components/; use a notFound computed instead (CLAUDE.md, footgun 6):"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages or components"
 
 # 8a. public/_redirects is the generator's output (CI does not build, so this is the check that always runs)
 gout=$(node scripts/parity/redirects.mjs --check 2>&1) && ok "$gout" || { fail "$gout"; }
 # 8b. public/robots.txt (footgun 11): the @nuxtjs/robots module moves it to public/_robots.txt on every build (and then serves
 #     both /robots.txt and /_robots.txt). The source lives at assets/robots.txt.
-[ -e public/robots.txt ] && fail "public/robots.txt exists; a build would move it. Keep the source at assets/robots.txt (CLAUDE.md, footgun 11)." || ok "no public/robots.txt"
+[ -e public/robots.txt ] && fail "public/robots.txt exists; a build would move it. Keep the source at assets/robots.txt (footgun 11, .claude/rules/site-code.md)." || ok "no public/robots.txt"
 [ -e public/_robots.txt ] && warn "public/_robots.txt exists (left by a build from before the move); delete it"
+
+# 8c. Always-loaded agent instructions (AGENTS.md + CLAUDE.md) stay at 200 lines or fewer (Claude Code's documented size target;
+#     org issue 124). An @-import loads the imported file in full, so the only import allowed is CLAUDE.md's `@AGENTS.md`.
+#     Imports are looked for outside fenced code blocks and `code spans`, as Claude Code reads them. A file in .claude/rules/
+#     without `paths:` in its front matter loads at every start, so it would escape the count: that fails too.
+VERIFY_INSTR_DIR="${VERIFY_INSTR_DIR:-.}"   # lets the check be run against a copy (for testing it)
+if [ -f "$VERIFY_INSTR_DIR/AGENTS.md" ] || [ -f "$VERIFY_INSTR_DIR/CLAUDE.md" ]; then
+  n=$(cat "$VERIFY_INSTR_DIR/AGENTS.md" "$VERIFY_INSTR_DIR/CLAUDE.md" 2>/dev/null | wc -l | tr -d ' ')
+  [ "$n" -gt 200 ] && fail "AGENTS.md + CLAUDE.md are $n lines; the limit is 200. Move reference to .claude/rules/ (path-scoped) or docs/ and point to it." || ok "AGENTS.md + CLAUDE.md: $n of 200 lines"
+  imports=$(for f in AGENTS.md CLAUDE.md; do [ -f "$VERIFY_INSTR_DIR/$f" ] && awk -v f="$f" '
+    /^[ \t]*(```|~~~)/ { fence = !fence; next }
+    fence { next }
+    { line = " " $0; gsub(/`+[^`]*`+/, "", line)
+      while (match(line, /[ \t(]@[A-Za-z0-9_~.\/-]+/)) {
+        tok = substr(line, RSTART + 1, RLENGTH - 1); line = substr(line, RSTART + RLENGTH)
+        if (f == "CLAUDE.md" && tok == "@AGENTS.md") { print "IMPORTS_AGENTS"; continue }
+        print "      " f ":" NR ": " tok } }' "$VERIFY_INSTR_DIR/$f"; done)
+  if [ -f "$VERIFY_INSTR_DIR/AGENTS.md" ] && ! echo "$imports" | grep -q '^IMPORTS_AGENTS$'; then
+    fail "CLAUDE.md does not import @AGENTS.md; Claude Code reads AGENTS.md only through that import when a CLAUDE.md exists"
+  fi
+  imports=$(echo "$imports" | grep -v '^IMPORTS_AGENTS$')
+  [ -n "$imports" ] && { fail "@-import in AGENTS.md or CLAUDE.md (an import loads in full and counts toward the 200 lines; point to the file instead):"; echo "$imports"; } || ok "no @-imports beyond CLAUDE.md's @AGENTS.md"
+  if [ -d "$VERIFY_INSTR_DIR/.claude/rules" ]; then
+    out=$(find "$VERIFY_INSTR_DIR/.claude/rules" -name '*.md' | while IFS= read -r f; do
+      awk 'NR == 1 { if ($0 != "---") exit; next } $0 == "---" { ok = found; exit } /^paths:/ { found = 1 } END { exit !ok }' "$f" || echo "      $f"; done)
+    [ -n "$out" ] && { fail "rule file with no paths: front matter (it would load at every start, outside the 200-line count):"; echo "$out"; } || ok "every .claude/rules file is path-scoped"
+  fi
+fi
+
+# 8d. location.search in the .vue and .ts site code (footgun 15): empty in onMounted on a statically generated page. Read
+#     useRoute().query. Matches location.search (window. or not), location['search'] and `{ search } = location`, a comment
+#     included. Not seen: new URL(location.href).searchParams, location.href.split('?').
+out=$(grep -rnE --include='*.vue' --include='*.ts' "location\.search\b|location\[['\"]search['\"]\]|\bsearch\b[^=]*\}[ \t]*=[ \t]*(window\.)?location\b" "${CODE_DIRS[@]}" composables 2>/dev/null)
+[ -n "$out" ] && { fail "location.search in site code; read useRoute().query in onMounted instead (footgun 15, .claude/rules/site-code.md):"; echo "$out" | sed 's/^/      /'; } || ok "no location.search in the site code"
 
 # 9-11. Git state
 if git rev-parse --git-dir >/dev/null 2>&1; then
@@ -89,7 +121,7 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
     fail "uncommitted changes on $BASE. Work on a task/ branch (rule 4)."
   else ok "branch: $branch"; fi
 
-  # Every PR targets main (CLAUDE.md rule 4). In CI the base of the PR is GITHUB_BASE_REF.
+  # Every PR targets main (AGENTS.md rule 4). In CI the base of the PR is GITHUB_BASE_REF.
   if [ -n "$GITHUB_BASE_REF" ] && [ "$GITHUB_BASE_REF" != "main" ]; then
     fail "this PR targets '$GITHUB_BASE_REF'; every PR targets main (rule 4). No stacked PRs: wait for the base to merge, then open this one against main."
   fi
@@ -118,7 +150,8 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
       [ -n "$chg" ] && [ "$chg" != "0" ] && fail "agent/eval-log.md changed ($chg line(s)); it is frozen history, write your lines in agent/log/<YYMMDD>-<branch>.md (rule 10, agent/log/README.md)" || ok "frozen eval log unchanged"
     fi
     if [ -d agent/log ] || git cat-file -e "$mb:agent/log/README.md" 2>/dev/null; then
-      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A"')
+      # README.md describes the format and is not a log file; it changes when the format does (14 November 2026: caught: test, typecheck).
+      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A" && !($1 == "M" && $2 == "agent/log/README.md")')
       [ -n "$oldlog" ] && fail "a log file already on the base branch changed or was removed (append-only, rule 10): $(echo "$oldlog" | tr '\n' ';')" || ok "log files on the base branch unchanged"
     fi
   else

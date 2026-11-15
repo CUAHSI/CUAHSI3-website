@@ -261,9 +261,8 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.55] text-[#7fa4bf] max-w-[440px]">Programs, funding opportunities, community spotlights, and research updates — no spam, unsubscribe anytime.</p>
         </div>
         <div class="flex gap-3">
-          <input type="email" aria-label="Email address" placeholder="your@university.edu"
-            class="flex-1 rounded-btn text-ink bg-white font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] p-[14px_16px] border-0 min-w-0" />
-          <button class="flex-none rounded-btn font-semibold text-white font-['Hanken_Grotesk'] text-[15px] leading-[normal] bg-clay p-[14px_24px] border-0 cursor-pointer whitespace-nowrap">Subscribe</button>
+          <a href="https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca" target="_blank" rel="noopener"
+            class="flex-none rounded-btn font-semibold text-white no-underline font-['Hanken_Grotesk'] text-[15px] leading-[normal] bg-clay p-[14px_24px] whitespace-nowrap">Subscribe ↗</a>
         </div>
       </div>
     </section>

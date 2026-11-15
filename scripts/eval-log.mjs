@@ -24,6 +24,10 @@ const rootArg = val('root')
 const ROOT = rootArg ? path.resolve(rootArg) : path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const EVENTS = ['start', 'intervention', 'defect', 'pr', 'merged', 'abandoned', 'note', 'correction', 'event']
 const LINE = /^(\d{6}) \| ([^|]+?) \| ([a-z-]+) \| (.+)$/
+// Where a defect was caught. test and typecheck (14 November 2026, epic CUAHSI/CUAHSI3-website#117) record what the new gates catch.
+const CAUGHT = ['self-check', 'reviewer', 'test', 'typecheck', 'human-review', 'deploy-preview', 'production']
+// (?![\w-]) and not \b at the end: \b sits between "test" and "-", so "caught: test-suite" would pass.
+const CAUGHT_RE = new RegExp(`\\bcaught: (${CAUGHT.join('|')})(?![\\w-])`)
 
 // Lines that are wrong and cannot be corrected: rule 10 forbids editing a log file that is already on the default
 // branch, and both files were merged that way (the first by the jobs agent's AGU-credit branch, the second with a
@@ -53,7 +57,7 @@ if (flag('check')) {
       const m = LINE.exec(l)
       if (!m) { problem(f, i + 1, 'not in the format "YYMMDD | branch | event | detail"', l); return }
       if (!EVENTS.includes(m[3])) problem(f, i + 1, `unknown event "${m[3]}" (${EVENTS.join(', ')})`, l)
-      if (m[3] === 'defect' && !/\bcaught: (self-check|reviewer|human-review|deploy-preview|production)\b/.test(m[4])) problem(f, i + 1, `a defect line's detail must contain "caught: self-check", "reviewer", "human-review", "deploy-preview" or "production"`, l)
+      if (m[3] === 'defect' && !CAUGHT_RE.test(m[4])) problem(f, i + 1, `a defect line's detail must contain "caught: " and one of: ${CAUGHT.join(', ')}`, l)
     })
   }
   if (bad) { console.log(`${bad} problem(s) in ${files.length} log file(s)`); process.exit(1) }
@@ -82,10 +86,11 @@ const text = r => `${r.date} | ${r.branch} | ${r.event} | ${r.detail}`
 
 // ---- output ------------------------------------------------------------------------------------------------------------------
 if (flag('counts')) {
-  const by = {}; const caught = {}
+  // Every accepted value is listed, at 0 if no line has it yet, so a gate that has caught nothing shows as 0, not as absent.
+  const by = {}; const caught = Object.fromEntries(CAUGHT.map(c => [c, 0]))
   for (const r of rows) {
     by[r.event] = (by[r.event] ?? 0) + 1
-    if (r.event === 'defect') { const c = /caught: ([a-z-]+)/.exec(r.detail)?.[1] ?? '(none given)'; caught[c] = (caught[c] ?? 0) + 1 }
+    if (r.event === 'defect') { const c = CAUGHT_RE.exec(r.detail)?.[1] ?? /caught: ([a-z-]+)/.exec(r.detail)?.[1] ?? '(none given)'; caught[c] = (caught[c] ?? 0) + 1 }
   }
   const branches = new Set(rows.map(r => r.branch))
   console.log(`${rows.length} log lines (${rows.filter(r => r.from === 'eval-log.md').length} in the frozen eval-log.md, ${rows.filter(r => r.from !== 'eval-log.md').length} in agent/log/ across ${files.length} file(s)); ${branches.size} distinct branch names; ${skipped} line(s) skipped as not in the format`)

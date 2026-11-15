@@ -28,6 +28,13 @@ rm -rf .nuxt .output node_modules/.vite
 npm run dev
 ```
 
+### Editor setup
+
+Any editor works. In VS Code, accept the recommended extensions when prompted (listed in `.vscode/extensions.json`): Vue (Official) for `.vue` files and TypeScript, ESLint (the same rules as `npm run lint`), and EditorConfig, which applies `.editorconfig` (2-space indent, LF line endings; it leaves Markdown and JSON final newlines alone because the existing files differ). The root `tsconfig.json` extends `.nuxt/tsconfig.json`, which Nuxt generates. Until that exists, the editor cannot resolve Nuxt's auto-imports (`ref`, `computed`, `queryContent`, component names) and marks them as errors. Generate it once after `npm install`, and again after adding a module or changing `nuxt.config.ts`:
+```bash
+npx nuxi prepare   # writes .nuxt/ (types only, a few seconds); npm run dev and builds also do this
+```
+
 ---
 
 ## Site structure

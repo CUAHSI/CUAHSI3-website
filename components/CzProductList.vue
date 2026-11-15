@@ -48,7 +48,14 @@ const awardTitle = (a?: Award) => a?.text?.match(/"([^"]+)"/)?.[1] ?? ''
 const siteName = (slug: string) => CZ_SITE_NAMES[slug] ?? slug
 const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.sites ?? []).length === 1).map(siteName).join(', ')
 const link = (r: Row) => (r.doi ? `https://doi.org/${r.doi}` : r.url ?? '')
+// Who holds the product: a paper's publisher (from its DOI prefix), a dataset's repository. "DOI" stays for a paper whose prefix is not in the table.
 function where(r: Row) {
+  if (r.type === 'paper') {
+    if (r.doi) return czPublisher(r.doi) || 'DOI'
+  } else {
+    if ((r.url ?? '').includes('hydroshare.org')) return 'HydroShare'
+    if (r.repository) return czRepositoryName(r.repository)
+  }
   if (r.doi) return 'DOI'
   if ((r.url ?? '').includes('hydroshare.org')) return 'HydroShare'
   if ((r.url ?? '').includes('czo-archive.criticalzone.org')) return 'CZO archive page (retiring)'
@@ -80,9 +87,10 @@ const all = computed<Shown[]>(() => (file.value?.rows ?? []).map((r, i) => {
   })
   const siteText = siteList(r)
   const per = periodOf(r.title)
+  const place = where(r)
   return {
-    ...r, i, where: where(r), siteText, awardList, period: per.text, periodStart: per.start,
-    hay: [r.title, r.repository, r.year, per.text, r.highlight ? 'highlight' : '', siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
+    ...r, i, where: place, siteText, awardList, period: per.text, periodStart: per.start,
+    hay: [r.title, r.repository, place, r.year, per.text, r.highlight ? 'highlight' : '', siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
   }
 }))
 

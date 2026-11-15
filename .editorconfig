@@ -1,0 +1,31 @@
+# Editor settings that match what the tracked files already do (measured on 14 November 2026,
+# task/editor-setup). A property is left unset where the repository is mixed, so that an editor
+# does not rewrite existing files on save. https://editorconfig.org
+root = true
+
+# Code: 2-space indent, LF, final newline, no trailing whitespace. Two files differ today and would
+# change if saved: pages/community/news/index.vue (no final newline) and scripts/fetch-transcripts.mjs
+# (trailing spaces on 5 comment lines).
+[*.{vue,ts,mjs,js,css,sh,yml,yaml,toml,svg}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JSON: indent_size is unset: 64 of 75 files use 2 spaces, 10 (agent/ outputs) use 1, and 1 is a
+# single line. insert_final_newline is unset: 38 of 75 end without one (the transcripts, reps.json,
+# full-team.json and several agent/ outputs).
+[*.json]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+trim_trailing_whitespace = true
+
+# Markdown (content and docs): only LF and spaces. Indentation varies with lists and code blocks,
+# 72 of 636 files end without a newline, and two trailing spaces are a line break in Markdown.
+[*.md]
+charset = utf-8
+end_of_line = lf
+indent_style = space
