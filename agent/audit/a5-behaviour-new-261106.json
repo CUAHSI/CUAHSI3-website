@@ -1,0 +1,329 @@
+{
+  "search desktop 1280": {
+    "visible_button": true,
+    "queries": {
+      "streamflow": {
+        "results": 8,
+        "first_titles": [
+          "Women Advancing River Research: Bedrock Water Storage, Forest Health, and Streamflow",
+          "Open Hydrologic Model Evaluation Framework",
+          "350+ free recordings on water science."
+        ],
+        "said_no_results": false
+      },
+      "code of conduct": {
+        "results": 8,
+        "first_titles": [
+          "Code of Conduct.",
+          "High-Frequency Water Quality Data: Cache la Poudre Watershed",
+          "The Critical Zone Collaborative Network"
+        ],
+        "said_no_results": false
+      },
+      "hydroshare": {
+        "results": 8,
+        "first_titles": [
+          "HydroShare Rebuilds Its Storage Layer After MinIO Ends Its Open-Source Edition",
+          "First Quantitative FAIR Assessment of HydroShare Establishes Evidence-Based Baseline",
+          "NEON Hydrologic Data Products on HydroShare"
+        ],
+        "said_no_results": false
+      },
+      "zzqxqx": {
+        "results": 0,
+        "first_titles": [],
+        "said_no_results": true
+      }
+    },
+    "keyboard_shortcut_opens_dialog": null,
+    "click_first_result_lands_on": "/about/code-of-conduct/",
+    "outward_requests_refused": {
+      "api.waterdata.usgs.gov": 18,
+      "fonts.googleapis.com": 6
+    }
+  },
+  "search phone 390": {
+    "visible_button": false,
+    "queries": {},
+    "keyboard_shortcut_opens_dialog": null,
+    "search_in_mobile_menu": false,
+    "search_inputs_anywhere_on_home": 0,
+    "outward_requests_refused": {
+      "api.waterdata.usgs.gov": 3,
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /community/events": {
+    "list_items_link_count": 20,
+    "buttons": [
+      "All types",
+      "conference",
+      "workshop",
+      "webinar",
+      "deadline"
+    ],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /community/jobs": {
+    "list_items_link_count": null,
+    "buttons": [
+      "All types",
+      "Postdoc",
+      "Internship",
+      "Graduate assistantship",
+      "Faculty",
+      "Temporary position",
+      "All sectors",
+      "Academic",
+      "Other",
+      "Show 16 expired listings"
+    ],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 6,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /community/news": {
+    "list_items_link_count": 23,
+    "buttons": [],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /community/newsletter": {
+    "list_items_link_count": 10,
+    "buttons": [],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /learn-train/cyberseminars": {
+    "list_items_link_count": null,
+    "buttons": [
+      "All",
+      "CyberWater2 Training 2026",
+      "Navigating Academic Waters (",
+      "Women Advancing River Resear",
+      "CUAHSI Virtual Open House",
+      "Introduction to NEON for Hyd",
+      "Integrating Hydrology and Ge",
+      "USGS National Water Availabi",
+      "Post-Field Season Data Manag",
+      "Standalone webinar",
+      "Data Services Help Desk Webi"
+    ],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 1,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1,
+      "img.youtube.com": 82
+    }
+  },
+  "list /about/impact": {
+    "list_items_link_count": 41,
+    "buttons": [
+      "All",
+      "Research",
+      "Cyberinfrastructure",
+      "Data infrastructure",
+      "Training & programs",
+      "Community",
+      "All",
+      "2026",
+      "2025",
+      "2024"
+    ],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 1,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /about/documents": {
+    "list_items_link_count": null,
+    "buttons": [],
+    "text_inputs": 0,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /data-platforms/portals": {
+    "list_items_link_count": null,
+    "buttons": [],
+    "text_inputs": 1,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 45,
+    "filter_word_water": {
+      "rows_before": 45,
+      "rows_after": 24
+    },
+    "filter_word_nonsense_rows": 1,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /learn-train/graduate-programs": {
+    "list_items_link_count": null,
+    "buttons": [
+      "All degrees",
+      "Master's",
+      "Ph.D.",
+      "Undergraduate",
+      "Other / professional"
+    ],
+    "text_inputs": 1,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 103,
+    "filter_word_water": {
+      "rows_before": 103,
+      "rows_after": 58
+    },
+    "filter_word_nonsense_rows": 1,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "list /about/membership": {
+    "list_items_link_count": null,
+    "buttons": [
+      "All",
+      "Graduate Institution",
+      "Primarily Undergraduate",
+      "Non-Profit Affiliate",
+      "International Affiliate"
+    ],
+    "text_inputs": 1,
+    "selects": 0,
+    "has_next_page_or_load_more": 0,
+    "table_rows_or_list_rows": 0,
+    "filter_word_water": {
+      "rows_before": 0,
+      "rows_after": 0
+    },
+    "filter_word_nonsense_rows": 0,
+    "external_requests_refused": {
+      "fonts.googleapis.com": 1
+    }
+  },
+  "home newsletter box": {
+    "clicked_with_empty_fields": true,
+    "requests_after_click": [
+      "GET /data-platforms/_payload.json",
+      "GET /learn-train/_payload.json",
+      "GET /community/_payload.json",
+      "GET /hire-cuahsi/_payload.json",
+      "GET /about/_payload.json",
+      "GET /about/impact/_payload.json",
+      "GET /about/documents/_payload.json",
+      "GET /learn-train/graduate-programs/_payload.json",
+      "GET /critical-zone-science/_payload.json",
+      "GET /community/newsletter/_payload.json",
+      "GET /community/events/_payload.json",
+      "GET /community/jobs/_payload.json",
+      "GET /community/news/_payload.json",
+      "GET /community/campus-visits/_payload.json",
+      "GET /community/events/women-advancing-river-research-bedrock-2026/_payload.json",
+      "GET /community/events/connected-researcher-2026/_payload.json",
+      "GET /community/events/_payload.json",
+      "GET /learn-train/cyberseminars/_payload.json"
+    ],
+    "url_changed": false,
+    "outward_requests_refused": {
+      "api.waterdata.usgs.gov": 3,
+      "fonts.googleapis.com": 1
+    },
+    "visible_message_after_click": 2
+  },
+  "hire quote form": {
+    "clicked_with_empty_fields": true,
+    "requests_after_click": [
+      "GET /data-platforms/_payload.json",
+      "GET /learn-train/_payload.json",
+      "GET /community/_payload.json",
+      "GET /hire-cuahsi/_payload.json",
+      "GET /about/_payload.json",
+      "GET /about/impact/_payload.json",
+      "GET /about/documents/_payload.json",
+      "GET /learn-train/graduate-programs/_payload.json",
+      "GET /critical-zone-science/_payload.json",
+      "GET /community/newsletter/_payload.json",
+      "GET /community/events/_payload.json",
+      "GET /community/jobs/_payload.json",
+      "GET /community/news/_payload.json",
+      "GET /community/campus-visits/_payload.json",
+      "GET /contact/_payload.json"
+    ],
+    "url_changed": false,
+    "outward_requests_refused": {
+      "fonts.googleapis.com": 1
+    },
+    "visible_message_after_click": 0
+  },
+  "donate /support": {
+    "iframes": [
+      "www.zeffy.com/en-US/embed/donation-form/<id>"
+    ],
+    "links_to_other_donation_services": 0
+  },
+  "contact /contact": {
+    "mailto_links": 3,
+    "forms": 0,
+    "tel_links": 0
+  },
+  "jobs /community/jobs": {
+    "post_a_job_links": [
+      "cuahsi.jotform.com/<id>"
+    ],
+    "job_cards": 110
+  },
+  "documents /about/documents": {
+    "links": 61,
+    "distinct_pdf_links": 61,
+    "first_five": [
+      "/documents/policies/travel-policy.pdf",
+      "/documents/policies/wpi-summer-institute-authorship-agreement.pdf",
+      "/documents/annual-reports/annual-report-2025.pdf",
+      "/documents/annual-reports/annual-report-2024.pdf",
+      "/documents/annual-reports/annual-report-2023.pdf"
+    ]
+  },
+  "recordings /learn-train/cyberseminars": {
+    "seminars_on_page": 82,
+    "play_controls": 82,
+    "iframe_after_click": [
+      "www.youtube-nocookie.com"
+    ],
+    "outward_requests_refused": {
+      "fonts.googleapis.com": 5,
+      "img.youtube.com": 82,
+      "www.youtube-nocookie.com": 1,
+      "www.zeffy.com": 1
+    }
+  }
+}

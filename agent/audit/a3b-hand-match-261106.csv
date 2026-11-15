@@ -1,0 +1,21 @@
+legacy_slug,hand_level,new_file,note
+2026-american-geophysical-union-annual-meeting,exact,261207-agu-annual-meeting-2026.md,same title and the same dates (7 to 11 December 2026)
+2026-annual-membership-meeting,exact,261201-annual-membership-meeting.md,"title equal once the year is ignored, same day (1 December 2026)"
+2026-near-surface-geophysics-community-input-workshop,exact,260625-near-surface-geophysics-workshop.md,same title and start date (25 August 2026)
+cuahsi-virtual-open-house-2,exact,260601-virtual-open-house.md,same title and date (24 June 2026); a second new file for the same session (260624-spring-virtual-open-house) is a duplicate
+watersofthack-2026,exact,260701-watersofthack.md,same title and dates (20 to 31 July 2026); a second new file (260720-watersofthack-2026) is a duplicate
+earth-science-information-partners-esip-meeting-2,exact,260728-esip-meeting.md,same title and dates (28 to 31 July 2026)
+cyberwater2-training,exact,260921-cyberwater2-training.md,same title and dates (21 to 25 September 2026)
+data-publishing-program,exact,261019-data-publishing-program.md,same title; legacy range reads "October 19 - 9" (to 9 November)
+leveraging-hydroshare-for-collaborative-research-data-management,exact,261006-leveraging-hydroshare.md,same session on 6 October 2026
+water-data-forum-durable-skills-for-the-water-workforce-in-the-age-of-ai,exact,261104-water-data-forum-durable-skills.md,same session on 4 November 2026
+agu-abstract-submission,probable,260805-agu26-abstract-deadline.md,same date (5 August 2026); the new title adds AGU26 and Deadline
+cuahsi-community-award-nomination,probable,260831-community-award-deadline.md,same date (31 August 2026); the new title adds Deadline
+water-prediction-innovators-summer-institute-capstone-event,weak,260601-water-prediction-innovators.md,"22 July 2026 falls inside the institute (8 June to 25 July) but the capstone is one day of it, not the same entry"
+cuahsi-virtual-open-house,none,,"22 October 2025 session; the new site has the 2026 open houses (same series, other dates)"
+earth-science-information-partners-esip-meeting,none,,"2022 meeting; the new site has the 2026 meeting only"
+ciroh-developers-conference,none,,"28 to 30 May 2025; the new site has the 2026 conference only"
+application-deadline-watersofthack-2026,none,,"deadline of 31 March 2026; no deadline entry on the new site"
+applications-for-the-2026-summer-institute-are-now-open,none,,deadline of 12 January 2026; nothing on the new site
+introduction-to-hydroshare-webinar-3,none,,10 June 2025 webinar; no new event or cyberseminar on that date
+free-webinar-an-introduction-to-cuahsi-cloud-computing-2,none,,12 March 2024 webinar; no new event or cyberseminar on that date

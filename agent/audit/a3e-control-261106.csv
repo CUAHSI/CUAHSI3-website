@@ -1,0 +1,21 @@
+kind,legacy,hand_new,hand_label,script_level_by_title,script_new,script_date_key_candidate,script_label,same,note
+document,2020 Annual Report,2020 Annual Report,matched,exact,2020 Annual Report,9 2020 Annual Report,matched,same,same year; list page and item page both name it
+document,2025 Annual Report,2025 Annual Report,matched,exact,2025 Annual Report,4 2025 Annual Report,matched,same,legacy file sits under /uploads/pages/img/ not /uploads/library/doc/
+document,2023 - 2028 Strategic Plan,Strategic Plan 2023–2028,matched,probable,Strategic Plan 2023–2028,2 Strategic Plan 2023–2028,matched,same,same years; title word order differs
+document,2018 – 2023 Strategic Plan,Strategic Plan 2018–2023,matched,probable,Strategic Plan 2018–2023,3 Strategic Plan 2018–2023,matched,same,same years; title word order differs
+document,2021 January Meeting Minutes,"Board meeting minutes, January 11–13, 2021",matched,weak,"Board meeting minutes, January 11–13, 2021","49 Board meeting minutes, January 11–13, 2021",matched,same,same month and year; titles differ in form
+document,2022 January Meeting Minutes,"Board meeting minutes, January 6–7, 2022",matched,weak,"Board meeting minutes, January 6–7, 2022","39 Board meeting minutes, January 6–7, 2022",matched,same,same month and year; the item page address has a -2 suffix
+document,2024 - Late June Meeting Minutes,"Board meeting minutes, June 27–28, 2024",matched,weak,"Board meeting minutes, June 27–28, 2024","20 Board meeting minutes, June 5, 2024 ; 21 Board meeting minutes, June 27–28, 2024",matched,same,second June 2024 meeting; the other June meeting is 5 June
+document,"December 5, 2018","Membership meeting minutes, December 4, 2018",matched,none,,"59 Membership meeting minutes, December 4, 2018",matched,same,the legacy list says December 5 and the item page is titled 2018 Membership Meeting - test; here December 4 (to read in the file)
+document,Statement on Holistic Evaluation of Research in Hydrologic Sciences,,none,none,,,none,same,no document of that name here
+document,National Water Center Innovators Program Summer Institute Report 2019,,none,none,,,none,same,technical reports are not in the documents list here
+portal,Aquastat,Aquastat,matched,exact,Aquastat,,matched,same,same name
+portal,GEMStat,GEMStat,matched,exact,GEMStat,,matched,same,same name
+portal,Global Runoff Data Centre,Global Runoff Data Centre,matched,exact,Global Runoff Data Centre,,matched,same,same name
+portal,HydroLAKES,HydroLAKES,matched,exact,HydroLAKES,,matched,same,same name
+portal,Monitor My Watershed,Monitor My Watershed,matched,exact,Monitor My Watershed,,matched,same,same name
+portal,IWRM Data Portal,IWRM Data Portal,matched,exact,IWRM Data Portal,,matched,same,same name
+portal,International Centre for Water Resourses and Global Change,International Centre for Water Resources and Global Change,matched,probable,International Centre for Water Resources and Global Change,,matched,same,legacy spells Resourses
+portal,Jupiter National Well Database,Jupiter (National well database),matched,exact,Jupiter (National well database),,matched,same,punctuation differs
+portal,Réseau des bassins versants Network of Drainage Basins,Réseau des bassins versants (Network of Drainage Basins),matched,exact,Réseau des bassins versants (Network of Drainage Basins),,matched,same,punctuation differs
+portal,Water Isotope System for Data Analysis Visualization and Electronic Retrieval,"Water Isotope System for Data Analysis, Visualization, and Electronic Retrieval",matched,exact,"Water Isotope System for Data Analysis, Visualization, and Electronic Retrieval",,matched,same,legacy address is cut short

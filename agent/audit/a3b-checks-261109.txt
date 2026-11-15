@@ -1,0 +1,4 @@
+A3b one-off network checks and file checks, 9 November 2026 (each run once, by hand; the script itself uses no network)
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}" https://cuahsi.org/register/open-house      -> 301 https://www.cuahsi.org/register/open-house
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}" https://www.cuahsi.org/register/open-house  -> 404   (run on 9 November 2026, twice: before and after the review)
+Cyberseminar files with fewer than 2 front-matter delimiters (grep -c '^---\s*$' < 2): 0 of 88 (the "9 files with no closing ---" note in CLAUDE.md C5 is out of date for this tree)

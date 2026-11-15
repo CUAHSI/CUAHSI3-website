@@ -1,0 +1,3 @@
+261109 | task/governance-board | start | Add the Board of Directors (15) and Officers (3) to /about/governance, as listed on the legacy page (snapshot of 6 November 2026). Code only; the names are inline in the page like the documents list. Committees not included.
+261109 | task/governance-board | intervention | Jordan, 9 November 2026, on PR 214: the governance page should list all of the Board and Officers; then, asked about committees: 'Just add the Board and Officers for now.'
+261109 | task/governance-board | pr | PR 216 opened against main, 2 files changed (pages/about/governance.vue, log).

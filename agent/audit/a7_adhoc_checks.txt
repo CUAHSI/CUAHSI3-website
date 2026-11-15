@@ -1,0 +1,29 @@
+# A7 ad hoc checks, 12 Nov 2026 (read-only; output of the commands named)
+## curl -sI https://www.cuahsi.org (first lines)
+HTTP/1.1 200 OK
+Date: Thu, 12 Nov 2026 21:43:51 GMT
+Server: Apache
+X-Powered-By: Craft CMS
+Content-Type: text/html; charset=UTF-8
+## curl -sI https://cuahsi.org
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 12 Nov 2026 21:43:52 GMT
+Server: Apache
+Location: https://www.cuahsi.org/
+Content-Type: text/html; charset=iso-8859-1
+## robots.txt status www.cuahsi.org
+404
+## curl -sI https://czo-archive.criticalzone.org (headers naming the host)
+HTTP/2 200 
+x-goog-generation: 1780693075588729
+server: UploadServer
+## whois cuahsi.org creation
+Creation Date: 2001-10-01T18:22:05Z
+## dig remaining TTLs (seconds, as served by the resolver)
+cuahsi.org.		622	IN	A	67.222.29.10
+www.cuahsi.org.		900	IN	A	67.222.29.10
+## ip owner, whois 34.107.134.221 35.186.216.143 34.110.146.118 34.54.220.163
+OrgName:        Google LLC
+OrgName:        Google LLC
+OrgName:        Google LLC
+OrgName:        Google LLC

@@ -1,0 +1,16 @@
+legacy_block,legacy_name,by_hand,by_script,level,same
+1,Arizona State University,1,1,exact,yes
+5,City College of New York,5,5,exact,yes
+9,Colorado State University,9,9,exact,yes
+24,Marquette University,23,23,exact,yes
+45,State University of New York (SUNY),43,43,exact,yes
+49,The Ohio State University,47,47,exact,yes
+52,Universidad de las Americas Puebla,49,49,exact,yes
+53,Universitat Politècnica de Catalunya,50,50,exact,yes
+56,University at Buffalo,52,52,exact,yes
+58,University of Alabama,54,54,exact,yes
+64,"University of California, Merced",60,60,exact,yes
+74,University of Kansas,70,70,exact,yes
+96,"University of Texas, San Antonio",92,92,exact,yes
+102,University of Wisconsin - Madison,97,97,exact,yes
+103,University of Wisconsin-Milwaukee,98,98,exact,yes

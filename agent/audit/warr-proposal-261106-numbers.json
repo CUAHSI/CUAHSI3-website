@@ -1,0 +1,41 @@
+{
+  "numbers": {
+    "fixes": [
+      {
+        "date": "2022-09-22",
+        "from": "llison Pfeiffer",
+        "to": "Allison Pfeiffer"
+      },
+      {
+        "date": "2024-09-19",
+        "from": "The Nature Conservatory",
+        "to": "The Nature Conservancy"
+      }
+    ],
+    "records": 63,
+    "by_year": {
+      "2021": 11,
+      "2022": 11,
+      "2023": 11,
+      "2024": 11,
+      "2025": 11,
+      "2026": 8
+    },
+    "with_video_id": 63,
+    "distinct_video_ids": 63,
+    "oembed": {
+      "200": 63
+    },
+    "title_equals_youtube": {
+      "yes": 62,
+      "no": 1
+    },
+    "with_speakers": 63,
+    "speakers_total": 118,
+    "speakers_without_org": 0,
+    "duplicate_ids_in_content": 63,
+    "distinct_slugs": 63,
+    "skipped_headings": 0
+  },
+  "skipped": []
+}

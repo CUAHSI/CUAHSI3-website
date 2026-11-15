@@ -1,0 +1,718 @@
+signal,where,target,pages,occurrences,example_pages
+apply-or-post-word-link,content,"apply now through march 31, 2026 -> watersofthack.github.io",2,2,/community/newsletter/2026-february ; /community/newsletter/2026-march
+apply-or-post-word-link,content,learn more & apply here -> cuahsi.org,2,3,/community/newsletter/2026-january ; /community/newsletter/2026-september
+apply-or-post-word-link,content,apply here -> cuahsi.jotform.com,1,1,/community/newsletter/2026-september
+apply-or-post-word-link,content,apply here by august 28th. -> cuahsi.jotform.com,1,1,/community/newsletter/2026-august
+apply-or-post-word-link,content,apply to attend here -> events.ringcentral.com,1,1,/community/newsletter/2026-june
+apply-or-post-word-link,content,post a job → -> cuahsi.jotform.com,1,1,/community/jobs
+button,content,research (inside form: no),1,1,/about/impact
+button,content,send request (inside form: yes),1,1,/hire-cuahsi
+button,content,subscribe (inside form: no),1,1,/
+button,content,women advancing river research (inside form: no),1,1,/learn-train/cyberseminars
+donate-word-link,chrome,support cuahsi -> (this site)/support,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+donate-word-link,content,donate → -> (this site)/support,1,1,/community
+email-field,content,input,2,2,/hire-cuahsi ; /
+file-link,content,this site .pdf,20,82,/about/documents ; /about/impact/data-publishing-cohort-2025 ; /about/impact/data-subsetter-national-water-model
+file-link,content,cuahsi.org .pdf,8,19,/about/governance ; /about ; /community/newsletter/2026-july
+file-link,content,other host .pdf,2,4,/community/jobs ; /community/newsletter/2026-august
+file-link,content,this site .png,1,1,/learn-train/programs/skills-certificate-pilot
+form,content,"email-capture | get | (this site)/(none) | fields: button,email,select,text,textarea",1,1,/hire-cuahsi
+iframe,content,zeffy.com/en-US/embed/donation-form/1d9a8cef-4275-4db4-8461-5de35d048ebb,1,1,/support
+link-to-service:constant-contact,content,visitor.r20.constantcontact.com/manage/optin,1,1,/community/newsletter
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/register,1,1,/community/newsletter/2026-october
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/summary,1,1,/community/newsletter/2026-october
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:61799f5d-d529-493a-b7e2-c8722f77faab,1,1,/community/newsletter/2026-october
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:632163c5-a2d1-4dc7-ab64-38b747497a4c,1,1,/community/newsletter/2026-october
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:bdc54021-9dc8-4a8d-89a5-6020a93c4763,1,1,/community/newsletter/2026-october
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:c747005e-dd34-44b2-a9da-55ca114bdb56,1,1,/community/newsletter/2026-october
+link-to-service:github,content,github.com/hydroframe/cssi_evaluation/blob/main/examples/nwm/nwm_swe_point_scale_evaluation.ipynb,2,2,/about/impact/model-evaluation-hackathon-2026 ; /community/newsletter/2026-april
+link-to-service:github,content,github.com/hydroshare/hydroshare/releases,2,2,/about/impact/datacite-doi-migration-2025 ; /about/impact/hydroshare-cloud-migration
+link-to-service:github,content,github.com/abner-bogan,1,1,/about/team/abner-bogan
+link-to-service:github,content,github.com/aemon-j/LakeEnsemblR,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/CUAHSI/federal-water-data-curriculum,1,1,/learn-train/programs/skills-certificate-pilot
+link-to-service:github,content,github.com/DOI-USGS/geoknife,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/DOI-USGS/sbtools,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/DOI-USGS/scipiper,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/GLEON/GLM3r,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/GLEON/glmtools,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/GLEON/laketemps,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/hydroshare/hsclient,1,1,/about/impact/hydroshare-ai-agent-downloads-2026
+link-to-service:github,content,github.com/hydroshare/hydroshare,1,1,/about/impact/hydroshare-storage-rebuild-2026
+link-to-service:github,content,github.com/igarousi,1,1,/about/team/irene-garousi-nejad
+link-to-service:github,content,github.com/jordansread,1,1,/about/team/jordan-read
+link-to-service:github,content,github.com/lindsayplatt,1,1,/about/team/lindsay-platt
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLScX72h9I7SPCdEl7qsq4qcAerDnHkrq7OGWIB6uJy4eDPQhHA/viewform,2,2,/community/news/wpi-2027-theme-leaders-call ; /community/newsletter/2026-october
+link-to-service:google-forms,content,docs.google.com/document/d/1quefEDG87mUp7ZejZ-6W0LzjNg_58n8xdM5XoEjGotw/edit,1,1,/community/newsletter/2026-august
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLSfOaj9KnnULe3KiDxi9fZwtwk0Lm-dLRVIr5F2S90c-wggHeQ/viewform,1,1,/community/newsletter/2026-june
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLSfREKHZSJrH9oRRpGLh730MnM-e0Hsd21gd8oMAK622OW9ovQ/viewform,1,1,/community/newsletter/2026-february
+link-to-service:hydroshare,chrome,hydroshare.org,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+link-to-service:hydroshare,content,hydroshare.org/resource/1a4d322603d44c599a8aa33997f39357,11,11,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org,9,9,/about/impact/hydrofair-fair-assessment-2025 ; /about/impact/hydroshare-ai-agent-downloads-2026 ; /about/impact/hydroshare-cloud-migration
+link-to-service:hydroshare,content,hydroshare.org/resource/4b7d49a5fc3a4a20a1e8dde4d2146f17,9,9,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/a60faac4c73649efb4736de7ec587f7c,9,9,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/ec3d30b72ad243be929286ca63faebd1,7,7,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/bdb8919935ec4f8a86f0151d884ef871,6,6,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/c6ead75a04ce4349b89e112278757edd,6,6,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/cdae735072274dbcb29ebae2ec13a201,6,6,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/5e4873638923480d9272c5dc375d4a03,5,5,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/0348b65d71eb46d38bba7db4cb2826db,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/21a405f32af346e19ddd1c2b1c694b2c,3,3,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/28b106cc56ec4271abf8ccc29b4e501e,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/29555085fc1341b39fda2fd991b77967,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/3c1fd54381764e5b8865609cb4127d63,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/7b2b22d88a914bb79b3f48e5ea3ecaaf,3,3,/about/impact/water-prediction-summer-institute-2026 ; /community/newsletter/2026-august ; /learn-train/programs/summer-institute
+link-to-service:hydroshare,content,hydroshare.org/resource/b385cd3e22bc460d95f2dcc0397f394f,3,3,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/bdd33326fcf64fd2a8f8659a375f2d58,3,3,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/c0e5094d1de54547a304d4dec3a7b3ff,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/d6d8b2a6e5604629b1192233646dfea1,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/d841f99381424ebc850842a1dbb5630b,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/ece96e87f7184bf392f0e7b98132a2c9,3,3,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/f7df7b07ea19477ab7ea701c34bc356b,3,3,/critical-zone-science/datasets ; /critical-zone-science ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/00081c3c9dd54cf4a20ab5ae46060b16,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/00b7e2ff67364a3ebe8a40a57f8f052e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/01279eb2507e43b9a71d7c877958cf65,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/016bc73136974bc0b688ba64a6c690e4,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/024f2899962a43eabf2b051b446bee19,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/03cf8fc7d6044990b025d026e9b81830,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/0403737ef5b147c3916ab30d565db79c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/041f6222dc2042ff8fda1f35b67c2237,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/043dccd3fa98474d8cdd15e42231a08d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/04c139d1dab14cacb239e74ff6d65639,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/057f082ad96943118ba6e3fab57f3dd8,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/05a7b817e72846cf90b957b18bea08cd,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/0668ed25b2d14330b86aa1c2fd227640,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/075b907b8edc4c0d8c84d4c5d082aff3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/079adbc764c4419caf0380171a58534a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/07f313febf5245daa683b315577be923,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/08dbca988daf4fe1b4302f22e0ffd67d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/0918a6975c864a398766d579e3687004,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/0952e6e9a70e4c42b846870dcf8147e3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/09a327bb0544492094d5842fd9fe4796,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/0a21b00a54d641e5aa5da0bc32998ad1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/0a40c5df78e4405c811be7a040b5e1a8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/0ab6d50fe8e74ec9b3fde242eea07a7f,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/0b8c9950806244a186cf4c92443b7de0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/0ba983afc62647dc8cfbd91058cfc56d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/0c483221851e46d98fe2ecd51428ff58,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/0c6971c2e1aa4f4ead5d6f4b86c9bdef,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/0df6306f5e374bb38f664099bca1b25d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/0ed16cef91d2496c92718b7bb5330b77,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/0edacd0ea7c84867a19273c3f5d211d6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/0efce710d2d24fab9542730522843a32,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/0f2bc5365033480790c7d13bb5e5937b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/10664457c48342fa8b1e046ea740cd9c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/10d8974ca8454e58bdec6fb2270bc40b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/112c5a53769240c2a337511b031de9a9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/116fa5ba5645479ea670cf5b5a7f2635,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/1244f57498c94bf4bf54e0c927cdf21c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/12b40614cae943ae94032c96041eb526,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/12c8d83bb7a34d7abba562fce2a935fe,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/1359ff9e943643729717ee046b416e17,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/136cc235e72e45f599913d9931132915,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/13f0d898046d4e49b0e106a3c814707b,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/14e09f89b1b14ce685a706973423333f,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/14fe2dcac7114a90a420d1d1a438edd2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/15e90a8799634d9388a08048e1208a9e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/16c1d1cbad5f45f78f7ac1e702d0aafe,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/172de7fe091f48d98b1d380da5851932,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/175609deef1641cb99587ca428927157,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/17d08a700064431180c55fc342bec839,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/180f67282b4149ca8d4f41b2438257eb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/1945309811014d94b1c4ea39dfd2db82,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/1a8f4facdc9a446fa2cf48277eb1dbcc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/1b1f6f97db1245e78a01edfede3b1710,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/1b604653c1074951828f51f66811b38c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/1b643229b1bf471e82d3cedfb3e1f22f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/1bd22f9415d3461b86f4cf3874e2e1c1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/1d33c8705d1a41ad83613559d798c0d8,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/1d8e2b8eb5774e7e88d0f6ee9fdef4e2,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/1db7abcf0eb64ef49000c46a6133949d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/1dc7b0975ae2469a96e3458075d3b75c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/1efcd98af1544905adcb80c79e779c3d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/1f06831dac3041e69ecc85858d2ab39f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/1f9447939ee046ee924129845eaa4c4f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/20511efd090748d3b172d591b53984e7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/20cef410b174405fbdabc99ad0d25d18,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/211a5f0e986746668140be49756f7723,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/239729a6ea464070864091e2dc58708e,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/23a13088ac8849ef85dabbbc8d62e442,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/2424579caa904330bd99da9d29daeb96,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/256df0b6e3934d33a4c45983c4fc00c8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/257a9856f5534fd6a78616d40a04fc00,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/25ba8374892541c4bfe0c9cf18f520ca,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/25d61687d5994d93b2065f7c4b6e5ea1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/25db6edfdaa84b94ba6627b0973b3331,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/26a884e0549a46368c215fe765fb1d70,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/272f43b9d49d44ee97a0d3d143e7a5cc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/2737000d19fb4d50bce263d397ba680f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/280a73e3d6244a56b27de24375b4210a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/28ba21935bd844f38ad8cb46daa0a2e9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/28cb4a35ab88427aa24194feac9e0e61,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/295745bf0b854c6bbddc05452a09c602,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/2a19d06352394d4683355b4cb5d3bb44,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/2a3cee530ad342ffb50ca4e1c10f1ef9,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/2aca7bf88a944b86af4cd4c4b01bed71,2,2,/about/impact/hivis-hydro-haze-2026 ; /community/newsletter/2026-february
+link-to-service:hydroshare,content,hydroshare.org/resource/2b024ba9fec34a5ea91a202bbc0a36dd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/2b2c8038107048c9849f73867b79d4d5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/2bbb5c31bd4e47e4a1011ab070653580,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/2c9d57b4769f490095747342f1d84eb7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/2deee39922df49c88eb9224768f43a7c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/2ecf44a316364998a938c1c0f84fdb67,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/2f03002d0d8a426baa33535dec958e31,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/2fbdb2aefd264e539b3234acb6898706,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/302fde4890e74702ac731d2a82680e8f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/31044067f2494413ab6f21f48461b9d8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/3160f8300bd54f38aafa95aa805ce356,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/32438ff42d73487888986c3f49f55862,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/325556f92ee14bbb90a2b516b8ffcbaa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/33ab76d224a645be8b34817512c5556e,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/345b1d054ce441f9875aea3530e29938,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/346cf577d01e4b2b90ff1cef86e789bb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/352f073bb68449b1bae259900a0058f3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/35301f29f15547c884c847ff00eb6220,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/362f176877e744e8a30e8d59e65d24e0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/36419d60a7484844acab038b1fb84828,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/36934451d34742708939374010efb530,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/3776d75974e04f33b8801bfc3503174a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/378376531f1f4d6f8adb121ce7ac5ad2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/37d7295630ca44d0a085da8ea05ccc17,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/38492153da544d55b8183784ce38ed6a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/386e65ad0d26411ab09ce086808fb4aa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/38973913ff0b40baa153f1acb094d99c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/38adc4f9b351487e82f665179f5f8d3c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/38c0e61607e74c329ac798c8001bfa95,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/38ce01eaa877483095608d7df89f46f9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/390bdf306f2545c78eebde4dac55cfbd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/391d601761ee4b47a18a511f80df27e6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/396b28ed9f204621a724afb40cc4b9b4,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/3aa9c239e24f44a68469a2c34b88eced,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/3b0ff71572634812b20ca9ee992cf44c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/3c88818b8f014e09afcffdc4089b0ffb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/3d25b6d404b3454eb62ce588eceeacd6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/3d621d21b79e465fb994ff699cc9d72e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/3dc047f40bd749258a1a22e4e29ee2b1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/3dce7ad4d8314436b1c22d66a5979590,2,2,/about/impact/residential-water-use-dataset-2026 ; /community/newsletter/2026-january
+link-to-service:hydroshare,content,hydroshare.org/resource/3df05937abfc4cb59b8be04d674c4b48,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/3e867468282142089384d538830d1e23,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/3ecfe3f27550493683fb32a8f3b6b50c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/3edb9720a11845169dae4ba5b6212d27,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/3fdd7464d9b04576866093a27da05b41,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/3fe1e79fc6f4464a9f57bc60c9997706,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/404d4a682c264558b69072ee877ee654,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/413d636072ad44048bf03a0e7eeb866d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/417c018edd324a75828195625adbc19f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/41a3d07727fb41e8853603fb1002aa89,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/428e8fe743eb44a592939dce039741ef,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/432e180c1aad4f85af8f41321cc4b263,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4335ed769cb54172a9539ce698d64654,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/434012bea99b4c589231e4169ffdc6a2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/443c8dde55b74f5f94239b06a7e678d7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/445cd9abbac74156a946fd9802d594fe,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/448ab744c4ce47259820f01c9583b958,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/45430fd98d784ce6aae62b063cffca66,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/469fe217e06a4bb9968f9666f8cb42f3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/473f785f4d194ad2b41009ce15375f3f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/47fee412de3b4df897c2e57b0c92a0c7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/483d1c29f8984657a6ee85158189fddf,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4845d6f238764f6e865af78e11a36279,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/48c5fe91d9c3481fa5f1e53b843fd318,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/48e04554b0b044c095a85c8ee2314134,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/492bc3942d5c43d59d11a8d841bf102d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/4939e8fe6af54a28948230774bdf055f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/494feb61bb9a45909a3246111f774758,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/4a12a3b0224640e6a572e840c93bbf7f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/4a30c526f14141bfbd4b496d348fbd20,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/4a4b2b04790147828072151b2a4820e1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/4a5f560d20004213acf3eb52cca93f67,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/4ab76a12613c493d82b2df57aa970c24,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/4bb6710317c445cf996793ac1f5d7149,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/4bed5ff9a141433eb11b527e12b8c15a,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/4c3da3f64b2f436cae68f45f77f4e3be,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4cefa72017ce4f128de6b7e61efae487,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4d0c04e3a7d34f48a465ba5d7bed4472,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/4e785837997a4be6ad1e44d1a77ea076,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4e8ecb6c93a64d7284fc76c5aa191885,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/4e8f26a8ac564c26b0ea2b07fca50138,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4e925c9cc6f14b99834a674c16dfa0d9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/4f025f6ba647411c8c16800f607d5baf,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/4f4b237579724355998a4f3c4114597e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/4fa25c67f23d4218980603f05d7012be,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/503b32a8bf8e43a5814336076a98f096,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/50c4feec97174bfa8dc84843e67225fe,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/50d00ce62ea34ba5a7d209ce9df558b1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/517d98d852fd430b82b9879714d93f48,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/51e50f65be8f4971a684fc4d11df7533,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/51e6489b2f6c4b489288885d2540bcbc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/51ead3cbafd4470b97600b9b44453e86,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/524c96dcfcad4f2a9148405d2b89190a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/527bc98a3c984c909ae1ec2d5251aca2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/52f493d3934c4d07afbd7a40cea067af,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/53718072f33646fa920f1b72d7b403eb,2,2,/about/impact/neon-hydroshare-collection-2026 ; /community/newsletter/2026-april
+link-to-service:hydroshare,content,hydroshare.org/resource/543c6572a58c434ea6507608eaf04924,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/5474b591c80e44b4866aa5c1eeb830e6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/547689b0ba404603b1199b7881844de7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/54d8c5981e01437aa9aaec7df4f419c6,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/54dbaa2fb67646b7b62a5aa47b2bdd7d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/553c42d3a8ee40309b2d77071aa25f2e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/55606327aab649ed809f1cc1c804ff3c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/55766073b69a47f4bcb28ec9d3aade6a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/55b9270113554c3da3e04c438b6c80c5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/55b9547f6af948699b96a28a658b44c6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/55e795093f0e443fa061b40b6928df92,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/5602200fa76c477d86774553b70c71b9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/5655a16449384a158a3a3fa607ce8cc1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/56e7a87b9ca54450be5a668183e65092,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/57a0afc2bb0e42b180478668a565720d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/57adb54134834fbebcc52819319b977e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/58d9bfdb4613458c8c3434db10b3af45,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/59cda52523844d4abd39873b2be86b2a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/59ec9745d51646eb8efda5e4a6b08d5f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/59f96e3c5c4d44f798ceacafa45f4c89,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/59fe6f8952f94513a9f0f9b3b51f676b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/5a338710aa6549ddba3d008163e977ee,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/5b08a09e098444aa8faaa99161244a8e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/5b58b8254b9248dcab96e7cd2421a1c0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/5b9a322c650a44b68666c3e7a45fbdf9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/5be7528f1d764542af8fda037940c6b9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/5c0c7d0a81904ba08c26b89b4f266545,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/5ca1378090884e72a8dcb796d882bb07,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/5cdab0146d08458db3c50a446e9d3510,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/5d3acacb8aef49b2915c5b1bd673120f,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/5d670c6a577744b4be3156fc038a253d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/5db92830e3f648ee8984e4af0b01f2ec,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/5e30ed5401994d609aec0a7c0dc94fc1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/5e40c198c2a447a3ae7bbae424b408ea,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/5e6a0596a58a48d5acbbeb0b05c5e243,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/5f4234d521a24a5488258cf7ff9cf588,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/5f45e73e8e124ab78855f001b954e7ed,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/601531755efd42f090eaa09af3826193,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/604b48fd88ec44c7a9c6698064adc186,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/604c01f748554e7bbf8a97cee73ef001,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/605e34da3c514829b9d275887d0e0315,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/60923e1f1a3d44e39a16260d980db974,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/60e5e80d5a9f48c69e856c87f1d068db,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/611e24535102484e83afb4b706cf34d3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/612334927b484e8da19c15344d517988,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/615b286e7cd642ee97cc36643c656bc6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/61611563a45b4d678b1947ae3be7da42,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/6175c21450234f75952b2a87dd99777b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/61fbd7d954d042f9b8d865952c6d6ad3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/6393700499984165a4451ec939e44715,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/63bd9676c3bf4a9996bd62b7a120c2be,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/63cd313bd15b4b77b05b8f34ec9388ee,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/6438f33720e44a7690c094caf331aebe,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/64603b731f704a2cacf200d28d01fe51,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/64e2562ab0094385933ae9595f01af7c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/65714d583b614186a2b55d7cecc4e3f7,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/663a9d44e9a24b2391b2903b2bb266fc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/66e1715f46ac4c8890da092cecfa42f6,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/66e3f819a1f54d0faa8144717a4958c7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/67253828bc744d35a062f25f43025ee7,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/6741c4fd8ff2477d9903efb92f1f907e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/67591fdd72bb4114aca5b85a915eb7d9,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/67da2104800342ad9b3bf4ac16cc9295,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/68998b9f1d0740ef90d92dc150d87114,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/6938ed69fb704022b40b194426cc8302,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/6bf3e44b9de344749d8f665e139e7311,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/6d3e785feb364ae79f88fa57432a7e92,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/6dd3a7e69375411389cc7a587ed6cdf9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/6ea633bbe83240f5906c3eeddfa7c236,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/6eabd6be0f114a8eb9fa2d9a59951d5c,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/6eb7c937b8be4736b94f4b6f3ce45ead,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/6f8ee0a3ce5c45e4870976bb3d8d1bfc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/6ffd58c0f6e7406fa6e4cc41f62eb787,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/70176872f4c74ee09ddb56d1cc7e8472,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/701e2a6bdad942aca5b7014bb574dfe3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/70d6eeb63e154f8197467e1f7c91f55b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/70eaea229bd44e0db7f42462fb81f79b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/70f256d68546483dabc3448145bb8303,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/71470ee608ef438488d1c9c7d122157d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/717902cd669342dface45d9761490c26,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/721aac4d278b43128dd973bfafe30611,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/7286a681d01c453e83af97f6dd0f32bb,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/7396e378524f4b88b8126b6f28d4dfe8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/757ed05854ab430dae99841f44622283,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/759a4482482647ecbc164f6bcf1eb157,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/75de7aa9cc69489a828dc4f4216cefeb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/762b7b2a97a44178832094d71e29a97a,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/76bbc82a2b0949668a34e924f0e3d7c3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/76eb5c3cac6d4996ba8eb620a6d7948d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/7703d249f062428b8229c03ce072e5c6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/77e913e986574380818b7c9d0d1c0211,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/79093ce25c4745359bbc24be70fcd77b,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/7968ba4925004bd5b0e78aef86bdfd7b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/79f2db2a5c084a9e85cfedb62ba174d8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/79f7eae8ce664ecf8ed25036f77d8677,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7a07a777c8c34f5b9ad727a6875ce91a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/7a6424ce94c646b4824169bf15d4b69c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/7a785fdd802747668ead06f60d660250,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/7ab75731196d4a01870c6880f7d903de,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/7cad518a0ed9497392349024dbb08b89,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7cb9ef14b5bb4a09aee07f90158692f8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/7d882820166f4695ae614fe436db5172,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/7f0b08d540084115992d4354bb4bd6dd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7f42e49859314944927bfdbbfd4e6699,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7f56e6d9a5fa4e6e9968cd4bbb4922eb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7f63e88c8a104c2da0d5c534fd64cfb2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/7f9c036b7d804eb3a50bdd60d01bf92a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/7fd7af83fd8a486e9576a4e9dda5437f,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/80323687927244578a4baa562b05180c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/807e3ed28e35480397ebf94d0e078d27,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/80fbaf9cef9745a0ab45a33443912f51,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/810e091f64784d429e56cdbf96a7d33e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/8160fe8ea17d46d783b521ab231236b5,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/82c980f515ef46a1a3732f78477fcedd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/8366720914b143b696c952ae90a78a67,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/83efb5317d284ba996ddaeb2b74b6a42,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/846fd1449f684382b2ac113c2e0e8422,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/847ee2d9d7544490bf28aa45278fbc97,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/85f9a4f8a696452392e606e78aa14b69,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/863483895e38410e83e7db02adb6dc92,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/866f3428ac3047dfa0e7651ca100656b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/889c5d1fa1fc4923ab3a3cea48940073,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/88aeaff53f7948fcbe5029f6e0308b05,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/89102ae166d84dc39d4d36fa2edaedfb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/8948434b66fb435cb9e09bdc8c12a128,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/89506c157c6945cdbe5a57f6436868d6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/897feb1bfdf84328b8d18b36c8a9be05,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/8988727a364f4558b6ae2fe9a2ef35b3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/8a34ef6c6bc14045851f042af9a7d142,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/8ac13a1fd0fe4876b5ecd4dbf29236aa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/8bd5b37f7e2a4ab3823246e554e10647,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/8d43148dba4c45fe8f65530d29aab7ae,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/8ef99543f69643438575e3f740cb2bba,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/8fb0c17c23da423b8240396342bde0eb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/901a9ac9828d4d7e87deefa357c3a67a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/90aafb1028ec43dbb5b10a1302548c28,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/90ad78faec9f41c180d9057b9e815785,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/9106c673cdc64312a8d4cc74254ad1a2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/9211abc0a4fe4611a7c72ac31c35840c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/9252655369694879af87db19a8aff29d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/92754e5cf7974fb3a95a572acadf1380,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/93ebbc0f6b5c41d389a38159ccac24cb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/940771e1ca3c46dda51a0f75e15a13a9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/940903bdae5f4a7eb21e37708f2e8eb5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/94b4d04d22e04311a8a0d5d8cf37cf05,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/95201eb936a84855b8bade628ae37fc2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/9535cbe97d5843a788fc7648de39a6e5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/95aca0a2d6464be0bc423f688aee25dc,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/95d124e2db0448e184c89e1859c67754,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/95dfb1256ee7442089069b4da46a6e02,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/95f52e8cdf744c4b909a231dbd8734ac,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/96937d82a29248ef9b074fd7ec6b98da,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/96f6ed602b9f4064b7f7da7d5b3b02af,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/975e21f9e31b430eaae6173c39717058,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/97738917b1fc423ab7c5801f7f406d74,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/97bea0657fc74d86a3daeb2b6a8b5cd9,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/98574a24d4344b6bb99d12db5f1c4260,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/989821bd3bff4afa886657fb553e986a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/98f23778fae94283a179f1ab242fed96,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/993b56797c244ea185a3430ca0cb0fc7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/99ce6e0c2f06489a9859f814993eaf3c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/99ce92f9404e499a88e663be84b9ee72,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/9a12b8d1295446b7a9ba5ea3c3e499af,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/9a317b819ffd42628b2ab74234affb55,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/9b2a6c9e66c84380b0bfe34e435a0e0f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/9b7328ab4c914676891fbb8ff65d98c2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/9b94ae860fcb4f18bfb3dfe36bed1719,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/9c367096ab8f41f19a90e7b0baf1102b,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/9d7dd6ca40984607ad74a00ab0b5121b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/9db9d7aa0a194667b0e9ca5e996d5c96,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/9dfb6ae4748845ceb94676ec589e75a5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/9ee2e7f1f0ef4746a4991a32055e6812,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/9f9a250586bb45f0b8e78eefbeb35b83,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/9fb65bfced6c481baed0b572b98f76d0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/9fbc955b0bed40f1b31102b5301b780d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/a04392de2b3448d48836ad47571a1f48,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/a04e90e9b9c74ea48e12a2a481d22b76,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/a0986c3b6010466da4522620fc8dd14d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/a1a3c7b49fa24621b7755d4fab2b2025,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/a1a7446f88774fcc929d6214df0ad0df,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a1e7358347e8439fb5f944993297f9af,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/a1eced7cf4e14244b2ff409555148248,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/a1f8a71a9365496a95d09e4ceb584629,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a22295e88b204d5997faeeaebb4dbe09,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/a24376aa9f4f4604ab4d3a3e253790d0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a279e66ee15144019f791da9ad1378d9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/a2c9c3b5655446db9da9ada6da4ef247,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/a3b8d8df6ed545c4912b95dfc23c066d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/a4b02c58bffc4f3dba6651652ee10b8c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a5097f6a7aca4d2fada2335ccf5bd64d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/a51c838198ad4c9c9f9c858ecd5e0721,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a69e53f2d272462daccc9901f1914c2c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/a6baaaf051cd4319a8aa3e17dbd42c08,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/a77791b611304b26b40cb51325451a9d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/a7a399be862d4862bb2c8f4ed5594387,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/a7b99c31adfe4f56899bef1a6700f9cf,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/a7ef5030f2c24df8b7a2d449901298a4,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/a868f9188e36478db40c02efab920281,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/a90a79e097c84c678dda1d1e086814f1,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/a9612d56525f4c3893e992fc23a9e0a5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/aa9c2317eb2a456e9bcf29fc21b38dbe,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/aaaf281af73741018278b0d83babb3bf,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/aafcc55f646b4207ae975490e6f752ab,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/ab5d6ebea61c4d74b2cc582e774139f1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/ad23810ef40440058f8ffa2b1d9fa2bd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/ad2aa89db4324b7fba80026c87e3f86c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/ad719c838a7b44e8bbacb33d2c4dd95f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/ad7eae2a2f104ee0b24bfbc17864ddfe,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/ae004ca9deb442958c32f0457579c4f0,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/ae0c50a9a9894d4eb6484e0b67a26648,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/ae1b338cc7a641f68fd5c4f85dba97a1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/ae350bc18383499e83d3b1d68d1b1d75,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/ae3eb4d9c8604235b41c02efff86ad9c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/af01319d759e4251b0dd78a718d581f6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/b007011b77a94b70bb836d38c9eb1138,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/b0b3fcf2f87c4a03a6933dd99645ca9d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/b134a93a92ba482abc5176e029a6687a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/b170dbd129c54a628da8e199fd23c6a4,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/b22305cd06eb4e37bdac1ec090daf7ef,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/b33d251ecd164474ab67afe9f83bf6d9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/b39a41c1db56412cb3ccd3a0c042f1ec,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/b48b8f4617a34cb997a598feb1c28f55,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/b538d75e180a424ca38d54e28500d33e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/b6c38e0064bd462686e8b47b15a824ff,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/b797fc477f524f31982d692e44e5e5c7,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/b7e332f222c4446596c8663d83559841,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/b83ff173b96f48b192c5b73b736ecaa1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/b85ff0d29f57435baf63eb8c07bdd3fb,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/b8692637e187437d961a9964dd3222dc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/b9cb44e28a46416a9ed9b73f862fb5ec,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/bac581a34190452ab3346d0297dbee1a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/bae5244685d94de79abc857f0b5bd990,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/bb4263b414ac46df845ff1e7f9984718,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/bbe40682aa8644b882df84c5db3938fa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/bcc8b57176ac4fda91f849cd8ef3fc49,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/bcc8d3f2a22844bab057d8c2bbb52df7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/bce5950cde164b378900e3c13cb78d24,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/bd4fbdaa1169487aba9d4460d0c13732,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/bdfaf85ca3d943e691e23eb41cdda801,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/be20dbf354314885a6981f7498f14e7d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/be7a2940f47442229a151c151c281c08,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/bf46fb125550487c84c1b73d3fdf397a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/bf68e1d45da64245b5bdbdbff2ea681b,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/bfec707308c84f25ab382ffa43ce61db,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/c00a9d3c593c4a4aae67eb6bd7e4b049,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/c221134812694906928c17dbd77039d1,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/c2384bd1743a4276a88a5110b1964ce0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/c24625c09a9a4bf08d326a873e385495,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/c276c71e8d1246e29d8502f5b2054668,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/c29f39c122c3411c97a3bfb933f156a2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/c2f67c84dfe14b6d92cf3455ad767f19,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/c414c5cdc67244a4ada77cc490f8c6fd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/c5b2f7f597f942f689fceb869c310293,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/c635d74874544a72b1145324138b1956,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/c646475a6c224f5d838f450ba0947f01,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/c7188f60191448bbb33af2cb953639d5,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/c74ee10b17a740af885ee404644abbed,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/c83f5bda0d434076a4884081338b7fa4,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/c8d95e8119304d5396a9cecdded22fcc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/c94a53ec169940cf948e1111c8fe1762,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/c9679d894e87483d9b6b5591f77ee79b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/ca00ca2793bf40bd96a7378ec3b98e3a,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/cabf89b7f00f4dd4ab2c556f10aae0ef,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/caf9720f429543838047fbf94c17e8ff,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/cbdf5af338214abea9bd3e993aae4d01,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/cc6830e186fa455c8b7e70fa677bce51,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/ccb0c4cd1bfd46908da6806ca4a2acfa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/cd1ef3ea99ae4c4597569ce4335f36a9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/cd92a0c4f9d64c748f21cd8f077cd072,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/cdc63e4bd87646479e1af6a359d542ad,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/ce088478fb5640458b7bbff294be4c1c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/cea8dda7b8c64f76aaaf412d8d37f041,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/cf43c8116e5748c7838468063cff9ebb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/cf49999ccc734c268f2ef001cdbc2c16,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/cf6f7bef4538411f8dd2832ec195991d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/cfe6c459d82143739454e85dc1fdf44a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/cffab97647b64ce2a817fb06e1aab086,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/d04a040fefb14ab384a315de2698c6b3,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/d0adfaf0754a4d8b838e1ac773c1be34,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/d0d9c63a7a794129a247b2cfd617ad13,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/d16b41286d4447d4a6e155dab61f4ef7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/d18e071d762c4e888469b687c2850051,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/d2202227b2b64d4fbc449049aa646fe7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/d30b44383d154225b3c99e557d124b7d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/d346b889cf764d508940f6f14943e39c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/d349fe52ffea4b0cb62064af9f352b6c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/d376b0316de147b29dae5dde76c7b807,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/d437825c6f034510a48d569d8a449e63,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/d50588e5fe164d4b9f0de26b1704ce04,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/d6367b690baa4b6ca1d5bc1a05b692f8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/d66f1f3239a94c7682c71217b1a94e0b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/d6f11c7d6a6447cfab5a5023ca9c3aaf,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/d79b8ffe70ca4520ac2c80e8cf4ade10,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/d7ce0646f38e4315ab7338f932e0e07d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/d809ada87ee84541a21095d0a2ce3293,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/d915275953c94b298b00872d98559e64,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/d957c4123c9a4154b3bdfb4bd0c4dfb8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/da31c90a816e4d08b4e6c9baf69c921d,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/da61f854a1754e26a7c65de608bf5890,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/da7a0231f38b4936af6f8179c2a48aa0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/db85a1763a5240509c32cb5284b00c92,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/dbf74d13c6e54558b2a48359f731639a,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/dde802db7f3b4340a9702870bdc5d7ae,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/de13d6685e944864aca27217c06ae2bc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/de4cb8a9c5664842a94b5d8a5de98953,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/de5d0a4f98aa4d98a54f9f67868f41aa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/de823cb8f37f46139dd6f06d65f43296,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/de8fd503eec94b4c9f0d767d2b8c0a79,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/deb21d8a58e74502859a1fa1a10e89ed,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/df47dcdb82e6442c842fcbae1526d9eb,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/df507a2555014e3eb46517c979925317,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/df7154099a8c427fb1165bb63575a9b5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/e093b98a554c4ffa80786f3b608de00c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/e0ff49ca7eef40f282c74a396bf5a903,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/e1418d1aea384c67b60757ee9130124c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/e1f51a36925a4a888563e37275539d7b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/e228eeaa2beb47558115d652770feaf0,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e3cca9f6dca841d393d00bf4259886da,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e440e0d3ad5b49929927e63f25226307,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/e45b0d95e6174233bbc90d38307d3fbd,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/e4760f8dfcbe431f8c3d815e70c364e6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/e50c332772104a72916878c5797a2b72,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/e598205c8a0a4cb4af988b02a7bb737f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/e5d586d402c64ca2b82300b151351bf0,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e61d4c7887864659abe9e5ae6c21f719,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e63cb0519fcf4b5b836c1cd7cb4057df,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e69dca10141348808010c4470d99210a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/e6d7f6c11aa34662bdc30225bf35ae6e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/e72d7c0cff794f6a80cc3ba7fcd9c408,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/e7d4dcfc401b4a45a1d3c72e6056b103,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/sierra
+link-to-service:hydroshare,content,hydroshare.org/resource/e8701dfacdb34f8d9a2a1844903baf90,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/e876ee4739b34f3c840c2588942f0381,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/e89be644c3884467b7722ce2f457121c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/e9656a75a6b14154b69f67ac4c399bf5,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/e9ad014db1864efb8e8768392d805128,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/e9f2ce8da1264a2eb70f643267028955,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/ea4c6e4cd6be49fa874b89dcf5b7d1ec,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/ebe9144d1e7c4f45ac6ce3e9eba8bd2a,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/ebfdc82507ef4f0d896b647ab2165834,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/ec8c0256b1b54127a3733bbabc116793,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/eca3ef65b674435890908998c288950e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/ecb79f4688674bf1bf954722da992fc7,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/ed8a2be3883b4f72b73636ae5d9ed087,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/edd55219cecf43798efd5fbd539c4125,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/ee157df1b4c84799a2d2c748d3a0b679,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/ee2c21941e1e4ba8836bc1814f34fa16,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/christina
+link-to-service:hydroshare,content,hydroshare.org/resource/ef6aa872e34749bcaa312b85eaf42258,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/ef728cff303a4d3bb49b69702283184c,2,2,/about/impact/punwath-prum-hif-2026 ; /community/newsletter/2026-february
+link-to-service:hydroshare,content,hydroshare.org/resource/f002dd485b7340d4b6bd11de8ed4486f,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/f069d663808b45e2b4d83c3a86483f40,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f0bffd715dbe4b4886ae01410329950d,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/f11c35908ef247a4bcb8746ef7844a6e,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f1aa35bb7ee14b08b305f6424dea34ce,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f1ca5b65669c4e6c98a63fb81d663ad6,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/f24d9ee416b54170a6aa1c17e6dd1449,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/f362d24430e0425b98a0792565c51bcc,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f38650ba68764d1db8a0e7a13a5153c2,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f3c5349d77644349a6d9ab7cf88305aa,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/eel
+link-to-service:hydroshare,content,hydroshare.org/resource/f433e8228c8440a1ba9cd8aaf133a7cb,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f438da675f6941f2a784c220142aaaef,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/f4d8941208db45c1b202872712323961,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/iml
+link-to-service:hydroshare,content,hydroshare.org/resource/f58e83002f01481492f500d62712b993,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f5ae15fbdcc9425e847060f89da61557,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,hydroshare.org/resource/f673e61b1e5944c5822c5e612ff65b0c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/f6a71206b6254970a6eb1784b4f9254e,2,2,/about/impact/cache-la-poudre-wq-2026 ; /community/newsletter/2026-may
+link-to-service:hydroshare,content,hydroshare.org/resource/f6bfad21671e4a31bdd755b3ce83f397,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/f7adcd529a664c70b844c3b58dd672e9,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/f7d5bc8a903a4b4aa01cc1db7cc2f40c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/f8788e3c661841a6a72ad7945ddbc16f,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/reynolds
+link-to-service:hydroshare,content,hydroshare.org/resource/f98c35d1330e41569f8b0e2e339df8d8,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/fa5e043282894e7e97a663a99f9506ad,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/fa6facf1834f4c39bf7c893a25c67e02,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/faca41bfb3e44755ab11c4db4ae88340,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/fb162ba0ab874abc891784d1f19c2c7b,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/shale-hills
+link-to-service:hydroshare,content,hydroshare.org/resource/fb8172a09c524bd8be172f3057a776c0,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/calhoun
+link-to-service:hydroshare,content,hydroshare.org/resource/fb9fa8adf0004dd3bba28e5742ba5431,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/boulder
+link-to-service:hydroshare,content,hydroshare.org/resource/fc2b489b5b724b1b87c22087af419f72,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/fccffe1c77f04b89961b201461955fbe,2,2,/critical-zone-science/datasets ; /critical-zone-science/network
+link-to-service:hydroshare,content,hydroshare.org/resource/ffb66a2c60f34eeab2af7abd660bb81c,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/luquillo
+link-to-service:hydroshare,content,hydroshare.org/resource/ffee4c810774423fb302ed7b735d3805,2,2,/critical-zone-science/datasets ; /critical-zone-science/observatories/catalina-jemez
+link-to-service:hydroshare,content,help.hydroshare.org/discovering-resources/discovering-data-and-models-from-hydroshare-users,1,1,/community/newsletter/2026-april
+link-to-service:hydroshare,content,hydroshare.org/discover,1,1,/community/newsletter/2026-april
+link-to-service:hydroshare,content,hydroshare.org/resource/0580878f98d548b08923b780e667c396,1,1,/about/team/tony-castronova
+link-to-service:hydroshare,content,hydroshare.org/resource/149c4b5015724f37b0f4def1a55abf7f,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/2f1b7ec241eb481a9794a91d0df76585,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/5249e9b2471941f1b12dad34c9ddf6fb,1,1,/community/newsletter/2026-march
+link-to-service:hydroshare,content,hydroshare.org/resource/5274a68688744548b2c34992fd5c39f0,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/5554ae32092f487daa6b2f813f3d7881,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/5dd7c1eb11ad4c958dd681838416f24b,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/61666076104f4306b4ddbf22a3fc52ca,1,1,/data-platforms/data-management-guide
+link-to-service:hydroshare,content,hydroshare.org/resource/9c53ab378b604a8e867cdda0d3ab72fb,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/b6c4fcad40c64c4cb4dd7d4a25d0db6e,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/resource/e5b49f03b82e46b3b5a236c1b72be74d,1,1,/critical-zone-science/datasets
+link-to-service:hydroshare,content,hydroshare.org/search,1,1,/about/impact/hydroshare-discover-schema-org-2026
+link-to-service:jotform,content,cuahsi.jotform.com/222235514170142,11,12,/community/jobs ; /community/newsletter/2026-april ; /community/newsletter/2026-august
+link-to-service:jotform,content,cuahsi.jotform.com/261454235595866,3,3,/community/newsletter/2026-august ; /community/newsletter/2026-july ; /community/newsletter/2026-june
+link-to-service:jotform,content,cuahsi.jotform.com/260414260402947,2,4,/community/newsletter/2026-february ; /community/newsletter/2026-march
+link-to-service:jotform,content,cuahsi.jotform.com/262093687207867,1,1,/community/newsletter/2026-august
+link-to-service:jotform,content,cuahsi.jotform.com/262427634602960,1,1,/community/events/snow-field-school-2027
+link-to-service:jotform,content,cuahsi.jotform.com/262436049129863,1,2,/community/newsletter/2026-september
+link-to-service:jotform,content,cuahsi.jotform.com/dmccay/code-of-conduct-anonymous-form,1,1,/about/code-of-conduct
+link-to-service:mailchimp,content,us3.campaign-archive.com (archive),10,10,/community/newsletter/2026-april ; /community/newsletter/2026-august ; /community/newsletter/2026-february
+link-to-service:mailchimp,content,cuahsi.us3.list-manage.com (subscribe),1,2,/community
+link-to-service:qualtrics,content,kstate.qualtrics.com/jfe/form/SV_0SrlLrzBdtjawBw,1,1,/community/newsletter/2026-january
+link-to-service:youtube,chrome,youtube.com/CUAHSI,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+link-to-service:youtube,content,youtube.com/watch,3,3,/community/newsletter/2026-july ; /community/newsletter/2026-october ; /learn-train/programs/summer-institute
+link-to-service:youtube,content,youtube.com/@CUAHSI,2,2,/about/impact/warr-archive-cuahsi-2026 ; /community/newsletter/2026-april
+link-to-service:youtube,content,youtube.com/playlist,2,2,/community/newsletter/2026-february ; /community/newsletter/2026-march
+link-to-service:youtube,content,youtube.com/CUAHSI,1,1,/community
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_h0tBwv3kR2qpQwEaPJ_J4g,4,4,/community/events/connected-researcher-2026 ; /community/newsletter/2026-august ; /community/newsletter/2026-october
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/RLf8JlMaT5GZd1tBDL3Vew,2,3,/community/newsletter/2026-june ; /community/newsletter/2026-may
+link-to-service:zoom,content,psu.zoom.us/meeting/register/wbbSk8Z5RW6lX_1hErxZsw,1,1,/community/events/women-advancing-river-research-bedrock-2026
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/v9ipN35JRPmBYX4Bd8w2bA,1,1,/community/newsletter/2026-september
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_l_zLb-bLT52selwll5OwpA,1,1,/community/newsletter/2026-september
+mailto-link,content,(address not written),39,56,/about/code-of-conduct ; /about/governance ; /about/membership
+register-word-link,content,-> cuahsi.org,6,9,/community/newsletter/2026-february ; /community/newsletter/2026-january ; /community/newsletter/2026-june
+register-word-link,content,-> us06web.zoom.us,5,7,/community/events/connected-researcher-2026 ; /community/newsletter/2026-august ; /community/newsletter/2026-may
+register-word-link,content,-> (this site),4,4,/community/events/agu-bridges-deadline-2026 ; /community/events/data-publishing-program-fall-2026 ; /community/events/virtual-open-house-fall-2026
+register-word-link,content,-> clevelandwateralliance.org,2,2,/community/newsletter/2026-june ; /community/newsletter/2026-october
+register-word-link,content,-> cuahsi.jotform.com,2,2,/community/events/snow-field-school-2027 ; /community/newsletter/2026-september
+register-word-link,content,-> cvent.me,2,2,/community/events/water-science-exchange-2026 ; /learn-train/programs/skills-certificate-pilot
+register-word-link,content,-> events.ringcentral.com,1,1,/community/newsletter/2026-june
+register-word-link,content,-> psu.zoom.us,1,1,/community/events/women-advancing-river-research-bedrock-2026
+register-word-link,content,-> web.cvent.com,1,1,/community/newsletter/2026-october
+script-host,chrome,x.invalid,172,172,/200 ; /404 ; /about/code-of-conduct
+search-box-or-pagefind-marker,content,input,4,4,/about/membership ; /data-platforms/portals ; /learn-train/graduate-programs
+select,content,(unnamed) (5 options),1,1,/hire-cuahsi
+sign-in-word-or-link,chrome,member portal -> (this site)/member-portal,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+social-link,chrome,bluesky,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+social-link,chrome,linkedin,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+social-link,chrome,youtube,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+social-link,content,github,11,18,/about/impact/datacite-doi-migration-2025 ; /about/impact/hydroshare-ai-agent-downloads-2026 ; /about/impact/hydroshare-cloud-migration
+social-link,content,youtube,8,8,/about/impact/warr-archive-cuahsi-2026 ; /community ; /community/newsletter/2026-april
+social-link,content,linkedin,5,5,/about/team/jordan-read ; /about/team/lindsay-platt ; /about/team/tony-castronova
+subscribe-word-link,chrome,newsletter -> (this site)/community/newsletter,170,170,/about/code-of-conduct ; /about/documents ; /about/governance
+subscribe-word-link,content,← newsletter archive -> (this site)/community/newsletter,10,10,/community/newsletter/2026-april ; /community/newsletter/2026-august ; /community/newsletter/2026-february
+subscribe-word-link,content,october 2026 e-newsletter -> (this site)/community/newsletter/2026-october,8,8,/about/team/irene-garousi-nejad ; /about/team/jordan-read ; /about/team/tony-castronova
+subscribe-word-link,content,june 2026 e-newsletter -> (this site)/community/newsletter/2026-june,7,7,/about/impact/data-publishing-cohort-spring-2026 ; /about/impact/open-hydrology-textbook-2026 ; /about/team/abner-bogan
+subscribe-word-link,content,july 2026 e-newsletter -> (this site)/community/newsletter/2026-july,6,6,/about/team/abner-bogan ; /about/team/danielle-tijerina-kreuzer ; /about/team/irene-garousi-nejad
+subscribe-word-link,content,newsletter archive → -> (this site)/community/newsletter,5,5,/learn-train/programs/skills-certificate-pilot ; /learn-train/programs/snow-field-school ; /learn-train/programs/summer-institute
+subscribe-word-link,content,august 2026 e-newsletter -> (this site)/community/newsletter/2026-august,4,4,/about/team/danielle-tijerina-kreuzer ; /about/team/jordan-read ; /about/team/tony-castronova
+subscribe-word-link,content,april 2026 e-newsletter -> (this site)/community/newsletter/2026-april,2,2,/about/team/danielle-tijerina-kreuzer ; /about/team/irene-garousi-nejad
+subscribe-word-link,content,may 2026 e-newsletter -> (this site)/community/newsletter/2026-may,2,2,/about/impact/indigenous-data-sovereignty-2026 ; /about/team/abner-bogan
+subscribe-word-link,content,← april 2026 e-newsletter -> (this site)/community/newsletter/2026-april,1,1,/community/newsletter/2026-may
+subscribe-word-link,content,← august 2026 e-newsletter -> (this site)/community/newsletter/2026-august,1,1,/community/newsletter/2026-september
+subscribe-word-link,content,← february 2026 e-newsletter -> (this site)/community/newsletter/2026-february,1,1,/community/newsletter/2026-march
+subscribe-word-link,content,← january 2026 e-newsletter -> (this site)/community/newsletter/2026-january,1,1,/community/newsletter/2026-february
+subscribe-word-link,content,← july 2026 e-newsletter -> (this site)/community/newsletter/2026-july,1,1,/community/newsletter/2026-august
+subscribe-word-link,content,← june 2026 e-newsletter -> (this site)/community/newsletter/2026-june,1,1,/community/newsletter/2026-july
+subscribe-word-link,content,← march 2026 e-newsletter -> (this site)/community/newsletter/2026-march,1,1,/community/newsletter/2026-april
+subscribe-word-link,content,← may 2026 e-newsletter -> (this site)/community/newsletter/2026-may,1,1,/community/newsletter/2026-june
+subscribe-word-link,content,← september 2026 e-newsletter -> (this site)/community/newsletter/2026-september,1,1,/community/newsletter/2026-october
+subscribe-word-link,content,april 2026 e-newsletter → -> (this site)/community/newsletter/2026-april,1,1,/community/newsletter/2026-march
+subscribe-word-link,content,august 2026 e-newsletter → -> (this site)/community/newsletter/2026-august,1,1,/community/newsletter/2026-july
+subscribe-word-link,content,february 2026 e-newsletter → -> (this site)/community/newsletter/2026-february,1,1,/community/newsletter/2026-january
+subscribe-word-link,content,january 2026 e-newsletter -> (this site)/community/newsletter/2026-january,1,1,/about/impact/agu-community-gathering-2025
+subscribe-word-link,content,july 2026 e-newsletter → -> (this site)/community/newsletter/2026-july,1,1,/community/newsletter/2026-june
+subscribe-word-link,content,june 2026 e-newsletter → -> (this site)/community/newsletter/2026-june,1,1,/community/newsletter/2026-may
+subscribe-word-link,content,march 2026 e-newsletter -> (this site)/community/newsletter/2026-march,1,1,/about/team/abner-bogan
+subscribe-word-link,content,march 2026 e-newsletter → -> (this site)/community/newsletter/2026-march,1,1,/community/newsletter/2026-february
+subscribe-word-link,content,may 2026 e-newsletter → -> (this site)/community/newsletter/2026-may,1,1,/community/newsletter/2026-april
+subscribe-word-link,content,monthly newsletter -> (this site)/community/newsletter,1,1,/community/news
+subscribe-word-link,content,october 2026 e-newsletter → -> (this site)/community/newsletter/2026-october,1,1,/community/newsletter/2026-september
+subscribe-word-link,content,september 2026 e-newsletter -> (this site)/community/newsletter/2026-september,1,1,/about/team/jordan-read
+subscribe-word-link,content,september 2026 e-newsletter → -> (this site)/community/newsletter/2026-september,1,1,/community/newsletter/2026-august
+subscribe-word-link,content,subscribe → -> cuahsi.us3.list-manage.com/subscribe,1,1,/community
+subscribe-word-link,content,subscribe ↗ -> visitor.r20.constantcontact.com/manage/optin,1,1,/community/newsletter

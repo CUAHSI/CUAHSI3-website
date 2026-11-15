@@ -124,3 +124,15 @@ I read the saved HTML of these, not every line. Affected (fetched in the later p
 `/national/data/dataset/2514/` and `/boulder/data/dataset/2821/`, and the CZNet cluster pages `/urban/publications` and `/bedrock/data`.
 Unaffected (fetched in pass 1 or sampled): CZNet `/`, CZNet `/publications` and `/news-events/critical-zone-science-and-the-path-ahead`.
 I did not open the other 7,000 or so fetched pages.
+
+## Addendum, 2 November 2026: education-outreach pages (the count the ticket asked for)
+
+Ticket T1 asked for URL counts by section including education resources; this report did not give that count. From the CSV above (10,671 rows), counting rows whose `section` is an education-outreach section:
+
+| | Rows | Of which |
+|---|---|---|
+| Archive (`czo-archive.criticalzone.org`) | 125 | 65 under `national/education-outreach`, and 6 under each of the 10 observatories |
+| CZNet (`criticalzone.org`) | 22 | 2 under each of 11 `education_outreach` sections (the network's own and the Hub plus 9 clusters) |
+| **Total** | **147** | all fetched (147 of 147) |
+
+What this is and is not: the rows are pages (listing and section pages), not individual education resources. I did not count the resources listed on those pages. Why each CZNet section has two rows was not checked. A further 14 rows have `education-outreach` in the address but sit in other sections (for example `events/cat/education-outreach/`, an events category); they are not in the 147. The count was made by reading the CSV with a small script on 2 November 2026; the CSV was not changed.

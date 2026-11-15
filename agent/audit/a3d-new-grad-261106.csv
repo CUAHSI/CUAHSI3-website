@@ -1,0 +1,103 @@
+row,institution,degrees,has_website,programs_words,last_reviewed,matched_legacy
+1,Arizona State University,masters|phd,yes,8,,Arizona State University
+2,Auburn University,,yes,5,,Auburn University
+3,Boise State University,masters,yes,19,2026-10-06,Boise State University
+4,Brigham Young University,masters|phd,yes,14,,Brigham Young University
+5,City College of New York,masters|phd,yes,8,,City College of New York
+6,Clarkson University,masters|phd,yes,7,,Clarkson University
+7,Clemson University,masters|phd,yes,36,,Clemson University
+8,Colorado School of Mines,masters|phd,yes,11,,Colorado School of Mines
+9,Colorado State University,masters|phd,yes,21,,Colorado State University
+10,Columbia University,masters,yes,31,,Columbia University
+11,Dartmouth College,masters|phd,yes,5,,Dartmouth College
+12,Drexel University,masters|phd,yes,14,,Drexel University
+13,Duke University,masters|phd,yes,8,,Duke University
+14,Georgia State University,masters,yes,6,,Georgia State University
+15,Humboldt State University,masters|phd,yes,6,,Humboldt State University
+16,Illinois State University,,yes,7,,Illinois State University
+17,Iowa State University,masters|phd,yes,27,,Iowa State University
+18,Johns Hopkins University,masters|phd,yes,20,,Johns Hopkins University
+19,Kansas State University,masters|phd,yes,4,,Kansas State University
+20,Kent State University,masters|phd,yes,7,,Kent State University
+21,Louisiana State University,,yes,4,,Louisiana State University
+22,Manhattan College,masters|phd,yes,2,,Manhattan College
+23,Marquette University,,yes,5,,Marquette University
+24,Massachusetts Institute of Technology,masters|phd,yes,12,,Massachusetts Institute of Technology
+25,Michigan State University,masters|phd,yes,12,,Michigan State University
+26,Missouri University of Science and Technology,masters|phd,yes,20,,Missouri University of Science and Technology
+27,Murray State University,masters,yes,4,,Murray State University
+28,New Mexico Institute of Mining and Technology,masters|phd,yes,8,,New Mexico Institute of Mining and Technology
+29,New Mexico State University,masters|phd,yes,9,,New Mexico State University
+30,North Carolina State University,masters|phd,yes,39,,North Carolina State University
+31,Northeastern University,masters|phd,yes,6,,Northeastern University
+32,Northern Arizona University,masters|phd,yes,19,,Northern Arizona University
+33,Northwestern University,masters|phd,yes,26,,Northwestern University
+34,Oregon State University,masters|phd,yes,9,,Oregon State University
+35,Pennsylvania State University,,yes,22,,Pennsylvania State University
+36,Plymouth State University,undergraduate,yes,4,,Plymouth State University
+37,Portland State University,masters|phd,yes,5,,Portland State University
+38,Purdue University,masters|phd,yes,26,,Purdue University
+39,Rutgers University,masters|phd,yes,14,,Rutgers University
+40,San Diego State University,masters|phd,yes,31,,San Diego State University
+41,South Dakota State University,masters|phd,yes,26,,South Dakota State University
+42,Southern Illinois University Carbondale,masters|phd,yes,25,,Southern Illinois University Carbondale
+43,State University of New York (SUNY),masters|phd,yes,7,,State University of New York (SUNY)
+44,Syracuse University,masters|phd,yes,4,,Syracuse University
+45,Temple University,masters,yes,6,,Temple University
+46,Texas A&M University,masters|phd,yes,7,,Texas A&M University
+47,The Ohio State University,masters|phd,yes,9,,The Ohio State University
+48,Tufts University,,yes,5,,Tufts University
+49,Universidad de las Americas Puebla,phd,yes,5,,Universidad de las Americas Puebla
+50,Universitat Politècnica de Catalunya,masters,no,5,,Universitat Politècnica de Catalunya
+51,University Abdou Moumouni,,yes,1,,University Abdou Moumouni
+52,University at Buffalo,masters|phd,yes,21,,University at Buffalo
+53,University of Akron,masters|phd,yes,11,,University of Akron
+54,University of Alabama,,yes,8,,University of Alabama
+55,University of Alaska Fairbanks,masters|phd,yes,6,,University of Alaska Fairbanks
+56,University of Arizona,masters|phd|undergraduate,yes,11,,University of Arizona
+57,University of California Davis,masters|phd,yes,13,,University of California Davis
+58,University of California Irvine,masters|phd,yes,5,,University of California Irvine
+59,University of California Riverside,masters|phd,yes,11,,University of California Riverside
+60,"University of California, Merced",,yes,4,,"University of California, Merced"
+61,University of Colorado,masters|phd,yes,10,,University of Colorado
+62,University of Delaware,,yes,4,,University of Delaware
+63,University of Florida,,yes,5,,University of Florida
+64,University of Florida Water Institute,masters|phd,yes,4,,University of Florida Water Institute
+65,University of Georgia,masters|phd,yes,3,,University of Georgia
+66,University of Hawaii at Manoa,,yes,25,,University of Hawaii at Manoa
+67,University of Idaho,masters|phd,yes,14,,University of Idaho
+68,University of Illinois,masters|phd,yes,31,,University of Illinois
+69,University of Iowa,,yes,24,,University of Iowa
+70,University of Kansas,masters|phd|professional,yes,52,,University of Kansas
+71,University of Kentucky,masters|phd,yes,9,,University of Kentucky
+72,University of Louisiana at Lafayette,,yes,2,,University of Louisiana at Lafayette
+73,University of Massachusetts Boston,masters|phd,yes,13,,University of Massachusetts Boston
+74,University of Memphis Ground Water Institute,masters|phd,yes,2,,University of Memphis Ground Water Institute
+75,University of Minnesota,masters,yes,3,,University of Minnesota
+76,University of Missouri,masters|phd,yes,3,,University of Missouri
+77,University of Nebraska Lincoln,masters|phd,yes,19,,University of Nebraska Lincoln
+78,University of Nevada Las Vegas,masters|phd,yes,3,,University of Nevada Las Vegas
+79,University of Nevada Reno,masters|phd,yes,16,,University of Nevada Reno
+80,University of New Mexico,masters|phd,yes,11,,University of New Mexico
+81,University of North Carolina Charlotte,masters|phd,yes,14,,University of North Carolina Charlotte
+82,University of North Dakota,masters|phd,yes,16,,University of North Dakota
+83,University of Notre Dame,masters|phd,yes,8,,University of Notre Dame
+84,University of Oklahoma,masters|phd|professional,yes,24,,University of Oklahoma
+85,University of Pittsburgh,,yes,4,,University of Pittsburgh
+86,University of Rhode Island,masters|phd,yes,2,,University of Rhode Island
+87,University of South Carolina,masters|phd,yes,19,,University of South Carolina
+88,University of South Florida,masters|phd,yes,2,,University of South Florida
+89,University of Tennessee,masters|phd,yes,14,,University of Tennessee
+90,University of Texas at Arlington,masters|phd,yes,18,,University of Texas at Arlington
+91,University of Texas at Austin,masters|phd,yes,1,,University of Texas at Austin
+92,"University of Texas, San Antonio",masters|phd,yes,14,,"University of Texas, San Antonio"
+93,University of Trento,masters|phd,yes,2,,University of Trento
+94,University of Utah,professional,yes,5,,University of Utah
+95,University of Washington,,yes,7,,University of Washington
+96,University of Wisconsin,masters|phd,yes,36,,University of Wisconsin
+97,University of Wisconsin - Madison,masters,yes,15,,University of Wisconsin - Madison
+98,University of Wisconsin-Milwaukee,masters|phd,yes,3,,University of Wisconsin-Milwaukee
+99,University of Wyoming,masters|phd,yes,7,,University of Wyoming
+100,University of Zurich,masters,yes,9,,University of Zurich
+101,Utah State University,masters|phd,yes,5,,Utah State University
+102,Virginia Tech,masters|phd|undergraduate|professional,yes,5,,Virginia Tech

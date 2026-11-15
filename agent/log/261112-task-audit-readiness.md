@@ -1,0 +1,6 @@
+261112 | task/audit-readiness | start | A6 (org issue 111): readiness for the new address; report and scripts only, nothing fixed
+261112 | task/audit-readiness | merged | PR 223 (A5) merged by Jordan; PR 221 (dead links) still open when checked
+261112 | task/audit-readiness | defect | The first data file of page titles and descriptions held two e-mail addresses from page text (C11); the script now replaces them. caught: self-check
+261112 | task/audit-readiness | defect | The first draft of the accessibility section said 14 pages and counted 9 in one table; the run had 19 (9 counterparts, 5 October pages, 5 largest). Corrected before the commit. caught: self-check
+261112 | task/audit-readiness | defect | Reviewer: the browser script read the first header button (Search), not the menu button, so the report said aria-expanded was missing on 19 of 19 pages and proposed a fix; the source has it. Selector fixed, run repeated, finding and fix 8 removed. Also: community denominator was 53 (is 84); the sitemap cause was not isolated (now three builds); claims without a data file are now in a6_adhoc_checks.txt or caveated. caught: reviewer
+261112 | task/audit-readiness | pr | PR 224 opened, base checked: https://github.com/jordansread/CUAHSI3-website/pull/224

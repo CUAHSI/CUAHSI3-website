@@ -1,0 +1,13 @@
+rank,legacy_path,clicks,impressions,hops,lands_on,outcome
+1,/,2981,27946,0,/,page
+2,/job-board,1441,22045,0,/job-board,nothing built
+3,/summer-institute,1045,23457,0,/summer-institute,nothing built
+4,/data-services/matlab,1001,61550,0,/data-services/matlab,nothing built
+5,/students/graduate-programs-in-water-science,888,40572,1,/learn-train/graduate-programs,page
+6,/about/our-team,345,15078,0,/about/our-team,nothing built
+7,/workshops/snow-measurement-field-school-2026,301,2063,0,/workshops/snow-measurement-field-school-2026,nothing built
+8,/workshops/hydrolearn-ciroh-may-june-2026-workshop-and-hackathon,289,6781,0,/workshops/hydrolearn-ciroh-may-june-2026-workshop-and-hackathon,nothing built
+9,/virtual-university,281,18804,0,/virtual-university,nothing built
+10,/students/graduate-programs-in-water-science/ph-d,273,10698,1,/learn-train/graduate-programs,page
+11,/data-services/hydroshare,260,11969,0,/data-services/hydroshare,nothing built
+12,/grant-opportunities,247,3646,0,/grant-opportunities,nothing built

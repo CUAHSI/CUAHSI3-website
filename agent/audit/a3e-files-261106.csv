@@ -1,0 +1,62 @@
+idx,title,kind,file,opens,size_bytes,pages,first_page_text_words,text_check,legacy_file_per_october_record,legacy_size_now,legacy_file_status_now,october_copy_pages,pages_same_as_october_copy,size_ratio_hosted_to_legacy
+1,Bylaws,governance,/documents/governance/bylaws-2024.pdf,yes,202190,10,559,no date in the title to check,2024-07-24-Bylaws_Final.docx.pdf,202190,200,10,same,1
+2,Strategic Plan 2023–2028,plan,/documents/strategic-plans/strategic-plan-2023-2028.pdf,yes,135121,7,6,title date found: 2023; 2028,Strategic-Plan-2023-Final.1.pdf,135121,200,7,same,1
+3,Strategic Plan 2018–2023,plan,/documents/strategic-plans/strategic-plan-2018-2023.pdf,yes,2153167,12,17,title date found: 2018; 2023,StrategicPlan_SinglePages.pdf,7128768,200,12,same,0.3
+4,2025 Annual Report,report,/documents/annual-reports/annual-report-2025.pdf,yes,3128229,12,4,title date found: 2025,2025-Annual-Report_Final_reduced.pdf,3128229,200,12,same,1
+5,2024 Annual Report,report,/documents/annual-reports/annual-report-2024.pdf,yes,3332249,11,4,title date found: 2024,Annual-Report-2024.pdf,3332249,200,11,same,1
+6,2023 Annual Report,report,/documents/annual-reports/annual-report-2023.pdf,yes,2705296,13,4,title date found: 2023,Annual-Report-2023-FINAL.pdf,7842389,200,13,same,0.34
+7,2022 Annual Report,report,/documents/annual-reports/annual-report-2022.pdf,yes,3371560,13,0,no readable text on page 1,Annual-Report-2022_FINAL.pdf,3371560,200,13,same,1
+8,2021 Annual Report,report,/documents/annual-reports/annual-report-2021.pdf,yes,5864036,13,4,title date found: 2021,Annual_Report_2021_-_Visual.pdf,27715012,200,,,0.21
+9,2020 Annual Report,report,/documents/annual-reports/annual-report-2020.pdf,yes,3151534,13,4,title date found: 2020,Annual_Report_2020_Final.pdf,9112440,200,13,same,0.35
+10,"Board meeting minutes, January 9–10, 2025",minutes,/documents/minutes/2025-01-09-board-meeting-minutes.pdf,yes,417229,6,155,"title date found: january 9, 2025",2025-01-Minutes.pdf,417229,200,6,same,1
+11,"Board meeting minutes, February 18, 2025",minutes,/documents/minutes/2025-02-18-board-meeting-minutes.pdf,yes,400900,3,160,"title date found: february 18, 2025",2025-02-Minutes.pdf,400900,200,3,same,1
+12,"Board meeting minutes, April 15, 2025",minutes,/documents/minutes/2025-04-15-board-meeting-minutes.pdf,yes,449771,4,163,"title date found: april 15, 2025",2025-04-15-meeting-minutes.pdf,449771,200,4,same,1
+13,"Board meeting minutes, May 20, 2025",minutes,/documents/minutes/2025-05-20-board-meeting-minutes.pdf,yes,448329,3,160,"title date found: may 20, 2025",2025-05-20-meeting-minutes-APPROVED.pdf,448329,200,3,same,1
+14,"Board meeting minutes, June 17, 2025",minutes,/documents/minutes/2025-06-17-board-meeting-minutes.pdf,yes,458971,3,159,"title date found: june 17, 2025",2025-06-17-meeting-minutes.pdf,458971,200,3,same,1
+15,"Board meeting minutes, January 11–12, 2024",minutes,/documents/minutes/2024-01-11-board-meeting-minutes.pdf,yes,501586,12,175,"title date found: january 11, 2024",2024-01_Minutes.pdf,501586,200,12,same,1
+16,"Board meeting minutes, February 7, 2024",minutes,/documents/minutes/2024-02-07-board-meeting-minutes.pdf,yes,496862,4,155,"title date found: february 7, 2024",2024-02_Minutes.pdf,496862,200,4,same,1
+17,"Board meeting minutes, March 6, 2024",minutes,/documents/minutes/2024-03-06-board-meeting-minutes.pdf,yes,554887,6,150,"title date found: march 6, 2024",2024-03-06_Minutes.pdf,554887,200,6,same,1
+18,"Board meeting minutes, April 3, 2024",minutes,/documents/minutes/2024-04-03-board-meeting-minutes.pdf,yes,581499,7,154,"title date found: april 3, 2024",2024-04-03_Minutes.pdf,581499,200,7,same,1
+19,"Board meeting minutes, May 1, 2024",minutes,/documents/minutes/2024-05-01-board-meeting-minutes.pdf,yes,429568,3,154,"title date found: may 1, 2024",2024-05-01_Minutes.pdf,429568,200,3,same,1
+20,"Board meeting minutes, June 5, 2024",minutes,/documents/minutes/2024-06-05-board-meeting-minutes.pdf,yes,425756,3,153,"title date found: june 5, 2024",2024-06-05_Minutes.pdf,425756,200,3,same,1
+21,"Board meeting minutes, June 27–28, 2024",minutes,/documents/minutes/2024-06-27-board-meeting-minutes.pdf,yes,472498,7,168,"title date found: june 27, 2024",2024-06-27-Minutes.pdf,472498,200,7,same,1
+22,"Board meeting minutes, August 7, 2024",minutes,/documents/minutes/2024-08-07-board-meeting-minutes.pdf,yes,423503,3,153,"title date found: august 7, 2024",2024-08-07-Minutes_PUBLIC.pdf,423503,200,3,same,1
+23,"Board meeting minutes, September 11, 2024",minutes,/documents/minutes/2024-09-11-board-meeting-minutes.pdf,yes,478747,4,155,"title date found: september 11, 2024",2024-09-11-Minutes.pdf,478747,200,4,same,1
+24,"Board meeting minutes, October 9, 2024",minutes,/documents/minutes/2024-10-09-board-meeting-minutes.pdf,yes,433799,4,158,"title date found: october 9, 2024",2024-10-09-Minutes.pdf,433799,200,4,same,1
+25,"Board meeting minutes, November 13, 2024",minutes,/documents/minutes/2024-11-13-board-meeting-minutes.pdf,yes,446967,4,154,"title date found: november 13, 2024",Minutes-11-13-24.pdf,446967,200,4,same,1
+26,"Board meeting minutes, December 4, 2024",minutes,/documents/minutes/2024-12-04-board-meeting-minutes.pdf,yes,470126,4,158,"title date found: december 4, 2024",2024-12-04-Minutes.pdf,470126,200,4,same,1
+27,"Winter Board of Directors meeting minutes, January 23–25, 2023",minutes,/documents/minutes/2023-01-23-board-meeting-minutes.pdf,yes,518836,20,168,"title date found: january 23, 2023",Minutes-2023-01-Board-Meeting_v2.docx.pdf,518836,200,20,same,1
+28,"Board meeting minutes, February 20, 2023",minutes,/documents/minutes/2023-02-20-board-meeting-minutes.pdf,yes,350986,5,137,"title date found: february 20, 2023",2023-02_Minutes.pdf,350986,200,5,same,1
+29,"Board meeting minutes, March 20, 2023",minutes,/documents/minutes/2023-03-20-board-meeting-minutes.pdf,yes,338108,3,139,"title date found: march 20, 2023",2023-03_Minutes.pdf,338108,200,3,same,1
+30,"Board meeting minutes, April 17, 2023",minutes,/documents/minutes/2023-04-17-board-meeting-minutes.pdf,yes,338494,4,138,"title date found: april 17, 2023",2023-04_Minutes.pdf,338494,200,4,same,1
+31,"Board meeting minutes, May 15, 2023",minutes,/documents/minutes/2023-05-15-board-meeting-minutes.pdf,yes,338763,3,144,"title date found: may 15, 2023",2023-05_Minutes.pdf,338763,200,3,same,1
+32,"Board meeting minutes, June 13–14, 2023",minutes,/documents/minutes/2023-06-13-board-meeting-minutes.pdf,yes,397174,12,145,"title date found: june 13, 2023",2023-06_Minutes.pdf,397174,200,12,same,1
+33,"Board meeting minutes, July 17, 2023",minutes,/documents/minutes/2023-07-17-board-meeting-minutes.pdf,yes,106812,2,169,"title date found: july 17, 2023",2023-07_Minutes.pdf,106812,200,2,same,1
+34,"Board meeting minutes, August 21, 2023",minutes,/documents/minutes/2023-08-21-board-meeting-minutes.pdf,yes,388289,3,168,"title date found: august 21, 2023",2023-08_Minutes.pdf,388289,200,3,same,1
+35,"Board meeting minutes, September 20, 2023",minutes,/documents/minutes/2023-09-20-board-meeting-minutes.pdf,yes,464405,4,157,"title date found: september 20, 2023",2023-09_Minutes.pdf,464405,200,4,same,1
+36,"Board meeting minutes, October 18, 2023",minutes,/documents/minutes/2023-10-18-board-meeting-minutes.pdf,yes,448201,4,161,"title date found: october 18, 2023",2023-10_Minutes.pdf,448201,200,4,same,1
+37,"Board meeting minutes, November 15, 2023",minutes,/documents/minutes/2023-11-15-board-meeting-minutes.pdf,yes,449233,3,158,"title date found: november 15, 2023",2023-11_Minutet.pdf,449233,200,3,same,1
+38,"Board meeting minutes, December 20, 2023",minutes,/documents/minutes/2023-12-20-board-meeting-minutes.pdf,yes,428186,3,160,"title date found: december 20, 2023",2023-12_Minutes.pdf,428186,200,3,same,1
+39,"Board meeting minutes, January 6–7, 2022",minutes,/documents/minutes/2022-01-06-board-meeting-minutes.pdf,yes,205641,11,175,"title date found: january 6, 2022",2022-01_Minutes.pdf,205641,200,11,same,1
+40,"Board meeting minutes, February 16, 2022",minutes,/documents/minutes/2022-02-16-board-meeting-minutes.pdf,yes,144451,4,164,"title date found: february 16, 2022",2022-02_Minutes.pdf,144451,200,4,same,1
+41,"Board meeting minutes, March 16, 2022",minutes,/documents/minutes/2022-03-16-board-meeting-minutes.pdf,yes,190101,4,153,"title date found: march 16, 2022",2022-03_Minutes.pdf,190101,200,4,same,1
+42,"Board meeting minutes, April 20, 2022",minutes,/documents/minutes/2022-04-20-board-meeting-minutes.pdf,yes,142692,4,150,"title date found: april 20, 2022",2022-04_Minutes.pdf,142692,200,4,same,1
+43,"Board meeting minutes, May 18, 2022",minutes,/documents/minutes/2022-05-18-board-meeting-minutes.pdf,yes,137962,3,148,"title date found: may 18, 2022",2022-05_Minutes.pdf,137962,200,3,same,1
+44,"Board meeting minutes, July 12–13, 2022",minutes,/documents/minutes/2022-07-12-board-meeting-minutes.pdf,yes,166776,7,166,"title date found: july 12, 2022",2022-07_Minutes.pdf,166776,200,7,same,1
+45,"Board meeting minutes, August 17, 2022",minutes,/documents/minutes/2022-08-17-board-meeting-minutes.pdf,yes,142333,4,153,"title date found: august 17, 2022",2022-08_Minutes.pdf,142333,200,4,same,1
+46,"Board meeting minutes, September 21, 2022",minutes,/documents/minutes/2022-09-21-board-meeting-minutes.pdf,yes,108010,3,152,"title date found: september 21, 2022",2022-09_Minutes.pdf,108010,200,3,same,1
+47,"Board meeting minutes, October 19, 2022",minutes,/documents/minutes/2022-10-19-board-meeting-minutes.pdf,yes,347700,4,164,"title date found: october 19, 2022",2022_10_meeting-minutes.pdf,347700,200,4,same,1
+48,"Board meeting minutes, November 16, 2022",minutes,/documents/minutes/2022-11-16-board-meeting-minutes.pdf,yes,341545,3,157,"title date found: november 16, 2022",2022-11_Minutes.pdf,341545,200,3,same,1
+49,"Board meeting minutes, January 11–13, 2021",minutes,/documents/minutes/2021-01-11-board-meeting-minutes.pdf,yes,187902,14,181,"title date found: january 11, 2021",2021-01_Minutes.pdf,187902,200,14,same,1
+50,"Board meeting minutes, February 15, 2021",minutes,/documents/minutes/2021-02-15-board-meeting-minutes.pdf,yes,151194,4,155,"title date found: february 15, 2021",2021-02_Minutes.pdf,151194,200,4,same,1
+51,"Board meeting minutes, March 15, 2021",minutes,/documents/minutes/2021-03-15-board-meeting-minutes.pdf,yes,121077,3,153,"title date found: march 15, 2021",2021-03_Minutes.pdf,121077,200,3,same,1
+52,"Board meeting minutes, April 19, 2021",minutes,/documents/minutes/2021-04-19-board-meeting-minutes.pdf,yes,145392,3,153,"title date found: april 19, 2021",2021-04_Minutes.pdf,145392,200,3,same,1
+53,"Board meeting minutes, May 17, 2021",minutes,/documents/minutes/2021-05-17-board-meeting-minutes.pdf,yes,129839,4,153,"title date found: may 17, 2021",2021-05_Minutes.pdf,129839,200,4,same,1
+54,"Board meeting minutes, June 21, 2021",minutes,/documents/minutes/2021-06-21-board-meeting-minutes.pdf,yes,119457,3,153,"title date found: june 21, 2021",2021-06_Minutes.pdf,119457,200,3,same,1
+55,"Board meeting minutes, August 18, 2021",minutes,/documents/minutes/2021-08-18-board-meeting-minutes.pdf,yes,125204,3,157,"title date found: august 18, 2021",2021-08_Minutes.pdf,125204,200,3,same,1
+56,"Board meeting minutes, September 15, 2021",minutes,/documents/minutes/2021-09-15-board-meeting-minutes.pdf,yes,121824,3,157,"title date found: september 15, 2021",2021-09_Minutes.pdf,121824,200,3,same,1
+57,"Board meeting minutes, October 20, 2021",minutes,/documents/minutes/2021-10-20-board-meeting-minutes.pdf,yes,146844,4,158,"title date found: october 20, 2021",2021-10_Minutes.pdf,146844,200,4,same,1
+58,"Board meeting minutes, November 17, 2021",minutes,/documents/minutes/2021-11-17-board-meeting-minutes.pdf,yes,131021,3,160,"title date found: november 17, 2021",2021-11_Minutes.pdf,131021,200,3,same,1
+59,"Membership meeting minutes, December 4, 2018",minutes,/documents/minutes/2018-12-04-membership-meeting-minutes.pdf,yes,147614,1,262,"title date found: december 4, 2018",2018_Membership_Minutes.pdf,147614,200,1,same,1
+60,Travel Policy,policy,/documents/policies/travel-policy.pdf,yes,75012,2,390,no date in the title to check,,,,,,
+61,Water Prediction Innovators Summer Institute Authorship Agreement,policy,/documents/policies/wpi-summer-institute-authorship-agreement.pdf,yes,104182,4,275,no date in the title to check,,,,,,

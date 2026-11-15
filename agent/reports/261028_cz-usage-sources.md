@@ -69,3 +69,12 @@ observatory, linked from archive dataset page `/national/data/dataset/2514/`):
 Harvest views, downloads and `date_created` for the HydroShare resources named on the 919 archive dataset pages and the 761 Discover
 records (T6 builds the list; this report is the method). Decide with Jordan: is "rate since the resource was created" an acceptable
 meaning of "key" for datasets, given there is no history?
+
+## Addendum, 2 November 2026: what happened to the open points
+
+Ticket T2 asked for DataCite coverage and a recommendation that considered asking the HydroShare team. This report, written on 28 October, covered neither. Later work answers part of both; nothing here changes the findings above.
+
+- **Recommendation, as it turned out.** The harvest of 30 October took usage from public pages and OpenAlex, not from the HydroShare team: `agent/reports/261030_cz-usage-harvest.json` holds OpenAlex totals for 1,097 DOIs and HydroShare landing-page views and downloads for 486 resources. Asking the HydroShare team to expose counts (and per-year history) was never raised with them. It stays an option if the rate since creation proves too crude.
+- **OpenAlex coverage for the papers in the list** (from `agent/reports/261031_cz-highlights-selection.md`, which I have not re-run): of 1,770 papers, 1,276 have a DOI and 1,265 of those were matched by OpenAlex; 494 have no DOI and 11 DOIs were not matched. Title matching to find a DOI was not tried.
+- **DataCite coverage** (from `agent/reports/261031_cz-links.md`, not re-run): asked for 1,276 papers with a DOI, 162 were named by at least one DataCite dataset or software record. This is DataCite as a source of paper-to-dataset links, not of citation counts; DataCite was not tested as a citation source.
+- **Still not checked:** HydroShare's terms of use, whether view counts exclude bots, and usage for data held outside HydroShare.

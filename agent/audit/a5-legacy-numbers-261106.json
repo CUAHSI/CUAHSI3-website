@@ -1,0 +1,123 @@
+{
+  "side": "legacy",
+  "html_files": 761,
+  "files_with_main_element": 761,
+  "signals": {
+    "analytics-id-inline": {
+      "pages": 761,
+      "distinct_targets": 1
+    },
+    "apply-or-post-word-link": {
+      "pages": 38,
+      "distinct_targets": 31
+    },
+    "button": {
+      "pages": 761,
+      "distinct_targets": 6
+    },
+    "donate-word-link": {
+      "pages": 761,
+      "distinct_targets": 1
+    },
+    "file-link": {
+      "pages": 137,
+      "distinct_targets": 6
+    },
+    "form": {
+      "pages": 761,
+      "distinct_targets": 3
+    },
+    "iframe": {
+      "pages": 14,
+      "distinct_targets": 13
+    },
+    "link-to-service:cvent": {
+      "pages": 7,
+      "distinct_targets": 12
+    },
+    "link-to-service:eventbrite": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "link-to-service:github": {
+      "pages": 13,
+      "distinct_targets": 23
+    },
+    "link-to-service:google-forms": {
+      "pages": 6,
+      "distinct_targets": 6
+    },
+    "link-to-service:hydroshare": {
+      "pages": 22,
+      "distinct_targets": 17
+    },
+    "link-to-service:jotform": {
+      "pages": 85,
+      "distinct_targets": 26
+    },
+    "link-to-service:mailchimp": {
+      "pages": 69,
+      "distinct_targets": 4
+    },
+    "link-to-service:qualtrics": {
+      "pages": 3,
+      "distinct_targets": 2
+    },
+    "link-to-service:youtube": {
+      "pages": 761,
+      "distinct_targets": 86
+    },
+    "link-to-service:zoom": {
+      "pages": 99,
+      "distinct_targets": 44
+    },
+    "mailto-link": {
+      "pages": 5,
+      "distinct_targets": 1
+    },
+    "next-previous-link": {
+      "pages": 46,
+      "distinct_targets": 2
+    },
+    "pager-link": {
+      "pages": 51,
+      "distinct_targets": 10
+    },
+    "register-word-link": {
+      "pages": 125,
+      "distinct_targets": 25
+    },
+    "script-host": {
+      "pages": 761,
+      "distinct_targets": 3
+    },
+    "script-kind": {
+      "pages": 761,
+      "distinct_targets": 1
+    },
+    "search-box-or-pagefind-marker": {
+      "pages": 761,
+      "distinct_targets": 2
+    },
+    "select": {
+      "pages": 61,
+      "distinct_targets": 6
+    },
+    "share-link": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "social-link": {
+      "pages": 761,
+      "distinct_targets": 12
+    },
+    "subscribe-word-link": {
+      "pages": 56,
+      "distinct_targets": 10
+    },
+    "tel-link": {
+      "pages": 11,
+      "distinct_targets": 1
+    }
+  }
+}

@@ -1,0 +1,21 @@
+url,known_label,script_verdict,script_status,head_status,method,same,how_known
+https://etap.nsf.gov/award/8245/opportunity/11979,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://cloud.isnew.info/apps/forms/s/SxEJd6cfx2fyBt6b8HroWfsP,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://uwmadison.app.box.com/s/4r648uw3r441d01bxmfqn8ftq78q33aj,live,ok,200,404,GET,same,A3f live check 9 Nov 2026: answered 200
+https://www.usajobs.gov/job/883564000,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://findajob.agu.org/job/8028498/geoai-doctoral-fellowship-at-nc-state-university?TrackID=26,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+http://calcareers.ca.gov/CalHrPublic/Jobs/JobApplicationPackageChecklist.aspx?JobControlId=533301,live,ok,200,307,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://www.governmentjobs.com/careers/iowa/jobs/5497671/western-iowa-basin-coordinator,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://apply.workable.com/sei/j/F974B1502E,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://recruit.ap.uci.edu/JPF10415,live,ok,200,200,HEAD,same,A3f live check 9 Nov 2026: answered 200
+https://www.cuahsi.org/about/governance,live,ok,200,200,HEAD,same,"a page on the legacy site, saved in the snapshot and in A1"
+https://www.cuahsi.org/job-board/river-spill-response-fellow,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/job-board/water-resources-fellow,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/job-board/planner-project-manager,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/job-board/field-ecohydrologist,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/job-board/water-resources-planning-intern,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/job-board/stormwater-management-research-postdoctoral-scholar,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://careers.ua.edu/jobs/postdoctoral-fellow-529157-tuscaloosa-alabama-united-states,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://employment.ucsd.edu/research-and-operations-hydrologist-141678/job/491E2E5ED2C88D361B4BEF5BF895AAAF,dead,dead,404,404,GET,same,A3f live check 9 Nov 2026: 404 or DNS failure
+https://www.cuahsi.org/apply/watersofthack,dead,dead,404,404,GET,same,A3f cited-address check 9 Nov 2026: 404
+https://www.cuahsi.org/register/open-house,dead,dead,404,404,GET,same,A3f cited-address check 9 Nov 2026: 404

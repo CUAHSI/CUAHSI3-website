@@ -1,0 +1,47 @@
+name,type,value
+cuahsi.org,A,67.222.29.10
+cuahsi.org,NS,ns41.worldnic.com.
+cuahsi.org,NS,ns42.worldnic.com.
+cuahsi.org,MX,0 cuahsi-org.mail.protection.outlook.com.
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,verification record (value not kept)
+cuahsi.org,TXT,SPF: v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com include:servers.mcsv.net include:sendgrid.net -all
+cuahsi.org,CAA,(none)
+www.cuahsi.org,A,67.222.29.10
+www.cuahsi.org,CNAME,(none)
+_dmarc.cuahsi.org,TXT,DMARC: v=DMARC1; p=quarantine; pct=100; rua=mailto:[address]; ruf=mailto:[address]; fo=1;
+zz-no-such-host-7431.cuahsi.org,A,67.222.29.10
+mail.cuahsi.org,A,67.222.29.10
+autodiscover.cuahsi.org,CNAME,autodiscover.outlook.com.
+selector1._domainkey.cuahsi.org,CNAME,selector1-cuahsi-org._domainkey.hydrologicscience.onmicrosoft.com.
+zendesk1._domainkey.cuahsi.org,CNAME,zendesk1._domainkey.zendesk.com.
+hydroshare.cuahsi.org,CNAME,www.hydroshare.org.
+hiscentral.cuahsi.org,CNAME,hiscentralsolr.cloudapp.net.
+his.cuahsi.org,CNAME,hydroportal.eastus.cloudapp.azure.com.
+help.cuahsi.org,CNAME,cuahsi.zendesk.com.
+data.cuahsi.org,CNAME,prod-hydroclient-v3.azurewebsites.net.
+subset.cuahsi.org,A,34.107.134.221
+hydroserver.cuahsi.org,CNAME,prod-hydroserver-v3.azurewebsites.net.
+jupyterhub.cuahsi.org,A,34.110.146.118
+matlab.cuahsi.org,A,35.186.216.143
+auth.cuahsi.org,A,34.54.220.163
+apps.cuahsi.org,CNAME,ghs.googlehosted.com.
+ftp.cuahsi.org,CNAME,public.cuahsi.org.
+criticalzone.org,A,75.2.60.5
+criticalzone.org,NS,ns05.domaincontrol.com.
+criticalzone.org,NS,ns06.domaincontrol.com.
+www.criticalzone.org,CNAME,cznet-static.netlify.app.
+czo-archive.criticalzone.org,A,34.120.130.134
+cuahsi3-website.netlify.app,A,18.208.88.157
+cuahsi3-website.netlify.app,A,98.84.224.111
+cuahsi.org,registrar,"Network Solutions, LLC"
+cuahsi.org,expires,2027-10-01T18:22:05Z
+cuahsi.org,lock,clientTransferProhibited
+criticalzone.org,registrar,"GoDaddy.com, LLC"
+criticalzone.org,expires,2027-11-17T20:54:09Z
+criticalzone.org,lock,clientTransferProhibited
