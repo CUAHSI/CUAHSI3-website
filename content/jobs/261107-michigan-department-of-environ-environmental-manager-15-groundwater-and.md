@@ -6,7 +6,7 @@ location: "Lansing, MI"
 type: permanent
 posted: 2026-11-07
 deadline: 2026-11-18
-url: https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.michigan.gov%2Fmdcs%2F0%2C4614%2C7-147-22854_32360---%2C00.html&data=04%7C01%7CKreinerH%40michigan.gov%7C1e6cc00cfb4f4f36fdf408d870744d28%7Cd5fb7087377742ad966a892ef47225d1%7C0%7C0%7C637382992092906984%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=F4CYXcaLOcIkZk%2Bugu8Cal13ZIiFBpSZvfrUmAKqEHE%3D&reserved=0
+url: https://www.governmentjobs.com/careers/michigan/jobs/5539474/environmental-manager-15-groundwater-and-geological-services-section-manager
 source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/396605"
 source_url: https://www.joshswaterjobs.com/jobs/396605
