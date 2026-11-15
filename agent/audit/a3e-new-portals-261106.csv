@@ -1,0 +1,45 @@
+idx,name,owner,scope,url,last_reviewed,matched_legacy
+1,Aquastat,Food and Agriculture Organization of the United Nations (FAO),global,http://www.fao.org/nr/water/aquastat/main/index.stm,2026-10-06,aquastat
+2,eartH2Observe Water Cycle Integrator,Plymouth Marine Laboratory (PML),global,https://wci.earth2observe.eu/,,earth2observe-water-cycle-integrator
+3,GEMStat,International Centre for Water Resources and Global Change (ICWRGC),global,http://www.waterandchange.org/en/#gemstat,,gemstat
+4,Global Earth Observation System of Systems portal,European Space Agency (ESA),global,http://www.geoportal.org/,,global-earth-observation-system-of-systems-portal
+5,Global Flood Detection System,Global Disaster Alert and Coordination System (GDACS),global,http://www.gdacs.org/flooddetection/overview.aspx,,global-flood-detection-system
+6,Global Groundwater Information System,International Groundwater Resources Assessment Centre (IGRAC),global,https://www.un-igrac.org/global-groundwater-information-system-ggis,,global-groundwater-information-system
+7,Global Mercury Observation System,"National Research Council of Italy (CNR), Institute of Atmospheric Pollution Research",global,https://www.gmos.eu,,global-mercury-observation-system
+8,Global Rivers Observatory,,global,http://www.globalrivers.org/,,global-rivers-observatory
+9,Global Runoff Data Centre,Bundesamt für Gewässerkunde,global,http://www.bafg.de/GRDC/EN/Home/homepage_node.html,,global-runoff-data-centre
+10,Groundwater Assessment Platform,Eawag,global,https://www.gapmaps.org/Home/Public,,groundwater-assessment-platform
+11,HydroLAKES,World Wildlife Fund (WWF),global,http://www.hydrosheds.org/page/hydrolakes,,hydrolakes
+12,Hydrological data and maps based on SHuttle Elevation Derivatives at multiple Scales,World Wildlife Fund (WWF),global,http://www.hydrosheds.org/,,hydrological-data-and-maps-based-onshuttleelevationderivatives-at-multiples
+13,International Centre for Water Resources and Global Change,,Global,http://www.gtn-h.info,,international-centre-for-water-resourses-and-global-change
+14,International Hydrological Programme’s Water Information Network System,Unesco,global,https://core.unesco.org/en/home,,international-hydrological-programmes-water-information-network-system
+15,IWRM Data Portal,UNEP-DHI Partnership,global,http://iwrmdataportal.unepdhi.org/,,iwrm-data-portal
+16,"Water Isotope System for Data Analysis, Visualization, and Electronic Retrieval",International Atomic Energy Agency (IAEA),global,http://www-naweb.iaea.org/napc/ih/IHS_resources_isohis.html,,water-isotope-system-for-data-analysis-visualization-and-electronic-retriev
+17,Waterisotopes.org,Gabriel Bowen/IsoMAP group,Global,http://wateriso.utah.edu/waterisotopes/,,waterisotopes-org
+18,WHO/UNICEF Joint Monitoring Programme for Water Supply and Sanitation,"World Health Organization (WHO), Unicef",global,https://washdata.org,,who-unicef-joint-monitoring-programme-for-water-supply-and-sanitation
+19,WMO Hydrological Observing System,World Meteorological Organization (WMO),global,https://public.wmo.int/en,,wmo-hydrological-observing-system
+20,CUAHSI Data Services,"Consortium of Universities for the Advancement of Hydrological Science, Inc.",USA,https://www.cuahsi.org/data-services/solutions,,cuahsi-data-services
+21,Open Water Data Initiative,Federal Geographic Data Committee (FGDC),USA,https://www.fgdc.gov/initiatives/open-water-data-initiative,,open-water-data-initiative
+22,USGS Water Data for the Nation,US Geological Survey (USGS),USA,https://waterdata.usgs.gov/nwis,,usgs-water-data-for-the-nation
+23,USGS Water Services,US Geological Survey (USGS),USA,https://waterservices.usgs.gov,,usgs-water-services
+24,Water Data Online,"Commonwealth of Australia, Bureau of Meteorology (BOM)",Australia,http://www.bom.gov.au/waterdata/,,water-data-online
+25,Advanced Weather and Climate Forecasting System,Bangladesh Water Development Board,Bangladesh and South Asia,https://bwdb.portal.gov.bd,,advanced-weather-and-climate-forecasting-system
+26,DataStream,The DataStream Initiative,Canada,https://datastream.org,2026-10-06,datastream
+27,Jupiter (National well database),Geological Survey of Denmark and Greenland,Denmark,http://www.geus.dk/UK/data-maps/jupiter/Pages/default.aspx,,jupiter-national-well-database
+28,Eurostat Water statistics,European Commission,Europe,http://ec.europa.eu/eurostat/statistics-explained/index.php/Water_statistics,,eurostat-water-statistics
+29,Water Data Centre,European Environment Agency,Europe,http://www.eea.europa.eu/themes/water/dc,,water-data-centre
+30,Freshwater Information Platform,"BOKU Vienna, UDE Essen, IGB Berlin & RBINS Brussels","Europe, partly global",http://www.freshwaterplatform.eu/,,freshwater-information-platform
+31,Joint Research Centre Water Portal,European Commission,"Europe, partly global",https://water.jrc.ec.europa.eu/,,joint-research-centre-water-portal
+32,The Farm Platform Data Portal,Rothamsted Research,"North Wyke in Devon, UK",https://nwfp.rothamsted.ac.uk/,,the-farm-platform-data-portal
+33,Intelligent Dam Decisions and Assessment,University of Washington,Oregon and Washington,http://depts.washington.edu/saswe/damdss/#,,intelligent-dam-decisions-and-assessment
+34,HYdrological Predictions for the Environment,Swedish Meteorological and Hydrological Institute (SMHI),selected regions (global),http://hypeweb.smhi.se/,,hydrological-predictions-for-the-environment
+35,Réseau des bassins versants (Network of Drainage Basins),,selected regions (global),http://portailrbv.sedoo.fr,,reseau-des-bassins-versants-network-of-drainage-basins
+36,Transboundary Waters Assessment Programme (TWAP) Data Portal,United Nations Environment Program (UNEP),selected regions (global),http://www.geftwap.org/data-portal,,transboundary-waters-assessment-programme-twap-data-portal
+37,World Hydrological Cycle Observing System,World Meteorological Organization (WMO),selected regions (global),http://www.whycos.org/whycos/,,world-hydrological-cycle-observing-system
+38,South Asian Surface Water Modeling System,University of Washington,South and Southeast Asia,http://depts.washington.edu/saswe/,,south-asian-surface-water-modeling-system
+39,Mekong and Red River Water Forecasting System,Vietnam National Water Resources Planning and Investigation (NAWAPI),"South East Asia (Vietnam, Cambodia and Laos)",http://forecasting.vaci.org.vn,,mekong-and-red-river-water-forecasting-system
+40,National long-term surveillance of Swiss rivers,Eawag,Switzerland,https://www.eawag.ch/en/research/water-for-ecosystem/ecosystems/rivers-program/,,national-long-term-surveillance-of-swiss-rivers
+41,Swiss Federal Office of the Environment (FOEN) – Topic Water,Swiss Federal Office of the Environment (FOEN),Switzerland,https://www.bafu.admin.ch/bafu/en/home/topics/water.html,,swiss-federal-office-of-the-environment-foen-topic-water
+42,Centre for Ecology & Hydrology: Data,Research Centre of the Natural Environment Research Council (NERC),UK,http://www.ceh.ac.uk/data,,centre-for-ecology-hydrology-data
+43,National River Flow Archive,Centre for Ecology & Hydrology (CEH); Research Centre of the Natural Environment Research Council (NERC),UK,http://nrfa.ceh.ac.uk/data/search,,national-river-flow-archive
+44,Monitor My Watershed,Stroud Water Research Center,,https://monitormywatershed.org/,,monitor-my-watershed

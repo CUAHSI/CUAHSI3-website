@@ -1,0 +1,4 @@
+261112 | content/strategic-plan-2010 | start | A8 (org issue 113): add the third strategic plan to the documents page; content branch (entry in documents.json plus the PDF in public/documents/strategic-plans/)
+261112 | content/strategic-plan-2010 | merged | PR 225 (A7) merged by Jordan; PR 221 (dead links) still open when checked
+261112 | content/strategic-plan-2010 | note | Jordan decided: cover title, 2010–2015, resample the PDF, leave out the Diversity and Inclusion plan. Resampling with the October method (120 dpi, quality 70) saved 61 KB of 4.76 MB (the size is in about 70 photographs and one large stream, not in oversampled images), so the file is hosted as supplied, byte for byte
+261112 | content/strategic-plan-2010 | pr | PR 226 opened, base checked: https://github.com/jordansread/CUAHSI3-website/pull/226

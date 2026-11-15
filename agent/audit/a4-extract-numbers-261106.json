@@ -1,0 +1,73 @@
+{
+  "built_html_files": 186,
+  "outward_link_occurrences": 7553,
+  "distinct_addresses": 3485,
+  "distinct_hosts": 264,
+  "address_page_pairs": 7407,
+  "mailto_links": 55,
+  "tel_links": 0,
+  "resource_references_not_checked": 596,
+  "top_hosts": [
+    [
+      "doi.org",
+      1832
+    ],
+    [
+      "www.hydroshare.org",
+      594
+    ],
+    [
+      "czo-archive.criticalzone.org",
+      503
+    ],
+    [
+      "www.cuahsi.org",
+      73
+    ],
+    [
+      "www.nsf.gov",
+      70
+    ],
+    [
+      "www.joshswaterjobs.com",
+      47
+    ],
+    [
+      "github.com",
+      16
+    ],
+    [
+      "criticalzone.org",
+      11
+    ],
+    [
+      "us3.campaign-archive.com",
+      10
+    ],
+    [
+      "cuahsi.jotform.com",
+      6
+    ],
+    [
+      "labs.waterdata.usgs.gov",
+      6
+    ],
+    [
+      "web.cvent.com",
+      6
+    ],
+    [
+      "findajob.agu.org",
+      5
+    ],
+    [
+      "orcid.org",
+      5
+    ],
+    [
+      "www.linkedin.com",
+      5
+    ]
+  ],
+  "http_not_https": 67
+}

@@ -1,0 +1,108 @@
+block,list_page,name,name_runs_on_in_h2,stub,stub_saved,degrees_on_list,list_words,stub_words,stub_website,links_on_list
+1,1,Arizona State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-arizona-state-university,yes,masters|phd,13,26,http://www.asu.edu/,1
+2,1,Auburn University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-auburn-university,yes,,5,14,https://aaes.auburn.edu/wrc/education/,0
+3,1,Boise State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-boise-state-university,yes,masters,19,40,https://www.boisestate.edu/coen-ce/graduate-students/areas-of-study/water-resources-engineering/,0
+4,1,Brigham Young University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-brigham-young-universit,yes,,14,22,https://pws.byu.edu/,0
+5,1,City College of New York,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-city-college-of-new-york,yes,masters|phd,8,25,https://www.ccny.cuny.edu/civileng,1
+6,1,Clarkson University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-clarkson-university,yes,masters|phd,4,27,https://www.clarkson.edu/graduate/civil-environmental-engineering,0
+7,1,Clemson University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-clemson-university,yes,masters|phd,36,50,http://www.clemson.edu/ces/eees/,0
+8,1,Colorado School of Mines,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-colorado-school-of-mines,yes,masters|phd,11,29,https://hydrology.mines.edu/,0
+9,1,Colorado State University,no,/students/graduate-programs-in-water-science-dev/colorado-state-university,yes,,0,19,https://www.engr.colostate.edu/ce/graduate/hydrologic-science-and-engineering/,0
+10,1,Colorado State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-colorado-state-university,yes,masters|phd,17,32,http://warnercnr.colostate.edu/ess-home,0
+11,2,Columbia University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-columbia-university,yes,masters,31,42,https://www.earth.columbia.edu,0
+12,2,Dartmouth College,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-dartmouth-college,yes,masters|phd,5,18,https://sites.dartmouth.edu/EEES/,0
+13,2,Drexel University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-drexel-university,yes,masters|phd,14,35,https://drexel.edu/engineering/academics/departments/civil-architectural-environmental-engineering/academic-programs/graduate/,0
+14,2,Duke University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-duke-university,yes,masters|phd,4,22,https://pratt.duke.edu/research/resilience,0
+15,2,Georgia State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-georgia-state-university,yes,masters,6,24,https://geosciences.gsu.edu/grad-programs/m-s-degree-in-geosciences/,0
+16,2,Humboldt State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-humboldt-state-university,yes,masters|phd,6,21,https://cnrs.humboldt.edu/programs/graduate,0
+17,2,Illinois State University,no,/students/graduate-programs-in-water-science-dev/illinois-state-university,yes,,0,17,https://geo.illinoisstate.edu/academics/hydrogeology/,0
+18,2,Iowa State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-iowa-state-university,yes,masters|phd,62,75,http://www.iastate.edu/,6
+19,2,Johns Hopkins University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-johns-hopkins-university,yes,masters|phd,20,33,http://www.jhu.edu/,3
+20,2,Kansas State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-kansas-state-university,yes,masters|phd,4,20,http://www.ce.ksu.edu/grad/degrees/,0
+21,3,Kent State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-kent-state-university,yes,masters|phd,19,34,https://www.kent.edu/biology/graduate,2
+22,3,Louisiana State University,no,/students/graduate-programs-in-water-science-dev/louisiana-state-university,yes,,0,18,https://www.lsu.edu/eng/cee/people/area-water.php,0
+23,3,Manhattan College,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-manhattan-college,yes,masters|phd,11,28,https://manhattan.edu/academics/graduate-programs/environmental-engineering.php,1
+24,3,Marquette University,no,/students/graduate-programs-in-water-science-dev/environmental-and-water-resources-engineering,yes,,5,15,https://www.marquette.edu/water-quality-center/,0
+25,3,Massachusetts Institute of Technology,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-massachusetts-institute-of-technology,yes,masters|phd,12,27,http://mit.whoi.edu/home,0
+26,3,Michigan State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-michigan-state-university,yes,masters|phd,5,17,https://msu.edu,0
+27,3,Michigan State University,no,/students/graduate-programs-in-water-science-dev/water-science-network,yes,,3,17,https://www.canr.msu.edu/iwr/,0
+28,3,Missouri University of Science and Technology,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-missouri-university-of-science-and-technology,yes,masters|phd,21,37,https://waterscience.mst.edu/,1
+29,3,Murray State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-murray-state-university,yes,masters,4,16,http://www.murraystate.edu/wsi/,0
+30,3,New Mexico Institute of Mining and Technology,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-new-mexico-institute-of-mining-and-technology,yes,masters|phd,8,34,https://www.nmt.edu/academics/ees/hydrology/index.php,0
+31,4,New Mexico State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-new-mexico-state-university,yes,masters|phd,9,23,https://wsm.nmsu.edu/,0
+32,4,North Carolina State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-north-carolina-state-university,yes,masters|phd,0,82,https://www.ncsu.edu,0
+33,4,Northeastern University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-northeastern-university,yes,masters|phd,11,1270,http://www.civ.neu.edu/,1
+34,4,Northern Arizona University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-northern-arizona-university,yes,masters|phd,19,34,https://nau.edu/ses/graduate-degrees/,0
+35,4,Northwestern University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-northwestern-university,yes,masters|phd,26,38,http://www.northwestern.edu/,3
+36,4,Oregon State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-oregon-state-university,yes,masters|phd,9,22,https://gradwater.oregonstate.edu/,0
+37,4,Pennsylvania State University,no,/students/graduate-programs-in-water-science-dev/pennsylvania-state-university,yes,,22,30,https://www.psu.edu/,0
+38,4,Plymouth State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-plymouth-state-university,yes,undergraduate,4,21,http://www.plymouth.edu/environment-sustainability/program/bs/environmental-science-policy,0
+39,4,Portland State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-portland-state-university,yes,masters|phd,5,21,https://www.pdx.edu/civil-environmental-engineering/,0
+40,4,Purdue University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-purdue-university,yes,masters|phd,26,38,https://www.purdue.edu,0
+41,5,Rutgers University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-rutgers-university,yes,masters|phd,14,26,https://soe.rutgers.edu,0
+42,5,San Diego State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-san-diego-state-university,yes,masters|phd,31,45,https://geography.sdsu.edu/,0
+43,5,South Dakota State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-south-dakota-state-university,yes,masters|phd,26,40,https://www.sdstate.edu/,4
+44,5,Southern Illinois University Carbondale,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-southern-illinois-university-carbondale,yes,masters|phd,25,40,https://gradschool.siu.edu/academics/,0
+45,5,State University of New York (SUNY),no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-state-university-of-new-york-suny,yes,masters|phd,7,27,https://www.esf.edu,0
+46,5,Syracuse University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-syracuse-university,yes,masters|phd,7,22,https://thecollege.syr.edu/earth-sciences-department/,1
+47,5,Temple University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-temple-university,yes,masters,6,17,https://ees.cst.temple.edu/,2
+48,5,Texas A&M University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-texas-am-university,yes,masters|phd,7,22,http://waterprogram.tamu.edu/,0
+49,5,The Ohio State University,no,/students/graduate-programs-in-water-science-dev/the-ohio-state-university,yes,,0,17,https://fabe.osu.edu/graduate/specializationresearch-areas,0
+50,5,The Ohio State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-ohio-state-university,yes,masters|phd,12,34,https://earthsciences.osu.edu/divisions/water-climate-env,1
+51,6,Tufts University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-tuft-university,yes,,5,16,https://engineering.tufts.edu/cee/current/mscee/water,0
+52,6,Universidad de las Americas Puebla,no,/students/graduate-programs-in-water-science-dev/graduate-program-at-universidad-de-las-americas-puebla,yes,phd,5,26,https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2,0
+53,6,Universitat Politècnica de Catalunya,no,/students/graduate-programs-in-water-science-dev/universitat-politècnica-de-catalunya,yes,,0,18,https://www.upc.edu/en/masters/groundwater-hydrology,0
+54,6,University Abdou Moumouni,no,/students/graduate-programs-in-water-science-dev/university-abdou-moumouni,yes,,0,12,https://www.uam.edu.ne/contact.php,0
+55,6,University at Buffalo,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-at-buffalo,yes,,24,37,https://www.buffalo.edu/grad.html,3
+56,6,University at Buffalo,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-at-buffalo,yes,masters|phd,9,26,http://engineering.buffalo.edu/civil-structural-environmental.html,0
+57,6,University of Akron,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-akron,yes,masters|phd,11,25,http://www.uakron.edu/geology/,0
+58,6,University of Alabama,no,/students/graduate-programs-in-water-science-dev/surface-water-and-hydrometeorology-modeling-and-machine-learning,yes,,8,16,https://geo.ua.edu,0
+59,6,University of Alaska Fairbanks,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-alaska-fairbanks,yes,masters|phd,6,21,http://ine.uaf.edu/werc/,0
+60,6,University of Arizona,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-arizon,yes,masters|phd|undergraduate,11,25,http://has.arizona.edu/,0
+61,7,University of California Davis,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-davis,yes,masters|phd,13,33,https://www.ucdavis.edu/graduate-programs/civil-and-environmental-engineering,0
+62,7,University of California Irvine,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-irvine,yes,masters|phd,5,21,https://engineering.uci.edu/dept/cee,0
+63,7,University of California Riverside,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-california-riverside,yes,masters|phd,11,26,http://envisci.ucr.edu/graduate/,0
+64,7,"University of California, Merced",no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-california-merced,yes,,4,19,https://www.ucmerced.edu/majors-and-minors/environmental-engineering-bs,0
+65,7,University of Colorado,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-colorado,yes,masters|phd,10,22,http://colorado.edu/,0
+66,7,University of Delaware,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-delaware,yes,,4,15,http://www.udel.edu/watersciencepolicy/index.html,0
+67,7,University of Florida,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-florida,yes,,5,14,http://soils.ifas.ufl.edu/,0
+68,7,University of Florida Water Institute,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-florida-water-institute,yes,masters|phd,4,21,https://waterinstitute.ufl.edu/education/wigf/,0
+69,7,University of Georgia,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-georgia,yes,masters|phd,3,16,http://water.uga.edu/,0
+70,7,University of Hawaii at Manoa,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-hawaii-at-manoa,yes,,25,1276,https://yinphantsang.org/,0
+71,8,University of Idaho,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-idaho,yes,masters|phd,14,30,https://www.uidaho.edu/cals/water-resources,0
+72,8,University of Illinois,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-illinois,yes,masters|phd,31,43,http://illinois.edu/,0
+73,8,University of Iowa,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-iowa,yes,,24,35,https://cee.engineering.uiowa.edu/graduate-program,0
+74,8,University of Kansas,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-kansas,yes,masters|phd|professional,921,956,http://hydrogeology.ku.edu/,11
+75,8,University of Kentucky,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-kentucky,yes,masters|phd,9,22,http://www.uky.edu/,0
+76,8,University of Louisiana at Lafayette,no,/students/graduate-programs-in-water-science-dev/university-of-louisiana-at-lafayette,yes,,0,11,https://louisiana.edu/,0
+77,8,University of Massachusetts Boston,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-massachusetts-boston,yes,masters|phd,13,27,http://www.umb.edu/,0
+78,8,University of Memphis Ground Water Institute,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-memphis-ground-water-institute,yes,masters|phd,2,28,https://umwa.memphis.edu/campusmap/deptsbldg.php?Building_Id=29&Dept_Id=224,0
+79,8,University of Minnesota,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-minnesota,yes,masters,3,14,http://wrs.umn.edu/,0
+80,8,University of Missouri,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-missouri,yes,masters|phd,3,16,https://snr.missouri.edu,0
+81,9,University of Nebraska Lincoln,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nebraska-lincoln,yes,masters|phd,19,34,http://water.unl.edu/home,0
+82,9,University of Nevada Las Vegas,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nevada-las-vegas,yes,masters|phd,3,19,http://www.unlv.edu/sciences,0
+83,9,University of Nevada Reno,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nevada-reno,yes,masters|phd,16,36,https://www.unr.edu/hydrologic-sciences,0
+84,9,University of New Mexico,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-new-mexico,yes,masters|phd,11,25,https://wrp.unm.edu/,0
+85,9,University of North Carolina Charlotte,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-north-carolina-charlotte,yes,masters|phd,14,29,http://www.uncc.edu/,0
+86,9,University of North Dakota,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-north-dakota,yes,masters|phd,16,29,http://und.edu/,0
+87,9,University of Notre Dame,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-notre-dame,yes,masters|phd,8,26,https://engineering.nd.edu/departments-programs/graduate-programs/,0
+88,9,University of Oklahoma,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-oklahoma,yes,masters|phd|professional,24,46,http://www.ou.edu/content/coe/cees/grad_programs/environmental.html,0
+89,9,University of Pittsburgh,no,/students/graduate-programs-in-water-science-dev/university-of-pittsburgh,yes,,0,13,https://www.geology.pitt.edu/,0
+90,9,University of Rhode Island,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-rhode-island,yes,masters|phd,2,17,https://www.uri.edu/academics/,0
+91,10,University of South Carolina,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-south-carolina,yes,masters|phd,19,33,http://www.sc.edu/,0
+92,10,University of South Florida,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-south-florida,yes,masters|phd,2,21,https://www.usf.edu/engineering/cee/graduate/index.aspx,0
+93,10,University of Tennessee,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-tennessee,yes,masters|phd,14,27,http://www.utk.edu/,3
+94,10,University of Texas at Arlington,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-texas-at-arlington,yes,masters|phd,14,34,http://www.uta.edu/uta/,0
+95,10,University of Texas at Austin,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-texas-at-austin,yes,masters|phd,1,19,http://www.jsg.utexas.edu/education/graduate/,0
+96,10,"University of Texas, San Antonio",no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-texas-san-antonio,yes,masters|phd,14,29,https://www.utsa.edu,0
+97,10,University of Trento,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-trento,yes,masters|phd,0,15,https://www.unitn.it,0
+98,10,University of Utah,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-utah,yes,professional,5,18,https://environment.utah.edu/hydro-certificate/,0
+99,10,University of Washington,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-washington,yes,,7,16,https://www.ce.washington.edu/,0
+100,10,University of Wisconsin,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-wisconsin,yes,masters|phd,36,49,http://www.wisc.edu/,0
+101,11,University of Wisconsin - Madison,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-wisconsin-madison,yes,masters,12,31,https://www.nelson.wisc.edu/graduate/water-resources-management/index.php,0
+102,11,University of Wisconsin - Madison,no,/students/graduate-programs-in-water-science-dev/university-of-wisconsin-madison,yes,,0,12,https://limnology.wisc.edu/,0
+103,11,University of Wisconsin-Milwaukee,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-wisconsin-milwaukee,yes,masters|phd,3,18,https://uwm.edu/freshwater/academics/,0
+104,11,University of Wyoming,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-wyoming,yes,masters|phd,7,20,https://www.uwyo.edu,0
+105,11,University of Zurich,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-university-of-zurich,yes,masters,9,25,https://www.degrees.uzh.ch/en/master/50000008/51030723/,0
+106,11,Utah State University,no,/students/graduate-programs-in-water-science-dev/graduate-programs-at-utah-state-university,yes,masters|phd,5,19,http://water.usu.edu/index,0
+107,11,Virginia Tech,no,/students/graduate-programs-in-water-science-dev/virginia-tech,yes,masters|phd|professional|undergraduate,0,21,https://www.vwrrc.vt.edu,0

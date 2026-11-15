@@ -1,0 +1,51 @@
+{
+  "date": "261106",
+  "legacy_pages": 88,
+  "by_kind": {
+    "archive": 6,
+    "event": 61,
+    "listing": 1,
+    "series": 20
+  },
+  "event_pages_upcoming": 2,
+  "event_pages_past": 59,
+  "event_pages_no_date": 1,
+  "event_pages_with_register": 56,
+  "pages_with_youtube_ids": 18,
+  "legacy_unique_video_ids": 75,
+  "legacy_video_pages": {
+    "/cyberseminars/2021-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/2022-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/2023-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/2024-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/2025-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/2026-women-advancing-river-research-lecture-series": 1,
+    "/cyberseminars/building-skills-and-finding-collaborators-for-hydrogeophysics": 1,
+    "/cyberseminars/challenges-and-opportunities-in-data-sharing-critical-zone-science": 1,
+    "/cyberseminars/current-research-in-hydrogeodesy-and-hydroseismology": 1,
+    "/cyberseminars/hydrologic-science-and-indigenous-voices-joesph-gazing-wolf-north-dakota": 1,
+    "/cyberseminars/innovative-technical-tools-and-methods": 1,
+    "/cyberseminars/navigating-academic-waters-navigating-todays-federal-job-market": 1,
+    "/cyberseminars/navigating-academic-waters-the-scientist-behind-the-science-the-power-of-storytelling-in-academic-and-professional-spaces": 1,
+    "/cyberseminars/neon-hydrology-hydrologic-data-products-and-tools-published-by-the-national-ecological-observatory-network-an-introduction": 1,
+    "/cyberseminars/post-field-season-data-practices-for-research-success": 1,
+    "/cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2": 1,
+    "/cyberseminars/synthesis-workshop-series-easter-coastal-region-2": 1,
+    "/cyberseminars/synthesis-workshop-series-easter-coastal-region": 1
+  },
+  "new_files": 25,
+  "new_with_video_id": 23,
+  "new_unpublished": 4,
+  "new_unparsed": 0,
+  "ids_in_both": 3,
+  "ids_only_legacy": 72,
+  "ids_only_new": 20,
+  "event_match_levels": {
+    "none": 44,
+    "exact": 3,
+    "probable": 12,
+    "weak": 1,
+    "possible": 1
+  },
+  "new_unmatched": 9
+}

@@ -1,0 +1,4 @@
+261112 | task/audit-cutover-rehearsal | start | A7 (org issue 112): cut-over rehearsal and checklist; report, scripts and data only, nothing fixed
+261112 | task/audit-cutover-rehearsal | merged | PR 224 (A6) merged by Jordan; PR 221 (dead links) still open when checked
+261112 | task/audit-cutover-rehearsal | defect | Reviewer: section references in the summary pointed at the wrong sections; the go/no-go row count (18, and 8 for condition 5) was 19 and 6; the ownership of Google addresses, headers, registration date and record times had no data file behind them (now a7_adhoc_checks.txt); the wildcard record and the criticalzone.org apex were stated more firmly than the data allow; 73 links should read 73 addresses; "ten pages" listed nine. caught: reviewer
+261112 | task/audit-cutover-rehearsal | pr | PR 225 opened, base checked: https://github.com/jordansread/CUAHSI3-website/pull/225

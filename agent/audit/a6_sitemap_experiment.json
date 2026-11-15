@@ -1,0 +1,19 @@
+{
+  "what": "Built twice from the same code. As deployed: sitemap 0 URLs. With assets/robots.txt changed to allow all (not committed) and NUXT_SITE_URL=https://example.org: 574 URLs, 185 built pages, 389 addresses with no page",
+  "not_built_by_first_segment": {
+    "/board": 2,
+    "/community": 5,
+    "/critical-zone": 10,
+    "/cyberseminars": 88,
+    "/data-management": 1,
+    "/events": 45,
+    "/jobs": 149,
+    "/news": 23,
+    "/newsletter": 10,
+    "/programs": 6,
+    "/research": 41,
+    "/team": 9
+  },
+  "second_experiment": "Same, and strictNuxtContentPaths: true also removed from nuxt.config.ts (not committed): 185 URLs, 0 with no page. 15 of the 185 are redirect stubs under /highlights",
+  "isolation": "robots.txt allow-all only: 574 URLs. Site address (NUXT_SITE_URL) only: 0 URLs."
+}

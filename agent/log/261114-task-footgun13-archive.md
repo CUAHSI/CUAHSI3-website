@@ -1,0 +1,9 @@
+261114 | task/footgun13-archive | start | Code-quality epic (CUAHSI/CUAHSI3-website#117), Phase A repair: footgun 13 in pages/learn-train/archive/index.vue (Noticed 261008); copy the events page clock pattern
+261114 | task/footgun13-archive | note | Rule 9 comparison: archive page HTML of origin/main and the branch, built minutes apart, has identical markup; the only differences are in the payload (content integrity and prerenderedAt timestamps, both build times, and the new state key archive-rendered-at holding the build time)
+261114 | task/footgun13-archive | note | Playwright with page.clock set to 5 Jan 2027 (after the only upcoming workshop, Snow Field School on 4 Jan 2027): the main build logged "Hydration completed but contains mismatches." and the school's link vanished from the page (0 links); the branch build logged nothing and listed it under Past (1 link). With the real clock both builds logged nothing
+261114 | task/footgun13-archive | defect | Reviewer: the new Noticed line said the archive problem "is fixed" on this branch, a claim the append-only list could not take back; reworded to "addressed ... (not yet merged)". caught: reviewer
+261114 | task/footgun13-archive | pr | jordansread/CUAHSI3-website#231 opened at Jordan's go-ahead; base checked
+261114 | task/footgun13-archive | merged | jordansread/CUAHSI3-website#228 (plan) and #229 (visual baseline retake) merged by Jordan
+261114 | task/footgun13-archive | note | Merged the default branch in after #229; agent/roadmap.md conflicted on two Noticed appends; kept both sides, the default branch's lines first
+261114 | task/footgun13-archive | merged | jordansread/CUAHSI3-website#230 (footgun 6, notFound with a 404) merged by Jordan
+261114 | task/footgun13-archive | note | Merged the default branch in again after #230; agent/roadmap.md conflicted on two Noticed appends; kept both sides, the default branch's line first

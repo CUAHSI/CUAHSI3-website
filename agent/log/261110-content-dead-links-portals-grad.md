@@ -1,0 +1,4 @@
+261110 | content/dead-links-portals-grad | start | Jordan, after audit A4 (PR 220): "Remove all dead links in the portals table; try to find replacement grad links to update those." Six portal rows removed, nine graduate-directory addresses replaced.
+261110 | content/dead-links-portals-grad | intervention | Jordan: "it is merged" (PR 220), then the request above and: "we will need to host a code of conduct page, please task with creating that" (the page is a separate task, not in this branch).
+261110 | content/dead-links-portals-grad | intervention | Jordan: "Yes to all of those questions/decisions. Push and open the PR" (Florida row text updated to Water Scholars; Ohio State row trimmed to FABE, the department the link covers).
+261110 | content/dead-links-portals-grad | pr | PR 221 opened (fork): six dead portal rows removed, nine graduate-directory links replaced, two row texts updated; reviewer ran: 4 questions, none needing a fix.

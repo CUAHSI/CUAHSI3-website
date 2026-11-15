@@ -1,0 +1,234 @@
+{
+  "jobs_legacy_addresses": 86,
+  "jobs_legacy_sources": {
+    "in_snapshot_now": 14,
+    "october_typed_job": 13,
+    "october_typed_job_still_in_snapshot": 4,
+    "only_in_a2_file": 63,
+    "cited_by_this_site": 7
+  },
+  "jobs_legacy_listing_blocks": {
+    "../job-board.html": 10,
+    "p2.html": 4
+  },
+  "jobs_legacy_with_clicks": 77,
+  "jobs_legacy_clicks_total": 546,
+  "jobs_legacy_hidden_contact_pages": 12,
+  "jobs_legacy_snapshot_with_apply_link": 12,
+  "jobs_new_rows": 149,
+  "jobs_new_published": 72,
+  "jobs_new_by_source": {
+    "(none)": 6,
+    "joshswaterjobs": 105,
+    "newsletter": 6,
+    "usajobs": 27,
+    "agu": 5
+  },
+  "jobs_levels": {
+    "exact": 9,
+    "probable": 0,
+    "weak": 13,
+    "none": 64
+  },
+  "jobs_levels_by_source": {
+    "in_snapshot_now": {
+      "n": 14,
+      "exact": 2,
+      "probable": 0,
+      "weak": 3,
+      "none": 9
+    },
+    "not_in_snapshot_now_but_known": {
+      "n": 72,
+      "exact": 7,
+      "probable": 0,
+      "weak": 10,
+      "none": 55
+    }
+  },
+  "jobs_matched_by": {
+    "title overlap": 13,
+    "posting link here is the legacy address": 6,
+    "apply link = posting link": 2,
+    "same title": 1
+  },
+  "jobs_new_without_legacy": 127,
+  "jobs_new_with_legacy": 22,
+  "jobs_new_matched_published": {
+    "no": 13,
+    "yes": 9
+  },
+  "jobs_new_pointing_at_legacy_host": [
+    "260401-icprb-spill-fellow.md (published false)",
+    "260401-icprb-water-resources-fellow.md (published false)",
+    "260401-minnehaha-planner.md (published false)",
+    "260501-kgs-field-ecohydrologist.md (published false)",
+    "260501-seattle-water-intern.md (published false)",
+    "260501-uvm-stormwater-postdoc.md (published false)"
+  ],
+  "jobs_facts_matched_pairs": {
+    "n": 9,
+    "employer": {
+      "same or overlapping": 2
+    },
+    "apply_link": {
+      "same": 2
+    },
+    "deadline": {
+      "same": 1
+    },
+    "posted_days_apart": [
+      7,
+      8,
+      70
+    ]
+  },
+  "jobs_new_links": {
+    "checked": 149,
+    "verdicts": {
+      "dead": 8,
+      "live": 139,
+      "moved": 1,
+      "blocked": 1
+    },
+    "by_published": {
+      "false:dead": 8,
+      "false:live": 68,
+      "true:live": 71,
+      "true:moved": 1,
+      "false:blocked": 1
+    },
+    "dead_files": [
+      "260401-icprb-spill-fellow.md (published false, legacy host)",
+      "260401-icprb-water-resources-fellow.md (published false, legacy host)",
+      "260401-minnehaha-planner.md (published false, legacy host)",
+      "260501-kgs-field-ecohydrologist.md (published false, legacy host)",
+      "260501-seattle-water-intern.md (published false, legacy host)",
+      "260501-uvm-stormwater-postdoc.md (published false, legacy host)",
+      "260601-alabama-water-institute-postdoc.md (published false, careers.ua.edu)",
+      "261008-ucsd-cw3e-research-operations-hydrologist.md (published false, employment.ucsd.edu)"
+    ],
+    "moved": [
+      "261016-sonoma-county-water-agency-water-agency-engineer-i-extra-help.md -> sonomacounty.gov/a/114023"
+    ]
+  },
+  "jobs_new_links_by_source_dead": {
+    "(none)": 6,
+    "newsletter": 2
+  },
+  "cited_eight": {
+    "dead": 8
+  },
+  "cited_eight_statuses": {
+    "404": 8
+  },
+  "cited_eight_with_title": 0,
+  "workshops_legacy": 21,
+  "workshops_legacy_typed_workshop_in_october": 20,
+  "workshops_legacy_added_since_october": [
+    "cuahsi-skills-certificate-pilot-reproducible-workflows-with-open-water-data-nasa-noaa-usgs-river-data-access"
+  ],
+  "workshops_legacy_pages_in_folder": 23,
+  "workshops_legacy_with_hidden_contact": 1,
+  "workshops_levels": {
+    "exact": 2,
+    "probable": 3,
+    "weak": 0,
+    "none": 16
+  },
+  "workshops_none_with_a_series_page": [
+    "Snow Measurement Field School 2023 -> programs/snow-field-school.md",
+    "Snow Measurement Field School 2024 -> programs/snow-field-school.md",
+    "Snow Measurement Field School 2025 -> programs/snow-field-school.md",
+    "Snow Measurement Field School January 2022 -> programs/snow-field-school.md"
+  ],
+  "workshops_matched_kinds": {
+    "events": 4,
+    "research": 1
+  },
+  "workshops_start_same": {
+    "same": 4,
+    "differ": 1
+  },
+  "workshops_by_year": {
+    "2019": 6,
+    "2021": 2,
+    "2022": 4,
+    "2023": 2,
+    "2024": 1,
+    "2025": 2,
+    "2026": 3,
+    "2027": 1
+  },
+  "workshops_none_by_year": {
+    "2019": 6,
+    "2021": 2,
+    "2022": 4,
+    "2023": 2,
+    "2024": 1,
+    "2025": 1
+  },
+  "workshops_new_events_of_type_workshop": 13,
+  "workshops_new_events_of_type_workshop_with_legacy": 4,
+  "workshops_new_events_workshop_without_legacy": [
+    "events/260501-hydrolearn.md",
+    "events/260501-uta-workshop.md",
+    "events/260601-water-prediction-innovators.md",
+    "events/260625-near-surface-geophysics-workshop.md",
+    "events/260701-watersofthack.md",
+    "events/260720-watersofthack-2026.md",
+    "events/260921-cyberwater2-training.md",
+    "events/261006-leveraging-hydroshare.md",
+    "events/261019-data-publishing-program.md"
+  ],
+  "cutover_job_board": {
+    "addresses": 95,
+    "clicks": 2251,
+    "final_status": {
+      "404": 95
+    }
+  },
+  "cutover_job_addresses_with_page_snapshot": {
+    "addresses": 14,
+    "clicks": 44,
+    "final_status": {
+      "404": 14
+    }
+  },
+  "cutover_job_landing": {
+    "address": "/job-board",
+    "clicks": "1442",
+    "final": "/job-board",
+    "status": "404"
+  },
+  "cutover_workshops": {
+    "addresses": 28,
+    "clicks": 974,
+    "final_status": {
+      "404": 28
+    }
+  },
+  "cutover_workshop_pages_matched": {
+    "addresses": 21,
+    "clicks": 893,
+    "final_status": {
+      "404": 21
+    }
+  },
+  "control": {
+    "rows": 15,
+    "jobs": 7,
+    "workshops": 8,
+    "same": 13,
+    "differ": [
+      "Assoc/Full Prof in Environmental Science (hand matched, script weak)",
+      "Assistant or Associate Professor (hand matched, script weak)"
+    ],
+    "by_level": {
+      "exact": 4,
+      "weak": 3,
+      "none": 5,
+      "probable": 3
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "crawl_day": "2026-11-06",
+  "legacy_pages": 120,
+  "new_events": 45,
+  "new_events_published": 45,
+  "new_cyberseminars_searched": 88,
+  "by_level": {
+    "weak": 23,
+    "none": 82,
+    "exact": 10,
+    "probable": 4,
+    "possible": 1
+  },
+  "by_target": {
+    "events": 27,
+    "cyberseminars": 11
+  },
+  "by_year_and_level": {
+    "2022": {
+      "none": 24,
+      "weak": 1
+    },
+    "2023": {
+      "none": 20,
+      "weak": 6
+    },
+    "2024": {
+      "none": 14,
+      "weak": 5,
+      "probable": 2
+    },
+    "2025": {
+      "weak": 7,
+      "none": 20,
+      "possible": 1
+    },
+    "2026": {
+      "exact": 10,
+      "probable": 2,
+      "none": 2,
+      "weak": 4
+    },
+    "no date": {
+      "none": 2
+    }
+  },
+  "none_with_series_in_new": 0,
+  "none_without_series": 82,
+  "date_kind": {
+    "single": 65,
+    "range": 32,
+    "deadline-only": 21,
+    "none": 2
+  },
+  "date_oddities": [
+    {
+      "page": "/events/2025-american-geophysical-union-annual-meeting",
+      "oddity": "range printed as \"December 20 - 20, 2025\" (same day twice); end date unknown"
+    },
+    {
+      "page": "/events/agu-fall-meeting-2022",
+      "oddity": "range printed as \"December 16 - 16, 2022\" (same day twice); end date unknown"
+    },
+    {
+      "page": "/events/data-publishing-program",
+      "oddity": "range runs into the next month (day after the dash is smaller); read as the next month"
+    },
+    {
+      "page": "/events/managing-water-for-a-changing-planet-a-virtual-workshop-to-identify-our-most-pressing-water-resources-issues",
+      "oddity": "range runs into the next month (day after the dash is smaller); read as the next month"
+    },
+    {
+      "page": "/events/national-diversity-in-stem-conference-2",
+      "oddity": "range runs into the next month (day after the dash is smaller); read as the next month"
+    },
+    {
+      "page": "/events/watersofthack-cybertraining-event",
+      "oddity": "range runs into the next month (day after the dash is smaller); read as the next month"
+    },
+    {
+      "page": "/events/watersofthack",
+      "oddity": "range runs into the next month (day after the dash is smaller); read as the next month"
+    }
+  ],
+  "upcoming_legacy": 4,
+  "upcoming_by_level": {
+    "exact": 3,
+    "weak": 1
+  },
+  "recurring_groups": 15,
+  "recurring_pages": 37,
+  "recurring_groups_with_series_in_new": 6,
+  "matched_pairs_with_differences": 4,
+  "matched_pairs_compared": 12,
+  "new_events_matched_exact_or_probable": 12,
+  "new_events_without_legacy_page_at_weak_or_better": 28,
+  "new_events_without_legacy_page": [
+    "260101-earthscope-geophysics.md",
+    "260201-frontiers-water-deadline.md",
+    "260301-agu-editors-deadline.md",
+    "260401-indigenous-data-summit.md",
+    "260401-native-american-wildlife.md",
+    "260401-neon-cyberseminar.md",
+    "260501-aih-rise-deadline.md",
+    "260501-aslo.md",
+    "260501-awra.md",
+    "260501-csdms.md",
+    "260501-hydrolearn.md",
+    "260501-uta-workshop.md",
+    "260601-ucwr.md",
+    "260624-spring-virtual-open-house.md",
+    "260630-water-data-forum.md",
+    "260720-watersofthack-2026.md",
+    "261001-agu-bridges-deadline.md",
+    "261008-navigating-federal-job-market.md",
+    "261008-water-science-exchange-early-bird.md",
+    "261015-women-advancing-river-research-hydroclimate.md",
+    "261029-virtual-open-house-fall.md",
+    "261029-water-science-exchange-registration.md",
+    "261103-skills-certificate-pilot.md",
+    "261112-water-science-exchange.md",
+    "261119-connected-researcher.md",
+    "261119-women-advancing-river-research-bedrock.md",
+    "261209-agu-town-hall.md",
+    "270104-snow-field-school-2027.md"
+  ],
+  "new_duplicate_pairs": [
+    [
+      "260501-hydrolearn-workshop.md",
+      "260501-hydrolearn.md"
+    ],
+    [
+      "260601-virtual-open-house.md",
+      "260624-spring-virtual-open-house.md"
+    ],
+    [
+      "260701-watersofthack.md",
+      "260720-watersofthack-2026.md"
+    ]
+  ],
+  "new_elsewhere": {
+    "searched_pages": 112,
+    "searched_dated": 105,
+    "undated_pages_skipped": [
+      "/cyberseminars/all-upcoming",
+      "/cyberseminars/hydrologic-science-and-indigenous-voices-joesph-gazing-wolf-north-dakota",
+      "/cyberseminars/series/post-field-season-data-practices-for-research-success",
+      "/cyberseminars/series/water-data-forum",
+      "/workshops/past-workshops",
+      "/workshops/past-workshops/p2",
+      "/workshops/propose-a-workshop"
+    ],
+    "new_events_checked": 33,
+    "by_level": {
+      "weak": 1,
+      "exact": 5,
+      "none": 20,
+      "probable": 5,
+      "possible": 2
+    }
+  },
+  "new_links_to_legacy_site": {
+    "values": 17,
+    "files": 15,
+    "distinct_paths": 12,
+    "after_cutover": {
+      "404": 15,
+      "same-path": 2
+    }
+  },
+  "url_same": 1,
+  "legacy_pages_with_no_date": [
+    "/events/agu-fall-meeting",
+    "/events/registration-deadline-reactive-transport-with-sophisticated-reaction-networks-hands-on-experience-with-the-pflotran-reaction-sandbox"
+  ],
+  "control": {
+    "hand_total": 20,
+    "agree": 15,
+    "disagree": [
+      {
+        "legacy_slug": "cuahsi-virtual-open-house",
+        "hand": "none",
+        "script": "weak",
+        "agree": "NO",
+        "hand_file": "",
+        "script_file": "260601-virtual-open-house.md"
+      },
+      {
+        "legacy_slug": "earth-science-information-partners-esip-meeting",
+        "hand": "none",
+        "script": "weak",
+        "agree": "NO",
+        "hand_file": "",
+        "script_file": "260728-esip-meeting.md"
+      },
+      {
+        "legacy_slug": "ciroh-developers-conference",
+        "hand": "none",
+        "script": "weak",
+        "agree": "NO",
+        "hand_file": "",
+        "script_file": "260501-ciroh-developers.md"
+      },
+      {
+        "legacy_slug": "applications-for-the-2026-summer-institute-are-now-open",
+        "hand": "none",
+        "script": "weak",
+        "agree": "NO",
+        "hand_file": "",
+        "script_file": "260601-water-prediction-innovators.md"
+      },
+      {
+        "legacy_slug": "introduction-to-hydroshare-webinar-3",
+        "hand": "none",
+        "script": "weak",
+        "agree": "NO",
+        "hand_file": "",
+        "script_file": "2024-intro-hydroshare-may.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+item,title,date,slug,published,source_url_is_legacy_post,words,external_links,matched_legacy_posts
+news:250903-cheristy-jones,"Community Spotlight: Cheristy Jones — Pathfinder Fellowship, Arctic Lakes, and Indigenous-Led Science",2025-09-03,community-spotlight-cheristy-jones,true,false,374,0,
+news:251022-virtual-open-house,"Virtual Open House: 90+ Registrants, Community Input on 2026–2028 Plans",2025-10-22,virtual-open-house-2025,true,false,122,0,
+news:251030-board-nominees,2025 CUAHSI Board of Directors Nominees,2025-10-30,board-nominees-2025,true,true,0,0,cuahsi-2025-board-of-director-nominees
+news:251112-floodsavvy,FloodSavvy: Making the National Water Model Accessible for Community Decision-Makers,2025-11-12,floodsavvy-launch,true,true,0,0,floodsavvy
+news:260107-masoumeh-hashemi,Community Spotlight: Masoumeh Hashemi — Camera-Based Irrigation Monitoring,2026-01-07,community-spotlight-masoumeh-hashemi,true,true,0,0,january-e-newsletter-community-guest-spotlight-with-masoumeh-hashemi
+news:260211-board-marco-maneta,Board Spotlight: Marco P. Maneta,2026-02-11,board-spotlight-marco-maneta,true,false,363,0,a-cuahsi-board-spotlight-with-marco-p-maneta
+news:260211-punwath-prum,Community Spotlight: Punwath Prum — Global Coastal Water Quality from Landsat,2026-02-11,community-spotlight-punwath-prum,true,true,0,0,january-e-newsletter-community-guest-spotlight-with-punwath-prum
+news:260310-board-tao-wen,Board Spotlight: Tao Wen,2026-03-10,board-spotlight-tao-wen,true,false,395,2,cuahsi-board-spotlight-with-tao-wen
+news:260310-watersofthack-fellows,2025 WaterSoftHack Fellows Reflections,2026-03-10,watersofthack-fellows-2025,true,true,0,0,march-e-newsletter-community-guest-spotlight-with-2025-watersofthack-fellows
+news:260423-jupyterhub-incident,JupyterHub Data Loss Incident,2026-04-23,jupyterhub-data-loss-incident,true,false,28,0,jupyterhub-data-loss-incident
+news:260601-new-staff-henok-tedla,New Staff: Henok Tedla Joins as Controller,2026-06-01,new-staff-henok-tedla,true,false,46,0,
+news:260609-founding-member-institutions,CUAHSI's 25th Anniversary: A Look Back at Our Founding Member Institutions,2026-06-09,founding-member-institutions-2026,true,true,134,0,as-cuahsi-celebrates-25-years-meet-the-33-universities-that-started-it-all
+news:260701-25th-anniversary-rick-hooper,CUAHSI's 25th Anniversary Reflections: A Challenge for Today's Hydrologic Scientists,2026-07-01,25th-anniversary-rick-hooper,true,true,104,0,cuahsis-25th-anniversary-reflections-a-challenge-for-todays-hydrologic-scientists-by-rick-hooper
+news:260707-engagement-offerings,CUAHSI Engagement Offerings,2026-07-07,engagement-offerings-2026,true,true,286,0,cuahsi-engagement-offerings
+news:260811-25th-anniversary-hoori-ajami,"CUAHSI's 25th Anniversary Reflections: Convening the Community in the New Era of Water Science, by Hoori Ajami",2026-08-11,25th-anniversary-hoori-ajami,true,true,235,0,cuahsis-25th-anniversary-reflections-convening-the-community-in-the-new-era-of-water-science-by-hoori-ajami
+news:260813-university-of-calgary-joins,University of Calgary Joins as a CUAHSI International Member Institution,2026-08-13,university-of-calgary-joins-2026,true,false,62,0,
+news:260908-25th-anniversary-milestones,CUAHSI 25th Anniversary Milestones,2026-09-08,25th-anniversary-milestones-2026,true,true,359,0,cuahsi-25th-anniversary-milestones
+news:260908-guest-spotlight-amirhossein-montazeri,September e-Newsletter Guest Spotlight with Amirhossein Montazeri,2026-09-08,guest-spotlight-amirhossein-montazeri-2026,true,true,198,0,september-e-newsletter-guest-spotlight-with-amirhossein-montazeri
+news:261006-25th-anniversary-jp-gannon,CUAHSI's 25th Anniversary Reflections with JP Gannon,2026-10-06,25th-anniversary-jp-gannon,true,true,244,0,cuahsis-25th-anniversary-reflections-with-jp-gannon
+news:261008-aih-fundamental-exam-member-spotlight,Member Spotlight: American Institute of Hydrology Offers No-Fee Fundamental Exam,2026-10-08,aih-fundamental-exam-member-spotlight,true,false,124,2,
+news:261008-ciroh-science-meeting-2026,CUAHSI Staff Present at the 2026 CIROH Science Meeting,2026-10-08,ciroh-science-meeting-2026,true,false,113,1,
+news:261008-swot-river-discharge-explorer,Punwath Prum Launches the SWOT River Discharge Explorer,2026-10-08,swot-river-discharge-explorer,true,false,120,1,
+news:261008-wpi-2027-theme-leaders-call,Call for 2027 Water Prediction Innovators Summer Institute Theme Leaders Opens Soon,2026-10-08,wpi-2027-theme-leaders-call,true,false,124,1,
+newsletter:260101-january,January 2026 e-Newsletter,2026-01-14,2026-january,true,false,1544,6,
+newsletter:260201-february,February 2026 e-Newsletter,2026-02-11,2026-february,true,false,1808,11,
+newsletter:260301-march,March 2026 e-Newsletter,2026-03-10,2026-march,true,false,1956,9,
+newsletter:260401-april,April 2026 e-Newsletter,2026-04-09,2026-april,true,false,1986,20,
+newsletter:260501-may,May 2026 e-Newsletter,2026-05-14,2026-may,true,false,2102,17,cuahsi-e-newsletter-may-2026
+newsletter:260601-june,June 2026 e-Newsletter,2026-06-01,2026-june,true,false,2565,21,cuahsi-e-newsletter-june-2026
+newsletter:260701-july,July 2026 e-Newsletter,2026-07-01,2026-july,true,false,1532,17,cuahsi-e-newsletter-july-2026
+newsletter:260813-august,August 2026 e-Newsletter,2026-08-13,2026-august,true,false,3339,23,cuahsi-e-newsletter-august-2026
+newsletter:260910-september,September 2026 e-Newsletter,2026-09-10,2026-september,true,false,2561,16,cuahsi-e-newsletter-september-2026
+newsletter:261008-october,October 2026 e-Newsletter,2026-10-08,2026-october,true,false,2416,22,cuahsi-e-newsletter-october-2026

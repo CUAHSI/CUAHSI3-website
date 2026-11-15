@@ -1,0 +1,149 @@
+{
+  "files_legacy": 118,
+  "files_by_type": {
+    "pdf": 107,
+    "png": 10,
+    "jpg": 1
+  },
+  "files_distinct_names": 116,
+  "files_names_at_more_than_one_address": [
+    "SI2022_Report_v1.2.pdf x2",
+    "202407_Summer_Institute_Final_Report_v2.0.pdf x2"
+  ],
+  "files_head_status": {
+    "200": 118
+  },
+  "files_total_megabytes": 270.68,
+  "files_status": {
+    "linked to the legacy host": 10,
+    "hosted": 63,
+    "none": 45
+  },
+  "files_status_by_type": {
+    "pdf": {
+      "linked to the legacy host": 10,
+      "hosted": 63,
+      "none": 34
+    },
+    "png": {
+      "none": 10
+    },
+    "jpg": {
+      "none": 1
+    }
+  },
+  "files_with_redirect_rule": 59,
+  "files_rule_target_missing": [],
+  "files_hosted_but_legacy_address_has_no_rule": [
+    "260608_33_FoundingInstitutions-Final.pdf (a copy is under public/; A2: not in A2 file)",
+    "260707_CUAHSI_Outreach_Template.pdf (a copy is under public/; A2: not in A2 file)",
+    "DMP_guide_digital.pdf (a copy is under public/; A2: 404)",
+    "25th-Milestone-Rev-4a.pdf (a copy is under public/; A2: 404)"
+  ],
+  "files_hosted_by_name_only": [
+    "260608_33_FoundingInstitutions-Final.pdf",
+    "260707_CUAHSI_Outreach_Template.pdf",
+    "DMP_guide_digital.pdf",
+    "25th-Milestone-Rev-4a.pdf"
+  ],
+  "files_not_hosted": {
+    "linked to the legacy host": 10,
+    "none": 45
+  },
+  "files_not_hosted_megabytes": 188.75,
+  "files_not_hosted_linking_pages": 89,
+  "files_in_a2_file": 46,
+  "files_a2_final": {
+    "200": 22,
+    "404": 25
+  },
+  "files_a2_clicks_not_hosted": 192,
+  "files_images": [
+    "HydroLearn_Hackathon_Flyer_2026.png (none, linked by 1 pages)",
+    "CUAHSI-25th-Logo-Final-Circle.png (none, linked by 1 pages)",
+    "CUAHSI-25th-Logo-Final-Full.png (none, linked by 1 pages)",
+    "CUAHSI-4-color-logo_with_URL.png (none, linked by 1 pages)",
+    "DQL.png (none, linked by 1 pages)",
+    "Round_Logo_No_Text_-_Transparent.png (none, linked by 1 pages)",
+    "map_filled.png (none, linked by 5 pages)",
+    "unnamed-3.png (none, linked by 1 pages)",
+    "unnamed-4.png (none, linked by 1 pages)",
+    "CW-architecture-diagm1.png (none, linked by 1 pages)",
+    "CW2-use-case-diagm2.jpg (none, linked by 1 pages)"
+  ],
+  "files_largest_not_hosted": [
+    "CUAHSI_2018SI_TechnicalReport_0918FINAL (1).pdf 24.93 MB",
+    "SI2022_Report_v1.2.pdf 14.26 MB",
+    "SI2022_Report_v1.2.pdf 14.26 MB",
+    "SI2022_Report_v1.2.docx.pdf 14.26 MB",
+    "161020_2016-Summer-Institute-Final-Report.pdf 11.64 MB"
+  ],
+  "here_links_to_legacy_uploads": {
+    "addresses": 16,
+    "in_the_118": 16,
+    "not_in_the_118": []
+  },
+  "embeds_rows": 331,
+  "embeds_by_kind": {
+    "form, map, event or donation link": 236,
+    "iframe": 14,
+    "video link": 81
+  },
+  "embeds_iframes_by_host": {
+    "www.youtube.com": 13,
+    "www.zeffy.com": 1
+  },
+  "embeds_iframes_pages": 14,
+  "embeds_youtube_distinct_ids": 92,
+  "embeds_youtube_iframe_ids": 12,
+  "embeds_youtube_ids_here": 73,
+  "embeds_youtube_ids_not_here": 19,
+  "embeds_iframe_other": [
+    "/donate -> https://www.zeffy.com/en-US/embed/donation-form/1d9a8cef-4275-4db4-8461-5de35d048ebb (yes: the same address is embedded or written here)"
+  ],
+  "embeds_iframe_youtube_counterpart": {
+    "yes: the id is in this site": 5,
+    "none": 8
+  },
+  "embeds_other_links_counterpart": {
+    "none": 177,
+    "yes: same address linked here": 59
+  },
+  "embeds_other_hosts": {
+    "cuahsi.jotform.com": 84,
+    "form.jotform.com": 7,
+    "us3.campaign-archive.com": 8,
+    "mailchimp.com": 1,
+    "us06web.zoom.us": 95,
+    "docs.google.com": 4,
+    "submitform.wufoo.com": 1,
+    "web.cvent.com": 14,
+    "cvent.me": 5,
+    "psu.zoom.us": 5,
+    "www.zeffy.com": 1,
+    "clemson.ca1.qualtrics.com": 3,
+    "northeastern.zoom.us": 1,
+    "www.google.com": 1,
+    "illinois.zoom.us": 1,
+    "www.eventbrite.com": 1,
+    "app.smartsheet.com": 1,
+    "nam04.safelinks.protection.outlook.com": 1,
+    "purdue-edu.zoom.us": 1,
+    "arizona.zoom.us": 1,
+    "ucsd.zoom.us": 1
+  },
+  "embeds_by_page_type_with_no_counterpart": {
+    "static page": 7,
+    "listing": 31,
+    "": 2,
+    "newsletter issue": 1,
+    "news post": 1,
+    "cyberseminar": 70,
+    "cyberseminar series": 14,
+    "program": 7,
+    "event": 54,
+    "landing page": 1,
+    "workshop": 8
+  },
+  "legacy_pages_scanned": 761
+}

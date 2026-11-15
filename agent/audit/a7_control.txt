@@ -1,0 +1,63 @@
+CONTROL A: the simulation against the deployed prototype, 50 legacy paths (host: https://cuahsi3-website.netlify.app)
+agree    many-to-one /about/library expected 301 /about/documents got 301 /about/documents target 200
+agree    many-to-one /about/library/2022-november-meeting-minutes expected 301 /about/documents got 301 /about/documents target 200
+agree    many-to-one /about/library/2024-july-meeting-minutes expected 301 /about/documents got 301 /about/documents target 200
+agree    many-to-one /community/water-data-portals/advanced-weather-and-climate-forecasting-system expected 301 /data-platforms/portals got 301 /data-platforms/portals target 200
+agree    many-to-one /community/water-data-portals/international-hydrological-programmes-water-inform expected 301 /data-platforms/portals got 301 /data-platforms/portals target 200
+agree    many-to-one /community/water-data-portals/water-data-online expected 301 /data-platforms/portals got 301 /data-platforms/portals target 200
+agree    many-to-one /students/graduate-programs-in-water-science-dev/graduate-programs-at-colorado-s expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+agree    many-to-one /students/graduate-programs-in-water-science-dev/graduate-programs-at-northweste expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+agree    many-to-one /students/graduate-programs-in-water-science-dev/graduate-programs-at-the-univer expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+agree    many-to-one /students/graduate-programs-in-water-science-dev/graduate-programs-at-the-univer expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+agree    many-to-one /students/graduate-programs-in-water-science-dev/graduate-programs-at-university expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+agree    many-to-one /students/graduate-programs-in-water-science/masters/p8 expected 301 /learn-train/graduate-programs got 301 /learn-train/graduate-programs target 200
+DIFFERENT redirect    /about/policies-and-conduct expected 301 /about/code-of-conduct got 404
+agree    redirect    /uploads/library/doc/2021-02_Minutes.pdf expected 301 /documents/minutes/2021-02-15-board-meeting-minutes.pdf got 301 /documents/minutes/2021-02-15-board-meeting-minutes.pdf target 200
+agree    redirect    /uploads/library/doc/2023-11_Minutet.pdf expected 301 /documents/minutes/2023-11-15-board-meeting-minutes.pdf got 301 /documents/minutes/2023-11-15-board-meeting-minutes.pdf target 200
+agree    redirect    /uploads/library/doc/2024-07-24-Bylaws_Final.docx.pdf expected 301 /documents/governance/bylaws-2024.pdf got 301 /documents/governance/bylaws-2024.pdf target 200
+agree    redirect    /uploads/library/doc/Annual-Report-2022_FINAL.pdf expected 301 /documents/annual-reports/annual-report-2022.pdf got 301 /documents/annual-reports/annual-report-2022.pdf target 200
+agree    redirect    /uploads/pages/img/2025-04-15-meeting-minutes.pdf expected 301 /documents/minutes/2025-04-15-board-meeting-minutes.pdf got 301 /documents/minutes/2025-04-15-board-meeting-minutes.pdf target 200
+agree    generic     /faculty expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /faculty/professional-resources expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /faculty/resources-for-online-education expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /faculty/teaching-resources expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /new-grad-guide expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /resources-for-undergraduate-students expected 301 /learn-train got 301 /learn-train target 200
+agree    generic     /students expected 301 /learn-train got 301 /learn-train target 200
+agree    same-path   / expected 200 got 200
+agree    same-path   /About expected 200 got 301 /about/
+agree    same-path   /about expected 200 got 301 /about/
+agree    same-path   /community expected 200 got 301 /community/
+agree    same-path   /community/news expected 200 got 301 /community/news/
+agree    404         /job-board expected 404 got 404
+agree    404         /summer-institute expected 404 got 404
+agree    404         /data-services/matlab expected 404 got 404
+agree    404         /about/our-team expected 404 got 404
+agree    404         /workshops/snow-measurement-field-school-2026 expected 404 got 404
+agree    404         /workshops/hydrolearn-ciroh-may-june-2026-workshop-and-hackathon expected 404 got 404
+agree    404         /virtual-university expected 404 got 404
+agree    404         /data-services/hydroshare expected 404 got 404
+agree    404         /grant-opportunities expected 404 got 404
+agree    404         /about/our-team/jordan-read expected 404 got 404
+agree    404         /about/about-membership expected 404 got 404
+agree    404         /community/news/a-cuahsi-board-spotlight-with-marco-p-maneta expected 404 got 404
+agree    404         /community/news/september-e-newsletter-community-guest-spotlight-with-cheristy-j expected 404 got 404
+agree    404         /cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-postdo expected 404 got 404
+agree    404         /events/agu-meet-greet-cuahsi-virtual-university expected 404 got 404
+agree    404         /events/hydroinformatics-innovation-fellowship expected 404 got 404
+agree    404         /faculty/guest-lecturer-database/b-s-daya-sagar expected 404 got 404
+agree    404         /faculty/guest-lecturer-database/tim-scheibe expected 404 got 404
+agree    404         /job-board/permanent-position expected 404 got 404
+agree    404         /uploads/library/AutoRAPID_A_Model_for_Prompt_Streamflow_Estimation_and_Flood_In expected 404 got 404
+agree: 49 of 50, differ: 1
+
+CONTROL B: the rules' matching behaviour (the same redirected path three ways)
+DIFFERENT trailing slash /about/policies-and-conduct/ expected 301 got 404
+agree    upper case     /ABOUT/POLICIES-AND-CONDUCT expected 404 got 404
+DIFFERENT query string   /about/policies-and-conduct?x=1 expected 301 got 404
+agree    trailing slash /community/water-data-portals/datastream/ expected 301 got 301 /data-platforms/portals
+agree    upper case     /COMMUNITY/WATER-DATA-PORTALS/DATASTREAM expected 404 got 404
+agree    query string   /community/water-data-portals/datastream?x=1 expected 301 got 301 /data-platforms/portals?x=1
+agree    trailing slash /students/graduate-programs-in-water-science-dev/graduate-programs-at- expected 301 got 301 /learn-train/graduate-programs
+agree    upper case     /STUDENTS/GRADUATE-PROGRAMS-IN-WATER-SCIENCE-DEV/GRADUATE-PROGRAMS-AT- expected 404 got 404
+agree    query string   /students/graduate-programs-in-water-science-dev/graduate-programs-at- expected 301 got 301 /learn-train/graduate-programs?x=1

@@ -1,0 +1,49 @@
+CONTROL 1: stability of the text hash, 10 unchanged pages fetched again
+same      /about/contact-us snapshot b576f73dacb6 now b576f73dacb6
+same      /about/library/national-water-center-innovators-program-summer-institute-report-2016 snapshot 4e00f055f8a9 now 4e00f055f8a9
+same      /community/news/cuahsi-e-newsletter-september-2026 snapshot 1494857c7e4e now 1494857c7e4e
+same      /community/water-data-portals/iwrm-data-portal snapshot 15185afffdce now 15185afffdce
+same      /cyberseminars/post-field-season-data-practices-for-research-success snapshot e79d892b6746 now e79d892b6746
+same      /events/application-deadline-stakeholder-informed-spatial-modeling-for-hydrologic-sciences snapshot 359e1c25de66 now 359e1c25de66
+same      /events/national-diversity-in-stem-conference snapshot b97536f201db now b97536f201db
+same      /faculty/guest-lecturer-database/laura-decicco snapshot 3ddf93828019 now 3ddf93828019
+same      /students/graduate-programs-in-water-science-dev/environmental-and-water-resources-engineering snapshot 40584432bbc4 now 40584432bbc4
+same      /students/graduate-programs-in-water-science-dev/graduate-programs-at-the-university-of-nevada-reno snapshot 41b098145b4c now 41b098145b4c
+stable: 10 of 10
+
+CONTROL 1b: pages likely to be dynamic, fetched again
+same      / snapshot c6ea88970525 now c6ea88970525 (diff called it changed)
+same      /events snapshot ca9b68d75e73 now ca9b68d75e73 (diff called it changed)
+same      /community/news snapshot 266715abc0e5 now 266715abc0e5 (diff called it changed)
+same      /job-board snapshot d208c2ceb862 now d208c2ceb862 (diff called it changed)
+same      /cyberseminars snapshot be9b6334f2ce now be9b6334f2ce (diff called it changed)
+
+CONTROL 2: status now of every added and every removed URL
+added 200 /community/news/cuahsi-e-newsletter-october-2026
+added 200 /community/news/cuahsis-25th-anniversary-reflections-with-jp-gannon
+added 200 /events/2026-annual-membership-meeting
+added 200 /events/call-for-2027-water-prediction-innovators-summer-institute-theme-leaders
+added 200 /events/water-data-forum-durable-skills-for-the-water-workforce-in-the-age-of-ai
+added 200 /job-board/assistant-or-associate-professor
+added 200 /job-board/assistant-professor-hydrologic-systems-engineering-fall-2027
+added 200 /job-board/assistant-professor-hydrology
+added 200 /job-board/director-sea-level-investigation-and-management-slim
+added 200 /job-board/ms-phd-graduate-assistant
+added 200 /job-board/phd-ms-assistantship-in-spatial-hydrology-or-riverscape-health
+added 200 /job-board/phd-positions-in-the-flux-lab-in-the-department-of-civil-and-environmental-engineering
+added 200 /job-board/postdoctoral-associate-in-machine-learning-and-remote-sensing-for-global-infrastructure-mapping
+added 200 /job-board/postdoctoral-researcher
+added 200 /job-board/postdoctoral-scholar-in-hydrology
+added 200 /workshops/cuahsi-skills-certificate-pilot-reproducible-workflows-with-open-water-data-nasa-noaa-usgs-river-data-access
+added: 16 requested, 16 answer 200, 0 answer 404
+removed 404 /events/virtual-open-house
+removed 404 /job-board/1-2-fully-funded-phd-positions-in-coastal-geomorphology-fall-2027
+removed 404 /job-board/assistant-professor-in-climate-science
+removed 404 /job-board/graduate-research-assistantships-in-urban-water-systems
+removed 404 /job-board/hydrologic-sciences-assistant-professor
+removed 404 /job-board/phd-positions-in-ecohydrology-and-critical-zone-science
+removed 404 /job-board/phd-positions-in-snow-extremes
+removed 404 /job-board/postdoctoral-researcher-with-expertise-in-fluvial-geomorphology
+removed 404 /job-board/research-director-national-alliance-for-water-innovation-nawi
+removed 404 /job-board/survey-hydrogeologist
+removed: 10 requested, 0 answer 200, 10 answer 404

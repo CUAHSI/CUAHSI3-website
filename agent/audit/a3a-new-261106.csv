@@ -1,0 +1,37 @@
+id,source,name,slug,role,has_profile,published,md_words,md_has_contact,legacy_page
+team-json:jordan-read,full-team.json,Jordan Read,jordan-read,Chief Executive Officer,yes,n/a,,,https://www.cuahsi.org/about/our-team/jordan-read
+team-json:tony-castronova,full-team.json,Anthony Castronova,tony-castronova,Lead of Research,yes,n/a,,,https://www.cuahsi.org/about/our-team/anthony-castronova
+team-json:emily-clark,full-team.json,Emily Clark,emily-clark,"Deputy Director (acting), Project Manager",no,n/a,,,https://www.cuahsi.org/about/our-team/emily-clark
+team-json:lindsay-platt,full-team.json,Lindsay Platt,lindsay-platt,"Environmental Data Scientist, Lead of Operations (acting)",yes,n/a,,,https://www.cuahsi.org/about/our-team/lindsay-platt
+team-json:martin-seul,full-team.json,Martin Seul,martin-seul,Lead of Software Engineering (acting),no,n/a,,,https://www.cuahsi.org/about/our-team/martin-seul
+team-json:irene-garousi-nejad,full-team.json,Irene Garousi-Nejad,irene-garousi-nejad,Research Scientist,yes,n/a,,,https://www.cuahsi.org/about/our-team/irene-garousi-nejad
+team-json:danielle-tijerina-kreuzer,full-team.json,Danielle Tijerina-Kreuzer,danielle-tijerina-kreuzer,Research Scientist,yes,n/a,,,https://www.cuahsi.org/about/our-team/danielle-tijerina-kreuzer
+team-json:abner-bogan,full-team.json,Abner Bogan,abner-bogan,Research Analyst,yes,n/a,,,https://www.cuahsi.org/about/our-team/abner-bogan
+team-json:kimmy-wong,full-team.json,Kimberlee Wong,kimmy-wong,Environmental Data Science Fellow,no,n/a,,,https://www.cuahsi.org/about/our-team/kimberlee-wong
+team-json:kaysa-vaarre-lamoureux,full-team.json,Kaysa Vaarre-Lamoureux,kaysa-vaarre-lamoureux,Operations Data Science Fellow,no,n/a,,,https://www.cuahsi.org/about/our-team/kaysa-vaarre-lamoureux-she-they
+team-json:julia-masterman,full-team.json,Julia Masterman,julia-masterman,Community Relations & Training Coordinator,no,n/a,,,https://www.cuahsi.org/about/our-team/julia-masterman
+team-json:lisa-mucciacito,full-team.json,Lisa Mucciacito,lisa-mucciacito,Community Outreach Specialist,no,n/a,,,https://www.cuahsi.org/about/our-team/lisa-mucciacito
+team-json:brianna-kearns,full-team.json,Brianna Kearns,brianna-kearns,Events & Training Support Fellow,no,n/a,,,https://www.cuahsi.org/about/our-team/brianna-kearns
+team-json:scott-black,full-team.json,Scott Black,scott-black,Senior Software Specialist,no,n/a,,,https://www.cuahsi.org/about/our-team/scott-black
+team-json:zahraa-alhmood,full-team.json,Zahraa Alhmood,zahraa-alhmood,Research Software Developer,no,n/a,,,https://www.cuahsi.org/about/our-team/zahraa-alhmood
+team-json:callie-porter-borden,full-team.json,Callie Porter-Borden,callie-porter-borden,Software Engineer,no,n/a,,,https://www.cuahsi.org/about/our-team/callie-porter-borden
+team-json:summer-conley,full-team.json,Summer Conley,summer-conley,Program and Operations Assistant,no,n/a,,,https://www.cuahsi.org/about/our-team/summer-conley
+team-json:henok-tedla,full-team.json,Henok Tedla,henok-tedla,Controller,no,n/a,,,https://www.cuahsi.org/about/our-team/henok-tedla
+team-json:barbara-walker,full-team.json,Barbara Walker,barbara-walker,Grants Administration Specialist (part-time),no,n/a,,,https://www.cuahsi.org/about/our-team/barbara-walker
+team-json:courtney-di-vittorio,full-team.json,Courtney Di Vittorio,courtney-di-vittorio,Visiting Education Scholar (part-time),no,n/a,,,https://www.cuahsi.org/about/our-team/courtney-di-vittorio
+team-json:devin-cowan,full-team.json,Devin Cowan,devin-cowan,Research Programmer (contractor),no,n/a,,,https://www.cuahsi.org/about/our-team/devin-cowan
+team-json:neal-debuhr,full-team.json,Neal DeBuhr,neal-debuhr,Quality Assurance Engineer (contractor),no,n/a,,,https://www.cuahsi.org/about/our-team/neal-debuhr
+team:abner-bogan,content/team/abner-bogan.md,Abner Bogan,abner-bogan,Research Analyst,yes,yes,0,no,https://www.cuahsi.org/about/our-team/abner-bogan
+team:brianna-kearns,content/team/brianna-kearns.md,Brianna Kearns,brianna-kearns,Events & Training Support Fellow,no,yes,0,no,https://www.cuahsi.org/about/our-team/brianna-kearns
+team:callie-porter-borden,content/team/callie-porter-borden.md,Callie Porter-Borden,callie-porter-borden,Software Engineer,no,yes,0,no,https://www.cuahsi.org/about/our-team/callie-porter-borden
+team:jordan-read,content/team/jordan-read.md,Jordan Read,jordan-read,Chief Executive Officer,yes,yes,762,no,https://www.cuahsi.org/about/our-team/jordan-read
+team:kimmy-wong,content/team/kimmy-wong.md,Kimmy Wong,kimmy-wong,Environmental Data Science Fellow,no,yes,0,no,https://www.cuahsi.org/about/our-team/kimberlee-wong
+team:lindsay-platt,content/team/lindsay-platt.md,Lindsay Platt,lindsay-platt,"Environmental Data Scientist, Lead of Operations (acting)",yes,yes,341,no,https://www.cuahsi.org/about/our-team/lindsay-platt
+team:lisa-mucciacito,content/team/lisa-mucciacito.md,Lisa Mucciacito,lisa-mucciacito,Community Outreach Specialist,no,yes,0,no,https://www.cuahsi.org/about/our-team/lisa-mucciacito
+team:tony-castronova,content/team/tony-castronova.md,Anthony Castronova,tony-castronova,Lead of Research,yes,yes,511,no,https://www.cuahsi.org/about/our-team/anthony-castronova
+team:zahraa-alhmood,content/team/zahraa-alhmood.md,Zahraa Alhmood,zahraa-alhmood,Research Software Developer,no,yes,0,no,https://www.cuahsi.org/about/our-team/zahraa-alhmood
+board:tao-wen,content/board/tao-wen.md,Tao Wen,tao-wen,Board Member,n/a,yes,0,no,
+community:aashish-gautam,content/community/aashish-gautam.md,Aashish Gautam,aashish-gautam,WaterSoftHack 2025 Fellow,n/a,yes,0,no,
+community:hassan-saleh,content/community/hassan-saleh.md,Hassan Saleh,hassan-saleh,WaterSoftHack 2025 Fellow,n/a,yes,0,no,
+community:heather-kropp,content/community/heather-kropp.md,Heather Kropp,heather-kropp,Faculty Partner,n/a,yes,0,no,
+community:moses-kiwanuka,content/community/moses-kiwanuka.md,Moses Kiwanuka,moses-kiwanuka,WaterSoftHack 2025 Fellow,n/a,yes,0,no,

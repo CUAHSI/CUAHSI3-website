@@ -1,0 +1,21 @@
+where,reference,hosted_copy_here
+content/data-portals/portals.json: CUAHSI Data Services,https://www.cuahsi.org/data-services/solutions,
+content/newsletter/260301-march.md:56,https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf,/documents/annual-reports/annual-report-2025.pdf
+content/newsletter/260601-june.md:44,https://www.cuahsi.org/uploads/pages/doc/260608_33_FoundingInstitutions-Final.pdf,
+content/newsletter/260701-july.md:134,https://www.cuahsi.org/uploads/pages/doc/260707_CUAHSI_Outreach_Template.pdf,
+content/newsletter/260701-july.md:136,https://www.cuahsi.org/uploads/pages/doc/260707_CUAHSI_Outreach_Template.pdf,
+content/newsletter/260910-september.md:35,https://www.cuahsi.org/uploads/pages/img/25th-Milestone-Rev-4a.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/161020_2016-Summer-Institute-Final-Report.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/CUAHSI_2017SI_TR14V102_DOI.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/CUAHSI_2018SI_TechnicalReport_0918FINAL%20(1).pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/CUAHSI_2019_SI_Technical_Report%20(1).pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/SI2022_Report_v1.2.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/library/doc/SI2023_Report.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/pages/doc/202407_Summer_Institute_Final_Report_v2.0.pdf,
+content/programs/summer-institute.md:60,https://www.cuahsi.org/uploads/pages/img/250728_SI_Final_Report.pdf,
+pages/about/governance.vue:66,https://www.cuahsi.org/uploads/library/doc/2024-07-24-Bylaws_Final.docx.pdf,/documents/governance/bylaws-2024.pdf
+pages/about/governance.vue:66,https://www.cuahsi.org/uploads/pages/img/Strategic-Plan-2023-Final.1.pdf,/documents/strategic-plans/strategic-plan-2023-2028.pdf
+pages/about/governance.vue:66,https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf,/documents/annual-reports/annual-report-2025.pdf
+pages/about/index.vue:25,https://www.cuahsi.org/uploads/pages/doc/2025-About-CUAHSI-Flyer-2.pdf,
+pages/about/index.vue:26,https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf,/documents/annual-reports/annual-report-2025.pdf
+pages/support/index.vue:63,https://www.cuahsi.org/uploads/pages/img/Zeffy-Donor-Information.pdf,

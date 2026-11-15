@@ -1,0 +1,21 @@
+kind,key,hand_level,hand_new,note
+staff,abner-bogan,exact,team-json:abner-bogan,same name on the team list
+staff,barbara-walker,exact,team-json:barbara-walker,same name on the team list
+staff,callie-porter-borden,exact,team-json:callie-porter-borden,same name on the team list
+staff,danielle-tijerina-kreuzer,exact,team-json:danielle-tijerina-kreuzer,same name on the team list
+staff,emily-clark,exact,team-json:emily-clark,same name on the team list
+staff,irene-garousi-nejad,exact,team-json:irene-garousi-nejad,same name on the team list
+staff,julia-masterman,exact,team-json:julia-masterman,same name on the team list
+staff,kimberlee-wong,exact,team-json:kimberlee-wong,full-team.json says Kimberlee Wong; the profile file content/team/kimmy-wong.md says Kimmy Wong
+staff,lisa-mucciacito,exact,team-json:lisa-mucciacito,same name on the team list
+staff,neal-debuhr,exact,team-json:neal-debuhr,same name on the team list
+lecturer,éowyn-campbell,none,,searched content/pages/components for Campbell: no hit
+lecturer,amber-s-jones,none,,searched Amber Jones: no hit; a member row with the surname Jones is a different first name
+lecturer,chelsea-clifford,none,,Clifford occurs only inside a paper address in the Critical Zone products list; not a person here
+lecturer,erin-bray,none,,searched Bray: no hit
+lecturer,jakob-f-steiner,none,,searched Steiner: no hit
+lecturer,lara-fowler,none,,Fowler occurs only in the place name Fowler Farm (Critical Zone products)
+lecturer,mesenbet-yibeltal-sebaht,none,,searched Yibeltal and Sebaht: no hit
+lecturer,niko-wanders,none,,searched Wanders: no hit
+lecturer,sabina-khatri,none,,searched Khatri: no hit
+lecturer,steven-loheide,none,,no person record; the name is in the Fall 2026 Virtual University story (research) and in the members list
