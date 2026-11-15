@@ -1,0 +1,180 @@
+{
+ "control": {
+  "items": 15,
+  "same": 15,
+  "differ": []
+ },
+ "degrees": {
+  "legacy_institutions_by_degree": {
+   "masters": 81,
+   "phd": 74,
+   "undergraduate": 3,
+   "professional": 4
+  },
+  "here_by_degree": {
+   "masters": 83,
+   "phd": 75,
+   "undergraduate": 3,
+   "professional": 4
+  },
+  "category_page_names": {
+   "masters": 81,
+   "phd": 74,
+   "professional": 4,
+   "undergraduate": 3
+  },
+  "names_on_a_category_page_but_not_marked_on_the_list": []
+ },
+ "links": {
+  "legacy_distinct_targets_total": 143,
+  "kept_here": 101,
+  "institutions_with_no_link_at_all_legacy": 0,
+  "dropped_in_the_five_merged": [
+   "Colorado State University: kept engr.colostate.edu/ce/graduate/hydrologic-science-and-engineering; not here warnercnr.colostate.edu/ess-home",
+   "Michigan State University: kept msu.edu; not here canr.msu.edu/iwr",
+   "The Ohio State University: kept fabe.osu.edu/graduate/specializationresearch-areas; not here earthsciences.osu.edu/divisions/water-climate-env",
+   "University at Buffalo: kept buffalo.edu/grad.html; not here engineering.buffalo.edu/civil-structural-environmental.html",
+   "University of Wisconsin - Madison: kept nelson.wisc.edu/graduate/water-resources-management/index.php; not here limnology.wisc.edu"
+  ],
+  "breakdown": {
+   "stub_websites_distinct": 107,
+   "of_which_kept_here": 101,
+   "links_in_list_text_only": 36,
+   "institutions_with_such_links": 11,
+   "kept_here_not_on_a_legacy_stub": 0
+  }
+ },
+ "legacy": {
+  "list_pages_main": 11,
+  "blocks": 107,
+  "stub_files": 107,
+  "stubs_saved_for_blocks": 107,
+  "category_pages": {
+   "masters": 9,
+   "phd": 8,
+   "professional": 1,
+   "undergraduate": 1
+  },
+  "all_html_files_under_students": 137,
+  "distinct_names": 102,
+  "names_listed_twice": [
+   "Colorado State University",
+   "Michigan State University",
+   "The Ohio State University",
+   "University at Buffalo",
+   "University of Wisconsin - Madison"
+  ],
+  "blocks_with_name_running_on": [],
+  "blocks_without_degrees_on_list": 23,
+  "institutions_degrees_added_by_category_pages": 0,
+  "institutions_with_no_degrees_anywhere": 18,
+  "institutions_with_website_on_stub": 102,
+  "institutions_with_script_hidden_address": 2,
+  "list_text_that_names_a_review_or_update": 0,
+  "stubs_that_name_a_review_or_update": 0
+ },
+ "here": {
+  "rows": 102,
+  "rows_with_website": 101,
+  "rows_with_review_date": 1,
+  "rows_with_no_degrees": 16,
+  "rows_matching_no_legacy_name": [],
+  "rows_matched_by_more_than_one_legacy_name": 0
+ },
+ "levels": {
+  "exact": 102
+ },
+ "matched_exact_or_probable": 102,
+ "facts": {
+  "pairs": 102,
+  "degrees_same": 100,
+  "degrees_differ": 2,
+  "website": {
+   "same": 101,
+   "only legacy": 1
+  },
+  "text_coverage_below_1": 5,
+  "text_coverage_below_0_9": 4,
+  "text_coverage_below_0_7": 4,
+  "pairs_where_legacy_had_more_than_one_distinct_link": 15,
+  "review_date_named_on_legacy": 0,
+  "review_date_here": 1,
+  "contact_hidden_address_on_legacy": 2
+ },
+ "programs": {
+  "legacy_pages_in_snapshot": 6,
+  "files_here": 5,
+  "matched": 2,
+  "legacy_with_no_match": [
+   "/all-programs-services",
+   "/cyberwater",
+   "/next-generation-modeling-ci",
+   "/ongoing-research-projects"
+  ],
+  "here_with_no_legacy_page": [
+   "/learn-train/programs/skills-certificate-pilot",
+   "/learn-train/programs/snow-field-school",
+   "/learn-train/programs/watersofthack"
+  ],
+  "elsewhere_in_legacy": {
+   "snow-field-school": [
+    "/community",
+    "/community/news",
+    "/community/news/cuahsi-e-newsletter-september-2026",
+    "/community/news/cuahsis-25th-anniversary-reflections-convening-the-community-in-the-new-era-of-water-science-by-hoori-ajami",
+    "/community/news/p4",
+    "/community/news/snow-measurement-field-school-2025-recap",
+    "/events",
+    "/events/2026-snow-measurement-field-school-application-deadline",
+    "/events/deadline-to-submit-application-for-snow-measurement-field-school-2024",
+    "/index",
+    "/news-opportunities",
+    "/workshops",
+    "/workshops/past-workshops",
+    "/workshops/past-workshops/p2",
+    "/workshops/snow-measurement-field-school-2023",
+    "/workshops/snow-measurement-field-school-2024-2",
+    "/workshops/snow-measurement-field-school-2025",
+    "/workshops/snow-measurement-field-school-2026",
+    "/workshops/snow-measurement-field-school-2027",
+    "/workshops/snow-measurement-field-school-january-2022"
+   ],
+   "watersofthack": [
+    "/community/news/april-e-newsletter-community-guest-spotlight-with-2024-watersofthack-fellows",
+    "/community/news/cuahsi-e-newsletter-july-2026",
+    "/community/news/cuahsi-e-newsletter-september-2026",
+    "/community/news/march-e-newsletter-community-guest-spotlight-with-2025-watersofthack-fellows",
+    "/community/news/p2",
+    "/community/news/p4",
+    "/community/news/september-e-newsletter-guest-spotlight-with-amirhossein-montazeri",
+    "/events/2025-american-geophysical-union-annual-meeting",
+    "/events/application-deadline-watersofthack-2026",
+    "/events/applications-are-open-for-watersofthack-cybertraining-2025",
+    "/events/watersofthack",
+    "/events/watersofthack-2026",
+    "/events/watersofthack-cybertraining-event",
+    "/events/watersofthack-cybertraining-event-2"
+   ],
+   "skills-certificate-pilot": [
+    "/community/news/cuahsi-e-newsletter-october-2026",
+    "/workshops/cuahsi-skills-certificate-pilot-reproducible-workflows-with-open-water-data-nasa-noaa-usgs-river-data-access",
+    "/workshops/past-workshops"
+   ]
+  }
+ },
+ "cutover": {
+  "graduate_urls": 137,
+  "graduate_final_status": {
+   "200": 137
+  },
+  "graduate_final_targets": {
+   "/learn-train/graduate-programs": 137
+  },
+  "graduate_clicks_floor": 1771,
+  "program_urls": 6,
+  "program_final_status": {
+   "404": 6
+  },
+  "program_clicks_floor": 1459
+ }
+}

@@ -1,0 +1,6 @@
+261114 | task/guard-hook-install | start | Put the guard hook proposal in .claude/hooks/guard.mjs and restore scripts/test-guard-hook.mjs; Jordan copies the hook (deny rule), this branch restores the tests
+261114 | task/guard-hook-install | merged | jordansread/CUAHSI3-website#236 (guard hook tests) merged by Jordan, with his commit 61929df "update guard hooks"
+261114 | task/guard-hook-install | defect | Commit 61929df on #236 copied the proposed hook over scripts/test-guard-hook.mjs instead of .claude/hooks/guard.mjs: on the default branch the 137 test cases were gone and the old hook was still in force (101 of 137 cases); found by comparing the default branch's files with the proposal after the merge. Test file restored from 3ac4be8. caught: self-check
+261114 | task/guard-hook-install | note | git switch -c from origin/main set the new branch to track origin/main, so a plain git push from it would have targeted the default branch; the upstream was unset before any push
+261114 | task/guard-hook-install | note | Jordan copied .agent/pr/guard-proposed.mjs to .claude/hooks/guard.mjs on this branch; byte-identical to the proposal; node scripts/test-guard-hook.mjs: 137 of 137 cases right for the installed hook
+261114 | task/guard-hook-install | pr | jordansread/CUAHSI3-website#238 opened at Jordan's go-ahead; base checked

@@ -1,0 +1,10 @@
+A3a checks, 9 November 2026 (run in worktree CUAHSI3-wt-a3a from origin/main b773c5e; build = npm run build:search)
+1. Routes in the built site for the 22 slugs in content/team/full-team.json: 6 have .output/public/about/team/<slug>/index.html (abner-bogan, danielle-tijerina-kreuzer, irene-garousi-nejad, jordan-read, lindsay-platt, tony-castronova); 16 have none.
+2. The built team list links to 7 distinct /about/team/ addresses (the list itself plus the 6 profiles).
+3. public/_redirects: rules containing our-team = 0.
+4. Count of lines naming each person in the built .output/public/about/governance/index.html (grep -c); pages/about/governance.vue names no board or committee member either (script: 0 of 32):
+Ajami: 0
+Gannon: 0
+Samadi: 0
+Architzel: 0
+Tao Wen: 0

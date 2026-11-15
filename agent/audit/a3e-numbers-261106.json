@@ -1,0 +1,365 @@
+{
+  "portals_legacy_detail_pages": 44,
+  "portals_legacy_list_pages": 5,
+  "portals_in_list_menu": 44,
+  "portals_detail_without_menu_entry": [],
+  "portals_menu_without_detail_page": [],
+  "portals_new_rows": 44,
+  "portals_levels": {
+    "exact": 43,
+    "probable": 1,
+    "weak": 0,
+    "none": 0
+  },
+  "portals_new_matched_twice": [],
+  "portals_new_without_legacy": [],
+  "portals_website": {
+    "same": 44
+  },
+  "portals_website_scheme": {
+    "same": 44
+  },
+  "portals_owner": {
+    "same": 44
+  },
+  "portals_scope": {
+    "same": 44
+  },
+  "portals_legacy_hidden_contact": 57,
+  "portals_legacy_hidden_contact_pages": 35,
+  "portals_legacy_with_accession_date": 34,
+  "portals_legacy_link_to_data": {
+    "": 6,
+    "indirect": 19,
+    "direct": 6,
+    "none": 1,
+    "indirect; includes HydroLAKES & HydroBASINS": 2,
+    "http://www.gtn-h.info/documents/": 1,
+    "direct & indirect": 1,
+    "Indirect": 6,
+    "http://forecasting.vaci.org.vn/": 1,
+    "http://depts.washington.edu/saswe/dataDownload.html": 1
+  },
+  "portals_legacy_api": {
+    "NA": 31,
+    "probably on request (see comments)": 1,
+    "functional API’s for catalog and data": 1,
+    "": 6,
+    "functional API": 4,
+    "Functional API": 1
+  },
+  "portals_legacy_with_formats": 31,
+  "portals_legacy_with_restrictions_field": 14,
+  "portals_legacy_with_description": 44,
+  "portals_new_with_review_date": 2,
+  "portals_legacy_website_on_legacy_host": [
+    "CUAHSI Data Services"
+  ],
+  "portals_new_url_on_legacy_host": [
+    "CUAHSI Data Services"
+  ],
+  "portals_legacy_website_empty": 0,
+  "docs_legacy_entries": 79,
+  "docs_legacy_entries_with_file": 77,
+  "docs_legacy_by_group": {
+    "Annual Reports": 6,
+    "Board and membership minutes": 50,
+    "Strategic Plans": 2,
+    "Reports and publications": 18,
+    "Policies": 1,
+    "Policies (a page, no file)": 2
+  },
+  "docs_item_pages": 76,
+  "docs_entries_without_item_page": [
+    "CUAHSI Bylaws"
+  ],
+  "docs_item_pages_not_in_a_list": [],
+  "docs_title_differs_list_vs_item": [
+    "December 5, 2018 / 2018 Membership Meeting - test"
+  ],
+  "docs_legacy_file_status": {
+    "200": 77
+  },
+  "docs_legacy_files_not_under_library_doc": 14,
+  "docs_legacy_size_changed_since_october": [],
+  "docs_legacy_with_october_copy": 58,
+  "docs_file_redirect_check": {
+    "same as the title pairing": 58,
+    "rule to a hosted file; no title pairing": 1,
+    "no rule": 18
+  },
+  "docs_file_redirect_differs": [],
+  "docs_file_no_rule": [
+    "Water Prediction Innovators Summer Institute Report 2026",
+    "Water Prediction Innovators Summer Institute Report 2025",
+    "National Water Center Innovators Program Summer Institute Report 2024",
+    "National Water Center Innovators Program Summer Institute Report 2023",
+    "National Water Center Innovators Program Summer Institute Report 2022",
+    "Statement on Holistic Evaluation of Research in Hydrologic Sciences",
+    "National Water Center Innovators Program Summer Institute Report 2019",
+    "National Water Center Innovators Program Summer Institute Report 2018",
+    "National Water Center Innovators Program Summer Institute Report 2017",
+    "National Water Center Innovators Program Summer Institute Report 2016",
+    "The CUAHSI Hydrological Measurement Facility Community Survey 2005",
+    "Designing Hydrologic Observatories as a Community Service",
+    "Designing Hydrologic Observatories: A Paper Prototype of the Neuse Watershed",
+    "A National Center for Hydrologic Synthesis: Scientific Objectives, Structure, and Implementation",
+    "CUAHSI Hydrologic Information Systems",
+    "A Vision for Hydrologic Science Research",
+    "Facilities for Transforming Hydrological Science",
+    "Hydrologic Observatory Network"
+  ],
+  "docs_file_redirect_to_missing_file": [],
+  "docs_new_rows": 61,
+  "docs_new_by_kind": {
+    "governance": 1,
+    "plan": 2,
+    "report": 6,
+    "minutes": 50,
+    "policy": 2
+  },
+  "docs_levels_by_title": {
+    "exact": 7,
+    "probable": 43,
+    "weak": 10,
+    "none": 19
+  },
+  "docs_levels_by_kind": {
+    "report": {
+      "exact": 6,
+      "probable": 0,
+      "weak": 0,
+      "none": 0
+    },
+    "minutes": {
+      "exact": 0,
+      "probable": 41,
+      "weak": 8,
+      "none": 1
+    },
+    "plan": {
+      "exact": 0,
+      "probable": 2,
+      "weak": 0,
+      "none": 0
+    },
+    "other": {
+      "exact": 0,
+      "probable": 0,
+      "weak": 0,
+      "none": 18
+    },
+    "governance": {
+      "exact": 0,
+      "probable": 0,
+      "weak": 1,
+      "none": 0
+    },
+    "policy": {
+      "exact": 1,
+      "probable": 0,
+      "weak": 1,
+      "none": 0
+    }
+  },
+  "docs_date_key_pairing_for_weak_or_none": {
+    "one candidate with the same date key": 8,
+    "2 candidates with the same date key": 1,
+    "no date key": 20
+  },
+  "docs_new_with_file": 61,
+  "docs_new_with_url": 0,
+  "files_open": {
+    "yes": 61
+  },
+  "files_text_check": {
+    "no date in the title to check": 3,
+    "title date found": 57,
+    "no readable text on page 1": 1
+  },
+  "files_title_date_not_found": [],
+  "files_no_text": [
+    "2022 Annual Report"
+  ],
+  "files_pages_vs_october_copy": {
+    "same": 58,
+    "": 3
+  },
+  "files_pages_differ": [],
+  "files_without_legacy_file_record": [
+    "Travel Policy",
+    "Water Prediction Innovators Summer Institute Authorship Agreement"
+  ],
+  "files_hosted_much_smaller_than_legacy": [
+    "Strategic Plan 2018–2023 (0.3)",
+    "2023 Annual Report (0.34)",
+    "2021 Annual Report (0.21)",
+    "2020 Annual Report (0.35)"
+  ],
+  "files_size_within_5_percent_of_legacy": 55,
+  "files_with_a_legacy_size": 59,
+  "files_total_bytes": 40135640,
+  "hosted_files_on_disk": 65,
+  "hosted_files_not_in_documents_json": [
+    "/documents/data-management/DMP_guide_digital.pdf",
+    "/documents/news/25th-Milestone-Rev-4a.pdf",
+    "/documents/news/260608_33_FoundingInstitutions-Final.pdf",
+    "/documents/news/260707_CUAHSI_Outreach_Template.pdf"
+  ],
+  "documents_json_files_not_on_disk": [],
+  "documents_json_duplicate_files": [],
+  "docs_new_without_legacy_by_title": [
+    "Membership meeting minutes, December 4, 2018"
+  ],
+  "docs_new_matched_by_more_than_one_legacy": [],
+  "docs_unhosted_by_group": {
+    "Reports and publications": 18
+  },
+  "legacy_host_file_links_site_wide": 19,
+  "legacy_host_file_links_distinct_files": 16,
+  "legacy_host_file_links_with_hosted_copy": [
+    "content/newsletter/260301-march.md:56 -> /documents/annual-reports/annual-report-2025.pdf",
+    "pages/about/governance.vue:66 -> /documents/governance/bylaws-2024.pdf",
+    "pages/about/governance.vue:66 -> /documents/strategic-plans/strategic-plan-2023-2028.pdf",
+    "pages/about/governance.vue:66 -> /documents/annual-reports/annual-report-2025.pdf",
+    "pages/about/index.vue:26 -> /documents/annual-reports/annual-report-2025.pdf"
+  ],
+  "legacy_host_file_links_in_library_documents": 12,
+  "legacy_host_file_links_to_unhosted_library_files": [
+    "content/programs/summer-institute.md:60 -> CUAHSI_2017SI_TR14V102_DOI.pdf",
+    "content/programs/summer-institute.md:60 -> CUAHSI_2018SI_TechnicalReport_0918FINAL (1).pdf",
+    "content/programs/summer-institute.md:60 -> CUAHSI_2019_SI_Technical_Report (1).pdf",
+    "content/programs/summer-institute.md:60 -> SI2022_Report_v1.2.pdf",
+    "content/programs/summer-institute.md:60 -> SI2023_Report.pdf",
+    "content/programs/summer-institute.md:60 -> 202407_Summer_Institute_Final_Report_v2.0.pdf",
+    "content/programs/summer-institute.md:60 -> 250728_SI_Final_Report.pdf"
+  ],
+  "legacy_host_references_in_portal_and_document_data": 1,
+  "legacy_host_references_in_the_two_pages": 0,
+  "cutover_portals": {
+    "addresses": 49,
+    "clicks": 232,
+    "final": {
+      "200": 49
+    },
+    "fate": {
+      "migrated": 49
+    },
+    "finals": {
+      "/data-platforms/portals": 49
+    },
+    "detail_pages_in_snapshot": 44
+  },
+  "cutover_library": {
+    "addresses": 87,
+    "clicks": 117,
+    "final": {
+      "200": 67,
+      "404": 20
+    },
+    "fate": {
+      "migrated": 87
+    },
+    "finals": {
+      "/about/documents": 67,
+      "/about/library/2018-membership-meeting-test": 1,
+      "/about/library/a-message-from-cuahsis-executive-director": 1,
+      "/about/library/a-national-center-for-hydrologic-synthesis-scientific-objectives-structure-and-implementation": 1,
+      "/about/library/a-vision-for-hydrologic-science-research": 1,
+      "/about/library/cuahsi-hydrologic-information-systems": 1,
+      "/about/library/designing-hydrologic-observatories-a-paper-prototype-of-the-neuse-watershed": 1,
+      "/about/library/designing-hydrologic-observatories-as-a-community-service": 1,
+      "/about/library/facilities-for-transforming-hydrological-science": 1,
+      "/about/library/hydrologic-observatory-network": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2016": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2017": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2018": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2019": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2022": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2023": 1,
+      "/about/library/national-water-center-innovators-program-summer-institute-report-2024": 1,
+      "/about/library/statement-on-holistic-evaluation-of-research-in-hydrologic-sciences": 1,
+      "/about/library/the-cuahsi-hydrological-measurement-facility-community-survey-2005": 1,
+      "/about/library/water-prediction-innovators-program-summer-institute-report-2025": 1,
+      "/about/library/water-prediction-innovators-summer-institute-report-2026": 1
+    },
+    "item_and_list_pages_in_snapshot": 81
+  },
+  "cutover_library_file_addresses": 58,
+  "cutover_unhosted_file_addresses": {
+    "files": 18,
+    "in_cutover_file": 12,
+    "clicks": 113,
+    "final": {
+      "404": 12
+    },
+    "megabytes": 104.09
+  },
+  "cutover_hosted_file_addresses": {
+    "files": 59,
+    "in_cutover_file": 22,
+    "clicks": 97,
+    "final": {
+      "200": 22
+    }
+  },
+  "cutover_library_pages_404": [
+    "2018-membership-meeting-test (0 clicks)",
+    "a-message-from-cuahsis-executive-director (0 clicks)",
+    "water-prediction-innovators-summer-institute-report-2026 (4 clicks)",
+    "water-prediction-innovators-program-summer-institute-report-2025 (14 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2024 (1 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2023 (4 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2022 (3 clicks)",
+    "statement-on-holistic-evaluation-of-research-in-hydrologic-sciences (0 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2019 (0 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2018 (1 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2017 (0 clicks)",
+    "national-water-center-innovators-program-summer-institute-report-2016 (2 clicks)",
+    "the-cuahsi-hydrological-measurement-facility-community-survey-2005 (0 clicks)",
+    "designing-hydrologic-observatories-as-a-community-service (0 clicks)",
+    "designing-hydrologic-observatories-a-paper-prototype-of-the-neuse-watershed (0 clicks)",
+    "a-national-center-for-hydrologic-synthesis-scientific-objectives-structure-and-implementation (0 clicks)",
+    "cuahsi-hydrologic-information-systems (0 clicks)",
+    "a-vision-for-hydrologic-science-research (0 clicks)",
+    "facilities-for-transforming-hydrological-science (0 clicks)",
+    "hydrologic-observatory-network (0 clicks)"
+  ],
+  "cutover_library_pages_404_whose_document_is_hosted": [
+    "2018-membership-meeting-test",
+    "a-message-from-cuahsis-executive-director"
+  ],
+  "cutover_other_document_addresses": [
+    {
+      "address": "/travel-policy",
+      "clicks": "9",
+      "final": "/travel-policy",
+      "status": "404"
+    },
+    {
+      "address": "/authorship-agreement-water-prediction-innovators-summer-institute",
+      "clicks": "17",
+      "final": "/authorship-agreement-water-prediction-innovators-summer-institute",
+      "status": "404"
+    },
+    {
+      "address": "/about/policies-and-conduct",
+      "clicks": "2",
+      "final": "/about/policies-and-conduct",
+      "status": "404"
+    }
+  ],
+  "control": {
+    "rows": 20,
+    "documents": 10,
+    "portals": 10,
+    "same": 20,
+    "differ": [],
+    "by_title_level": {
+      "exact": 2,
+      "probable": 2,
+      "weak": 3,
+      "none": 3
+    }
+  }
+}

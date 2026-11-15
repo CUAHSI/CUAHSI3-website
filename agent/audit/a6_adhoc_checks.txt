@@ -1,0 +1,33 @@
+# Ad hoc checks run once against the as-deployed build served locally (scripts not committed); output kept as evidence for report sections 5 and 6.
+## contrast control (light-grey text, clickable div, unlabelled field): failing runs, scored runs, clickable divs, unlabelled fields, fields
+1 3 1 1 1
+## failing contrast pairs, desktop
+/
+rgb(192, 96, 60) on rgb(251,250,247) 12px ratio 4.04: 4 e.g. "Find your path"
+rgb(192, 96, 60) on rgb(255,255,255) 11px ratio 4.22: 4 e.g. "I want to work with data"
+rgb(192, 96, 60) on rgb(243,238,228) 12px ratio 3.65: 1 e.g. "From the community"
+rgb(255, 255, 255) on rgb(255,255,255) 10px ratio 1.00: 3 e.g. "DATA INFRASTRUCTURE"
+rgb(255, 255, 255) on rgb(192,96,60) 15px ratio 4.22: 1 e.g. "Subscribe"
+/community/jobs
+rgb(220, 38, 38) on rgb(254,242,242) 11px ratio 4.41: 2 e.g. "Closes in 3 days"
+rgb(209, 213, 219) on rgb(251,250,247) 13px ratio 1.41: 38 e.g. "↗"
+rgb(209, 213, 219) on rgb(234,243,251) 13px ratio 1.31: 16 e.g. "↗"
+## weight by type and five largest files
+/ 2469074 {"text/html":295552,"text/css":1025,"application/javascript":385996,"application/json":1786501}
+/community/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 452626
+/community/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 452626
+/_nuxt/Blg4v1k2.js 223569
+/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 198572
+/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 198572
+/about/team 3747894 {"text/html":84200,"image/jpeg":410930,"image/png":852450,"application/javascript":452363,"application/json":1946513,"text/css":1438}
+/community/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 452626
+/about/team/jordan-read/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 291792
+/about/team/tony-castronova/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 280624
+/team/headshots/danielle-tijerina-kreuzer.png 239774
+/team/headshots/summer-conley.png 230387
+/critical-zone-science/papers 5409322 {"text/css":1221,"application/javascript":421482,"text/html":2847543,"application/json":2139076}
+/critical-zone-science/papers 2847543
+/critical-zone-science/papers/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 803752
+/community/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 452626
+/critical-zone-science/datasets/_payload.json?_b=dccb5020-282c-4e82-870b-5876ef264b48 301741
+/_nuxt/Blg4v1k2.js 223569

@@ -1,0 +1,357 @@
+signal,where,target,pages,occurrences,example_pages
+analytics-id-inline,chrome,G-… (kind only),761,761,/about/about-membership ; /about/contact-us ; /about/governance
+apply-or-post-word-link,content,apply here -> cuahsi.jotform.com,8,8,/community/news/cuahsi-e-newsletter-september-2026 ; /events/applications-for-the-2026-summer-institute-are-now-open ; /events/call-for-2027-water-prediction-innovators-summer-institute-theme-leaders
+apply-or-post-word-link,content,apply -> docs.google.com,2,2,/events/hydrolearn-ciroh-workshop-hackathon ; /events/snowex-hackweek
+apply-or-post-word-link,content,apply -> form.jotform.com,2,2,/events/surface-water-field-school ; /workshops/snow-measurement-field-school-2023
+apply-or-post-word-link,content,apply here -> clemson.ca1.qualtrics.com,2,3,/events/applications-are-open-for-watersofthack-cybertraining-2025 ; /events/watersofthack-cybertraining-event-2
+apply-or-post-word-link,content,apply here -> proposalspace.com,2,2,/events/applications-are-open-2024-instrumentation-discovery-grant ; /events/instrumentation-discovery-travel-grant
+apply-or-post-word-link,content,apply by march 6 -> agu.confex.com,1,1,/events/abstract-deadline-extended-for-waterscicon24
+apply-or-post-word-link,content,apply here -> etap.nsf.gov,1,1,/events/critical-zone-collaborative-network-research-experience-for-undergraduate-students
+apply-or-post-word-link,content,apply here -> form.jotform.com,1,1,/workshops/surface-water-field-school
+apply-or-post-word-link,content,apply here -> hydrolearn.org,1,1,/events/hydrolearn-ciroh-virtual-summer-hackathon-workshop-faculty-fellow-recruitment
+apply-or-post-word-link,content,apply here -> utaedu.questionpro.com,1,1,/community/news/cuahsi-e-newsletter-may-2026
+apply-or-post-word-link,content,"apply here by april 27, 2022 -> form.jotform.com",1,1,/workshops/hands-on-hydrogeodesy-combining-gps-and-hydrologic-datasets
+apply-or-post-word-link,content,apply here by august 28th -> cuahsi.jotform.com,1,1,/community/news/cuahsi-e-newsletter-august-2026
+apply-or-post-word-link,content,apply here by august 28th. -> cuahsi.jotform.com,1,1,/events/cyberwater2-training
+apply-or-post-word-link,content,apply here. -> cuahsi.jotform.com,1,1,/events/call-for-2027-water-prediction-innovators-summer-institute-theme-leaders
+apply-or-post-word-link,content,apply now -> (this site),1,1,/job-board/assistant-or-associate-professor
+apply-or-post-word-link,content,apply now -> apptrkr.com,1,1,/job-board/assistant-professor-hydrologic-systems-engineering-fall-2027
+apply-or-post-word-link,content,apply now -> careers.harvard.edu,1,1,/job-board/director-sea-level-investigation-and-management-slim
+apply-or-post-word-link,content,apply now -> dareproject.org,1,1,/job-board/postdoctoral-associate-in-machine-learning-and-remote-sensing-for-global-infrastructure-mapping
+apply-or-post-word-link,content,apply now -> deeps.northwestern.edu,1,1,/job-board/assoc-full-prof-in-environmental-science
+apply-or-post-word-link,content,apply now -> employment.ucsd.edu,1,1,/job-board/research-and-operations-hydrologist
+apply-or-post-word-link,content,apply now -> ese.hust.edu.cn,1,1,/job-board/faculty-and-postdoctoral-positions-in-environmental-science-and-engineering
+apply-or-post-word-link,content,apply now -> indiana.peopleadmin.com,1,1,/job-board/postdoctoral-scholar-in-hydrology
+apply-or-post-word-link,content,apply now -> jobs.plattsburgh.edu,1,1,/job-board/assistant-professor-hydrology
+apply-or-post-word-link,content,apply now -> recruit.ap.uci.edu,1,1,/job-board/postdoctoral-scholar-in-terrestrial-hydrology-and-remote-sensing
+apply-or-post-word-link,content,apply now -> selfservice.hprod.onehcm.usg.edu,1,1,/job-board/postdoctoral-researcher
+apply-or-post-word-link,content,apply now -> usd.edu,1,1,/job-board/ms-phd-graduate-assistant
+apply-or-post-word-link,content,apply to attend -> events.ringcentral.com,1,1,/community/news/cuahsi-e-newsletter-june-2026
+apply-or-post-word-link,content,https://apply.interfolio.com/195359 -> apply.interfolio.com,1,1,/job-board/assistant-professor-hydrologic-systems-engineering-fall-2027
+apply-or-post-word-link,content,learn more & apply here -> cuahsi.org,1,1,/community/news/cuahsi-e-newsletter-september-2026
+apply-or-post-word-link,content,learn more and apply here. -> cuahsi.org,1,1,/summer-institute
+apply-or-post-word-link,content,post a job -> cuahsi.jotform.com,1,1,/news-opportunities
+button,chrome,close search close icon (inside form: no),761,761,/about/about-membership ; /about/contact-us ; /about/governance
+button,chrome,search icon search (inside form: yes),761,761,/about/about-membership ; /about/contact-us ; /about/governance
+button,chrome,search search icon (inside form: no),761,761,/about/about-membership ; /about/contact-us ; /about/governance
+button,content,search icon search (inside form: yes),54,54,/community/water-data-portals ; /community/water-data-portals/p2 ; /community/water-data-portals/p3
+button,content,search icon search news (inside form: yes),7,7,/community/news ; /community/news/p2 ; /community/news/p3
+button,content,cuahsi research data and data  (inside form: no),1,1,/data-services/research-data-management-guide
+donate-word-link,chrome,donate -> (this site)/donate,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+file-link,content,this site .pdf,98,282,/about/about-membership ; /about/governance ; /about/library/2018-membership-meeting-test
+file-link,content,cuahsi.org .pdf,28,34,/about/about-membership ; /about/policies-and-conduct ; /about/policies-and-conduct/code-of-conduct-policy
+file-link,content,other host .pdf,8,10,/community/news/an-interview-with-cuahsi-staff-about-project-work-on-community-resilience-planning ; /community/news/cuahsi-e-newsletter-august-2026 ; /community/news/floodsavvy
+file-link,content,cuahsi.org .png,5,5,/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america ; /cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2-2 ; /cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2
+file-link,content,this site .png,5,12,/community/news/hydroinformatics-blog-post-advances-in-biogeochemical-modeling-and-management-of-san-francisco-bay-ecosystem ; /cyberwater ; /data-services/research-data-management-guide
+file-link,content,this site .jpg,1,1,/cyberwater
+form,chrome,"search | get | cuahsi.org/search/results | fields: button,search",761,761,/about/about-membership ; /about/contact-us ; /about/governance
+form,content,filter | get | (this site)/(none) | fields: select,61,66,/community/news ; /community/news/p2 ; /community/news/p3
+form,content,"search | get | cuahsi.org/search/results | fields: button,search",61,61,/community/news ; /community/news/p2 ; /community/news/p3
+iframe,content,youtube.com/embed/pELjrFr_o_I,2,2,/community/news/celebrating-a-decade-of-the-water-prediction-innovators-summer-institute ; /summer-institute
+iframe,content,youtube.com/embed/cvnJzucdYZA,1,1,/cyberseminars/innovative-technical-tools-and-methods
+iframe,content,youtube.com/embed/EKrmi1rQ7rY,1,1,/cyberseminars/synthesis-workshop-series-easter-coastal-region-2
+iframe,content,youtube.com/embed/eRT2nPRGue0,1,1,/cyberseminars/building-skills-and-finding-collaborators-for-hydrogeophysics
+iframe,content,youtube.com/embed/EXv_0Ao_7ZA,1,1,/cyberseminars/navigating-academic-waters-navigating-todays-federal-job-market
+iframe,content,youtube.com/embed/fWNurCzu-bI,1,1,/cyberseminars/navigating-academic-waters-the-scientist-behind-the-science-the-power-of-storytelling-in-academic-and-professional-spaces
+iframe,content,youtube.com/embed/kJYWra3J6RU,1,1,/cyberseminars/neon-hydrology-hydrologic-data-products-and-tools-published-by-the-national-ecological-observatory-network-an-introduction
+iframe,content,youtube.com/embed/mRTtZzoF8j0,1,1,/cyberseminars/challenges-and-opportunities-in-data-sharing-critical-zone-science
+iframe,content,youtube.com/embed/O-sHgd-Bv2s,1,1,/cyberseminars/hydrologic-science-and-indigenous-voices-joesph-gazing-wolf-north-dakota
+iframe,content,youtube.com/embed/QC0vLLcLTk8,1,1,/cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2
+iframe,content,youtube.com/embed/RVMuafxc-xE,1,1,/cyberseminars/current-research-in-hydrogeodesy-and-hydroseismology
+iframe,content,youtube.com/embed/XlSr_zpqaJc,1,1,/cyberseminars/synthesis-workshop-series-easter-coastal-region
+iframe,content,zeffy.com/en-US/embed/donation-form/1d9a8cef-4275-4db4-8461-5de35d048ebb,1,1,/donate
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:bdc54021-9dc8-4a8d-89a5-6020a93c4763,2,3,/community/news/cuahsi-e-newsletter-october-2026 ; /community/water-science-exchange
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:c747005e-dd34-44b2-a9da-55ca114bdb56,2,3,/community/news/cuahsi-e-newsletter-october-2026 ; /community/water-science-exchange
+link-to-service:cvent,content,web.cvent.com/event/042af7d3-7bcc-4dd1-98c9-6687bb90f9ba/summary,1,1,/events/registration-deadline-reactive-transport-with-sophisticated-reaction-networks-hands-on-experience-with-the-pflotran-reaction-sandbox
+link-to-service:cvent,content,web.cvent.com/event/4a98a7d8-e5d6-4909-bd46-78a41feec361/websitePage:48cdce50-caa7-49f2-91f0-740f6637af08,1,1,/events/ucowr-annual-meeting-workshop-seize-the-data-data-best-practices-and-free-open-source-infrastructure-to-ease-data-sharing-and-reuse-with-cuahsi-data-tools
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/register,1,1,/community/news/cuahsi-e-newsletter-october-2026
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/summary,1,3,/community/news/cuahsi-e-newsletter-october-2026
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/waitlist,1,1,/community/water-science-exchange
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:61799f5d-d529-493a-b7e2-c8722f77faab,1,1,/community/news/cuahsi-e-newsletter-october-2026
+link-to-service:cvent,content,web.cvent.com/event/6d152f5f-5181-4be3-98ae-0112477ef4b5/websitePage:632163c5-a2d1-4dc7-ab64-38b747497a4c,1,1,/community/news/cuahsi-e-newsletter-october-2026
+link-to-service:cvent,content,web.cvent.com/event/75d95d60-a9cf-4c98-9cf1-0cd239df9264/summary,1,1,/workshops/open-source-electronics-for-water-research-and-real-time-water-monitoring
+link-to-service:cvent,content,web.cvent.com/event/b9731cb4-fc92-4377-88ff-4f392d16d0a3/summary,1,1,/events/hydroml-symposium
+link-to-service:cvent,content,web.cvent.com/event/e5fcbb61-a693-4f0b-8ab7-8cd4bc19fcfb/summary,1,1,/events/earth-science-information-partners-esip-meeting
+link-to-service:eventbrite,content,eventbrite.com/e/lets-talk-about-water-mayors-make-movies-celebrate-ny-water-week-tickets-528654559017,1,1,/events/lets-talk-about-water-mayors-make-movies-celebrate-ny-water-week
+link-to-service:github,content,classroom.github.com/a/WuDb62qc,1,1,/next-generation-modeling-ci
+link-to-service:github,content,github.com/CH-Earth/summa,1,1,/community/news/hydroinformatics-blog-running-research-models-for-hands-on-hydrology-education
+link-to-service:github,content,github.com/cheginit/epa_cop_webinar/blob/main/classification.ipynb,1,1,/community/news/hydroinformatics-blog-classifying-nhdplus-catchments-based-on-drought-propagation-mechanism
+link-to-service:github,content,github.com/cuahsi,1,2,/data-services/frequently-asked-questions
+link-to-service:github,content,github.com/Gromopo/GroMoPo,1,1,/community/news/hydroinformatics-blog-hello-to-gromopo-introducing-a-community-groundwater-model-portal
+link-to-service:github,content,github.com/hydroshare,1,1,/data-services/frequently-asked-questions
+link-to-service:github,content,github.com/jmccreight,1,1,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:github,content,github.com/mikejohnson51,1,1,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:github,content,github.com/mikejohnson51/nwmHistoric,1,1,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:github,content,github.com/NCAR/rechunk_retro_nwm_v21,1,2,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:github,content,github.com/NOAA-Big-Data-Program/bdp-data-docs/blob/main/nwm/README.md,1,2,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:github,content,github.com/OPEnSLab-OSU/SmartRock/wiki,1,1,/workshops/open-hydrological-sensor-technologies-diy-stream-sensor-networks
+link-to-service:github,content,github.com/passaH2O/pygeoflood,1,1,/community/news/november-e-newsletter-community-guest-spotlight-with-mark-wang-2
+link-to-service:github,content,github.com/peckhams/nextgen_basin_repo,1,1,/community/news/hydroinformatics-blog-a-set-of-open-source-python-tools-for-working-with-river-basin-data-collections
+link-to-service:github,content,github.com/peckhams/topoflow36/utils/ngen,1,1,/community/news/hydroinformatics-blog-a-set-of-open-source-python-tools-for-working-with-river-basin-data-collections
+link-to-service:github,content,github.com/RHESSys/RHESSys,1,1,/community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system
+link-to-service:github,content,github.com/RHESSys/RHESSys/wiki,1,1,/community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system
+link-to-service:github,content,github.com/RHESSys/RHESSysIOinR,1,1,/community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system
+link-to-service:github,content,github.com/UCHIC/CIWS-Loggers,1,1,/community/news/hydroinformatics-blog-advancing-technology-for-understanding-residential-water-use
+link-to-service:github,content,github.com/uihilab/HydroLang,1,4,/community/news/hydrolang-an-open-source-web-based-framework-for-environmental-and-hydrological-analyses
+link-to-service:github,content,github.com/uihilab/HydroLang-Models,1,2,/community/news/hydrolang-an-open-source-web-based-framework-for-environmental-and-hydrological-analyses
+link-to-service:github,content,github.com/UW-Hydro/pysumma,1,1,/community/news/hydroinformatics-blog-running-research-models-for-hands-on-hydrology-education
+link-to-service:github,content,github.com/VidyaSamadi/Flood-Analytics-Information-System-FAIS,1,1,/community/news/flood-analytics-information-system-fais
+link-to-service:google-forms,content,docs.google.com/document/d/12B-DxsjlcwprsfkMR8wgLU9HWBBoESNk0c-hRo-lBh8/edit,1,1,/cyberseminars/series/ntegrating-citizen-science-with-water-resources-research-across-the-globe
+link-to-service:google-forms,content,docs.google.com/document/d/1quefEDG87mUp7ZejZ-6W0LzjNg_58n8xdM5XoEjGotw/edit,1,1,/community/news/cuahsi-e-newsletter-august-2026
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLScX72h9I7SPCdEl7qsq4qcAerDnHkrq7OGWIB6uJy4eDPQhHA/viewform,1,1,/community/news/cuahsi-e-newsletter-october-2026
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLSdKCr1egS0wg7tVNXcBDZ-kQbaUnX_hnOosSlrNyTFVwZPDEg/viewform,1,1,/events/snowex-hackweek
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLSfKqasKcn83yhKa_S6lKDdXswPrdtN8n7i7pG7k1N91nIGSXA/viewform,1,2,/events/hydrolearn-ciroh-workshop-hackathon
+link-to-service:google-forms,content,docs.google.com/forms/d/e/1FAIpQLSfOaj9KnnULe3KiDxi9fZwtwk0Lm-dLRVIr5F2S90c-wggHeQ/viewform,1,1,/community/news/cuahsi-e-newsletter-june-2026
+link-to-service:hydroshare,content,hydroshare.org,15,17,/authorship-agreement-water-prediction-innovators-summer-institute ; /community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective ; /community/news/cuahsi-e-newsletter-july-2026
+link-to-service:hydroshare,content,hydroshare.org/resource/148b1ce4e308427ebf58379d48a17b91,3,4,/faculty/guest-lecturer-database ; /faculty/guest-lecturer-database/adam-ward ; /faculty/resources-for-online-education
+link-to-service:hydroshare,content,hydroshare.org/group/156,2,2,/data-services/jupyterhub ; /data-services/matlab
+link-to-service:hydroshare,content,help.hydroshare.org,1,1,/data-services/hydroshare
+link-to-service:hydroshare,content,hydroshare.org/group/41,1,2,/faculty/resources-for-online-education
+link-to-service:hydroshare,content,hydroshare.org/hsapi,1,1,/data-services/frequently-asked-questions
+link-to-service:hydroshare,content,hydroshare.org/resource/114b76f89d1c41c38e0e235443c7544c,1,1,/community/news/hydroinformatics-blog-hello-to-gromopo-introducing-a-community-groundwater-model-portal
+link-to-service:hydroshare,content,hydroshare.org/resource/3200bab682ec4c3287147cbe40e768ee,1,1,/community/news/an-interview-with-cuahsi-staff-about-project-work-on-community-resilience-planning
+link-to-service:hydroshare,content,hydroshare.org/resource/493e0ad05c2d45199427cc41a6c76de0,1,2,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:hydroshare,content,hydroshare.org/resource/61666076104f4306b4ddbf22a3fc52ca,1,1,/data-services/research-data-management-guide
+link-to-service:hydroshare,content,hydroshare.org/resource/7b2b22d88a914bb79b3f48e5ea3ecaaf,1,1,/community/news/cuahsi-e-newsletter-august-2026
+link-to-service:hydroshare,content,hydroshare.org/resource/a1e329ad20654e72b7b423f991bf9251,1,2,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective
+link-to-service:hydroshare,content,hydroshare.org/resource/ef728cff303a4d3bb49b69702283184c,1,1,/community/news/january-e-newsletter-community-guest-spotlight-with-punwath-prum
+link-to-service:hydroshare,content,hydroshare.org/resource/f6a71206b6254970a6eb1784b4f9254e,1,1,/community/news/cuahsi-e-newsletter-may-2026
+link-to-service:hydroshare,content,hydroshare.org/search,1,1,/data-services/frequently-asked-questions
+link-to-service:hydroshare,content,pages.hydroshare.org,1,1,/data-services/frequently-asked-questions
+link-to-service:hydroshare,content,thredds.hydroshare.org/thredds/catalog/catalog.html,1,1,/data-services/hydroshare
+link-to-service:jotform,content,cuahsi.jotform.com/241206969958876,31,31,/students ; /students/graduate-programs-in-water-science ; /students/graduate-programs-in-water-science/masters
+link-to-service:jotform,content,cuahsi.jotform.com/222235514170142,13,15,/community ; /community/news/cuahsi-e-newsletter-august-2026 ; /community/news/cuahsi-e-newsletter-july-2026
+link-to-service:jotform,content,cuahsi.jotform.com/230375560020848,9,9,/cyberseminars/addressing-social-and-ethical-dilemmas-in-managing-a-citizen-science-project ; /cyberseminars/app-mobile-phone-and-sensor-based-hydrological-monitoring ; /cyberseminars/citizen-science-in-outreach-and-education
+link-to-service:jotform,content,cuahsi.jotform.com/242105264183954,6,11,/cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america ; /cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2-2 ; /cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2
+link-to-service:jotform,content,cuahsi.jotform.com/261454235595866,5,7,/community-awards ; /community/news/cuahsi-e-newsletter-august-2026 ; /community/news/cuahsi-e-newsletter-july-2026
+link-to-service:jotform,content,cuahsi.jotform.com/232553983950970,2,2,/events/deadline-to-submit-application-for-snow-measurement-field-school-2024 ; /workshops/snow-measurement-field-school-2024-2
+link-to-service:jotform,content,cuahsi.jotform.com/253155240722954,2,3,/events/2025-american-geophysical-union-annual-meeting ; /events/cuahsi-community-gathering
+link-to-service:jotform,content,cuahsi.jotform.com/262093687207867,2,3,/community/news/cuahsi-e-newsletter-august-2026 ; /events/cyberwater2-training
+link-to-service:jotform,content,cuahsi.jotform.com/262436049129863,2,3,/community/news/cuahsi-e-newsletter-september-2026 ; /events/data-publishing-program
+link-to-service:jotform,content,form.jotform.com/220724958848167,2,2,/events/hands-on-hydrogeodesy-combining-gps-and-hydrologic-datasets ; /workshops/hands-on-hydrogeodesy-combining-gps-and-hydrologic-datasets
+link-to-service:jotform,content,form.jotform.com/221008158585153,2,2,/events/surface-water-field-school ; /workshops/surface-water-field-school
+link-to-service:jotform,content,cuahsi.jotform.com/222555093874160,1,1,/events/submit-a-workshop-proposal
+link-to-service:jotform,content,cuahsi.jotform.com/230125394594862,1,2,/events/call-for-posters-2023-cuahsi-biennial
+link-to-service:jotform,content,cuahsi.jotform.com/250016287051852,1,5,/about/about-membership
+link-to-service:jotform,content,cuahsi.jotform.com/251213238458859,1,1,/events/cznet-all-hands-meeting
+link-to-service:jotform,content,cuahsi.jotform.com/253135965621964,1,1,/events/applications-for-the-2026-summer-institute-are-now-open
+link-to-service:jotform,content,cuahsi.jotform.com/253246491874971,1,1,/events/2025-american-geophysical-union-annual-meeting
+link-to-service:jotform,content,cuahsi.jotform.com/260414260402947,1,1,/events/apply-to-be-an-instructor-for-the-2026-fall-semester-of-the-cuahsi-virtual-university
+link-to-service:jotform,content,cuahsi.jotform.com/260995621059061,1,2,/events/apply-for-the-cuahsi-data-publishing-program
+link-to-service:jotform,content,cuahsi.jotform.com/261064628973970,1,1,/community/water-science-exchange
+link-to-service:jotform,content,cuahsi.jotform.com/262427634602960,1,1,/workshops/snow-measurement-field-school-2027
+link-to-service:jotform,content,cuahsi.jotform.com/262786259572977,1,3,/events/call-for-2027-water-prediction-innovators-summer-institute-theme-leaders
+link-to-service:jotform,content,cuahsi.jotform.com/dmccay/code-of-conduct-anonymous-form,1,1,/about/policies-and-conduct/code-of-conduct-policy
+link-to-service:jotform,content,form.jotform.com/212584950362054,1,1,/workshops/snow-measurement-field-school-january-2022
+link-to-service:jotform,content,form.jotform.com/222235514170142,1,1,/about/contact-us
+link-to-service:jotform,content,form.jotform.com/223345520300137,1,1,/workshops/snow-measurement-field-school-2023
+link-to-service:mailchimp,content,cuahsi.us3.list-manage.com (subscribe),60,60,/about/about-membership ; /about/contact-us ; /about/governance
+link-to-service:mailchimp,content,cuahsi.us3.list-manage.com,9,34,/community/news/announcing-the-launch-of-the-new-cuahsi-website ; /events/abstract-deadline-extended-for-waterscicon24 ; /events/critical-zone-collaborative-network-research-experience-for-undergraduate-students
+link-to-service:mailchimp,content,us3.campaign-archive.com (archive),8,8,/about/library ; /community/news/cuahsi-e-newsletter-august-2026 ; /community/news/cuahsi-e-newsletter-july-2026
+link-to-service:mailchimp,content,mailchimp.com,1,1,/about/policies-and-conduct
+link-to-service:qualtrics,content,clemson.ca1.qualtrics.com/jfe/form/SV_6yQPl4W1fp0Rlau,2,3,/events/watersofthack-cybertraining-event-2 ; /events/watersofthack-cybertraining-event
+link-to-service:qualtrics,content,clemson.ca1.qualtrics.com/jfe/form/SV_3yGdkjOz7rN02iy,1,2,/events/applications-are-open-for-watersofthack-cybertraining-2025
+link-to-service:youtube,chrome,youtube.com/CUAHSI,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+link-to-service:youtube,content,youtube.com/playlist,9,10,/community/news/data-services-helpdesk-webinars ; /community/news/test-news-post ; /cyberseminars/series/2023-navigating-academic-waters-series-with-agu-h3s-finding-your-niche
+link-to-service:youtube,content,youtube.com/user/CUAHSI,3,4,/community ; /cyberseminars ; /faculty/resources-for-online-education
+link-to-service:youtube,content,youtube.com/watch,3,4,/community/news/cuahsi-e-newsletter-july-2026 ; /community/news/cuahsi-e-newsletter-october-2026 ; /faculty/resources-for-online-education
+link-to-service:youtube,content,youtu.be/_oJy5NbNoD0,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/-BX-pZMm4M0,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/1_2vlCuEwHw,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/24X7uMCAWXs,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/2igC9ZG6WCI,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/45b8wNf70iw,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/4SoyCdCtVM8,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/4wWHg1WMS2M,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/5w__meURCYc,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/6MC4sHyZyYU,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/75d_IliWP2c,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/7DLgqSNUe5Q,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/8-c2k2a0vXw,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/852c2L0lBbM,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/8Ir-uUFhHEQ,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/9_mNp7Bqes0,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/9n4T7brB84M,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/AjJolIsmuiE,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/aVSYdpAz04g,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/AxCaJQwy_yg,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/BPUGEWTxJIQ,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/CHBaXNoSat0,1,1,/community/news/update-from-cuahsi-staff-who-attended-the-2025-virtual-esip-meeting
+link-to-service:youtube,content,youtu.be/Df96Rk5sWN4,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/edxgX8b-xEw,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/eqPJlOQcZGc,1,1,/cyberseminars/post-field-season-data-practices-for-research-success
+link-to-service:youtube,content,youtu.be/EV8eURqIX0I,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/EwvBBLzO4HI,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/EZU00Sh2fWI,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/f2lj6pwzWBk,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/fcHO6icc0jg,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/fxOpxRSo4DM,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/GbQ0tNO4as8,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/gM5F1nr1A2I,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/GNTklB3SVE4,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/GT3S5mwNFqk,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/HGb1HQRjVq8,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/ignCZguxqqo,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/im15vXbI_Qs,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/KJk3uA8VkR4,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/kVaxkpdpjzs,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/KxwJAaJHJ9s,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/LAGlHj0v0X8,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/LRXa2taua40,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/mg1HKbUjLag,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/MRVJxnUVyhY,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/n4kI8V-W4eg,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/nOA-dhLxhD4,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/O4Pw1wzA5MM,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/OXCZzSlGsmU,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/PnlUCEhYXkI,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/Q5WF0drdx34,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/RAU9OKS-S7o,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/RnqpiGnzfgE,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/RWJdW__s9iU,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/S5zt-WunNbs,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/SJ5IVt3vfUI,1,1,/cyberseminars/2025-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/tj8YsHR9sno,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/tpf3wCxu2cw,1,1,/events/world-water-day-march-22-2025
+link-to-service:youtube,content,youtu.be/U_Gv1_2_ajI,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/U1oPZ-MCtus,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/uAAO_7hfhKw,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/Uah1GSvx58o,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/uClNafnmxqw,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/udl9hVmTMEU,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/v4yKvhBoSls,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/VHz37OJnK1s,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/vlRhkjdo2mE,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/WENAltr20-I,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/xavjufRf6Ds,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/xM6izTS9iKI,1,1,/cyberseminars/2021-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/yCd1a9p1Qdo,1,1,/cyberwater
+link-to-service:youtube,content,youtu.be/YjanuzSJ3IM,1,1,/cyberseminars/2026-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/yXu-LZmQDP0,1,1,/cyberseminars/2023-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/Zea3yHepPfs,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/ZErMIZWx5kE,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/zKG2uohPueo,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/zMoD0tQEMfo,1,1,/cyberseminars/2022-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtu.be/zowz9SaZmJ0,1,1,/cyberseminars/2024-women-advancing-river-research-lecture-series
+link-to-service:youtube,content,youtube.com/@CUAHSI/playlists,1,1,/cyberseminars
+link-to-service:youtube,content,youtube.com/channel/UCElFoZl3WWsekWR51Q-n0ig,1,2,/faculty/resources-for-online-education
+link-to-service:youtube,content,youtube.com/CUAHSI,1,1,/about/contact-us
+link-to-service:youtube,content,youtube.com/redirect,1,1,/community/news/test-news-post
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/8016758034323/WN_ojRdiXzBSpuSqselQTPPNQ,9,9,/cyberseminars/addressing-social-and-ethical-dilemmas-in-managing-a-citizen-science-project ; /cyberseminars/app-mobile-phone-and-sensor-based-hydrological-monitoring ; /cyberseminars/citizen-science-in-outreach-and-education
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/tZIudOuvpjspHNVpVQEo3GyHbIBLxUXjN-HH,7,7,/cyberseminars/developing-effective-mentoring-relationships-part-i-panel-webinar-2 ; /cyberseminars/developing-effective-mentoring-relationships-part-i-panel-webinar ; /cyberseminars/series/2023-navigating-academic-waters-series-with-agu-h3s-finding-your-niche
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_h0tBwv3kR2qpQwEaPJ_J4g,7,7,/community/news/cuahsi-e-newsletter-august-2026 ; /community/news/cuahsi-e-newsletter-october-2026 ; /community/news/cuahsi-e-newsletter-september-2026
+link-to-service:zoom,content,psu.zoom.us/meeting/register/wbbSk8Z5RW6lX_1hErxZsw,5,5,/cyberseminars/series/women-advancing-river-research-lecture-series ; /cyberseminars/women-advancing-river-research-bedrock-water-storage-forest-health-and-streamflow ; /cyberseminars/women-advancing-river-research-hydroclimate-impacts-on-human-water-interactions
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/3416497848643/WN_Md-FLg5tQ7qEYnNF3CienQ,5,5,/cyberseminars/hydrologic-science-and-indigenous-voices-jessi-parfait ; /cyberseminars/hydrologic-science-and-indigenous-voices-kenny-swift-bird-university-of-colorado-school-of-mines ; /cyberseminars/hydrologic-science-and-indigenous-voices-weaving-traditional-ecological-knowledge-into-the-hydrologic-sciences
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_UJ35eu5USL2VuzFA5mf1sQ,5,5,/cyberseminars/building-skills-and-finding-collaborators-for-hydrogeophysics ; /cyberseminars/challenges-and-opportunities-in-data-sharing-critical-zone-science ; /cyberseminars/current-research-in-hydrogeodesy-and-hydroseismology
+link-to-service:zoom,content,us06web.zoom.us/j/83536977013,4,4,/events/data-best-practices-workshop-2-2-2 ; /events/data-best-practices-workshop-2-2 ; /events/data-best-practices-workshop-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/1017190019887/WN_1-hpYr2DSV2x-Qc6KeOiCw,4,4,/cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations-2 ; /cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations-3 ; /cyberseminars/2024-navigating-beyond-academic-waters-expectations-collaborations
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/3716879712243/WN_akE-_d38QEaWNYqBGHBT-w,4,4,/cyberseminars/developing-effective-mentoring-relationships-part-i-panel-webinar-2 ; /cyberseminars/series/2023-navigating-academic-waters-series-with-agu-h3s-finding-your-niche ; /cyberseminars/the-what-why-and-how-of-building-your-personal-research-brand-part-i-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/7816637788196/WN_kG0u7R_bTMyWlFPYl3M34w,4,4,/cyberseminars/data-and-computing-accessibility-across-scales ; /cyberseminars/novel-model-approaches ; /cyberseminars/pipelines-portals-and-visualizations
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/8016571257236/WN_N-awtgxZQMKausWYPy_B4g,4,4,/cyberseminars/navigating-non-academic-waters ; /cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-navigating-non-academic-waters ; /cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-succeeding-as-a-postdoc
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_p6g1mnzcS1yofsAtYHXZ7Q,4,4,/cyberseminars/national-water-availability-assessment-understanding-the-science-2 ; /cyberseminars/national-water-availability-assessment-understanding-the-science-3 ; /cyberseminars/national-water-availability-assessment-understanding-the-science
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_q4TnJRFXR6WNwKKMIAiMkQ,4,4,/cyberseminars/navigating-academic-waters-expanding-funding-landscape-non-federal-funding-opportunities ; /cyberseminars/navigating-academic-waters-highlighting-skill-sets-for-careers-outside-of-academia ; /cyberseminars/navigating-academic-waters-leveraging-ai-and-data-science-in-hydrology
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/RLf8JlMaT5GZd1tBDL3Vew,3,4,/community/news/cuahsi-e-newsletter-june-2026 ; /community/news/cuahsi-e-newsletter-may-2026 ; /events/cuahsi-virtual-open-house-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_ADHhygkdSMaC0gB90gnayw,3,3,/cyberseminars/neon-hydrology-exploring-the-water-cycle-at-co-located-terrestrial-aquatic-sites-within-the-national-ecological-observatory-network-a-data-skills-webinar ; /cyberseminars/neon-hydrology-hydrologic-data-products-and-tools-published-by-the-national-ecological-observatory-network-an-introduction ; /cyberseminars/series/introduction-to-neon-for-hydrology
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/tZYqdu6prz4iHNV4WvDRmnIR3oD0lHo2ex_S,2,2,/events/data-best-practices-help-desk-sessions-2 ; /events/data-best-practices-help-desk-sessions-3
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/4416618041582/WN_EXzBZ0EZRJCIwkHzzRrOMg,2,2,/cyberseminars/postdoctoral-grant-writing ; /cyberseminars/series/2022-navigating-academic-waters-panels-with-agu-h3s-postdoctoral-grant-writing
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/6017437850816/WN_JcL2TZ0nRxeSu6cPZvjkow,2,2,/cyberseminars/proactive-data-management-for-post-field-season-data-success-2 ; /cyberseminars/proactive-data-management-for-post-field-season-data-success
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_l_zLb-bLT52selwll5OwpA,2,2,/community/news/cuahsi-e-newsletter-september-2026 ; /events/leveraging-hydroshare-for-collaborative-research-data-management
+link-to-service:zoom,content,arizona.zoom.us/meeting/register/tZEqcuqpqzIuEtBUMX3re0OGULgH_Hw10W74,1,1,/events/un-water-conference-2023-virtual-side-meeting
+link-to-service:zoom,content,illinois.zoom.us/meeting/register/tZItf-6tpjgoGdU6y3yE_ocq4fJoTfE0ccBt,1,1,/events/i-guide-virtual-consulting-office-vco-advanding-transparent-and-reproducible-science-using-hydroshare-and-whats-in-it-for-you
+link-to-service:zoom,content,northeastern.zoom.us/meeting/register/OawADbbrS6iTP3Qo4yF_hA,1,1,/events/floodsavvy-launch-event
+link-to-service:zoom,content,purdue-edu.zoom.us/meeting/register/tJEpdOioqTwjHNNTgWo01xqLWgkvdUoeZ_ft,1,1,/events/net-zero-plus-creating-the-uks-new-woodlands
+link-to-service:zoom,content,ucsd.zoom.us/meeting/register/5GCUQ4v_Sdu_iDLCC2zU0Q,1,1,/events/webinar-cuahsi-tools-and-resources-to-advance-water-science
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/l94RGyFVTOGRgo1JljCkgg,1,2,/events/cuahsi-virtual-open-house
+link-to-service:zoom,content,us06web.zoom.us/meeting/register/v9ipN35JRPmBYX4Bd8w2bA,1,1,/community/news/cuahsi-e-newsletter-september-2026
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/5016432146876/WN_OCX6ACsCT8-YYSK0pzQbcw,1,1,/cyberseminars/introduction-to-the-national-science-foundations-hydrologic-sciences-program-a-virtual-town-hall-meeting
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/7716643896230/WN_kZFmpCnqQ-uu4hrz53Pmuw,1,1,/cyberseminars/the-food-energy-water-nexus-using-hydroviz-to-support-undergraduate-student-learning
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN__vcsCUfFQKiFksdWIx3ZGQ,1,1,/events/free-webinar-an-introduction-to-cuahsi-cloud-computing
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_-8Gm-5BjQ5q004WF5QySxw,1,1,/events/free-webinar-an-introduction-to-cuahsi-cloud-computing-3
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_0eE01WMrTTiqAfHY0sdrBw,1,1,/events/introduction-to-cuahsi-compute-services-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_4gbPG4tIQ4mMsby5cuMxIA,1,1,/events/an-introduction-to-hydroshare
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_5Y4_4yWZRdSJg7pbF0ilUA,1,1,/events/free-webinar-introduction-to-cuahsi-cloud-computing
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_cKMsi2QnQ3ixbk7aCtV1Vg,1,1,/events/an-introduction-to-hydroshare-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_dSgJHMc9TdulT-ejVYeMtg,1,1,/events/introduction-to-hydroshare-webinar-3
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_EnSSo75eSfCPOpMk385qAg,1,1,/events/introduction-to-hydroshare-webinar-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_i7yxf5GoTrSSsevxLrww-Q,1,1,/events/webinar-an-introduction-to-cuahsi-compute-services
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_jmykNZD3SI2L9xj2kCgmxw,1,1,/events/data-services-helpdesk-webinar-an-introduction-to-hydroshare
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_kT_kkXwPTsmsfGv7JkkfXg,1,1,/cyberseminars/post-field-season-data-practices-for-research-success
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_LtQwXTLeT6CL8sciosxaIA,1,1,/events/free-webinar-introduction-to-hydroshare
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_ogXyaDlsQ8OTSl7c312WPQ,1,1,/events/introduction-to-hydroshare-webinar
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_R3Wqi46fRKGVgWbs5KKQ_g,1,1,/events/free-webinar-an-introduction-to-cuahsi-cloud-computing-2
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_U0rMcUYPT9G5jWCmMt9VmQ,1,1,/events/introduction-to-cuahsi-compute-services
+link-to-service:zoom,content,us06web.zoom.us/webinar/register/WN_yIiBrud5SHmEUWArFxxiPA,1,1,/events/cuahsi-annual-membership-meeting-2
+mailto-link,content,(address not written),5,6,/data-services/matlab ; /events/interagency-research-in-the-watersheds-conference-icrw8 ; /faculty/guest-lecturer-database/gabriela-ioana-toroimac
+next-previous-link,chrome,next page →,45,45,/about/library/reports-and-publications ; /community/news ; /community/news/p2
+next-previous-link,content,next-generation modeling ci,1,1,/events/csdms-2025-annual-meeting
+pager-link,chrome,/students/graduate-programs-in-water-science/pN,11,19,/students/graduate-programs-in-water-science ; /students/graduate-programs-in-water-science/p10 ; /students/graduate-programs-in-water-science/p11
+pager-link,chrome,/students/graduate-programs-in-water-science/masters/pN,9,15,/students/graduate-programs-in-water-science/masters ; /students/graduate-programs-in-water-science/masters/p2 ; /students/graduate-programs-in-water-science/masters/p3
+pager-link,chrome,/students/graduate-programs-in-water-science/ph-d/pN,8,13,/students/graduate-programs-in-water-science/ph-d ; /students/graduate-programs-in-water-science/ph-d/p2 ; /students/graduate-programs-in-water-science/ph-d/p3
+pager-link,chrome,/community/news/pN,7,11,/community/news ; /community/news/p2 ; /community/news/p3
+pager-link,chrome,/faculty/guest-lecturer-database/pN,7,11,/faculty/guest-lecturer-database ; /faculty/guest-lecturer-database/p2 ; /faculty/guest-lecturer-database/p3
+pager-link,chrome,/community/water-data-portals/pN,5,7,/community/water-data-portals ; /community/water-data-portals/p2 ; /community/water-data-portals/p3
+pager-link,chrome,/about/library/reports-and-publications/pN,1,1,/about/library/reports-and-publications
+pager-link,chrome,/faculty/guest-lecturer-database/general-audience/pN,1,1,/faculty/guest-lecturer-database/general-audience
+pager-link,chrome,/job-board/pN,1,1,/job-board
+pager-link,chrome,/workshops/past-workshops/pN,1,1,/workshops/past-workshops
+register-word-link,content,-> us06web.zoom.us,81,84,/community/news/cuahsi-e-newsletter-august-2026 ; /community/news/cuahsi-e-newsletter-may-2026 ; /community/news/cuahsi-e-newsletter-october-2026
+register-word-link,content,-> cuahsi.jotform.com,12,18,/community/news/cuahsi-e-newsletter-september-2026 ; /cyberseminars/series/synthesis-workshop-series-perceptual-models-of-dominant-hydrologic-processes-across-north-america ; /cyberseminars/synthesis-workshop-series-easter-coastal-region-2-2-2-2
+register-word-link,content,-> clevelandwateralliance.org,5,5,/community/news/cuahsi-e-newsletter-june-2026 ; /community/news/cuahsi-e-newsletter-october-2026 ; /cyberseminars/data-driven-approaches-to-understanding-emerging-contaminants
+register-word-link,content,-> psu.zoom.us,5,5,/cyberseminars/series/women-advancing-river-research-lecture-series ; /cyberseminars/women-advancing-river-research-bedrock-water-storage-forest-health-and-streamflow ; /cyberseminars/women-advancing-river-research-hydroclimate-impacts-on-human-water-interactions
+register-word-link,content,-> cvent.me,4,4,/events/cuahsi-biennial-early-bird-registration-deadline ; /events/cuahsi-biennial-registration-deadline ; /workshops/open-source-electronics-for-water-research-and-real-time-water-monitoring
+register-word-link,content,-> web.cvent.com,4,5,/community/news/cuahsi-e-newsletter-october-2026 ; /events/earth-science-information-partners-esip-meeting ; /events/hydroml-symposium
+register-word-link,content,-> cuahsi.org,3,5,/community/news/cuahsi-e-newsletter-june-2026 ; /community/news/cuahsi-e-newsletter-october-2026 ; /community/news/cuahsi-e-newsletter-september-2026
+register-word-link,content,-> agu.org,1,1,/events/early-bird-registration-is-open-for-waterscicon24
+register-word-link,content,-> app.smartsheet.com,1,1,/events/managing-water-for-a-changing-planet-a-virtual-workshop-to-identify-our-most-pressing-water-resources-issues
+register-word-link,content,-> arizona.zoom.us,1,1,/events/un-water-conference-2023-virtual-side-meeting
+register-word-link,content,-> awra.org,1,1,/events/symposium-in-honor-of-david-maidment
+register-word-link,content,-> events.ringcentral.com,1,1,/community/news/cuahsi-e-newsletter-june-2026
+register-word-link,content,-> form.jotform.com,1,1,/workshops/snow-measurement-field-school-january-2022
+register-word-link,content,-> gtap.agecon.purdue.edu,1,1,/events/gtap-virtual-seminar-series-modelling-nutrition-and-food-loss-and-waste-in-a-cge-framework
+register-word-link,content,-> iguide.illinois.edu,1,1,/events/nsf-institute-for-geospatial-understanding-through-an-integrative-discovery-environment-i-guide-virtual-consulting-office
+register-word-link,content,-> igwmc.princeton.edu,1,1,/events/modflow-and-more-conference
+register-word-link,content,-> illinois.zoom.us,1,1,/events/i-guide-virtual-consulting-office-vco-advanding-transparent-and-reproducible-science-using-hydroshare-and-whats-in-it-for-you
+register-word-link,content,-> na.eventscloud.com,1,1,/events/lter-all-scientists-meeting
+register-word-link,content,-> northeastern.zoom.us,1,1,/events/floodsavvy-launch-event
+register-word-link,content,-> nsf.zoomgov.com,1,1,/events/navigating-the-nsf-hydrologic-sciences-program
+register-word-link,content,-> purdue-edu.zoom.us,1,1,/events/net-zero-plus-creating-the-uks-new-woodlands
+register-word-link,content,-> register.gotowebinar.com,1,1,/events/next-generation-water-resources-modeling-innovation-at-the-intersection-of-domain-computer-and-data-sciences
+register-word-link,content,-> ucsd.zoom.us,1,1,/events/webinar-cuahsi-tools-and-resources-to-advance-water-science
+register-word-link,content,-> watersofthack.github.io,1,1,/events/application-deadline-watersofthack-2026
+register-word-link,content,-> worldwaterff.org,1,1,/events/world-water-film-festival-new-york-city
+script-host,chrome,cdn.jsdelivr.net,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+script-host,chrome,googletagmanager.com,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+script-host,chrome,x.invalid,761,1522,/about/about-membership ; /about/contact-us ; /about/governance
+script-kind,chrome,google-analytics-or-tag-manager,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+search-box-or-pagefind-marker,chrome,input,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+search-box-or-pagefind-marker,content,input,61,61,/community/news ; /community/news/p2 ; /community/news/p3
+select,content,selcat (5 options),42,42,/faculty/guest-lecturer-database ; /faculty/guest-lecturer-database/general-audience ; /faculty/guest-lecturer-database/general-audience/p2
+select,content,selcat (6 options),7,7,/community/news ; /community/news/p2 ; /community/news/p3
+select,content,selcat (2 options),5,5,/job-board ; /job-board/graduate-assistantship ; /job-board/p2
+select,content,selcat (4 options),5,5,/job-board ; /job-board/graduate-assistantship ; /job-board/p2
+select,content,selcat (45 options),5,5,/community/water-data-portals ; /community/water-data-portals/p2 ; /community/water-data-portals/p3
+select,content,selcat (10 options),2,2,/workshops/past-workshops ; /workshops/past-workshops/p2
+share-link,content,stroudcenter.org/news/shared-waters-curriculum,1,1,/community/news/wikiwatershed-a-cuahsi-board-spotlight-with-jennifer-merrill
+social-link,chrome,bluesky,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+social-link,chrome,facebook,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+social-link,chrome,instagram,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+social-link,chrome,linkedin,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+social-link,chrome,youtube,761,761,/about/about-membership ; /about/contact-us ; /about/governance
+social-link,content,youtube,25,101,/about/contact-us ; /community ; /community/news/cuahsi-e-newsletter-july-2026
+social-link,content,github,13,30,/community/news/big-data-dreaming-a-42-year-conus-hydrologic-retrospective ; /community/news/flood-analytics-information-system-fais ; /community/news/hydroinformatics-blog-a-set-of-open-source-python-tools-for-working-with-river-basin-data-collections
+social-link,content,linkedin,8,12,/about/contact-us ; /about/our-team ; /about/our-team/anthony-castronova
+social-link,content,bluesky,2,2,/about/contact-us ; /events/world-water-day-march-22-2025
+social-link,content,facebook,2,2,/about/contact-us ; /community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system
+social-link,content,instagram,1,1,/about/contact-us
+social-link,content,x-twitter,1,2,/community/news/whats-new-in-rhessys-regional-hydro-ecological-simulation-system
+subscribe-word-link,content,subscribe -> cuahsi.us3.list-manage.com/subscribe,52,52,/about/about-membership ; /about/contact-us ; /about/governance
+subscribe-word-link,content,cuahsi e-newsletter august 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-august-2026,9,9,/community ; /community/news ; /
+subscribe-word-link,content,cuahsi e-newsletter october 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-october-2026,9,9,/community ; /community/news ; /
+subscribe-word-link,content,cuahsi e-newsletter september 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-september-2026,9,9,/community ; /community/news ; /
+subscribe-word-link,content,april e-newsletter -> cuahsi.org/community/news/december-e-newsletter,1,1,/community/news/p6
+subscribe-word-link,content,cuahsi e-newsletter july 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-july-2026,1,1,/community/news
+subscribe-word-link,content,cuahsi e-newsletter june 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-june-2026,1,1,/community/news/p2
+subscribe-word-link,content,cuahsi e-newsletter may 2026 -> cuahsi.org/community/news/cuahsi-e-newsletter-may-2026,1,1,/community/news/p2
+subscribe-word-link,content,link to e-newsletter -> us3.campaign-archive.com/home,1,1,/community/news/december-e-newsletter
+subscribe-word-link,content,link to sign up for our monthly e-newsle -> cuahsi.us3.list-manage.com/subscribe,1,1,/community/news/december-e-newsletter
+tel-link,content,(number not written),11,13,/about/our-team ; /about/our-team/anthony-castronova ; /about/our-team/julia-masterman

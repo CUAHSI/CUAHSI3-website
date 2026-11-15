@@ -1,0 +1,48 @@
+{
+  "old": "261005",
+  "new": "261106",
+  "old_urls": 767,
+  "new_urls": 776,
+  "union": 784,
+  "old_200": 755,
+  "new_200": 761,
+  "old_status": {
+    "200": 755,
+    "302": 8,
+    "404": 4
+  },
+  "new_status": {
+    "200": 761,
+    "302": 8,
+    "404": 7
+  },
+  "sitemap_old": 681,
+  "sitemap_new": 687,
+  "sitemap_old_fetched_200": 678,
+  "sitemap_new_fetched_200": 684,
+  "new_200_not_in_new_sitemap": 77,
+  "sitemap_new_not_200": 3,
+  "change": {
+    "changed": 47,
+    "other": 13,
+    "same": 693,
+    "added": 16,
+    "removed": 10,
+    "empty": 5
+  },
+  "new_200_by_route": {
+    "seed": 1,
+    "link": 534,
+    "redirect": 1,
+    "sitemap": 225
+  },
+  "added_by_route": {
+    "link": 15,
+    "sitemap": 1
+  },
+  "new_200_in_sitemap_not_linked": 218,
+  "new_200_linked_not_in_sitemap": 77,
+  "old_200_in_sitemap_not_linked": 215,
+  "requests_old": 883,
+  "requests_new": 894
+}

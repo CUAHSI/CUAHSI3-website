@@ -1,0 +1,292 @@
+{
+  "denominators": {
+    "legacy_pages": 761,
+    "new_pages": 187
+  },
+  "services": [
+    {
+      "service": "mailchimp",
+      "legacy_pages_with_link": 69,
+      "legacy_distinct_targets": 4,
+      "pages_here_with_link": 11,
+      "distinct_targets_here": 2,
+      "a4_addresses_here": 11,
+      "a4_verdicts_here": "ok 11"
+    },
+    {
+      "service": "constant-contact",
+      "legacy_pages_with_link": 0,
+      "legacy_distinct_targets": 0,
+      "pages_here_with_link": 1,
+      "distinct_targets_here": 1,
+      "a4_addresses_here": 1,
+      "a4_verdicts_here": "ok 1"
+    },
+    {
+      "service": "jotform",
+      "legacy_pages_with_link": 85,
+      "legacy_distinct_targets": 26,
+      "pages_here_with_link": 13,
+      "distinct_targets_here": 7,
+      "a4_addresses_here": 6,
+      "a4_verdicts_here": "ok 6"
+    },
+    {
+      "service": "zoom",
+      "legacy_pages_with_link": 99,
+      "legacy_distinct_targets": 44,
+      "pages_here_with_link": 7,
+      "distinct_targets_here": 5,
+      "a4_addresses_here": 5,
+      "a4_verdicts_here": "dead 2; ok 3"
+    },
+    {
+      "service": "cvent",
+      "legacy_pages_with_link": 7,
+      "legacy_distinct_targets": 12,
+      "pages_here_with_link": 1,
+      "distinct_targets_here": 6,
+      "a4_addresses_here": 6,
+      "a4_verdicts_here": "ok 6"
+    },
+    {
+      "service": "qualtrics",
+      "legacy_pages_with_link": 3,
+      "legacy_distinct_targets": 2,
+      "pages_here_with_link": 1,
+      "distinct_targets_here": 1,
+      "a4_addresses_here": 1,
+      "a4_verdicts_here": "ok 1"
+    },
+    {
+      "service": "google-forms",
+      "legacy_pages_with_link": 6,
+      "legacy_distinct_targets": 6,
+      "pages_here_with_link": 5,
+      "distinct_targets_here": 4,
+      "a4_addresses_here": 4,
+      "a4_verdicts_here": "ok 4"
+    },
+    {
+      "service": "eventbrite",
+      "legacy_pages_with_link": 1,
+      "legacy_distinct_targets": 1,
+      "pages_here_with_link": 0,
+      "distinct_targets_here": 0,
+      "a4_addresses_here": 0,
+      "a4_verdicts_here": ""
+    },
+    {
+      "service": "zeffy",
+      "legacy_pages_with_link": 0,
+      "legacy_distinct_targets": 0,
+      "pages_here_with_link": 0,
+      "distinct_targets_here": 0,
+      "a4_addresses_here": 0,
+      "a4_verdicts_here": ""
+    },
+    {
+      "service": "youtube",
+      "legacy_pages_with_link": 761,
+      "legacy_distinct_targets": 86,
+      "pages_here_with_link": 170,
+      "distinct_targets_here": 5,
+      "a4_addresses_here": 7,
+      "a4_verdicts_here": "redirect 7"
+    },
+    {
+      "service": "hydroshare",
+      "legacy_pages_with_link": 22,
+      "legacy_distinct_targets": 17,
+      "pages_here_with_link": 170,
+      "distinct_targets_here": 598,
+      "a4_addresses_here": 597,
+      "a4_verdicts_here": "ok 597"
+    },
+    {
+      "service": "github",
+      "legacy_pages_with_link": 13,
+      "legacy_distinct_targets": 23,
+      "pages_here_with_link": 11,
+      "distinct_targets_here": 16,
+      "a4_addresses_here": 16,
+      "a4_verdicts_here": "dead 1; ok 15"
+    }
+  ],
+  "search": {
+    "legacy_forms_pages": 761,
+    "here": {
+      "streamflow": {
+        "results": 8,
+        "first_titles": [
+          "Women Advancing River Research: Bedrock Water Storage, Forest Health, and Streamflow",
+          "Open Hydrologic Model Evaluation Framework",
+          "350+ free recordings on water science."
+        ],
+        "said_no_results": false
+      },
+      "code of conduct": {
+        "results": 8,
+        "first_titles": [
+          "Code of Conduct.",
+          "High-Frequency Water Quality Data: Cache la Poudre Watershed",
+          "The Critical Zone Collaborative Network"
+        ],
+        "said_no_results": false
+      },
+      "hydroshare": {
+        "results": 8,
+        "first_titles": [
+          "HydroShare Rebuilds Its Storage Layer After MinIO Ends Its Open-Source Edition",
+          "First Quantitative FAIR Assessment of HydroShare Establishes Evidence-Based Baseline",
+          "NEON Hydrologic Data Products on HydroShare"
+        ],
+        "said_no_results": false
+      },
+      "zzqxqx": {
+        "results": 0,
+        "first_titles": [],
+        "said_no_results": true
+      }
+    },
+    "here_phone_has_button": false,
+    "here_phone_menu_has_search": false,
+    "results_cap": 8
+  },
+  "legacy_filters": {
+    "selects_pages": 61,
+    "select_kinds": [
+      "selcat (5 options): 42 pages",
+      "selcat (6 options): 7 pages",
+      "selcat (2 options): 5 pages",
+      "selcat (4 options): 5 pages",
+      "selcat (45 options): 5 pages",
+      "selcat (10 options): 2 pages"
+    ]
+  },
+  "legacy_pager": {
+    "pages_with_pager_links": 51,
+    "list_families": 10
+  },
+  "events_here": {
+    "published": 45,
+    "with_registration_url": 23,
+    "by_service_hosts": {
+      "cuahsi.org (the legacy site)": 3,
+      "organiser or other site": 8,
+      "jotform": 2,
+      "zoom": 6,
+      "cvent": 4
+    },
+    "not_over_on_audit_date": 9,
+    "not_over_with_registration_url": 5,
+    "not_over_without": [
+      "annual-membership-meeting-2026",
+      "agu-annual-meeting-2026",
+      "cuahsi-agu-gathering-2026",
+      "cuahsi-turns-25-town-hall-2026"
+    ],
+    "by_service": {
+      "other": 15,
+      "jotform": 2,
+      "zoom": 6
+    },
+    "a4_verdict_of_registration_urls": {
+      "ok": 8,
+      "not in A4 list": 9,
+      "error": 2,
+      "redirect": 4
+    }
+  },
+  "jobs_here": {
+    "files": 149,
+    "published": 72,
+    "published_with_url": 72
+  },
+  "mailto_here": {
+    "distinct_addresses": 14,
+    "pages_with_mailto": 39,
+    "role_addresses_at_cuahsi": [
+      "help",
+      "membership"
+    ]
+  },
+  "forms_checked": {
+    "addresses": 50,
+    "on_legacy_pages": 46,
+    "on_pages_here": 18,
+    "legacy_only": 32,
+    "here_status": {
+      "answers but says closed or unavailable": 4,
+      "answers": 14
+    },
+    "legacy_only_status": {
+      "404": 2,
+      "redirects to cuahsi.jotform.com": 5,
+      "answers": 18,
+      "status 403": 1,
+      "status 401": 1,
+      "answers but says closed or unavailable": 5
+    }
+  },
+  "signals": {
+    "legacy": {
+      "analytics-id-inline": 761,
+      "apply-or-post-word-link": 38,
+      "button": 761,
+      "donate-word-link": 761,
+      "file-link": 137,
+      "form": 761,
+      "iframe": 14,
+      "link-to-service:cvent": 7,
+      "link-to-service:eventbrite": 1,
+      "link-to-service:github": 13,
+      "link-to-service:google-forms": 6,
+      "link-to-service:hydroshare": 22,
+      "link-to-service:jotform": 85,
+      "link-to-service:mailchimp": 69,
+      "link-to-service:qualtrics": 3,
+      "link-to-service:youtube": 761,
+      "link-to-service:zoom": 99,
+      "mailto-link": 5,
+      "next-previous-link": 46,
+      "pager-link": 51,
+      "register-word-link": 125,
+      "script-host": 761,
+      "script-kind": 761,
+      "search-box-or-pagefind-marker": 761,
+      "select": 61,
+      "share-link": 1,
+      "social-link": 761,
+      "subscribe-word-link": 56,
+      "tel-link": 11
+    },
+    "new": {
+      "apply-or-post-word-link": 7,
+      "button": 4,
+      "donate-word-link": 170,
+      "email-field": 2,
+      "file-link": 31,
+      "form": 1,
+      "iframe": 1,
+      "link-to-service:constant-contact": 1,
+      "link-to-service:cvent": 1,
+      "link-to-service:github": 11,
+      "link-to-service:google-forms": 5,
+      "link-to-service:hydroshare": 170,
+      "link-to-service:jotform": 13,
+      "link-to-service:mailchimp": 11,
+      "link-to-service:qualtrics": 1,
+      "link-to-service:youtube": 170,
+      "link-to-service:zoom": 7,
+      "mailto-link": 39,
+      "register-word-link": 17,
+      "script-host": 172,
+      "search-box-or-pagefind-marker": 4,
+      "select": 1,
+      "sign-in-word-or-link": 170,
+      "social-link": 170,
+      "subscribe-word-link": 170
+    }
+  }
+}

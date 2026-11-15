@@ -1,0 +1,98 @@
+{
+  "snapshot": "../CUAHSI3-website/raw/legacy-site/261106/pages/community/news",
+  "legacy_posts": 70,
+  "listed": 70,
+  "listing_links_with_no_file": 0,
+  "legacy_newsletter_titled": 20,
+  "legacy_issue_posts": 6,
+  "by_level": {
+    "none": 47,
+    "probable": 2,
+    "exact": 19,
+    "weak": 1,
+    "possible": 1
+  },
+  "by_level_news_titled": {
+    "none": 38,
+    "probable": 2,
+    "exact": 9,
+    "weak": 1
+  },
+  "by_level_newsletter_titled": {
+    "none": 9,
+    "exact": 10,
+    "possible": 1
+  },
+  "matched_by": {
+    "title and date": 3,
+    "source_url": 12,
+    "issue month": 6
+  },
+  "kind_crossing": {
+    "news-titled / news": 11,
+    "newsletter-titled / newsletter": 6,
+    "newsletter-titled / news": 4
+  },
+  "new_items": 33,
+  "new_news": 23,
+  "new_newsletter": 10,
+  "new_published": 33,
+  "new_with_legacy_match": 21,
+  "new_news_with_legacy_match": 15,
+  "new_newsletter_with_legacy_match": 6,
+  "new_without_legacy_post": [
+    "news:250903-cheristy-jones",
+    "news:251022-virtual-open-house",
+    "news:260601-new-staff-henok-tedla",
+    "news:260813-university-of-calgary-joins",
+    "news:261008-aih-fundamental-exam-member-spotlight",
+    "news:261008-ciroh-science-meeting-2026",
+    "news:261008-swot-river-discharge-explorer",
+    "news:261008-wpi-2027-theme-leaders-call",
+    "newsletter:260101-january",
+    "newsletter:260201-february",
+    "newsletter:260301-march",
+    "newsletter:260401-april"
+  ],
+  "new_news_source_url_on_legacy": 12,
+  "new_news_source_url_page_not_in_snapshot": [],
+  "legacy_posts_sharing_one_new_item": [],
+  "pairs_compared": 21,
+  "pairs_date_differs": 5,
+  "pairs_date_over_7_days": 3,
+  "pairs_new_is_short": 9,
+  "pairs_with_legacy_links_missing": 6,
+  "pairs_address_counts_differ": 2,
+  "legacy_posts_with_hidden_addresses": 26,
+  "legacy_hidden_addresses_total": 36,
+  "new_items_with_addresses": 12,
+  "content_references_to_legacy_news_addresses": 30,
+  "content_files_with_them": 19,
+  "distinct_legacy_addresses_referenced": 17,
+  "referenced_by_field": {
+    "source_url": 12,
+    "text": 18
+  },
+  "referenced_with_no_page_here": [
+    "2026-hydrolearn-workshop-and-hackathon-recap (1)",
+    "call-for-nominations-cuahsi-board-of-directors (4)"
+  ],
+  "referenced_not_in_snapshot": [],
+  "clicks_matched": 243,
+  "clicks_unmatched": 299,
+  "clicks_by_class": {
+    "404": 69,
+    "same-path": 1
+  },
+  "clicks_total_legacy_posts": 542,
+  "control": {
+    "rows": 70,
+    "legacy_posts_without_row": 0,
+    "same_level": 68,
+    "same_matched_verdict": 69,
+    "differing": [
+      "hydrolearn-fellows-reflections: hand none ; script weak news:260310-watersofthack-fellows",
+      "september-e-newsletter-community-guest-spotlight-with-cheristy-jones: hand probable news:250903-cheristy-jones; script possible news:250903-cheristy-jones"
+    ]
+  }
+}

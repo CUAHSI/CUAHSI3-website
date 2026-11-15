@@ -1,0 +1,5 @@
+261112 | task/fix-broken-controls | start | A5 section 8 fixes 1 to 3: the four controls that did nothing or ended in an error (home sign-up box, archive Subscribe link, quote form, Code of Conduct anonymous form link)
+261112 | task/fix-broken-controls | merged | PR 226 (A8) merged by Jordan; PR 221 (dead links) still open when checked
+261112 | task/fix-broken-controls | note | Jordan decided in chat: both newsletter controls go to the Mailchimp sign-up, the quote form becomes an e-mail link to connect@cuahsi.org, and the Code of Conduct page drops the anonymous-form sentence for now
+261112 | task/fix-broken-controls | defect | Reviewer: "use one of the two routes above" on the Code of Conduct page could be read as informal and formal, which are not two channels (reworded); the contact page's Paid work card still said requests are "routed directly to the Hire CUAHSI team" although they now go to the general address (now the same label the general card uses). caught: reviewer
+261112 | task/fix-broken-controls | pr | PR 227 opened, base checked: https://github.com/jordansread/CUAHSI3-website/pull/227

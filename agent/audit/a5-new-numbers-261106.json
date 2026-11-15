@@ -1,0 +1,107 @@
+{
+  "side": "new",
+  "html_files": 187,
+  "files_with_main_element": 170,
+  "signals": {
+    "apply-or-post-word-link": {
+      "pages": 7,
+      "distinct_targets": 6
+    },
+    "button": {
+      "pages": 4,
+      "distinct_targets": 4
+    },
+    "donate-word-link": {
+      "pages": 170,
+      "distinct_targets": 2
+    },
+    "email-field": {
+      "pages": 2,
+      "distinct_targets": 1
+    },
+    "file-link": {
+      "pages": 31,
+      "distinct_targets": 4
+    },
+    "form": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "iframe": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "link-to-service:constant-contact": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "link-to-service:cvent": {
+      "pages": 1,
+      "distinct_targets": 6
+    },
+    "link-to-service:github": {
+      "pages": 11,
+      "distinct_targets": 16
+    },
+    "link-to-service:google-forms": {
+      "pages": 5,
+      "distinct_targets": 4
+    },
+    "link-to-service:hydroshare": {
+      "pages": 170,
+      "distinct_targets": 598
+    },
+    "link-to-service:jotform": {
+      "pages": 13,
+      "distinct_targets": 7
+    },
+    "link-to-service:mailchimp": {
+      "pages": 11,
+      "distinct_targets": 2
+    },
+    "link-to-service:qualtrics": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "link-to-service:youtube": {
+      "pages": 170,
+      "distinct_targets": 5
+    },
+    "link-to-service:zoom": {
+      "pages": 7,
+      "distinct_targets": 5
+    },
+    "mailto-link": {
+      "pages": 39,
+      "distinct_targets": 1
+    },
+    "register-word-link": {
+      "pages": 17,
+      "distinct_targets": 9
+    },
+    "script-host": {
+      "pages": 172,
+      "distinct_targets": 1
+    },
+    "search-box-or-pagefind-marker": {
+      "pages": 4,
+      "distinct_targets": 1
+    },
+    "select": {
+      "pages": 1,
+      "distinct_targets": 1
+    },
+    "sign-in-word-or-link": {
+      "pages": 170,
+      "distinct_targets": 1
+    },
+    "social-link": {
+      "pages": 170,
+      "distinct_targets": 6
+    },
+    "subscribe-word-link": {
+      "pages": 170,
+      "distinct_targets": 33
+    }
+  }
+}

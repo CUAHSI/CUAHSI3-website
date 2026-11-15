@@ -1,0 +1,4 @@
+261109 | task/youtube-id-check | start | Schema check that a cyberseminar youtube_id is empty or 11 characters from A-Z a-z 0-9 _ - (follow-up from audit A3g, org issue 108; Part 2 of the WARR work removed the two malformed ids).
+261109 | task/youtube-id-check | note | PR 210 (baseline images) reported merged by Jordan on 9 November 2026; this branch starts from it.
+261109 | task/youtube-id-check | note | Checked: all 88 cyberseminar files pass (84 with an 11-character id, 4 empty). Negative tests on a copy of one file, restored after: the 9-character id GMeAjRTsM fails with the new message; "has space 1" fails. The validator reports 0 schema failures on the unmodified tree.
+261109 | task/youtube-id-check | pr | PR 211 (fork): cyberseminar youtube_id must be empty or 11 characters from A-Z a-z 0-9 _ -; 88 of 88 files pass, negative tests fail as intended; reviewer ran: 0 findings.

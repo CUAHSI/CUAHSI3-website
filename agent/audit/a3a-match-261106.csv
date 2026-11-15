@@ -1,0 +1,92 @@
+kind,key,legacy_name,level,new_record,new_name,evidence,cutover_class,clicks,impressions
+staff,abner-bogan,Abner Bogan,exact,team-json:abner-bogan,Abner Bogan,"exact: legacy ""Abner Bogan"" / here ""Abner Bogan""",404,26,326
+staff,anthony-castronova,Anthony Castronova,exact,team-json:tony-castronova,Anthony Castronova,"exact: legacy ""Anthony Castronova"" / here ""Anthony Castronova""",404,91,1320
+staff,barbara-walker,Barbara Walker,exact,team-json:barbara-walker,Barbara Walker,"exact: legacy ""Barbara Walker"" / here ""Barbara Walker""",404,2,38
+staff,brianna-kearns,Brianna Kearns,exact,team-json:brianna-kearns,Brianna Kearns,"exact: legacy ""Brianna Kearns"" / here ""Brianna Kearns""",404,7,72
+staff,callie-porter-borden,Callie Porter-Borden,exact,team-json:callie-porter-borden,Callie Porter-Borden,"exact: legacy ""Callie Porter-Borden"" / here ""Callie Porter-Borden""",404,,
+staff,courtney-di-vittorio,Courtney Di Vittorio,exact,team-json:courtney-di-vittorio,Courtney Di Vittorio,"exact: legacy ""Courtney Di Vittorio"" / here ""Courtney Di Vittorio""",404,2,43
+staff,danielle-tijerina-kreuzer,Danielle Tijerina-Kreuzer,exact,team-json:danielle-tijerina-kreuzer,Danielle Tijerina-Kreuzer,"exact: legacy ""Danielle Tijerina-Kreuzer"" / here ""Danielle Tijerina-Kreuzer""",404,4,23
+staff,devin-cowan,Devin Cowan,exact,team-json:devin-cowan,Devin Cowan,"exact: legacy ""Devin Cowan"" / here ""Devin Cowan""",404,36,360
+staff,emily-clark,Emily Clark,exact,team-json:emily-clark,Emily Clark,"exact: legacy ""Emily Clark"" / here ""Emily Clark""",404,21,1190
+staff,henok-tedla,Henok Tedla,exact,team-json:henok-tedla,Henok Tedla,"exact: legacy ""Henok Tedla"" / here ""Henok Tedla""",404,1,12
+staff,irene-garousi-nejad,Irene Garousi-Nejad,exact,team-json:irene-garousi-nejad,Irene Garousi-Nejad,"exact: legacy ""Irene Garousi-Nejad"" / here ""Irene Garousi-Nejad""",404,21,252
+staff,jordan-read,Jordan Read,exact,team-json:jordan-read,Jordan Read,"exact: legacy ""Jordan Read"" / here ""Jordan Read""",404,224,4485
+staff,julia-masterman,Julia Masterman,exact,team-json:julia-masterman,Julia Masterman,"exact: legacy ""Julia Masterman"" / here ""Julia Masterman""",404,92,1695
+staff,kaysa-vaarre-lamoureux-she-they,Kaysa Vaarre-Lamoureux,exact,team-json:kaysa-vaarre-lamoureux,Kaysa Vaarre-Lamoureux,"exact: legacy ""Kaysa Vaarre-Lamoureux"" / here ""Kaysa Vaarre-Lamoureux""",404,,
+staff,kimberlee-wong,Kimberlee Wong,exact,team-json:kimmy-wong,Kimberlee Wong,"exact: legacy ""Kimberlee Wong"" / here ""Kimberlee Wong""",404,18,199
+staff,lindsay-platt,Lindsay Platt,exact,team-json:lindsay-platt,Lindsay Platt,"exact: legacy ""Lindsay Platt"" / here ""Lindsay Platt""",404,59,1539
+staff,lisa-mucciacito,Lisa Mucciacito,exact,team-json:lisa-mucciacito,Lisa Mucciacito,"exact: legacy ""Lisa Mucciacito"" / here ""Lisa Mucciacito""",404,31,320
+staff,martin-seul,Martin Seul,exact,team-json:martin-seul,Martin Seul,"exact: legacy ""Martin Seul"" / here ""Martin Seul""",404,33,461
+staff,neal-debuhr,Neal DeBuhr,exact,team-json:neal-debuhr,Neal DeBuhr,"exact: legacy ""Neal DeBuhr"" / here ""Neal DeBuhr""",404,4,201
+staff,scott-black,Scott Black,exact,team-json:scott-black,Scott Black,"exact: legacy ""Scott Black"" / here ""Scott Black""",404,6,103
+staff,summer-conley,Summer Conley,exact,team-json:summer-conley,Summer Conley,"exact: legacy ""Summer Conley"" / here ""Summer Conley""",404,47,715
+staff,zahraa-alhmood,Zahraa Alhmood,exact,team-json:zahraa-alhmood,Zahraa Alhmood,"exact: legacy ""Zahraa Alhmood"" / here ""Zahraa Alhmood""",404,,
+lecturer,éowyn-campbell,Éowyn Campbell,none,,,no name here shares the last word,404,1,40
+lecturer,adam-ward,Adam Ward,none,,,no name here shares the last word,404,1,88
+lecturer,aditi-bhaskar,Aditi Bhaskar,none,,,no name here shares the last word,404,,
+lecturer,adnan-rajib,Adnan Rajib,none,,,no name here shares the last word,404,,
+lecturer,adrian-harpold,Adrian Harpold,none,,,no name here shares the last word,404,,
+lecturer,aida-farough,Aida Farough,none,,,no name here shares the last word,404,13,172
+lecturer,alexandre-martinez,Alexandre Martinez,none,,,no name here shares the last word,404,4,61
+lecturer,amber-s-jones,Amber S Jones,none,,,no name here shares the last word,404,1,58
+lecturer,anne-jefferson,Anne Jefferson,none,,,no name here shares the last word,404,,
+lecturer,arpita-mondal,Arpita Mondal,none,,,no name here shares the last word,404,,
+lecturer,ashish-mishra,Ashish Mishra,none,,,no name here shares the last word,404,,
+lecturer,audrey-sawyer,Audrey Sawyer,none,,,no name here shares the last word,404,,
+lecturer,b-s-daya-sagar,B. S. Daya Sagar,none,,,no name here shares the last word,404,,
+lecturer,behzad-ghanbarian,Behzad Ghanbarian,none,,,no name here shares the last word,404,,
+lecturer,chelsea-clifford,Chelsea Clifford,none,,,no name here shares the last word,404,,
+lecturer,christopher-chini,Christopher Chini,none,,,no name here shares the last word,404,,
+lecturer,darren-ficklin,Darren Ficklin,none,,,no name here shares the last word,404,,
+lecturer,dipankar-dwivedi,Dipankar Dwivedi,none,,,no name here shares the last word,404,,
+lecturer,elco-luijendijk,Elco Luijendijk,none,,,no name here shares the last word,404,,
+lecturer,elizabeth-perera,Elizabeth Perera,none,,,no name here shares the last word,404,,
+lecturer,emily-stephan,Emily Stephan,none,,,no name here shares the last word,404,,
+lecturer,erin-bray,Erin Bray,none,,,no name here shares the last word,404,,
+lecturer,erin-white,Erin White,none,,,no name here shares the last word,404,3,135
+lecturer,eswar-rajasekaran,Eswar Rajasekaran,none,,,no name here shares the last word,404,,
+lecturer,gabriela-ioana-toroimac,Gabriela Ioana-Toroimac,none,,,no name here shares the last word,404,2,320
+lecturer,hamza-jakada,Hamza Jakada,none,,,no name here shares the last word,404,,
+lecturer,ingrid-luffman,Ingrid Luffman,none,,,no name here shares the last word,404,,
+lecturer,jack-wittman,Jack Wittman,none,,,no name here shares the last word,404,,
+lecturer,jakob-f-steiner,Jakob F Steiner,none,,,no name here shares the last word,404,,
+lecturer,jan-seibert,Jan Seibert,none,,,no name here shares the last word,404,,
+lecturer,jennifer-drake,Jennifer Drake,none,,,no name here shares the last word,404,,
+lecturer,jerad-bales,Jerad Bales,none,,,no name here shares the last word,404,1,195
+lecturer,john-england,John England,none,,,no name here shares the last word,404,1,100
+lecturer,julia-knapp,Julia Knapp,none,,,no name here shares the last word,404,,
+lecturer,kamini-singha,Kamini Singha,none,,,no name here shares the last word,404,,
+lecturer,lara-fowler,Lara Fowler,none,,,no name here shares the last word,404,,
+lecturer,laura-decicco,Laura DeCicco,none,,,no name here shares the last word,404,,
+lecturer,li-li,Li Li,none,,,no name here shares the last word,404,,
+lecturer,manuela-i-brunner,Manuela I. Brunner,none,,,no name here shares the last word,404,,
+lecturer,maram-alrehaili,Maram Alrehaili,none,,,no name here shares the last word,404,,
+lecturer,matthew-siegfried,Matthew Siegfried,none,,,no name here shares the last word,404,,
+lecturer,melinda-erickson,Melinda Erickson,none,,,no name here shares the last word,404,,
+lecturer,mesenbet-yibeltal-sebaht,Mesenbet Yibeltal Sebaht,none,,,no name here shares the last word,404,19,515
+lecturer,michael-tso,Michael Tso,none,,,no name here shares the last word,404,,
+lecturer,nasrin-fathollahzadeh-attar,Nasrin Fathollahzadeh Attar,none,,,no name here shares the last word,404,2,202
+lecturer,nate-jones,Nate Jones,none,,,no name here shares the last word,404,,
+lecturer,nicholas-john-stanislaus-kinar,Nicholas John Stanislaus Kinar,none,,,no name here shares the last word,404,2,314
+lecturer,nick-wildman-cerp,"Nick Wildman, CERP",none,,,no name here shares the last word,404,,
+lecturer,nicole-gasparini,Nicole Gasparini,none,,,no name here shares the last word,404,1,4
+lecturer,niko-wanders,Niko Wanders,none,,,no name here shares the last word,404,,
+lecturer,nils-moosdorf,Nils Moosdorf,none,,,no name here shares the last word,404,,
+lecturer,penny-beames,Penny Beames,none,,,no name here shares the last word,404,,
+lecturer,raymond-slade,Raymond Slade,none,,,no name here shares the last word,404,,
+lecturer,razi-sheikholeslami,Razi Sheikholeslami,none,,,no name here shares the last word,404,,
+lecturer,rebecca-barnes,Rebecca Barnes,none,,,no name here shares the last word,404,,
+lecturer,robia-shaheen,Robia Shaheen,none,,,no name here shares the last word,404,9,89
+lecturer,sabina-khatri,Sabina Khatri,none,,,no name here shares the last word,404,,
+lecturer,sam-prentice,Sam Prentice,none,,,no name here shares the last word,404,3,41
+lecturer,sam-zipper,Sam Zipper,none,,,no name here shares the last word,404,,
+lecturer,sanjib-sharma,Sanjib Sharma,none,,,no name here shares the last word,404,,
+lecturer,scott-hamsahw,Scott Hamshaw,none,,,no name here shares the last word,404,,
+lecturer,shahryar-ahmad,Shahryar Ahmad,none,,,no name here shares the last word,404,,
+lecturer,skuyler-herzog,Skuyler Herzog,none,,,no name here shares the last word,404,1,74
+lecturer,steven-loheide,Steven Loheide,none,,,no name here shares the last word,404,,
+lecturer,tamlin-pavelsky,Tamlin Pavelsky,none,,,no name here shares the last word,404,,
+lecturer,thomas-y-chen,Thomas Y. Chen,none,,,no name here shares the last word,404,,
+lecturer,tim-scheibe,Tim Scheibe,none,,,no name here shares the last word,404,,
+lecturer,viviana-re,Viviana Re,none,,,no name here shares the last word,404,,
+lecturer,woonsup-choi,Woonsup Choi,none,,,no name here shares the last word,404,,

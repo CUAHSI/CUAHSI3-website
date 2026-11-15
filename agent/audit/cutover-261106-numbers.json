@@ -1,0 +1,166 @@
+{
+  "date": "261106",
+  "rules": 322,
+  "urls": 927,
+  "sources": {
+    "a1": 782,
+    "cited": 47,
+    "gsc": 569,
+    "gsc_rows_read": 1000,
+    "gsc_other_host": 428,
+    "gsc_www_rows_with_query": 1,
+    "gsc_other_hosts": {
+      "hiscentral.cuahsi.org": {
+        "rows": 42,
+        "clicks": 426
+      },
+      "his.cuahsi.org": {
+        "rows": 33,
+        "clicks": 408
+      },
+      "data.cuahsi.org": {
+        "rows": 3,
+        "clicks": 96
+      },
+      "help.cuahsi.org": {
+        "rows": 28,
+        "clicks": 113
+      },
+      "subset.cuahsi.org": {
+        "rows": 6,
+        "clicks": 52
+      },
+      "jupyterhub.cuahsi.org": {
+        "rows": 1,
+        "clicks": 20
+      },
+      "hydroserver.cuahsi.org": {
+        "rows": 5,
+        "clicks": 37
+      },
+      "hydroshare.cuahsi.org": {
+        "rows": 300,
+        "clicks": 431
+      },
+      "wdc.cuahsi.org": {
+        "rows": 1,
+        "clicks": 4
+      },
+      "qa-hiscentral.cuahsi.org": {
+        "rows": 1,
+        "clicks": 2
+      },
+      "hydroportal.cuahsi.org": {
+        "rows": 6,
+        "clicks": 6
+      },
+      "apps.cuahsi.org": {
+        "rows": 1,
+        "clicks": 1
+      },
+      "arcgis.cuahsi.org": {
+        "rows": 1,
+        "clicks": 1
+      }
+    },
+    "gsc_total_clicks_all_hosts": 17515,
+    "gsc_only": 128,
+    "a1_and_gsc": 427
+  },
+  "class_all": {
+    "404": 638,
+    "same-path": 7,
+    "many-to-one": 253,
+    "generic": 7,
+    "redirect": 22
+  },
+  "class_a1_answering_200": {
+    "404": 496,
+    "same-path": 5,
+    "many-to-one": 253,
+    "generic": 7
+  },
+  "a1_answering_200": 761,
+  "class_gsc": {
+    "404": 431,
+    "same-path": 6,
+    "many-to-one": 104,
+    "generic": 6,
+    "redirect": 22
+  },
+  "clicks_total": 15918,
+  "clicks_by_class": {
+    "404": 10499,
+    "same-path": 3143,
+    "many-to-one": 2091,
+    "generic": 88,
+    "redirect": 97
+  },
+  "clicks_404_or_dead": 10499,
+  "fate_status_a1_200": {
+    "proposed": 472,
+    "ruled and built": 273,
+    "(no body)": 16
+  },
+  "fate_status_clicks": {
+    "proposed": 12759,
+    "(no body)": 1039,
+    "ruled and built": 2120
+  },
+  "case_variants": [
+    "https://www.cuahsi.org/About"
+  ],
+  "hops": {
+    "1": 282
+  },
+  "top_targets": [
+    [
+      "/learn-train/graduate-programs",
+      137
+    ],
+    [
+      "/about/documents",
+      67
+    ],
+    [
+      "/data-platforms/portals",
+      49
+    ],
+    [
+      "/learn-train",
+      7
+    ],
+    [
+      "/documents/minutes/2021-02-15-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2022-07-12-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2022-11-16-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2023-10-18-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2023-11-15-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2023-12-20-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2024-02-07-board-meeting-minutes.pdf",
+      1
+    ],
+    [
+      "/documents/minutes/2024-03-06-board-meeting-minutes.pdf",
+      1
+    ]
+  ]
+}

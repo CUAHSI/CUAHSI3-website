@@ -1,0 +1,35 @@
+group,name,affiliation,person_record_level,person_record,files_with_name,where,in_member_file,on_governance_page_here
+board,Hoori Ajami,University of California - Riverside,none,,5,news:3 newsletter:2,yes,no
+board,Amy Burgin,Iowa State University,none,,1,cyberseminars:1,yes,no
+board,Jon Duncan,Penn State University,none,,0,,no,no
+board,Darren Ficklin,Indiana University,none,,0,,yes,no
+board,"JP Gannon, Chair",Virginia Tech,none,,6,news:2 newsletter:2 research:2,yes,no
+board,Drew Guswa,Smith College,none,,0,,no,no
+board,Paul C. Hanson,University of Wisconsin,none,,0,,no,no
+board,Melissa A. Kenney,University of Minnesota,none,,0,,no,no
+board,Safeeq Khan,University of California - Merced,none,,0,,no,no
+board,Sarah Ledford,Georgia State University,none,,1,cyberseminars:1,yes,no
+board,Marco Maneta,"First Street, Inc.",none,,3,news:2 newsletter:1,no,no
+board,Ashley Matheny,University of Texas - Austin,none,,0,,yes,no
+board,Jennifer Merrill,Stroud Water Research Center,none,,0,,yes,no
+board,Diego Riveros-Iregui,University of North Carolina - Chapel Hill,none,,0,,yes,no
+board,Tao Wen,Syracuse University,exact,board:tao-wen,4,board:1 news:2 newsletter:1,yes,no
+board,"Salli Dymond, (Officer)","Northern Arizona University, Secretary",none,,0,,no,no
+board,"Jordan Read, (Officer)","CUAHSI, President",exact,team-json:jordan-read,21,cyberseminars:1 events:4 news:2 newsletter:8 research:4 team:2,no,no
+board,"Steve Architzel, (Officer)","University of California - San Francisco, Treasurer",none,,0,,no,no
+informatics,Vidya Samadi (Chair),Clemson University,none,,4,events:2 newsletter:2,yes,no
+informatics,Aubrey Dugger,NCAR,none,,0,,no,no
+informatics,Scott Peckham,University of Colorado,none,,0,,no,no
+informatics,Ibrahim Demir,University of Iowa,none,,0,,no,no
+informatics,Jeff Weber,NCAR,none,,0,,no,no
+informatics,Femeena Pandara Valappi,Pennsylvania State University,none,,0,,no,no
+informatics,Elnaz Pezeshki,"Washington State Department of Health, Office of Environmental Health and Safety",none,,0,,no,no
+education and outreach,J.P. Gannon (Board Liaison),Virginia Tech,none,,6,news:2 newsletter:2 research:2,yes,no
+education and outreach,Lauren Lowman,Wake Forest University,none,,1,cyberseminars:1,no,no
+education and outreach,Tao Wen (Chair),Syracuse University,exact,board:tao-wen,4,board:1 news:2 newsletter:1,yes,no
+instrumentation,Robert Payn (Chair),Montana State University,none,,0,,yes,no
+instrumentation,Lyndsay Ball,U.S. Geological Survey,none,,0,,no,no
+instrumentation,Rachel Gabor,Ohio State University,none,,0,,no,no
+instrumentation,Diana Karwan,University of Minnesota,none,,1,cyberseminars:1,yes,no
+instrumentation,Ted Langhorst,University of Wyoming,none,,0,,no,no
+instrumentation,YinPhan Tsang,University of Hawaii,none,,0,,no,no

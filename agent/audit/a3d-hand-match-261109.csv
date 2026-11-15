@@ -1,0 +1,16 @@
+legacy_block,legacy_name,new_row,new_name
+1,Arizona State University,1,Arizona State University
+5,City College of New York,5,City College of New York
+9,Colorado State University (first block),9,Colorado State University
+24,Marquette University,23,Marquette University
+45,State University of New York (SUNY),43,State University of New York (SUNY)
+49,The Ohio State University (first block),47,The Ohio State University
+52,Universidad de las Americas Puebla,49,Universidad de las Americas Puebla
+53,Universitat Politècnica de Catalunya,50,Universitat Politècnica de Catalunya
+56,University at Buffalo (second block),52,University at Buffalo
+58,University of Alabama,54,University of Alabama
+64,"University of California, Merced",60,"University of California, Merced"
+74,University of Kansas (long block with department headings),70,University of Kansas
+96,"University of Texas, San Antonio",92,"University of Texas, San Antonio"
+102,University of Wisconsin - Madison (second block),97,University of Wisconsin - Madison
+103,University of Wisconsin-Milwaukee,98,University of Wisconsin-Milwaukee

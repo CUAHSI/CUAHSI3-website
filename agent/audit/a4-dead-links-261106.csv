@@ -1,0 +1,54 @@
+verdict,status,note,host,url,pages,page_list,checked_by
+dead,404,,andrewsforest.oregonstate.edu,https://andrewsforest.oregonstate.edu/news/reu-opportunity-post-fire-impacts-streamflow-and-riparian-zones,1,/community/newsletter/2026-march,GET
+dead,404,,careers.rpi.edu,https://careers.rpi.edu/en-us/job/495508/energy-environment-and-sustainability-researchers,1,/community/newsletter/2026-march,GET
+dead,404,,careers.ua.edu,https://careers.ua.edu/jobs/postdoctoral-fellow-529157-tuscaloosa-alabama-united-states,1,/community/newsletter/2026-june,GET
+dead,,DNS: name does not exist,cee.engineering.uiowa.edu,https://cee.engineering.uiowa.edu/graduate-program,1,/learn-train/graduate-programs,HEAD
+dead,404,,edsbook.org,https://edsbook.org/welcome.html,1,/about/impact/eds-book-hurricane-notebook-2025,GET
+dead,,DNS: name does not exist,ees.cst.temple.edu,https://ees.cst.temple.edu/,1,/learn-train/graduate-programs,HEAD
+dead,404,,employment.ucsd.edu,https://employment.ucsd.edu/research-and-operations-hydrologist-141678/job/491E2E5ED2C88D361B4BEF5BF895AAAF,1,/community/newsletter/2026-october,GET
+dead,404,,fabe.osu.edu,https://fabe.osu.edu/graduate/specializationresearch-areas,1,/learn-train/graduate-programs,GET
+dead,,DNS: name does not exist,forecasting.vaci.org.vn,http://forecasting.vaci.org.vn/,1,/data-platforms/portals,HEAD
+dead,404,,github.com,https://github.com/abner-bogan,1,/about/team/abner-bogan,GET
+dead,404,,minnehahacreek.org,https://minnehahacreek.org/employment/list/planner-project-manager/,1,/community/newsletter/2026-april,GET
+dead,,DNS: name does not exist,portailrbv.sedoo.fr,http://portailrbv.sedoo.fr/,1,/data-platforms/portals,HEAD
+dead,410,,recruit.ucanr.edu,https://recruit.ucanr.edu/JPF00373,1,/community/newsletter/2026-april,HEAD
+dead,404,,scholar.google.com,https://scholar.google.com/citations?user=uGQqEVMAAAAJ,1,/about/team/danielle-tijerina-kreuzer,GET
+dead,404,,us06web.zoom.us,https://us06web.zoom.us/meeting/register/RLf8JlMaT5GZd1tBDL3Vew,2,/community/newsletter/2026-june ; /community/newsletter/2026-may,GET
+dead,404,,us06web.zoom.us,https://us06web.zoom.us/meeting/register/v9ipN35JRPmBYX4Bd8w2bA,1,/community/newsletter/2026-september,GET
+dead,404,,waterinstitute.ufl.edu,https://waterinstitute.ufl.edu/education/wigf/,1,/learn-train/graduate-programs,GET
+dead,,DNS: name does not exist,waterscience.mst.edu,https://waterscience.mst.edu/,1,/learn-train/graduate-programs,HEAD
+dead,,DNS: name does not exist,www-naweb.iaea.org,http://www-naweb.iaea.org/napc/ih/IHS_resources_isohis.html,1,/data-platforms/portals,HEAD
+dead,404,,www.cuahsi.org,https://www.cuahsi.org/events/virtual-open-house,1,/community/newsletter/2026-october,GET
+dead,404,,www.cuahsi.org,https://www.cuahsi.org/job-board/graduate-research-assistantships-in-urban-water-systems,1,/community/newsletter/2026-september,GET
+dead,404,,www.eawag.ch,https://www.eawag.ch/en/research/water-for-ecosystem/ecosystems/rivers-program/,1,/data-platforms/portals,GET
+dead,404,,www.gdacs.org,http://www.gdacs.org/flooddetection/overview.aspx,1,/data-platforms/portals,GET
+dead,,DNS: name does not exist,www.geoportal.org,http://www.geoportal.org/,1,/data-platforms/portals,HEAD
+dead,404,,www.lsu.edu,https://www.lsu.edu/eng/cee/people/area-water.php,1,/learn-train/graduate-programs,GET
+dead,404,,www.ou.edu,http://www.ou.edu/content/coe/cees/grad_programs/environmental.html,1,/learn-train/graduate-programs,GET
+dead,404,,www.udlap.mx,https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2,1,/learn-train/graduate-programs,GET
+dead,404,,www.uidaho.edu,https://www.uidaho.edu/cals/water-resources,1,/learn-train/graduate-programs,GET
+blocked,403,,agupubs.onlinelibrary.wiley.com,https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026EF008296,2,/about/impact/cznet-preferential-flow-paper-2026 ; /community/newsletter/2026-august,GET
+blocked,403,,aslopubs.onlinelibrary.wiley.com,https://aslopubs.onlinelibrary.wiley.com/journal/23782242,1,/about/team/jordan-read,GET
+blocked,403,,core.unesco.org,https://core.unesco.org/en/home,1,/data-platforms/portals,GET
+blocked,403,,gradschool.siu.edu,https://gradschool.siu.edu/academics/,1,/learn-train/graduate-programs,GET
+blocked,403,,www.agu.org,https://www.agu.org/-/media/files/publications/editorialsearch/025_18338110783_pub_eic_search_jgr-oceans_flyer_20260430,2,/community/newsletter/2026-june ; /community/newsletter/2026-may,GET
+blocked,403,,www.agu.org,https://www.agu.org/-/media/files/publications/editorialsearch/025_18338110783_pub_eic_search_water_research_flyer_20260430,2,/community/newsletter/2026-june ; /community/newsletter/2026-may,GET
+blocked,403,,www.agu.org,https://www.agu.org/annual-meeting,1,/community/newsletter/2026-october,GET
+blocked,403,,www.agu.org,https://www.agu.org/annual-meeting/present?tab=abstracts,1,/community/newsletter/2026-july,GET
+blocked,403,,www.ccny.cuny.edu,https://www.ccny.cuny.edu/civileng,1,/learn-train/graduate-programs,GET
+blocked,403,,www.jhu.edu,http://www.jhu.edu/,1,/learn-train/graduate-programs,GET
+blocked,403,,www.linkedin.com,https://www.linkedin.com/company/aihydrology/,2,/community/news/aih-fundamental-exam-member-spotlight ; /community/newsletter/2026-october,GET
+blocked,403,,www.linkedin.com,https://www.linkedin.com/company/consortium-of-universities-for-the-advancement-of-hydrologic-science-inc-cuahsi-,169,/ ; /about ; /about/documents ; /about/governance ; /about/impact ; /about/impact/agu-community-gathering-2025 ; /about/impact/cache-la-poudre-wq-2026 ; /about/impact/campus-outreach-engagement-summit-2026 ; /about/impact/cznet-preferential-flow-paper-2026 ; /about/impact/data-publishing-cohort-2025,GET
+blocked,403,,www.un-igrac.org,https://www.un-igrac.org/global-groundwater-information-system-ggis,1,/data-platforms/portals,GET
+error,,TimeoutError,2026julyesipmeeting.sched.com,https://2026julyesipmeeting.sched.com/,2,/community/newsletter/2026-august ; /community/newsletter/2026-july,HEAD
+error,,UNABLE_TO_VERIFY_LEAF_SIGNATURE,bwdb.portal.gov.bd,https://bwdb.portal.gov.bd/,1,/data-platforms/portals,HEAD
+error,,TimeoutError,hydrolearn.org,https://hydrolearn.org/,6,/about/impact/hydrolearn-ciroh-hackathon-2026 ; /about/impact/hydrolearn-fellows-2025 ; /community/newsletter/2026-april ; /community/newsletter/2026-january ; /community/newsletter/2026-july ; /community/newsletter/2026-may,HEAD
+error,,DEPTH_ZERO_SELF_SIGNED_CERT,wci.earth2observe.eu,https://wci.earth2observe.eu/,1,/data-platforms/portals,HEAD
+error,302,more than 5 redirects,www.awra.org,https://www.awra.org/AWRA/Members/Events_and_Education/Events/2026-Landing-Pages/01_GWTC/GWTC2026.aspx,3,/community/newsletter/2026-april ; /community/newsletter/2026-june ; /community/newsletter/2026-may,HEAD
+error,,UNABLE_TO_VERIFY_LEAF_SIGNATURE,www.earth.columbia.edu,https://www.earth.columbia.edu/,1,/learn-train/graduate-programs,HEAD
+error,,TimeoutError,www.hydrolearn.org,https://www.hydrolearn.org/,2,/community/newsletter/2026-august ; /learn-train,HEAD
+error,999,,www.linkedin.com,https://www.linkedin.com/in/anthony-castronova-900a2632/,1,/about/team/tony-castronova,GET
+error,999,,www.linkedin.com,https://www.linkedin.com/in/jordan-s-read/,1,/about/team/jordan-read,HEAD
+error,999,,www.linkedin.com,https://www.linkedin.com/in/lindsay-platt-83b81867/,1,/about/team/lindsay-platt,HEAD
+error,,UNABLE_TO_VERIFY_LEAF_SIGNATURE,www.uky.edu,http://www.uky.edu/,1,/learn-train/graduate-programs,HEAD
+error,,UND_ERR_CONNECT_TIMEOUT,www.whycos.org,http://www.whycos.org/whycos/,1,/data-platforms/portals,HEAD

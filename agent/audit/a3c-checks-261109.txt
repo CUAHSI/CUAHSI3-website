@@ -1,0 +1,10 @@
+A3c checks, 9 November 2026. Each line says what was run and what it returned.
+
+1. Redirect rules for legacy news addresses in public/_redirects (grep -c 'community/news'):
+   0
+2. Cut-over simulation (agent/audit/cutover-261106-urls.csv), class of the 70 legacy post addresses:
+   {"404":69,"same-path":1}; the one that resolves: jupyterhub-data-loss-incident
+3. Pages in the snapshot that hide addresses behind a script ("email hidden; JavaScript is required"):
+         26 of 76 files; mailto: links in the 76 files:        0
+4. Listing: addresses linked from news.html and p2..p7: 70, files in the folder that are not listing pages: 70, difference both ways: 0 (comm -3 of the two sorted lists).
+5. Legacy addresses of the form /community/news/<e-mail address> (mis-made mailto links, found by the crawl): 3, status 404 in fetch-log.csv. They are not posts.

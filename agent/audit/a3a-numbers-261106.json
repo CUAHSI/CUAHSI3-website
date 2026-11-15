@@ -1,0 +1,108 @@
+{
+  "legacy": {
+    "staff_pages": 22,
+    "staff_on_list_page": 22,
+    "list_page_entries": 22,
+    "lecturer_pages": 69,
+    "lecturer_cards": 69,
+    "lecturers_name_only_in_list": 67,
+    "lecturers_without_card": 0
+  },
+  "new": {
+    "records": 36,
+    "team_json": 22,
+    "team_json_with_profile": 6,
+    "team_md": 9,
+    "board_md": 1,
+    "community_md": 4,
+    "team_md_without_profile_flag": 5,
+    "members_rep_rows": 229
+  },
+  "match": {
+    "staff": {
+      "exact": 22
+    },
+    "lecturers": {
+      "none": 69
+    }
+  },
+  "new_records_with_legacy_page": 31,
+  "new_records_without_legacy_page": [
+    "board:tao-wen",
+    "community:aashish-gautam",
+    "community:hassan-saleh",
+    "community:heather-kropp",
+    "community:moses-kiwanuka"
+  ],
+  "cutover": {
+    "staff": {
+      "404": 22
+    },
+    "lecturers": {
+      "404": 69
+    },
+    "clicks_staff": 725,
+    "clicks_lecturers": 64,
+    "gsc_rows_staff": 19,
+    "gsc_rows_lecturers": 16
+  },
+  "facts": {
+    "pairs": 22,
+    "role": {
+      "same": 21,
+      "differs": 1
+    },
+    "links": {
+      "differs": 10,
+      "same": 12
+    },
+    "bio": {
+      "both have one": 22
+    },
+    "photo_file_exists": {
+      "yes": 21,
+      "no": 1
+    },
+    "contact_details": {
+      "differ": 22
+    },
+    "legacy_email_placeholder": 22,
+    "legacy_phone": 3,
+    "md_name_matches_json": {
+      "same": 8,
+      "no file": 13,
+      "differs": 1
+    },
+    "md_role_matches_json": {
+      "same": 9,
+      "no file": 13
+    }
+  },
+  "lecturer_probe": {
+    "name_in_either": 11,
+    "name_found_in_files": 9,
+    "name_in_member_rep_rows": 6,
+    "of": 69
+  },
+  "governance": {
+    "distinct_people": 32,
+    "distinct_with_person_record": 2,
+    "distinct_found_elsewhere": 15,
+    "rows": 34,
+    "by_group": {
+      "board": 18,
+      "informatics": 7,
+      "education and outreach": 3,
+      "instrumentation": 6
+    },
+    "with_person_record": 3,
+    "named_on_governance_page_here": 0,
+    "name_found_in_files": 12,
+    "in_member_rep_rows": 14
+  },
+  "control": {
+    "rows": 20,
+    "same_level": 20,
+    "differ": []
+  }
+}

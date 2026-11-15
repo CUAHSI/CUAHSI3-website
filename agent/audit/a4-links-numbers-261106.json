@@ -1,0 +1,261 @@
+{
+  "addresses_on_site": 3485,
+  "addresses_checked": 3485,
+  "not_checked": [],
+  "verdicts": {
+    "error": 12,
+    "ok": 1556,
+    "redirect": 1876,
+    "blocked": 13,
+    "dead": 28
+  },
+  "occurrences_on_pages": 7407,
+  "verdicts_by_occurrence": {
+    "redirect": 3613,
+    "ok": 3559,
+    "dead": 29,
+    "blocked": 185,
+    "error": 21
+  },
+  "method": {
+    "HEAD": 2845,
+    "GET": 640
+  },
+  "head_refused_then_get_ok": 605,
+  "head_said_404_get_said_ok": [
+    "bsky.app",
+    "uwmadison.app.box.com"
+  ],
+  "status_codes": {
+    "200": 1555,
+    "202": 1,
+    "301": 19,
+    "302": 1854,
+    "303": 1,
+    "307": 1,
+    "308": 2,
+    "403": 13,
+    "404": 20,
+    "410": 1,
+    "999": 3,
+    "TimeoutError": 3,
+    "UNABLE_TO_VERIFY_LEAF_SIGNATURE": 3,
+    "DNS: name does not exist": 7,
+    "DEPTH_ZERO_SELF_SIGNED_CERT": 1,
+    "UND_ERR_CONNECT_TIMEOUT": 1
+  },
+  "hosts": 264,
+  "hosts_with_a_dead_link": 26,
+  "redirect_kinds": {
+    "other host 302": 21,
+    "other host 301": 19,
+    "other host 308": 2,
+    "doi.org 302": 1832,
+    "other host 307": 1,
+    "other host 303": 1
+  },
+  "doi": {
+    "addresses": 1832,
+    "verdicts": {
+      "redirect": 1832
+    }
+  },
+  "http_not_https": {
+    "addresses": 67,
+    "verdicts": {
+      "redirect": 17,
+      "ok": 41,
+      "dead": 6,
+      "blocked": 1,
+      "error": 2
+    }
+  },
+  "non_doi": {
+    "addresses": 1653,
+    "verdicts": {
+      "error": 12,
+      "ok": 1556,
+      "redirect": 44,
+      "blocked": 13,
+      "dead": 28
+    }
+  },
+  "non_doi_redirects_permanent": 21,
+  "hosts_top_by_addresses": [
+    [
+      "doi.org",
+      1832
+    ],
+    [
+      "www.hydroshare.org",
+      594
+    ],
+    [
+      "czo-archive.criticalzone.org",
+      503
+    ],
+    [
+      "www.cuahsi.org",
+      73
+    ],
+    [
+      "www.nsf.gov",
+      70
+    ],
+    [
+      "www.joshswaterjobs.com",
+      47
+    ],
+    [
+      "github.com",
+      16
+    ],
+    [
+      "criticalzone.org",
+      11
+    ],
+    [
+      "us3.campaign-archive.com",
+      10
+    ],
+    [
+      "cuahsi.jotform.com",
+      6
+    ],
+    [
+      "labs.waterdata.usgs.gov",
+      6
+    ],
+    [
+      "web.cvent.com",
+      6
+    ]
+  ],
+  "links_to_the_legacy_host": {
+    "addresses": 73,
+    "verdicts": {
+      "ok": 71,
+      "dead": 2
+    },
+    "uploads": 16
+  },
+  "links_to_cuahsi_service_subdomains": {
+    "addresses": 4,
+    "verdicts": {
+      "ok": 3,
+      "redirect": 1
+    },
+    "hosts": [
+      "data.cuahsi.org",
+      "jupyterhub.cuahsi.org",
+      "matlab.cuahsi.org",
+      "subset.cuahsi.org"
+    ]
+  },
+  "links_to_the_legacy_host_pages": 37,
+  "dead_pages_affected": 11,
+  "dead_dns_by_page_group": {
+    "learn-train/graduate-programs": 3,
+    "data-platforms/portals": 4
+  },
+  "dead_by_host": {
+    "andrewsforest.oregonstate.edu": 1,
+    "careers.rpi.edu": 1,
+    "careers.ua.edu": 1,
+    "cee.engineering.uiowa.edu": 1,
+    "edsbook.org": 1,
+    "ees.cst.temple.edu": 1,
+    "employment.ucsd.edu": 1,
+    "fabe.osu.edu": 1,
+    "forecasting.vaci.org.vn": 1,
+    "github.com": 1,
+    "minnehahacreek.org": 1,
+    "portailrbv.sedoo.fr": 1,
+    "recruit.ucanr.edu": 1,
+    "scholar.google.com": 1,
+    "us06web.zoom.us": 2,
+    "waterinstitute.ufl.edu": 1,
+    "waterscience.mst.edu": 1,
+    "www-naweb.iaea.org": 1,
+    "www.cuahsi.org": 2,
+    "www.eawag.ch": 1,
+    "www.gdacs.org": 1,
+    "www.geoportal.org": 1,
+    "www.lsu.edu": 1,
+    "www.ou.edu": 1,
+    "www.udlap.mx": 1,
+    "www.uidaho.edu": 1
+  },
+  "dead_occurrences": 29,
+  "dead_on_published_pages_of_kind": {
+    "/community": 11,
+    "/learn-train": 9,
+    "/about": 3,
+    "/data-platforms": 6
+  },
+  "blocked_by_host": {
+    "agupubs.onlinelibrary.wiley.com": 1,
+    "aslopubs.onlinelibrary.wiley.com": 1,
+    "core.unesco.org": 1,
+    "gradschool.siu.edu": 1,
+    "www.agu.org": 4,
+    "www.ccny.cuny.edu": 1,
+    "www.jhu.edu": 1,
+    "www.linkedin.com": 2,
+    "www.un-igrac.org": 1
+  },
+  "error_notes": {
+    "302": 1,
+    "999": 3,
+    "TimeoutError": 3,
+    "UNABLE_TO_VERIFY_LEAF_SIGNATURE": 3,
+    "DEPTH_ZERO_SELF_SIGNED_CERT": 1,
+    "UND_ERR_CONNECT_TIMEOUT": 1
+  },
+  "control": {
+    "live_known": 10,
+    "dead_known": 10,
+    "found": 20,
+    "of": 20,
+    "differ": [],
+    "head_wrong_get_right": [
+      "https://uwmadison.app.box.com/s/4r648uw3r441d01bxm HEAD 404 GET 200",
+      "http://calcareers.ca.gov/CalHrPublic/Jobs/JobAppli HEAD 307 GET 200"
+    ]
+  },
+  "control_addresses_also_on_the_site": 8,
+  "recheck": {
+    "sample": 100,
+    "same_verdict": 100,
+    "different": [],
+    "by_host": {
+      "czo-archive.criticalzone.org": 9,
+      "labs.waterdata.usgs.gov": 1,
+      "doi.org": 56,
+      "www.nsf.gov": 1,
+      "uwm.edu": 1,
+      "cuahsi.jotform.com": 1,
+      "water-content-portal.cuahsi.io": 1,
+      "www.ncbi.nlm.nih.gov": 1,
+      "www.dataone.org": 1,
+      "www.agu.org": 1,
+      "www.wisc.edu": 1,
+      "us06web.zoom.us": 1,
+      "www.joshswaterjobs.com": 3,
+      "engineering.uci.edu": 1,
+      "fabe.osu.edu": 1,
+      "nrfa.ceh.ac.uk": 1,
+      "www.hydroshare.org": 16,
+      "www.plymouth.edu": 1,
+      "www.uky.edu": 1,
+      "www.awra.org": 1
+    },
+    "verdicts_in_sample": {
+      "ok": 39,
+      "redirect": 56,
+      "blocked": 1,
+      "dead": 2,
+      "error": 2
+    }
+  }
+}

@@ -1,0 +1,13 @@
+service,legacy_pages_with_link,legacy_distinct_targets,pages_here_with_link,distinct_targets_here,a4_addresses_here,a4_verdicts_here
+mailchimp,69,4,11,2,11,ok 11
+constant-contact,0,0,1,1,1,ok 1
+jotform,85,26,13,7,6,ok 6
+zoom,99,44,7,5,5,dead 2; ok 3
+cvent,7,12,1,6,6,ok 6
+qualtrics,3,2,1,1,1,ok 1
+google-forms,6,6,5,4,4,ok 4
+eventbrite,1,1,0,0,0,
+zeffy,0,0,0,0,0,
+youtube,761,86,170,5,7,redirect 7
+hydroshare,22,17,170,598,597,ok 597
+github,13,23,11,16,16,dead 1; ok 15
