@@ -36,7 +36,7 @@
   {
     "name": "Emily Clark",
     "slug": "emily-clark",
-    "role": "Deputy Director (acting), Project Manager",
+    "role": "Senior Project Manager",
     "department": "Leadership",
     "pronouns": null,
     "photo": "/team/headshots/emily-clark.jpg",
@@ -64,8 +64,8 @@
   {
     "name": "Martin Seul",
     "slug": "martin-seul",
-    "role": "Lead of Software Engineering (acting)",
-    "department": "Leadership",
+    "role": "Software Engineer",
+    "department": "Engineering",
     "pronouns": null,
     "photo": "/team/headshots/martin-seul.jpg",
     "bio": "Martin leads development of CUAHSI's data services and contributes to software engineering and IT management. He holds a Diplom in Geography (MSc equivalent) from the University of Marburg an der Lahn, Germany.",
@@ -223,7 +223,7 @@
   {
     "name": "Summer Conley",
     "slug": "summer-conley",
-    "role": "Program and Operations Assistant",
+    "role": "Compliance and Accounting Coordinator",
     "department": "Operations",
     "pronouns": "she/her",
     "photo": "/team/headshots/summer-conley.png",
@@ -238,7 +238,7 @@
   "role": "Controller",
   "department": "Operations",
   "pronouns": null,
-  "photo": null,
+  "photo": "/team/headshots/henok-tedla.jpg",
   "bio": "Henok is a finance and accounting professional with extensive experience leading financial management, budgeting, grant accounting, compliance, and financial reporting functions for nonprofit and mission-driven organizations. He has expertise in multi-entity accounting, federal grant management, financial audits, and strategic budgeting. He holds an MBA in Accounting from Maharishi University of Management and a BA in Management from Addis Ababa University, and is a licensed CPA in Virginia.",
   "fun_fact": "Henok enjoys watching soccer, reading books, listening to music, and exercising.",
   "links": {},
