@@ -175,7 +175,7 @@
     "institution": "Louisiana State University",
     "programs": "Civil and Environmental Engineering",
     "degrees": [],
-    "url": "https://www.lsu.edu/eng/cee/people/area-water.php"
+    "url": "https://www.lsu.edu/eng/cee/academics/graduate/areas-of-specialization.php"
   },
   {
     "institution": "Manhattan College",
@@ -217,7 +217,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://waterscience.mst.edu/"
+    "url": "https://online.mst.edu/onlineprograms/online-graduate-degrees/water-science-eng/"
   },
   {
     "institution": "Murray State University",
@@ -382,7 +382,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://ees.cst.temple.edu/"
+    "url": "https://cst.temple.edu/research-priorities-departments/departments/department-earth-environmental-science/academics/graduate"
   },
   {
     "institution": "Texas A&M University",
@@ -395,12 +395,12 @@
   },
   {
     "institution": "The Ohio State University",
-    "programs": "Food, Agricultural, and Biological Engineering; School of Earth Sciences",
+    "programs": "Food, Agricultural, and Biological Engineering",
     "degrees": [
       "masters",
       "phd"
     ],
-    "url": "https://fabe.osu.edu/graduate/specializationresearch-areas"
+    "url": "https://fabe.osu.edu/graduate"
   },
   {
     "institution": "Tufts University",
@@ -414,7 +414,7 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://www.udlap.mx/ofertaacademica/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2"
+    "url": "https://www.udlap.mx/oa/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2"
   },
   {
     "institution": "Universitat Politècnica de Catalunya",
@@ -528,12 +528,12 @@
   },
   {
     "institution": "University of Florida Water Institute",
-    "programs": "Water Institute Graduate Fellows",
+    "programs": "Water Scholars Program (formerly the Water Institute Graduate Fellows)",
     "degrees": [
       "masters",
       "phd"
     ],
-    "url": "https://waterinstitute.ufl.edu/education/wigf/"
+    "url": "https://waterinstitute.ufl.edu/water-scholars/"
   },
   {
     "institution": "University of Georgia",
@@ -557,7 +557,7 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uidaho.edu/cals/water-resources"
+    "url": "https://www.uidaho.edu/agricultural-life-sciences/academics/water-resources-program"
   },
   {
     "institution": "University of Illinois",
@@ -572,7 +572,7 @@
     "institution": "University of Iowa",
     "programs": "Water and the Environment graduate program includes focus areas on Environmental Engineering and Science, Hydraulics and Water Resources, as well as Sustainable Water Development",
     "degrees": [],
-    "url": "https://cee.engineering.uiowa.edu/graduate-program"
+    "url": "https://engineering.uiowa.edu/cee/graduate-program/water-and-environment"
   },
   {
     "institution": "University of Kansas",
@@ -705,7 +705,7 @@
       "phd",
       "professional"
     ],
-    "url": "http://www.ou.edu/content/coe/cees/grad_programs/environmental.html"
+    "url": "https://ou.edu/coe/cees/academics/graduate"
   },
   {
     "institution": "University of Pittsburgh",

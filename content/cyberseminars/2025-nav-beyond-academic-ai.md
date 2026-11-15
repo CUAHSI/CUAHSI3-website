@@ -4,7 +4,7 @@ slug: nav-beyond-academic-ai-2025
 series: "Navigating (beyond) Academic Waters (with AGU H3S)"
 series_slug: navigating-beyond-academic-2025
 date: 2025-11-05
-youtube_id: "GMeAjRTsM"
+youtube_id: ""
 speakers: [Sujana Timilsina, Lindsay Platt, Admin Husic, Ashleigh Kirker, Paul Liu]
 speaker_orgs: [University of Texas Austin, CUAHSI, Virginia Tech, Virginia Tech, NC State University]
 tags: [AI, machine-learning, data-science, career-development, hydrology]

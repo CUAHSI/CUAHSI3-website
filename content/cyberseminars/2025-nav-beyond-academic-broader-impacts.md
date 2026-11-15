@@ -4,7 +4,7 @@ slug: nav-beyond-academic-broader-impacts-2025
 series: "Navigating (beyond) Academic Waters (with AGU H3S)"
 series_slug: navigating-beyond-academic-2025
 date: 2025-08-27
-youtube_id: "Y483oWkQ"
+youtube_id: ""
 speakers: [Mazvita Chikomo, Kelly Garvey, Billy Williams, Kelly Caylor, Heather Golden, Laura Lautz, Caitlin Mayernik]
 speaker_orgs: [Rutgers University, UC Santa Barbara, AGU, UC Santa Barbara, US EPA, NSF, Oregon State University]
 tags: [career-development, broader-impacts, grant-writing, early-career, non-academic]
