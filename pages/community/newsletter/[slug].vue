@@ -5,11 +5,13 @@ const { data: issue } = await useAsyncData(`newsletter-${route.params.slug}`, ()
   queryContent('newsletter').where({ slug: route.params.slug, published: true }).findOne().catch(() => null)
 )
 
-if (!issue.value) throw createError({ statusCode: 404, message: 'Issue not found' })
+const notFound = computed(() => !issue.value)
+// A missing slug answers 404 on the server, so the prerender writes no page for a broken link and check-links.mjs reports it
+if (import.meta.server && notFound.value) setResponseStatus(useRequestEvent(), 404)
 
 useHead({
-  title: issue.value.title,
-  meta: [{ name: 'description', content: issue.value.summary }]
+  title: computed(() => notFound.value ? 'Not found' : issue.value?.title),
+  meta: [{ name: 'description', content: computed(() => issue.value?.summary ?? '') }]
 })
 
 // Resolve people_mentioned from full-team.json — the single source of truth for all staff.
@@ -50,8 +52,15 @@ function fmtDate(d: string) {
 <template>
   <div>
     <!-- Nav -->
+    <!-- Not found state -->
+    <div v-if="notFound" class="max-w-[720px] m-[80px_auto] p-[0_24px] text-center">
+      <p class="text-[14px] text-muted mb-[12px]">404</p>
+      <h1 class="text-[22px] font-medium mb-[12px]">Page not found</h1>
+      <p class="text-[14px] text-[#6b7280] mb-[24px]">That newsletter issue doesn't exist.</p>
+      <NuxtLink to="/community/newsletter" class="text-[13px] text-[#0F7A57] no-underline">← Back to the newsletter archive</NuxtLink>
+    </div>
 
-    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
+    <div v-else-if="issue" class="max-w-[1024px] m-[0_auto] p-[0_24px]">
       <div class="grid gap-[48px] p-[36px_0_48px] grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_220px]">
 
         <!-- Main content -->

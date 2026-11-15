@@ -32,9 +32,9 @@ const routes = [
     id: 'paid-work',
     title: 'Consulting, training & custom development',
     desc: 'Looking to hire CUAHSI staff for consulting, custom training, software development, or data curation work.',
-    who: 'Routed directly to the Hire CUAHSI team',
+    who: 'Answered by CUAHSI communications staff',
     time: 'Typical response: 2–3 business days',
-    cta: { text: 'Go to the quote form →', to: '/hire-cuahsi' },
+    cta: { text: 'Go to Hire CUAHSI →', to: '/hire-cuahsi' },
   },
   {
     tag: 'PRESS & GENERAL',

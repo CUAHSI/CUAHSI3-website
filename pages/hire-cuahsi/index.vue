@@ -92,7 +92,7 @@ function selectService(label: string) {
   selectedService.value = label
 }
 
-const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,000', 'Over $40,000']
+const quoteMailto = computed(() => `mailto:connect@cuahsi.org?subject=${encodeURIComponent(`Quote request: ${selectedService.value}`)}`)
 
 </script>
 
@@ -212,29 +212,19 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
       </div>
     </div>
 
-    <!-- Quote form -->
+    <!-- Quote request -->
     <div class="mx-auto site-container max-w-site pt-[24px] pb-[80px]">
       <div class="quote-panel bg-navy rounded-[16px]">
         <span class="font-mono font-bold tracking-[.14em] uppercase text-[12px] text-[#e0a384]">Get a quote</span>
         <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-white tracking-[-.018em] m-[14px_0_28px]">
           Tell us what you need — {{ selectedService }} and other work welcome.
         </h2>
-        <form @submit.prevent>
-          <div class="grid grid-cols-[1fr] gap-[18px] min-[641px]:grid-cols-[1fr_1fr] mb-[16px]">
-            <input type="text" aria-label="Name" placeholder="Name" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />
-            <input type="text" aria-label="Organization or institution" :value="matchedInstitution?.name" placeholder="Organization / institution" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />
-            <input type="email" aria-label="Email" placeholder="Email" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal]" />
-            <select aria-label="Budget range" class="rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal] text-muted">
-              <option value="" disabled selected>Budget range</option>
-              <option v-for="b in budgetOptions" :key="b" :value="b">{{ b }}</option>
-            </select>
-          </div>
-          <textarea rows="3" aria-label="Briefly describe what you need" placeholder="Briefly describe what you need"
-            class="w-full rounded-[8px] p-[13px_15px] font-['Hanken_Grotesk'] font-normal text-[14.5px] leading-[normal] mb-[20px] resize-y"></textarea>
-          <button type="submit" class="bg-clay text-white font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] rounded-[8px] p-[14px_26px] cursor-pointer">
-            Send request
-          </button>
-        </form>
+        <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.55] text-[#7fa4bf] max-w-[560px] m-[0_0_24px]">
+          Send us a short note with what you need, your organization, a rough budget range and when you need it.
+        </p>
+        <a :href="quoteMailto" class="inline-block bg-clay text-white no-underline font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] rounded-[8px] p-[14px_26px]">
+          E-mail connect@cuahsi.org
+        </a>
       </div>
     </div>
   </div>

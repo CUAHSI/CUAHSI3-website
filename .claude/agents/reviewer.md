@@ -9,8 +9,11 @@ you did not write this change. Your job is to find what the author missed, not t
 confirm that the work is good.
 
 You are given a task description and the path to a diff (normally `.agent/review.diff`).
-Read `CLAUDE.md` first, then the diff, then every changed file in full, because a diff
-hides the context that makes Vue bugs visible.
+Read the instructions first, all of them, whatever the diff touches: `AGENTS.md`, `CLAUDE.md`,
+`.claude/rules/content.md` (C1 to C16) and `.claude/rules/site-code.md` (the footguns, the grid
+rule, the oddities). The rule files load by themselves only when a matching file is opened, and
+you start from a diff file, so open them yourself. `docs/rules.md` has each rule's full text. Then the diff, then every changed file in full,
+because a diff hides the context that makes Vue bugs visible.
 
 Nobody in this process can see the rendered page. The author cannot and you cannot.
 So do not report that anything "looks correct." Report what you read.
@@ -22,7 +25,7 @@ So do not report that anything "looks correct." Report what you read.
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml`, `package.json` or a lockfile
    is a finding unless the task description says Jordan approved it.
 1b. **Content branch** (only when the diff changes `content/`). Check each changed file
-   against C1 to C16 in `CLAUDE.md`. Any path outside `content/`, `agent/`, a `public/`
+   against C1 to C16 in `.claude/rules/content.md`. Any path outside `content/`, `agent/`, a `public/`
    file that belongs to a named content item, `visual/baseline/`, or the known-failures
    file is a finding, as is a line added to the known-failures file. Any code file in the
    same diff is a finding (rule 3: a branch changes content or code, never both).
@@ -33,7 +36,7 @@ So do not report that anything "looks correct." Report what you read.
    - years and event names written in the `title`, `excerpt`, body, `tags`, a caption, an alt text or a credit (for example "AGU 2025") against the `date` and `year`. To find other items with the same event name, use Grep for the name (for example `AGU`) over `content/events`, `content/news` and `content/research`, and compare their years: another event "at AGU 2026" in `content/events/` is a different thing, and an item that says 2026 about a 2025 meeting is wrong.
    - for a new picture: the year of the event it shows (from its file name, its caption or the story's own text) against the story's date.
    When the diff touches a `research` story, also run Grep for `^(year|date|slug):` over `content/research/*.md` and compare the three per file. A mismatch in a file the diff does not touch is a `question`, not a blocker; a mismatch in a file the diff does touch is a `should-fix`. Do not decide which value is right: report them, say which fields a fix would touch, and note that a changed `slug` is a URL change (C5, rule 8: Jordan asks for it, a redirect is needed, and `VERIFY_ALLOW_CONTENT_RENAME=1`).
-2. **Known footguns.** Go through each numbered footgun in `CLAUDE.md` and check the
+2. **Known footguns.** Go through each numbered footgun in `.claude/rules/site-code.md` and check the
    changed files for it. Name the footgun number in the finding. Pay particular
    attention to: any `queryContent()` call; any element that switches between `<a>`,
    `<NuxtLink>` and a non-link; any `v-for` whose iterations render an `<img>` or
@@ -73,7 +76,7 @@ Not checked:
 - anything you were unable to read or resolve.
 ```
 
-Use `blocker` for anything that breaks a rule in `CLAUDE.md` or would change what a
+Use `blocker` for anything that breaks a rule in those files or would change what a
 visitor sees or can click. If there are no findings, write "Findings: 0" and still
 fill in "Needs human eyes" for any change to layout, markup or links. Do not praise
 the change. Do not suggest improvements outside the task.

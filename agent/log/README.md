@@ -15,7 +15,8 @@ first line and `<branch>` is the branch name with `/` written as `-`, in lower c
 (`task/fix-transcript-timestamps` on 7 October 2026 is `261007-task-fix-transcript-timestamps.md`).
 The branch field inside the lines is the real branch name; `--check` does not compare it with the file name.
 If that name is already taken on the default branch, add `-2`. Write only to your own branch's
-file. A file that is already on the default branch never changes (`verify.sh` fails if it does);
+file. A log file that is already on the default branch never changes (`verify.sh` fails if it does;
+this README is not a log file and changes when the format does);
 to correct an old line, write a `correction` line in your own file that points to it.
 
 ## Format
@@ -26,8 +27,11 @@ Plain lines, no front matter, no headings: `YYMMDD | branch | event | detail`. E
 - `intervention`: Jordan corrected, redirected, rejected an approach, or made a decision the agent
   should have been able to make. Detail: what, in his words where possible.
 - `defect`: something was wrong. Detail must contain `caught: self-check`, `caught: reviewer`,
-  `caught: human-review`, `caught: deploy-preview` or `caught: production` (at the end is usual) (the check enforces these
-  five in this folder; the frozen file also has a few `me`, `self` and `verify`), then what it was.
+  `caught: test`, `caught: typecheck`, `caught: human-review`, `caught: deploy-preview` or `caught: production`
+  (at the end is usual) (the check enforces these seven in this folder; the frozen file also has a few `me`, `self` and
+  `verify`), then what it was. `test` is a failing automated test of behaviour (for example the smoke test
+  planned in CUAHSI/CUAHSI3-website#121); `typecheck` is the type check. Both were added on 14 November 2026 (epic CUAHSI/CUAHSI3-website#117);
+  a check that `verify.sh` already ran before then (links, validator, backticks) is still `self-check`.
 - `pr`: PR opened. Detail: PR number, files changed, and Jordan's review minutes when he reports them.
 - `merged` / `abandoned`: outcome. Detail: PR number; for abandoned, why.
 - `note`: anything else worth having later.

@@ -5,11 +5,13 @@ const { data: event } = await useAsyncData(`event-${route.params.slug}`, () =>
   queryContent('events').where({ slug: route.params.slug, published: true }).findOne().catch(() => null)
 )
 
-if (!event.value) throw createError({ statusCode: 404, message: 'Event not found' })
+const notFound = computed(() => !event.value)
+// A missing slug answers 404 on the server, so the prerender writes no page for a broken link and check-links.mjs reports it
+if (import.meta.server && notFound.value) setResponseStatus(useRequestEvent(), 404)
 
 useHead({
-  title: `${event.value.title} · Events`,
-  meta: [{ name: 'description', content: event.value.description }]
+  title: computed(() => notFound.value ? 'Not found' : `${event.value?.title} · Events`),
+  meta: [{ name: 'description', content: computed(() => event.value?.description ?? '') }]
 })
 
 // Adjacent events (upcoming sorted chronologically)
@@ -63,8 +65,15 @@ function fmtShort(d: string) {
 
 <template>
   <div>
+    <!-- Not found state -->
+    <div v-if="notFound" class="max-w-[720px] m-[80px_auto] p-[0_24px] text-center">
+      <p class="text-[14px] text-muted mb-[12px]">404</p>
+      <h1 class="text-[22px] font-medium mb-[12px]">Page not found</h1>
+      <p class="text-[14px] text-[#6b7280] mb-[24px]">That event doesn't exist.</p>
+      <NuxtLink to="/community/events" class="text-[13px] text-[#0F7A57] no-underline">← Back to events</NuxtLink>
+    </div>
 
-    <div class="max-w-[1024px] m-[0_auto] p-[0_24px]">
+    <div v-else-if="event" class="max-w-[1024px] m-[0_auto] p-[0_24px]">
       <div class="grid gap-[48px] p-[36px_0_48px] grid-cols-[1fr] min-[900px]:grid-cols-[minmax(0,1fr)_220px]">
 
         <!-- Main -->

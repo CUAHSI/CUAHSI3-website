@@ -1,0 +1,8 @@
+# Pages the smoke test (smoke.spec.ts) knows to fail. One line each: path | width | reason
+# width: 390, 1280 or both. path: as the test names it (/about/team/, /404.html).
+# A listed page is expected to fail; when it starts passing, the test fails until its line is removed.
+# So this list can only shrink. Never add a line to make a new failure pass: fix the page, or ask Jordan.
+/404.html | both | No error page of our own (no error.vue): an address that does not exist shows Nuxt's default 404, whose tab title ends "| Nuxt · CUAHSI" and which has no <main>. Found 14 Nov 2026 on a build of main (b8ac43b).
+/200.html | both | The same fallback shell as /404.html (Netlify does not use it; no rewrite names it), so the same default Nuxt 404. Found 14 Nov 2026.
+/about/team/danielle-tijerina-kreuzer/ | both | console.error "Failed to load resource: 404" for /api/_content/query/<hash>.json: a team member with no content/team/<slug>.md; my reading is that the null profile query is re-run in the browser and its answer was never written by the build. Found 14 Nov 2026.
+/about/team/irene-garousi-nejad/ | both | Same as /about/team/danielle-tijerina-kreuzer/ (no content/team/<slug>.md). Found 14 Nov 2026.

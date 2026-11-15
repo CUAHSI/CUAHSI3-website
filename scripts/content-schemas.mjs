@@ -124,7 +124,7 @@ const cyberseminars = z.strictObject({
   series: nonEmpty,
   series_slug: slug,
   date: isoDate,
-  youtube_id: z.string(),
+  youtube_id: z.string().regex(/^[A-Za-z0-9_-]{11}$|^$/, 'must be empty or an 11-character YouTube id (letters, digits, _ and -)'), // two unpublished files once carried 8- and 9-character ids and nothing stopped them going live (audit A3g)
   speakers: strings,
   speaker_orgs: strings,
   tags: strings,

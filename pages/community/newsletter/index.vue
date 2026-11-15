@@ -26,7 +26,7 @@ function fmtDate(d: string) {
           The monthly digest — assembled from <NuxtLink to="/community/news" class="text-[#0F7A57] no-underline">News</NuxtLink>
           and <NuxtLink to="/about/impact" class="text-[#0F7A57] no-underline">Impact</NuxtLink> entries plus a short editor's note.
           Nothing is written for the newsletter alone.
-          <a href="https://visitor.r20.constantcontact.com/manage/optin?v=001XoGmI4OI3FKlGtL0BKRQ2DLNR2Q0bEzBhUSqYIzWgk0n8Oi3KvkbXGVL2E5kLnQHq-F3OY7xAs%3D" target="_blank" rel="noopener" class="text-[#0F7A57] no-underline">Subscribe ↗</a>
+          <a href="https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca" target="_blank" rel="noopener" class="text-[#0F7A57] no-underline">Subscribe ↗</a>
         </p>
       </div>
 

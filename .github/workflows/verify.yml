@@ -1,5 +1,7 @@
 # Runs scripts/verify.sh --build on every pull request: the static checks, the content validator (known failures
 # stay a warning, extra ones fail), the full build and the built-site link check. Roadmap task 5.
+# Then the smoke test (npm run test:e2e, tests/e2e/README.md) on that same build: every built page in Chromium at 390
+# and 1280 px. It takes no screenshots, so it does not depend on fonts the way the comparison below does.
 # Not here on purpose: the screenshot comparison (npm run visual:compare). Its baseline images were drawn on a Mac and
 # any pixel difference fails it, so it would fail on this Linux runner for font reasons alone. Run it locally.
 name: verify
@@ -27,3 +29,7 @@ jobs:
         env:
           VERIFY_BASE: origin/${{ github.base_ref }}
         run: ./scripts/verify.sh --build
+      - name: Install Chromium for the smoke test
+        run: npx playwright install --with-deps chromium
+      - name: Smoke test (every built page, 390 and 1280 px)
+        run: npm run test:e2e
