@@ -1,6 +1,6 @@
 ---
 title: "Open Rank Tenure-Track Faculty in Environmental Geochemistry"
-slug: florida-international-university-open-rank-tenure-track-faculty-in-environmental
+slug: florida-international-university-open-rank-tenure-track-faculty-in-environmental-2
 organization: "Florida International University"
 location: "Miami, FL (Modesto A. Maidique Campus)"
 type: faculty
