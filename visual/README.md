@@ -5,6 +5,21 @@ Full-page screenshots of 30 routes at 390px and 1280px (60 images), taken from a
 `b5fefd7` (8 October 2026), which had itself replaced the first set, taken at `2ae92b5` before the Tailwind migration
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
 content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
+Two images were retaken from a build of `main` at `15b4758` (6 November 2026): `learn-train-cyberseminars` at 390 and 1280 px, because the 63 Women Advancing River Research lectures (#209) grew the page from 21 to 82 cards. The other 58 were not changed. `critical-zone-science-datasets` at 1280 px failed in most runs of the comparison on that build, by 562 pixels in the observatory filter's label, and was not retaken (cause not found).
+Eleven images were retaken from a build of `main` at `b8ac43b` (14 November 2026): `about-team`, `about-governance`, `home`, `hire-cuahsi` and `contact` at 390 and 1280 px (PRs 215, 216 and 227 changed those pages), and `critical-zone-science-datasets` at 1280 px, to the render that came in 11 of 13 captures. That page still renders one of two ways, 269 px apart in the observatory filter's label; the cause is not found, and the comparison can fail on it when the other render comes up.
+Twenty-eight images were retaken from a build of `main` at `00ce2ef` (16 November 2026), both widths of 14 routes: `about-team` and
+`community-jobs` (mainly the organisation's job files and team changes brought back in #242), `home`, `community`, `community-news`,
+`community-newsletter`, `community-events`, `about-impact`, `learn-train-archive` and `learn-train-cyberseminars` (the November newsletter
+and its items, #243, #244 and #247), and `critical-zone-science`, `critical-zone-science-datasets`, `critical-zone-science-network` and
+`critical-zone-science-observatory` (the Critical Zone changes, #248 to #253; the network page grew from 22,148 to 56,459 px tall at 1280px
+when #248 tagged 435 records with their cluster). The other 32 were not changed. The first retake also rewrote `member-portal` at 1280px,
+which had passed before (its old image was restored), and four of the 28 at 1280px (`about-impact`, `community-newsletter`,
+`community-jobs`, `critical-zone-science-observatory`) then failed in each of the next four runs with the same pixel counts every time
+(40,992; 28,004; 36,151; 350,044), across the text of the whole page. That is not the random flicker under "Intermittent failures" below;
+the cause was not found (it resembles the capture-against-comparison difference noted on 15 November in
+`agent/log/261115-content-org-sync-jobs-3.md`). The four were retaken once more; after that, 2 of 3 runs passed 60 of 60, and the third
+failed only `about-membership` at 1280px (14,802 pixels), a page nothing had changed; its diff image was overwritten by the next run and
+was not kept.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
