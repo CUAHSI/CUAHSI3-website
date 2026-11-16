@@ -126,6 +126,36 @@ for each item, the collection, the slug, new or update, the judgment calls, and 
 unverified; then the items you would skip and why; then counts. Apply only what Jordan
 approves. Do not go beyond the approved list.
 
+**Ingest a newsletter issue.** Jordan gives an issue: a PDF printed from Mailchimp, or its
+campaign-archive link. A `content/short-name` branch; more than five items, so "Propose, then apply" first. This adds
+to the older newsletter procedure in `agent/content-model.md` §9 (front matter, `people_mentioned` (C6), news or
+impact story (C7), no mirrored articles (C8)); follow both.
+1. **Text and links.** Take the text from the source, not from what you remember of it, and the links from the
+   source too: for a PDF, `pdftohtml -xml` lists every link with its text (`pdftotext` drops them). The Mailchimp id
+   is in the issue's links to itself (`campaign-archive.com/?u=...&id=<id>`); it goes into `mailchimp_id` and
+   `mailchimp_url`. Ask Jordan for the send date if the issue does not print it.
+2. **The issue file** (`content/newsletter/YYMMDD-<month>.md`, slug `YYYY-<month>`) follows the issue as printed:
+   its wording, its order, its links, one heading per section. The file name and `date` use the send date,
+   normally the second Thursday of the month (December 2026: the first Thursday, because of AGU); take it from the
+   Mailchimp archive, not from the rule (Jordan, 16 November 2026).
+   For a link to a PDF on the legacy site, prefer a copy hosted here (C14): link it if one exists or the PR hosts
+   one for an item it names; otherwise keep the issue's link and say so under "To verify".
+3. **Images, always.** Every issue carries its images in `public/newsletter-images/<issue-slug>/`, embedded under
+   the heading of the section they belong to: the CEO or contributor photo, banners, logos, photos, with the issue's
+   own captions. Leave out the masthead and the social icons. Write alt text that says what the image shows
+   (a banner's text, the people in a photo). Wrap an image in a link only if the issue links it. A newsletter image
+   shows at its natural width, capped at 708px on desktop and 342px on a phone (the Noticed line of 5 October 2026),
+   so resize each to the size it should show at, as the issues already do: headshots 200 to 240px wide, logos 140 to
+   420px (or the source's own size if smaller), banners and photos 900 to 1100px, each under about 200 KB. From a
+   PDF, `pdfimages -png` extracts them, with any transparency in a separate mask file; from the archive page,
+   download each image once (Mailchimp lists each twice, for desktop and phone). On 15 November 2026 the October
+   issue had been ingested without images, by an exception nobody explained, and the November ingest copied it;
+   9 of 11 issues had theirs. Look at the convention across all issues, not the latest one.
+4. **Entries.** Every item becomes an entry (C9): duplicate check (C4), then new items, or updates to existing
+   ones with the issue added to `newsletter_source`. An event's `description` is plain text on its page, so it
+   carries no URLs. A sign-up or RSVP link goes in `registration.url` (shown only until the event is past, labelled
+   "Register"); a recording gets a cyberseminar entry; any other link stays in the issue file or goes in a news item.
+
 **Add a Critical Zone product.** For a dataset, paper, software or model that someone suggests for
 `content/critical-zone/products.json` (the public route is an email to help@cuahsi.org with the title, a DOI or
 link, and the award or observatory; Jordan or a staff member passes it on). A `content/short-name` branch, with C1 to C16

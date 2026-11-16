@@ -16,6 +16,7 @@ const { data: stats } = await useAsyncData('cz-front-stats', () =>
         products: rows.length,
         datasets: rows.filter(r => r.type === 'dataset').length,
         papers: rows.filter(r => r.type === 'paper').length,
+        software: rows.filter(r => r.type === 'software' || r.type === 'model').length,
         asOf: added.length ? added[added.length - 1] : null,
       }
     },
@@ -32,9 +33,11 @@ const band = computed(() => [
   { n: '9', l: 'CZNet thematic clusters, plus the Hub' },
 ])
 
+// The full lists come before the highlights and lead with their totals, so the highlights below read as a sample of them (Jordan, 16 November 2026).
 const lists = computed(() => [
-  { to: '/critical-zone-science/datasets', kicker: 'DATASETS', title: 'All known datasets', text: stats.value ? `${nf(stats.value.datasets)} datasets, mostly in HydroShare.` : 'Datasets, mostly in HydroShare.' },
-  { to: '/critical-zone-science/papers', kicker: 'PAPERS', title: 'All known papers', text: stats.value ? `${nf(stats.value.papers)} journal articles, books, reports and theses.` : 'Journal articles, books, reports and theses.' },
+  { to: '/critical-zone-science/papers', kicker: 'PAPERS', title: stats.value ? `${nf(stats.value.papers)} papers` : 'All known papers', go: 'Browse all papers', text: 'Journal articles, books, reports and theses, each linking to where it was published.' },
+  { to: '/critical-zone-science/datasets', kicker: 'DATASETS', title: stats.value ? `${nf(stats.value.datasets)} datasets` : 'All known datasets', go: 'Browse all datasets',
+    text: `Mostly in HydroShare${stats.value?.software ? `, listed together with ${nf(stats.value.software)} software or model entries` : ''}, each linking to its repository.` },
 ])
 
 const observatories = ['boulder', 'calhoun', 'catalina-jemez', 'christina', 'eel', 'iml', 'luquillo', 'reynolds', 'shale-hills', 'sierra']
@@ -92,24 +95,25 @@ const places = [
       </p>
     </section>
 
-    <!-- Highlights -->
-    <CzHighlights />
-
     <!-- The full lists -->
-    <div class="mx-auto site-container max-w-site pt-[64px]">
+    <div class="mx-auto site-container max-w-site pt-[48px]">
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The full list</h2>
       <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_28px]">
         Every known dataset and paper in one table you can search, filter by observatory and sort, each linking to where it lives.
       </p>
       <div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)]">
         <NuxtLink v-for="l in lists" :key="l.to" :to="l.to"
-          class="arrow-row border border-[rgba(15,33,43,.1)] rounded-[10px] p-[20px_22px] no-underline block bg-white">
-          <p class="font-mono font-bold tracking-[.12em] uppercase text-water text-[11px] m-[0_0_10px]">{{ l.kicker }}</p>
-          <p class="font-['Schibsted_Grotesk'] font-bold text-[18px] leading-[1.2] text-navy m-[0_0_8px]">{{ l.title }} <span class="arr text-water">→</span></p>
-          <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-0">{{ l.text }}</p>
+          class="arrow-row border-[1.5px] border-[rgba(31,111,178,.45)] rounded-[10px] p-[20px_22px] no-underline block bg-white">
+          <p class="font-mono font-bold tracking-[.12em] uppercase text-water text-[11px] m-[0_0_8px]">{{ l.kicker }}</p>
+          <p class="font-['Schibsted_Grotesk'] font-bold text-[30px] leading-[1.1] tracking-[-.016em] text-navy m-[0_0_8px]">{{ l.title }}</p>
+          <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-[0_0_12px]">{{ l.text }}</p>
+          <p class="font-['Hanken_Grotesk'] font-medium text-[15px] leading-[normal] text-water m-0">{{ l.go }} <span class="arr">→</span></p>
         </NuxtLink>
       </div>
     </div>
+
+    <!-- The most used: a sample of the full lists -->
+    <CzHighlights />
 
     <!-- The observatories -->
     <div class="mx-auto site-container max-w-site pt-[48px]">
