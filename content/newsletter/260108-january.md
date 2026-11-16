@@ -1,6 +1,6 @@
 ---
 title: "January 2026 e-Newsletter"
-date: 2026-01-14
+date: 2026-01-08
 slug: 2026-january
 summary: CUAHSI at AGU 2025 in New Orleans (164 attendees at community gathering, 9 staff, 18 presentations), final call for Water Prediction Innovators Summer Institute applications, HydroLearn-CIROH Workshop and Hackathon, Introduction to NEON for Hydrology cyberseminar series, Integrating Hydrology and Geophysics webinar series with EarthScope, community spotlight on Masoumeh Hashemi (USU, camera-based irrigation monitoring), HydroShare spotlight on residential water use dataset.
 topics:

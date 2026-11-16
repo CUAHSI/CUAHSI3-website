@@ -13,12 +13,18 @@ description: >
   Time: 1 to 2 pm ET. The last session in the 2026 Navigating (beyond) Academic Waters series,
   hosted by the AGU Hydrology Section Student Subcommittee and CUAHSI for early
   career hydrologists. Networking is the ultimate catalyst for an early-career
-  researcher. Good for graduate students weighing careers outside the tenure
+  researcher. Speakers: Dan Myers, Environmental Quality Analyst at the Michigan
+  Department of Environment, Great Lakes, and Energy; Mohamed Abdelkader,
+  Assistant Research Scientist, Iowa Flood Center, University of Iowa; Heather
+  Golden, Research Physical Scientist, US Environmental Protection Agency; and
+  Marie Kurz, Group Leader and Senior Staff Scientist, Oak Ridge National
+  Laboratory. Good for graduate students weighing careers outside the tenure
   track.
 registration:
   required: true
   url: https://us06web.zoom.us/webinar/register/WN_h0tBwv3kR2qpQwEaPJ_J4g#/registration
   cost: null
 tags: [webinar, careers, early-career]
+newsletter_source: ["2026-october", "2026-november"]
 published: true
 ---
