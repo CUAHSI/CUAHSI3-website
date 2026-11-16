@@ -32,6 +32,6 @@ registration:
   url: https://cvent.me/0r7DMx
   cost: "Early bird to Oct 15: $110 to $320; general registration to Oct 29: $140 to $350, by student or professional and member or non-member category"
 tags: [conference, water-science-exchange, workshops, field-trip]
-newsletter_source: ["2026-october"]
+newsletter_source: ["2026-october", "2026-november"]
 published: true
 ---

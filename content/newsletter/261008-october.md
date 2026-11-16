@@ -30,6 +30,8 @@ Here's what's inside: CUAHSI's 25th anniversary reflection, early-bird registrat
 
 As part of CUAHSI's 25th anniversary, we're featuring a series of reflections from some of the people who have helped shape CUAHSI's story over the years. Our next invited contributor is JP Gannon, CUAHSI Board of Directors, Chair.
 
+![JP Gannon](/newsletter-images/2026-october/jp-gannon.jpg)
+
 **JP Gannon**, Associate Professor, Virginia Tech
 
 CUAHSI has been a part of my academic journey since I was a PhD student. My first interaction with CUAHSI was probably attending a mixer at AGU around 2011. Throughout my career my interactions with CUAHSI have evolved. It went from a way to find other water scientists, to a funding source, to a place to preserve data (HydroShare!), to a way to expand my work on hydrology education, and now as an organization I'm happy to serve in any way I can. As chair of the Board of Directors, I have an even fuller appreciation for CUAHSI and the hard work of its employees, CEO, and Board, and I'm hopeful that it continues long into the future so others can continue to benefit.
@@ -43,6 +45,8 @@ Cheers to CUAHSI's 25th anniversary. I look forward to showing my support well a
 ## CUAHSI news & events
 
 ### Early-bird registration for the CUAHSI Water Science Exchange extended to October 15
+
+![CUAHSI Water Science Exchange: Water in Working Landscapes, November 12-14, 2026, University of Missouri](/newsletter-images/2026-october/water-science-exchange-banner.jpg)
 
 **November 12-14, 2026 | University of Missouri**
 
@@ -82,6 +86,8 @@ The course will consist of live virtual training sessions coupled with asynchron
 
 ### CUAHSI Virtual Open House
 
+![CUAHSI Virtual Open House](/newsletter-images/2026-october/virtual-open-house-banner.png)
+
 **October 29, 2026 | 12:00 pm to 2:00 pm ET | Virtual**
 
 Join us for our next Virtual Open House featuring brief updates on recent work and upcoming opportunities, plus group discussions on AI in the water sciences and CUAHSI's education resources for instructors. [Register to attend.](https://www.cuahsi.org/events/virtual-open-house)
@@ -98,6 +104,8 @@ Join us for our next Virtual Open House featuring brief updates on recent work a
 
 ### Water Data Forum: Durable Skills for the Water Workforce in the Age of AI
 
+![Water Data Forum: Durable Skills for the Water Workforce in the Age of AI, Wednesday November 4, 2026, 12-1 PM ET, with Cleveland Water Alliance, CUAHSI, Water Environment Federation and Water AI Nexus](/newsletter-images/2026-october/water-data-forum-banner.jpg)
+
 **November 4, 2026 | 12:00 pm to 1:00 pm ET**
 
 In this free webinar, researchers, managers, and workforce development experts will examine which analytical and modeling skills remain durable, and why demand is growing for people who can check what AI produces, direct the work of AI alongside the work of people, and explain results to those who act on them. Panelists will also discuss what this means for hiring, for people already in water jobs, and for the pipeline of water sector talent. Jordan Read, Chief Executive Officer at CUAHSI, will moderate the panel.
@@ -113,6 +121,8 @@ The Water Data Forum is a free, interactive web series convened by Cleveland Wat
 [Register for the Water Data Forum](https://www.clevelandwateralliance.org/event/water-data-forum-durable-skills-for-the-water-workforce-in-the-age-of-ai)
 
 ### 2026 Navigating (beyond) Academic Waters cyberseminar series
+
+![CUAHSI and AGU-H3S cyberseminar series, 2026 Navigating Academic Waters: October 8, 2026, 1:00 pm - 2:00 pm ET. Navigating Today's Federal Job Market, with Emily Smail, Emil Cherrington, Lauren Schaefer and Shih-Chieh Kao](/newsletter-images/2026-october/navigating-academic-waters-federal-job-market.jpg)
 
 This year's Navigating Academic Waters series, developed by the [AGU Hydrology Section Student Subcommittee](https://www.agu-h3s.org/), helps early career water scientists build the skills to advance their careers, with sessions on storytelling, the federal job market, and building networks across academia, industry, and beyond.
 
@@ -132,6 +142,8 @@ Theme Leaders bring the big-picture research themes that guide how student teams
 
 ### Join CUAHSI at the AGU Annual Meeting
 
+![AGU Annual Meeting, 7–11 December 2026, San Francisco, CA](/newsletter-images/2026-october/agu-annual-meeting-2026-banner.png)
+
 **December 7-11 in San Francisco, CA.** CUAHSI will be exhibiting at booth #632 at the [American Geophysical Union (AGU) Annual Meeting](https://www.agu.org/annual-meeting). Talk with our staff about CUAHSI programs and tell us how we can better support your work. Save the date for these CUAHSI events at AGU (updates on our [website](https://www.cuahsi.org/events/2026-american-geophysical-union-annual-meeting)):
 
 - **CUAHSI Town Hall, "CUAHSI Turns 25: Shaping the Future of Water Science Infrastructure and Education."** December 9, 2026, 1:00 pm to 2:00 pm PT, MC, Room 2007 - West.
@@ -142,6 +154,8 @@ Theme Leaders bring the big-picture research themes that guide how student teams
 Punwath Prum, a Graduate Student Researcher at the University of Pittsburgh, has launched the SWOT River Discharge Explorer, a web application for exploring, visualizing, and downloading river discharge time series for North American rivers. Built on satellite-derived data from the Surface Water and Ocean Topography (SWOT) mission, the Hydrocron service from NASA's Physical Oceanography Distributed Active Archive Center (PO.DAAC), and the SWOT River Database (SWORD) river network, the tool supports researchers and water resource professionals in identifying hydrologic trends and understanding how rivers respond to environmental change. [Learn more about the SWOT River Discharge Explorer.](https://punwath.github.io/swot-river-discharge-explorer/)
 
 ### Member spotlight
+
+![American Institute of Hydrology (AIH)](/newsletter-images/2026-october/aih-logo.png)
 
 CUAHSI member [American Institute of Hydrology (AIH)](https://www.linkedin.com/company/aihydrology/) is offering the AIH Fundamental Exam to qualified students and early-career professionals with no upfront exam or application fees from September to December 2026. It's an opportunity to demonstrate your knowledge, begin building your professional credentials, and take an important step toward becoming an AIH Hydrologist-in-Training (HIT). If you pass the Part I (Fundamentals) exam and choose to accept your AIH HIT certification, the exam fee will be discounted 50%. If you do not pass, you pay no exam fee. [Learn more about the exam on the AIH website.](https://aihydrology.org/youre-ready-take-the-exam/)
 

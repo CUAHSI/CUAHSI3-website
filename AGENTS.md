@@ -160,6 +160,6 @@ Each is in full in `docs/procedures.md`; open it and follow the one that applies
 - **After review**: Jordan reports a PR's outcome. **Quick log**: Jordan types "log:".
 - **New footgun**: something built cleanly and was wrong. **Status**: Jordan asks where things stand.
 - Content: **Content repair** (fixing existing files), **New content item** (a draft from Jordan or staff),
-  **Propose, then apply** (more than five items from one source), **Add a Critical Zone product**,
+  **Propose, then apply** (more than five items from one source), **Ingest a newsletter issue** (images always), **Add a Critical Zone product**,
   **Unpublish**, **Content lint** (on request), **Review of a content branch** (what the reviewer checks).
 - **Locks**: in `CLAUDE.md`.

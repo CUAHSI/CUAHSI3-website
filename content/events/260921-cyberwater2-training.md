@@ -22,5 +22,6 @@ description: >
   system was needed for the exercises. Applications closed August 28, 2026.
   Recordings of some of the sessions are in the cyberseminar archive.
 tags: [workshop, CyberWater, modeling, training]
+newsletter_source: ["2026-november"]
 published: true
 ---

@@ -137,7 +137,7 @@ All content lives in `content/` as Markdown (`.md`) or JSON files, queried via `
 **Every dated content type uses YYMMDD-slug.md, no exceptions** — this includes `newsletter/`, which earlier used a `YYYY-MM.md` format inconsistent with the rest of the site. All newsletter files should follow the same convention as everything else:
 ```
 260531-hydrolearn-fellows.md     # May 31, 2026  (research)
-260701-july.md                   # July 2026 issue (newsletter — day is always 01)
+260709-july.md                   # July 2026 issue (newsletter: its send date, normally the second Thursday)
 260211-board-marco-maneta.md     # February 11, 2026  (news)
 ```
 Unknown or not-applicable day → use `01`. The `slug` field in frontmatter drives the URL — the filename prefix is sort-order only, so renaming a file to match this convention never breaks a live link.
@@ -148,7 +148,7 @@ Unknown or not-applicable day → use `01`. The `slug` field in frontmatter driv
 content/
 ├── team/full-team.json          Single source of truth for all staff (array of objects)
 ├── members/reps.json            229 member institution reps — name, institution, email
-├── newsletter/    YYMMDD-slug   One file per issue (day is always 01, e.g. 260701-july.md)
+├── newsletter/    YYMMDD-slug   One file per issue, dated by its send date (normally the second Thursday, e.g. 260709-july.md)
 ├── events/        YYMMDD-slug   One file per event
 ├── cyberseminars/ YYMMDD-slug   One file per recording (+ transcripts/ subfolder)
 ├── research/      YYMMDD-slug   One file per highlight (URL is /about/impact/, not /research/)

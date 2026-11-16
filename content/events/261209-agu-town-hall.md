@@ -15,5 +15,6 @@ description: >
   session TH33F, in MC Room 2007 - West. Shaping the future of water science
   infrastructure and education as CUAHSI turns 25.
 tags: [conference, AGU, town-hall, community]
+newsletter_source: ["2026-october", "2026-november"]
 published: true
 ---

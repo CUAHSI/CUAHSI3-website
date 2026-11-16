@@ -106,7 +106,7 @@ const jobs = z.strictObject({
   type: z.enum(['permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship', 'faculty', 'temporary']),
   posted: isoDate,
   deadline: isoDate.nullable(),
-  url,
+  url: url.refine(u => !/safelinks\.protection\.outlook\.com/i.test(u), 'must be the posting\'s own address, not an Outlook SafeLinks wrapper (it can carry the forwarder\'s email address)'), // a Michigan job on 7 Nov 2026 linked a SafeLinks-wrapped benefits page from the posting's text instead of the apply link
   tags: strings,
   published: z.boolean(),
   source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
@@ -376,6 +376,9 @@ const criticalZoneProduct = z.strictObject({
   year: z.number().int().min(1950).max(2100).optional(),
   access: z.enum(['open', 'restricted']).optional(),
   highlight: z.boolean().optional(),
+  // Order of a highlighted product in the front page's sample (1 = most used), within papers or within datasets, software and models.
+  // Taken from the usage figures in agent/reports/261031_cz-highlights-selection.md; checked in the cross-reference section.
+  highlight_rank: z.number().int().min(1).optional(),
   related: z.array(relatedLink).optional(),
   source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'par', 'suggested', 'manual']),
   source_url: webUrl.optional(),

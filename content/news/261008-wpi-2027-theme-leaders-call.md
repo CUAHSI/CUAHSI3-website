@@ -13,3 +13,5 @@ Applications will open soon for research Theme Leaders for the 2027 [Water Predi
 Theme Leaders bring the big-picture research themes that guide how student teams form their projects and research questions. Researchers affiliated with U.S. institutions who have experience leading collaborative projects and mentoring students are eligible to apply. The [sign-up form](https://docs.google.com/forms/d/e/1FAIpQLScX72h9I7SPCdEl7qsq4qcAerDnHkrq7OGWIB6uJy4eDPQhHA/viewform) notifies you when applications open.
 
 Questions: contact Julia Masterman at jmasterman@cuahsi.org. Covered in the [October 2026 e-newsletter](/community/newsletter/2026-october).
+
+**Update, November 12, 2026:** applications are now open, for Student Fellows as well as Theme Leaders. See [Applications Open for 2027 Summer Institute Theme Leaders and Student Fellows](/community/news/wpi-2027-applications-open).

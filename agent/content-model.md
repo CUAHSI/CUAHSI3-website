@@ -32,11 +32,15 @@ implementation is disposable.**
 
 ```
 260531-hydrolearn-fellows.md     # 31 May 2026
-260701-july.md                   # July 2026 newsletter (day always 01)
+260709-july.md                   # July 2026 newsletter (its send date, normally the second Thursday)
 260211-board-marco-maneta.md     # 11 Feb 2026
 ```
 
 - Unknown or not-applicable day → use `01`.
+- **A newsletter issue is dated by its send date**, in the file name and in `date`: normally the second
+  Thursday of the month (December 2026 goes out on the first Thursday, 3 December, because the second falls
+  during the AGU Annual Meeting). Take the date from the Mailchimp archive, not from the rule. Jordan, 16 Nov 2026;
+  this replaces "day always 01", which January to July 2026 had followed.
 - **The `slug` frontmatter field drives the URL, not the filename.** The filename prefix
   exists only for sort order in directory listings. Renaming a file to fix its prefix
   never breaks a live URL.
@@ -230,7 +234,8 @@ Two file types in `content/critical-zone/`; both optional until the first conten
 - `products.json` : an array, one entry per known product. Required: `title`, `type` (dataset, paper, software, model), `source` (czo-archive,
   discover, datacite, crossref, openalex, suggested, manual), `date_added`, and a `doi` (bare, `10.xxxx/...`) or a `url`. Optional: `hydroshare_id`,
   `repository`, `awards` (ids in `content/awards/awards.json`), `sites` (observatory or cluster slugs), `era` (czo, cznet), `year`, `access`,
-  `highlight`, `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`), `related` (added 31 October 2026, ticket T6c: a list of links to other
+  `highlight`, `highlight_rank` (added 16 November 2026: a highlighted product's place in the front page's sample, 1 = most used, counted within
+  papers or within the rest; only on a record with `highlight: true`, and on every highlight or none), `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`), `related` (added 31 October 2026, ticket T6c: a list of links to other
   products; each has `relation` (`supports`, `cited-by` or `described-by`, said from this product's side), `doi` or `url`, `source` (`datacite` or `manual`)
   and optionally `in_list: false` (the only value allowed) for a product not yet in the list; the DOI decides when both `doi` and `url` are given). The validator fails a repeated DOI (case-insensitive) or
   HydroShare id, an award id the registry does not have, and a related link whose target is not in the list unless it says `in_list: false` (or says

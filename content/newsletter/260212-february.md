@@ -1,6 +1,6 @@
 ---
 title: "February 2026 e-Newsletter"
-date: 2026-02-11
+date: 2026-02-12
 slug: 2026-february
 summary: New staff welcome (Danielle Tijerina-Kreuzer, Barbara Walker), Virtual University faculty application deadline March 16, NEON for Hydrology cyberseminar series, Integrating Hydrology and Geophysics webinar series with EarthScope, Frontiers in Water call for papers on machine learning and water resources, WaterSoftHack 2026 applications open, board spotlight on Marco P. Maneta (First Street), community spotlight on Punwath Prum (Pitt HIF awardee, global coastal reflectance database, NASA FINESST24), Snow Measurement Field School recap, HydroShare spotlight on HIVIS Hydro-Haze dataset.
 topics:

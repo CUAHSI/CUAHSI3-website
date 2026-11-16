@@ -49,6 +49,13 @@
     "text": "The work is supported by a CUAHSI subaward from Princeton University under NSF award {number}, \"Collaborative Research: Frameworks: Building a national integrated watershed evaluation framework: A community platform to improve model evaluation and decision making\" (September 2024 to August 2028)."
   },
   {
+    "id": "nsf-2209833-pitt-subaward",
+    "funder": "NSF",
+    "number": "2209833",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2209833",
+    "text": "The work is supported by a CUAHSI subaward from the University of Pittsburgh under NSF award {number}, \"Collaborative Research: Frameworks: Building a Collaboration Infrastructure: CyberWater2 -- A Sustainable Data/Model Integration Framework\" (January 2023 to December 2027)."
+  },
+  {
     "id": "ciroh-a22-0306-s004",
     "funder": "NOAA (via CIROH)",
     "number": "NA22NWS4320003",
@@ -59,6 +66,12 @@
     "funder": "NOAA (via CIROH)",
     "number": "NA22NWS4320003",
     "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A22-0357-S001, \"An Analysis and Demonstration of the National Water Model's Applicability to Community Resilience Planning\"."
+  },
+  {
+    "id": "ciroh-a23-0190-s001",
+    "funder": "NOAA (via CIROH)",
+    "number": "NA22NWS4320003",
+    "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A23-0190-S001, \"National Water Center Innovators Program: CUAHSI Summer Institute\"."
   },
   {
     "id": "ciroh-a23-0274-s002",
