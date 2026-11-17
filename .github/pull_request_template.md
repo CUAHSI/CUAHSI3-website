@@ -2,6 +2,11 @@
 
 <!-- Two or three sentences in plain language. Roadmap task number. -->
 
+Requested by: <!-- the requester who directed the session (AGENTS.md, top) -->
+
+<!-- Questions for a website owner (rule 8, schema, scope, redirects, editorial calls), when the requester
+     is not one. "None" if there are none. -->
+
 ## What I checked
 
 - [ ] `./scripts/verify.sh --build` : N FAIL, N WARN
@@ -28,7 +33,7 @@ Warnings from verify.sh, and what I did about each:
 
 ## Interventions during this task
 
-<!-- Every time Jordan corrected or redirected the work. Copy the lines from
+<!-- Every time the requester or a website owner corrected or redirected the work. Copy the lines from
      your agent/log/ file. "None" is a valid answer only if it is true. -->
 
 ## Content PRs only (a `content/short-name` branch)
@@ -36,7 +41,7 @@ Warnings from verify.sh, and what I did about each:
 <!-- Delete this section on a code PR. -->
 
 - Validator exit code (must be 0, C1), with the counts it reports:
-- Sources, one line per item added or changed (C2). If Jordan or staff supplied the facts, who and when:
+- Sources, one line per item added or changed (C2). If the requester or other staff supplied the facts, who and when:
 - To verify: facts I could not confirm, and fields left empty (C3):
 - Agent's judgment calls, each labelled as mine (C7):
 - Pages whose visible content changes, and what changes on each:

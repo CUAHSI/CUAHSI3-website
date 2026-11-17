@@ -1,0 +1,61 @@
+name: Website content request
+description: Ask for an event, a news item, an impact story or a change to your own profile on the CUAHSI website.
+title: "[Content request] "
+labels: [content]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For CUAHSI staff. **Everything you write here is public**, on the open internet, from the moment you submit it; a picture is public as soon as you drag it in. Send a request only once the item can be announced. Leave out phone numbers, personal email and home addresses.
+
+        In the title, after "[Content request]", say in a few words what it is.
+
+        Not sure what to send? [What you can add, in plain words](https://github.com/CUAHSI/CUAHSI3-website/blob/main/docs/contribute/item-types.md) lists the facts each item needs. [How to ask](https://github.com/CUAHSI/CUAHSI3-website/blob/main/docs/contribute/ask.md) has a Claude prompt that interviews you and fills in this form for you.
+  - type: dropdown
+    id: item_type
+    attributes:
+      label: What is it?
+      options:
+        - Event
+        - News item
+        - Impact story (highlight)
+        - Update to my own profile
+        - A job to list
+        - Critical Zone paper, dataset or software
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: The facts
+      description: Everything the item needs, from its entry in "What you can add". Write "unknown" for anything you do not know; nothing will be guessed.
+      placeholder: |
+        Title:
+        Date and time (with time zone):
+        ...
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the thing itself
+      description: The event's sign-up page, the paper's DOI, the tool's site, the article it summarises. Leave empty for a welcome or a staff announcement, or if the facts come from you.
+  - type: textarea
+    id: unconfirmed
+    attributes:
+      label: What is not confirmed yet
+      description: Facts you are unsure of, or still waiting on. "None" is fine.
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Pictures
+      description: Drag a picture into this box. For each, say what it shows, and give a caption and who took it, if there are any. Only pictures you have the right to use, of people who agreed to be shown.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: Everything in this request can be public now.
+          required: true
+        - label: If this updates a profile, it is my own.

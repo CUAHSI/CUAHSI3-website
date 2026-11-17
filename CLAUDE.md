@@ -21,5 +21,5 @@ A rule file loads only once a matching file is touched: read the one that applie
 `.claude/hooks/guard.mjs`, the `content/` deny rule removed from `.claude/settings.json`,
 and `reviewer.md` check 1b added. The hook and `settings.json` are protected by the
 deny rules; `.claude/agents/` is not (an edit goes through), so it is Jordan's by
-convention only: tell him in the PR when you touch it. If a hook or permission blocks you, stop and tell him; do not look
+convention only: tell him in the PR when you touch it. If a hook or permission blocks you, stop and tell the requester (and Jordan, in the PR, if it is someone else); do not look
 for a way around it.

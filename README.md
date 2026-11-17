@@ -308,15 +308,19 @@ node scripts/fetch-transcripts.mjs --id=VIDEO_ID
 
 ## Adding content — quick reference
 
-**New newsletter issue:** create `content/newsletter/YYYY-MM.md` → extract highlights into `content/research/` → extract events into `content/events/`. Everything else updates automatically.
+**Staff** who want to add or change something: start at [CONTRIBUTING.md](CONTRIBUTING.md); each item type
+(event, news item, impact story, profile) is explained in plain words in
+[docs/contribute/item-types.md](docs/contribute/item-types.md).
 
-**New team member:** add to `full-team.json` → run `download-team-photos.mjs` if needed → set `has_profile: true` once there's enough cross-linked content to warrant a page.
+**Agents and developers** follow the procedures in `docs/procedures.md` ("New content item", "Ingest a
+newsletter issue", "Add a Critical Zone product") and the content rules in `.claude/rules/content.md`, which
+give each collection's file-name pattern (C13). The steps this section gave for newsletter issues, team
+members, highlights and events had drifted from the files (newsletter issues named `YYYY-MM.md`, impact
+stories `YYMMDD-slug.md`), so they were replaced by these pointers on 17 November 2026. Adding a staff member
+has no procedure yet: `content/team/full-team.json`, a photo in `public/team/headshots/`, and `has_profile`,
+which a website owner decides.
 
 **New cyberseminar:** create the `.md` file → find the YouTube video ID → run `fetch-transcripts.mjs --id=VIDEO_ID`.
-
-**New highlight:** create `content/research/YYMMDD-slug.md`, set `category`, add `people_mentioned[]`. Renders at `/about/impact/[slug]`.
-
-**New workshop/event:** create `content/events/YYMMDD-slug.md`. Set `type: workshop` if it should appear on `/learn-train/archive`.
 
 ---
 

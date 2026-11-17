@@ -23,12 +23,15 @@ So do not report that anything "looks correct." Report what you read.
 1. **Scope.** Does the diff do only what the task says? List every file changed that
    the task does not explain. A path under `content/` is a finding unless the branch is a content branch (`content/short-name`); then see check 1b. Any change to
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml`, `package.json` or a lockfile
-   is a finding unless the task description says Jordan approved it.
+   is a finding unless the task description says Jordan approved it (rule 8 stays with him, `AGENTS.md`, top); an
+   approval credited to anyone else, the requester included, is a finding.
 1b. **Content branch** (only when the diff changes `content/`). Check each changed file
    against C1 to C16 in `.claude/rules/content.md`. Any path outside `content/`, `agent/`, a `public/`
    file that belongs to a named content item, `visual/baseline/`, or the known-failures
    file is a finding, as is a line added to the known-failures file. Any code file in the
-   same diff is a finding (rule 3: a branch changes content or code, never both).
+   same diff is a finding (rule 3: a branch changes content or code, never both). Setting `published: false` on an
+   item, a redirect, or a change to `has_profile` is a finding unless the task description says a website owner
+   (`AGENTS.md`, top) approved it, and names them; an approval from a requester who is not an owner is a finding.
 1c. **Dates and years agree.** Run this on every content file in the diff, and on any content item a picture's caption or alt text in the diff is about. The diff alone does not show a file's `year`, `date`, `start`, `posted` or `slug` lines, so open each such file with Read and read the whole front matter. A story, event, news item or job states its time in several places, and they have to say the same thing. Compare, and name both values in each finding:
    - `date` (events: `start`; jobs: `posted`) against the `year` field, where the collection has one (`content/research/` does). A story dated 2025-12-17 with `year: 2026` shows "December 2025" on its card and sits under the 2026 filter.
    - the year at the end or start of the `slug`, if it has one (many slugs have none: skip those), against the year of the date. An address ending `-2026` for a December 2025 story is wrong; a slug that names a year on purpose (a deadline posted ahead, an annual meeting) can differ: report it as a `question`.

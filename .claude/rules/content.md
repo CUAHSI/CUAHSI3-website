@@ -9,7 +9,7 @@ paths:
 ## Content rules (Phase 2)
 
 These apply to every change under `content/`. `verify.sh` enforces C1, C5 and C6 where a
-check can; the rest are checked by the reviewer and by Jordan.
+check can; the rest are checked by the reviewer and by a website owner (`AGENTS.md`, top).
 
 C1. **The validator must exit 0.** `npm run validate:content` reports no failure, no
     cross-reference problem and no skipped check group, and `verify.sh` fails a branch
@@ -24,7 +24,7 @@ C2. **Every item has a source.** A job has `url` (required by the schema) and `s
     found in its description text; the validator rejects an Outlook SafeLinks wrapper (`safelinks.protection.outlook.com`). An event announced in a
     newsletter has `newsletter_source` (optional in the schema; leave it out for an event
     that no newsletter announced, and say where the facts came from). A news item
-    summarising an article has `source_url`. If Jordan or a staff member supplied the facts
+    summarising an article has `source_url`. If the requester or another staff member supplied the facts
     directly, say so in the PR description: who, and when.
 C3. **Never invent.** No guessed dates, URLs, YouTube IDs, email addresses, names,
     funding numbers or deadlines. If a required field is unknown, the item is not ready:
@@ -33,13 +33,14 @@ C3. **Never invent.** No guessed dates, URLs, YouTube IDs, email addresses, name
 C4. **Check for duplicates before creating anything.** Search the collection for the same
     `slug`, the same `url`, and the same title with a nearby date. Recurring events are
     announced in several newsletter issues; update the existing entry and add the new issue
-    to `newsletter_source`. Show Jordan each plausible match and let him decide.
+    to `newsletter_source`. Show the requester each plausible match and let them decide; unpublishing an existing item
+    needs a website owner (C5).
 C5. **A published slug never changes, and a published file is never deleted or renamed.**
     To withdraw something, set `published: false`. To merge duplicates, keep one and
-    unpublish the other. Ask Jordan whether a redirect is needed. `verify.sh` fails a branch
+    unpublish the other. Ask a website owner whether a redirect is needed. `verify.sh` fails a branch
     that deletes or renames any file under `content/` (published or not), changes the slug of
     a published `.md` item, or removes or changes a slug in a content JSON array (a rename
-    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so; the same switch turns a changed slug of a published `.md` item from a failure into a warning, and that PR must also say that the old address needs a redirect, which nothing checks). It cannot
+    a website owner asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so; the same switch turns a changed slug of a published `.md` item from a failure into a warning, and that PR must also say that the old address needs a redirect, which nothing checks). It cannot
     read the slug of a file whose front matter does not parse (the 9 cyberseminar files
     with no closing `---`), so for those the check passes silently; look yourself.
 C6. **`people_mentioned` takes slugs of people who have a profile in the repo:** team slugs
@@ -51,8 +52,8 @@ C6. **`people_mentioned` takes slugs of people who have a profile in the repo:**
     not a repair item.
 C7. **Editorial judgment is proposed, not applied.** News versus impact story, `category`,
     which stories get a tool's tag, and every `excerpt` are judgment calls. Make the call,
-    label it as yours in the PR ("Agent's choice: news, because it expires"), and let Jordan
-    change it.
+    label it as yours in the PR ("Agent's choice: news, because it expires"), and let a website
+    owner change it.
 C8. **Do not mirror external articles.** Write a short summary in your own words and set
     `source_url`. Do not copy a job posting's full text.
 C9. **A newsletter issue is, today, an input; assembling issues from entries is the goal.**
@@ -69,12 +70,12 @@ C11. **Personal data.** `content/members/reps.json` holds names and email addres
     the eval log; refer to a row by its position ("row 47 of the members file"). The diff of
     the PR that changes the row necessarily shows it; that is the only place.
 C12. **Bulk content edits follow "Bulk edits."** Ten files or fewer by hand. More than ten:
-    state the pattern and the count, do one by hand, wait for approval.
+    state the pattern and the count, do one by hand, wait for a website owner's approval.
 C13. **File names.** New files follow the pattern of their collection: `news`, `newsletter`,
     `events`, `jobs`: `YYMMDD-slug.md`. `cyberseminars`: `YYYY-slug.md`. `research`:
     `YYYY-slug.md` (28 of the 31 existing files; three use `YYMMDD-`; confirmed by Jordan).
     `programs`, `board`, `community`, `team`: `slug.md`. Existing files are not renamed
-    unless Jordan asks. The frontmatter `slug` drives the URL, not the file name.
+    unless a website owner asks. The frontmatter `slug` drives the URL, not the file name.
 C14. **An item about a thing links to the thing.** A news item, impact story, event or recording that
     describes a dataset, software tool, paper, award, program, report or video links to its primary
     source in the body: the HydroShare resource or DOI, the code repository, the publisher's page, the

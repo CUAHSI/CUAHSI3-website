@@ -4,7 +4,7 @@
 //   node scripts/eval-log.mjs                 print the merged log (frozen file first, then agent/log/ files by file name)
 //   node scripts/eval-log.mjs --tail N        the last N lines of that
 //   node scripts/eval-log.mjs --branch NAME   only the lines whose branch field is NAME
-//   node scripts/eval-log.mjs --counts        lines by event, defects by where they were caught
+//   node scripts/eval-log.mjs --counts        lines by event, defects by where they were caught, starts by requester
 //   node scripts/eval-log.mjs --check         format check of the files in agent/log/ (exit 1 on a bad line); verify.sh runs it
 //   --root=DIR                                read DIR/agent/ instead of this repository's (to test on a fixture)
 //
@@ -28,6 +28,10 @@ const LINE = /^(\d{6}) \| ([^|]+?) \| ([a-z-]+) \| (.+)$/
 const CAUGHT = ['self-check', 'reviewer', 'test', 'typecheck', 'human-review', 'deploy-preview', 'production']
 // (?![\w-]) and not \b at the end: \b sits between "test" and "-", so "caught: test-suite" would pass.
 const CAUGHT_RE = new RegExp(`\\bcaught: (${CAUGHT.join('|')})(?![\\w-])`)
+// A start line names the requester who directed the session (AGENTS.md, top): `by: <full name>;` (not a period: "J. Read").
+// Required on start lines dated BY_FROM on.
+const BY_RE = /^by: ([^;]+);/
+const BY_FROM = '261118'
 
 // Lines that are wrong and cannot be corrected: rule 10 forbids editing a log file that is already on the default
 // branch, and both files were merged that way (the first by the jobs agent's AGU-credit branch, the second with a
@@ -58,6 +62,7 @@ if (flag('check')) {
       if (!m) { problem(f, i + 1, 'not in the format "YYMMDD | branch | event | detail"', l); return }
       if (!EVENTS.includes(m[3])) problem(f, i + 1, `unknown event "${m[3]}" (${EVENTS.join(', ')})`, l)
       if (m[3] === 'defect' && !CAUGHT_RE.test(m[4])) problem(f, i + 1, `a defect line's detail must contain "caught: " and one of: ${CAUGHT.join(', ')}`, l)
+      if (m[3] === 'start' && m[1] >= BY_FROM && !BY_RE.test(m[4])) problem(f, i + 1, 'a start line\'s detail must begin "by: <requester\'s full name>;"', l)
     })
   }
   if (bad) { console.log(`${bad} problem(s) in ${files.length} log file(s)`); process.exit(1) }
@@ -98,6 +103,10 @@ if (flag('counts')) {
   for (const [k, v] of Object.entries(by).sort((a, b) => b[1] - a[1])) console.log(`  ${String(v).padStart(4)}  ${k}`)
   console.log('\nDefects by where caught (denominator: all defect lines):')
   for (const [k, v] of Object.entries(caught).sort((a, b) => b[1] - a[1])) console.log(`  ${String(v).padStart(4)}  ${k}`)
+  const starts = rows.filter(r => r.event === 'start'); const req = {}
+  for (const r of starts) { const k = BY_RE.exec(r.detail)?.[1] ?? '(not named: started before the by: field, 17 November 2026)'; req[k] = (req[k] ?? 0) + 1 }
+  console.log(`\nStarts by requester (denominator: ${starts.length} start lines):`)
+  for (const [k, v] of Object.entries(req).sort((a, b) => b[1] - a[1])) console.log(`  ${String(v).padStart(4)}  ${k}`)
   process.exit(0)
 }
 let out = rows

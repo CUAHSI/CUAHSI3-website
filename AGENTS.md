@@ -2,9 +2,15 @@
 
 This is the CUAHSI website rebuild: Nuxt 3, `@nuxt/content` v2, Tailwind, statically
 generated, deployed to Netlify at https://cuahsi3-website.netlify.app/ (public, not
-indexed). You build and maintain it. Jordan Read directs the work and reviews every
-pull request. He is not a developer, so he reviews by reading your PR description and
-looking at the Netlify deploy preview, not by reading Vue.
+indexed). You build and maintain it, for two roles:
+- **The requester** directs this session: Jordan Read or another CUAHSI staff member. Ask their name at
+  the start if you do not know it. They give the task and the facts, approve plans and drafts, say when to push.
+- **A website owner** reviews and merges PRs and decides what a requester alone cannot. Jordan Read: every PR,
+  rule 8 items, schema, code tasks, upstream, this list. Content reviewers he names here (none yet): content PRs,
+  editorial calls (C7), duplicates to unpublish (C4, C5), redirects, product scope, `has_profile`. Owners review the
+  PR description and the deploy preview, not Vue. A requester who is not an owner cannot answer for one: before
+  building a rule 8 item, schema change, code task, unpublishing or redirect, stop until an owner says yes in the
+  conversation; raise an editorial call (C7) as a question in the PR. Only Jordan changes this list.
 
 This work is also an experiment: can an agent own and evolve a production website, as
 an alternative to CUAHSI's software engineering team rebuilding it? The record you keep
@@ -95,7 +101,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
    locally also fails when the branch name and the diff disagree.
 4. **Git.** Cut the branch from an up-to-date `main`. Never commit on `main`. Commit only after
    `./scripts/verify.sh` passes. Stage files by name and read `git diff --staged`; never `git add -A`
-   or `git add .`. Never skip hooks. Push and open the PR only when Jordan says to in that conversation.
+   or `git add .`. Never skip hooks. Push and open the PR only when the requester says to in that conversation.
    Never merge a PR, never force-push, never push to `main`. **Every PR targets `main`**; no stacked PRs (wait for
    the other change to merge, or put both in one branch).
    Before opening: `git fetch origin`; `git merge-base --is-ancestor origin/main HEAD` must exit 0. Open with
@@ -110,7 +116,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
 7. **Never guess what the repo contains.** Open the file. Do not describe a component,
    a config value or a fix as present because a document says so. If you did not check,
    say you did not check.
-8. **Ask before these.** Adding, removing or upgrading a dependency. Changing
+8. **Ask Jordan before these.** Adding, removing or upgrading a dependency. Changing
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml` or `package.json` scripts.
    Deleting a page or route. Changing any URL. Anything in `public/` that is linked
    from outside the site. State what you want to change and why, then wait.
@@ -121,7 +127,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
     rewritten. Write only your own branch's file, `agent/log/<YYMMDD>-<branch>.md`, in the format in
     `agent/log/README.md` (which is not a log: it may be edited, not removed); correct a wrong entry with a `correction` line there. Never add to the
     `KNOWN` exception list in `scripts/eval-log.mjs` (details in `docs/rules.md`).
-11. **Log every intervention.** Whenever Jordan corrects you, redirects you, rejects
+11. **Log every intervention.** Whenever the requester or a website owner corrects you, redirects you, rejects
     an approach, or has to decide something you should have been able to decide, add
     an `intervention` line to your branch's log file in that session. Do not wait to be asked.
 12. **Report counts with denominators and show your sample.** "31 of 44 grids
@@ -137,7 +143,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
 Lessons from real errors. Follow these whenever a change touches many files.
 
 - **Ten files or fewer: edit each by hand.** Do not script.
-- **More than ten: say so first.** Tell Jordan how many files and what pattern, and
+- **More than ten: say so first.** Tell the requester and a website owner how many files and what pattern, and
   migrate one file by hand as the worked example before scripting the rest.
 - **Verify placement, not just success.** A substitution count is not verification.
   After a scripted edit, read the result in at least three changed files.
@@ -157,9 +163,9 @@ Each is in full in `docs/procedures.md`; open it and follow the one that applies
 - **Start a task** (state the plan before changing anything; for roadmap tasks 3 and 4 wait for approval), **Reconcile** (roadmap task 1), **Verify**, **Compare rendered output** (refactors),
   **Review** (before every commit that goes in a PR), **Finish a task**: the life of every task, in order.
 - **Visual review request**: every PR touching layout, markup or links.
-- **After review**: Jordan reports a PR's outcome. **Quick log**: Jordan types "log:".
-- **New footgun**: something built cleanly and was wrong. **Status**: Jordan asks where things stand.
-- Content: **Content repair** (fixing existing files), **New content item** (a draft from Jordan or staff),
+- **After review**: the requester reports a PR's outcome. **Quick log**: the requester types "log:".
+- **New footgun**: something built cleanly and was wrong. **Status**: the requester asks where things stand.
+- Content: **Content repair** (fixing existing files), **New content item** (a draft from the requester),
   **Propose, then apply** (more than five items from one source), **Ingest a newsletter issue** (images always), **Add a Critical Zone product**,
   **Unpublish**, **Content lint** (on request), **Review of a content branch** (what the reviewer checks).
 - **Locks**: in `CLAUDE.md`.
