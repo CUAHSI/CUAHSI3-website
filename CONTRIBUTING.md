@@ -18,8 +18,7 @@ explains, in plain words, what each kind of item is, where it shows on the site 
 
 Fill in the [website content request form](https://github.com/CUAHSI/CUAHSI3-website/issues/new?template=content-request.yml).
 It is the only way to ask. **Everything in it is public** once you submit it, so send a request only once
-the item can be announced. The form arrives on GitHub with the organisation's next update of the website
-code; until then, ask Jordan directly. [docs/contribute/ask.md](docs/contribute/ask.md) walks you through it, and has a
+the item can be announced. [docs/contribute/ask.md](docs/contribute/ask.md) walks you through it, and has a
 Claude prompt that interviews you and writes the request for you.
 
 A website owner (today, Jordan) and their agent turn the request into a change. If a fact cannot be

@@ -3,10 +3,6 @@
 For CUAHSI staff who want something added to the website, or their own profile changed, without editing
 anything themselves. You fill in one form. A website owner (today, Jordan Read) and their agent do the rest.
 
-**When the form opens.** The form lives in the organisation's copy of the website code on GitHub, and
-arrives there with its next update from the working copy. Until then the link below does not show the
-form: ask Jordan directly.
-
 ## What you need
 
 - **A GitHub account.** Every staff member who asks for website changes needs one. It is free: sign up at
