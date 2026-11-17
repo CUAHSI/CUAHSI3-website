@@ -7,6 +7,9 @@ the reasons and the enforcement details. The numbers and titles are the same in 
 file", read `AGENTS.md` and the files it names. "See the list below" in rule 6 is the list of
 deliberate oddities, now in `AGENTS.md` (short) and `.claude/rules/site-code.md` (full). "Visual review
 request" (rule 2) is in `docs/procedures.md`; "Known footguns" (rule 13) is in `.claude/rules/site-code.md`.
+Since 17 November 2026 the rules name roles where they named Jordan, so that other staff can direct a
+session: the requester and a website owner, defined at the top of `AGENTS.md`, which also says which
+decisions stay with Jordan. Jordan is a website owner, and the requester whenever he directs the session.
 
 ## Rules
 
@@ -40,7 +43,7 @@ request" (rule 2) is in `docs/procedures.md`; "Known footguns" (rule 13) is in `
    Never commit on `main`. Commit on the task branch only after `./scripts/verify.sh`
    passes. Stage files by name and read `git diff --staged` before committing; never
    `git add -A` or `git add .`. Never skip hooks. Push the branch and open the PR only
-   when Jordan says to in that conversation. Never merge a PR, never force-push, never
+   when the requester (AGENTS.md, top) says to in that conversation. Never merge a PR, never force-push, never
    push to `main`. **Every PR targets `main`.** No stacked PRs: if a task needs a change
    that has not merged yet, wait for it to merge, or put both in one branch. Before
    opening a PR: `git fetch origin`, and `git merge-base --is-ancestor origin/main HEAD`
@@ -56,7 +59,7 @@ request" (rule 2) is in `docs/procedures.md`; "Known footguns" (rule 13) is in `
 7. **Never guess what the repo contains.** Open the file. Do not describe a component,
    a config value or a fix as present because a document says so. If you did not check,
    say you did not check.
-8. **Ask before these.** Adding, removing or upgrading a dependency. Changing
+8. **Ask Jordan before these** (the website owner for code, `AGENTS.md`, top). Adding, removing or upgrading a dependency. Changing
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml` or `package.json` scripts.
    Deleting a page or route. Changing any URL. Anything in `public/` that is linked
    from outside the site. State what you want to change and why, then wait.
@@ -77,7 +80,7 @@ request" (rule 2) is in `docs/procedures.md`; "Known footguns" (rule 13) is in `
     that appended to `agent/eval-log.md` moves those lines (`git diff origin/main -- agent/eval-log.md`)
     into its own log file, then restores the frozen file with `git checkout origin/main -- agent/eval-log.md`;
     in a merge conflict in that file, take the default branch's version and keep your lines in your own file.
-11. **Log every intervention.** Whenever Jordan corrects you, redirects you, rejects
+11. **Log every intervention.** Whenever the requester or a website owner corrects you, redirects you, rejects
     an approach, or has to decide something you should have been able to decide, add
     an `intervention` line to your branch's log file in that session. Do not wait to be asked.
 12. **Report counts with denominators and show your sample.** "31 of 44 grids
