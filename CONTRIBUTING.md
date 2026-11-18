@@ -22,7 +22,8 @@ the item can be announced. [docs/contribute/ask.md](docs/contribute/ask.md) walk
 Claude prompt that interviews you and writes the request for you.
 
 A website owner (today, Jordan) and their agent turn the request into a change. If a fact cannot be
-confirmed, the owner asks you in a comment on your request, and closes it with a link once the change is live.
+confirmed, the owner asks you in a comment on your request. The request closes when the change goes live, and the
+owner adds the page's address to it.
 
 ## What happens to every change
 

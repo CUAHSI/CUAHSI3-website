@@ -1,0 +1,5 @@
+261117 | task/content-request-reminder | merged | jordansread/CUAHSI3-website#259 (task/org-sync-package-6), reported by Jordan ('259 and 260 are merged')
+261117 | task/content-request-reminder | merged | jordansread/CUAHSI3-website#260 (content/org-sync-jobs-4), reported by Jordan ('259 and 260 are merged')
+261117 | task/content-request-reminder | start | by: Jordan Read; "Start of session" in docs/procedures.md lists open content requests (issues on CUAHSI/CUAHSI3-website labelled content whose title begins "[Content request]"), so none sits unnoticed. Jordan: 'Yes, a reminder would be good to do, but I don't want a GH workflow on these (yet)'
+261117 | task/content-request-reminder | note | The content label is also on planning tickets (T9, T12, T13b open), so the listing also filters on the form's title prefix; checked 17 November 2026: 0 open content requests, 3 open planning tickets left out
+261117 | task/content-request-reminder | pr | jordansread/CUAHSI3-website#261, base main confirmed; pushed on Jordan's 'yes, push and open the PR'
