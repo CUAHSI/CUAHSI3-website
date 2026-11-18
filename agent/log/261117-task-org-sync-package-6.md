@@ -1,0 +1,4 @@
+261117 | task/org-sync-package-6 | merged | CUAHSI/CUAHSI3-website#146 (task/org-package-6), reported by Jordan ('146 is merged')
+261117 | task/org-sync-package-6 | start | by: Jordan Read; back-sync after package 6, code half: bring CONTRIBUTING.md and docs/contribute/ask.md (the organisation's copies dropped the 'form arrives with the next update; until then ask Jordan' sentences) and agent/log/261117-task-org-package-6.md into the fork, copied from organisation main 8c169b3. The 13 job files from organisation PR 142 go in a separate content branch (rule 3). Jordan: '146 is merged'
+261117 | task/org-sync-package-6 | note | Checked after the merge: organisation main 8c169b3 has .github/ISSUE_TEMPLATE/content-request.yml, so the request form is live there
+261117 | task/org-sync-package-6 | pr | #259, base main confirmed; pushed on Jordan's 'yes, push both and open the PRs'
