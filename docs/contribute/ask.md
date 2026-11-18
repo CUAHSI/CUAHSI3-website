@@ -25,7 +25,7 @@ What happens next:
 - A website owner picks it up. Their agent checks for the same item already on the site, writes it, runs
   the site's checks, and prepares the change for the owner to review.
 - If something cannot be confirmed, they ask you in a comment on your request.
-- Once the change is live on the site, the request is closed with a link to the page.
+- The request closes when the change goes live on the site, and the page's address is added to it.
 
 ## Let Claude write it for you
 

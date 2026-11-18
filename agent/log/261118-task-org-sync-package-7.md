@@ -1,0 +1,3 @@
+261118 | task/org-sync-package-7 | merged | CUAHSI/CUAHSI3-website#147 (task/org-package-7), reported by Jordan ('merged'); 20 of 20 issues it lists are closed; 26 issues open, counted on GitHub, 18 November 2026
+261118 | task/org-sync-package-7 | start | by: Jordan Read; back-sync after package 7: the corrected open-issue audit report, its log and the package-7 log, copied from organisation main 736cfa9 into the fork. The report on the fork branch task/issue-audit (c9c568f) is superseded and that branch is not opened as a PR. Jordan reported the merge ('merged'); the back-sync follows every package merge
+261118 | task/org-sync-package-7 | pr | jordansread/CUAHSI3-website#262, base main confirmed; pushed on Jordan's 'yes, push both and open the PRs'
