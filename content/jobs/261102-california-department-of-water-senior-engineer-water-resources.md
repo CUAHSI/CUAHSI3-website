@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/396134"
 source_url: https://www.joshswaterjobs.com/jobs/396134
 tags: [surface-water, water-quality, modeling, watershed, hydroinformatics]
-published: true
+published: false
 ---
 
 The California Department of Water Resources is hiring a Senior Engineer, Water Resources for the Delta Modeling Section in Sacramento. The role involves leading development of three-dimensional hydrodynamic and water quality models for the Sacramento-San Joaquin Delta system. Candidates must hold a valid California Professional Civil Engineer registration.
