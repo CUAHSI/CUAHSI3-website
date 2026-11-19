@@ -114,6 +114,20 @@ function fmtShort(d: string) {
             </div>
           </div>
 
+          <!-- Picture (optional): a photo, cropped to 16:9 (the default fit, cover), or one graphic such as a flyer or slide with
+               fit: contain, shown whole at its own shape (a portrait flyer in a 16:9 frame would print too small to read) -->
+          <figure v-if="event.image" class="m-[0_0_28px]">
+            <div v-if="event.image.fit === 'contain'" class="overflow-hidden rounded-[12px] border border-[rgba(15,33,43,.1)] bg-white">
+              <img :src="event.image.src" :alt="event.image.alt" loading="eager" decoding="async" class="block w-full h-auto max-h-[720px] object-contain" />
+            </div>
+            <div v-else class="relative aspect-video overflow-hidden rounded-[12px] border border-[rgba(15,33,43,.1)] bg-[#e7eef3]">
+              <StoryImage :image="event.image" eager />
+            </div>
+            <figcaption v-if="event.image.caption || event.image.credit" class="mt-[8px] text-[12px] text-muted leading-[1.5]">
+              <span v-if="event.image.caption">{{ event.image.caption }}</span><span v-if="event.image.caption && event.image.credit"> · </span><span v-if="event.image.credit">{{ event.image.credit }}</span>
+            </figcaption>
+          </figure>
+
           <!-- Description -->
           <div class="text-[14px] text-[#374151] leading-[1.75] mb-[28px]">
             <p>{{ event.description }}</p>

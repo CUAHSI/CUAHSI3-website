@@ -93,6 +93,11 @@ registration:
 tags: [cyberinfrastructure, machine-learning]
 newsletter_source: [2026-july]   # newsletter slugs that announced this — see §4. Optional: omit for an event no newsletter announced
 featured: false
+image:                           # optional: one photo, or one graphic such as a flyer or slide, at the top of the event's page (not on cards)
+  src: /event-images/watersofthack-2026.jpg   # a file in public/event-images/ (the validator checks it exists and is at most 500 KB)
+  alt: "what the picture shows, for a screen reader"
+  fit: contain                   # optional: shows a flyer or slide whole; the default, cover, crops to fill the box
+                                 # caption, credit and position as for a story's image (below)
 published: true
 ```
 > `type` matters functionally: `/learn-train/archive` filters to `workshop` and `field`
