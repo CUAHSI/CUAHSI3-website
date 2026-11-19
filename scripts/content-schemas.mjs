@@ -67,6 +67,18 @@ const newsletter = z.strictObject({
   published: z.boolean(),
 })
 
+// A picture block, for a story or an event: src is a file in public/<folder>/, lower case with hyphens.
+function picture(folder) {
+  return z.strictObject({
+    src: z.string().regex(new RegExp(`^/${folder}/[a-z0-9][a-z0-9-]*\\.(jpg|webp|png|svg)$`), `must be /${folder}/<name>.jpg (or .webp, .png, .svg), lower case with hyphens`),
+    alt: nonEmpty,
+    caption: nonEmpty.optional(),
+    credit: nonEmpty.optional(),
+    fit: z.enum(['cover', 'contain']).optional(),
+    position: z.string().regex(/^(?:center|top|bottom|\d{1,3}% \d{1,3}%)$/, 'center, top, bottom or "x% y%"').optional(),
+  })
+}
+
 // content/events/ : 27 files.
 // type: content-model.md lists six values; the files use five. "field" is kept because the
 // model documents it and pages/learn-train/archive filters on it.
@@ -94,6 +106,8 @@ const events = z.strictObject({
   tags: strings,
   newsletter_source: z.array(z.string()).optional(), // 27 of 27 have it; optional so an event supplied by staff, not announced in a newsletter, validates. Checked against newsletter slugs in the cross-reference section
   featured: z.boolean().optional(),       // 13 of 27
+  // Optional: one photo, or one graphic such as a flyer or slide (fit: contain shows it whole), at the top of the event's page. Not on cards.
+  image: picture('event-images').optional(),
   published: z.boolean(),
 })
 
@@ -139,14 +153,7 @@ const cyberseminars = z.strictObject({
 // A story's picture: shown on its card and at the top of its page. src is a file in public/story-images/ (the validator checks that it exists and
 // is not too big); alt is what a screen reader says; caption and credit print under the picture on the story page; fit "contain" shows a
 // diagram whole (cover crops); position is a CSS object-position for the crop.
-const storyImage = z.strictObject({
-  src: z.string().regex(/^\/story-images\/[a-z0-9][a-z0-9-]*\.(jpg|webp|png|svg)$/, 'must be /story-images/<name>.jpg (or .webp, .png, .svg), lower case with hyphens'),
-  alt: nonEmpty,
-  caption: nonEmpty.optional(),
-  credit: nonEmpty.optional(),
-  fit: z.enum(['cover', 'contain']).optional(),
-  position: z.string().regex(/^(?:center|top|bottom|\d{1,3}% \d{1,3}%)$/, 'center, top, bottom or "x% y%"').optional(),
-})
+const storyImage = picture('story-images')
 
 const research = z.strictObject({
   title: nonEmpty,

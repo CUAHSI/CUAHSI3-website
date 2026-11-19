@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// A story's picture (the `image` block in a content/research/ file), filling its box: the parent is `relative` with a fixed height or aspect
+// A story's or an event's picture (the `image` block in a content/research/ or content/events/ file), filling its box: the parent is `relative` with a fixed height or aspect
 // ratio. `fit: contain` shows a diagram whole (cover would crop its labels); `position` moves the crop. The parent keeps its placeholder
 // background underneath, so a story with no picture looks as it always did.
 // `decorative` gives the picture an empty alt: on a card the title beside it already says what the story is, and a link that contains the picture's
