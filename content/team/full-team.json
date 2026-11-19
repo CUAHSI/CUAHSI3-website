@@ -111,10 +111,13 @@
     "department": "Research",
     "pronouns": "he/him",
     "photo": "/team/headshots/abner-bogan.jpeg",
-    "bio": "Abner supports interdisciplinary research teams in the Critical Zone Network with data management and curation, and assists in CUAHSI education and outreach. He holds a MASc in Chemical and Biological Engineering and a MEL in Clean Energy Engineering from the University of British Columbia, and a BS in Mechanical Engineering from the University at Buffalo.",
+    "bio": "Abner Bogan (he/him) is a research analyst at CUAHSI, where he works at the intersection of environmental data science, open research, and community engagement to help water researchers publish and reuse high-quality datasets and build more reproducible workflows. Abner is passionate about supporting community-centered, transparent, and inclusive research. Prior to joining CUAHSI, Abner worked at a Canadian-based startup developing new chemistries for water treatment. He has a MASc in Chemical and Biological Engineering and a MEL in Clean Energy Engineering from the University of British Columbia, along with a BS in Mechanical Engineering from the University at Buffalo.",
     "fun_fact": "Abner is an avid musician/producer and loves to practice Spanish!",
     "links": {
-      "github": "https://github.com/abner-bogan"
+      "orcid": "https://orcid.org/0009-0009-4882-3333",
+      "google_scholar": "https://scholar.google.com/citations?user=akRZo1kAAAAJ&hl=en",
+      "github": "https://github.com/abnerbog",
+      "linkedin": "https://www.linkedin.com/in/abnerb21/"
     },
     "has_profile": true
   },
