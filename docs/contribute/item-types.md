@@ -53,6 +53,8 @@ webinar series, conference session or deadline.
 - Registration: whether it is needed, the sign-up link, the cost. The sign-up link shows as a "Register"
   button until the event starts.
 - Optional: a few topic words, such as `HydroShare` or `snow`; whether the newsletter announced it.
+- Optional: one picture, either a photo or a single graphic such as a flyer or slide, with what it shows,
+  and a caption and a credit if there are any. It shows on the event's own page, not in the lists.
 
 **Example.** [CUAHSI Turns 25: Shaping the Future of Water Science Infrastructure and Education](https://cuahsi3-website.netlify.app/community/events/cuahsi-turns-25-town-hall-2026),
 CUAHSI's town hall at AGU 2026: a conference session, in person in San Francisco, 9 December 2026, 1 to 2 pm Pacific.
