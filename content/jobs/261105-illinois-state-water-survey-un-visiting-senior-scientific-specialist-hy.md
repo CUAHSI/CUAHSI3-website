@@ -12,7 +12,7 @@ source_id: "https://www.joshswaterjobs.com/jobs/396370"
 source_url: https://www.joshswaterjobs.com/jobs/396370
 tags: [groundwater, modeling, hydroinformatics, water-quality, watershed]
 sector: academic
-published: true
+published: false
 ---
 
 The Illinois State Water Survey is hiring a full-time Visiting Senior Scientific Specialist to conduct hydrogeologic research characterizing near-surface Illinois aquifers and delineating capture zones for community water supplies, as well as develop and teach training courses on groundwater modeling. The position requires a Master's degree in hydrology or a related field plus 1–3 years of experience with Python, MODFLOW, and hydrogeologic modeling.
