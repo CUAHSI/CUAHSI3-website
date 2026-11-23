@@ -29,8 +29,8 @@ const { data: latestSeminar } = await useAsyncData('home-seminar', () =>
   queryContent('cyberseminars').where({ published: true }).sort({ date: -1 }).findOne().catch(() => null)
 )
 
-function fmtEventDay(d: string) { return new Date(d).toLocaleDateString('en-US', { day: '2-digit', timeZone: 'UTC' }) }
-function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase() }
+function fmtEventDay(d: string) { return eventDay(d).toLocaleDateString('en-US', { day: '2-digit', timeZone: 'UTC' }) }
+function fmtEventMon(d: string) { return eventDay(d).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase() }
 function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) }
 function fmtFullDate(d?: string) {
   const t = d ? new Date(d) : null

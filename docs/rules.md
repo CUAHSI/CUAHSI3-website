@@ -26,8 +26,9 @@ decisions stay with Jordan. Jordan is a website owner, and the requester wheneve
    (see "Visual review request").
 3. **A branch changes content or code, never both.** Content work goes on a branch
    named `content/short-name` and changes only `content/**`, plus: `agent/` (logs, reports,
-   roadmap); `public/` files that belong to a content item the PR names; `visual/baseline/`
-   images (the PR lists which images changed and why).
+   roadmap); `public/` files that belong to a content item the PR names. Not `visual/baseline/`
+   images: a content PR does not retake them (`visual/README.md`, "Which pull requests run it"); the
+   check allows them but `verify.sh` warns.
    Code work stays on `task/short-name` and does not touch `content/**`. What kind of branch
    it is comes from what the diff changes, not from its name, so the check also works in CI
    (where the checkout has no branch name); locally `verify.sh` also fails when the name and

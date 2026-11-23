@@ -91,6 +91,11 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
     back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on Back.
     Seen only with `npx serve`; the cause was not isolated and Netlify was not tried. `verify.sh` fails `location.search`
     (and `location['search']`, `{ search } = location`) in the site code, a comment included; it does not see `new URL(location.href)`.
+16. **An event's date printed from `new Date(start)` is a day late for an evening event.** The pages format dates with
+    `timeZone: 'UTC'`, and `2026-12-09T18:00:00-08:00` is already 10 December in UTC. Print the day written in the file with
+    `eventDay(start)` (`composables/useEventDay.ts`); keep `new Date(start)` for upcoming-or-past comparisons. `verify.sh` fails
+    `new Date(x.start)` or `new Date(x.end)` followed directly by `.toLocale…`, `.getUTC…` or `.toISOString`; it does not see a
+    helper that takes the date as an argument.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 

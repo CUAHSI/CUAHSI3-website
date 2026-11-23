@@ -65,7 +65,7 @@ const openJobs = computed(() => {
   return (allJobs.value ?? []).filter(j => !j.deadline || new Date(j.deadline) >= now).length
 })
 function shortDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
+  return eventDay(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
 }
 
 // The six smaller ways. `tile` is the colour of the icon's tile (written out whole so Tailwind sees the classes).
@@ -232,9 +232,9 @@ const waysin = [
               class="flex gap-[10px] p-[10px_0] border-b-[0.5px] border-b-[#f3f4f6] no-underline text-inherit">
               <div class="shrink-0 w-[36px] bg-[#f9fafb] rounded-[6px] text-center p-[5px_2px]">
                 <p class="text-[9px] text-muted uppercase tracking-[.05em] mb-[1px]">
-                  {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
+                  {{ eventDay(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
                 </p>
-                <p class="text-[16px] font-medium leading-[1]">{{ new Date(event.start).getUTCDate() }}</p>
+                <p class="text-[16px] font-medium leading-[1]">{{ eventDay(event.start).getUTCDate() }}</p>
               </div>
               <div class="flex-1 min-w-[0]">
                 <p class="text-[13px] font-medium leading-[1.35] mb-[3px]">{{ event.title }}</p>

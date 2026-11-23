@@ -27,8 +27,9 @@ So do not report that anything "looks correct." Report what you read.
    approval credited to anyone else, the requester included, is a finding.
 1b. **Content branch** (only when the diff changes `content/`). Check each changed file
    against C1 to C16 in `.claude/rules/content.md`. Any path outside `content/`, `agent/`, a `public/`
-   file that belongs to a named content item, `visual/baseline/`, or the known-failures
-   file is a finding, as is a line added to the known-failures file. Any code file in the
+   file that belongs to a named content item, or the known-failures file is a finding, as is a line added to the
+   known-failures file. A `visual/baseline/` image is a finding too: a content PR does not retake images
+   (`visual/README.md`, "Which pull requests run it"). Any code file in the
    same diff is a finding (rule 3: a branch changes content or code, never both). Setting `published: false` on an
    item, a redirect, or a change to `has_profile` is a finding unless the task description says a website owner
    (`AGENTS.md`, top) approved it, and names them; an approval from a requester who is not an owner is a finding.

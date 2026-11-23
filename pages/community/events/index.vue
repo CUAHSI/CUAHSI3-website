@@ -56,10 +56,10 @@ function typeStyle(type: string) {
 }
 
 function fmtDate(start: string, end?: string) {
-  const s = new Date(start)
+  const s = eventDay(start)
   const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }
   if (!end) return s.toLocaleDateString('en-US', opts)
-  const e = new Date(end)
+  const e = eventDay(end)
   if (s.toISOString().slice(0, 10) === e.toISOString().slice(0, 10)) return s.toLocaleDateString('en-US', opts)
   if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth())
     return `${s.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}–${e.getUTCDate()}, ${e.getUTCFullYear()}`
@@ -100,10 +100,10 @@ function fmtDate(start: string, end?: string) {
             <!-- Date block -->
             <div class="text-center bg-[#f9fafb] rounded-[8px] p-[8px_4px]">
               <p class="text-[9px] text-muted uppercase tracking-[.06em] mb-[2px]">
-                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
+                {{ eventDay(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
               </p>
               <p class="text-[20px] font-medium leading-[1] text-[#111827]">
-                {{ new Date(event.start).getUTCDate() }}
+                {{ eventDay(event.start).getUTCDate() }}
               </p>
             </div>
             <!-- Details -->
@@ -137,10 +137,10 @@ function fmtDate(start: string, end?: string) {
             :to="`/community/events/${event.slug}`">
             <div class="text-center bg-[#f9fafb] rounded-[8px] p-[8px_4px]">
               <p class="text-[9px] text-muted uppercase tracking-[.06em] mb-[2px]">
-                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
+                {{ eventDay(event.start).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) }}
               </p>
               <p class="text-[20px] font-medium leading-[1] text-[#6b7280]">
-                {{ new Date(event.start).getUTCDate() }}
+                {{ eventDay(event.start).getUTCDate() }}
               </p>
             </div>
             <div>
