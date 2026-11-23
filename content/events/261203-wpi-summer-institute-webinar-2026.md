@@ -21,7 +21,7 @@ description: >
 registration:
   required: true
   url: https://us06web.zoom.us/webinar/register/WN_lbCQRYbtR0yThJpQVQ4T2A
-  cost: null
+  cost: free
 tags: [webinar, summer-institute, water-prediction, NOAA]
 newsletter_source: ["2026-november"]
 image:
