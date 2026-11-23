@@ -113,6 +113,12 @@ fi
 out=$(grep -rnE --include='*.vue' --include='*.ts' "location\.search\b|location\[['\"]search['\"]\]|\bsearch\b[^=]*\}[ \t]*=[ \t]*(window\.)?location\b" "${CODE_DIRS[@]}" composables 2>/dev/null)
 [ -n "$out" ] && { fail "location.search in site code; read useRoute().query in onMounted instead (footgun 15, .claude/rules/site-code.md):"; echo "$out" | sed 's/^/      /'; } || ok "no location.search in the site code"
 
+# 8e. An event's day printed from the instant (footgun 16): new Date(x.start) or new Date(x.end) formatted in UTC is the next
+#     day for an evening event in the Americas. Print eventDay(x.start). Matches new Date(<...>.start|end) followed directly
+#     by .toLocale..., .getUTC... or .toISOString. Not seen: a helper that takes the date as an argument and calls new Date(d).
+out=$(grep -rnE --include='*.vue' --include='*.ts' "new Date\([^()]*\.(start|end)\)\.(toLocale|getUTC|toISOString)" "${CODE_DIRS[@]}" composables 2>/dev/null)
+[ -n "$out" ] && { fail "an event's day printed from new Date(start); use eventDay(start) (footgun 16, .claude/rules/site-code.md):"; echo "$out" | sed 's/^/      /'; } || ok "event days printed with eventDay()"
+
 # 9-11. Git state
 if git rev-parse --git-dir >/dev/null 2>&1; then
   branch=$(git branch --show-current)

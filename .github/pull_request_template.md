@@ -15,6 +15,7 @@ Requested by: <!-- the requester who directed the session (AGENTS.md, top) -->
 - [ ] Routes fetched from the built site, with status:
 - [ ] Internal links in changed markup resolve to a built file: N of N
 - [ ] Rendered HTML compared against `main` (refactors only). Differences:
+- [ ] `npm run visual:compare` (code PRs only): N of 60; each failure's diff, and each image retaken and why:
 
 Warnings from verify.sh, and what I did about each:
 
@@ -45,6 +46,6 @@ Warnings from verify.sh, and what I did about each:
 - To verify: facts I could not confirm, and fields left empty (C3):
 - Agent's judgment calls, each labelled as mine (C7):
 - Pages whose visible content changes, and what changes on each:
-- `visual/baseline/` images changed, and why (or "none"):
+- `visual/baseline/` images changed: none (a content PR does not retake them; `visual/README.md`, "Which pull requests run it"; if verify.sh warns, say why)
 - `public/` files added or changed, and the content item each belongs to (or "none"):
 - Duplicate check run (C4), and what matched:

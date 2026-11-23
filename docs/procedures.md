@@ -67,6 +67,33 @@ partly done stays open; say what is left in the description. After the merge, ch
 closed. Then back-sync: on a branch from `origin/main`, copy into the fork the files that are on the organisation's
 `main` and missing from the fork or different there, the same way in reverse, naming the organisation commit.
 
+**Own fork.** For a CUAHSI staff member working from their own fork of `CUAHSI/CUAHSI3-website` (level 2 in
+`CONTRIBUTING.md`). At the start of the session run `git remote -v`. If `origin` is not `jordansread/CUAHSI3-website`,
+follow this procedure; the others apply with these changes. Packages and back-syncs are not for you: the PR goes
+straight to the organisation.
+- **Set up.** `gh` must be installed and signed in (`gh auth status`; if not, the requester runs `gh auth login`). Add the
+  organisation as `upstream` if it is missing (`git remote add upstream https://github.com/CUAHSI/CUAHSI3-website.git`), then
+  `git fetch upstream`. The browser for the screenshot checks: `README.md`, "Quick start".
+- **Read every `main` as `upstream/main`.** The fork's own `main` is not used. Cut branches from `upstream/main` ("Start a
+  task"); run `VERIFY_BASE=upstream/main ./scripts/verify.sh` (and `--build`) every time ("Verify"); give the reviewer
+  `git diff upstream/main...HEAD` ("Review"); build `upstream/main` to compare ("Compare rendered output"). If verify.sh warns
+  that the branch lacks `origin/main`, the fork's `main` has commits the organisation lacks: tell the requester, and do not
+  merge it in. At "Start of session", skip the upstream and content-request reports (the request queue is an owner's).
+- **Before opening the PR**, in place of rule 4's check: `git fetch upstream`; `git merge-base --is-ancestor upstream/main HEAD`
+  must exit 0. If it does not, bring the branch up to date: before it is pushed, rebase it on `upstream/main` (nothing is shared
+  yet); after it is pushed, merge `upstream/main` in. Never force-push (rule 4). This is your call; say in the PR which you did.
+- **Open the PR** when the requester says to: push the branch to `origin`, then
+  `gh pr create --repo CUAHSI/CUAHSI3-website --base main --head <login>:<branch>`, where `<login>` is `gh api user --jq .login`.
+  Check `gh pr view <number> --repo CUAHSI/CUAHSI3-website --json baseRefName` says `main`. A website owner approves the deploy
+  preview in the Netlify console, and may have to approve the GitHub checks for a first-time contributor.
+- **Closing an issue.** The PR merges on the organisation, so it can close the issue it finishes, but only once a website owner
+  approves: list the issue under "Questions for a website owner", and write `Closes #N` only after the owner says yes.
+- **Who decides what.** The requester is staff, not a website owner (`AGENTS.md`, top). Before building a rule 8 item, a
+  schema change, a code task, an unpublishing or a redirect, stop until an owner says yes in the conversation. An owner's call
+  that does not block the work (switching on a profile page, an editorial call, C7) goes in the PR as a question to the owner
+  by name, never to the requester as a choice. A decision the rules leave to you (for example whether to retake an image:
+  `visual/README.md`, "Which pull requests run it") is yours: make it, and say so in the PR.
+
 **Start a task.** The requester names a roadmap task or describes a new one. Confirm the tree
 is clean. `git switch main && git pull --ff-only`, then `git switch -c task/short-name`
 (`content/short-name` for a content task).
@@ -142,8 +169,8 @@ A content task follows Start a task, Verify, Review and Finish a task like any o
 **Content repair.** For fixing existing files. State each file, line and change before
 making it. Run `npm run validate:content` for a before count. Apply. Run the validator again
 and the full build, and report both counts with denominators. In the PR, list every page
-whose visible content changes and what changes on it, as a visual review list; list every
-baseline image that changed and why.
+whose visible content changes and what changes on it, as a visual review list. A content PR does not run the
+screenshot comparison or retake images (`visual/README.md`, "Which pull requests run it").
 
 **New content item.** The requester gives a draft (theirs or a colleague's): an event, a news item, a job,
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write
