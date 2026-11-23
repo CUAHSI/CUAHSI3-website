@@ -7,7 +7,7 @@
 // checkout has no branch name (the name is then read from GITHUB_HEAD_REF). Locally the name is also checked
 // against the diff.
 //   content branch: the diff touches content/. It may also touch agent/, public/ (assets belonging to a content item),
-//                   visual/baseline/ (images).
+//                   visual/baseline/ (images; allowed, but a content PR should not retake them, so it warns).
 //   code branch:    the diff touches anything else and not content/.
 // Also checked on any branch: nothing under content/ is deleted or renamed, the slug of a published item does not
 // change, a new people_mentioned value matches a profile file, and the known-failures list is not recreated.
@@ -54,11 +54,11 @@ if (name && prefix === 'task/' && kind === 'content') say('FAIL', `branch ${name
 if (name && prefix === 'content/' && kind === 'code') say('FAIL', `branch ${name} is named content/ but its diff changes code, not content/ (rule 3: the name and the diff must agree)`)
 if (!name) say('INFO', 'no branch name available; the kind was decided from the diff alone')
 
-// --- on a content branch, list the extras the PR description must account for
+// --- on a content branch, list the extras the PR description must account for (baseline images as a warning)
 if (kind === 'content') {
   const imgs = files.filter(f => f.startsWith('visual/baseline/'))
   const pub = files.filter(f => f.startsWith('public/'))
-  if (imgs.length) say('INFO', `baseline images changed (the PR must say which and why): ${imgs.join(', ')}`)
+  if (imgs.length) say('WARN', `baseline images changed on a content branch; a content PR does not retake them (visual/README.md, "Which pull requests run it"): ${imgs.join(', ')}`)
   if (pub.length) say('INFO', `public/ files changed (the PR must name the content item each belongs to): ${pub.join(', ')}`)
 }
 
