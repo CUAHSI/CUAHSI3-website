@@ -343,4 +343,4 @@
 /community/water-data-portals/world-hydrological-cycle-observing-system /data-platforms/portals 301
 
 # the NWS flood snapshot (a rewrite), refreshed by .github/workflows/flood-snapshot.yml
-/flooding-gages.json https://raw.githubusercontent.com/jordansread/CUAHSI3-website/flood-data/flooding-gages.json 200
+/flooding-gages.json https://raw.githubusercontent.com/CUAHSI/CUAHSI3-website/flood-data/flooding-gages.json 200

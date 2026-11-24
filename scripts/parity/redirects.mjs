@@ -75,7 +75,7 @@ for (const [from, [to, why]] of [...rules].sort((a, b) => a[1][1].localeCompare(
 // A rewrite, not a redirect: /flooding-gages.json is served from the `flood-data` branch, which .github/workflows/flood-snapshot.yml
 // refreshes every 3 hours (the home page's gage card reads it). Netlify fetches it server side, so visitors only talk to this site.
 // The repository is the one the workflow runs in; change it here if production builds from another repository.
-const FLOOD_DATA = 'https://raw.githubusercontent.com/jordansread/CUAHSI3-website/flood-data/flooding-gages.json'
+const FLOOD_DATA = 'https://raw.githubusercontent.com/CUAHSI/CUAHSI3-website/flood-data/flooding-gages.json'
 lines.push('', '# the NWS flood snapshot (a rewrite), refreshed by .github/workflows/flood-snapshot.yml', `/flooding-gages.json ${FLOOD_DATA} 200`)
 const out = lines.join('\n') + '\n'
 if (process.argv.includes('--check')) {

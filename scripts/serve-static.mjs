@@ -1,13 +1,13 @@
-// Serves the built site (.output/public) on http://localhost:4100 for the visual tests.
+// Serves a built site (.output/public, or the folder in SITE_DIR) on http://localhost:4100 for the visual tests.
 // Build first: npm run build:search. Port: PORT env var, default 4100.
 import http from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'
 
-const root = path.resolve('.output/public')
+const root = path.resolve(process.env.SITE_DIR || '.output/public')
 const port = Number(process.env.PORT || 4100)
 if (!fs.existsSync(root)) {
-  console.error('No .output/public. Run: npm run build:search')
+  console.error(`No ${root}. Run: npm run build:search`)
   process.exit(1)
 }
 

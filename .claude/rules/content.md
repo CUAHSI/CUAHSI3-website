@@ -9,15 +9,16 @@ paths:
 ## Content rules (Phase 2)
 
 These apply to every change under `content/`. `verify.sh` enforces C1, C5 and C6 where a
-check can; the rest are checked by the reviewer and by a website owner (`AGENTS.md`, top).
+check can; the rest are yours to keep and a website owner's to check (`AGENTS.md`, top), and the reviewer's when the branch has code.
 
 C1. **The validator must exit 0.** `npm run validate:content` reports no failure, no
     cross-reference problem and no skipped check group, and `verify.sh` fails a branch
     where it does not. Until 5 October 2026 a known-failures list
     (`scripts/validate-content.known-failures.txt`) tolerated the 12 failing files or
     entries; the three repair PRs emptied it and it was deleted. Do not recreate
-    it: `verify.sh` fails if the file exists. Never loosen a schema on a content branch;
-    a schema change is code, with its own PR and reason.
+    it: `verify.sh` fails if the file exists. Never loosen a schema
+    to make content pass. A schema change is code and Jordan's to approve; once he has, a field that a request needs goes
+    in the request's own PR (rule 3), which says who approved it. `verify.sh` warns when a branch changes both.
 C2. **Every item has a source.** A job has `url` (required by the schema) and `source`
     (optional; `newsletter`, `joshswaterjobs` or `usajobs`; give it whenever it is known; a
     USAJOBS posting also carries its id in the optional `source_id`). A job's `url` is the posting's own page, never a link
