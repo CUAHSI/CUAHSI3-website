@@ -5,7 +5,7 @@
 # FAIL blocks a commit. WARN must be read and either fixed or explained in the PR.
 # A clean run does not mean the pages look right. See AGENTS.md rule 2.
 
-BASE="${VERIFY_BASE:-main}"
+BASE="${VERIFY_BASE:-$(node scripts/base-ref.mjs 2>/dev/null || echo main)}"   # the organisation's main, whatever the remote is called
 CODE_DIRS=()
 for d in pages components layouts; do [ -d "$d" ] && CODE_DIRS+=("$d"); done
 [ -f app.vue ] && CODE_DIRS+=("app.vue")
@@ -123,21 +123,21 @@ out=$(grep -rnE --include='*.vue' --include='*.ts' "new Date\([^()]*\.(start|end
 if git rev-parse --git-dir >/dev/null 2>&1; then
   branch=$(git branch --show-current)
   dirty=$(git status --porcelain)
-  if [ "$branch" = "$BASE" ] && [ -n "$dirty" ]; then
-    fail "uncommitted changes on $BASE. Work on a task/ branch (rule 4)."
+  if [ "$branch" = "main" ] && [ -n "$dirty" ]; then
+    fail "uncommitted changes on main. Work on a task/ or content/ branch (rule 4)."
   else ok "branch: $branch"; fi
 
   # Every PR targets main (AGENTS.md rule 4). In CI the base of the PR is GITHUB_BASE_REF.
   if [ -n "$GITHUB_BASE_REF" ] && [ "$GITHUB_BASE_REF" != "main" ]; then
     fail "this PR targets '$GITHUB_BASE_REF'; every PR targets main (rule 4). No stacked PRs: wait for the base to merge, then open this one against main."
   fi
-  if git rev-parse --verify -q origin/main >/dev/null && ! git merge-base --is-ancestor origin/main HEAD 2>/dev/null; then
-    warn "this branch does not contain the current origin/main (fetch and merge it before opening the PR; rule 4)"
+  if git rev-parse --verify -q "$BASE" >/dev/null && ! git merge-base --is-ancestor "$BASE" HEAD 2>/dev/null; then
+    warn "this branch does not contain the current $BASE (fetch and merge it before opening the PR; rule 4)"
   fi
 
   if git rev-parse --verify -q "$BASE" >/dev/null; then
     mb=$(git merge-base "$BASE" HEAD)
-    # Branch kind, decided from the diff (rule 3); also the name against the diff, deletions, slugs, people_mentioned.
+    # What the branch changes (rule 3: content only, or code too); deletions, slugs, people_mentioned.
     if [ -f scripts/check-content-branch.mjs ] && [ -d node_modules/yaml ]; then
       while IFS= read -r line; do
         case "$line" in
@@ -161,7 +161,7 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
       [ -n "$oldlog" ] && fail "a log file already on the base branch changed or was removed (append-only, rule 10): $(echo "$oldlog" | tr '\n' ';')" || ok "log files on the base branch unchanged"
     fi
   else
-    need "no '$BASE' ref; skipped the branch checks and the eval-log check (rules 3 and 10)"
+    fail "no '$BASE' ref, so the branch checks and the eval-log check could not run (rules 3 and 10). Run: git fetch ${BASE%%/*}"
   fi
 fi
 

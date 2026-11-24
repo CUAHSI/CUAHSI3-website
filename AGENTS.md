@@ -34,12 +34,11 @@ Read the file before the work it covers. Tools other than Claude Code do not loa
 
 ```
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
-content/           the content. Phase 2: changed only on a content/short-name branch (rule 3).
-visual/            the visual baseline: 60 committed screenshots and README.md. tests/visual/ and
-                   playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
+content/           the content. Changed on a content/short-name branch (rule 4).
+tests/visual/      the screenshot comparison of two builds (README.md there); scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
-                   (.github/workflows/verify.yml; not the screenshot comparison, which needs a Mac).
-                   check-content-branch.mjs: the branch-kind, deletion, slug and people_mentioned checks.
+                   (.github/workflows/verify.yml; not the screenshot comparison, which is run locally).
+                   check-content-branch.mjs: content only or code too, deletions, slugs, people_mentioned.
 scripts/           also download-team-photos.mjs, fetch-transcripts.mjs, and
                    content-schemas.mjs + validate-content.mjs (Zod schemas and the
                    content validator; Content v2 cannot enforce schemas itself)
@@ -47,7 +46,7 @@ agent/roadmap.md   Phase 1 tasks and the Phase 2 roadmap, with status and accept
 agent/reconcile.md the "verify first" checklist for task 1
 agent/content-model.md  collection schemas, cross-link rules, editorial rules.
                    Written from memory by the previous agent. Read before task 2.
-agent/log/         the evaluation log: one file per branch, `<YYMMDD>-<branch>.md`; format and commands in its README.
+agent/log/         the evaluation log: one file per branch that changes code, `<YYMMDD>-<branch>.md`; format and commands in its README.
                    `node scripts/eval-log.mjs` prints it all, `--counts` counts it
 agent/eval-log.md  the log before 7 October 2026, frozen (one shared file made every open PR conflict on every merge)
 agent/reports/     dated reports you produce (reconcile, audits, the Phase 1 evaluation). YYMMDD_name.md
@@ -71,8 +70,7 @@ npm run validate:content           # read-only check of content/ against the sch
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
 node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
-npm run visual:compare             # code PRs only, after a build: 60 screenshots vs visual/baseline; any changed pixel fails; when to retake: visual/README.md
-npm run visual:baseline            # rewrites all 60; only from a build of main, in its own PR (one route: visual/README.md)
+npm run visual:compare             # code PRs only, after a build: 60 screenshots of this build vs a build of the commit the branch was cut from (tests/visual/README.md)
 npm run test:e2e                   # after a build: smoke test, every built page at 390/1280px (errors, hydration, empty <main>); CI runs it; tests/e2e/README.md
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
 node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
@@ -92,23 +90,23 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
 2. **You cannot see what you render.** A passing build is not evidence that a page is correct. For any
    change touching layout, markup structure or links, do not write "verified," "tested" or "works."
    Write what you checked, and list what a human must look at ("Visual review request").
-3. **A branch changes content or code, never both.** Content work: a `content/short-name` branch that
-   changes only `content/**`, plus `agent/`, `public/` files that belong to a content item the PR names,
-   but not `visual/baseline/` images (visual/README.md; verify.sh warns). Code work: a `task/short-name` branch that
-   does not touch `content/**`. A branch that changes only `public/` or `visual/baseline/` is code.
-   `agent/` changes are allowed on either. C1 to C16 apply to every change under `content/`. A code
-   change that a content change needs is a second PR. `verify.sh` decides the kind from the diff, and
-   locally also fails when the branch name and the diff disagree.
-4. **Git.** Cut the branch from an up-to-date `main`. Never commit on `main`. Commit only after
-   `./scripts/verify.sh` passes. Stage files by name and read `git diff --staged`; never `git add -A`
-   or `git add .`. Never skip hooks. Push and open the PR only when the requester says to in that conversation.
-   Never merge a PR, never force-push, never push to `main`. **Every PR targets `main`**; no stacked PRs (wait for
-   the other change to merge, or put both in one branch).
-   Before opening: `git fetch origin`; `git merge-base --is-ancestor origin/main HEAD` must exit 0. Open with
-   `gh pr create --repo jordansread/CUAHSI3-website --base main --head <branch>` (this is a fork); after,
-   `gh pr view <number> --repo jordansread/CUAHSI3-website --json baseRefName` must say `main`.
-5. **One task per branch, one concern per PR.** No drive-by fixes. If you notice a
-   problem outside the task, add a line to "Noticed" in `agent/roadmap.md` and leave it.
+3. **One request, one PR.** A PR carries the whole request: its content, its `public/` files and the small code change
+   it needs. A follow-up while the PR is open goes on the same branch. A PR that changes `content/`, and otherwise only
+   `agent/` records and the `public/` files of a content item, takes the short route ("Content PR" in `docs/procedures.md`): checks, preview, a
+   website owner's merge; no reviewer, no log file, no screenshots. Any other change adds the reviewer, the log file and the
+   screenshot comparison. C1 to C16 apply to every change under `content/`.
+4. **Git.** All work goes to `CUAHSI/CUAHSI3-website` ("the organisation"); there are no packages or back-syncs. Cut
+   the branch (`content/short-name` if it changes content, else `task/short-name`) from its up-to-date `main`. Never
+   commit on `main`. Commit only after `./scripts/verify.sh` passes. Stage files by name and read `git diff --staged`;
+   never `git add -A` or `git add .`. Never skip hooks. Never merge a PR, never force-push, never push to `main`.
+   **Every PR targets `main`**; no stacked PRs. **When to push:** Jordan's standing yes (24 November 2026) covers the PR
+   of a staff content request he has told you to take up, and later commits to it: push and open without asking again. Code
+   the request needs waits for Jordan's yes before it is built; so does whatever rule 8 or an owner holds. Anything else
+   (other PRs, a comment on an issue): only when the requester says to in that conversation. Before opening, the branch must contain the organisation's
+   current `main`. Open with `gh pr create --repo CUAHSI/CUAHSI3-website --base main --head <branch>`.
+5. **No spin-offs.** Do what was asked and no more. An idea or a problem outside the request goes on a list in the PR
+   description ("Noticed"), with what it would cost in full (PRs, files, the owner's steps); start it only on a website owner's yes.
+   Before offering a follow-up, look for the smaller way. If a request grows past what was asked, stop and say the new total.
 6. **Do not "fix" deliberate oddities.** Tidying them breaks live URLs: `content/research/` renders at
    `/about/impact/`; `pages/highlights/` holds redirect stubs to `/about/impact`; the `slug` frontmatter
    field drives URLs, not the filename; `/member-portal` is unlinked from the nav on purpose. In full in
@@ -124,12 +122,12 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
    must not change what a visitor sees. If a refactor changes rendered output on
    purpose, that is a second concern and a second PR.
 10. **Logs are append-only.** `agent/log/`, `agent/eval-log.md` (frozen) and the Noticed list are never
-    rewritten. Write only your own branch's file, `agent/log/<YYMMDD>-<branch>.md`, in the format in
+    rewritten (a content-only PR writes none: the PR is its record). Write only your own branch's file, `agent/log/<YYMMDD>-<branch>.md`, in the format in
     `agent/log/README.md` (which is not a log: it may be edited, not removed); correct a wrong entry with a `correction` line there. Never add to the
     `KNOWN` exception list in `scripts/eval-log.mjs` (details in `docs/rules.md`).
 11. **Log every intervention.** Whenever the requester or a website owner corrects you, redirects you, rejects
-    an approach, or has to decide something you should have been able to decide, add
-    an `intervention` line to your branch's log file in that session. Do not wait to be asked.
+    an approach, or has to decide something you should have been able to decide, add an `intervention` line to
+    your branch's log file in that session (on a content-only PR: a line under "Corrections" in its description). Do not wait to be asked.
 12. **Report counts with denominators and show your sample.** "31 of 44 grids
     migrated," not "most grids migrated." Before reporting any bulk result, open three
     affected files and three unaffected ones and confirm by reading them. Say which
@@ -159,15 +157,13 @@ Lessons from real errors. Follow these whenever a change touches many files.
 Each is in full in `docs/procedures.md`; open it and follow the one that applies.
 - **Start of session**: at the start of every session, before anything else; it ends by waiting for direction
   (do not start a roadmap task unprompted).
-- **Upstream**: reporting on, or bringing in, changes from `CUAHSI/CUAHSI3-website`. **Package for the organisation**:
-  sending the fork's work there; its description closes the organisation issues it finishes. **Own fork**: when
-  `origin` is a staff member's own fork, not `jordansread/CUAHSI3-website` (it changes rule 4 and the other procedures).
+- **Own fork**: when `origin` is a staff member's own fork of the organisation's repository.
 - **Start a task** (state the plan before changing anything; for roadmap tasks 3 and 4 wait for approval), **Reconcile** (roadmap task 1), **Verify**, **Compare rendered output** (refactors),
-  **Review** (before every commit that goes in a PR), **Finish a task**: the life of every task, in order.
+  **Review** (before a commit that goes in a PR with code), **Finish a task**: the life of every code task, in order.
 - **Visual review request**: every PR touching layout, markup or links.
-- **After review**: the requester reports a PR's outcome. **Quick log**: the requester types "log:".
+- **After review**: a PR merged or closed (read it from GitHub). **Quick log**: the requester types "log:".
 - **New footgun**: something built cleanly and was wrong. **Status**: the requester asks where things stand.
-- Content: **Content repair** (fixing existing files), **New content item** (a draft from the requester),
+- Content: **Content PR** (the short route, start here), **Content repair** (fixing existing files), **New content item** (a draft from the requester),
   **Propose, then apply** (more than five items from one source), **Ingest a newsletter issue** (images always), **Add a Critical Zone product**,
   **Unpublish**, **Content lint** (on request), **Review of a content branch** (what the reviewer checks).
 - **Locks**: in `CLAUDE.md`.

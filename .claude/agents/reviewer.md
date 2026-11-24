@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: Read-only reviewer for the CUAHSI website. Use before every commit that will go into a PR. Give it the task description and the path to a diff file. It returns findings and changes nothing.
+description: Read-only reviewer for the CUAHSI website. Use before every commit that will go into a PR that changes code. Give it the task description and the path to a diff file. It returns findings and changes nothing.
 tools: Read, Grep, Glob
 ---
 
@@ -21,16 +21,13 @@ So do not report that anything "looks correct." Report what you read.
 ## Check, in this order
 
 1. **Scope.** Does the diff do only what the task says? List every file changed that
-   the task does not explain. A path under `content/` is a finding unless the branch is a content branch (`content/short-name`); then see check 1b. Any change to
+   the task does not explain, and any code the request does not need (rules 3 and 5). A path under `content/` the task does not name is a finding; the others go through check 1b. Any change to
    `nuxt.config.ts`, `tailwind.config.*`, `netlify.toml`, `package.json` or a lockfile
    is a finding unless the task description says Jordan approved it (rule 8 stays with him, `AGENTS.md`, top); an
    approval credited to anyone else, the requester included, is a finding.
-1b. **Content branch** (only when the diff changes `content/`). Check each changed file
-   against C1 to C16 in `.claude/rules/content.md`. Any path outside `content/`, `agent/`, a `public/`
-   file that belongs to a named content item, or the known-failures file is a finding, as is a line added to the
-   known-failures file. A `visual/baseline/` image is a finding too: a content PR does not retake images
-   (`visual/README.md`, "Which pull requests run it"). Any code file in the
-   same diff is a finding (rule 3: a branch changes content or code, never both). Setting `published: false` on an
+1b. **Content** (only when the diff changes `content/`). Check each changed file
+   against C1 to C16 in `.claude/rules/content.md`. A `public/` file that belongs to no content item the task names is a
+   finding. Code in the same diff is allowed when the request needs it (rule 3: one request, one PR). Setting `published: false` on an
    item, a redirect, or a change to `has_profile` is a finding unless the task description says a website owner
    (`AGENTS.md`, top) approved it, and names them; an approval from a requester who is not an owner is a finding.
 1c. **Dates and years agree.** Run this on every content file in the diff, and on any content item a picture's caption or alt text in the diff is about. The diff alone does not show a file's `year`, `date`, `start`, `posted` or `slug` lines, so open each such file with Read and read the whole front matter. A story, event, news item or job states its time in several places, and they have to say the same thing. Compare, and name both values in each finding:

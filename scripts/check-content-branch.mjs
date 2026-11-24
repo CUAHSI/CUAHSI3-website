@@ -3,13 +3,10 @@
 //   node scripts/check-content-branch.mjs <baseRef>
 // Prints one line per result, prefixed ok: FAIL: WARN: or INFO:, and exits 0 (verify.sh reads the prefixes).
 //
-// What kind of branch this is comes from what the diff changes, not from its name, so it works in CI, where the
-// checkout has no branch name (the name is then read from GITHUB_HEAD_REF). Locally the name is also checked
-// against the diff.
-//   content branch: the diff touches content/. It may also touch agent/, public/ (assets belonging to a content item),
-//                   visual/baseline/ (images; allowed, but a content PR should not retake them, so it warns).
-//   code branch:    the diff touches anything else and not content/.
-// Also checked on any branch: nothing under content/ is deleted or renamed, the slug of a published item does not
+// Says what the branch changes, from the diff: content only (content/, plus agent/ and public/ files that belong to a content
+// item), which takes the short route in docs/procedures.md ("Content PR"), or code too, which also needs the reviewer.
+// A branch may hold both (rule 3: one request, one PR).
+// Checked on any branch: nothing under content/ is deleted or renamed, the slug of a published item does not
 // change, a new people_mentioned value matches a profile file, and the known-failures list is not recreated.
 import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
@@ -34,31 +31,22 @@ const status = (git('diff', '--name-status', '-M', base) || '').split('\n').filt
 for (const f of (git('ls-files', '--others', '--exclude-standard') || '').split('\n').filter(Boolean)) status.push({ s: 'A', a: f, b: f })
 const files = status.map(x => x.b)
 const isContent = f => f.startsWith('content/')
-const isAllowedExtra = f => f.startsWith('agent/') || f.startsWith('public/') || f.startsWith('visual/baseline/')
+// Not code: agent/ (but not its scripts) and public/ files (but not the redirects and headers, which are site behaviour)
+const isAllowedExtra = f => (f.startsWith('agent/') && !/\.(mjs|js|ts|py|sh)$/.test(f)) || (f.startsWith('public/') && !/^public\/_/.test(f))
 const contentFiles = files.filter(isContent)
 const nonContent = files.filter(f => !isContent(f))
 const outsideAllowed = nonContent.filter(f => !isAllowedExtra(f))
-const kind = contentFiles.length ? 'content' : (nonContent.filter(f => !f.startsWith('agent/')).length ? 'code' : 'neutral')
 
-// --- branch name: git locally, GITHUB_HEAD_REF in CI
-const name = (git('branch', '--show-current') || '').trim() || process.env.GITHUB_HEAD_REF || ''
-const prefix = name.startsWith('content/') ? 'content/' : name.startsWith('task/') ? 'task/' : ''
+if (contentFiles.length && outsideAllowed.length) say('ok', `content and code: ${contentFiles.length} content file(s) and ${outsideAllowed.length} other file(s) (the reviewer reads this branch): ${outsideAllowed.slice(0, 6).join(', ')}${outsideAllowed.length > 6 ? ', ...' : ''}`)
+else if (contentFiles.length) say('ok', `content only: ${contentFiles.length} content file(s) changed (the short route)`)
+else if (files.length && files.every(f => f.startsWith('agent/') && isAllowedExtra(f))) say('ok', 'records only: agent/ (the reviewer reads this branch)')
+else say('ok', 'code: content/ untouched (the reviewer reads this branch)')
+const schemaFiles = files.filter(f => /^scripts\/(content-schemas|validate-content)\.mjs$/.test(f))
+if (contentFiles.length && schemaFiles.length) say('WARN', `content and its schema or validator change together (${schemaFiles.join(', ')}): say in the PR that Jordan approved the schema change (C1)`)
 
-if (kind === 'content') {
-  if (outsideAllowed.length) say('FAIL', `a content branch changes only content/ (plus agent/, public/ and visual/baseline/), but this one also changes ${outsideAllowed.length} other file(s): ${outsideAllowed.slice(0, 6).join(', ')}${outsideAllowed.length > 6 ? ', ...' : ''} (rule 3: a branch changes content or code, never both)`)
-  else say('ok', `content branch: ${contentFiles.length} content file(s) changed, nothing else but allowed extras`)
-} else if (kind === 'code') say('ok', 'code branch: content/ untouched')
-else say('ok', 'content/ untouched')
-
-if (name && prefix === 'task/' && kind === 'content') say('FAIL', `branch ${name} changes content/; content work goes on a content/short-name branch (rule 3)`)
-if (name && prefix === 'content/' && kind === 'code') say('FAIL', `branch ${name} is named content/ but its diff changes code, not content/ (rule 3: the name and the diff must agree)`)
-if (!name) say('INFO', 'no branch name available; the kind was decided from the diff alone')
-
-// --- on a content branch, list the extras the PR description must account for (baseline images as a warning)
-if (kind === 'content') {
-  const imgs = files.filter(f => f.startsWith('visual/baseline/'))
+// --- list the public/ files a PR that changes content must account for
+if (contentFiles.length) {
   const pub = files.filter(f => f.startsWith('public/'))
-  if (imgs.length) say('WARN', `baseline images changed on a content branch; a content PR does not retake them (visual/README.md, "Which pull requests run it"): ${imgs.join(', ')}`)
   if (pub.length) say('INFO', `public/ files changed (the PR must name the content item each belongs to): ${pub.join(', ')}`)
 }
 

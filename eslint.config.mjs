@@ -142,7 +142,7 @@ const footgunSyntax = [
 ]
 
 export default [
-  { ignores: ['.nuxt/**', '.output/**', '.agent/**', 'node_modules/**', 'dist/**', 'public/**', 'content/**', 'visual/**'] },
+  { ignores: ['.nuxt/**', '.output/**', '.agent/**', 'node_modules/**', 'dist/**', 'public/**', 'content/**'] },
   ...vue.configs['flat/essential'],
   {
     files: ['**/*.vue'],
