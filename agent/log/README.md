@@ -1,4 +1,7 @@
-# Evaluation log, one file per branch
+# Evaluation log, one file per branch that changes code
+
+Since 24 November 2026 a content-only PR writes no log file: the PR is its record (`docs/rules.md`, rules 3 and 10). To count
+the work, add those PRs (`gh pr list --repo CUAHSI/CUAHSI3-website --state merged`) to `--counts`.
 
 From 7 October 2026 the evaluation log lives here. `agent/eval-log.md` (558 lines on 7 October 2026: a
 header and 530 log lines, 3 to 7 October 2026) is frozen history; read it with `node scripts/eval-log.mjs`, which

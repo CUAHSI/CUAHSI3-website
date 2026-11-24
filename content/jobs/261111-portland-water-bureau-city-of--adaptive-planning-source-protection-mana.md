@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/397313"
 source_url: https://www.joshswaterjobs.com/jobs/397313
 tags: [water-quality, watershed, groundwater, planning, policy]
-published: true
+published: false
 ---
 
 The Portland Water Bureau is hiring a full-time manager to lead its Bull Run Watershed and Columbia South Shore Wellfield protection programs, oversee adaptive water supply planning and climate resilience initiatives, and supervise an interdisciplinary team. The role requires experience in complex project management, regulatory compliance, water resource science and policy, and supervising multidisciplinary staff. A valid driver's license is also required.

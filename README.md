@@ -17,6 +17,12 @@ npm run dev
 
 Open http://localhost:3000. Hot-reload is on — edit any `.vue` or content file and see it update immediately.
 
+Before you run the browser checks (`npm run visual:compare` and `npm run test:e2e`; `./scripts/verify.sh` does not need it), install the browser they use, once per machine and again after Playwright is upgraded:
+```bash
+npx playwright install chromium
+```
+On Linux, add the system libraries the browser needs: `npx playwright install --with-deps chromium` (what CI runs). Without the browser, the screenshot comparison and the smoke test stop with "Executable doesn't exist". The comparison makes its images on your machine, from two builds (`tests/visual/README.md`).
+
 If you hit `Failed to resolve import "#app-manifest"` in the terminal on startup: this is a known, harmless Nuxt/Vite version-mismatch warning. It doesn't break anything and can be ignored. If it's producing a blocking overlay *in the browser* rather than just terminal noise, confirm `nuxt.config.ts` has:
 ```ts
 vite: { server: { hmr: { overlay: false } } }

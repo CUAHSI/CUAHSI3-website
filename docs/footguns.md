@@ -113,3 +113,17 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     fails `location.search`, `location['search']` and `{ search } = location` in the `.vue` and `.ts` files of the site code, a comment
     included (0 on that day; Jordan's decision on CUAHSI/CUAHSI3-website#129). It does not see `new URL(location.href).searchParams`
     or `location.href.split('?')`, and nothing checks `history.replaceState`.
+16. **An event's date printed from `new Date(start)` is a day late for an evening event.** Found on 22 November 2026 while building
+    the event page's Time box (task/event-time): the CUAHSI Community Gathering at AGU, `start: "2026-12-09T18:00:00-08:00"`, showed
+    "Thursday, December 10" on its page and "Dec 10" on the events list. Every page that shows an event's day turned the text into an
+    instant with `new Date(start)` and printed it with `timeZone: 'UTC'` (right for a date-only start, which is midnight UTC); for a
+    time with an offset in the Americas, any start from 7 pm Eastern, 4 pm Pacific or 3 pm in Alaska (standard time; an hour later in summer) or 2 pm in Hawaii (all year) is
+    the next day in UTC. The build, the link check
+    and the visual comparison were all fine: the baselined event is date-only. @nuxt/content keeps `start` and `end` as the text in
+    the file, offset included, quoted or not, so the day is the first ten characters: `eventDay()` in `composables/useEventDay.ts`
+    returns that day at midnight UTC, and the existing UTC formatting prints it. Fixed on six pages (the event page and list, the
+    home page's events strip, the Community page, the newsletter's events, the workshop archive) on task/event-dates. Upcoming and
+    past still compare instants. `verify.sh` check 8e fails the inline form (`new Date(x.start).toLocale…`); on `main` before the fix
+    it found 8 lines in 4 files. It does not see a helper that takes the date as an argument, which is how the event page and the home
+    page did it (the Community page and the archive had both); the event page's helper for its neighbours' month, `fmtShort`, was
+    found by the reviewer, not the check.

@@ -156,10 +156,12 @@
     "department": "Programs",
     "pronouns": null,
     "photo": "/team/headshots/julia-masterman.jpg",
-    "bio": "Julia manages the development and execution of CUAHSI's education and outreach activities. She holds a BA in Earth and Environmental Sciences from Boston University.",
+    "bio": "As Community Relations & Training Coordinator, Julia manages the development and execution of CUAHSI’s training and community convening events. She enjoys the getting to support innovative and collaborative research, and having a front row seat to the broader impacts of the work CUAHSI supports. Prior to joining CUAHSI, she worked as a research technician and supported science by conducting field work in the midwest. Julia has a BA in Earth and Environmental Science from Boston University.  During her time at BU she completed research investigating the impact of Canada geese populations on Charles River water quality. Outside of work she is an avid knitter, and enjoys spending time exploring outdoors.",
     "fun_fact": "Julia spent 6 months in New Zealand, and another month readjusting to driving on the right side of the road.",
-    "links": {},
-    "has_profile": false
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/julia-masterman/"
+    },
+    "has_profile": true
   },
   {
     "name": "Lisa Mucciacito",

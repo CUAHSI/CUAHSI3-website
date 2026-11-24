@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/397375"
 source_url: https://www.joshswaterjobs.com/jobs/397375
 tags: [groundwater, water-quality, watershed, data, federal]
-published: true
+published: false
 ---
 
 The Kentucky Energy & Environment Cabinet is hiring an Environmental Scientist Advisor for the Division of Water, Watershed Management Branch, Groundwater Section. The role involves conducting groundwater studies, regulatory compliance reviews, ambient monitoring and PFAS sampling, and compliance inspections. Candidates must have a bachelor's degree in a natural, biological, or physical science and five years of relevant experience.

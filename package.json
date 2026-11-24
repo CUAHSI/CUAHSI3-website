@@ -10,8 +10,7 @@
     "preview:search": "npm run build:search && npx serve .output/public",
     "validate:content": "node scripts/validate-content.mjs",
     "lint": "eslint .",
-    "visual:compare": "playwright test",
-    "visual:baseline": "playwright test --update-snapshots=all",
+    "visual:compare": "node scripts/visual-compare.mjs",
     "test:e2e": "playwright test -c tests/e2e/playwright.config.ts"
   },
   "devDependencies": {

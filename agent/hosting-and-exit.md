@@ -40,7 +40,7 @@ Services the pages call from the visitor's browser or link to, which a move does
 1. Pick the target and say what must carry over: deploy previews on every PR, the redirects, the two functions, the header, the secret.
 2. On a branch, add the target's configuration next to `netlify.toml` (do not delete `netlify.toml` yet). Rewrite `geo.ts` and `gage.ts` for the target and run `node scripts/test-gage-function.mjs` against the new gage function (the script fakes USGS, so it is a check of the code, not of the host's caching).
 3. If the redirect format differs, change `scripts/parity/redirects.mjs` to write it, and update `scripts/check-redirects.mjs` and `scripts/check-links.mjs` if they read Netlify files.
-4. Stand the site up at the target under a temporary address. Run the visual comparison and `verify.sh --build` against it; open the 26 routes at two widths (the 52 screenshots in `visual/README.md`), the card on `/`, and the redirects (a sample of the 337 and `/archive`).
+4. Stand the site up at the target under a temporary address. Run `verify.sh --build`; open the routes in `scripts/visual-routes.json` at two widths (the visual comparison compares two local builds, not a host), the card on `/`, and the redirects (a sample of the 337 and `/archive`).
 5. Lower the DNS time to live a day ahead, move the domain, watch the card and the redirects, and keep the Netlify site up for a week as the way back.
 6. Remove Netlify's files in their own PR, and fix the README, `.github/workflows/verify.yml`'s comment, `scripts/check-no-api-key.mjs`'s wording if it names Netlify, and this page.
 

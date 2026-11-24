@@ -27,7 +27,7 @@ const past = computed(() => workshops.value.filter(e => new Date(e.start) < now.
 const pastByYear = computed(() => {
   const map: Record<string, any[]> = {}
   for (const e of past.value) {
-    const y = new Date(e.start).getUTCFullYear().toString()
+    const y = eventDay(e.start).getUTCFullYear().toString()
     if (!map[y]) map[y] = []
     map[y].push(e)
   }
@@ -35,7 +35,7 @@ const pastByYear = computed(() => {
 })
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+  return eventDay(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 
