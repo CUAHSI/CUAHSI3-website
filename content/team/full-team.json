@@ -216,14 +216,14 @@
     "slug": "callie-porter-borden",
     "role": "Software Engineer",
     "department": "Engineering",
-    "pronouns": null,
+    "pronouns": "she/her",
     "photo": "/team/headshots/callie-porter-borden.jpg",
-    "bio": "Callie contributes to CUAHSI's core services and research projects. Previously worked in health tech building scalable data systems including cloud-native services, ETL pipelines, APIs, and workflow automation.",
-    "fun_fact": null,
+    "bio": "As a software engineer, Callie contributes to the development of CUAHSI's core services and research projects. Prior to CUAHSI, she worked as a software engineer in health tech focused on building scalable data systems, with experience in cloud-native services, ETL pipelines, APIs, and workflow automation. Outside of work, she spends much of her time gardening and growing her own food, and is excited to bring a personal interest in environmental concerns to her professional life.",
+    "fun_fact": "Callie keeps chickens and honeybees, both of which help make her garden more productive!",
     "links": {
-      "github": "https://github.com/cporter-borden"
+      "github": "https://github.com/porterhyphenborden"
     },
-    "has_profile": false
+    "has_profile": true
   },
   {
     "name": "Summer Conley",
