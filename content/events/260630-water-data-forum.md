@@ -5,7 +5,7 @@ type: webinar
 audience: [industry, government, utility-professionals]
 start: 2026-06-30T12:00:00-04:00
 end: 2026-06-30T13:00:00-04:00
-timezone: ET
+timezone: America/New_York
 location:
   mode: virtual
   url: https://www.clevelandwateralliance.org/event/water-data-forum-water-management-for-data-centers

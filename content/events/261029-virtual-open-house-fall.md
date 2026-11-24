@@ -9,7 +9,7 @@ timezone: America/New_York
 location:
   mode: virtual
 description: >
-  Time: 12 to 2 pm ET. Connect with CUAHSI staff, hear updates on upcoming plans, and share your
+  Connect with CUAHSI staff, hear updates on upcoming plans, and share your
   perspectives. Brief updates on recent work and upcoming opportunities, plus
   group discussions on AI in the water sciences and CUAHSI's education
   resources for instructors. Agenda (ET): 12:00 welcome and event overview,

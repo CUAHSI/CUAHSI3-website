@@ -5,7 +5,7 @@ type: webinar
 audience: [members, researchers, students, general-public]
 start: 2026-06-24T12:00:00-04:00
 end: 2026-06-24T14:00:00-04:00
-timezone: ET
+timezone: America/New_York
 location:
   mode: virtual
   url: https://www.cuahsi.org/events/cuahsi-virtual-open-house-2

@@ -5,7 +5,7 @@ type: workshop
 audience: [faculty, postdocs, graduate-students]
 start: 2026-05-27
 end: 2026-06-11
-timezone: MT
+timezone: America/Denver
 location:
   mode: hybrid
   city: Salt Lake City, UT (in-person) + Virtual (hackathon)

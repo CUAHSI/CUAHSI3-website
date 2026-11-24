@@ -5,7 +5,7 @@ type: webinar-series
 audience: [researchers, graduate-students, professionals]
 start: 2026-01-28
 end: 2026-03-11
-timezone: ET
+timezone: America/New_York
 location:
   mode: virtual
   url: https://www.cuahsi.org/
