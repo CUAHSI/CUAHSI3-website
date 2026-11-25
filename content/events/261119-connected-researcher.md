@@ -10,7 +10,7 @@ location:
   mode: virtual
   url: https://www.cuahsi.org/cyberseminars/series/2026-navigating-beyond-academic-waters
 description: >
-  Time: 1 to 2 pm ET. The last session in the 2026 Navigating (beyond) Academic Waters series,
+  The last session in the 2026 Navigating (beyond) Academic Waters series,
   hosted by the AGU Hydrology Section Student Subcommittee and CUAHSI for early
   career hydrologists. Networking is the ultimate catalyst for an early-career
   researcher. Speakers: Dan Myers, Environmental Quality Analyst at the Michigan

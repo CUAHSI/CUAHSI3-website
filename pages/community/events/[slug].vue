@@ -58,32 +58,6 @@ function fmtDate(start: string, end?: string) {
   return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' })} – ${e.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}`
 }
 
-// "Eastern Time" for America/New_York; an abbreviation such as ET is shown as written
-function zoneName(start: string, timezone: string) {
-  if (!timezone.includes('/')) return timezone
-  return new Intl.DateTimeFormat('en-US', { timeZone: timezone, timeZoneName: 'longGeneric' })
-    .formatToParts(new Date(start)).find(p => p.type === 'timeZoneName')?.value ?? timezone
-}
-
-// The event's time, in its own time zone: "12:00 – 1:30 pm Eastern Time". Only for a start with a time, a timezone in the
-// America/New_York form (an abbreviation names no zone to convert to) and an end on the same day, or none (an end with
-// no time shows the start time alone). Built from the parts, not format() or formatRange(): Node and the browser put
-// different spaces around "PM" and the dash, and the page then fails to hydrate
-function fmtTime(start: unknown, end: unknown, timezone: string | null | undefined) {
-  if (!timezone?.includes('/') || typeof start !== 'string' || !start.includes('T')) return null
-  const fmt = new Intl.DateTimeFormat('en-US', { timeZone: timezone, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' })
-  const parts = (d: string) => {
-    const p = Object.fromEntries(fmt.formatToParts(new Date(d)).map(x => [x.type, x.value]))
-    return { day: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}`, period: (p.dayPeriod ?? '').toLowerCase() }
-  }
-  const s = parts(start)
-  const zone = zoneName(start, timezone)
-  if (typeof end !== 'string' || !end.includes('T')) return `${s.time} ${s.period} ${zone}`
-  const e = parts(end)
-  if (s.day !== e.day) return null
-  return `${s.time}${s.period === e.period ? '' : ` ${s.period}`} – ${e.time} ${e.period} ${zone}`
-}
-
 function fmtShort(d: string) {
   return eventDay(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
 }
@@ -125,9 +99,9 @@ function fmtShort(d: string) {
               <p class="text-[13px] font-medium">{{ fmtDate(event.start, event.end) }}</p>
             </div>
             <!-- Time when it can be worked out (it names the time zone); otherwise the time zone on its own -->
-            <div v-if="fmtTime(event.start, event.end, event.timezone)">
+            <div v-if="eventTime(event.start, event.end, event.timezone)">
               <p class="text-[10px] uppercase tracking-[.06em] text-muted mb-[3px]">Time</p>
-              <p class="text-[13px] font-medium">{{ fmtTime(event.start, event.end, event.timezone) }}</p>
+              <p class="text-[13px] font-medium">{{ eventTime(event.start, event.end, event.timezone) }}</p>
             </div>
             <div v-if="event.location?.city || event.location?.mode">
               <p class="text-[10px] uppercase tracking-[.06em] text-muted mb-[3px]">Location</p>
@@ -139,9 +113,9 @@ function fmtShort(d: string) {
               <p class="text-[10px] uppercase tracking-[.06em] text-muted mb-[3px]">Cost</p>
               <p class="text-[13px] font-medium capitalize">{{ event.registration.cost ?? 'See details' }}</p>
             </div>
-            <div v-if="event.timezone && !fmtTime(event.start, event.end, event.timezone)">
+            <div v-if="event.timezone && !eventTime(event.start, event.end, event.timezone)">
               <p class="text-[10px] uppercase tracking-[.06em] text-muted mb-[3px]">Timezone</p>
-              <p class="text-[13px] font-medium">{{ zoneName(event.start, event.timezone) }}</p>
+              <p class="text-[13px] font-medium">{{ eventZone(event.start, event.timezone) }}</p>
             </div>
           </div>
 

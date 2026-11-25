@@ -8,7 +8,7 @@ timezone: America/New_York
 location:
   mode: virtual
 description: >
-  Time: 3 pm ET. CUAHSI's annual membership meeting, held on Zoom for member representatives.
+  CUAHSI's annual membership meeting, held on Zoom for member representatives.
   Hear about organization updates and help make important community decisions
   about CUAHSI's future.
 tags: [community, members, governance]

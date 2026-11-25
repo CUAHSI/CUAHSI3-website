@@ -5,7 +5,7 @@ type: workshop
 audience: [graduate-students, early-career]
 start: 2026-01-05
 end: 2026-01-09
-timezone: MT
+timezone: America/Denver
 location:
   mode: in-person
   city: Granby, CO

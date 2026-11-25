@@ -82,8 +82,8 @@ function picture(folder) {
 // content/events/ : 27 files.
 // type: content-model.md lists six values; the files use five. "field" is kept because the
 // model documents it and pages/learn-train/archive filters on it.
-// timezone: the model says "ET or null"; the files use nine different strings (America/New_York,
-// ET, MT, ...), so this accepts any string or null. Not normalised.
+// timezone: an Area/City name (America/New_York) or null; the pages show no time for an abbreviation
+// such as ET (composables/useEventTime.ts). Not enforced: this accepts any string or null.
 const events = z.strictObject({
   title: nonEmpty,
   slug,

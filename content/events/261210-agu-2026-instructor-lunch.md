@@ -11,7 +11,7 @@ location:
   city: San Francisco
   url: https://www.cuahsi.org/events/2026-american-geophysical-union-annual-meeting
 description: >
-  Time: 12:00 to 1:00 pm PT. A one-hour lunch session at the AGU Annual Meeting
+  A one-hour lunch session at the AGU Annual Meeting
   (December 7 to 11, 2026) for instructors who teach water science, with CUAHSI
   staff, on two ways to support teaching: free HydroLearn modules, online lessons
   built and shared by faculty, and teaching a CUAHSI Virtual University (CVU)

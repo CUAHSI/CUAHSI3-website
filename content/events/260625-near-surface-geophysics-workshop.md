@@ -5,7 +5,7 @@ type: workshop
 audience: [faculty, professionals, late-stage-phd-students]
 start: 2026-08-25T08:30:00-06:00
 end: 2026-08-26T12:00:00-06:00
-timezone: MDT
+timezone: America/Denver
 location:
   mode: in-person
   city: Albuquerque, NM

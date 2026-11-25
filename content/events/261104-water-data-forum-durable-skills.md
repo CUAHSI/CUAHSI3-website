@@ -10,7 +10,7 @@ location:
   mode: virtual
   url: https://www.clevelandwateralliance.org/webinars
 description: >
-  Time: 12 to 1 pm ET. A free Water Data Forum webinar, held on Zoom, on durable skills for the water workforce in the age of
+  A free Water Data Forum webinar, held on Zoom, on durable skills for the water workforce in the age of
   AI, convened by Cleveland Water Alliance, the Water Environment Federation
   and CUAHSI. Panelists examine which analytical and modeling skills remain
   durable and what it means for hiring and for the water workforce. Speakers:

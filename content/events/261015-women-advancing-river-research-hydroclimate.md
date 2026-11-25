@@ -10,7 +10,7 @@ location:
   mode: virtual
   url: https://www.cuahsi.org/cyberseminars/women-advancing-river-research-hydroclimate-impacts-on-human-water-interactions
 description: >
-  Time: 11 am to 12 pm ET. A session in the Women Advancing River Research
+  A session in the Women Advancing River Research
   cyberseminar series, an ongoing monthly series that began in 2021 and features
   women guest speakers from around the world. Speakers: Maria Magdalena Warter
   (Leibniz Institute of Freshwater Ecology and Inland Fisheries) and Serena

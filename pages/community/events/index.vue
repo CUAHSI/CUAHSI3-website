@@ -116,6 +116,7 @@ function fmtDate(start: string, end?: string) {
               <p class="text-[12px] text-[#6b7280] leading-[1.5] mb-[6px] max-w-[520px]">{{ event.description }}</p>
               <div class="flex gap-[12px] flex-wrap text-[11px] text-muted">
                 <span>{{ fmtDate(event.start, event.end) }}</span>
+                <span v-if="eventTime(event.start, event.end, event.timezone)">{{ eventTime(event.start, event.end, event.timezone) }}</span>
                 <span v-if="event.location?.city">{{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode">{{ event.location.mode }}</span>
                 <span v-if="event.registration?.cost === 'free'" class="text-[#15803D]">Free</span>

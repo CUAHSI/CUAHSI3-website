@@ -9,7 +9,7 @@ timezone: America/New_York
 location:
   mode: virtual
 description: >
-  Time: 12:00 to 1:30 pm ET. Join researchers from the NOAA-NWS Office of
+  Join researchers from the NOAA-NWS Office of
   Water Prediction to learn about their work on national-scale water
   prediction and their perspectives on the history and impact of the Summer
   Institute Program. Then stick around to learn how you can join the program

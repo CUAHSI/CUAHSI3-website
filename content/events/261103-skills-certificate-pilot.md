@@ -5,7 +5,7 @@ type: workshop
 audience: [students, postdocs, early-career, researchers, professionals]
 start: "2026-11-03"
 end: "2026-12-04"
-timezone: ET
+timezone: America/New_York
 location:
   mode: virtual
   url: /learn-train/programs/skills-certificate-pilot
