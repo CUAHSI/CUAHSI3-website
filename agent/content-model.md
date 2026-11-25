@@ -80,7 +80,7 @@ type: workshop                   # workshop | field | webinar | webinar-series |
 audience: [graduate-students, postdocs]
 start: 2026-07-20                # ISO8601; may include time + offset
 end: 2026-07-31
-timezone: ET                     # or null
+timezone: America/New_York       # an Area/City name, not ET (an abbreviation shows no time); or null
 location:
   mode: virtual                  # virtual | in-person | hybrid
   city: Salt Lake City, UT       # omit/null if virtual
