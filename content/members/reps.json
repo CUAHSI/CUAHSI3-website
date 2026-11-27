@@ -24,16 +24,16 @@
     "email": "ruijie.zeng.1@asu.edu"
   },
   {
-    "first_name": "Benjamin W.",
-    "last_name": "Abbott",
-    "institution": "Brigham Young University",
-    "email": "benabbott@byu.edu"
-  },
-  {
     "first_name": "Norm",
     "last_name": "Jones",
     "institution": "Brigham Young University",
     "email": "njones@byu.edu"
+  },
+  {
+    "first_name": "Benjamin W",
+    "last_name": "Abbott",
+    "institution": "Brigham Young University",
+    "email": "benabbott@byu.edu"
   },
   {
     "first_name": "Sarah",
@@ -84,16 +84,16 @@
     "email": "f.davenport@colostate.edu"
   },
   {
-    "first_name": "Stephanie K.",
-    "last_name": "Kampf",
-    "institution": "Colorado State University",
-    "email": "stephanie.kampf@colostate.edu"
-  },
-  {
     "first_name": "Karen",
     "last_name": "Schlatter",
     "institution": "Colorado State University",
     "email": "Karen.Schlatter@colostate.edu"
+  },
+  {
+    "first_name": "Stephanie K",
+    "last_name": "Kampf",
+    "institution": "Colorado State University",
+    "email": "stephanie.kampf@colostate.edu"
   },
   {
     "first_name": "Amanda",
@@ -324,7 +324,7 @@
     "email": "pjdf@northeastern.edu"
   },
   {
-    "first_name": "Auroop R.",
+    "first_name": "Auroop R",
     "last_name": "Ganguly",
     "institution": "Northeastern University",
     "email": "a.ganguly@northeastern.edu"
@@ -510,12 +510,6 @@
     "email": "peterk@stanford.edu"
   },
   {
-    "first_name": "Christoper",
-    "last_name": "Lowry",
-    "institution": "State University of New York, Buffalo",
-    "email": "cslowry@buffalo.edu"
-  },
-  {
     "first_name": "Scott",
     "last_name": "Mackay",
     "institution": "State University of New York, Buffalo",
@@ -526,6 +520,12 @@
     "last_name": "Rabideau",
     "institution": "State University of New York, Buffalo",
     "email": "rabideau@buffalo.edu"
+  },
+  {
+    "first_name": "Christopher",
+    "last_name": "Lowry",
+    "institution": "State University of New York, Buffalo",
+    "email": "cslowry@buffalo.edu"
   },
   {
     "first_name": "Steve",
@@ -576,12 +576,6 @@
     "email": "twen08@syr.edu"
   },
   {
-    "first_name": "Jonathan",
-    "last_name": "Nyquist",
-    "institution": "Temple University",
-    "email": "nyq@temple.edu"
-  },
-  {
     "first_name": "Sujith",
     "last_name": "Ravi",
     "institution": "Temple University",
@@ -592,6 +586,12 @@
     "last_name": "Toran",
     "institution": "Temple University",
     "email": "ltoran@temple.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Litwin",
+    "institution": "Temple University",
+    "email": "david.litwin@temple.edu"
   },
   {
     "first_name": "Peter",
@@ -654,6 +654,12 @@
     "email": "haggard@uark.edu"
   },
   {
+    "first_name": "Martyn",
+    "last_name": "Clark",
+    "institution": "University of Calgary",
+    "email": "martyn.clark@ucalgary.ca"
+  },
+  {
     "first_name": "Thomas",
     "last_name": "Harter",
     "institution": "University of California, Davis",
@@ -702,12 +708,6 @@
     "email": "msafeeq@ucmerced.edu"
   },
   {
-    "first_name": "Jirka",
-    "last_name": "Aimunek",
-    "institution": "University of California, Riverside",
-    "email": "Jiri.simunek@ucr.edu"
-  },
-  {
     "first_name": "Hoori",
     "last_name": "Ajami",
     "institution": "University of California, Riverside",
@@ -718,6 +718,12 @@
     "last_name": "Gray",
     "institution": "University of California, Riverside",
     "email": "Andrew.gray@ucr.edu"
+  },
+  {
+    "first_name": "Ji",
+    "last_name": "imnek",
+    "institution": "University of California, Riverside",
+    "email": "Jiri.simunek@ucr.edu"
   },
   {
     "first_name": "Ni-Bin",
@@ -750,10 +756,10 @@
     "email": "cdewey@udel.edu"
   },
   {
-    "first_name": "Carolyn",
-    "last_name": "Voter",
+    "first_name": "Rachel",
+    "last_name": "McQuiggan",
     "institution": "University of Delaware",
-    "email": "cvoter@udel.edu"
+    "email": "rmcquigg@udel.edu"
   },
   {
     "first_name": "Matthew",
@@ -786,16 +792,10 @@
     "email": "nandita.gaur@uga.edu"
   },
   {
-    "first_name": "Adam",
-    "last_name": "Milewski",
+    "first_name": "Whitney",
+    "last_name": "Pagan",
     "institution": "University of Georgia",
-    "email": "milewski@uga.edu"
-  },
-  {
-    "first_name": "Yin-Phan",
-    "last_name": "Tsang",
-    "institution": "University of Hawaii",
-    "email": "tsangy@hawaii.edu"
+    "email": "Whitney.Lisenbee@uga.edu"
   },
   {
     "first_name": "Aurora",
@@ -808,6 +808,12 @@
     "last_name": "Longman",
     "institution": "University of Hawaii",
     "email": "rlongman@hawaii.edu"
+  },
+  {
+    "first_name": "Yinphan",
+    "last_name": "Tsang",
+    "institution": "University of Hawaii",
+    "email": "tsangy@hawaii.edu"
   },
   {
     "first_name": "Hyongki",
@@ -846,7 +852,7 @@
     "email": "yflin@illinois.edu"
   },
   {
-    "first_name": "Zhenxing (Jason)",
+    "first_name": "Zhenxing Jason",
     "last_name": "Zhang",
     "institution": "University of Illinois",
     "email": "zhang538@illinois.edu"
@@ -930,12 +936,6 @@
     "email": "rotmanr@missouri.edu"
   },
   {
-    "first_name": "Dr. Paul",
-    "last_name": "Ayayee",
-    "institution": "University of Nebraska, Lincoln",
-    "email": "payayee@unomaha.edu"
-  },
-  {
     "first_name": "Mary",
     "last_name": "Harner",
     "institution": "University of Nebraska, Lincoln",
@@ -946,6 +946,12 @@
     "last_name": "Gilmore",
     "institution": "University of Nebraska, Lincoln",
     "email": "gilmore@unl.edu"
+  },
+  {
+    "first_name": "Paul",
+    "last_name": "Ayayee",
+    "institution": "University of Nebraska, Lincoln",
+    "email": "payayee@unomaha.edu"
   },
   {
     "first_name": "Anne",
@@ -1104,16 +1110,16 @@
     "email": "anne.jefferson@uvm.edu"
   },
   {
-    "first_name": "Beverly",
-    "last_name": "Wemple",
-    "institution": "University of Vermont",
-    "email": "bwemple@uvm.edu"
-  },
-  {
     "first_name": "Arne",
     "last_name": "Bomblies",
     "institution": "University of Vermont",
     "email": "abomblies@uvm.edu"
+  },
+  {
+    "first_name": "Beverley",
+    "last_name": "Wemple",
+    "institution": "University of Vermont",
+    "email": "bwemple@uvm.edu"
   },
   {
     "first_name": "Larry",
@@ -1122,16 +1128,28 @@
     "email": "lband@virginia.edu"
   },
   {
-    "first_name": "Johnathan",
+    "first_name": "Todd",
+    "last_name": "Scanlon",
+    "institution": "University of Virginia",
+    "email": "tms2v@virginia.edu"
+  },
+  {
+    "first_name": "Jonathan",
     "last_name": "Goodall",
     "institution": "University of Virginia",
     "email": "goodall@virginia.edu"
   },
   {
-    "first_name": "Todd",
-    "last_name": "Scanlon",
-    "institution": "University of Virginia",
-    "email": "tms2v@virginia.edu"
+    "first_name": "Erkan",
+    "last_name": "Istanbulluoglu",
+    "institution": "University of Washington",
+    "email": "erkani@uw.edu"
+  },
+  {
+    "first_name": "Jessica",
+    "last_name": "Lundquist",
+    "institution": "University of Washington",
+    "email": "jdlund@u.washington.edu"
   },
   {
     "first_name": "Michael",
@@ -1150,6 +1168,24 @@
     "last_name": "Thompson",
     "institution": "University of Wisconsin, Madison",
     "email": "amthompson2@wisc.edu"
+  },
+  {
+    "first_name": "Fabian",
+    "last_name": "Nippgen",
+    "institution": "University of Wyoming",
+    "email": "fnippgen@uwyo.edu"
+  },
+  {
+    "first_name": "Ginger",
+    "last_name": "Paige",
+    "institution": "University of Wyoming",
+    "email": "gpaige@uwyo.edu"
+  },
+  {
+    "first_name": "Andrew",
+    "last_name": "Parsekian",
+    "institution": "University of Wyoming",
+    "email": "aparseki@uwyo.edu"
   },
   {
     "first_name": "Jan",
@@ -1212,7 +1248,7 @@
     "email": "kevin.mcguire@vt.edu"
   },
   {
-    "first_name": "Siddarth",
+    "first_name": "Siddharth",
     "last_name": "Saksena",
     "institution": "Virginia Tech",
     "email": "ssaksena@vt.edu"
@@ -1320,7 +1356,7 @@
     "email": "qifeiniu@boisestate.edu"
   },
   {
-    "first_name": "Mojtaba (Moji)",
+    "first_name": "Mojtaba Moji",
     "last_name": "Sadegh",
     "institution": "Boise State University",
     "email": "mojtabasadegh@boisestate.edu"
