@@ -7,4 +7,4 @@ sources:
   - https://czo-archive.criticalzone.org/boulder/
 ---
 
-The observatory also followed the effects of the 2010 Fourmile Canyon Fire, which burned 26 square kilometres and changed ecosystems and the delivery of water and sediment downstream. It ran outreach programs from kindergarten to graduate fellows and the general public.
+Its pages list the 2010 Fourmile Canyon Fire among the events that affect the Critical Zone: the fire burned 26 square kilometres and changed ecosystems and the delivery of water and sediment downstream. The observatory described outreach programs at several levels, from kindergarten through graduate student fellows to the general public.
