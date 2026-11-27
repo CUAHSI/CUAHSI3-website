@@ -7,6 +7,7 @@ sources:
   - https://czo-archive.criticalzone.org/luquillo/
   - https://czo-archive.criticalzone.org/luquillo/about/
   - https://czo-archive.criticalzone.org/luquillo/about/partner-organizations-luquillo/
+  - https://czo-archive.criticalzone.org/luquillo/infrastructure/
 ---
 
 The observatory is in the Luquillo Mountains of northeastern Puerto Rico, which include El Yunque National Forest. The archive says its team compares Critical Zone processes in watersheds underlain by three rock types: granodiorite, volcaniclastic rock and the contact metamorphic rock between them. The observatory's own account says these are some of the most rapidly eroding watersheds in the world. Its projects include deep weathering, soil formation and soil carbon accumulation, riparian zones, fluvial geomorphology and meteorology.
