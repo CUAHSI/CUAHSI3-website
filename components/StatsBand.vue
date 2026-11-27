@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const stats = [
-  { n: '96',     l: 'Member institutions' },
+// the member count is the registry's (content/members/institutions.json); the other figures are typed here
+const { names: memberNames } = await useMembers()
+const stats = computed(() => [
+  { n: String(memberNames.value.length), l: 'Member institutions' },
   { n: '16K+',   l: 'HydroShare users' },
   { n: '350+',   l: 'Cyberseminars archived' },
   { n: '4,000+', l: 'Community subscribers' },
-]
+])
 </script>
 
 <template>

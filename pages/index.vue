@@ -50,6 +50,8 @@ const homeTools = [
   { name: 'Hydrologic Information System', kicker: 'TIME-SERIES DATA', tagline: 'Discover and access national time-series water data — map-based search plus standardized WaterOneFlow/WaterML services.', tags: ['WaterML', 'Time series', 'Map'], cta: 'Explore HIS', href: 'https://data.cuahsi.org/' },
 ]
 
+// the member count, from the registry (content/members/institutions.json)
+const { names: memberNames } = await useMembers()
 const featured = computed(() => highlights.value?.[0])
 const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 </script>
@@ -76,7 +78,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           </div>
           <div class="flex gap-[28px] mt-[38px] flex-wrap">
             <div>
-              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">96</div>
+              <div class="font-['Schibsted_Grotesk'] font-bold text-[22px] leading-[normal] text-navy">{{ memberNames.length }}</div>
               <div class="font-mono text-[12px] tracking-[.03em] text-muted">MEMBER INSTITUTIONS</div>
             </div>
             <div class="w-px bg-[rgba(15,33,43,.12)]"></div>

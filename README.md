@@ -77,7 +77,7 @@ pages/
 ├── about/
 │   ├── index.vue                          About hub (mission, history, what we do)
 │   ├── governance.vue                     Board and advisory committees
-│   ├── membership.vue                     Member roster (96 institutions, searchable/filterable)
+│   ├── membership.vue                     Member roster from the registry, searchable/filterable
 │   ├── impact/
 │   │   ├── index.vue                      Highlights index (category + year filters)
 │   │   └── [slug].vue                     Individual highlight detail
@@ -153,7 +153,8 @@ Unknown or not-applicable day → use `01`. The `slug` field in frontmatter driv
 ```
 content/
 ├── team/full-team.json          Single source of truth for all staff (array of objects)
-├── members/reps.json            229 member institution reps — name, institution, email
+├── members/reps.json            member institution reps — name, institution, email
+├── members/institutions.json    the member registry: one entry per member institution
 ├── newsletter/    YYMMDD-slug   One file per issue, dated by its send date (normally the second Thursday, e.g. 260709-july.md)
 ├── events/        YYMMDD-slug   One file per event
 ├── cyberseminars/ YYMMDD-slug   One file per recording (+ transcripts/ subfolder)

@@ -6,13 +6,15 @@
       "masters",
       "phd"
     ],
-    "url": "https://degrees.asu.edu/masters-phd/major/ASU00/ESCIVILMS/civil-environmental-and-sustainable-engineering-ms"
+    "url": "https://degrees.asu.edu/masters-phd/major/ASU00/ESCIVILMS/civil-environmental-and-sustainable-engineering-ms",
+    "member_institution": "Arizona State University"
   },
   {
     "institution": "Auburn University",
     "programs": "Auburn University Water Resources Center",
     "degrees": [],
-    "url": "https://aaes.auburn.edu/wrc/education-resources/"
+    "url": "https://aaes.auburn.edu/wrc/education-resources/",
+    "member_institution": null
   },
   {
     "institution": "Boise State University",
@@ -21,7 +23,8 @@
       "masters"
     ],
     "url": "https://www.boisestate.edu/coen-ce/academics/graduate-students/areas-of-study/water-resources-engineering/",
-    "last_reviewed": "2026-10-06"
+    "last_reviewed": "2026-10-06",
+    "member_institution": "Boise State University"
   },
   {
     "institution": "Brigham Young University",
@@ -29,7 +32,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://pws.byu.edu/environmental-science/environmental-science-masters"
+    "url": "https://pws.byu.edu/environmental-science/environmental-science-masters",
+    "member_institution": "Brigham Young University"
   },
   {
     "institution": "California State University-Fresno",
@@ -37,7 +41,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://cge.fresnostate.edu/academics/wrm.html"
+    "url": "https://cge.fresnostate.edu/academics/wrm.html",
+    "member_institution": null
   },
   {
     "institution": "City College of New York",
@@ -45,7 +50,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://www.ccny.cuny.edu/civileng/phd-program"
+    "url": "https://www.ccny.cuny.edu/civileng/phd-program",
+    "member_institution": null
   },
   {
     "institution": "Clarkson University",
@@ -54,7 +60,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.clarkson.edu/academics/majors-minors/civil-and-environmental-engineering-ms"
+    "url": "https://www.clarkson.edu/academics/majors-minors/civil-and-environmental-engineering-ms",
+    "member_institution": null
   },
   {
     "institution": "Clemson University",
@@ -62,7 +69,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.clemson.edu/cecas/departments/eees/academics/gradprog/hydro.html"
+    "url": "https://www.clemson.edu/cecas/departments/eees/academics/gradprog/hydro.html",
+    "member_institution": "Clemson University"
   },
   {
     "institution": "Colorado School of Mines",
@@ -70,7 +78,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": "Colorado School of Mines"
   },
   {
     "institution": "Colorado State University",
@@ -79,7 +88,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.engr.colostate.edu/ce/graduate/water-resources-engineering/"
+    "url": "https://www.engr.colostate.edu/ce/graduate/water-resources-engineering/",
+    "member_institution": "Colorado State University"
   },
   {
     "institution": "Colorado State University",
@@ -88,7 +98,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://warnercnr.colostate.edu/ess/graduate-education/"
+    "url": "https://warnercnr.colostate.edu/ess/graduate-education/",
+    "member_institution": "Colorado State University"
   },
   {
     "institution": "Columbia University",
@@ -96,7 +107,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.eee.columbia.edu/earth/academics/earth-and-environmental-engineering-ms/water-resources-and-climate-risks-elective-specialization"
+    "url": "https://www.eee.columbia.edu/earth/academics/earth-and-environmental-engineering-ms/water-resources-and-climate-risks-elective-specialization",
+    "member_institution": null
   },
   {
     "institution": "Dartmouth College",
@@ -104,7 +116,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "Drexel University",
@@ -112,14 +125,16 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://catalog.drexel.edu/graduate/engineering/civilengineering/"
+    "url": "https://catalog.drexel.edu/graduate/engineering/civilengineering/",
+    "member_institution": "Drexel University"
   },
   {
     "institution": "Duke University",
     "programs": "Civil and Environmental Engineering M.S. (water resources engineering, hydrology among areas)",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": "Duke University"
   },
   {
     "institution": "Georgia State University",
@@ -127,7 +142,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://geosciences.gsu.edu/graduate/"
+    "url": "https://geosciences.gsu.edu/graduate/",
+    "member_institution": "Georgia State University"
   },
   {
     "institution": "Humboldt State University",
@@ -135,13 +151,15 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.humboldt.edu/cnrs/graduate-programs/natural-resources"
+    "url": "https://www.humboldt.edu/cnrs/graduate-programs/natural-resources",
+    "member_institution": null
   },
   {
     "institution": "Illinois State University",
     "programs": "Department of Geography, Geology, and the Environment",
     "degrees": [],
-    "url": "https://geo.illinoisstate.edu/academics/hydrogeology/"
+    "url": "https://geo.illinoisstate.edu/academics/hydrogeology/",
+    "member_institution": null
   },
   {
     "institution": "Iowa State University",
@@ -150,7 +168,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.ccee.iastate.edu/all-ccee-graduate-programs/"
+    "url": "https://www.ccee.iastate.edu/all-ccee-graduate-programs/",
+    "member_institution": "Iowa State University"
   },
   {
     "institution": "Johns Hopkins University",
@@ -158,7 +177,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/mse-in-environmental-health-and-engineering"
+    "url": "https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/mse-in-environmental-health-and-engineering",
+    "member_institution": "Johns Hopkins University"
   },
   {
     "institution": "Kansas State University",
@@ -167,7 +187,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://ce.k-state.edu/academics/graduate/"
+    "url": "https://ce.k-state.edu/academics/graduate/",
+    "member_institution": "Kansas State University"
   },
   {
     "institution": "Kent State University",
@@ -176,7 +197,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.kent.edu/earth-sciences/graduate-programs"
+    "url": "https://www.kent.edu/earth-sciences/graduate-programs",
+    "member_institution": "Kent State University"
   },
   {
     "institution": "Louisiana State University",
@@ -184,7 +206,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "Manhattan College",
@@ -192,7 +215,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://manhattan.edu/academics/programs/engineering-environmental-ms"
+    "url": "https://manhattan.edu/academics/programs/engineering-environmental-ms",
+    "member_institution": null
   },
   {
     "institution": "Marquette University",
@@ -201,7 +225,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.marquette.edu/grad/programs-civil-engineering.php"
+    "url": "https://www.marquette.edu/grad/programs-civil-engineering.php",
+    "member_institution": "Marquette University"
   },
   {
     "institution": "Massachusetts Institute of Technology",
@@ -209,7 +234,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://catalog.mit.edu/interdisciplinary/graduate-programs/joint-program-woods-hole-oceanographic-institution/"
+    "url": "https://catalog.mit.edu/interdisciplinary/graduate-programs/joint-program-woods-hole-oceanographic-institution/",
+    "member_institution": null
   },
   {
     "institution": "Michigan State University",
@@ -218,7 +244,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://hydrogeology.msu.edu/academics/graduate"
+    "url": "https://hydrogeology.msu.edu/academics/graduate",
+    "member_institution": "Michigan State University"
   },
   {
     "institution": "Missouri University of Science and Technology",
@@ -227,7 +254,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://online.mst.edu/onlineprograms/online-graduate-degrees/water-science-eng/"
+    "url": "https://online.mst.edu/onlineprograms/online-graduate-degrees/water-science-eng/",
+    "member_institution": null
   },
   {
     "institution": "Murray State University",
@@ -235,7 +263,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://murraystate.edu/wsi/wsi_education.aspx"
+    "url": "https://murraystate.edu/wsi/wsi_education.aspx",
+    "member_institution": null
   },
   {
     "institution": "New Mexico Institute of Mining and Technology",
@@ -244,7 +273,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.nmt.edu/academics/ees/hydrology/index.php"
+    "url": "https://www.nmt.edu/academics/ees/hydrology/index.php",
+    "member_institution": null
   },
   {
     "institution": "New Mexico State University",
@@ -253,7 +283,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://wsm.nmsu.edu/academics/master-of-science.html"
+    "url": "https://wsm.nmsu.edu/academics/master-of-science.html",
+    "member_institution": "New Mexico State University"
   },
   {
     "institution": "North Carolina State University",
@@ -261,7 +292,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://mnr.ncsu.edu/hydrology-technical-option/"
+    "url": "https://mnr.ncsu.edu/hydrology-technical-option/",
+    "member_institution": null
   },
   {
     "institution": "Northeastern University",
@@ -269,7 +301,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://cee.northeastern.edu/academics/graduate-studies/ms-cive/"
+    "url": "https://cee.northeastern.edu/academics/graduate-studies/ms-cive/",
+    "member_institution": "Northeastern University"
   },
   {
     "institution": "Northern Arizona University",
@@ -277,7 +310,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://in.nau.edu/school-earth-sustainability/geology-master-of-science/"
+    "url": "https://in.nau.edu/school-earth-sustainability/geology-master-of-science/",
+    "member_institution": "Northern Arizona University"
   },
   {
     "institution": "Northwestern University",
@@ -285,7 +319,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://www.mccormick.northwestern.edu/civil-environmental/academics/phd/environmental-engineering-science-specialization/"
+    "url": "https://www.mccormick.northwestern.edu/civil-environmental/academics/phd/environmental-engineering-science-specialization/",
+    "member_institution": "Northwestern University"
   },
   {
     "institution": "Oregon State University",
@@ -294,14 +329,16 @@
       "masters",
       "phd"
     ],
-    "url": "https://graduate.oregonstate.edu/water-resources-graduate-program"
+    "url": "https://graduate.oregonstate.edu/water-resources-graduate-program",
+    "member_institution": "Oregon State University"
   },
   {
     "institution": "Paul Smiths College of Arts and Science",
     "programs": "Natural Resources Conservation (M.S.), Aquatic Resource Management concentration",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "Pennsylvania State University",
@@ -310,14 +347,16 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.cee.psu.edu/academics/graduate/research-areas/water-resources.aspx"
+    "url": "https://www.cee.psu.edu/academics/graduate/research-areas/water-resources.aspx",
+    "member_institution": "Pennsylvania State University"
   },
   {
     "institution": "Plymouth State University",
     "programs": "Environmental Science and Policy",
     "degrees": [
       "undergraduate"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "Portland State University",
@@ -326,7 +365,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.pdx.edu/academics/programs/graduate/civil-and-environmental-engineering"
+    "url": "https://www.pdx.edu/academics/programs/graduate/civil-and-environmental-engineering",
+    "member_institution": "Portland State University"
   },
   {
     "institution": "Purdue University",
@@ -335,7 +375,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://engineering.purdue.edu/CCE/Academics/Graduate/Research/Groups/Hydraulics"
+    "url": "https://engineering.purdue.edu/CCE/Academics/Graduate/Research/Groups/Hydraulics",
+    "member_institution": "Purdue University"
   },
   {
     "institution": "Rutgers University",
@@ -344,7 +385,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://envsci.rutgers.edu/academics/bee_grad/"
+    "url": "https://envsci.rutgers.edu/academics/bee_grad/",
+    "member_institution": "Rutgers University"
   },
   {
     "institution": "San Diego State University",
@@ -353,7 +395,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://geography.sdsu.edu/masters"
+    "url": "https://geography.sdsu.edu/masters",
+    "member_institution": null
   },
   {
     "institution": "South Dakota State University",
@@ -361,7 +404,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "Southern Illinois University Carbondale",
@@ -369,7 +413,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://academics.siu.edu/earth-systems-sustainability/env-resources-policy/doctorate.php"
+    "url": "https://academics.siu.edu/earth-systems-sustainability/env-resources-policy/doctorate.php",
+    "member_institution": "Southern Illinois University"
   },
   {
     "institution": "Stanford University",
@@ -378,7 +423,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://web.stanford.edu/group/efmh/"
+    "url": "https://web.stanford.edu/group/efmh/",
+    "member_institution": "Stanford University"
   },
   {
     "institution": "State University of New York (SUNY)",
@@ -388,7 +434,8 @@
       "phd",
       "professional"
     ],
-    "url": "https://www.esf.edu/academics/graduate/wre.php"
+    "url": "https://www.esf.edu/academics/graduate/wre.php",
+    "member_institution": "State University of New York, ESF"
   },
   {
     "institution": "SUNY Oneonta",
@@ -397,7 +444,8 @@
       "masters",
       "professional"
     ],
-    "url": "https://suny.oneonta.edu/academics/majors-programs/lake-management"
+    "url": "https://suny.oneonta.edu/academics/majors-programs/lake-management",
+    "member_institution": null
   },
   {
     "institution": "Syracuse University",
@@ -406,7 +454,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://artsandsciences.syracuse.edu/degree-programs/earth-sciences-ms/"
+    "url": "https://artsandsciences.syracuse.edu/degree-programs/earth-sciences-ms/",
+    "member_institution": "Syracuse University"
   },
   {
     "institution": "Temple University",
@@ -414,7 +463,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://bulletin.temple.edu/graduate/scd/cst/geology-ms/"
+    "url": "https://bulletin.temple.edu/graduate/scd/cst/geology-ms/",
+    "member_institution": "Temple University"
   },
   {
     "institution": "Texas A&M University",
@@ -422,14 +472,16 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": "Texas A&M University"
   },
   {
     "institution": "Texas A&M University-San Antonio",
     "programs": "M.S. Water Resources Science and Technology",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "The Ohio State University",
@@ -438,13 +490,15 @@
       "masters",
       "phd"
     ],
-    "url": "https://fabe.osu.edu/graduate"
+    "url": "https://fabe.osu.edu/graduate",
+    "member_institution": null
   },
   {
     "institution": "Tufts University",
     "programs": "Environmental and Water Resources Engineering",
     "degrees": [],
-    "url": "https://engineering.tufts.edu/cee/current-students/ms-and-fifth-year-masters-degree-program/field-study-environmental-and-water-resources-engineering"
+    "url": "https://engineering.tufts.edu/cee/current-students/ms-and-fifth-year-masters-degree-program/field-study-environmental-and-water-resources-engineering",
+    "member_institution": null
   },
   {
     "institution": "Universidad de las Americas Puebla",
@@ -452,20 +506,23 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://www.udlap.mx/oa/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2"
+    "url": "https://www.udlap.mx/oa/planestudiosposgrados.aspx?cveCarrera=DAG&idioma=2",
+    "member_institution": null
   },
   {
     "institution": "Universitat Politècnica de Catalunya",
     "programs": "Master's in Groundwater Hydrology",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University Abdou Moumouni",
     "programs": "Geology",
     "degrees": [],
-    "url": "https://www.uam.edu.ne/contact.php"
+    "url": "https://www.uam.edu.ne/contact.php",
+    "member_institution": null
   },
   {
     "institution": "University at Buffalo",
@@ -473,14 +530,16 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.buffalo.edu/grad/programs/environmental-and-water-resources-engineering-ms.html"
+    "url": "https://www.buffalo.edu/grad/programs/environmental-and-water-resources-engineering-ms.html",
+    "member_institution": "State University of New York, Buffalo"
   },
   {
     "institution": "University of Akron",
     "programs": "Geosciences graduate degrees (Geology, Earth Science, Environmental Geology M.S.); hydrogeology a research area",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of Alabama",
@@ -488,7 +547,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://catalog.ua.edu/graduate/engineering/civil-construction-environmental/civil-ms/"
+    "url": "https://catalog.ua.edu/graduate/engineering/civil-construction-environmental/civil-ms/",
+    "member_institution": "University of Alabama"
   },
   {
     "institution": "University of Alaska Fairbanks",
@@ -496,7 +556,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://catalog.uaf.edu/masters/civil-engineering/"
+    "url": "https://catalog.uaf.edu/masters/civil-engineering/",
+    "member_institution": null
   },
   {
     "institution": "University of Arizona",
@@ -504,7 +565,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://has.arizona.edu/doctor-philosophy-hydrology-and-water-resources"
+    "url": "https://has.arizona.edu/doctor-philosophy-hydrology-and-water-resources",
+    "member_institution": "University of Arizona"
   },
   {
     "institution": "University of California Davis",
@@ -513,7 +575,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://gradstudies.ucdavis.edu/programs/ghys"
+    "url": "https://gradstudies.ucdavis.edu/programs/ghys",
+    "member_institution": "University of California, Davis"
   },
   {
     "institution": "University of California Irvine",
@@ -522,7 +585,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://catalogue.uci.edu/thehenrysamuelischoolofengineering/departmentofcivilandenvironmentalengineering/civilandenvironmentalengineering_ms/"
+    "url": "https://catalogue.uci.edu/thehenrysamuelischoolofengineering/departmentofcivilandenvironmentalengineering/civilandenvironmentalengineering_ms/",
+    "member_institution": "University of California, Irvine"
   },
   {
     "institution": "University of California Riverside",
@@ -530,7 +594,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": "University of California, Riverside"
   },
   {
     "institution": "University of California, Merced",
@@ -539,7 +604,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://es.ucmerced.edu/"
+    "url": "https://es.ucmerced.edu/",
+    "member_institution": "University of California, Merced"
   },
   {
     "institution": "University of California-Berkeley",
@@ -548,7 +614,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://ce.berkeley.edu/programs/env/areas"
+    "url": "https://ce.berkeley.edu/programs/env/areas",
+    "member_institution": null
   },
   {
     "institution": "University of California-Los Angeles",
@@ -557,7 +624,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.cee.ucla.edu/graduate-admissions/"
+    "url": "https://www.cee.ucla.edu/graduate-admissions/",
+    "member_institution": null
   },
   {
     "institution": "University of Colorado",
@@ -566,13 +634,15 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.colorado.edu/ceae/research/hydrology-water-resources-environmental-fluid-mechanics/graduate-program"
+    "url": "https://www.colorado.edu/ceae/research/hydrology-water-resources-environmental-fluid-mechanics/graduate-program",
+    "member_institution": "University of Colorado, Boulder"
   },
   {
     "institution": "University of Delaware",
     "programs": "Water Science & Policy",
     "degrees": [],
-    "url": "https://www.udel.edu/grad/prospective-students/programs/interdisciplinary/water-science-policy/"
+    "url": "https://www.udel.edu/grad/prospective-students/programs/interdisciplinary/water-science-policy/",
+    "member_institution": "University of Delaware"
   },
   {
     "institution": "University of Florida",
@@ -581,7 +651,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://soils.ifas.ufl.edu/academics/graduate-studies/graduate-degrees-and-tracks/"
+    "url": "https://soils.ifas.ufl.edu/academics/graduate-studies/graduate-degrees-and-tracks/",
+    "member_institution": "University of Florida"
   },
   {
     "institution": "University of Georgia",
@@ -589,7 +660,8 @@
     "degrees": [
       "phd"
     ],
-    "url": "https://engineering.uga.edu/degree/phd-engineering-environment-water-emphasis/"
+    "url": "https://engineering.uga.edu/degree/phd-engineering-environment-water-emphasis/",
+    "member_institution": "University of Georgia"
   },
   {
     "institution": "University of Hawaii at Manoa",
@@ -597,7 +669,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": "University of Hawaii"
   },
   {
     "institution": "University of Idaho",
@@ -606,7 +679,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uidaho.edu/agricultural-life-sciences/academics/water-resources-program"
+    "url": "https://www.uidaho.edu/agricultural-life-sciences/academics/water-resources-program",
+    "member_institution": "University of Idaho"
   },
   {
     "institution": "University of Illinois",
@@ -615,13 +689,15 @@
       "masters",
       "phd"
     ],
-    "url": "https://cee.illinois.edu/academics/areas/water-resources-engineering-and-science"
+    "url": "https://cee.illinois.edu/academics/areas/water-resources-engineering-and-science",
+    "member_institution": "University of Illinois"
   },
   {
     "institution": "University of Iowa",
     "programs": "Water and the Environment graduate program includes focus areas on Environmental Engineering and Science, Hydraulics and Water Resources, as well as Sustainable Water Development",
     "degrees": [],
-    "url": "https://engineering.uiowa.edu/cee/graduate-program/water-and-environment"
+    "url": "https://engineering.uiowa.edu/cee/graduate-program/water-and-environment",
+    "member_institution": "University of Iowa"
   },
   {
     "institution": "University of Kansas",
@@ -630,7 +706,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://ceae.ku.edu/graduate-degrees-environmental-and-water-resources-engineering"
+    "url": "https://ceae.ku.edu/graduate-degrees-environmental-and-water-resources-engineering",
+    "member_institution": "University of Kansas"
   },
   {
     "institution": "University of Kentucky",
@@ -639,7 +716,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://bae.mgcafe.uky.edu/graduate-program"
+    "url": "https://bae.mgcafe.uky.edu/graduate-program",
+    "member_institution": null
   },
   {
     "institution": "University of Louisiana at Lafayette",
@@ -647,7 +725,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://louisiana.edu/graduateschool/majors-minors/civil-engineering-ms"
+    "url": "https://louisiana.edu/graduateschool/majors-minors/civil-engineering-ms",
+    "member_institution": "University of Louisiana, Lafayette"
   },
   {
     "institution": "University of Massachusetts Boston",
@@ -655,7 +734,8 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of Memphis Ground Water Institute",
@@ -664,7 +744,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.memphis.edu/earthsciences/research/hydrology_resources.php"
+    "url": "https://www.memphis.edu/earthsciences/research/hydrology_resources.php",
+    "member_institution": "University of Memphis"
   },
   {
     "institution": "University of Michigan-Ann Arbor",
@@ -672,7 +753,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://cee.engin.umich.edu/graduate-studies/masters-programs/mse-in-civil-engineering/"
+    "url": "https://cee.engin.umich.edu/graduate-studies/masters-programs/mse-in-civil-engineering/",
+    "member_institution": "University of Michigan"
   },
   {
     "institution": "University of Minnesota",
@@ -681,7 +763,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://wrs.umn.edu/about"
+    "url": "https://wrs.umn.edu/about",
+    "member_institution": "University of Minnesota"
   },
   {
     "institution": "University of Missouri",
@@ -690,7 +773,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://cafnr.missouri.edu/academics/degrees-programs/natural-resources-graduate-studies/"
+    "url": "https://cafnr.missouri.edu/academics/degrees-programs/natural-resources-graduate-studies/",
+    "member_institution": "University of Missouri"
   },
   {
     "institution": "University of Nebraska Lincoln",
@@ -699,7 +783,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://snr.unl.edu/gradstudent/special/hydro/"
+    "url": "https://snr.unl.edu/gradstudent/special/hydro/",
+    "member_institution": "University of Nebraska, Lincoln"
   },
   {
     "institution": "University of Nevada Las Vegas",
@@ -707,7 +792,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.unlv.edu/degree/ms-water-resources"
+    "url": "https://www.unlv.edu/degree/ms-water-resources",
+    "member_institution": null
   },
   {
     "institution": "University of Nevada Reno",
@@ -716,7 +802,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.unr.edu/hydrologic-sciences"
+    "url": "https://www.unr.edu/hydrologic-sciences",
+    "member_institution": "University of Nevada, Reno"
   },
   {
     "institution": "University of New Mexico",
@@ -724,14 +811,16 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://wrp.unm.edu/about/index.html"
+    "url": "https://wrp.unm.edu/about/index.html",
+    "member_institution": "University of New Mexico"
   },
   {
     "institution": "University of North Carolina Charlotte",
     "programs": "M.S. Civil and Environmental Engineering, environmental and water resources concentration",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of North Dakota",
@@ -739,14 +828,16 @@
     "degrees": [
       "masters",
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of Notre Dame",
     "programs": "Civil and Environmental Engineering and Earth Sciences PhD (environmental fluid dynamics, environmental geosciences areas)",
     "degrees": [
       "phd"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of Oklahoma",
@@ -754,7 +845,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://ou.edu/coe/cees/academics/graduate/civil-environmental-ms"
+    "url": "https://ou.edu/coe/cees/academics/graduate/civil-environmental-ms",
+    "member_institution": null
   },
   {
     "institution": "University of Pittsburgh",
@@ -763,7 +855,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://geology.pitt.edu/graduate/ms-program-geology-environmental-science"
+    "url": "https://geology.pitt.edu/graduate/ms-program-geology-environmental-science",
+    "member_institution": "University of Pittsburgh"
   },
   {
     "institution": "University of Rhode Island",
@@ -771,14 +864,16 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://web.uri.edu/cels/academics/mesm/earth-and-hydrologic-science/"
+    "url": "https://web.uri.edu/cels/academics/mesm/earth-and-hydrologic-science/",
+    "member_institution": "University of Rhode Island"
   },
   {
     "institution": "University of South Carolina",
     "programs": "Geological Sciences M.S.",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": null
   },
   {
     "institution": "University of South Florida",
@@ -787,13 +882,15 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.usf.edu/engineering/cee/graduate/"
+    "url": "https://www.usf.edu/engineering/cee/graduate/",
+    "member_institution": "University of South Florida"
   },
   {
     "institution": "University of Tennessee",
     "programs": "Civil and Environmental Engineering graduate concentrations, Water Resources Engineering",
     "degrees": [],
-    "url": "https://cee.utk.edu/graduate-programs/graduate-concentrations/"
+    "url": "https://cee.utk.edu/graduate-programs/graduate-concentrations/",
+    "member_institution": "University of Tennessee"
   },
   {
     "institution": "University of Texas at Arlington",
@@ -801,7 +898,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://catalog.uta.edu/engineering/civil/graduate/civil-engr-water-ms/"
+    "url": "https://catalog.uta.edu/engineering/civil/graduate/civil-engr-water-ms/",
+    "member_institution": "University of Texas, Arlington"
   },
   {
     "institution": "University of Texas at Austin",
@@ -810,7 +908,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://eps.jsg.utexas.edu/graduate/degrees-offered/"
+    "url": "https://eps.jsg.utexas.edu/graduate/degrees-offered/",
+    "member_institution": "University of Texas, Austin"
   },
   {
     "institution": "University of Texas, San Antonio",
@@ -818,7 +917,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://future.utsa.edu/programs/master/civil-engineering-ms/"
+    "url": "https://future.utsa.edu/programs/master/civil-engineering-ms/",
+    "member_institution": null
   },
   {
     "institution": "University of the District of Columbia",
@@ -827,7 +927,8 @@
       "masters",
       "professional"
     ],
-    "url": "https://www.udc.edu/causes/academics/professional-science-masters-program/water-resources-management-psm"
+    "url": "https://www.udc.edu/causes/academics/professional-science-masters-program/water-resources-management-psm",
+    "member_institution": null
   },
   {
     "institution": "University of Trento",
@@ -836,7 +937,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.unitn.it"
+    "url": "https://www.unitn.it",
+    "member_institution": null
   },
   {
     "institution": "University of Utah",
@@ -845,7 +947,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.civil.utah.edu/graduate/civil/"
+    "url": "https://www.civil.utah.edu/graduate/civil/",
+    "member_institution": null
   },
   {
     "institution": "University of Washington",
@@ -855,7 +958,8 @@
       "phd",
       "professional"
     ],
-    "url": "https://www.ce.washington.edu/msce/hydrology-hydrodynamics"
+    "url": "https://www.ce.washington.edu/msce/hydrology-hydrodynamics",
+    "member_institution": "University of Washington"
   },
   {
     "institution": "University of Wisconsin-Madison",
@@ -864,7 +968,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://engineering.wisc.edu/departments/civil-environmental-engineering/research/water-resources-engineering-science/"
+    "url": "https://engineering.wisc.edu/departments/civil-environmental-engineering/research/water-resources-engineering-science/",
+    "member_institution": "University of Wisconsin, Madison"
   },
   {
     "institution": "University of Wisconsin-Madison",
@@ -873,7 +978,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://geoscience.wisc.edu/research/research-areas/hydrogeology/"
+    "url": "https://geoscience.wisc.edu/research/research-areas/hydrogeology/",
+    "member_institution": "University of Wisconsin, Madison"
   },
   {
     "institution": "University of Wisconsin-Madison",
@@ -882,7 +988,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://bse.wisc.edu/graduate-studies/"
+    "url": "https://bse.wisc.edu/graduate-studies/",
+    "member_institution": "University of Wisconsin, Madison"
   },
   {
     "institution": "University of Wisconsin-Madison",
@@ -891,7 +998,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://guide.wisc.edu/graduate/integrative-biology/freshwater-marine-sciences-ms/"
+    "url": "https://guide.wisc.edu/graduate/integrative-biology/freshwater-marine-sciences-ms/",
+    "member_institution": "University of Wisconsin, Madison"
   },
   {
     "institution": "University of Wisconsin-Madison",
@@ -899,7 +1007,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://nelson.wisc.edu/graduate/water-resources-management/"
+    "url": "https://nelson.wisc.edu/graduate/water-resources-management/",
+    "member_institution": "University of Wisconsin, Madison"
   },
   {
     "institution": "University of Wisconsin-Milwaukee",
@@ -908,7 +1017,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://uwm.edu/freshwater/academics/"
+    "url": "https://uwm.edu/freshwater/academics/",
+    "member_institution": null
   },
   {
     "institution": "University of Wyoming",
@@ -917,7 +1027,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.uwyo.edu/uwgrad/interdisciplinary-programs/hydrologic-science/degrees.html"
+    "url": "https://www.uwyo.edu/uwgrad/interdisciplinary-programs/hydrologic-science/degrees.html",
+    "member_institution": "University of Wyoming"
   },
   {
     "institution": "University of Zurich",
@@ -925,7 +1036,8 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.degrees.uzh.ch/en/master/50000008/51030723/"
+    "url": "https://www.degrees.uzh.ch/en/master/50000008/51030723/",
+    "member_institution": "University of Zurich"
   },
   {
     "institution": "Utah State University",
@@ -934,7 +1046,8 @@
       "masters",
       "phd"
     ],
-    "url": "https://www.usu.edu/degrees-majors/watershed-science_ms_phd"
+    "url": "https://www.usu.edu/degrees-majors/watershed-science_ms_phd",
+    "member_institution": "Utah State University"
   },
   {
     "institution": "Villanova University",
@@ -942,14 +1055,16 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://www.villanova.edu/university/engineering/academic-programs/civil-environmental/ms-wree.html"
+    "url": "https://www.villanova.edu/university/engineering/academic-programs/civil-environmental/ms-wree.html",
+    "member_institution": "Villanova University"
   },
   {
     "institution": "Virginia Tech",
     "programs": "Civil and Environmental Engineering M.S., Environmental and Water Resources",
     "degrees": [
       "masters"
-    ]
+    ],
+    "member_institution": "Virginia Tech"
   },
   {
     "institution": "Yale University",
@@ -957,6 +1072,7 @@
     "degrees": [
       "masters"
     ],
-    "url": "https://environment.yale.edu/academics/masters/mem/specializations/water"
+    "url": "https://environment.yale.edu/academics/masters/mem/specializations/water",
+    "member_institution": "Yale University"
   }
 ]

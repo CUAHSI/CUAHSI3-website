@@ -1,111 +1,12 @@
 <script setup lang="ts">
 useHead({ title: 'Membership' })
 
-// Canonical member institution list — current as of August 2026, as on the legacy page cuahsi.org/about/about-membership (96 institutions: 83 graduate, 6 primarily undergraduate, 5 non-profit, 2 international).
-// The Hire CUAHSI institution lookup (pages/hire-cuahsi/index.vue) should read from this same list;
-// consider extracting to a shared content/members.json if both need to stay in sync going forward.
-const memberInstitutions = [
-  // Graduate Institution (GI) Members
-  { name: 'Arizona State University', category: 'gi' },
-  { name: 'Boise State University', category: 'gi' },
-  { name: 'Brigham Young University', category: 'gi' },
-  { name: 'Carnegie Mellon University', category: 'gi' },
-  { name: 'Clemson University', category: 'gi' },
-  { name: 'Colorado School of Mines', category: 'gi' },
-  { name: 'Colorado State University', category: 'gi' },
-  { name: 'Drexel University', category: 'gi' },
-  { name: 'Duke University', category: 'gi' },
-  { name: 'Florida International University', category: 'gi' },
-  { name: 'Georgia Institute of Technology', category: 'gi' },
-  { name: 'Georgia State University', category: 'gi' },
-  { name: 'Indiana University', category: 'gi' },
-  { name: 'Iowa State University', category: 'gi' },
-  { name: 'Johns Hopkins University', category: 'gi' },
-  { name: 'Kansas State University', category: 'gi' },
-  { name: 'Kent State University', category: 'gi' },
-  { name: 'Marquette University', category: 'gi' },
-  { name: 'Michigan State University', category: 'gi' },
-  { name: 'Michigan Technological University', category: 'gi' },
-  { name: 'Montana State University', category: 'gi' },
-  { name: 'New Mexico State University', category: 'gi' },
-  { name: 'Northeastern University', category: 'gi' },
-  { name: 'Northern Arizona University', category: 'gi' },
-  { name: 'Northwestern University', category: 'gi' },
-  { name: 'Oregon State University', category: 'gi' },
-  { name: 'Pennsylvania State University', category: 'gi' },
-  { name: 'Portland State University', category: 'gi' },
-  { name: 'Princeton University', category: 'gi' },
-  { name: 'Purdue University', category: 'gi' },
-  { name: 'Rensselaer Polytechnic Institute', category: 'gi' },
-  { name: 'Rutgers University (SUNJ)', category: 'gi' },
-  { name: 'Southern Illinois University', category: 'gi' },
-  { name: 'Southern Methodist University', category: 'gi' },
-  { name: 'Stanford University', category: 'gi' },
-  { name: 'State University of New York - Buffalo', category: 'gi' },
-  { name: 'State University of New York - ESF', category: 'gi' },
-  { name: 'Stevens Institute of Technology', category: 'gi' },
-  { name: 'Syracuse University', category: 'gi' },
-  { name: 'Temple University', category: 'gi' },
-  { name: 'Texas A&M University', category: 'gi' },
-  { name: 'University of Alabama', category: 'gi' },
-  { name: 'University of Arizona', category: 'gi' },
-  { name: 'University of Arkansas', category: 'gi' },
-  { name: 'University of California - Davis', category: 'gi' },
-  { name: 'University of California - Irvine', category: 'gi' },
-  { name: 'University of California - Merced', category: 'gi' },
-  { name: 'University of California - Riverside', category: 'gi' },
-  { name: 'University of Central Florida', category: 'gi' },
-  { name: 'University of Colorado - Boulder', category: 'gi' },
-  { name: 'University of Delaware', category: 'gi' },
-  { name: 'University of Florida', category: 'gi' },
-  { name: 'University of Georgia', category: 'gi' },
-  { name: 'University of Hawaii', category: 'gi' },
-  { name: 'University of Houston', category: 'gi' },
-  { name: 'University of Idaho', category: 'gi' },
-  { name: 'University of Illinois', category: 'gi' },
-  { name: 'University of Iowa', category: 'gi' },
-  { name: 'University of Kansas', category: 'gi' },
-  { name: 'University of Louisiana - Lafayette', category: 'gi' },
-  { name: 'University of Memphis', category: 'gi' },
-  { name: 'University of Michigan', category: 'gi' },
-  { name: 'University of Minnesota', category: 'gi' },
-  { name: 'University of Missouri', category: 'gi' },
-  { name: 'University of Nebraska - Lincoln', category: 'gi' },
-  { name: 'University of Nevada - Reno', category: 'gi' },
-  { name: 'University of New Hampshire', category: 'gi' },
-  { name: 'University of New Mexico', category: 'gi' },
-  { name: 'University of North Carolina System', category: 'gi' },
-  { name: 'University of Pittsburgh', category: 'gi' },
-  { name: 'University of Rhode Island', category: 'gi' },
-  { name: 'University of South Florida', category: 'gi' },
-  { name: 'University of Tennessee - Knoxville', category: 'gi' },
-  { name: 'University of Texas - Arlington', category: 'gi' },
-  { name: 'University of Texas - Austin', category: 'gi' },
-  { name: 'University of Vermont', category: 'gi' },
-  { name: 'University of Virginia', category: 'gi' },
-  { name: 'University of Wisconsin - Madison', category: 'gi' },
-  { name: 'Utah State University', category: 'gi' },
-  { name: 'Villanova University', category: 'gi' },
-  { name: 'Virginia Tech', category: 'gi' },
-  { name: 'Washington State University', category: 'gi' },
-  { name: 'Yale University', category: 'gi' },
-  // Primarily Undergraduate Institution (PUI) Members
-  { name: 'Eastern Illinois University', category: 'pui' },
-  { name: 'Prairie View A&M University', category: 'pui' },
-  { name: 'Santa Clara University', category: 'pui' },
-  { name: 'Smith College', category: 'pui' },
-  { name: 'University of North Georgia', category: 'pui' },
-  { name: 'Utah Valley University', category: 'pui' },
-  // Non-Profit Affiliate Members
-  { name: 'American Institute of Hydrology', category: 'nonprofit' },
-  { name: 'EarthScope', category: 'nonprofit' },
-  { name: 'Interstate Council on Water Policy', category: 'nonprofit' },
-  { name: 'RTI International', category: 'nonprofit' },
-  { name: 'Stroud Water Research Center', category: 'nonprofit' },
-  // International Affiliate Members
-  { name: 'University of Calgary', category: 'intl' },   // joined August 2026 (August 2026 e-newsletter, member spotlight)
-  { name: 'University of Zurich', category: 'intl' },
-]
+// Member institutions: the registry (content/members/institutions.json), through composables/useMembers.ts. Listed by
+// category in the order of the chips below, then A to Z.
+const { institutions } = await useMembers()
+const categoryOrder = ['gi', 'pui', 'nonprofit', 'intl']
+const memberInstitutions = computed(() => [...institutions.value].sort((a, b) =>
+  categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category) || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)))   // not localeCompare: the build and the browser may sort differently and the page then fails to hydrate
 
 const categories = [
   { key: 'all', label: 'All' },
@@ -119,7 +20,7 @@ const activeCategory = ref('all')
 const query = ref('')
 
 const filtered = computed(() => {
-  let items = memberInstitutions
+  let items = memberInstitutions.value
   if (activeCategory.value !== 'all') items = items.filter(i => i.category === activeCategory.value)
   if (query.value.trim()) {
     const q = query.value.toLowerCase()
@@ -139,7 +40,7 @@ function categoryLabel(key: string) {
       lead-class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[560px] mb-[24px]">
       <template #kicker>About · Membership</template>
       <template #title>Join the water science consortium.</template>
-      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of 96 member institutions advancing water science together.</template>
+      <template #lead>CUAHSI membership connects your institution to shared infrastructure, training programs, governance, and a network of {{ memberInstitutions.length }} member institutions advancing water science together.</template>
       <a href="mailto:membership@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-['Hanken_Grotesk'] font-semibold text-[15px] leading-[normal] p-[13px_22px]">Get in touch <span class="arr">→</span></a>
       <template #top><SectionNav section="about" fixed /></template>
     </PageHero>
@@ -173,7 +74,7 @@ function categoryLabel(key: string) {
     <!-- Member institution list -->
     <div class="mx-auto site-container max-w-site pb-[80px]">
       <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
-        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member institutions · as of August 2026</p>
+        <p class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[11px]">Member institutions</p>
         <input v-model="query" type="text" aria-label="Search member institutions" placeholder="Search institutions…"
           class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[240px]" />
       </div>
