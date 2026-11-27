@@ -74,12 +74,21 @@
   },
   {
     "institution": "Colorado State University",
-    "programs": "Civil and Environmental Engineering; Watershed Science, M.S.; Earth Sciences with either a Geosciences or a Watershed Science specialization, Ph.D.",
+    "programs": "Civil and Environmental Engineering, Water Resources Engineering",
     "degrees": [
       "masters",
       "phd"
     ],
     "url": "https://www.engr.colostate.edu/ce/graduate/water-resources-engineering/"
+  },
+  {
+    "institution": "Colorado State University",
+    "programs": "Watershed Science, Department of Ecosystem Science and Sustainability",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://warnercnr.colostate.edu/ess/graduate-education/"
   },
   {
     "institution": "Columbia University",
@@ -849,11 +858,46 @@
     "url": "https://www.ce.washington.edu/msce/hydrology-hydrodynamics"
   },
   {
-    "institution": "University of Wisconsin - Madison",
-    "programs": "Environmental Fluid Mechanics and Water Resources Engineering Graduate Program; Hydrogeology Graduate Program in the Department of Geoscience; Natural Resource & Environment Graduate Program within the Department of Biological Systems Engineering; Limnology & Marine Science Graduate Program; Water Resources Management (WRM) program in the Nelson Institute for Environmental Studies; Center for Limnology",
+    "institution": "University of Wisconsin-Madison",
+    "programs": "Civil and Environmental Engineering, Water Resources Engineering and Science",
     "degrees": [
       "masters",
       "phd"
+    ],
+    "url": "https://engineering.wisc.edu/departments/civil-environmental-engineering/research/water-resources-engineering-science/"
+  },
+  {
+    "institution": "University of Wisconsin-Madison",
+    "programs": "Hydrogeology Program, Department of Geoscience",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://geoscience.wisc.edu/research/research-areas/hydrogeology/"
+  },
+  {
+    "institution": "University of Wisconsin-Madison",
+    "programs": "Biological Systems Engineering, Natural Resources and Environment",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://bse.wisc.edu/graduate-studies/"
+  },
+  {
+    "institution": "University of Wisconsin-Madison",
+    "programs": "Freshwater and Marine Sciences (formerly Limnology and Marine Science)",
+    "degrees": [
+      "masters",
+      "phd"
+    ],
+    "url": "https://guide.wisc.edu/graduate/integrative-biology/freshwater-marine-sciences-ms/"
+  },
+  {
+    "institution": "University of Wisconsin-Madison",
+    "programs": "Water Resources Management, Nelson Institute for Environmental Studies",
+    "degrees": [
+      "masters"
     ],
     "url": "https://nelson.wisc.edu/graduate/water-resources-management/"
   },
