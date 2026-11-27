@@ -102,7 +102,8 @@ C15. **An impact story names the award that supports it, in `awards`.** Each sto
     an award began does not cite it. `verify.sh` fails a story that names an id the registry does not have.
 
 C16. **A job names its member institution only when it is sure.** `member_institution` on a `content/jobs/` file (optional) is
-    a name exactly as it is spelled in `content/members/reps.json`: the employer is, or is part of, that CUAHSI member institution.
+    a name exactly as it is spelled in `content/members/institutions.json`, the member registry (the one list of members; a graduate
+    program row takes the same field): the employer is, or is part of, that CUAHSI member institution.
     Set it when a member's name is in the employer text or the posting itself says the employer belongs to a member (for example
     the Alabama Water Institute, part of the University of Alabama); never from a guess. `null` means checked and not a member (it
     turns off the job board's name match for that job). Leave it out when unsure: the board then falls back to matching member names

@@ -5,15 +5,10 @@ useHead({
 })
 
 // Issue 9: institution lookup replaces the plain toggle.
-// Member roster: the institutions in content/members/reps.json (names only; no addresses or join years leave this block).
+// Member roster: the registry, through composables/useMembers.ts.
 type Member = { name: string }
-const { data: memberData } = await useAsyncData('hire-member-institutions', async (): Promise<Member[]> => {
-  const doc = await queryContent('members/reps').findOne().catch(() => null)
-  const rows: any[] = Array.isArray(doc?.body) ? doc.body : []
-  const names = [...new Set(rows.map(r => String(r.institution || '').trim()).filter(Boolean))].sort()
-  return names.map(name => ({ name }))
-})
-const memberInstitutions = computed<Member[]>(() => memberData.value ?? [])
+const { names: memberNames } = await useMembers()
+const memberInstitutions = computed<Member[]>(() => [...memberNames.value].sort().map(name => ({ name })))
 
 const institutionQuery = ref('')
 const matchedInstitution = ref<Member | null>(null)

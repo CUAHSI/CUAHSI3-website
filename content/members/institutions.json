@@ -1,0 +1,308 @@
+[
+  {
+    "name": "American Institute of Hydrology"
+  },
+  {
+    "name": "Arizona State University"
+  },
+  {
+    "name": "Boise State University"
+  },
+  {
+    "name": "Brigham Young University"
+  },
+  {
+    "name": "Carnegie Mellon University"
+  },
+  {
+    "name": "Clemson University"
+  },
+  {
+    "name": "Colorado School of Mines"
+  },
+  {
+    "name": "Colorado State University"
+  },
+  {
+    "name": "Drexel University"
+  },
+  {
+    "name": "Duke University"
+  },
+  {
+    "name": "EarthScope"
+  },
+  {
+    "name": "Eastern Illinois University"
+  },
+  {
+    "name": "Florida International University"
+  },
+  {
+    "name": "Georgia Institute of Technology"
+  },
+  {
+    "name": "Georgia State University"
+  },
+  {
+    "name": "Indiana University",
+    "aliases": [
+      "Indiana University, Bloomington and Indianapolis"
+    ]
+  },
+  {
+    "name": "Interstate Council on Water Policy"
+  },
+  {
+    "name": "Iowa State University"
+  },
+  {
+    "name": "Johns Hopkins University"
+  },
+  {
+    "name": "Kansas State University"
+  },
+  {
+    "name": "Kent State University"
+  },
+  {
+    "name": "Marquette University"
+  },
+  {
+    "name": "Michigan State University"
+  },
+  {
+    "name": "Michigan Technological University"
+  },
+  {
+    "name": "Montana State University"
+  },
+  {
+    "name": "New Mexico State University"
+  },
+  {
+    "name": "Northeastern University"
+  },
+  {
+    "name": "Northern Arizona University"
+  },
+  {
+    "name": "Northwestern University"
+  },
+  {
+    "name": "Oregon State University"
+  },
+  {
+    "name": "Pennsylvania State University",
+    "aliases": [
+      "Penn State"
+    ]
+  },
+  {
+    "name": "Portland State University"
+  },
+  {
+    "name": "Prairie View A&M University"
+  },
+  {
+    "name": "Princeton University"
+  },
+  {
+    "name": "Purdue University"
+  },
+  {
+    "name": "Rensselaer Polytechnic Institute"
+  },
+  {
+    "name": "RTI International"
+  },
+  {
+    "name": "Rutgers University"
+  },
+  {
+    "name": "Santa Clara University"
+  },
+  {
+    "name": "Smith College"
+  },
+  {
+    "name": "Southern Illinois University"
+  },
+  {
+    "name": "Southern Methodist University"
+  },
+  {
+    "name": "Stanford University"
+  },
+  {
+    "name": "State University of New York, Buffalo"
+  },
+  {
+    "name": "State University of New York, ESF"
+  },
+  {
+    "name": "Stevens Institute of Technology"
+  },
+  {
+    "name": "Stroud Water Research Center"
+  },
+  {
+    "name": "Suez Canal University"
+  },
+  {
+    "name": "Syracuse University"
+  },
+  {
+    "name": "Temple University"
+  },
+  {
+    "name": "Texas A&M University"
+  },
+  {
+    "name": "University of Alabama"
+  },
+  {
+    "name": "University of Arizona"
+  },
+  {
+    "name": "University of Arkansas"
+  },
+  {
+    "name": "University of Calgary"
+  },
+  {
+    "name": "University of California, Davis"
+  },
+  {
+    "name": "University of California, Irvine"
+  },
+  {
+    "name": "University of California, Merced"
+  },
+  {
+    "name": "University of California, Riverside"
+  },
+  {
+    "name": "University of Central Florida"
+  },
+  {
+    "name": "University of Colorado, Boulder"
+  },
+  {
+    "name": "University of Delaware"
+  },
+  {
+    "name": "University of Florida"
+  },
+  {
+    "name": "University of Georgia"
+  },
+  {
+    "name": "University of Hawaii"
+  },
+  {
+    "name": "University of Houston"
+  },
+  {
+    "name": "University of Idaho"
+  },
+  {
+    "name": "University of Illinois"
+  },
+  {
+    "name": "University of Iowa"
+  },
+  {
+    "name": "University of Kansas"
+  },
+  {
+    "name": "University of Louisiana, Lafayette"
+  },
+  {
+    "name": "University of Memphis"
+  },
+  {
+    "name": "University of Michigan"
+  },
+  {
+    "name": "University of Minnesota"
+  },
+  {
+    "name": "University of Missouri"
+  },
+  {
+    "name": "University of Nebraska, Lincoln"
+  },
+  {
+    "name": "University of Nevada, Reno"
+  },
+  {
+    "name": "University of New Hampshire"
+  },
+  {
+    "name": "University of New Mexico"
+  },
+  {
+    "name": "University of North Carolina"
+  },
+  {
+    "name": "University of North Georgia"
+  },
+  {
+    "name": "University of Pittsburgh"
+  },
+  {
+    "name": "University of Rhode Island"
+  },
+  {
+    "name": "University of South Florida"
+  },
+  {
+    "name": "University of Tennessee"
+  },
+  {
+    "name": "University of Texas, Arlington"
+  },
+  {
+    "name": "University of Texas, Austin"
+  },
+  {
+    "name": "University of Vermont"
+  },
+  {
+    "name": "University of Virginia"
+  },
+  {
+    "name": "University of Washington"
+  },
+  {
+    "name": "University of Wisconsin, Madison"
+  },
+  {
+    "name": "University of Wyoming"
+  },
+  {
+    "name": "University of Zurich"
+  },
+  {
+    "name": "Utah State University"
+  },
+  {
+    "name": "Utah Valley University"
+  },
+  {
+    "name": "Villanova University"
+  },
+  {
+    "name": "Virginia Tech",
+    "aliases": [
+      "Virginia Polytechnic Institute"
+    ]
+  },
+  {
+    "name": "Washington State University"
+  },
+  {
+    "name": "Yale University"
+  }
+]

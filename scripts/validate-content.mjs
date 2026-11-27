@@ -152,8 +152,8 @@ const refs = {            // collected for the cross-reference section
   awardIds: [],           // ids in content/awards/awards.json
   imageUses: [],          // { file, src }: a research story's image.src
   eventImageUses: [],     // { file, src }: an event's image.src
-  memberNames: [],        // institution names in content/members/reps.json (names only; nothing else is kept)
-  jobMembers: [],         // { file, value }: a jobs member_institution value
+  memberNames: [],        // names in content/members/institutions.json, the member registry
+  memberUses: [],         // { file, where?, value }: a member institution named elsewhere (a rep's institution, a job's or a graduate program's member_institution; names only, no addresses)
 }
 
 for (const c of selected) {
@@ -180,7 +180,7 @@ for (const c of selected) {
         else if (data.published === true) refs.awardsUndecided.push(file)
         if (typeof data.image?.src === 'string') refs.imageUses.push({ file, src: data.image.src })
       }
-      if (c.name === 'jobs' && typeof data.member_institution === 'string') refs.jobMembers.push({ file, value: data.member_institution })
+      if (c.name === 'jobs' && typeof data.member_institution === 'string') refs.memberUses.push({ file, value: data.member_institution })
       if (c.name === 'events') {
         if (typeof data.image?.src === 'string') refs.eventImageUses.push({ file, src: data.image.src })
         for (const v of Array.isArray(data.newsletter_source) ? data.newsletter_source : []) refs.newsletterSource.push({ file, value: v })
@@ -232,7 +232,9 @@ for (const c of selected) {
         if (!(typeof entry?.repository === 'string' && entry.repository.trim()) && !(typeof entry?.url === 'string' && entry.url.includes('hydroshare.org'))) refs.productsNoWhere.push(label)
         if (Array.isArray(entry?.related)) for (const l of entry.related) refs.productLinks.push({ file: label, doi: typeof l?.doi === 'string' ? l.doi : undefined, url: typeof l?.url === 'string' ? l.url : undefined, in_list: l?.in_list, ownDoi: entry.doi, ownUrl: entry.url })
       }
-      if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberNames.push(entry.institution.trim())
+      if (c.name === 'members/institutions.json' && typeof entry?.name === 'string') refs.memberNames.push(entry.name)
+      if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberUses.push({ file: c.file, where: `${c.file}[${i}]`, value: entry.institution })
+      if (c.name === 'graduate-programs' && typeof entry?.member_institution === 'string') refs.memberUses.push({ file: c.file, where: label, value: entry.member_institution })
       if (typeof entry?.slug === 'string') (refs.slugs.get(c.name) ?? refs.slugs.set(c.name, []).get(c.name)).push({ id: label, slug: entry.slug })
       if (parsed.success) r.pass++
       else r.schemaFail.push({ file: label, issues: lines(parsed.error) })
@@ -325,18 +327,17 @@ if (nlSlugs.size && refs.newsletterSource.length) {
   skippedXref.push('events newsletter_source values vs newsletter slugs: needs both newsletter and events, and found none of one or the other')
 }
 
-// jobs: a member_institution value must be an institution name in content/members/reps.json (checked when both were read in this run;
-// a partial run that read only jobs skips it and says so).
-if (selected.some(c => c.name === 'jobs')) {
-  const rosterRead = selected.some(c => c.name === 'members/reps.json')
-  if (!rosterRead && only.length && refs.jobMembers.length) {
-    skippedXref.push('jobs member_institution values vs content/members/reps.json: the member list was not read in this partial run')
+// the member registry: a rep's institution and every member_institution value (jobs, graduate programs) must be a name in
+// content/members/institutions.json (checked when the registry was read in this run; a partial run without it skips and says so).
+if (refs.memberUses.length) {
+  if (!selected.some(c => c.name === 'members/institutions.json')) {
+    skippedXref.push('member institutions named in reps, jobs and graduate programs vs content/members/institutions.json: the registry was not read in this partial run')
   } else {
-    const roster = new Set(refs.memberNames)
+    const registry = new Set(refs.memberNames)
     xref.push({
-      title: 'Every jobs member_institution value is an institution in content/members/reps.json',
-      checked: `${refs.jobMembers.length} values in ${new Set(refs.jobMembers.map(j => j.file)).size} files against ${roster.size} member institutions`,
-      problems: refs.jobMembers.filter(j => !roster.has(j.value)).map(j => `${j.file}: "${j.value}" is not a member institution name in content/members/reps.json`),
+      title: 'Every member institution named in reps, jobs and graduate programs is in content/members/institutions.json',
+      checked: `${refs.memberUses.length} values in ${new Set(refs.memberUses.map(j => j.file)).size} files against ${registry.size} member institutions`,
+      problems: refs.memberUses.filter(j => !registry.has(j.value)).map(j => `${j.where ?? j.file}: "${j.value}" is not a name in content/members/institutions.json`),
     })
   }
 }

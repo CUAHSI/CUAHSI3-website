@@ -45,34 +45,12 @@ function isExpired(deadline: string | null) {
   return new Date(deadline) < today.value
 }
 
-// Member institutions: the names in content/members/reps.json (names only; no addresses leave this block). A listing with a
-// member_institution value is decided by it; otherwise it is from a member when its employer text contains a member's name (compared without case, punctuation, "the" and "of"). This is a text match, so
-// a department, centre or institute that does not carry its university's name in the employer text is not recognised.
-const { data: memberNames } = await useAsyncData('jobs-member-institutions', async (): Promise<string[]> => {
-  const doc = await queryContent('members/reps').findOne().catch(() => null)
-  const rows: any[] = Array.isArray(doc?.body) ? doc.body : []
-  return [...new Set(rows.map(r => String(r.institution || '').trim()).filter(Boolean))]
-})
-const normName = (s: string) => ` ${s.toLowerCase().replace(/['’]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()} `
-// Other ways the same institution is written in an employer line: "University of Texas, Austin" is also "University of Texas at
-// Austin", and a few well-known short forms. A match is not counted when the name is followed by "of", "in" or "at" (Indiana
-// University of Pennsylvania, University of Alabama in Huntsville are not the members Indiana University and University of Alabama).
-const ALIASES: Record<string, string> = { 'penn state': 'Pennsylvania State University', 'virginia polytechnic institute': 'Virginia Tech' }
-const normMembers = computed(() => {
-  const names = memberNames.value ?? []
-  const forms = names.flatMap(n => (n.includes(',') ? [n, n.replace(',', ' at')] : [n]))
-  return [...forms, ...Object.keys(ALIASES).filter(a => names.includes(ALIASES[a]))].map(normName).filter(n => n.trim())
-})
+// Member institutions: the registry, through composables/useMembers.ts. A listing with a member_institution value is decided by
+// it; otherwise it is from a member when its employer text contains a member's name (a text match, so a department, centre or
+// institute that does not carry its university's name in the employer text is not recognised).
+const { declaredMember, textNamesMember } = await useMembers()
 function isMember(job: any) {
-  // the job's own answer wins: a name from the member list = a member, null = checked and not a member
-  if (job.member_institution === null) return false
-  if (typeof job.member_institution === 'string' && job.member_institution) return true
-  const org = normName(String(job.organization ?? ''))
-  return normMembers.value.some(m => {
-    const i = org.indexOf(m)
-    if (i < 0) return false
-    return !/^(of|in|at) /.test(org.slice(i + m.length))
-  })
+  return declaredMember(job.member_institution) ?? textNamesMember(String(job.organization ?? ''))
 }
 
 // Order of the list: (1) listings closing within CLOSING_SOON_DAYS days, soonest first; (2) the rest, newest first. Ties (the same

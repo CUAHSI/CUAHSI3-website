@@ -126,7 +126,7 @@ const jobs = z.strictObject({
   source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
   source_id: nonEmpty.optional(), // the posting's id at its source (a USAJOBS control number); only the usajobs files have it
   sector: z.enum(['academic']).optional(), // written by hand on a job at a university or college; the board's Sector filter shows usajobs as federal, `academic` as Academic and everything else as Other (federal is never written here: it is the source)
-  member_institution: nonEmpty.nullable().optional(), // a name from content/members/reps.json (checked by the validator): the employer is or belongs to that CUAHSI member institution. null = checked, not a member (turns off the board's name match); absent = not decided (the board falls back to matching the member names in `organization`)
+  member_institution: nonEmpty.nullable().optional(), // a name from content/members/institutions.json, the member registry (checked by the validator): the employer is or belongs to that CUAHSI member institution. null = checked, not a member (turns off the board's name match); absent = not decided (the board falls back to matching the member names in `organization`)
   source_url: url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL').optional(), // the posting's page on the source site; the jobs board shows "via Josh's Water Jobs" (or "via AGU Career Center" for source agu) with it. Written by the upstream jobs automation for joshswaterjobs postings
 })
 
@@ -271,12 +271,20 @@ const fullTeamEntry = z.strictObject({
   has_profile: z.boolean(),
 })
 
-// content/members/reps.json : 229 entries.
+// content/members/reps.json : 229 entries. `institution` must be a name in content/members/institutions.json (checked below).
 const memberRep = z.strictObject({
   first_name: nonEmpty,
   last_name: nonEmpty,
   institution: nonEmpty,
   email: z.email(),
+})
+
+// content/members/institutions.json : the member registry (Jordan, 27 Nov 2026), one entry per CUAHSI member institution. Every page
+// that asks "is this a member?" reads it through composables/useMembers.ts, and every member_institution value (jobs, graduate programs)
+// must be a `name` here. `aliases` are other ways the name is written in text (the jobs board's employer match).
+const memberInstitution = z.strictObject({
+  name: nonEmpty,
+  aliases: z.array(nonEmpty).optional(),
 })
 
 // content/graduate-programs/programs.json : the directory of graduate programs in water science (a table on
@@ -290,6 +298,7 @@ const graduateProgram = z.strictObject({
   degrees: z.array(z.enum(['masters', 'phd', 'undergraduate', 'professional'])),   // may be empty: the legacy list gives no degree for some institutions, and none is guessed
   url: webUrl.optional(),
   last_reviewed: isoDate.optional(),   // set only when a person at CUAHSI has checked the row; the page shows nothing otherwise
+  member_institution: nonEmpty.nullable().optional(),   // a name from content/members/institutions.json: the row is at that member. null = checked, not a member; absent = not decided (shown as not a member; no name match here)
 })
 
 // content/data-portals/portals.json : the catalog of water data portals (a table on /data-platforms/portals).
@@ -415,6 +424,7 @@ export const COLLECTIONS = [
   { name: 'community',     kind: 'md', dir: 'content/community',     schema: communityProfile },
   { name: 'team/full-team.json',  kind: 'json', file: 'content/team/full-team.json',  schema: fullTeamEntry },
   { name: 'members/reps.json',    kind: 'json', file: 'content/members/reps.json',    schema: memberRep },
+  { name: 'members/institutions.json', kind: 'json', file: 'content/members/institutions.json', schema: memberInstitution, uniqueBy: e => e?.name, uniqueLabel: 'name' },
   // optional: the folders are created by the content changes that fill them (see the schemas above)
   { name: 'graduate-programs',    kind: 'json', file: 'content/graduate-programs/programs.json', schema: graduateProgram, optional: true, uniqueBy: e => e?.institution, uniqueLabel: 'institution' },
   { name: 'data-portals',         kind: 'json', file: 'content/data-portals/portals.json',       schema: dataPortal,      optional: true, uniqueBy: e => e?.name, uniqueLabel: 'name' },

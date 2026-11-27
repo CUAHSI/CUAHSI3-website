@@ -96,18 +96,6 @@
     "email": "Karen.Schlatter@colostate.edu"
   },
   {
-    "first_name": "John",
-    "last_name": "Albertson",
-    "institution": "Cornell University",
-    "email": "albertson@cornell.edu"
-  },
-  {
-    "first_name": "Todd",
-    "last_name": "Walter",
-    "institution": "Cornell University",
-    "email": "mtw5@cornell.edu"
-  },
-  {
     "first_name": "Amanda",
     "last_name": "Carneiro Marques",
     "institution": "Drexel University",
@@ -196,18 +184,6 @@
     "last_name": "Scarlett",
     "institution": "Georgia State University",
     "email": "rscarlett@gsu.edu"
-  },
-  {
-    "first_name": "Benjamin",
-    "last_name": "Crosby",
-    "institution": "Idaho State University",
-    "email": "crosby@isu.edu"
-  },
-  {
-    "first_name": "Sarah",
-    "last_name": "Godsey",
-    "institution": "Idaho State University",
-    "email": "godsey@isu.edu"
   },
   {
     "first_name": "Darren",
@@ -888,12 +864,6 @@
     "email": "samzipper@ku.edu"
   },
   {
-    "first_name": "Mitja",
-    "last_name": "Brilly",
-    "institution": "University of Ljubljana",
-    "email": "mbrilly@fgg.uni-lj.si"
-  },
-  {
     "first_name": "Emad",
     "last_name": "Habib",
     "institution": "University of Louisiana, Lafayette",
@@ -1062,12 +1032,6 @@
     "email": "chris.russoniello@uri.edu"
   },
   {
-    "first_name": "Lahcen",
-    "last_name": "Benaabidate",
-    "institution": "University of Sidi Mohamed ben Abdellah",
-    "email": "lahcen.benaabidate@usmba.ac.ma"
-  },
-  {
     "first_name": "Mauricio",
     "last_name": "Arias",
     "institution": "University of South Florida",
@@ -1132,18 +1096,6 @@
     "last_name": "Scanlon",
     "institution": "University of Texas, Austin",
     "email": "bridget.scanlon@beg.utexas.edu"
-  },
-  {
-    "first_name": "Paul",
-    "last_name": "Brooks",
-    "institution": "University of Utah",
-    "email": "paul.brooks@utah.edu"
-  },
-  {
-    "first_name": "McKenzie",
-    "last_name": "Skiles",
-    "institution": "University of Utah",
-    "email": "m.skiles@geog.utah.edu"
   },
   {
     "first_name": "Anne",
