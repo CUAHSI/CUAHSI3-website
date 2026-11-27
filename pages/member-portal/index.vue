@@ -21,28 +21,25 @@ const { data: repsData } = await useAsyncData('member-reps', async (): Promise<R
 
 const reps = computed<Rep[]>(() => repsData.value ?? [])
 
+// The institutions are the member registry (composables/useMembers.ts), not the institutions that happen to have a rep row:
+// a member with no representative on file is listed too
+const { names: memberNames } = await useMembers()
+const institutionCount = computed(() => memberNames.value.length)
+
 const query = ref('')
 
-const filtered = computed(() => {
-  if (!query.value.trim()) return reps.value
-  const q = query.value.toLowerCase()
-  return reps.value.filter(r =>
-    `${r.first_name} ${r.last_name}`.toLowerCase().includes(q) ||
-    r.institution.toLowerCase().includes(q)
-  )
-})
-
-// Group filtered reps by institution, alphabetically
+// One entry per member institution, alphabetically, with its representatives. A search keeps an institution whose name
+// matches (with all its representatives) or whose representatives' names match (with those)
 const grouped = computed(() => {
-  const map: Record<string, Rep[]> = {}
-  for (const r of filtered.value) {
-    if (!map[r.institution]) map[r.institution] = []
-    map[r.institution].push(r)
-  }
-  return Object.keys(map).sort().map(inst => ({ institution: inst, reps: map[inst] }))
+  const q = query.value.trim().toLowerCase()
+  return [...memberNames.value].sort().flatMap(inst => {
+    const all = reps.value.filter(r => r.institution === inst)
+    if (!q || inst.toLowerCase().includes(q)) return [{ institution: inst, reps: all }]
+    const matching = all.filter(r => `${r.first_name} ${r.last_name}`.toLowerCase().includes(q))
+    return matching.length ? [{ institution: inst, reps: matching }] : []
+  })
 })
-
-const institutionCount = computed(() => new Set(reps.value.map(r => r.institution)).size)
+const repCount = computed(() => grouped.value.reduce((n, g) => n + g.reps.length, 0))
 
 const resources = [
   { title: 'Meeting minutes', desc: 'Notes from CUAHSI Membership Meetings and Board sessions.', status: 'coming soon' },
@@ -89,7 +86,7 @@ const resources = [
           <input v-model="query" type="text" aria-label="Search member representatives" placeholder="Search name or institution…"
             class="border border-[rgba(15,33,43,.15)] rounded-[8px] p-[9px_12px] font-['Hanken_Grotesk'] font-normal text-[13px] leading-[normal] w-[280px]" />
         </div>
-        <p class="font-mono text-[11px] text-muted mb-5">{{ filtered.length }} representative{{ filtered.length === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
+        <p class="font-mono text-[11px] text-muted mb-5">{{ repCount }} representative{{ repCount === 1 ? '' : 's' }} across {{ grouped.length }} institution{{ grouped.length === 1 ? '' : 's' }}</p>
 
         <!-- One compact row per institution: the name on the left, its representatives flowing across on the right
              (on a phone the name sits above them). Was a heading plus a card per representative. -->
@@ -101,11 +98,12 @@ const resources = [
               <li v-for="(rep, i) in group.reps" :key="`${rep.last_name}-${rep.first_name}-${i}`" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-ink">
                 {{ rep.first_name }} {{ rep.last_name }}
               </li>
+              <li v-if="!group.reps.length" class="font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.45] text-muted">No representative listed</li>
             </ul>
           </li>
         </ul>
 
-        <p v-if="!filtered.length" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-muted p-[24px_0]">No representatives match "{{ query }}".</p>
+        <p v-if="!grouped.length" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[normal] text-muted p-[24px_0]">No representatives match "{{ query }}".</p>
       </div>
     </div>
   </div>
