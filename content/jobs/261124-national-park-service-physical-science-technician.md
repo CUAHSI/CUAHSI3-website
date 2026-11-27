@@ -10,7 +10,7 @@ url: https://www.usajobs.gov/job/894004500
 source: usajobs
 source_id: "CAHQ-27-13124777-DE-MLB"
 tags: [federal, surface-water, water-quality, data, watershed]
-published: false
+published: true
 ---
 
 The National Park Service is hiring a Physical Science Technician (GS-7) at Glacier National Park to conduct field and laboratory work supporting physical science monitoring and research programs, including data collection, equipment maintenance, and report preparation. Candidates must have one year of specialized experience equivalent to GS-6 in physical science field sampling or monitoring, or one year of relevant graduate education. U.S. citizenship is required.

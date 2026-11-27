@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/399458"
 source_url: https://www.joshswaterjobs.com/jobs/399458
 tags: [water-quality, watershed, policy]
-published: false
+published: true
 ---
 
 The Pennsylvania Department of Environmental Protection is hiring a Water Quality Specialist Supervisor for its Northeast Regional Office in Bethlehem. The position involves supervising staff who monitor compliance with water quality laws, directing enforcement activities, and managing program effectiveness. Applicants must have two years of experience as a Water Quality Specialist or equivalent and a valid Pennsylvania motor vehicle operator's license.
