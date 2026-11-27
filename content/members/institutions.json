@@ -323,7 +323,34 @@
   },
   {
     "name": "University of North Carolina",
-    "category": "gi"
+    "category": "gi",
+    "aliases": [
+      "University of North Carolina System",
+      "Appalachian State University",
+      "East Carolina University",
+      "Elizabeth City State University",
+      "Fayetteville State University",
+      "North Carolina A&T State University",
+      "North Carolina Agricultural and Technical State University",
+      "North Carolina Central University",
+      "North Carolina State University",
+      "NC State University",
+      "UNC Asheville",
+      "University of North Carolina at Asheville",
+      "UNC-Chapel Hill",
+      "University of North Carolina at Chapel Hill",
+      "UNC Charlotte",
+      "University of North Carolina at Charlotte",
+      "UNC Greensboro",
+      "University of North Carolina at Greensboro",
+      "UNC Pembroke",
+      "University of North Carolina at Pembroke",
+      "UNC School of the Arts",
+      "UNC Wilmington",
+      "Western Carolina University",
+      "Winston-Salem State University",
+      "North Carolina School of Science and Mathematics"
+    ]
   },
   {
     "name": "University of North Georgia",
