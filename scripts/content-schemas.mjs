@@ -288,7 +288,8 @@ const memberInstitution = z.strictObject({
 })
 
 // content/graduate-programs/programs.json : the directory of graduate programs in water science (a table on
-// /learn-train/graduate-programs). One entry per institution, as on the legacy list: the programs are free text
+// /learn-train/graduate-programs). One entry per program, each with its own link (Jordan, 27 Nov 2026; the legacy list had one
+// per institution), so an institution can repeat: the institution and programs together must not. The programs are free text
 // (department or program names as the institution gives them), the degrees are from a fixed list. `last_reviewed`
 // is how the list is kept alive: staff review each row once a year and the content lint lists rows older than 12 months.
 const webUrl = url.refine(u => /^https?:\/\//.test(u), 'must start with http:// or https://')
@@ -426,7 +427,7 @@ export const COLLECTIONS = [
   { name: 'members/reps.json',    kind: 'json', file: 'content/members/reps.json',    schema: memberRep },
   { name: 'members/institutions.json', kind: 'json', file: 'content/members/institutions.json', schema: memberInstitution, uniqueBy: e => e?.name, uniqueLabel: 'name' },
   // optional: the folders are created by the content changes that fill them (see the schemas above)
-  { name: 'graduate-programs',    kind: 'json', file: 'content/graduate-programs/programs.json', schema: graduateProgram, optional: true, uniqueBy: e => e?.institution, uniqueLabel: 'institution' },
+  { name: 'graduate-programs',    kind: 'json', file: 'content/graduate-programs/programs.json', schema: graduateProgram, optional: true, uniqueBy: e => e?.institution == null ? null : `${e.institution} | ${e.programs}`, uniqueLabel: 'institution and programs' },
   { name: 'data-portals',         kind: 'json', file: 'content/data-portals/portals.json',       schema: dataPortal,      optional: true, uniqueBy: e => e?.name, uniqueLabel: 'name' },
   { name: 'data-management',       kind: 'md',   dir: 'content/data-management',                                   schema: dataManagementGuide, optional: true },
   { name: 'awards',               kind: 'json', file: 'content/awards/awards.json',              schema: award,           optional: true, uniqueBy: e => e?.id, uniqueLabel: 'id' },

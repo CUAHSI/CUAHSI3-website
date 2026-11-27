@@ -28,6 +28,8 @@ const filtered = computed(() => rows.value.filter(r =>
   (level.value === 'all' || r.degrees.includes(level.value)) &&
   (!query.value || (r.institution + ' ' + r.programs).toLowerCase().includes(query.value.toLowerCase()))
 ))
+// one row per program, so an institution can have several rows; the count is of institutions
+const institutionCount = computed(() => new Set(filtered.value.map(r => r.institution)).size)
 function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
 }
@@ -54,7 +56,7 @@ function fmtDate(d: string) {
         <div class="flex gap-[6px] flex-wrap mb-5">
           <FilterChip v-for="l in levels" :key="l.key" variant="navy" :active="level === l.key" @click="level = l.key">{{ l.label }}</FilterChip>
         </div>
-        <p class="font-mono text-[11px] text-muted mb-4" role="status" aria-live="polite">{{ filtered.length }} institution{{ filtered.length === 1 ? '' : 's' }}</p>
+        <p class="font-mono text-[11px] text-muted mb-4" role="status" aria-live="polite">{{ institutionCount }} institution{{ institutionCount === 1 ? '' : 's' }}</p>
 
         <div role="table" aria-label="Graduate programs by institution" class="border border-[rgba(15,33,43,.1)] rounded-card overflow-hidden">
           <div role="row" class="hidden min-[900px]:grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] gap-[16px] p-[10px_18px] bg-[rgba(15,33,43,.04)] border-b border-b-[rgba(15,33,43,.08)]">
@@ -64,12 +66,12 @@ function fmtDate(d: string) {
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Reviewed</p>
           </div>
           <div class="divide-y divide-[rgba(15,33,43,.08)]">
-          <div v-for="(r, i) in filtered" :key="r.institution + '|' + i" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] min-[900px]:gap-[16px] items-baseline bg-paper">
-            <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">
-              <a v-if="r.url" :href="r.url" target="_blank" rel="noopener" class="text-ink no-underline">{{ r.institution }} <span class="text-water">↗</span></a>
-              <span v-else>{{ r.institution }}</span>
+          <div v-for="r in filtered" :key="r.institution + '|' + r.programs" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] min-[900px]:gap-[16px] items-baseline bg-paper">
+            <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">{{ r.institution }}</p>
+            <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0">
+              <a v-if="r.url" :href="r.url" target="_blank" rel="noopener" class="text-[#3a4d57] no-underline">{{ r.programs }} <span class="text-water">↗</span></a>
+              <span v-else>{{ r.programs }}</span>
             </p>
-            <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0">{{ r.programs }}</p>
             <p role="cell" class="font-mono text-[11px] leading-[1.5] text-muted m-0">{{ r.degrees.length ? r.degrees.map(degreeLabel).join(' · ') : 'Degrees not listed' }}</p>
             <p role="cell" class="font-mono text-[10px] text-muted m-0 whitespace-nowrap"><template v-if="r.last_reviewed"><span class="min-[900px]:hidden">Reviewed </span>{{ fmtDate(r.last_reviewed) }}</template></p>
           </div>
