@@ -7,11 +7,15 @@ useHead({
   meta: [{ name: 'description', content: 'A directory of university graduate programs in water science, by degree, reviewed every year.' }]
 })
 
-type Row = { institution: string; programs: string; degrees: string[]; url?: string; last_reviewed?: string }
+type Row = { institution: string; programs: string; degrees: string[]; url?: string; last_reviewed?: string; member_institution?: string | null }
 const { data } = await useAsyncData('graduate-programs-json', () =>
   queryContent('graduate-programs').where({ _extension: 'json' }).findOne().catch(() => null)
 )
 const rows = computed<Row[]>(() => (Array.isArray(data.value?.body) ? data.value.body : []) as Row[])
+// a row at a CUAHSI member is shaded and labelled, as on the job board; the row's member_institution names the registry entry
+// (composables/useMembers.ts). No name match here: a row without the field is shown as not a member
+const { declaredMember } = await useMembers()
+const isMember = (r: Row) => declaredMember(r.member_institution) === true
 
 const levels = [
   { key: 'all', label: 'All degrees' },
@@ -66,8 +70,8 @@ function fmtDate(d: string) {
             <p role="columnheader" class="font-mono font-bold tracking-[.1em] uppercase text-muted text-[10px] m-0">Reviewed</p>
           </div>
           <div class="divide-y divide-[rgba(15,33,43,.08)]">
-          <div v-for="r in filtered" :key="r.institution + '|' + r.programs" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] min-[900px]:gap-[16px] items-baseline bg-paper">
-            <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">{{ r.institution }}</p>
+          <div v-for="r in filtered" :key="r.institution + '|' + r.programs" role="row" class="grid grid-cols-[minmax(0,1fr)] gap-[6px] p-[14px_18px] min-[900px]:grid-cols-[minmax(0,2fr)_minmax(0,3fr)_minmax(0,1.4fr)_72px] min-[900px]:gap-[16px] items-baseline" :class="isMember(r) ? 'bg-[#EAF3FB]' : 'bg-paper'">
+            <p role="cell" class="font-['Hanken_Grotesk'] font-semibold text-[14px] leading-[1.35] text-ink m-0">{{ r.institution }}<template v-if="isMember(r)"> <span class="inline-block align-[1px] font-medium text-[11px] leading-[normal] p-[2px_8px] rounded-[99px] bg-[#CFE3F5] text-[#0F2E44] whitespace-nowrap">CUAHSI member</span></template></p>
             <p role="cell" class="font-['Hanken_Grotesk'] font-normal text-[13.5px] leading-[1.45] text-[#3a4d57] m-0">
               <a v-if="r.url" :href="r.url" target="_blank" rel="noopener" class="text-[#3a4d57] no-underline">{{ r.programs }} <span class="text-water">↗</span></a>
               <span v-else>{{ r.programs }}</span>

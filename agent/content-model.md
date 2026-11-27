@@ -224,7 +224,7 @@ Files: `virtual-university.md`, `snow-field-school.md`, `summer-institute.md`.
 Every page that asks whether something is a member reads it through `composables/useMembers.ts`, and every
 `member_institution` value (jobs, graduate programs) must be one of its names. Add or remove a member here, nowhere else.
 ```json
-{ "name": "Pennsylvania State University", "aliases": ["Penn State"] }   // aliases: optional, other spellings found in text
+{ "name": "Pennsylvania State University", "category": "gi", "aliases": ["Penn State"] }   // category: gi, pui, nonprofit or intl; aliases: optional, other spellings found in text
 ```
 
 **Stub directories with no rendering pages:** `content/board/`, `content/community/`.

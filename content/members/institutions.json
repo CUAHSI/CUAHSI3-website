@@ -1,308 +1,407 @@
 [
   {
-    "name": "American Institute of Hydrology"
+    "name": "American Institute of Hydrology",
+    "category": "nonprofit"
   },
   {
-    "name": "Arizona State University"
+    "name": "Arizona State University",
+    "category": "gi"
   },
   {
-    "name": "Boise State University"
+    "name": "Boise State University",
+    "category": "gi"
   },
   {
-    "name": "Brigham Young University"
+    "name": "Brigham Young University",
+    "category": "gi"
   },
   {
-    "name": "Carnegie Mellon University"
+    "name": "Carnegie Mellon University",
+    "category": "gi"
   },
   {
-    "name": "Clemson University"
+    "name": "Clemson University",
+    "category": "gi"
   },
   {
-    "name": "Colorado School of Mines"
+    "name": "Colorado School of Mines",
+    "category": "gi"
   },
   {
-    "name": "Colorado State University"
+    "name": "Colorado State University",
+    "category": "gi"
   },
   {
-    "name": "Drexel University"
+    "name": "Drexel University",
+    "category": "gi"
   },
   {
-    "name": "Duke University"
+    "name": "Duke University",
+    "category": "gi"
   },
   {
-    "name": "EarthScope"
+    "name": "EarthScope",
+    "category": "nonprofit"
   },
   {
-    "name": "Eastern Illinois University"
+    "name": "Eastern Illinois University",
+    "category": "pui"
   },
   {
-    "name": "Florida International University"
+    "name": "Florida International University",
+    "category": "gi"
   },
   {
-    "name": "Georgia Institute of Technology"
+    "name": "Georgia Institute of Technology",
+    "category": "gi"
   },
   {
-    "name": "Georgia State University"
+    "name": "Georgia State University",
+    "category": "gi"
   },
   {
     "name": "Indiana University",
+    "category": "gi",
     "aliases": [
       "Indiana University, Bloomington and Indianapolis"
     ]
   },
   {
-    "name": "Interstate Council on Water Policy"
+    "name": "Interstate Council on Water Policy",
+    "category": "nonprofit"
   },
   {
-    "name": "Iowa State University"
+    "name": "Iowa State University",
+    "category": "gi"
   },
   {
-    "name": "Johns Hopkins University"
+    "name": "Johns Hopkins University",
+    "category": "gi"
   },
   {
-    "name": "Kansas State University"
+    "name": "Kansas State University",
+    "category": "gi"
   },
   {
-    "name": "Kent State University"
+    "name": "Kent State University",
+    "category": "gi"
   },
   {
-    "name": "Marquette University"
+    "name": "Marquette University",
+    "category": "gi"
   },
   {
-    "name": "Michigan State University"
+    "name": "Michigan State University",
+    "category": "gi"
   },
   {
-    "name": "Michigan Technological University"
+    "name": "Michigan Technological University",
+    "category": "gi"
   },
   {
-    "name": "Montana State University"
+    "name": "Montana State University",
+    "category": "gi"
   },
   {
-    "name": "New Mexico State University"
+    "name": "New Mexico State University",
+    "category": "gi"
   },
   {
-    "name": "Northeastern University"
+    "name": "Northeastern University",
+    "category": "gi"
   },
   {
-    "name": "Northern Arizona University"
+    "name": "Northern Arizona University",
+    "category": "gi"
   },
   {
-    "name": "Northwestern University"
+    "name": "Northwestern University",
+    "category": "gi"
   },
   {
-    "name": "Oregon State University"
+    "name": "Oregon State University",
+    "category": "gi"
   },
   {
     "name": "Pennsylvania State University",
+    "category": "gi",
     "aliases": [
       "Penn State"
     ]
   },
   {
-    "name": "Portland State University"
+    "name": "Portland State University",
+    "category": "gi"
   },
   {
-    "name": "Prairie View A&M University"
+    "name": "Prairie View A&M University",
+    "category": "pui"
   },
   {
-    "name": "Princeton University"
+    "name": "Princeton University",
+    "category": "gi"
   },
   {
-    "name": "Purdue University"
+    "name": "Purdue University",
+    "category": "gi"
   },
   {
-    "name": "Rensselaer Polytechnic Institute"
+    "name": "Rensselaer Polytechnic Institute",
+    "category": "gi"
   },
   {
-    "name": "RTI International"
+    "name": "RTI International",
+    "category": "nonprofit"
   },
   {
-    "name": "Rutgers University"
+    "name": "Rutgers University",
+    "category": "gi"
   },
   {
-    "name": "Santa Clara University"
+    "name": "Santa Clara University",
+    "category": "pui"
   },
   {
-    "name": "Smith College"
+    "name": "Smith College",
+    "category": "pui"
   },
   {
-    "name": "Southern Illinois University"
+    "name": "Southern Illinois University",
+    "category": "gi"
   },
   {
-    "name": "Southern Methodist University"
+    "name": "Southern Methodist University",
+    "category": "gi"
   },
   {
-    "name": "Stanford University"
+    "name": "Stanford University",
+    "category": "gi"
   },
   {
-    "name": "State University of New York, Buffalo"
+    "name": "State University of New York, Buffalo",
+    "category": "gi"
   },
   {
-    "name": "State University of New York, ESF"
+    "name": "State University of New York, ESF",
+    "category": "gi"
   },
   {
-    "name": "Stevens Institute of Technology"
+    "name": "Stevens Institute of Technology",
+    "category": "gi"
   },
   {
-    "name": "Stroud Water Research Center"
+    "name": "Stroud Water Research Center",
+    "category": "nonprofit"
   },
   {
-    "name": "Suez Canal University"
+    "name": "Suez Canal University",
+    "category": "intl"
   },
   {
-    "name": "Syracuse University"
+    "name": "Syracuse University",
+    "category": "gi"
   },
   {
-    "name": "Temple University"
+    "name": "Temple University",
+    "category": "gi"
   },
   {
-    "name": "Texas A&M University"
+    "name": "Texas A&M University",
+    "category": "gi"
   },
   {
-    "name": "University of Alabama"
+    "name": "University of Alabama",
+    "category": "gi"
   },
   {
-    "name": "University of Arizona"
+    "name": "University of Arizona",
+    "category": "gi"
   },
   {
-    "name": "University of Arkansas"
+    "name": "University of Arkansas",
+    "category": "gi"
   },
   {
-    "name": "University of Calgary"
+    "name": "University of Calgary",
+    "category": "intl"
   },
   {
-    "name": "University of California, Davis"
+    "name": "University of California, Davis",
+    "category": "gi"
   },
   {
-    "name": "University of California, Irvine"
+    "name": "University of California, Irvine",
+    "category": "gi"
   },
   {
-    "name": "University of California, Merced"
+    "name": "University of California, Merced",
+    "category": "gi"
   },
   {
-    "name": "University of California, Riverside"
+    "name": "University of California, Riverside",
+    "category": "gi"
   },
   {
-    "name": "University of Central Florida"
+    "name": "University of Central Florida",
+    "category": "gi"
   },
   {
-    "name": "University of Colorado, Boulder"
+    "name": "University of Colorado, Boulder",
+    "category": "gi"
   },
   {
-    "name": "University of Delaware"
+    "name": "University of Delaware",
+    "category": "gi"
   },
   {
-    "name": "University of Florida"
+    "name": "University of Florida",
+    "category": "gi"
   },
   {
-    "name": "University of Georgia"
+    "name": "University of Georgia",
+    "category": "gi"
   },
   {
-    "name": "University of Hawaii"
+    "name": "University of Hawaii",
+    "category": "gi"
   },
   {
-    "name": "University of Houston"
+    "name": "University of Houston",
+    "category": "gi"
   },
   {
-    "name": "University of Idaho"
+    "name": "University of Idaho",
+    "category": "gi"
   },
   {
-    "name": "University of Illinois"
+    "name": "University of Illinois",
+    "category": "gi"
   },
   {
-    "name": "University of Iowa"
+    "name": "University of Iowa",
+    "category": "gi"
   },
   {
-    "name": "University of Kansas"
+    "name": "University of Kansas",
+    "category": "gi"
   },
   {
-    "name": "University of Louisiana, Lafayette"
+    "name": "University of Louisiana, Lafayette",
+    "category": "gi"
   },
   {
-    "name": "University of Memphis"
+    "name": "University of Memphis",
+    "category": "gi"
   },
   {
-    "name": "University of Michigan"
+    "name": "University of Michigan",
+    "category": "gi"
   },
   {
-    "name": "University of Minnesota"
+    "name": "University of Minnesota",
+    "category": "gi"
   },
   {
-    "name": "University of Missouri"
+    "name": "University of Missouri",
+    "category": "gi"
   },
   {
-    "name": "University of Nebraska, Lincoln"
+    "name": "University of Nebraska, Lincoln",
+    "category": "gi"
   },
   {
-    "name": "University of Nevada, Reno"
+    "name": "University of Nevada, Reno",
+    "category": "gi"
   },
   {
-    "name": "University of New Hampshire"
+    "name": "University of New Hampshire",
+    "category": "gi"
   },
   {
-    "name": "University of New Mexico"
+    "name": "University of New Mexico",
+    "category": "gi"
   },
   {
-    "name": "University of North Carolina"
+    "name": "University of North Carolina",
+    "category": "gi"
   },
   {
-    "name": "University of North Georgia"
+    "name": "University of North Georgia",
+    "category": "pui"
   },
   {
-    "name": "University of Pittsburgh"
+    "name": "University of Pittsburgh",
+    "category": "gi"
   },
   {
-    "name": "University of Rhode Island"
+    "name": "University of Rhode Island",
+    "category": "gi"
   },
   {
-    "name": "University of South Florida"
+    "name": "University of South Florida",
+    "category": "gi"
   },
   {
-    "name": "University of Tennessee"
+    "name": "University of Tennessee",
+    "category": "gi"
   },
   {
-    "name": "University of Texas, Arlington"
+    "name": "University of Texas, Arlington",
+    "category": "gi"
   },
   {
-    "name": "University of Texas, Austin"
+    "name": "University of Texas, Austin",
+    "category": "gi"
   },
   {
-    "name": "University of Vermont"
+    "name": "University of Vermont",
+    "category": "gi"
   },
   {
-    "name": "University of Virginia"
+    "name": "University of Virginia",
+    "category": "gi"
   },
   {
-    "name": "University of Washington"
+    "name": "University of Washington",
+    "category": "gi"
   },
   {
-    "name": "University of Wisconsin, Madison"
+    "name": "University of Wisconsin, Madison",
+    "category": "gi"
   },
   {
-    "name": "University of Wyoming"
+    "name": "University of Wyoming",
+    "category": "gi"
   },
   {
-    "name": "University of Zurich"
+    "name": "University of Zurich",
+    "category": "intl"
   },
   {
-    "name": "Utah State University"
+    "name": "Utah State University",
+    "category": "gi"
   },
   {
-    "name": "Utah Valley University"
+    "name": "Utah Valley University",
+    "category": "pui"
   },
   {
-    "name": "Villanova University"
+    "name": "Villanova University",
+    "category": "gi"
   },
   {
     "name": "Virginia Tech",
+    "category": "gi",
     "aliases": [
       "Virginia Polytechnic Institute"
     ]
   },
   {
-    "name": "Washington State University"
+    "name": "Washington State University",
+    "category": "gi"
   },
   {
-    "name": "Yale University"
+    "name": "Yale University",
+    "category": "gi"
   }
 ]

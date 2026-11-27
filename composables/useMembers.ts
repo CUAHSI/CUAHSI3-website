@@ -1,7 +1,7 @@
 // CUAHSI member institutions: the one registry, content/members/institutions.json (Jordan, 27 Nov 2026). Every page that asks
 // "is this a member?" calls this; nothing else lists members. A member_institution value (jobs, graduate programs) names a
 // registry entry; the validator fails a name the registry does not have.
-type MemberInstitution = { name: string; aliases?: string[] }
+type MemberInstitution = { name: string; category: 'gi' | 'pui' | 'nonprofit' | 'intl'; aliases?: string[] }
 
 const normName = (s: string) => ` ${s.toLowerCase().replace(/['’]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()} `
 
@@ -40,5 +40,5 @@ export async function useMembers() {
     return undefined
   }
 
-  return { names, declaredMember, textNamesMember }
+  return { institutions, names, declaredMember, textNamesMember }
 }

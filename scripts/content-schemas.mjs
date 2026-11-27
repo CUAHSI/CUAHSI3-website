@@ -284,6 +284,7 @@ const memberRep = z.strictObject({
 // must be a `name` here. `aliases` are other ways the name is written in text (the jobs board's employer match).
 const memberInstitution = z.strictObject({
   name: nonEmpty,
+  category: z.enum(['gi', 'pui', 'nonprofit', 'intl']),   // the membership type: graduate institution (CUAHSI's "University Member"), primarily undergraduate, non-profit affiliate, international affiliate
   aliases: z.array(nonEmpty).optional(),
 })
 
