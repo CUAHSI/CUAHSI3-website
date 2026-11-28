@@ -4,3 +4,4 @@
 261127 | task/cz-narrative | defect | the code comment and the proposal called the Hub's line 'quoted', but the page changes its case and comma and shows no quotation marks; now described as the Hub's own words in sentence case. caught: reviewer
 261127 | task/cz-narrative | defect | the network page's lead added a sentence not in the approved text, with 'each' twice; reworded ('with links to where they live today') and put to Jordan in the PR, to keep or drop. caught: reviewer
 261128 | task/cz-narrative | note | Jordan, 28 Nov: 'keep it; August 2027 is fine; open it'. The network lead's added sentence stays; 'August 2027 at the latest' is confirmed for public text (C5), unchanged in all 4 places. The reviewer's finding 1 (log 'drop who did the work' as an intervention) left as written: it was a choice put to Jordan
+261128 | task/cz-narrative | pr | CUAHSI/CUAHSI3-website#169, on Jordan's 'open it'; base main; 4 files changed; reviewer read one round
