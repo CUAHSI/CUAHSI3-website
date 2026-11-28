@@ -1,8 +1,8 @@
 # Critical Zone section: proposed narrative text (epic CUAHSI/CUAHSI3-website#62, ticket T9)
 
 27 November 2026. **Approved and built.** Jordan, 27 November 2026: "yes, build it; drop 'who did the work'". Built on
-`task/cz-narrative`; the text below is what the pages say, and the brackets are its sources. "August 2027" (C5) was not answered and
-is unchanged. Written first as a proposal: Jordan said yes on 27 November 2026 to step 2 of the T9 plan: draft
+`task/cz-narrative`; the text below is what the pages say, and the brackets are its sources. "August 2027" (C5) is unchanged; Jordan
+confirmed it on 28 November 2026 ("August 2027 is fine"). Written first as a proposal: Jordan said yes on 27 November 2026 to step 2 of the T9 plan: draft
 what T9 asks for and the site lacks (what the critical zone is; the CZO program, 2007 to 2020; CZNet, 2020 on), every sentence sourced.
 He also decided the observatory count: "reword to ten over the program's life". Gap found in `261127_cz-t9-traceability.md`, finding 2.
 
@@ -68,7 +68,7 @@ From the cluster's own line on the CZNet home [CN], reworded.
 | Archive card: "The archive of the ten NSF observatories, 2007 to 2020" | "The archive of the NSF Critical Zone Observatories, 2007 to 2020" (the count is now in section 2) |
 | "The datasets, papers and reports listed for each of the ten Critical Zone Observatories." | unchanged: ten is now sourced (EST) |
 | Lead: "what they were, who did the work, and where ..." | "what they were, and where ..." ("who did the work" dropped; Jordan, 27 November) |
-| "August 2027 at the latest" (4 places) | unchanged; decision C5 still open |
+| "August 2027 at the latest" (4 places) | unchanged; decision C5: Jordan, 28 November 2026, "August 2027 is fine" |
 
 ## 6. How it would be built (mine, C7; Jordan's yes needed, it is code)
 
@@ -82,7 +82,7 @@ From the cluster's own line on the CZNet home [CN], reworded.
 - As built: sections 1 to 3 under a new heading, "What the critical zone is", after the numbers on the front page (section 1 as its
   text, sections 2 and 3 as two cards); section 3 as the network page's lead, followed by a sentence of mine that was not in the
   approved text: "Below are the datasets, papers and software listed for the Hub and each cluster, with links to where they live
-  today." (it keeps what the old lead said; for Jordan to keep or drop).
+  today." (it keeps what the old lead said; Jordan, 28 November 2026: "keep it").
 
 ## Not checked
 
