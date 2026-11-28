@@ -11,7 +11,7 @@ source: joshswaterjobs
 source_id: "https://www.joshswaterjobs.com/jobs/395003"
 source_url: https://www.joshswaterjobs.com/jobs/395003
 tags: [surface-water, groundwater, water-quality, policy, watershed]
-published: true
+published: false
 ---
 
 The Montana DNRC Water Resources Division is hiring multiple Water Conservation Specialist 1 positions across Montana to investigate water rights, analyze water use data, and support Water Court proceedings. Candidates will conduct field investigations, process water right applications, and provide public assistance on water resource matters. A bachelor's degree in natural resource management or natural sciences plus at least one year of water resources management experience is required.
