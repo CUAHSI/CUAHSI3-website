@@ -29,9 +29,24 @@ const asOf = computed(() => stats.value?.asOf
 
 const band = computed(() => [
   ...(stats.value?.products ? [{ n: nf(stats.value.products), l: 'datasets and papers listed' }] : []),
-  { n: '10', l: 'Critical Zone Observatories' },
+  { n: '10', l: "Critical Zone Observatories over the program's life" },
   { n: '9', l: 'CZNet thematic clusters, plus the Hub' },
 ])
+
+// The two programs, under "What the critical zone is" (ticket T9; wording approved by Jordan, 27 November 2026). Ten is the count
+// of observatories with an "Established" year on the archive; the archive's own pages say nine, and the text says both.
+const programs = [
+  {
+    kicker: '2007 TO 2020',
+    title: 'The Critical Zone Observatories',
+    text: "From 2007 the National Science Foundation funded Critical Zone Observatories to study how the parts of the critical zone interact, shape Earth's surface and support life. Ten observatories took part over the program's life, from California to Puerto Rico: three established in 2007, three in 2009, three in 2013 and one in 2014. The program's own pages describe it as nine observatories. It ended in November 2020 and was succeeded by the Critical Zone Collaborative Network.",
+  },
+  {
+    kicker: '2020 ON',
+    title: 'The Critical Zone Collaborative Network',
+    text: "The Critical Zone Collaborative Network (CZNet) is the next phase of NSF's critical zone research. It has nine thematic clusters, research collaborations working in a wide range of geological, climatic and land-use settings, and a Coordinating Hub, housed at CUAHSI, that provides cyberinfrastructure, data management and community services to the clusters.",
+  },
+]
 
 // The full lists come before the highlights and lead with their totals, so the highlights below read as a sample of them (Jordan, 16 November 2026).
 const lists = computed(() => [
@@ -47,7 +62,7 @@ const places = [
   {
     kicker: 'CZO ARCHIVE',
     title: 'The Critical Zone Observatories',
-    text: 'The archive of the ten NSF observatories, 2007 to 2020: their data, publications, news and people. It is being retired (August 2027 at the latest).',
+    text: 'The archive of the NSF Critical Zone Observatories, 2007 to 2020: their data, publications, news and people. It is being retired (August 2027 at the latest).',
     href: 'https://czo-archive.criticalzone.org',
   },
   {
@@ -77,7 +92,7 @@ const places = [
       </template>
       <template #kicker>Critical Zone Science</template>
       <template #title>Two decades of critical zone research, and where to find it.</template>
-      <template #lead>A guide to the NSF Critical Zone Observatories (2007 to 2020) and the Critical Zone Collaborative Network (2020 on): what they were, who did the work, and where the data and papers live today.</template>
+      <template #lead>A guide to the NSF Critical Zone Observatories (2007 to 2020) and the Critical Zone Collaborative Network (2020 on): what they were, and where the data and papers live today.</template>
       <img src="/newsletter-images/2026-august/cznet-logo.png" alt="Critical Zone Collaborative Network (CZNet) logo" width="420" height="160"
         class="block mt-[28px] w-[210px] max-w-full h-auto bg-white border border-[rgba(15,33,43,.1)] rounded-[6px] p-[10px_14px]">
     </PageHero>
@@ -94,6 +109,23 @@ const places = [
         The list ({{ nf(stats!.datasets) }} datasets, {{ nf(stats!.papers) }} papers) is added to in batches; last addition {{ asOf }}.
       </p>
     </section>
+
+    <!-- What the critical zone is, and the two programs (ticket T9; each sentence's source is in agent/reports/261127_cz-narrative-proposal.md) -->
+    <div class="mx-auto site-container max-w-site pt-[48px]">
+      <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">What the critical zone is</h2>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_28px]">
+        The critical zone is Earth's outer skin: the permeable layer from the tops of the trees to the bottom of the groundwater, where rock,
+        soil, water, air and living things interact and shape the land surface. It supports all life on land, and its processes run on time
+        scales from seconds to geologic time.
+      </p>
+      <div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)]">
+        <div v-for="p in programs" :key="p.title" class="border border-[rgba(15,33,43,.1)] rounded-[10px] p-[20px_22px] bg-white">
+          <p class="font-mono font-bold tracking-[.12em] uppercase text-water text-[11px] m-[0_0_8px]">{{ p.kicker }}</p>
+          <h3 class="font-['Schibsted_Grotesk'] font-bold text-[18px] leading-[1.2] text-navy m-[0_0_8px]">{{ p.title }}</h3>
+          <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-0">{{ p.text }}</p>
+        </div>
+      </div>
+    </div>
 
     <!-- The full lists -->
     <div class="mx-auto site-container max-w-site pt-[48px]">
